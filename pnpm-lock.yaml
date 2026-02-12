@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      fontawesome-svelte:
-        specifier: ^3.0.0
-        version: 3.0.0(@fortawesome/fontawesome-svg-core@6.7.2)(svelte@5.49.2)
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.1
@@ -296,14 +292,6 @@ packages:
 
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
-
-  '@fortawesome/fontawesome-common-types@6.7.2':
-    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
-    engines: {node: '>=6'}
-
-  '@fortawesome/fontawesome-svg-core@6.7.2':
-    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
-    engines: {node: '>=6'}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1065,12 +1053,6 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  fontawesome-svelte@3.0.0:
-    resolution: {integrity: sha512-0jrpHtA4S9t+AfnvvyPaXaZw3nSJl527mCchRhA3Vh6PEsUiK7dC6KxwBg5DNTODj7L+8LRxM8fOe1oxXs2+PQ==}
-    peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^6.7.2
-      svelte: ^5.0.0
-
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -1753,12 +1735,6 @@ snapshots:
       '@floating-ui/utils': 0.2.10
 
   '@floating-ui/utils@0.2.10': {}
-
-  '@fortawesome/fontawesome-common-types@6.7.2': {}
-
-  '@fortawesome/fontawesome-svg-core@6.7.2':
-    dependencies:
-      '@fortawesome/fontawesome-common-types': 6.7.2
 
   '@humanfs/core@0.19.1': {}
 
@@ -2694,11 +2670,6 @@ snapshots:
       keyv: 4.5.4
 
   flatted@3.3.3: {}
-
-  fontawesome-svelte@3.0.0(@fortawesome/fontawesome-svg-core@6.7.2)(svelte@5.49.2):
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.7.2
-      svelte: 5.49.2
 
   fsevents@2.3.3:
     optional: true
