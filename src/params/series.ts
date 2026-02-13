@@ -1,5 +1,5 @@
 import type { ParamMatcher } from '@sveltejs/kit';
-import imgSeries from '$lib/data/img-series.json';
+import imgSeries from '$lib/data/img_series.json';
 
 let seriesKeys = Object.keys(imgSeries['imgSeries']);
 console.log(seriesKeys);
