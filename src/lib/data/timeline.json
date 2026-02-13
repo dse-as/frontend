@@ -1,0 +1,1234 @@
+{
+  "meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"timeline": [
+		{
+			"date": "1912",
+			"biography_info": "Geburt von Annemarie Minna Renée Schwarzenbach in Zürich. Sie ist das dritte von fünf Kindern. Vater ist der Industrielle Alfred Schwarzenbach (1876-1940), die Mutter Renée Schwarzenbach (1883-1959), geb. Wille, ist die Tochter des Schweizer Generals Ulrich Wille und seiner Ehefrau Clara von Bismarck. [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1916",
+			"biography_info": "Umzug der Familie von Zürich auf das Landgut bocken bei Horgen am Zürichsee. [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1923",
+			"biography_info": "Privatunterricht durch eine Hauslehrerin in Bocken. [OR, S. 181] Klavier- und Reitunterricht [BU, S. 413]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1924",
+			"biography_info": "Besuch der Zürcher Privatschule Dr. Götz-Azzolini. [OR, S.181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1925",
+			"biography_info": "Teilnahme am Wandervogel. Veröffentlicht vier Texte in der gleichnamigen Zeitschrift [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "smallform_0001 smallform_0002 smallform_0003 smallform_0004",
+			"note": "einzelne Publikationen noch ergänzen?"
+		},
+		{
+			"date": "1925",
+			"biography_info": "Besuch des Hochalpinen Töchterinstituts Fetan [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1926",
+			"biography_info": "Konfirmation bei Pastor Ernst Merz [BU, S. 413]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Hier beginnt mit Ernst Merz die erste Briefkorrespondenz ausserhalb der Familie. "
+		},
+		{
+			"date": "1927",
+			"biography_info": "AS legt die Vor-Matur in Chur ab [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "03.11.1927",
+			"biography_info": "AS macht die Matur. [OR, S. 181]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1928",
+			"biography_info": "Immatrikulation als Studentin an der Universität Zürich mit dem Hauptfach Geschichte und dem Nebenfach Germanistik. Sie studiert u.a. bei Karl Meyer und Robert Faesi. [OR, S. 181] Kurzer Aufenthalt in New York. [LE, S. 227]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1.1929",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Gespräch (zu Lebzeiten unveröffentlicht) [BU, S. 422]",
+			"work_id": "smallform_0005",
+			"note": ""
+		},
+		{
+			"date": "1928 (Oktober) - 1929 (Juni)",
+			"biography_info": "Paris",
+			"event": "Datirung Alexis Notizen (dieser spricht in ASF etwas ungenau davon, dass sie im Herbst 29 wieder nach Zürich zurückkehrt, in seinen Notizen kehrt sie jedoch schon im Juni 29 krank nach Bocken zurück und verbringt dann den Sommer mit Tania Doukhouetzky in der Schweiz). ",
+			"textWork": "",
+			"textPub": "Das Märchen von der gefangenen Prinzessin ([zu Lebzeiten, ez] unveröffentlicht) [BU, S. 422]",
+			"work_id": "smallform_0010",
+			"note": "stimmt die Angabe Januar? Hat sich doch erst im Herbst 1929 in Paris aufgehalten? Die Datierung ist eigenhändig am Ende des Ms, womöglich befand sie sich schon Anfang 1929 in Paris, begann das Studium jedoch erst im Herbst, ez. "
+		},
+		{
+			"date": "13.10.1929",
+			"biography_info": "Studienwechsel zur Sorbonne in Paris. Belegt u. a. Philosophie und Psychologie. [OR, S. 181] - Diese Datierung scheint falsch, laut Alexis Aufzeichnungen fährt AS bereits im Oktober 28 nach Paris, ist in den Wintersemesterferien in Bocken und dann mindestens noch ein Semester (bis Sommer 29) da.",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1929",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "In der Neuen Zürcher Zeitung erscheint die Novelle Erik. [OR, S. 181]",
+			"work_id": "\"smallform_0006",
+			"note": ""
+		},
+		{
+			"date": "smallform_0007\"",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "3.193",
+			"biography_info": "\"Reise mit Eltern nach Rom [RA, S. 52], laut Briefen an Fueter bis zum Vesuv. Laut Alexis' Worddokument (S. 203): \"\"3. – 23. März, Reise nach Rom mit Alfred, Annemarie, Richard Schwarzenbach. Rom, Ostia, Jagd in der Campagna mit Duchessa di Morignano, „Società Romana della Caccia alla volpa“, Frau Stoffel auch dabei\"\" - Infos aus Fotoalben RS32 RS33 \"",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "24.04.1930",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Arbeit an der Pariser Novelle, Paris III [3./4.1930], Yelinda [27.12.1930] und Eine Frau zu sehen. Diese Texte bleiben zu Lebzeiten unveröffentlicht. [OR, S. 181]",
+			"textPub": "",
+			"work_id": "smallform_0018 smallform_0024 smallform_0025 smallform_0008 letter_0172 (Yelinda)",
+			"note": "Genaue Datierungen der Arbeiten? Wo möglich in eckigen Klammern hinzugefügt, ez. "
+		},
+		{
+			"date": "6.193",
+			"biography_info": "Essay über die Jugend in der NZZ. [BU, S. 413]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "smallform_0020 smallform_0021",
+			"note": "separat anführen?"
+		},
+		{
+			"date": "9.193",
+			"biography_info": "Begegnung mit Claude Bourdet. [OR, S. 182] [BU, S. 413]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1930",
+			"biography_info": "Reise nach Venedig zu Ruth Landshoff-Yorck und Karl Vollmöller, was den Konflikt mit den Eltern zuspitzt. [OR, S. 182]",
+			"event": "Venedigreise 1930",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "letter_0173",
+			"note": ""
+		},
+		{
+			"date": "15.10.1930",
+			"biography_info": "Bekanntschaft und Briefwechsel mit Erika und Klaus Mann. [OR, S. 182]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Frühester erhaltener datierter Brief an EM: 15.10.30 (letter_0173). Bekanntschaft durch briefliche Kontaktaufnahme mit den Manns durch AS, gemäss Polizeireport während der Pfeffermühle-Affäre (vgl. ASF)"
+		},
+		{
+			"date": "22.11.1930",
+			"biography_info": "",
+			"event": "",
+			"textWork": "\"Lesung aus ihrem Roman Freunde um Bernhard [OR, S. 182]. AS habe auch aus der Römischen Skizze und aus Ruth gelesen. [LE, S. 228] Die Römische Skizze ist nicht erhalten geblieben, könnte jedoch mit der erst bei Rooney erwähnten Romreise (\"\"Italien 1930\"\") im Frühling 1930 zu tun haben. [ez]\"",
+			"textPub": "",
+			"work_id": "smallform_0036",
+			"note": ""
+		},
+		{
+			"date": "12.193",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Schreibt den unveröffentlichen Text: Der Hut [BU, S. 422]",
+			"work_id": "smallform_0026",
+			"note": ""
+		},
+		{
+			"date": "16.12.1930",
+			"biography_info": "AS organisiert einen Vortrag für Klaus und Erika Mann in Zürich. [BU, S. 413]",
+			"event": "",
+			"textWork": "",
+			"textPub": "Über den Vortrag von Klaus und Erika Mann publiziert AS in der NZZ den Artikel Klaus und Erika Mann in Zürich am 19.12.1930. [ez]",
+			"work_id": "smallform_0023",
+			"note": ""
+		},
+		{
+			"date": "3.1931",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Germanistische Arbeit über Georg Trakl. [OR, S. 182] --> 10.April Abgabeschluss, eingereicht bei Robert Faesi, vgl. Brief an Erika Mann vom 9. April 1931 (letter_0166)",
+			"textPub": "Schreibt den unveröffentlichten Text: Yelinda [BU, S. 422]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "25.04.1931",
+			"biography_info": "Abschluss der Promotion mit der Arbeit Beiträge zur Geschichte des Oberengadins im Mittelalter und zu Beginn der Neuzeit. [OR, S. 182] Doktorvater war Karl Meyer [BU, S. 46], ",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "smallform_0030",
+			"note": "Die Arbeit findet sich im selben Dossier des Staatsarchives Zürich, StAZH 109.7.1140, indem auch die Unterlagen zur Promotion sind. "
+		},
+		{
+			"date": "5.1931",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"Wir haben bezüglich der Dissertation Digitalisate von Karl Meyers Gutachtens und eines AS-Briefs an ihn (samt Lebenslauf), zudem eine Klausurarbeit zum \"\"spanisch-habsburgischen System\"\". \""
+		},
+		{
+			"date": "05./06.1931",
+			"biography_info": "Reise nach München mit Valerie Kollbrunner - Reise nach Paris mit Hanna Kiel - Reise nach Bandol mit den Geschwister Mann (BU 84)",
+			"event": "Frankreichreise 1931",
+			"textWork": "",
+			"textPub": "Über den gemeinsamen Aufenthalt in Bandol publiziert AS in der NZZ Brief von der Côte d'Azur am 28.6.1931. ",
+			"work_id": "smallform_0028",
+			"note": ""
+		},
+		{
+			"date": "8.1931",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Publikation des Romans Freunde um Bernhard im Wiener Almathea-Verlag [OR, S. 182]",
+			"work_id": "",
+			"note": "Bei LE (S. 228) im Mai datiert?"
+		},
+		{
+			"date": "9.1931",
+			"biography_info": "\"16. 9. 31: Foto RS mit dem Titel \"\"Annemarie auf der Abfahrt nach Berlin\"\" (ASF 76)\"",
+			"event": "",
+			"textWork": "Arbeit am verschollenen Roman Aufbruch im Herbst [BU, S. 414]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "",
+			"biography_info": "",
+			"event": "",
+			"textWork": "\"Niederschrift von Artikel für den ersten Band des Schweizer Reiseführers für den Piper Verlag [BU, S. 414]",
+			"textPub": " Buch erscheint 1932 [BU, S. 420]\"",
+			"work_id": "",
+			"note": "smallform_0599"
+		},
+		{
+			"date": "11.1931",
+			"biography_info": "Berlin. Erstmaliger Drogenkonsum (Morphium? vgl. Eintrag vom 11.1932). Bleibt trotz zahlreichen Entziehungskuren zeitlebig davon abhängig. [OR, S. 182]",
+			"event": "unklar: irgendwann im Hersbst war AS wohl für einen Abstecher im Tessin für den Reiseführer, danach hat sie in Berlin in ihrer eigenen Wohnung gewohnt (LE 100) Gemäss Miermont: Baedeker Reise ins Tessin und ins Graubünden Anfang September, also vor Berlin (BU 85)",
+			"textWork": "Arbeit an der Lyrischen Novelle und an Schweizer Reiseführern der Reihe Was nicht im Baedeker steht (Piper-Verlag, München) [OR, S. 182] Auch erste journalistische Arbeiten für die Rubrik Kino in der Neuen Zürcher Zeitung [BU, S. 414]",
+			"textPub": "",
+			"work_id": "",
+			"note": "genaue Umzugsdaten?"
+		},
+		{
+			"date": "12.1931",
+			"biography_info": "Aufenthalt in Rheinsberg [LE, S. 228]",
+			"event": "unklar",
+			"textWork": "Die Lyrische Novelle entsteht [LE, S. 228]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Siehe dazu: Pühl, Eberhard. Auf den Spuren von Annemarie Schwarzenbach in Rheinsberg. Oldenburg: Isensee Verlag, 2019. "
+		},
+		{
+			"date": "06.01.1932",
+			"biography_info": "Kurzer Aufenthalt in München. Auftrag vom Piper-Verlag für den Reiseführer [LE, S. 228], d.h. den zweiten Schweiz-Band der Reihe 'Was nicht im Baedeker steht': Das Buch von der Schweiz: Nord und West [ez]. ",
+			"event": "unklar",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "smallform_0600",
+			"note": "Achtung: Angaben OR, BU und LE noch sinnvoll zusammenführen"
+		},
+		{
+			"date": "5.1932",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Lesung in Sankt Gallen aus dem verschollenen Roman Aufbruch im Herbst [OR, S. 182] [LE, S. 228]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.1932",
+			"biography_info": "Reise nach Venedig mit Erika und Klaus Mann, nachdem die zuvor geplante Orientreise wegen des Selbstmordes von Ricki Hallgarten nicht durchgeführt wurde. [OR, S. 182]",
+			"event": "Venedigreise 1932",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "Vgl. dazu Fotos auf dem Schiff sowie die Beschreibung derselben Situation durch Klaus Mann in Der Wendepunkt, S. 331-333. [ez]",
+			"note": "genaue Reisedaten?"
+		},
+		{
+			"date": "[Sommer] 1932",
+			"biography_info": "Rückkehr nach Berlin. [LE, S. 229]",
+			"event": "unklar [Berlinreise 1932]?",
+			"textWork": "Arbeit am Drama Cromwell (unveröffentlicht) [OR, S. 182] ",
+			"textPub": "",
+			"work_id": "smallform_0037",
+			"note": "genauere Angaben?"
+		},
+		{
+			"date": "7.1932",
+			"biography_info": "Reise nach Stockholm und Finnland [BU, S. 414] AS trifft die Geschwister Mann im Juli in Stockholm. [LE, S. 229] Laut Strohmeyer bereisten sie auch Norwegen [AH, S. 57f.] und insbesondere Hans Aminoff (Grundlage für Klaus Manns 'Flucht in den Norden'). ",
+			"event": "Skandinavienreise 1932",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "genaue Reisedaten?"
+		},
+		{
+			"date": "10.1932",
+			"biography_info": "",
+			"event": "",
+			"textWork": "\"Mehrere Artikel für den zweiten Band des Piper-Reiseführers [BU, S. 414]",
+			"textPub": " Buch erscheint 1933 [BU, S. 420]\"",
+			"work_id": "",
+			"note": "smallform_0600"
+		},
+		{
+			"date": "11.1932",
+			"biography_info": "Erstmaliger Konsum von Morphium [BU, S. 414]",
+			"event": "unklar [Berlinreise 1932?]",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1932",
+			"biography_info": "Roger Martin du Gard schenkt AS in Berlin ein Exemplar seines Buches Confidance Africaine. Die Widmung [oft von der älteren Forschung zitiert], lautet: Für Annemarie Schwarzenbach, mit Dank dass sie mit ihrem schönen Gesicht eines untröstlichen Engels auf dieser Welt spaziert. [LE, S. 229] Die Quelle für diese Episode ist vermutlich Klaus Manns Der Wendepunkt, S. 332. Das signierte Exemplar ist m.W. nicht erhalten (ev. wüsste Alexis mehr). [ez]",
+			"event": "unklar [Berlinreise 1932?]",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1933",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Die 1930 verfasste Erzählung Ruth erscheint. [OR, S. 182]",
+			"work_id": "",
+			"note": "genaues Publikationsdatum?"
+		},
+		{
+			"date": "1.1933",
+			"biography_info": "",
+			"event": "",
+			"textWork": "AS schreibt den unpublizierten Text: Der Fluss [BU, S. 422]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "30.01.1933",
+			"biography_info": "Erika Mann eröffnet in München ihr politisches Kabarett Die Pfeffermühle [LE, S. 229]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant?"
+		},
+		{
+			"date": "3.1933",
+			"biography_info": "Am Tag der Machtübernahme durch Hitler ist AS krank.",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "08.04.1933",
+			"biography_info": "Erika und Klaus Mann emigrieren aus Deutschland. [LE, S. 229]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant?"
+		},
+		{
+			"date": "4.1933",
+			"biography_info": "AS schreibt einen langen Brief an Klaus Mann, in dem sie den Faschismus analysiert. [OR, S. 182]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Brief wirklich separat auflisten? allenfalls Info oben ergänzen und Brief nur verlinken?"
+		},
+		{
+			"date": "16.04.1933",
+			"biography_info": "\"AS schreibt Bourdet über ihre Pläne, eine Zeitschrift zu gründen (letter_0011). Später in Le Lavandou informiert sie Klaus Mann. Mann nimmt das Projekt in die Hand. Am 16. Juni unterzeichnet er einen Vertrag mit dem Querido Verlag (Fritz Landshoff) für die Zeitschrift, die nun den Titel \"\"Die Sammlung\"\" trägt (BU 119)\"",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "03.05.1933",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Die Lyrische Novelle erscheint im Rowohlt-Verlag [OR, S. 182]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "5.1933",
+			"biography_info": "AS besucht Thomas Mann in Le Lavandou vom 03. Mai bis zum 12. Mai 1933 [LE, S. 229]",
+			"event": "Frankreichreise 1933",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "5.1933",
+			"biography_info": "Ab dem 13. 5 (Tagebuch Thomas Mann vom 12.5., S. 84, AS reise morgen nach Spanien ab): Reise mit Marianne Breslauer durch die spanischen Pyrenäen. Publiziert Bildberichte über die Reise in der Zürcher Illustrierten. [OR, S. 182-183] [OR, S. 182]",
+			"event": "Spanienreise 1933",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.1933",
+			"biography_info": "Projekt einer antifaschistischen Zeitschrift mit Klaus Mann und Claude Bourdet [OR, S. 414]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "7.1933",
+			"biography_info": "AS trifft Catherine Pozzi und Jean Paulhan in Paris. [BU, S. 414] AS ist mit Erika und Klaus Mann in Paris. [LE, S. 229]",
+			"event": "Parisreise 1933",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Sommer] 1933",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Lesung aus dem Roman Flucht nach oben, der lange als verschollen galt und erst postum 1990 publiziert wurde. [OR, S. 182]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "9.1933",
+			"biography_info": "Aufenthalt in Berlin [LE, S. 229]",
+			"event": "unklar [Berlinreise 1933?]",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "9.1933",
+			"biography_info": "\"Das erste Heft der \"\"Sammlung\"\" erscheint im September im Querido Verlag in Amsterdam. AS unterstützt die Zeitschrift finanziell und publiziert auch zwei kleinere Beiträge darin. [OR, S. 183]\"",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "ABER: bei Miermont et al. AS als Ideengeberin > kontaktiert auch zuerst Bourdet"
+		},
+		{
+			"date": "10.1933",
+			"biography_info": "Die Pfeffermühle wird in Zürich wiedereröffnet. [Le, S. 229]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant?"
+		},
+		{
+			"date": "12.1933",
+			"biography_info": "\"AS beteiligt sich an archäologischen Ausgrabungen in Syrien. Lernt als Gast einer amerikanischen Expedition \"\"die Grundlagen der praktischen Archäologie kennen\"\" [OR, S. 183] \"",
+			"event": "Erste Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "auch schon Bildberichte von der ersten Persienreise oder meint Fähnders hier generell die Publikationen?"
+		},
+		{
+			"date": "[Ende] 04.1934",
+			"biography_info": "\"AS beteiligt sich an archäologischen Ausgrabungen in Syrien. Lernt als Gast einer amerikanischen Expedition \"\"die Grundlagen der praktischen Archäologie kennen\"\" [OR, S. 183] EZ: Ist sie nicht im April 34 im iranischen Rey am Ausgraben - dorthin wo sie im Herbst zurückkehren wird?\"",
+			"event": "Erste Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Woher hat Fähnders das Zitat von AS? Vermutlich aus einem Brief an die Manns, denen sie ausführlich über ihre Tätigkeiten während der ersten Persienreise berichtet. [ez]"
+		},
+		{
+			"date": "4.1934",
+			"biography_info": "Rückkehr aus dem Orient. [OR, S. 183] [LE, S. 230]",
+			"event": "Erste Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.1934",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Arbeit am ersten Reisebuch Winter in Vorderasien. Tagebuch einer Reise. [OR, S. 183]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Ende] 07.1934",
+			"biography_info": "Aufenthalt in Bad Gastein mit Maud Thyssen. Mietet mit der Zustimmung des Vaters ein Haus in Sils Baselgia im Engadin. [LE, S. 230]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "17.08.1934",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Beginnt die Novellensammlung Der Falkenkäfig zu schreiben [BU, S. 414] [LE, S. 230]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Vor oder während zweiter Persienreise? Ich habe den Eindruck, dass sie erst auf der zweiten Persienreise damit beginnt (thematisch näher an den Erfahrungen in dieser Zeit), müsste man z.B. in den Rascher-Briefen nachlesen, da sie das Bucht-Typoskript ihm anbot. [ez]"
+		},
+		{
+			"date": "[Herbst]1934",
+			"biography_info": "Teilnahme am Schriftstellerkongress in Moskau in Begleitung von Klaus Mann vom 17. August bis zum 7. September [in BU genauere Daten: Aufbruch von Moskau schon am 26. August, S. 151 - ev. ]. Sie begleitet Klaus Mann danach noch bis nach St. Petersburg , von wo aus er am 28. August alleine nach Finnland aufbricht [BU, S. 151]. Sie bleibt in St. Petersburg und reist am 6. September weiter in den Iran [ebd.] (s.u.).",
+			"event": "Moskaureise 1934",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "9.1934",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Publikation von Winter in Vorderasien. Tagebuch einer Reise im Rascher-Verlag in Zürich. [OR, S. 183]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "12.1934",
+			"biography_info": "AS bricht zu ihrer zweiten, rund dreimonatigen Orientreise nach Persien auf. Sie verlobt sich in Teheran mit dem Diplomaten Claude Clarac, dem Zweiten Sekretär der französischen Gesandtschaft. Sie beteiligt sich erneut an archäologischen Ausgrabungen, in der Nähe von Rhages bei Teheran. [OR, S. 183]",
+			"event": "Zweite Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "27.12.1934",
+			"biography_info": "Rückkehr von der zweiten Persienreise.",
+			"event": "Zweite Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1.1935",
+			"biography_info": "Pfeffermühlen-Skandal in Zürich, nachdem rechtsgerichtete Schweizer Frontisten Erika Manns Kabarett angegriffen haben. AS erklärt sich in einem Zeitungsartikel solidarisch mit der antifaschistischen Freundin Erika Mann. Die Konflikte von AS mit der Familie eskalieren. [OR, S. 184] [BU, S. 415]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "03.01.1935",
+			"biography_info": "AS begiebt sich zu einer Entziehungskur in die Klinik von Samedan und unternimmt dort einen Suizidversuch. [OR, S. 184] Im Januar auch: Anmietung des Jägerhauses in Sils-Baselgia für ein Jahr. [BU, S. 415] ACHTUNG: Alexis spricht davon, dass sie zunächst das gegenüberliegende Haus Salis (Bucheli: Chesa Castelmur-Salis) gemietet habe, spätestens ab 1938 dann das Jägerhaus (ASF 285). Alexis Quelle (ev. noch mehr): Unpublizierter Tagebuch-Eintrag von Klaus Mann vom 19. Juni 1936 (könnte sich KM getäuscht haben?). Was definitiv für Alexis Behauptung spricht: das Jägerhaus sei klein gewesen, das Haus, das sie 1934 (letter_0272) ankündigt, wird als grosser Bauernhof mit 7 Zimmern beschrieben. Auch: Martha Cadisch Korrespondenz beginnt erst im Dezember 37. Auch: Die Fotos sprechen dafür (insbesondere A-5-08/153, wo Giehse und Auto vor Haus Salis sind). ",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "4.1935",
+			"biography_info": "Reise nach Nantes, um die zukünftigen Schwiegereltern kennzulernen. Reist ohne Claude Clarac. [BU, S. 415]",
+			"event": "Reise nach Nantes?",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "4.1935",
+			"biography_info": "Aufbruch zur dritten Orientreise, die sie wiederum nach Teheran führt. [OR, S. 184]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "21.05.1935",
+			"biography_info": "Heirat mit Claude Clarac und Annahme der französischen Staatsbürgerschaft. [OR, S. 184]",
+			"event": "Dritte Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Achtung: Umbenennung Persiens zu Iran ab 1935 (AS verwendet weiterhin die Bezeichnung Persien)"
+		},
+		{
+			"date": "[Ende] 06.1935",
+			"biography_info": "Aufenthalt in Fermanieh, einem Sommerhaus in der Nähe von Teheran. [LE, S. 231]",
+			"event": "Dritte Persienreise",
+			"textWork": "Abschluss des 1934 begonnen Erzählzyklus Der Falkenkäfig, der zu Lebzeiten unpubliziert bleibt und erst im Erzählungsband Bei diesem Regen (1989) zu Teilen abgedruckt wurde. Einige der Texte, u.a. die Titelerzählung, sind verschollen. [OR, S. 184]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "08./09.1935",
+			"biography_info": "Aufenthalt in einem Camp im Lahrtal bei Teheran. AS muss Aufenthalt wegen eines operativen Eingriffs am Bein unterbrechen und kehrt nach Teheran zurück. Schickt Briefe an Klaus Mann mit Geld und Empfehlungsschreiben. Die Reisepläne des Freundes zerschlagen sich jedoch. [LE, S. 231]",
+			"event": "Dritte Persienreise",
+			"textWork": "Schreibt im Lahrtal das zu Lebzeiten unveröffentlichte Persienbuch Tod in Persien, das sie später zu Das glückliche Tal (1940) umarbeitet. [OR, S. 184]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "10.1935",
+			"biography_info": "Bekanntschaft mit Barbara Hamilton-Wright, die AS und Claude Clarac in Persien besucht. [LE, S. 231]",
+			"event": "Dritte Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "10.1935",
+			"biography_info": "Rückkehr in die Schweiz. [BU, S. 415]",
+			"event": "Dritte Persienreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "12.1935",
+			"biography_info": "AS begiebt sich in Prangins in eine erneute Entzierhungskur. [BU, S. 415]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Bei Georgiadou ist die Entziehungskur bei Prof. Forel in Prangins erst auf November datiert [LE, S. 231]"
+		},
+		{
+			"date": "1936",
+			"biography_info": "AS verbringt Weihnachten mit Erika und Klaus Mann in Sils-Baselgia. Klaus Mann beginnt dort seinen Roman Mephisto zu schreiben [LE, S. 231] ",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "5.1936",
+			"biography_info": "AS reist mit Erika und Klaus Mann nach Mallorca. Empfängt oft Gäste in ihrem Haus in Sils-Baselgia. [OR, S. 184] Klaus und Thomas Mann setzen sich vergeblich für die Veröffentlichung der Novellensammlung Der Falkenkäfig ein. [BU, S. 415] AS beendet das Manuskript Tod in Persien [LE, S. 231]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.1936",
+			"biography_info": "AS besucht Erika Mann in London und begleitet sie nach Paris. [LE, S. 232]",
+			"event": "unklar [Londonreise 1936?]",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant? Ev. müsste man eruieren, ob die London-Reise und die Mallorca-Reise nicht dieselbe Reise sind. "
+		},
+		{
+			"date": "26.08.1936",
+			"biography_info": "AS reist mit Erika und Klaus Mann nach Mallorca. Danach mit Erika Mann und Therese Giehse nach Sils-Baselgia. [LE, S. 232]",
+			"event": "Mallorcareise?",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "19.09.1936",
+			"biography_info": "Reist Ende August mit Barbara Hamilton-Wright, die sie in Teheran kennengelernt hat, in die USA. Eine Fülle an sozialkritischen Reportagen und Bildberichten über die USA erscheinen vor allem in der National-Zeitung und der Zürcher Illustrierten. [OR, S. 184] [LE, S. 232]",
+			"event": "Erste USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "26.11.1936",
+			"biography_info": "Abreise der Geschwister Mann in die USA [LE, S. 232]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant?"
+		},
+		{
+			"date": "[Mitter] 02.1937",
+			"biography_info": "Premiere von The peppermill in New York. [LE, S. 232]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "relevant?"
+		},
+		{
+			"date": "5.1937",
+			"biography_info": "Rückkehr in die Schweiz, nach Sils-Baselgia. [OR, S. 184] [BU, S. 416] [LE, S. 232]",
+			"event": "Erste USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "5.1937",
+			"biography_info": "Reisen durch Deutschland, Polen und die baltischen Staaten bis nach Moskau. [OR, S. 184] [BU, S. 416]",
+			"event": "Moskaureise 1937",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "genaue Reisedaten und Stationen?"
+		},
+		{
+			"date": "6.1937",
+			"biography_info": "Recherchen in Moskau über den verunglückten Schweizer Bergsteiger Lorenz Saladin, um eine Biografie zu verfassen. [OR, S. 184]",
+			"event": "Moskaureise 1937",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "1937",
+			"biography_info": "\"Rückkehr über Schweden. [BU, S. 416] AS trifft Barbara Hamilton-Wright und Michael Logan in Schweden bei ihrer Schwester, Suzanne Öhmann. Reist gemeinsam mit den Freunden zurück nach Sils-Baselgia, wo Claude Clarac, Klaus Mann und Thomas Quinn Curtis zu ihnen stossen",
+			"event": " später auch Erika Mann. [LE, S. 232]\"",
+			"textWork": "Moskaureise 1937",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "05.10.1937",
+			"biography_info": "Sommer in Sils mit Klaus und Erika Mann, Therse Giehse, Barbara Hamilton-Wright, Michael Logan und Claude Clarac. [BU, S. 416]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "2.1938",
+			"biography_info": "Reise mit Barbara Hamilton-Wright in die Südstaaten der USA. AS schreibt für die Schweizer Presse zahlreiche Berichte und Bildreportagen über die Südstaaten. [OR, S. 184-185] [BU, S. 416] Klaus Mann reist auch mit in die USA [aber nicht auf die Reportagetour] [LE, S. 233]",
+			"event": "Zweite USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"Bei Georgiadou ist Reise schon auf September datiert"
+		},
+		{
+			"date": "3.1938",
+			"biography_info": "AS unternimmt nach ihrer Rückkehr nach Sils verschiedene Entziehungskuren. [OR, S. 185] [BU, S. 416] AS kehrt mit Klaus Mann nach Europa zurück und konsumiert schon auf der Schiffsreise wieder viel Morphium. [LE, S. 233]",
+			"event": "Zweite USA-Reise",
+			"textWork": "Arbeitet in Sils-Baselgia wieder an der Biographie über Lorenz Saladin [LE, S. 233]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Anfang] 05.1938",
+			"biography_info": "Reise nach Wien nach dem ,Anschluss' Österreichs an das Deutsche Reich [OR, S. 185] AS hat die Absicht, den Kontakt zischen deutschen Emigranten und dem österreichischen Widerstand herzustellen. [BU, S. 416] EZ: Danach scheint AS direkt in einen Entzug zu Ruppaner zu gehen, bevor sie diese unter ärztlicher Aufsicht ab dem 24. Mai bei der Mutter in Bocken fortstetzt.",
+			"event": "Österreichreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Fahrt nach Österreich wird bei Georgiadou auf Anfang April datiert [LE, S. 233]"
+		},
+		{
+			"date": "Juli bis [Mitte August]",
+			"biography_info": "Erneute Entziehungskuren [OR, S. 185] Aufenthalt bei Dr. Ruppaner in Samedan. [LE, S. 233]. EZ: Lernt Anita Forrer kennen (letter_0280)",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "14.08.1938",
+			"biography_info": "Entziehungskur in der geschlossenen Abteilung der Klinik von Dr. Ludwig Binswanger in Kreuzlingen. [LE, S. 233]",
+			"event": "",
+			"textWork": "AS schreibt weiter an der Biographie über Lorenz Saladin und beendet sie kurz darauf in Sils-Baselgia [LE, S. 233]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "9.1938",
+			"biography_info": "Besuch von Thomas Man in Sils, der die Südstaatenartikel rühmt. [LE, S. 233]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "9.1938",
+			"biography_info": "Aufenthalt in Prag [OR, S. 185] AS schreibt auch eine Reportage, unmittelbar vor dem Münchner Abkommen. [BU, S. 416]",
+			"event": "Pragreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "10.1938",
+			"biography_info": "Erste Begegnung mit Ella Maillart [BU, S. 416]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Ist die Erste Begegnung mit Maillart gar nicht in der Klinik oder stimmen Daten zu Aufenthalt in der Klinik bei Miermont nicht?"
+		},
+		{
+			"date": "10.1938",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Publikation der Bergsteiger-Biographie Lorenz Saladin. Ein Leben für die Berge bei Hallwag in Bern. Dem Werk ist ein Geleitwort von Sven Hedin beigefügt. [OR, S. 185]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "11.12.1938",
+			"biography_info": "Entzugsversuch in einer Klinik in Yverdon. Erhält Besuch von Ella Maillart, mit der sie den Plan einer Autoreise durch Afghanistan schmiedet. [OR, S. 185] ",
+			"event": "",
+			"textWork": "Arbeitet das Manuskript Tod in Persien zu Das glückliche Tal um. [OR, S. 185]",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"Georgiadou datiert das erste Treffen mit Ella Maillart auch auf den Oktober bzw. Klinik-Aufenthalt (Mitter Oktober bis Februar 1939) [LE, S. 233]"
+		},
+		{
+			"date": "2.1939",
+			"biography_info": "AS verfasst ihr Testament, in dem sie Anita Forrer als Erbin ihres schriftlichen Nachlasses einsetzt. Über mögliche Publikationen sollte diese zusammen mit Erika Mann befinden. [OR, S. 187]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "2.1939",
+			"biography_info": "Austritt von AS aus der Klinik in Yverdon [LE, S. 233]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "03./04. 1939",
+			"biography_info": "Plan einer Reise nach Afghanistan mit Ella Maillart [BU, S. 416]",
+			"event": "Afghanistanreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "06.06.1939",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "AS Artikel Nordamerikanisches: Das Drama der amerikanischen Südstaaten in der Zeitschrift von Thomas Mann Mass und Wert [LE, S. 234]",
+			"work_id": "",
+			"note": "wohl nicht separat auflisten, da Publikationen sowieso sichtbar? oder doch separat erwähnen, da spezielle Veröffentlichung und mit grossem Abstand zu USA-Reise? Kann man mal so stehen lassen, aber muss nicht in die Editions-Timeline. [ez] "
+		},
+		{
+			"date": "10.1939",
+			"biography_info": "AS und Ella Maillart brechen in Genf auf und erreichend Ende August Kabul. Die Reise führt sie über den Balkan, die Türkei und den Iran bis nach Afghanistan. Es ist die letzte Orientreise von AS. Unterwegs bricht sie ihr Versprechen keine Drogen mehr zu nehmen. Eine Vielzahl an Texten von AS entstehen und werden in der Presse gedruckt. [OR, S. 185] ",
+			"event": "Afghanistanreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Ende] 10.1939",
+			"biography_info": "Die beiden Frauen gehen nun getrennte Wege. AS beteiligt sich an Ausgrabungen des französischen Archäologen Joseph Hackin in Afghanisch-Turkestan, während Ella Maillart nach Indien reist. [OR, S. 185]",
+			"event": "Afghanistanreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "12.1939",
+			"biography_info": "",
+			"event": "",
+			"textWork": "AS beginnt in Afghanistan die Erzählsammlung Die vierzig Säulen der Erinnerung, die sie 1940 in den USA abschliesst. Das Werk bleibt zu Lebzeiten unveröffentlicht. [OR, S. 185] [BU, S. 416]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Bei Georgidaou ist das Schreiben der Erzählsammlung Die vierzig Säulen der Erinnerung auf den Dezember 1939 datiert [LE, S. 234]"
+		},
+		{
+			"date": "[Anfang] 1940",
+			"biography_info": "AS reist Ende Dezember aus Afghanistan ab und trifft Ella Maillart in Indien. [OR, S. 185]",
+			"event": "Afghanistanreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "01.1940 ?",
+			"biography_info": "AS reist von Indien nach Genua per Schiff, nach Europa zurück. ",
+			"event": "Afghanistanreise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Frühjahr] 1940",
+			"biography_info": "",
+			"event": "",
+			"textWork": "",
+			"textPub": "Das glückliche Tal erscheint im Morgarten-Verlag [OR, S. 185-186] [LE, S. 234]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "5.194",
+			"biography_info": "Wiederbegegnung mit Margot von Opel in Sils [LE, S. 234]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.194",
+			"biography_info": "Reist mit der Freundin Margot von Opel in die USA (OR, S. 186) Marie-Louise Bodmer wird AS Agentin in der Schweiz [BU, S. 416] Wiedersehen mit der Familie Mann in Princeton. AS engagiert sich gemeinsam mit den Manns beim Emergency Rescue Comitee zur Rettung bedrohter NS-Regime-Gegner. AS lebt mit Margot von Opel erst in Lowell (Masachusett), im Sommer dann auf der Insel Nantucket bei Boston. Versucht für Klaus Manns Zeitschrift Decision Geld beim amerikanischen Grossbürgertum zu sammeln. [LE, S. 235]",
+			"event": "Dritte USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Achtung: inwiefern stimmt Engagement von AS bei Comitee? KM versuchte neue Zeitschrift in Amerika zu gründen. AS half ihm bei Übersetzungen seiner Artikel ins EN > abklären"
+		},
+		{
+			"date": "[Sommer] 1940",
+			"biography_info": "Erste Begegnung mit Carson McCullers, die von AS fasziniert ist und ihr ihren Roman Reflections in a Golden Eye (1941) widmet. [OR, S. 186] McCullers verliebt sich auch in AS, was dadurch dessen Verhältnis zu Margot von Opel belastet [LE, S. 235]",
+			"event": "Dritte USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "10.194",
+			"biography_info": "",
+			"event": "Dritte USA-Reise",
+			"textWork": "AS schreibt Artikel über die politische Haltung der Schweiz: [Die Schweiz, das Land, das nicht zum Schuss kam] [LE, S. 235]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Artikel wirklich separat erwähnen? Von LE auch nicht namentlich genannt"
+		},
+		{
+			"date": "11.194",
+			"biography_info": "Psychotische Krise [BU, S. 416]",
+			"event": "Dritte USA-Reise",
+			"textWork": "AS beginnt mit Prosatext Die zärtlichen Wege, unsere Einsamkeit. Bleibt zu Lebzeiten unveröffentlicht [LE, S. 235]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Anfang] 1941",
+			"biography_info": "Vermehrter Drogenkonsum, zunehmend schwere Depressionen, auch wegen des Todes des Vaters im November. AS unternimmt erneut einen Suizidversuch und wird in verschiedene Kliniken in den USA eingewiesen. [OR, S. 186] Tod des Vaters. Selbstmordversuch, Klinikeinweisung, Flucht aus der Klinik von Greenwich [BU, S. 417]",
+			"event": "Dritte USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"Angaben von OR und BU noch zusammenfassen"
+		},
+		{
+			"date": "01.02.1941",
+			"biography_info": "Entlassung aus der Klinik mit der Auflage, sofort aus der USA auszureisen. Über Lissabon reist sie in die Schweiz, von wo aus sie auf Druck der Mutter wieder ausreist. [OR, S. 186]",
+			"event": "Dritte USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "Angaben von OR und BU noch zusammenfassen"
+		},
+		{
+			"date": "2.1941",
+			"biography_info": "Einschiffung und Rückkehr in die Schweiz über Lissabon. [BU, S. 417]",
+			"event": "Dritte USA-Reise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "3.1941",
+			"biography_info": "Aufenthalt in Lissabon, wo sie journalistisch und fotojournalistisch tätig ist. [OR, S. 186] AS bleibt drei Wochen in Lissabon unter der Obhut des Schweizer Botschafters Henri Martin. [LE, S. 236]",
+			"event": "unklar",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "4.1941",
+			"biography_info": "Rückkehr in die Schweiz. Kurzer Aufenthalt auf Bocken. Fährt dann nach Sils-Baselgia. [LE, S. 236]",
+			"event": "",
+			"textWork": "Beendet Die zärtlichen Wege, unsere Einsamkeit in Sils-Baselgia [LE, S. 236] Schreibt in Sils auch den Text: Das Namenlose [BU, S. 422]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "6.1941",
+			"biography_info": "Reise nach Belgisch-Kongo mit dem Ziel sich den unabhängigen französischen Truppen Charles de Gaulles anzuschliessen. Schwierigkeiten mit den Kolonialbehörden und Reisen ins Landesinnere. Die Schweizer Tagespresse veröffentlicht zahlreiche Reportagen und Berichte. [OR, S. 186] [BU, S. 417] Unter dem Druck der Belgier lehnen auch die Franzosen die Mitarbeit AS' bei Radio Brzzaville ab [LE, S. 236]",
+			"event": "Afrikareise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Ende] Juli",
+			"biography_info": "Schiffahrt auf dem Kongo nach Lisala, wo sie den Gedichtzyklus Kongo-Ufer niederschreibt und anschliessend ins Innere des afrikanischen Kontents reist. [BU, S. 417]",
+			"event": "Afrikareise",
+			"textWork": "Schreibt Gedichtzyklus Kongo-Ufer, der erst postum (2005) erscheint. [OR, S. 186] [BU, S. 417]",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"ev. Stationen noch präzisieren"
+		},
+		{
+			"date": "August bis September",
+			"biography_info": "Aufenthalt auf der Plantage der Schweizer Familie Vivien in Molanda en Mongola. [LE, S. 236]",
+			"event": "Afrikareise",
+			"textWork": "",
+			"textPub": "Schreibt den Text: Der Krater der Tiere in Molanda (zwischen dem 31. Juli und 1. August) [BU, S. 422]",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "10.1941",
+			"biography_info": "Reisen durch den Kongo bis in den Tschad [LE, S. 236]",
+			"event": "Afrikareise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Ende] 02.1942",
+			"biography_info": "Rückkehr nach Léopoldville. [BU, S. 417]",
+			"event": "Afrikareise",
+			"textWork": "Beginnt Arbeit am Roman Das Wunder des Baums [BU, S. 417] Schreibt daran vom: 22.10.1941 bis 20.02.1942 [BU, S. 422]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "14.03.1942",
+			"biography_info": "Aufenthalt in Thysville [BU, S. 417]",
+			"event": "Afrikareise",
+			"textWork": "Arbeit am dritten Teil und Abschluss des zu Lebzeiten unpublizierten Romans Das Wunder des Baumes. [OR, S. 186] [LE, S. 237]",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "30.03.1942",
+			"biography_info": "AS verlässt Afrika auf dem Dampfer SS Quanza in Richtung Lissabon. [LE, S. 237] ",
+			"event": "Afrikareise",
+			"textWork": "AS verfasst während der Überfahrt von Afrika nach Europa den Text Beim Verlassen Afrikas [BU, S. 417] Text wird zwischen 14. und 30. März 1942 verfasst [BU, S. 422]",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"Angaben von OR und BU und LE sinnvoll zusammenführen"
+		},
+		{
+			"date": "3.1942",
+			"biography_info": "Ankunft in Lissabon. [LE, S. 237]",
+			"event": "Afrikareise",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "13.04 bis 04.05. 1942",
+			"biography_info": "Reist von Lissabon aus über Madrid weiter nach Marokko, wo AS ihren Ehemann Claude Clarac wiedertrifft. [OR, S. 186]",
+			"event": "unklar",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "[Ende] 05.1942",
+			"biography_info": "",
+			"event": "",
+			"textWork": "Vier Artikel mit dem Titel Kleines Kongo-Tagebuch erscheinen in der National-Zeitung [LE, S. 237]",
+			"textPub": "",
+			"work_id": "",
+			"note": "separate auflistung nötig? auch einzelnen erfassen, da Daten ansonsten nicht genau"
+		},
+		{
+			"date": "",
+			"biography_info": "Wiedersehen mit Claude Clarac in Tetouan. [BU, S. 417]",
+			"event": "unklar",
+			"textWork": "Niederschrift des Gedichtzyklus Aus Tetouan [BU, S. 417]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Gemäss Georgiadou: Reise am 23.05.1942 von Madrid nach Rabat, Wiedersehen mit Claude Clarac in frz. Botschaft in Tetuan dann am 01.06.1942. Arbeit am Gedichtzyklus Aus Tetoun wird von ihr auch auf den Juni datiert. > Angaben prüfen [LE, S. 237]"
+		},
+		{
+			"date": "[Ende] 06.1942",
+			"biography_info": "Bekanntschaft mit Margret Boveri [OR, S. 186]",
+			"event": "unklar",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "8.1942",
+			"biography_info": "Rückkehr in die Schweiz. [BU, S. 417] Kurzer Aufenthalt in Bocken, danach in Sils-Baselgia [LE, S. 237]",
+			"event": "unklar",
+			"textWork": "Umarbeiten des Romans Wunder des Baumes in ein Prosagedicht (Marc, zu Lebzeiten unveröffentlicht) [OR, S. 186]",
+			"textPub": "",
+			"work_id": "",
+			"note": "Arbeit an Das Wunder des Baumes wird von Georgiadou erst auf August datiert [LE, S. 237]"
+		},
+		{
+			"date": "06.09.1942",
+			"biography_info": "Erbschaft durch Tod den Grossmutter. AS will Haus in Sils-Baselgia kaufen [LE, S. 237]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "15.11.1942",
+			"biography_info": "AS stürzt in Sils mit dem Fahrrad und fällt ins Koma. Wird in die Klinik von Prangins gebracht und wegen einer Fehldiagnose mit Elektroschocks behandelt und gequält. Claude Clarac wird der Besuch verwehrt. Der Mutter gelingt es AS nach Bocken zu nehmen. Später wird sie in ihr Haus nach Sils gebracht. [OR, S. 187]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "19.11.1942",
+			"biography_info": "AS stirbt in ihrem Haus in Sils. In der Folge vernichtet die Mutter Renée Schwarzenbach, unter Missachtung des Testaments von AS, einen Grossteil der in Sils befindlichen persönlichen Dokumenten, Briefen u. a. [OR, S. 186]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": ""
+		},
+		{
+			"date": "",
+			"biography_info": "Beisetzung der Urne im Familiengrab in Horgen [OR, S. 186]",
+			"event": "",
+			"textWork": "",
+			"textPub": "",
+			"work_id": "",
+			"note": "\"ev. Verweis auf zahlreiche Nachrufe in fast allen bedeutenden Zeitungen/Zeitschriften?"
+		}
+	]
+}
