@@ -7,7 +7,7 @@ Single page with following sections:
     - /places
     - /travels
     - /people
-    - /institutions
+    - /organisations
     - /works
     - /keywords 
 
