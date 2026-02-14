@@ -25,8 +25,13 @@ export type TRegister = {
 				name: string;
 				firstname: string;
 				lastname: string;
+				nameVariants: string[];
 				gndNumber?: string; // optional
+				dateBirth: string;
+				dateDeath: string;
 				type: TPeopleTypes;
+				organisationId: TOrganisationsKeys;
+				note: string;
 			};
 		};
 		places: {
