@@ -1,5 +1,5 @@
 {
-	"imgSeries": {
+	"img_series": {
 		"fish": { "name": "Fish", "filenames": ["img001", "img032", "img099"] },
 		"buildings": { "name": "Buildings", "filenames": ["img004", "img012", "img013", "img444"] }
 	}
