@@ -10,26 +10,49 @@
 
 {#snippet content(type, items)}
 	{#if type === 'people'}
-		<p>{items.firstname} {items.lastname}</p>
+		<h3 class="h3">{items.firstname} {items.lastname}</h3>
 		<p class="text-secondary-500">{items.type}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{:else if type === 'places'}
+		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{:else if type === 'events'}
+		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{:else if type === 'organisations'}
+		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{:else if type === 'works'}
+		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
 		{@const author = reg.people?.[items.authorId]}
 		<p>{author.firstname} {author.lastname}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{:else if type === 'keywords'}
+		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
-		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+		{#if items.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+			>{/if}
 	{/if}
 {/snippet}
 {#snippet accordion(type, title, subreg)}
@@ -41,7 +64,6 @@
 			<Accordion.ItemContent>
 				{#each Object.keys(subreg) as key}
 					<div class="border-t-2 py-3 pl-5">
-						<h3 class="h3">{subreg[key].name}</h3>
 						{@render content(type, subreg[key])}
 					</div>
 				{/each}
