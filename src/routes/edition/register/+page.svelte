@@ -10,9 +10,24 @@
 
 {#snippet content(type, items)}
 	{#if type === 'people'}
-		<p>{items.firstname}</p>
+		<p>{items.firstname} {items.lastname}</p>
+		<p class="text-secondary-500">{items.type}</p>
 		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
 	{:else if type === 'places'}
+		<p>{items.name}</p>
+		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+	{:else if type === 'events'}
+		<p>{items.name}</p>
+		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+	{:else if type === 'organisations'}
+		<p>{items.name}</p>
+		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+	{:else if type === 'works'}
+		<p>{items.name}</p>
+		{@const author = reg.people?.[items.authorId]}
+		<p>{author.firstname} {author.lastname}</p>
+		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
+	{:else if type === 'keywords'}
 		<p>{items.name}</p>
 		<a href={`https://d-nb.info/gnd/${items.gndNumber}`}>{items.gndNumber}</a>
 	{/if}
@@ -24,18 +39,12 @@
 				<Accordion.ItemTrigger>{title}</Accordion.ItemTrigger>
 			</h2>
 			<Accordion.ItemContent>
-				<Accordion collapsible multiple>
-					{#each Object.keys(subreg) as key}
-						<Accordion.Item value={subreg[key].name}>
-							<h3 class="h3">
-								<Accordion.ItemTrigger>{subreg[key].name}</Accordion.ItemTrigger>
-							</h3>
-							<Accordion.ItemContent>
-								{@render content(type, subreg[key])}
-							</Accordion.ItemContent>
-						</Accordion.Item>
-					{/each}
-				</Accordion>
+				{#each Object.keys(subreg) as key}
+					<div class="border-t-2 py-3 pl-5">
+						<h3 class="h3">{subreg[key].name}</h3>
+						{@render content(type, subreg[key])}
+					</div>
+				{/each}
 			</Accordion.ItemContent>
 		</Accordion.Item>
 	</Accordion>
