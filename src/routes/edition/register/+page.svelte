@@ -6,6 +6,15 @@
 
 	//! How to make this nicer? (@sebi)
 	let reg = register.register;
+
+	// Function to sort the keys of the given object alphabetically based on the name property
+	function sortKeysByName(subreg) {
+		return Object.keys(subreg).sort((a, b) => {
+			if (subreg[a].name < subreg[b].name) return -1;
+			if (subreg[a].name > subreg[b].name) return 1;
+			return 0;
+		});
+	}
 </script>
 
 {#snippet content(type, items)}
@@ -15,28 +24,24 @@
 		{#if items.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
-	{:else if type === 'places'}
+			>
+		{/if}
+	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
 		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
 		{#if items.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
+			>
+		{/if}
 	{:else if type === 'events'}
 		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
 		{#if items.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
-	{:else if type === 'organisations'}
-		<h3 class="h3">{items.name}</h3>
-		<p>{items.name}</p>
-		{#if items.gndNumber}<a
-				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
+			>
+		{/if}
 	{:else if type === 'works'}
 		<h3 class="h3">{items.name}</h3>
 		<p>{items.name}</p>
@@ -45,14 +50,8 @@
 		{#if items.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
-	{:else if type === 'keywords'}
-		<h3 class="h3">{items.name}</h3>
-		<p>{items.name}</p>
-		{#if items.gndNumber}<a
-				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>{/if}
+			>
+		{/if}
 	{/if}
 {/snippet}
 
@@ -61,7 +60,7 @@
 		<h2 id={type} class="bg-surface-950-50 p-3 h2 text-surface-50-950">
 			{title}
 		</h2>
-		{#each Object.keys(subreg) as key}
+		{#each sortKeysByName(subreg) as key}
 			<div class="border-t-2 border-surface-200 py-3 pl-5">
 				{@render content(type, subreg[key])}
 			</div>
