@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Accordion } from '@skeletonlabs/skeleton-svelte';
-
 	import register from '$lib/data/register.json';
-	//! use types
+
+	//! How to use the types? (@sebi)
 	import { type TRegister } from '$lib/types/register/TRegister';
-	let reg = register.register; //! how to make this nicer? (@sebi)
-	console.log(reg.people);
+
+	//! How to make this nicer? (@sebi)
+	let reg = register.register;
 </script>
 
 {#snippet content(type, items)}
@@ -55,26 +55,35 @@
 			>{/if}
 	{/if}
 {/snippet}
-{#snippet accordion(type, title, subreg)}
-	<Accordion collapsible multiple>
-		<Accordion.Item value={title}>
-			<h2 class="h2">
-				<Accordion.ItemTrigger>{title}</Accordion.ItemTrigger>
-			</h2>
-			<Accordion.ItemContent>
-				{#each Object.keys(subreg) as key}
-					<div class="border-t-2 py-3 pl-5">
-						{@render content(type, subreg[key])}
-					</div>
-				{/each}
-			</Accordion.ItemContent>
-		</Accordion.Item>
-	</Accordion>
+
+{#snippet regWindow(type, title, subreg)}
+	<div>
+		<h2 id={type} class="bg-surface-950-50 p-3 h2 text-surface-50-950">
+			{title}
+		</h2>
+		{#each Object.keys(subreg) as key}
+			<div class="border-t-2 border-surface-200 py-3 pl-5">
+				{@render content(type, subreg[key])}
+			</div>
+		{/each}
+	</div>
 {/snippet}
 
-{@render accordion('people', 'Personen', reg.people)}
-{@render accordion('places', 'Orte', reg.places)}
-{@render accordion('events', 'Events', reg.events)}
-{@render accordion('organisations', 'Organisationen', reg.organisations)}
-{@render accordion('works', 'Werke', reg.works)}
-{@render accordion('keywords', 'Schlagwörter', reg.keywords)}
+<div class="grid h-screen grid-cols-[1fr_5fr] gap-10">
+	<div>
+		<h2 class="h2"><a href="#people">Personen</a></h2>
+		<h2 class="h2"><a href="#places">Orte</a></h2>
+		<h2 class="h2"><a href="#events">Events</a></h2>
+		<h2 class="h2"><a href="#organisations">Organisationen</a></h2>
+		<h2 class="h2"><a href="#works">Werke</a></h2>
+		<h2 class="h2"><a href="#keywords">Schlagwörter</a></h2>
+	</div>
+	<div class="h-full overflow-scroll">
+		{@render regWindow('people', 'Personen', reg.people)}
+		{@render regWindow('places', 'Orte', reg.places)}
+		{@render regWindow('events', 'Events', reg.events)}
+		{@render regWindow('organisations', 'Organisationen', reg.organisations)}
+		{@render regWindow('works', 'Werke', reg.works)}
+		{@render regWindow('keywords', 'Schlagwörter', reg.keywords)}
+	</div>
+</div>
