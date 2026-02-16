@@ -21561,17 +21561,20 @@
 			"travel_0001": {
 				"type": "travel",
 				"name": "Venedig 1930",
-				"note": ""
+				"note": "",
+				"date": { "from": "1930", "to": "1930" }
 			},
 			"travel_0002": {
 				"type": "travel",
 				"name": "Frankreich (Bandol und Paris) 1931",
-				"note": ""
+				"note": "",
+				"date": { "from": "1931", "to": "1931" }
 			},
 			"travel_0003": {
 				"type": "travel",
 				"name": "Venedig 1932",
-				"note": ""
+				"note": "",
+				"date": { "from": "1932", "to": "1932" }
 			},
 			"travel_0004": {
 				"type": "travel",
@@ -21582,47 +21585,56 @@
 			"travel_0005": {
 				"type": "travel",
 				"name": "Frankreich (Lavandou) 1933",
-				"note": ""
+				"note": "",
+				"date": { "from": "1933", "to": "1933" }
 			},
 			"travel_0006": {
 				"type": "travel",
 				"name": "Spanien 1933",
-				"note": ""
+				"note": "",
+				"date": { "from": "1933", "to": "1933" }
 			},
 			"travel_0007": {
 				"type": "travel",
 				"name": "Iran 1933-34 (\"Erste Persienreise\")",
-				"note": ""
+				"note": "",
+				"date": { "from": "1933", "to": "1934" }
 			},
 			"travel_0008": {
 				"type": "travel",
 				"name": "Bad Gastein 1934",
-				"note": ""
+				"note": "",
+				"date": { "from": "1934", "to": "1934" }
 			},
 			"travel_0009": {
 				"type": "travel",
 				"name": "Moskau/Iran 1934-35 (\"Zweite Persienreise\")",
-				"note": ""
+				"note": "",
+				"date": { "from": "1934", "to": "1935" }
 			},
 			"travel_0010": {
 				"type": "travel",
 				"name": "Frankreich (Nantes) 1935",
-				"note": ""
+				"note": "",
+				"date": { "from": "1935", "to": "1935" }
 			},
 			"travel_0011": {
 				"type": "travel",
 				"name": "Iran 1935 (\"Dritte Persienreise\")",
-				"note": ""
+				"note": "",
+				"date": { "from": "1935", "to": "1935" }
 			},
 			"travel_0012": {
 				"type": "travel",
 				"name": "London 1936",
-				"note": ""
+				"note": "",
+				"date": { "from": "1936", "to": "1936" }
 			},
 			"travel_0013": {
 				"type": "travel",
 				"name": "Mallorca 1936",
-				"note": ""
+				"note": "",
+				"date": { "from": "1936", "to": "1936" }
 			},
 			"travel_0014": {
 				"type": "travel",
@@ -21651,27 +21663,32 @@
 			"travel_0018": {
 				"type": "travel",
 				"name": "Prag 1938",
-				"note": ""
+				"note": "",
+				"date": { "from": "1938", "to": "1938" }
 			},
 			"travel_0019": {
 				"type": "travel",
 				"name": "Afghanistan 1939–1940",
-				"note": ""
+				"note": "",
+				"date": { "from": "1939", "to": "1940" }
 			},
 			"travel_0020": {
 				"type": "travel",
 				"name": "USA 1940–41 (\"Dritte USA-Reise\")",
-				"note": ""
+				"note": "",
+				"date": { "from": "1940", "to": "1941" }
 			},
 			"travel_0021": {
 				"type": "travel",
 				"name": "Kongo 1941–42",
-				"note": ""
+				"note": "",
+				"date": { "from": "1941", "to": "1942" }
 			},
 			"travel_0022": {
 				"type": "travel",
 				"name": "Marokko 1942",
-				"note": ""
+				"note": "",
+				"date": { "from": "1942", "to": "1942" }
 			},
 			"travel_0023": {
 				"type": "travel",
@@ -21682,46 +21699,69 @@
 			"travel_0024": {
 				"type": "travel",
 				"name": "Lissabon 1941",
-				"note": ""
+				"note": "",
+				"date": { "from": "1941", "to": "1941" }
 			},
 			"travel_0025": {
 				"type": "travel",
 				"name": "Lissabon 1942",
-				"note": ""
+				"note": "",
+				"date": { "from": "1942", "to": "1942" }
 			},
 			"event_0001": {
 				"type": "event",
 				"name": "Paris-Aufenthalte 1929",
-				"note": ""
+				"note": "",
+				"date": { "from": "1929", "to": "1929" }
 			},
 			"event_0002": {
 				"type": "event",
 				"name": "Berlin-Aufenthalte 1931 – 33",
-				"note": ""
+				"note": "",
+				"date": { "from": "1931", "to": "1933" }
 			},
 			"event_0003": {
 				"type": "event",
 				"name": "Sils-Aufenthalte 1934 – 1942",
-				"note": ""
+				"note": "",
+				"date": { "from": "1934", "to": "1942" }
 			},
 			"event_0004": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Samaden) Januar – März (?) 1935",
-				"note": ""
+				"note": "",
+				"date": { "from": "1935-01", "to": "1935-03" }
 			},
-			"event_0005": { "type": "event", "name": "", "note": "" },
+			"event_0005": {
+				"type": "event",
+				"name": "[no event title]",
+				"note": "",
+				"date": { "from": "", "to": "" }
+			},
 			"event_0006": {
 				"type": "event",
 				"name": "Klinik-Aufenthalte (Samedan) März – Mai (?) 1938",
-				"note": ""
+				"note": "",
+				"date": { "from": "1938-03", "to": "1938-05" }
 			},
 			"event_0007": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Kreuzlingen) Juli – August 1938",
-				"note": ""
+				"note": "",
+				"date": { "from": "1938-07", "to": "1938-08" }
 			},
-			"event_0008": { "type": "event", "name": "", "note": "" },
-			"event_0009": { "type": "event", "name": "", "note": "" },
+			"event_0008": {
+				"type": "event",
+				"name": "[no event title]",
+				"note": "",
+				"date": { "from": "", "to": "" }
+			},
+			"event_0009": {
+				"type": "event",
+				"name": "[no event title]",
+				"note": "",
+				"date": { "from": "", "to": "" }
+			},
 			"event_0010": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Yverdon-les-Bains) 1938 – 1939",
