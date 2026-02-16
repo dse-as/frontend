@@ -7,82 +7,133 @@
 	//! How to make this nicer? (@sebi)
 	let reg = register.register;
 
-	// Function to sort the keys of the given object alphabetically based on the name property
-	function sortKeysByName(subreg) {
-		return Object.keys(subreg).sort((a, b) => {
-			if (subreg[a].name < subreg[b].name) return -1;
-			if (subreg[a].name > subreg[b].name) return 1;
-			return 0;
-		});
+	let sortEventsBy = $state('name'); // 'name' or 'date'
+
+	function sortData(data, sortBy, filterValue = undefined) {
+		let sortFunction;
+		if (sortBy === 'date') {
+			sortFunction = (a, b) =>
+				a[sortBy].from?.localeCompare(b[sortBy].from) ||
+				a[sortBy].to?.localeCompare(b[sortBy].to) ||
+				Infinity;
+		} else {
+			// Sort alphabetically by sortBy
+			sortFunction = (a, b) => a[sortBy]?.localeCompare(b[sortBy]) || Infinity;
+		}
+		// Filter and sort data
+		return Object.values(data)
+			.filter((entry) => (filterValue ? entry.type === filterValue : true))
+			.sort((a, b) => sortFunction(a, b));
 	}
 </script>
 
-{#snippet content(type, items)}
+<!-- Snippet for Entity-Item -->
+{#snippet entityItem(type, item)}
 	{#if type === 'people'}
-		<h3 class="h3">{items.firstname} {items.lastname}</h3>
-		<p class="text-secondary-500">{items.type}</p>
-		{#if items.gndNumber}<a
+		<h3 class="h3">{item.name ? `${item.name}` : '...'}</h3>
+		<!-- <p>{item.type ? ` ${item.type}` : ''}</p> -->
+		<!-- <p>{item.nameVariants ? ` ${item.nameVariants}` : ''}</p> -->
+		<!-- <p>{item.note ? ` ${item.note}` : ''}</p> -->
+		<!-- <p>{item.organisationId ? ` ${reg.organisations[item.organisationId]}` : ''}</p> -->
+		{#if item.organisationId}
+			<a href={`#${item.organisationId}`}>
+				{`${reg.organisations[item.organisationId]?.name}`}
+			</a>
+		{/if}
+		<!--  -->
+		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
 			>
 		{/if}
 	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
-		<h3 class="h3">{items.name}</h3>
-		<p>{items.name}</p>
-		{#if items.gndNumber}<a
+		<h3 class="h3">{item.name}</h3>
+		<p>{item.name}</p>
+		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
 			>
 		{/if}
 	{:else if type === 'events'}
-		<h3 class="h3">{items.name}</h3>
-		<p>{items.name}</p>
-		{#if items.gndNumber}<a
-				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
-			>
-		{/if}
+		<h3 class="h3">{item.name}</h3>
+		<p>{item.date?.from} bis {item.date?.to}</p>
 	{:else if type === 'works'}
-		<h3 class="h3">{items.name}</h3>
-		<p>{items.name}</p>
-		{@const author = reg.people?.[items.authorId]}
+		<h3 class="h3">{item.name}</h3>
+		<p>{item.name}</p>
+		{@const author = reg.people?.[item.authorId]}
 		<p>{author.firstname} {author.lastname}</p>
-		{#if items.gndNumber}<a
+		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${items.gndNumber}`}>See in GND</a
+				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
 			>
 		{/if}
 	{/if}
 {/snippet}
 
-{#snippet regWindow(type, title, subreg)}
+<!-- Snippet for Register Group -->
+{#snippet registerGroup(type, title, subreg)}
 	<div>
+		<!-- Group Title -->
 		<h2 id={type} class="bg-surface-950-50 p-3 h2 text-surface-50-950">
 			{title}
 		</h2>
-		{#each sortKeysByName(subreg) as key}
-			<div class="border-t-2 border-surface-200 py-3 pl-5">
-				{@render content(type, subreg[key])}
+
+		<!-- Entities of that Group -->
+		{#if type === 'people'}
+			{#each sortData(subreg, 'lastname') as data}
+				<div class="border-t-2 border-surface-200 py-3 pl-5">
+					{@render entityItem('people', data)}
+				</div>
+			{/each}
+		{:else if type === 'events'}
+			<!-- Sorting Controls for Events -->
+			<div class="mb-3 flex">
+				<label class="mx-5" for="event-type-selector">Sort by</label>
+				<select id="event-type-selector" bind:value={sortEventsBy}>
+					<option value="name">Name</option>
+					<option value="date">Date</option>
+				</select>
 			</div>
-		{/each}
+			<!-- Travels -->
+			<h4 class="bg-surface-950-50 h4 text-surface-50-950">Reisen</h4>
+			{#each sortData(subreg, sortEventsBy, 'travel') as data}
+				<div class="border-t-2 border-surface-200 py-3 pl-5">
+					{@render entityItem('events', data)}
+				</div>
+			{/each}
+			<!-- Other Events -->
+			<h4 class="bg-surface-950-50 h4 text-surface-50-950">Andere Events</h4>
+			{#each sortData(subreg, sortEventsBy, 'event') as data}
+				<div class="border-t-2 border-surface-200 py-3 pl-5">
+					{@render entityItem('events', data)}
+				</div>
+			{/each}
+		{:else}
+			{#each sortData(subreg, 'name') as data}
+				<div class="border-t-2 border-surface-200 py-3 pl-5">
+					{@render entityItem(type, data)}
+				</div>
+			{/each}
+		{/if}
 	</div>
 {/snippet}
 
 <div class="grid h-screen grid-cols-[1fr_5fr] gap-10">
-	<div>
+	<!-- Navigation -->
+	<nav>
 		<h2 class="h2"><a href="#people">Personen</a></h2>
 		<h2 class="h2"><a href="#places">Orte</a></h2>
 		<h2 class="h2"><a href="#events">Events</a></h2>
 		<h2 class="h2"><a href="#organisations">Organisationen</a></h2>
 		<h2 class="h2"><a href="#works">Werke</a></h2>
 		<h2 class="h2"><a href="#keywords">Schlagwörter</a></h2>
-	</div>
+	</nav>
 	<div class="h-full overflow-scroll">
-		{@render regWindow('people', 'Personen', reg.people)}
-		{@render regWindow('places', 'Orte', reg.places)}
-		{@render regWindow('events', 'Events', reg.events)}
-		{@render regWindow('organisations', 'Organisationen', reg.organisations)}
-		{@render regWindow('works', 'Werke', reg.works)}
-		{@render regWindow('keywords', 'Schlagwörter', reg.keywords)}
+		{@render registerGroup('people', 'Personen', reg.people)}
+		{@render registerGroup('places', 'Orte', reg.places)}
+		{@render registerGroup('events', 'Events', reg.events)}
+		{@render registerGroup('organisations', 'Organisationen', reg.organisations)}
+		{@render registerGroup('works', 'Werke', reg.works)}
+		{@render registerGroup('keywords', 'Schlagwörter', reg.keywords)}
 	</div>
 </div>
