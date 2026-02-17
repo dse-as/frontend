@@ -60,7 +60,6 @@
 				{`${reg.organisations[item.organisationId]?.name}`}
 			</a>
 		{/if}
-		<!--  -->
 		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
