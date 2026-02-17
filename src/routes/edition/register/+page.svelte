@@ -12,16 +12,35 @@
 	function sortData(data, sortBy, filterValue = undefined) {
 		let sortFunction;
 		if (sortBy === 'date') {
-			sortFunction = (a, b) =>
-				a[sortBy].from?.localeCompare(b[sortBy].from) ||
-				a[sortBy].to?.localeCompare(b[sortBy].to) ||
-				Infinity;
+			sortFunction = (a, b) => {
+				const compare = (x, y) => {
+					if (!x && !y) return 0; // treat as equal
+					if (!x) return 1; // Push `x` to the end
+					if (!y) return -1; // Push `y` to the end
+					return x.localeCompare(y); // Compare normally if both are defined
+				};
+
+				// First compare by `from`, then by `to` if needed
+				return compare(a[sortBy]?.from, b[sortBy]?.from) || compare(a[sortBy]?.to, b[sortBy]?.to);
+			};
 		} else {
 			// Sort alphabetically by sortBy
-			sortFunction = (a, b) => a[sortBy]?.localeCompare(b[sortBy]) || Infinity;
+			sortFunction = (a, b) => {
+				// a[sortBy]?.localeCompare(b[sortBy]) || 0;
+				const aName = a[sortBy];
+				const bName = b[sortBy];
+
+				// Handle undefined values
+				if (!aName && !bName) return 0; // Treat both as equal
+				if (!aName) return 1; // Push `a` to the end
+				if (!bName) return -1; // Push `b` to the end
+
+				return aName.localeCompare(bName); // Compare normally if both are defined
+			};
 		}
 		// Filter and sort data
-		return Object.values(data)
+		return Object.entries(data)
+			.map(([key, entry]) => ({ key, ...entry })) // Include the key in each value
 			.filter((entry) => (filterValue ? entry.type === filterValue : true))
 			.sort((a, b) => sortFunction(a, b));
 	}
@@ -30,11 +49,12 @@
 <!-- Snippet for Entity-Item -->
 {#snippet entityItem(type, item)}
 	{#if type === 'people'}
-		<h3 class="h3">{item.name ? `${item.name}` : '...'}</h3>
-		<!-- <p>{item.type ? ` ${item.type}` : ''}</p> -->
-		<!-- <p>{item.nameVariants ? ` ${item.nameVariants}` : ''}</p> -->
-		<!-- <p>{item.note ? ` ${item.note}` : ''}</p> -->
-		<!-- <p>{item.organisationId ? ` ${reg.organisations[item.organisationId]}` : ''}</p> -->
+		<a href={`#${item.key}`}>
+			<h3 id={item.key} class="h3">{item.name ? `${item.name}` : '...'}</h3>
+		</a>
+		{#if item.type}<p>{item.type}</p>{/if}
+		{#if item.nameVariants}<p>{item.nameVariants}</p>{/if}
+		{#if item.note}<p>{item.note}</p>{/if}
 		{#if item.organisationId}
 			<a href={`#${item.organisationId}`}>
 				{`${reg.organisations[item.organisationId]?.name}`}
@@ -47,7 +67,9 @@
 			>
 		{/if}
 	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
-		<h3 class="h3">{item.name}</h3>
+		<a href={`#${item.key}`}>
+			<h3 id={item.key} class="h3">{item.name}</h3>
+		</a>
 		<p>{item.name}</p>
 		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
@@ -55,13 +77,27 @@
 			>
 		{/if}
 	{:else if type === 'events'}
-		<h3 class="h3">{item.name}</h3>
-		<p>{item.date?.from} bis {item.date?.to}</p>
+		<a href={`#${item.key}`}>
+			<h3 id={item.key} class="h3">{item.name}</h3>
+		</a>
+		{#if item.date}
+			<p>{item.date.from} bis {item.date.to}</p>
+		{/if}
 	{:else if type === 'works'}
-		<h3 class="h3">{item.name}</h3>
-		<p>{item.name}</p>
+		<a href={`#${item.key}`}>
+			<h3 id={item.key} class="h3">{item.name}</h3>
+		</a>
 		{@const author = reg.people?.[item.authorId]}
-		<p>{author.firstname} {author.lastname}</p>
+		<p>
+			{#if author?.firstname}
+				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
+			{:else}
+				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
+			{/if}
+			{#if item.pubDate}
+				<span>({item.pubDate})</span>
+			{/if}
+		</p>
 		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
@@ -74,9 +110,21 @@
 {#snippet registerGroup(type, title, subreg)}
 	<div>
 		<!-- Group Title -->
-		<h2 id={type} class="bg-surface-950-50 p-3 h2 text-surface-50-950">
-			{title}
-		</h2>
+		<div class="flex flex-col bg-surface-950-50 p-3">
+			<h2 id={type} class="h2 text-surface-50-950">
+				{title}
+			</h2>
+			<!-- Sorting Controls -->
+			{#if type === 'events'}
+				<div class="my-3 flex w-50 items-center justify-center border-2 bg-surface-50-950 p-1">
+					<label class="mx-3 font-bold" for="event-type-selector">Sort by:</label>
+					<select id="event-type-selector" bind:value={sortEventsBy}>
+						<option value="name">Name</option>
+						<option value="date">Date</option>
+					</select>
+				</div>
+			{/if}
+		</div>
 
 		<!-- Entities of that Group -->
 		{#if type === 'people'}
@@ -86,23 +134,15 @@
 				</div>
 			{/each}
 		{:else if type === 'events'}
-			<!-- Sorting Controls for Events -->
-			<div class="mb-3 flex">
-				<label class="mx-5" for="event-type-selector">Sort by</label>
-				<select id="event-type-selector" bind:value={sortEventsBy}>
-					<option value="name">Name</option>
-					<option value="date">Date</option>
-				</select>
-			</div>
 			<!-- Travels -->
-			<h4 class="bg-surface-950-50 h4 text-surface-50-950">Reisen</h4>
+			<h4 class="mt-1 bg-surface-950-50 h4 text-surface-50-950">Reisen</h4>
 			{#each sortData(subreg, sortEventsBy, 'travel') as data}
 				<div class="border-t-2 border-surface-200 py-3 pl-5">
 					{@render entityItem('events', data)}
 				</div>
 			{/each}
 			<!-- Other Events -->
-			<h4 class="bg-surface-950-50 h4 text-surface-50-950">Andere Events</h4>
+			<h4 class="mt-1 bg-surface-950-50 h4 text-surface-50-950">Andere Events</h4>
 			{#each sortData(subreg, sortEventsBy, 'event') as data}
 				<div class="border-t-2 border-surface-200 py-3 pl-5">
 					{@render entityItem('events', data)}
