@@ -21734,7 +21734,7 @@
 			},
 			"event_0005": {
 				"type": "event",
-				"name": "[no event title]",
+				"name": "",
 				"note": "",
 				"date": { "from": "", "to": "" }
 			},
@@ -21752,13 +21752,13 @@
 			},
 			"event_0008": {
 				"type": "event",
-				"name": "[no event title]",
+				"name": "",
 				"note": "",
 				"date": { "from": "", "to": "" }
 			},
 			"event_0009": {
 				"type": "event",
-				"name": "[no event title]",
+				"name": "",
 				"note": "",
 				"date": { "from": "", "to": "" }
 			},
