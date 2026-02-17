@@ -53,18 +53,30 @@
 			<h3 id={item.key} class="h3">{item.name ? `${item.name}` : '...'}</h3>
 		</a>
 		{#if item.type}<p>{item.type}</p>{/if}
-		{#if item.nameVariants}<p>{item.nameVariants}</p>{/if}
-		{#if item.note}<p>{item.note}</p>{/if}
-		{#if item.organisationId}
-			<a href={`#${item.organisationId}`}>
-				{`${reg.organisations[item.organisationId]?.name}`}
-			</a>
-		{/if}
-		{#if item.gndNumber}<a
-				class="text-primary-500 underline"
-				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
-			>
-		{/if}
+		<div class="mt-2">
+			{#if item.nameVariants.length}
+				<p>
+					<strong>Alternative Namen: </strong>
+					<span class="italic">{item.nameVariants.join(', ')}</span>
+				</p>
+			{/if}
+			{#if item.organisationId}
+				<p>
+					<strong>Affiliation:</strong>
+					<a href={`#${item.organisationId}`}>
+						{`${reg.organisations[item.organisationId]?.name}`}
+					</a>
+				</p>
+			{/if}
+		</div>
+		<p class="mt-2">
+			{#if item.note}{item.note}{/if}
+			{#if item.gndNumber}
+				(<a class="text-primary-500 underline" href={`https://d-nb.info/gnd/${item.gndNumber}`}
+					>GND</a
+				>)
+			{/if}
+		</p>
 	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
 		<a href={`#${item.key}`}>
 			<h3 id={item.key} class="h3">{item.name}</h3>
