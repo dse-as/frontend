@@ -158,9 +158,9 @@
 	</div>
 {/snippet}
 
-<div class="grid h-screen grid-cols-[1fr_5fr] gap-10">
+<div class="grid h-screen grid-cols-[1fr_5fr] gap-0">
 	<!-- Navigation -->
-	<nav>
+	<nav class="bg-surface-950-50 text-surface-50-950">
 		<h2 class="h2"><a href="#people">Personen</a></h2>
 		<h2 class="h2"><a href="#places">Orte</a></h2>
 		<h2 class="h2"><a href="#events">Events</a></h2>
