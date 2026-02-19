@@ -14,9 +14,9 @@ import let_annot from '$lib/data/letters_annot.json';
 
 // Unify over smallforms, longforms, annotations
 let meta = {
-    ...Object.fromEntries(Object.values(smf_meta.smallforms_meta).map(entry => [entry.slug, entry])),
-    ...Object.fromEntries(Object.values(lgf_meta.longforms_meta).map(entry => [entry.slug, entry])),
-    ...Object.fromEntries(Object.values(let_meta.letters_meta).map(entry => [entry.slug, entry])),
+    ...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
+    ...Object.fromEntries(Object.entries(lgf_meta.longforms_meta)),
+    ...Object.fromEntries(Object.entries(let_meta.letters_meta))
 };
 let text = {
     ...Object.fromEntries(Object.entries(smf_text.smallforms_text)),

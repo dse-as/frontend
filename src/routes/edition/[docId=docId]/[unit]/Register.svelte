@@ -8,7 +8,7 @@
 	const reg = register.register;
 	const DReg = dict_register.dict_register;
 
-	let { text, meta, docID } = $props();
+	let { text, meta, docId } = $props();
 
 	let openRegisters: TEntityTypes[] = $state(['people', 'places']);
 </script>
@@ -32,7 +32,7 @@
 					</Accordion.ItemTrigger>
 				</h3>
 				<Accordion.ItemContent class="m-0 p-0">
-					{#each meta[docID].entities[regType] as entry (entry)}
+					{#each meta[docId]?.entities[regType] as entry (entry)}
 						<div class="border-t-2 border-surface-200-800 bg-surface-50-950 px-3 py-2">
 							<h6 class="h6">{reg[regType][entry].name}</h6>
 							<a class="text-blue-500 underline" href={`/edition/register#${entry}`}
@@ -44,5 +44,5 @@
 			</Accordion.Item>
 		{/each}
 	</Accordion>
-	<p>{meta[docID].entities.people}</p>
+	<p>{meta[docId]?.entities.people}</p>
 </div>

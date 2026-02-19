@@ -5,13 +5,13 @@
 	import { redirect } from '@sveltejs/kit';
 
 	let { data } = $props();
-	console.log(data.meta[page.params.docID]);
-	console.log(data.meta[page.params.docID].units.unitIds[0]);
+	console.log(data.meta[page.params.docId]);
+	console.log(data.meta[page.params.docId].units.unitIds[0]);
 
 	//! @sebi: why does it not work with redirect?
 
 	onMount(() => {
 		// redirect(302, `${page.url.pathname}/text`);
-		goto(`${page.url.pathname}/${data.meta[page.params.docID].units.unitIds[0]}`);
+		goto(`${page.url.pathname}/${data.meta[page.params.docId].units.unitIds[0]}`);
 	});
 </script>

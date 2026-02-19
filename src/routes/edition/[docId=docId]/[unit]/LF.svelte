@@ -7,13 +7,13 @@
 	type TVisibleTab = 'register' | 'comments';
 	let visibleTab: TVisibleTab = $state('register');
 
-	let { meta, text, annot, docID, currentPage } = $props();
+	let { meta, text, annot, docId, currentPage } = $props();
 </script>
 
 <div class="h-[20vh] w-full bg-surface-200-800 text-surface-800-200">
 	<h1 class="h1">LF</h1>
 	<div class="grid h-full grid-cols-[auto_500px]">
-		<TextFluid text={text[docID].text} {annot} />
+		<TextFluid text={text[docId]?.text} {annot} />
 		<!-- //! @sebi: How to type "visibleTab"? -->
 		<Tabs
 			class="h-full"
@@ -26,7 +26,7 @@
 				<Tabs.Indicator />
 			</Tabs.List>
 			<Tabs.Content value="register">
-				<Register {text} {meta} {docID} />
+				<Register {text} {meta} {docId} />
 			</Tabs.Content>
 			<Tabs.Content value="comments">
 				<Comments />

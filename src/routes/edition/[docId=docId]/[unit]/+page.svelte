@@ -18,7 +18,7 @@
 	<!-- Series Menue -->
 	<SeriesMenu />
 	<!-- Metadata -->
-	<MetaHeader metadata={data.meta} docid={page.params.docID} />
+	<MetaHeader metadata={data.meta} docId={page.params.docId} />
 
 	<!-- DFLF Toggle -->
 	<button
@@ -39,7 +39,7 @@
 			meta={data.meta}
 			text={data.text}
 			annot={data.annot}
-			docID={page.params.docID}
+			docId={page.params.docId}
 			{currentPage}
 		/>
 	{:else if dflf === 'DF'}
@@ -47,7 +47,7 @@
 			meta={data.meta}
 			text={data.text}
 			annot={data.annot}
-			docID={page.params.docID}
+			docId={page.params.docId}
 			{currentPage}
 		/>
 	{/if}

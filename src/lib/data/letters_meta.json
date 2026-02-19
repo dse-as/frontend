@@ -6,8 +6,7 @@
 		"description": ""
 	},
 	"letters_meta": {
-		"letters_0000": {
-			"slug": "letters_0000",
+		"letters_0001": {
 			"docType": "Test",
 			"units": {
 				"unitIds": ["text"],
@@ -17,10 +16,47 @@
 				"label": "testlabel",
 				"editor_workflow": "foo",
 				"year": 1900,
-				"pubDate": "1.1.1900",
-				"title_full": "Letter Title full",
+				"pubDate": "1100-01-01",
+				"title_full": "Letter Title 1 full",
 				"pubPosthumOnly": "",
-				"pubPlace": "A Random Letter",
+				"pubPlace": "A Random Letter 1",
+				"signature": "",
+				"pubDetails": "",
+				"textstufen": "",
+				"series": "",
+				"comment": "delete me",
+				"keywords": "",
+				"maximum": "",
+				"travel": "",
+				"archiveCollation": "",
+				"pubSecondary": "",
+				"urlOnlineResource": "",
+				"note": ""
+			},
+			"manuscript": {
+				"hasiiif": false,
+				"url_iiif": ""
+			},
+			"numPages": null,
+			"pageLimits": { "text": [null, null] },
+			"edition": {
+				"fullyEdited": false
+			}
+		}, 
+		"letters_0004": {
+			"docType": "Test4",
+			"units": {
+				"unitIds": ["text"],
+				"unitLabels": ["Text"]
+			},
+			"metadata": {
+				"label": "testlabel 4",
+				"editor_workflow": "foo 4",
+				"year": 1900,
+				"pubDate": "1400-01-01",
+				"title_full": "Letter Title 4 full",
+				"pubPosthumOnly": "",
+				"pubPlace": "A Random Letter 4",
 				"signature": "",
 				"pubDetails": "",
 				"textstufen": "",

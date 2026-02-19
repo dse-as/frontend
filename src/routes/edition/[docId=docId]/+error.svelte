@@ -9,5 +9,5 @@
 	import { page } from '$app/state';
 </script>
 
-<p>ERROR IN EDITION: {page.params.docID}</p>
+<p>ERROR IN EDITION: {page.params.docId}</p>
 <p>{page.error?.message}</p>
