@@ -15,7 +15,7 @@
 		<div class={['relative m-5 border-4 p-5']}>
 			<!-- Metadata -->
 			<div class={[isExpanded ? 'h-auto' : 'max-h-20 overflow-hidden']}>
-				{#each Object.entries(metadata[docId]?.metadata || {}) as entry}
+				{#each Object.entries(metadata[docId]?.metadata) as entry}
 					<p><strong>{entry[0]}:</strong> {entry[1]}</p>
 				{/each}
 			</div>
