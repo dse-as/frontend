@@ -9,10 +9,12 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF = $state('DF');
+	let dflf: TDFLF = $state('LF');
+
+	let currentPage = $state(1);
 </script>
 
-<div class="absolute flex h-full w-full flex-col items-center gap-6">
+<div class="absolute flex h-full max-h-40 w-full flex-col items-center gap-6">
 	<!-- Series Menue -->
 	<SeriesMenu />
 	<!-- Metadata -->
@@ -33,8 +35,20 @@
 
 	<!-- Content -->
 	{#if dflf === 'LF'}
-		<LF />
+		<LF
+			meta={data.meta}
+			text={data.text}
+			annot={data.annot}
+			docID={page.params.docID}
+			{currentPage}
+		/>
 	{:else if dflf === 'DF'}
-		<DF />
+		<DF
+			meta={data.meta}
+			text={data.text}
+			annot={data.annot}
+			docID={page.params.docID}
+			{currentPage}
+		/>
 	{/if}
 </div>

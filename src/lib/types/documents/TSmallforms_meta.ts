@@ -1,4 +1,10 @@
-import { type TSmallformsKeys } from "./TSmallformsKeys";
+import type { TEventsKeys } from '../register/TEventsKeys';
+import type { TKeywordsKeys } from '../register/TKeywordsKeys';
+import type { TOrganisationsKeys } from '../register/TOrganisationsKeys';
+import type { TPeopleKeys } from '../register/TPeopleKeys';
+import type { TPlacesKeys } from '../register/TPlacesKeys';
+import type { TWorksKeys } from '../register/TWorksKeys';
+import { type TSmallformsKeys } from './TSmallformsKeys';
 
 export type TdocType =
 	| 'Typoskript'
@@ -52,13 +58,21 @@ export type TSmallforms_meta = {
 				urlOnlineResource: '';
 				note: '';
 			};
+			entities: {
+				people: TPeopleKeys[];
+				places: TPlacesKeys[];
+				events: TEventsKeys[];
+				organisations: TOrganisationsKeys[];
+				works: TWorksKeys[];
+				keywords: TKeywordsKeys[];
+			};
 			manuscript: {
 				hasiiif: boolean;
 				url_iiif: string;
 			};
 			numPages: number | null;
 			pageLimits: {
-				[key: string]: [number|null, number|null]; //! for each unit (could be made more restrict to avoid invalid unitIds, but I leave it loose for now)
+				[key: string]: [number | null, number | null]; //! for each unit (could be made more restrict to avoid invalid unitIds, but I leave it loose for now)
 			};
 			edition: {
 				fullyEdited: boolean;

@@ -5,6 +5,11 @@ import { type TKeywordsKeys } from "./TKeywordsKeys";
 import { type TOrganisationsKeys } from "./TOrganisationsKeys";
 import { type TWorksKeys } from "./TWorksKeys";
 
+// Entities
+export type TEntityTypes = "people" | "places" | "events" | "organisations" | "works" | "keywords";
+export type TEntityNames = "Orte" | "Personen" | "Events" | "Organisationen" | "Werke" | "Stichworte";
+
+// Types for specific entities
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
 export type TEventsTypes = string; //! restrict to subet later
@@ -12,6 +17,7 @@ export type TOrganisationsTypes = string; //! restrict to subet later
 export type TWorksTypes = "book" | "article";
 export type TKeywordsTypes = string; //! restrict to subet later
 
+// Register
 export type TRegister = {
 	meta: {
 		generated_by: string;

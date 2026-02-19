@@ -1,0 +1,11 @@
+{
+	"meta": {},
+	"dict_register": {
+		"people": { "name_de": "Personen" },
+		"places": { "name_de": "Orte" },
+		"events": { "name_de": "Ereignisse" },
+		"organisations": { "name_de": "Organisationen" },
+		"works": { "name_de": "Werke" },
+		"keywords": { "name_de": "Schlagwörter" }
+	}
+}

@@ -18,22 +18,21 @@ let meta = {
     ...Object.fromEntries(Object.values(lgf_meta.longforms_meta).map(entry => [entry.slug, entry])),
     ...Object.fromEntries(Object.values(let_meta.letters_meta).map(entry => [entry.slug, entry])),
 };
-// let text = {
-//     ...Object.fromEntries(Object.values(smf_text.smallforms_text).map(entry => [entry.slug, entry])),
-//     ...Object.fromEntries(Object.values(lgf_text.longforms_text).map(entry => [entry.slug, entry])),
-//     ...Object.fromEntries(Object.values(let_text.letters_text).map(entry => [entry.slug, entry])),
-// };
-// let annot = {
-//     ...Object.fromEntries(Object.values(smf_annot.smallforms_annot).map(entry => [entry.slug, entry])),
-//     ...Object.fromEntries(Object.values(lgf_annot.longforms_annot).map(entry => [entry.slug, entry])),
-//     ...Object.fromEntries(Object.values(let_annot.letters_annot).map(entry => [entry.slug, entry])),
-// };
+let text = {
+    ...Object.fromEntries(Object.entries(smf_text.smallforms_text)),
+    ...Object.fromEntries(Object.entries(lgf_text.longforms_text)),
+    ...Object.fromEntries(Object.entries(let_text.letters_text))
+};
+let annot = {
+    ...Object.fromEntries(Object.entries(smf_annot.smallforms_annot)),
+    ...Object.fromEntries(Object.entries(lgf_annot.longforms_annot)),
+    ...Object.fromEntries(Object.entries(let_annot.letters_annot))
+};
 
 // Modify protoHTML
 //! todo (as little modifications as possible!)
 
 // Export unified meta, text and annot
 export const load: LayoutServerLoad = async () => {
-    return { meta };
-    // return { meta, text, annot };
+    return { meta, text, annot };
 };

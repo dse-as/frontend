@@ -8,6 +8,4 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<i class="fa-solid fa-circle-dot fa-3x"></i>
-<i class="fa-solid fa-coffee"></i>
 {@render children()}
