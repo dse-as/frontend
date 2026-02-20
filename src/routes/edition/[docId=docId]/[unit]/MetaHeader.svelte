@@ -10,8 +10,6 @@
 			Publiziert in {metadata[docId]?.metadata.pubPlace} ({metadata[docId]?.metadata.year})
 		</h2>
 
-		<!-- <div class={['m-5 border-4 p-5', !isExpanded && 'max-h-50 overflow-hidden']}> -->
-
 		<div class={['relative m-5 border-4 p-5']}>
 			<!-- Metadata -->
 			<div class={[isExpanded ? 'h-auto' : 'max-h-20 overflow-hidden']}>
@@ -44,7 +42,6 @@
 				</button>
 			</div>
 		</div>
-		<!-- <p><strong>Metadata:</strong> {data.meta[].docType}</p> -->
 	</div>
 {:else}
 	<h1 class="text-red-500">metadata.{docId} is not defined</h1>
