@@ -23,7 +23,7 @@
 			<!-- Gradient -->
 			{#if !isExpanded}
 				<button
-					class="absolute right-0 bottom-0 left-0 h-full bg-gradient-to-t from-white to-transparent"
+					class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-white to-transparent"
 					aria-label="expand box"
 					onclick={() => {
 						isExpanded = !isExpanded;

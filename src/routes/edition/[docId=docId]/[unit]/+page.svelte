@@ -29,8 +29,6 @@
 	});
 </script>
 
-<!-- <div class="absolute flex max-h-full w-full flex-col items-center gap-6 overflow-hidden"> -->
-<!-- <div class="absolute flex h-full flex-col items-center gap-6"> -->
 <div class="relative flex h-full flex-col items-center gap-6 overflow-auto">
 	<!-- Series Menue -->
 	<SeriesMenu />
