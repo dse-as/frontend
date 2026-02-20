@@ -37,6 +37,11 @@ let annot = {
 // Modify protoHTML
 //! todo (as little modifications as possible!)
 
+//! @sebi: what is wrong with the textstufen type? If I replace it with e.g. label (which is just a sibling key) everything works...
+// Object.keys(meta).forEach((key) =>{
+//     meta[key].metadata.textstufen = meta[key].metadata.textstufen ? meta[meta[key].metadata.textstufen].metadata.title_full : '';
+// })
+
 // Export unified meta, text and annot
 export const load: LayoutServerLoad = async () => {
     return { meta, text, annot };
