@@ -1,8 +1,18 @@
 <script lang="ts">
-	let { text, annot } = $props();
+	import type { Component } from 'svelte';
+
+	let { docId } = $props();
+	let HtmlContent: Component | null = $state(null);
+
+	(async () => {
+		if (docId) {
+			HtmlContent = (await import(`$lib/data/texts/text-${docId}.svelte`)).default;
+		}
+	})();
 </script>
 
-<div class="bg-surface-500">
-	<h5 class="h5">TextFluid</h5>
-	{text}
+<div data-textflow="fluid" class="overflow-y-auto p-10">
+	{#if HtmlContent}
+		<HtmlContent />
+	{/if}
 </div>

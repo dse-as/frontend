@@ -2,18 +2,18 @@ import { type TPlacesKeys } from "./TPlacesKeys";
 import { type TPeopleKeys } from "./TPeopleKeys";
 import { type TEventsKeys } from "./TEventsKeys";
 import { type TKeywordsKeys } from "./TKeywordsKeys";
-import { type TOrganisationsKeys } from "./TOrganisationsKeys";
+import { type TorgsKeys } from "./TorgsKeys";
 import { type TWorksKeys } from "./TWorksKeys";
 
 // Entities
-export type TEntityTypes = "people" | "places" | "events" | "organisations" | "works" | "keywords";
-export type TEntityNames = "Orte" | "Personen" | "Events" | "Organisationen" | "Werke" | "Stichworte";
+export type TEntityTypes = "people" | "places" | "events" | "orgs" | "works" | "letters" | "bibl" | "keywords";
+export type TEntityNames = "Orte" | "Personen" | "Events" | "Organisationen" | "Werke" | "Briefe" | "Bibliografie" | "Stichworte";
 
 // Types for specific entities
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
 export type TEventsTypes = string; //! restrict to subet later
-export type TOrganisationsTypes = string; //! restrict to subet later
+export type TorgsTypes = string; //! restrict to subet later
 export type TWorksTypes = "book" | "article";
 export type TKeywordsTypes = string; //! restrict to subet later
 
@@ -36,7 +36,7 @@ export type TRegister = {
 				dateBirth: string;
 				dateDeath: string;
 				type: TPeopleTypes;
-				organisationId: TOrganisationsKeys;
+				orgId: TorgsKeys;
 				note: string;
 			};
 		};
@@ -60,12 +60,12 @@ export type TRegister = {
 				note: string;
 			};
 		};
-		organisations: {
-			[key in TOrganisationsKeys]: {
+		orgs: {
+			[key in TorgsKeys]: {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
-				type: TOrganisationsTypes;
+				type: TorgsTypes;
 				note: string;
 			};
 		};

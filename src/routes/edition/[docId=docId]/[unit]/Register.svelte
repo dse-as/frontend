@@ -5,10 +5,10 @@
 	import register from '$lib/data/register.json';
 	import { type TEntityTypes } from '$lib/types/register/TRegister';
 
-	let { text, meta, docId } = $props();
+	let { meta, docId } = $props();
 
 	const reg = register.register;
-	const DReg = dict_register.dict_register;
+	const dictReg = dict_register.dict_register;
 	const regTypes = Object.keys(reg) as Array<keyof typeof reg>;
 
 	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {
@@ -30,23 +30,29 @@
 		onValueChange={(details) => (openRegisters = details.value)}
 	>
 		{#each regTypes as regType (regType)}
-			<Accordion.Item value={regType} class="gap-0 p-2">
-				<h3 class="h3">
-					<Accordion.ItemTrigger class="flex items-center justify-between bg-surface-100-900">
+			<Accordion.Item value={regType} class="gap-0">
+				<h1 class="h4">
+					<Accordion.ItemTrigger
+						class="flex items-center justify-between border-t-2 border-surface-200-800 hover:bg-transparent"
+					>
 						<span>
-							{DReg[regType].name_de}
+							{dictReg[regType].name_de}
 							<span class="font-normal">({meta[docId]?.entities[regType].length})</span>
 						</span>
 						<Accordion.ItemIndicator class="group">
-							<i class="fa-solid fa-chevron-down hidden size-4 group-data-[state=open]:block"></i>
-							<i class="fa-solid fa-chevron-up block size-4 group-data-[state=open]:hidden"></i>
+							<span class="hidden group-data-[state=open]:block"
+								><i class="fa-solid fa-chevron-down"></i></span
+							>
+							<span class="block group-data-[state=open]:hidden"
+								><i class="fa-solid fa-chevron-up"></i></span
+							>
 						</Accordion.ItemIndicator>
 					</Accordion.ItemTrigger>
-				</h3>
+				</h1>
 				<Accordion.ItemContent class="m-0 p-0">
 					{#each meta[docId]?.entities[regType] as entry (entry)}
-						<div class="border-t-2 border-surface-200-800 bg-surface-50-950 px-3 py-2">
-							<h6 class="h6">{reg[regType][entry].name}</h6>
+						<div class="py-3 pl-10 hover:bg-surface-50-950">
+							<h2 class="h6">{reg[regType][entry].name}</h2>
 							<a class="text-blue-500 underline" href={`/edition/register#${entry}`}
 								>Go to Register</a
 							>

@@ -1,11 +1,31 @@
 {
 	"meta": {},
 	"dict_register": {
-		"people": { "name_de": "Personen" },
-		"places": { "name_de": "Orte" },
-		"events": { "name_de": "Ereignisse" },
-		"organisations": { "name_de": "Organisationen" },
-		"works": { "name_de": "Werke" },
-		"keywords": { "name_de": "Schlagwörter" }
+		"people": { "singular": "person", "name_de": "Personen", "needed": "yes" },
+		"places": { "singular": "place", "name_de": "Orte", "needed": "yes" },
+		"events": { "singular": "event", "name_de": "Ereignisse", "needed": "yes" },
+		"travels": {
+			"singular": "travel",
+			"name_de": "Reisen",
+			"needed": "NOT SURE WHETHER WE NEED THIS!"
+		},
+		"orgs": { "singular": "org", "name_de": "Organisationen", "needed": "yes" },
+		"works": { "singular": "work", "name_de": "Werke", "needed": "yes" },
+		"letters": {
+			"singular": "letter",
+			"name_de": "Briefe",
+			"needed": "NOT SURE WHETHER WE NEED THIS!"
+		},
+		"smallforms": {
+			"singular": "smallform",
+			"name_de": "Kleine Formen",
+			"needed": "NOT SURE WHETHER WE NEED THIS!"
+		},
+		"bibl": {
+			"singular": "bibl",
+			"name_de": "Bibliografie",
+			"needed": "NOT SURE WHETHER WE NEED THIS!"
+		},
+		"keywords": { "singular": "keyword", "name_de": "Schlagwörter", "needed": "yes" }
 	}
 }

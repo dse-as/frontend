@@ -6,7 +6,7 @@
 		"description": ""
 	},
 	"letters_annot": {
-		"letter_0001": {},
-		"letter_0004": {}
+		"letter_0001": { "globCommId": null, "annotIds":[] },
+		"letter_0004": { "globCommId": null, "annotIds":[] }
 	}
 }

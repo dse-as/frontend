@@ -1,6 +1,6 @@
 import type { TEventsKeys } from '../register/TEventsKeys';
 import type { TKeywordsKeys } from '../register/TKeywordsKeys';
-import type { TOrganisationsKeys } from '../register/TOrganisationsKeys';
+import type { TorgsKeys } from '../register/TorgsKeys';
 import type { TPeopleKeys } from '../register/TPeopleKeys';
 import type { TPlacesKeys } from '../register/TPlacesKeys';
 import type { TWorksKeys } from '../register/TWorksKeys';
@@ -62,7 +62,7 @@ export type TLongforms_meta = {
 				people: TPeopleKeys[];
 				places: TPlacesKeys[];
 				events: TEventsKeys[];
-				organisations: TOrganisationsKeys[];
+				orgs: TorgsKeys[];
 				works: TWorksKeys[];
 				keywords: TKeywordsKeys[];
 			};
@@ -81,7 +81,7 @@ export type TLongforms_meta = {
 					people?: string[];
 					places?: string[];
 					travels?: string[];
-					organisations?: string[];
+					orgs?: string[];
 					works?: string[];
 					keywords?: string[];
 				};

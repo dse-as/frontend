@@ -33,7 +33,7 @@
 	<!-- Series Menue -->
 	<SeriesMenu />
 	<!-- Metadata -->
-	<MetaHeader metadata={data.meta} docId={page.params.docId} />
+	<MetaHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
 
 	<!-- DFLF Toggle -->
 	<button
@@ -41,29 +41,111 @@
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
 		}}
 		class={[
-			'top-30 left-20 z-1000 w-40 cursor-pointer rounded-full p-2 px-5 font-bold',
+			'top-30 left-20 z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
 			dflf == 'DF'
 				? 'bg-surface-200-800 text-surface-800-200'
 				: 'bg-surface-800-200 text-surface-200-800'
-		]}>{dflf == 'DF' ? 'change to LF' : 'change to DF'}</button
+		]}>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}</button
 	>
 
 	<!-- Content -->
-	{#if dflf === 'LF'}
-		<LF
-			meta={data.meta}
-			text={data.text}
-			annot={data.annot}
-			docId={page.params.docId}
-			{currentPage}
-		/>
-	{:else if dflf === 'DF'}
-		<DF
-			meta={data.meta}
-			text={data.text}
-			annot={data.annot}
-			docId={page.params.docId}
-			{currentPage}
-		/>
-	{/if}
+	<div class="h-[90vh] w-full grow overflow-hidden">
+		{#if dflf === 'LF'}
+			<LF meta={data.meta} docId={page.params.docId} {currentPage} />
+		{:else if dflf === 'DF'}
+			<DF meta={data.meta} docId={page.params.docId} {currentPage} />
+		{/if}
+	</div>
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+
+	:global([data-fassung='DF']) {
+		:global(span[data-type='hyphen'])::after {
+			content: '-';
+		}
+	}
+
+	:global([data-fassung='LF']) {
+		:global(
+			br,
+			span[data-type='hyphen']
+			/* delete,
+			choice orig,
+			choice sic,
+			subst delete,
+			pagenum,
+			substMargin delete */
+		) {
+			@apply hidden;
+		}
+	}
+
+	:global(.note) {
+		:global(span[data-type='quote']::before) {
+			content: '«';
+		}
+		:global(span[data-type='quote']::after) {
+			content: '»';
+		}
+		:global(span[data-type='quote']) {
+			@apply bg-surface-100 italic;
+		}
+	}
+
+	:global([data-fassung='DF']),
+	:global([data-fassung='LF']) {
+		/* Currently LF = fluid and DF = paged, but this could change. */
+		:global([data-textflow='fluid']),
+		:global([data-textflow='paged']) {
+			/* Entities */
+			:global([data-type='entity']) {
+				@apply underline decoration-2;
+			}
+
+			/* Quotes */
+			:global([data-type='quote']) {
+				@apply bg-amber-100;
+			}
+			:global([data-type='quote']::before) {
+				content: '«';
+			}
+			:global([data-type='quote']::after) {
+				content: '»';
+			}
+			:global([data-type='quote']) {
+				@apply bg-surface-100 italic;
+			}
+
+			/* Structure */
+			:global([data-type='head']) {
+				@apply text-2xl font-bold;
+			}
+			:global([data-type='pagebreak']) {
+			}
+
+			/* Choice */
+			:global([data-type='choice']) {
+				@apply rounded-xl border-2;
+			}
+			:global([data-type='sic']) {
+				@apply line-through decoration-red-500 decoration-3;
+			}
+			:global([data-type='corr']) {
+				@apply text-green-500;
+			}
+
+			/* Notes */
+			:global([data-type='notestart']::before) {
+				@apply rounded-full bg-red-500 px-2 font-bold;
+				content: '[';
+			}
+			:global([data-type='noteend']::after) {
+				@apply rounded-full bg-red-500 px-2 font-bold;
+				content: ']';
+			}
+		}
+	}
+</style>

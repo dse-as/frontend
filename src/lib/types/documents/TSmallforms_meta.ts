@@ -1,6 +1,6 @@
 import type { TEventsKeys } from '../register/TEventsKeys';
 import type { TKeywordsKeys } from '../register/TKeywordsKeys';
-import type { TOrganisationsKeys } from '../register/TOrganisationsKeys';
+import type { TOrgsKeys } from '../register/TOrgsKeys';
 import type { TPeopleKeys } from '../register/TPeopleKeys';
 import type { TPlacesKeys } from '../register/TPlacesKeys';
 import type { TWorksKeys } from '../register/TWorksKeys';
@@ -42,7 +42,7 @@ export type TSmallforms_meta = {
 				title_short: string;
 				label: string;
 				editor_workflow: 'ez_ttf_of';
-				year: 1925;
+				year: string;
 				pubPosthumOnly: boolean;
 				pubPlace: string;
 				signature: string;
@@ -50,19 +50,19 @@ export type TSmallforms_meta = {
 				textstufen: string;
 				series: string;
 				comment: string;
-				keywords: '';
-				maximum: 'keine';
-				travel: '';
-				archiveCollation: '';
-				pubSecondary: '';
-				urlOnlineResource: '';
-				note: '';
+				keywords: string[];
+				maximum: string; //! what is this?
+				travel: string; //! what is this?
+				archiveCollation: string;
+				pubSecondary: string;
+				urlOnlineResource: string;
+				note: string;
 			};
 			entities: {
 				people: TPeopleKeys[];
 				places: TPlacesKeys[];
 				events: TEventsKeys[];
-				organisations: TOrganisationsKeys[];
+				orgs: TOrgsKeys[];
 				works: TWorksKeys[];
 				keywords: TKeywordsKeys[];
 			};
@@ -81,7 +81,7 @@ export type TSmallforms_meta = {
 					people?: string[];
 					places?: string[];
 					travels?: string[];
-					organisations?: string[];
+					orgs?: string[];
 					works?: string[];
 					keywords?: string[];
 				};
