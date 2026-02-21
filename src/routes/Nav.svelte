@@ -20,7 +20,7 @@
 </script>
 
 <!-- Menu -->
-<AppBar class="flex h-12 flex-row items-center justify-between bg-primary-400-600 px-2 py-0">
+<AppBar class="flex h-12 flex-row items-center justify-between bg-surface-600-400 px-2 py-0">
 	<!-- Lead for Home Button -->
 	<AppBar.Lead class="flex items-center">
 		<a class="flex items-center py-2" href={`${base}/`}> <p>DSE-AS</p> </a>
@@ -35,7 +35,7 @@
 				{#each links as link}
 					<li
 						class={[
-							'list-nav-item inline-block h-full hover:text-primary-300-700',
+							'list-nav-item inline-block h-full hover:text-secondary-300-700',
 							link.slug === `/${page.url.pathname.split('/').pop()}` ? 'text-primary-800-200' : ''
 						]}
 					>
