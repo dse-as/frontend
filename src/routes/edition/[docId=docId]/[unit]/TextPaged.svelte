@@ -16,3 +16,14 @@
 		<HtmlContent />
 	{/if}
 </div>
+
+<style>
+	@reference "tailwindcss";
+	@reference "@skeletonlabs/skeleton";
+
+	:global([data-textflow='paged']) {
+		:global(p) {
+			@apply my-4;
+		}
+	}
+</style>

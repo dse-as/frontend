@@ -5,7 +5,7 @@
 
 	import LF from './LF.svelte';
 	import DF from './DF.svelte';
-	import MetaHeader from './MetaHeader.svelte';
+	import DocHeader from './DocHeader.svelte';
 	import SeriesMenu from './SeriesMenu.svelte';
 	import { onMount } from 'svelte';
 
@@ -29,31 +29,32 @@
 	});
 </script>
 
-<div class="relative flex h-full flex-col items-center gap-6 overflow-auto">
+<div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
 	<!-- Series Menue -->
 	<SeriesMenu />
 	<!-- Metadata -->
-	<MetaHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
+	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
 
 	<!-- DFLF Toggle -->
 	<button
 		onclick={() => {
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
+			goto(resolve(`${page.url.pathname}?mode=${dflf}`));
 		}}
 		class={[
 			'top-30 left-20 z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
 			dflf == 'DF'
-				? 'bg-surface-200-800 text-surface-800-200'
-				: 'bg-surface-800-200 text-surface-200-800'
+				? 'bg-surface-300-700 text-surface-950-50'
+				: 'bg-surface-700-300 text-surface-100-900'
 		]}>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}</button
 	>
 
 	<!-- Content -->
-	<div class="h-[90vh] w-full grow overflow-hidden">
+	<div class="h-[90vh] w-full grow overflow-hidden px-5">
 		{#if dflf === 'LF'}
-			<LF meta={data.meta} docId={page.params.docId} {currentPage} />
+			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {currentPage} />
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} docId={page.params.docId} {currentPage} />
+			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} {currentPage} />
 		{/if}
 	</div>
 </div>

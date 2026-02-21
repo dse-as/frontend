@@ -25,7 +25,7 @@
 	<!-- //! @sebi how to type openRegisters = details.value if I cannot access Skeleton's internals? -->
 	<Accordion
 		multiple
-		class="h-full gap-0 overflow-y-scroll"
+		class="h-full gap-0 overflow-y-auto"
 		value={openRegisters}
 		onValueChange={(details) => (openRegisters = details.value)}
 	>
@@ -37,7 +37,7 @@
 					>
 						<span>
 							{dictReg[regType].name_de}
-							<span class="font-normal">({meta[docId]?.entities[regType].length})</span>
+							<span class="font-normal">({meta[docId]?.entities[regType]?.length})</span>
 						</span>
 						<Accordion.ItemIndicator class="group">
 							<span class="hidden group-data-[state=open]:block"
@@ -53,8 +53,11 @@
 					{#each meta[docId]?.entities[regType] as entry (entry)}
 						<div class="py-3 pl-10 hover:bg-surface-50-950">
 							<h2 class="h6">{reg[regType][entry].name}</h2>
-							<a class="text-blue-500 underline" href={`/edition/register#${entry}`}
-								>Go to Register</a
+							<a
+								class="text-blue-500 underline"
+								href={`/edition/register#${entry}`}
+								target="_blank"
+								rel="noopener noreferrer">Go to Register</a
 							>
 						</div>
 					{/each}
