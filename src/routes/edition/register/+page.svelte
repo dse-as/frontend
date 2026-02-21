@@ -187,4 +187,16 @@
 		{@render registerGroup('works', 'Werke', reg.works)}
 		{@render registerGroup('keywords', 'Schlagwörter', reg.keywords)}
 	</div>
+
+	<!-- Inhalt Edition -->
+	<!-- <nav class="tet-surface-50-950 bg-surface-950-50">
+		<h2 class="h2"><a href="#smallforms">Kleine Formen</a></h2>
+		<h2 class="h2"><a href="#longforms">Lange Formen</a></h2>
+		<h2 class="h2"><a href="#letters">Briefe</a></h2>
+	</nav>
+	<div class="h-full overflow-scroll">
+		{@render registerGroup('smallforms', 'Kleine Formen', reg.smallforms)}
+		{@render registerGroup('longforms', 'Lange Formen', reg.longforms)}
+		{@render registerGroup('letters', 'Briefe', reg.letters)}
+	</div> -->
 </div>
