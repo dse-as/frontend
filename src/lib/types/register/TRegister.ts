@@ -6,6 +6,7 @@ import { type TOrgsKeys } from './TOrgsKeys';
 import { type TSmallformsKeys } from './TSmallformsKeys';
 import { type TLongformsKeys } from './TLongformsKeys';
 import { type TLettersKeys } from './TLettersKeys';
+import type { TBiblsKeys } from './TBiblsKeys';
 
 // Entities
 export type TEntityTypes =
@@ -37,6 +38,7 @@ export type TorgsTypes = string; //! restrict to subet later
 export type TSmallformsTypes = 'article' | 'feuilleton';
 export type TLongformsTypes = string; //! restrict to subet later
 export type TLettersTypes = string; //! restrict to subet later
+export type TBiblsTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
 
 // Register
@@ -115,6 +117,15 @@ export type TRegister = {
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				type: TLettersTypes;
+				gndNumber?: string; // optional
+			};
+		};
+		bibls: {
+			[key in TBiblsKeys]: {
+				name: string;
+				type: TLettersTypes;
+				authorId: TPeopleKeys; //! string to account for uncertainties
+				pubDate: string;
 				gndNumber?: string; // optional
 			};
 		};
