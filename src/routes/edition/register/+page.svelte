@@ -171,7 +171,7 @@
 	</div>
 {/snippet}
 
-<div class="grid h-screen grid-cols-[1fr_5fr] gap-0">
+<div class="grid h-[calc(100vh-48px)] grid-cols-[1fr_5fr] gap-0">
 	<!-- Navigation -->
 	<nav class="bg-surface-950-50 text-surface-50-950">
 		<h2 class="h2"><a href="#people">Personen</a></h2>
