@@ -38,6 +38,7 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^7.2.0"
+		"@fortawesome/fontawesome-free": "^7.2.0",
+		"@sveltejs/adapter-static": "^3.0.10"
 	}
 }
