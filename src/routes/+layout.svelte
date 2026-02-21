@@ -10,7 +10,8 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex flex-col">
 	<Nav />
 </div>
+
 {@render children()}
