@@ -94,21 +94,23 @@
 		{#if item.date}
 			<p>{item.date.from} bis {item.date.to}</p>
 		{/if}
-	{:else if type === 'works'}
+	{:else if type === 'bibls'}
 		<a href={`#${item.key}`}>
 			<h3 id={item.key} class="h3">{item.name}</h3>
 		</a>
 		{@const author = reg.people?.[item.authorId]}
-		<p>
-			{#if author?.firstname}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{:else}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{/if}
-			{#if item.pubDate}
-				<span>({item.pubDate})</span>
-			{/if}
-		</p>
+		{#if author}
+			<p>
+				{#if author?.firstname}
+					<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
+				{:else}
+					<a href={`#${item.authorId}`}>By {author.name}</a>
+				{/if}
+				{#if item.pubDate}
+					<span>({item.pubDate})</span>
+				{/if}
+			</p>
+		{/if}
 		{#if item.gndNumber}<a
 				class="text-primary-500 underline"
 				href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
@@ -176,7 +178,7 @@
 		<h2 class="h2"><a href="#places">Orte</a></h2>
 		<h2 class="h2"><a href="#events">Events</a></h2>
 		<h2 class="h2"><a href="#orgs">Organisationen</a></h2>
-		<h2 class="h2"><a href="#works">Werke</a></h2>
+		<h2 class="h2"><a href="#bibls">Bibliografie</a></h2>
 		<h2 class="h2"><a href="#keywords">Schlagwörter</a></h2>
 	</nav>
 	<div class="h-full overflow-scroll">
@@ -184,7 +186,7 @@
 		{@render registerGroup('places', 'Orte', reg.places)}
 		{@render registerGroup('events', 'Events', reg.events)}
 		{@render registerGroup('orgs', 'Organisationen', reg.orgs)}
-		{@render registerGroup('works', 'Werke', reg.works)}
+		{@render registerGroup('bibls', 'Bibliografie', reg.bibls)}
 		{@render registerGroup('keywords', 'Schlagwörter', reg.keywords)}
 	</div>
 </div>
