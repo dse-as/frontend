@@ -1,0 +1,75 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"smallforms_meta": {
+		"smallform_0231": {
+			"slug": "smallform_0231",
+			"docType": "",
+			"units": {
+				"unitIds": ["text"],
+				"unitLabels": ["Text"]
+			},
+			"metadata": {
+				"label": "Baltisches Tagebuch IV: Kleine Begegnungen in Danzig, 1937-09-04",
+				"editor_workflow": "ez_ttf_o",
+				"year": 1937,
+				"pubDate": "4.9.1937",
+				"title_full": "Baltisches Tagebuch IV: Kleine Begegnungen in Danzig",
+				"pubPosthumOnly": "",
+				"pubPlace": "Luzerner Tagblatt ",
+				"signature": "",
+				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 208, S. 9f.",
+				"textstufen": "smallform_0230",
+				"series": "",
+				"comment": "Sehr relevanter Brief: lettter_0288",
+				"keywords": {
+					"people": [],
+					"places": [],
+					"events": ["travel_00015"],
+					"orgs": [],
+					"smallforms": [],
+					"longforms": [],
+					"letters": [],
+					"keywords": ["4076374-2", "4016494-9", "4149920-7", "4049275-8", "4060491-3", "4002333-3"]
+				},
+				"maximum": "Moskaureise 1937",
+				"travel": "",
+				"archiveCollation": "\"N: Auf der Schattenseite, S. 112-115",
+				"pubSecondary": " Insel Europa. Ü (poln.) u.d.T. ,,Kr6tkie spotkania w Gdansku\"\". Annemarie Schwarzenbach. Podroz bez celu [Reise ohne Ziel]. Krakow: Zadra/Pro Helvetia, 2002, S. 26-28. Ü (poln.) u.d.T. ,,Kr6tkie spotkania w Gdansku\"\": wysokie obcasy. Gazeta 23.11.2002, Nr. 47, S. 35, 37.\"",
+				"urlOnlineResource": "",
+				"note": ""
+			},
+			"entities": {
+				"people": ["person_0160", "person_0619"],
+				"places": [
+					"place_0010",
+					"place_0017",
+					"place_0059",
+					"place_0855",
+					"place_0856",
+					"place_0857"
+				],
+				"events": [],
+				"orgs": ["org_0002", "org_0199", "org_0260", "org_0261", "org_0198"],
+				"smallforms": [],
+				"longforms": [],
+				"letters": [],
+				"bibls": ["UM3L78NJ"],
+				"keywords": ["4076374-2", "4016494-9", "4149920-7", "4049275-8", "4060491-3", "4002333-3"]
+			},
+			"manuscript": {
+				"hasiiif": true,
+				"url_iiif": "https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json"
+			},
+			"numPages": null,
+			"pageLimits": { "text": [null, null] },
+			"edition": {
+				"fullyEdited": false
+			}
+		}
+	}
+}
