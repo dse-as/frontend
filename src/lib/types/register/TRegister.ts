@@ -103,7 +103,7 @@ export type TRegister = {
 			};
 		};
 		longforms: {
-			[key in TSmallformsKeys]: {
+			[key in TLongformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
