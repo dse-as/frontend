@@ -1,0 +1,19 @@
+{
+	"meta": {},
+	"dict_register": {
+		"people": { "singular": "person", "name_de": "Personen", "needed": "yes" },
+		"places": { "singular": "place", "name_de": "Orte", "needed": "yes" },
+		"events": { "singular": "event", "name_de": "Ereignisse", "needed": "yes" },
+		"travels": {
+			"singular": "travel",
+			"name_de": "Reisen",
+			"needed": "NOT SURE WHETHER WE NEED THIS!"
+		},
+		"orgs": { "singular": "org", "name_de": "Organisationen", "needed": "yes" },
+		"smallforms": { "singular": "smallform", "name_de": "Kleine Formen", "needed": "yes" },
+		"longforms": { "singular": "longform", "name_de": "Lange Formen", "needed": "yes" },
+		"letters": { "singular": "letter", "name_de": "Briefe", "needed": "yes" },
+		"bibls": { "singular": "bibl", "name_de": "Bibliografie", "needed": "yes" },
+		"keywords": { "singular": "keyword", "name_de": "Schlagwörter", "needed": "yes" }
+	}
+}
