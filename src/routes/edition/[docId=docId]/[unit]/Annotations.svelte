@@ -3,7 +3,8 @@
 
 	// Load Component with Global Comment
 	let Annotations: Component[] | [] = $state([]);
-	let annotIds = annot[docId]?.annotIds;
+	let annotIds = annot[docId]?.annotIds ? annot[docId].annotIds : [];
+
 	import type { Component } from 'svelte';
 	annotIds.forEach((annotId) => {
 		(async () => {
