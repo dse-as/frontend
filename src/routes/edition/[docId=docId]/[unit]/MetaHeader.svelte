@@ -122,9 +122,8 @@
 		:global([data-entitytype='org']) {
 			@apply rounded-xl bg-orange-100 px-2 font-bold;
 		}
-		:global([data-keywordtype='work']) {
-			@apply rounded-xl bg-blue-100 px-2 font-bold;
-		}
+		:global([data-keywordtype='smallform']),
+		:global([data-keywordtype='longform']),
 		:global([data-entitytype='letter']) {
 			@apply rounded-xl bg-blue-100 px-2 font-bold;
 		}

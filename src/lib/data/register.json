@@ -24819,18 +24819,30 @@
 				"note": ""
 			}
 		},
-		"works": {
-			"work_0001": {
-				"name": "Beim Bau der Chinesischen Mauer. Ungedruckte Erzählungen und Prosa aus dem Nachlaß",
-				"authorId": "person_0215",
-				"pubDate": "1931",
-				"type": "book"
+		"bibls": {
+			"UM3L78NJ": {
+				"name": "Horst-Wessel-Lied",
+				"type": null,
+				"authorId": "",
+				"pubDate": ""
 			},
-			"work_0002": {
-				"name": "Die Sammlung. Literarische Monatsschrift. Bd. 1. 1934",
-				"authorId": "person_0053",
-				"pubDate": "1934",
-				"type": "book"
+			"VKTJ5RJ7": {
+				"name": "Ferien vom Ich",
+				"type": null,
+				"authorId": "",
+				"pubDate": ""
+			},
+			"6FW9GPED": {
+				"name": "Verfilmung",
+				"type": null,
+				"authorId": "",
+				"pubDate": ""
+			},
+			"5JXX7VPC": {
+				"name": "Markert 1935",
+				"type": null,
+				"authorId": "",
+				"pubDate": "1935"
 			}
 		},
 		"keywords": {

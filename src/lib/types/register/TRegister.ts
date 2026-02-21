@@ -1,20 +1,42 @@
-import { type TPlacesKeys } from "./TPlacesKeys";
-import { type TPeopleKeys } from "./TPeopleKeys";
-import { type TEventsKeys } from "./TEventsKeys";
-import { type TKeywordsKeys } from "./TKeywordsKeys";
-import { type TorgsKeys } from "./TorgsKeys";
-import { type TWorksKeys } from "./TWorksKeys";
+import { type TPlacesKeys } from './TPlacesKeys';
+import { type TPeopleKeys } from './TPeopleKeys';
+import { type TEventsKeys } from './TEventsKeys';
+import { type TKeywordsKeys } from './TKeywordsKeys';
+import { type TOrgsKeys } from './TOrgsKeys';
+import { type TSmallformsKeys } from './TSmallformsKeys';
+import { type TLongformsKeys } from './TLongformsKeys';
+import { type TLettersKeys } from './TLettersKeys';
 
 // Entities
-export type TEntityTypes = "people" | "places" | "events" | "orgs" | "works" | "letters" | "bibl" | "keywords";
-export type TEntityNames = "Orte" | "Personen" | "Events" | "Organisationen" | "Werke" | "Briefe" | "Bibliografie" | "Stichworte";
+export type TEntityTypes =
+	| 'people'
+	| 'places'
+	| 'events'
+	| 'orgs'
+	| 'smallforms'
+	| 'longforms'
+	| 'letters'
+	| 'bibl'
+	| 'keywords';
+export type TEntityNames =
+	| 'Orte'
+	| 'Personen'
+	| 'Events'
+	| 'Organisationen'
+	| 'Kleine Formen'
+	| 'Lange Formen'
+	| 'Briefe'
+	| 'Bibliografie'
+	| 'Stichworte';
 
 // Types for specific entities
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
 export type TEventsTypes = string; //! restrict to subet later
 export type TorgsTypes = string; //! restrict to subet later
-export type TWorksTypes = "book" | "article";
+export type TSmallformsTypes = 'article' | 'feuilleton';
+export type TLongformsTypes = string; //! restrict to subet later
+export type TLettersTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
 
 // Register
@@ -36,7 +58,7 @@ export type TRegister = {
 				dateBirth: string;
 				dateDeath: string;
 				type: TPeopleTypes;
-				orgId: TorgsKeys;
+				orgId: TOrgsKeys;
 				note: string;
 			};
 		};
@@ -61,7 +83,7 @@ export type TRegister = {
 			};
 		};
 		orgs: {
-			[key in TorgsKeys]: {
+			[key in TOrgsKeys]: {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
@@ -69,12 +91,30 @@ export type TRegister = {
 				note: string;
 			};
 		};
-		works: {
-			[key in TWorksKeys]: {
+		smallforms: {
+			[key in TSmallformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
-				type: TWorksTypes;
+				type: TSmallformsTypes;
+				gndNumber?: string; // optional
+			};
+		};
+		longforms: {
+			[key in TSmallformsKeys]: {
+				name: string;
+				authorId: TPeopleKeys; //! string to account for uncertainties
+				pubDate: string;
+				type: TSmallformsTypes;
+				gndNumber?: string; // optional
+			};
+		};
+		letters: {
+			[key in TLettersKeys]: {
+				name: string;
+				authorId: TPeopleKeys; //! string to account for uncertainties
+				pubDate: string;
+				type: TLettersTypes;
 				gndNumber?: string; // optional
 			};
 		};

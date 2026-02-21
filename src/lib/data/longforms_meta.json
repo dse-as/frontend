@@ -26,7 +26,7 @@
 				"textstufen": "",
 				"series": "",
 				"comment": "delete me",
-				"keywords": "",
+				"keywords": {},
 				"maximum": "",
 				"travel": "",
 				"archiveCollation": "",
@@ -38,6 +38,7 @@
 				"hasiiif": false,
 				"url_iiif": ""
 			},
+			"entities": {},
 			"numPages": null,
 			"pageLimits": {"text":[null, null]},
 			"edition": {

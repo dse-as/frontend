@@ -25,7 +25,7 @@
 				"textstufen": "",
 				"series": "",
 				"comment": "delete me",
-				"keywords": "",
+				"keywords": {},
 				"maximum": "",
 				"travel": "",
 				"archiveCollation": "",
@@ -37,12 +37,13 @@
 				"hasiiif": false,
 				"url_iiif": ""
 			},
+			"entities": {},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
 			"edition": {
 				"fullyEdited": false
 			}
-		}, 
+		},
 		"letters_0004": {
 			"docType": "Test4",
 			"units": {
@@ -62,7 +63,7 @@
 				"textstufen": "",
 				"series": "",
 				"comment": "delete me",
-				"keywords": "",
+				"keywords": {},
 				"maximum": "",
 				"travel": "",
 				"archiveCollation": "",
@@ -74,6 +75,7 @@
 				"hasiiif": false,
 				"url_iiif": ""
 			},
+			"entities": {},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
 			"edition": {

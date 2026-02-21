@@ -10,22 +10,10 @@
 			"needed": "NOT SURE WHETHER WE NEED THIS!"
 		},
 		"orgs": { "singular": "org", "name_de": "Organisationen", "needed": "yes" },
-		"works": { "singular": "work", "name_de": "Werke", "needed": "yes" },
-		"letters": {
-			"singular": "letter",
-			"name_de": "Briefe",
-			"needed": "NOT SURE WHETHER WE NEED THIS!"
-		},
-		"smallforms": {
-			"singular": "smallform",
-			"name_de": "Kleine Formen",
-			"needed": "NOT SURE WHETHER WE NEED THIS!"
-		},
-		"bibl": {
-			"singular": "bibl",
-			"name_de": "Bibliografie",
-			"needed": "NOT SURE WHETHER WE NEED THIS!"
-		},
+		"smallforms": { "singular": "smallform", "name_de": "Kleine Formen", "needed": "yes" },
+		"longforms": { "singular": "longform", "name_de": "Lange Formen", "needed": "yes" },
+		"letters": { "singular": "letter", "name_de": "Briefe", "needed": "yes" },
+		"bibls": { "singular": "bibl", "name_de": "Bibliografie", "needed": "yes" },
 		"keywords": { "singular": "keyword", "name_de": "Schlagwörter", "needed": "yes" }
 	}
 }

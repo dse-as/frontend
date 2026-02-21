@@ -1,3 +1,7 @@
+import { type TSmallformsKeys } from './documents/TSmallformsKeys';
+import { type TLongformsKeys } from './documents/TLongformsKeys';
+import { type TLettersKeys } from './documents/TLettersKeys';
+
 export type TTimelineEntry = {
 	meta: {
 		generated_by: string;
@@ -11,7 +15,7 @@ export type TTimelineEntry = {
 		event: string;
 		textWork: string;
 		textPub: string;
-		work_id: string;
+		work_id: TSmallformsKeys | TLongformsKeys | TLettersKeys;
 		note: string;
 	};
 };

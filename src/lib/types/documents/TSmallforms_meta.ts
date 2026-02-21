@@ -1,10 +1,12 @@
-import type { TEventsKeys } from '../register/TEventsKeys';
-import type { TKeywordsKeys } from '../register/TKeywordsKeys';
-import type { TOrgsKeys } from '../register/TOrgsKeys';
-import type { TPeopleKeys } from '../register/TPeopleKeys';
-import type { TPlacesKeys } from '../register/TPlacesKeys';
-import type { TWorksKeys } from '../register/TWorksKeys';
+import { type TEventsKeys } from '../register/TEventsKeys';
+import { type TOrgsKeys } from '../register/TOrgsKeys';
+import { type TPeopleKeys } from '../register/TPeopleKeys';
+import { type TPlacesKeys } from '../register/TPlacesKeys';
 import { type TSmallformsKeys } from './TSmallformsKeys';
+import { type TLongformsKeys } from './TLongformsKeys';
+import { type TLettersKeys } from './TLettersKeys';
+import { type TBiblKeys } from '../register/TBiblsKeys';
+import { type TKeywordsKeys } from '../register/TKeywordsKeys';
 
 export type TdocType =
 	| 'Typoskript'
@@ -50,7 +52,17 @@ export type TSmallforms_meta = {
 				textstufen: string;
 				series: string;
 				comment: string;
-				keywords: string[];
+				keywords: {
+					people?: TPeopleKeys[];
+					places?: TPlacesKeys[];
+					events?: TEventsKeys[];
+					orgs?: TOrgsKeys[];
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
+					bibl?: TBiblKeys[];
+					keywords?: TKeywordsKeys[];
+				};
 				maximum: string; //! what is this?
 				travel: string; //! what is this?
 				archiveCollation: string;
@@ -59,12 +71,16 @@ export type TSmallforms_meta = {
 				note: string;
 			};
 			entities: {
-				people: TPeopleKeys[];
-				places: TPlacesKeys[];
-				events: TEventsKeys[];
-				orgs: TOrgsKeys[];
-				works: TWorksKeys[];
-				keywords: TKeywordsKeys[];
+				//! unsure if I should drop this, since fully redundant with register.json
+				people?: TPeopleKeys[];
+				places?: TPlacesKeys[];
+				events?: TEventsKeys[];
+				orgs?: TOrgsKeys[];
+				smallforms?: TSmallformsKeys[];
+				longforms?: TLongformsKeys[];
+				letters?: TLettersKeys[];
+				bibl?: TBiblKeys[];
+				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
 				hasiiif: boolean;
@@ -76,15 +92,6 @@ export type TSmallforms_meta = {
 			};
 			edition: {
 				fullyEdited: boolean;
-				entities?: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					people?: string[];
-					places?: string[];
-					travels?: string[];
-					orgs?: string[];
-					works?: string[];
-					keywords?: string[];
-				};
 			};
 		};
 	};
