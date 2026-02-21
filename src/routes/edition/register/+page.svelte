@@ -64,7 +64,7 @@
 				<p>
 					<strong>Affiliation:</strong>
 					<a href={`#${item.organisationId}`}>
-						{`${reg.organisations[item.organisationId]?.name}`}
+						{`${reg.orgs[item.organisationId]?.name}`}
 					</a>
 				</p>
 			{/if}
@@ -77,7 +77,7 @@
 				>)
 			{/if}
 		</p>
-	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
+	{:else if type === 'places' || type === 'orgs' || type === 'keywords'}
 		<a href={`#${item.key}`}>
 			<h3 id={item.key} class="h3">{item.name}</h3>
 		</a>
@@ -175,7 +175,7 @@
 		<h2 class="h2"><a href="#people">Personen</a></h2>
 		<h2 class="h2"><a href="#places">Orte</a></h2>
 		<h2 class="h2"><a href="#events">Events</a></h2>
-		<h2 class="h2"><a href="#organisations">Organisationen</a></h2>
+		<h2 class="h2"><a href="#orgs">Organisationen</a></h2>
 		<h2 class="h2"><a href="#works">Werke</a></h2>
 		<h2 class="h2"><a href="#keywords">Schlagwörter</a></h2>
 	</nav>
@@ -183,7 +183,7 @@
 		{@render registerGroup('people', 'Personen', reg.people)}
 		{@render registerGroup('places', 'Orte', reg.places)}
 		{@render registerGroup('events', 'Events', reg.events)}
-		{@render registerGroup('organisations', 'Organisationen', reg.organisations)}
+		{@render registerGroup('orgs', 'Organisationen', reg.orgs)}
 		{@render registerGroup('works', 'Werke', reg.works)}
 		{@render registerGroup('keywords', 'Schlagwörter', reg.keywords)}
 	</div>
