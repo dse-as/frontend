@@ -1,0 +1,1 @@
+export type TWorksKeys = 'work_0001' | 'work_0002';
