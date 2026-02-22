@@ -38,7 +38,7 @@
 						{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
 						{#each regKeys ? Object.values(regKeys) : [] as regKey}
 							<a
-								class="whitespace-nowrap"
+								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
 								data-entitytype={dictReg[regType].singular}
 								href={`/edition/register#${regKey}`}
@@ -65,7 +65,7 @@
 				<!-- Gradient -->
 				{#if !isExpandedBox1}
 					<button
-						class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-white to-transparent"
+						class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent"
 						aria-label="expand box"
 						onclick={() => {
 							isExpandedBox1 = !isExpandedBox1;
