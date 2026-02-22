@@ -1,0 +1,34 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"smallforms_annot": {
+		"smallform_0002": {
+			"globCommId": null,
+			"annotIds":[]
+		},
+		"smallform_0115": {
+			"globCommId": null,
+			"annotIds":[]
+		},
+		"smallform_0231": {
+			"globCommId": "globcom-smallform_0231",
+			"annotIds":[
+				"annot-smallform_0231-001",
+				"annot-smallform_0231-002",
+				"annot-smallform_0231-003",
+				"annot-smallform_0231-004",
+				"annot-smallform_0231-005",
+				"annot-smallform_0231-006",
+				"annot-smallform_0231-007"
+			]
+		},
+		"smallform_0614": {
+			"globCommId": null,
+			"annotIds":[]
+		}
+	}
+}
