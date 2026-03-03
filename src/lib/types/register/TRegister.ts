@@ -18,9 +18,10 @@ export type TEntityTypes =
 	| 'letters'
 	| 'bibl'
 	| 'keywords';
+
 export type TEntityNames =
-	| 'Orte'
 	| 'Personen'
+	| 'Orte'
 	| 'Events'
 	| 'Organisationen'
 	| 'Kleine Formen'
@@ -30,14 +31,15 @@ export type TEntityNames =
 	| 'Stichworte';
 
 // Types for specific entities
-export type TPeopleTypes = string; //! restrict to subet later
-export type TPlacesTypes = string; //! restrict to subet later
-export type TEventsTypes = string; //! restrict to subet later
-export type TorgsTypes = string; //! restrict to subet later
+export type TPeopleTypes = string; //! restrict to subset later
+export type TPlacesTypes = string; //! restrict to subset later
+export type TEventsTypes = string; //! restrict to subset later
+export type TorgsTypes = string; //! restrict to subset later
 export type TSmallformsTypes = 'article' | 'feuilleton';
-export type TLongformsTypes = string; //! restrict to subet later
-export type TLettersTypes = string; //! restrict to subet later
-export type TKeywordsTypes = string; //! restrict to subet later
+export type TLongformsTypes = string; //! restrict to subset later
+export type TLettersTypes = string; //! restrict to subset later
+export type TBiblsTypes = string; //! restrict to subset later
+export type TKeywordsTypes = string; //! restrict to subset later
 
 // Register
 export type TRegister = {
