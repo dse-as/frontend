@@ -10,12 +10,10 @@ export function handleMarkendClick(ev) {
 	} catch (error) {
 		id = ev.target.dataset.noteid;
 	}
-
-	console.log('me-id', id)
-		if (id){
-			selectedNote.id = id;
-            selectMark(id);
-            selectNote(id);
-			scrollToNote(id);
+	if (id){
+		selectedNote.id = id;
+		selectMark(id);
+		selectNote(id);
+		scrollToNote(id);
 	}
 }
