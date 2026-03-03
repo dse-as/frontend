@@ -107,17 +107,11 @@
 			}
 
 			/* Quotes */
-			:global([data-type='quote']) {
-				@apply bg-amber-100;
-			}
 			:global([data-type='quote']::before) {
 				content: '«';
 			}
 			:global([data-type='quote']::after) {
 				content: '»';
-			}
-			:global([data-type='quote']) {
-				@apply bg-surface-100 italic;
 			}
 
 			/* Structure */
