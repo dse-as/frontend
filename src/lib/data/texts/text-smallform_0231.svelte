@@ -37,9 +37,9 @@
 	<br />Ich will Ferien haben, beschloß ich,
 	<span data-type="notestart" data-noteid="note_smallform_0231_001" data-notetype="annotation"
 	></span>"Ferien vom <br />Ich"
-	<span data-type="noteend" data-noteid="note_smallform_0231_001"></span>–, einen ganzen Tag lang
-	weder von Politik <br />sprechen noch an der Schreibmaschine sitzen, sondern <br />vor den Toren
-	der Stadt, im Buchenwald von <br /><span
+	<span data-type="noteend" data-notenum="1" data-noteid="note_smallform_0231_001">1</span>–, einen
+	ganzen Tag lang weder von Politik <br />sprechen noch an der Schreibmaschine sitzen, sondern
+	<br />vor den Toren der Stadt, im Buchenwald von <br /><span
 		data-type="entity"
 		data-entitytype="place"
 		data-key="place_0855">Oliva</span
@@ -63,8 +63,9 @@
 	></span><span data-type="hyphen"></span><br data-break="no" />gassen, wo sich die
 	<span data-type="entity" data-entitytype="org" data-key="org_0199">S.A.</span>-Männer und
 	<span data-type="notestart" data-noteid="note_smallform_0231_002" data-notetype="annotation"
-	></span>Sturmbann<span data-type="hyphen"></span><br data-break="no" />führer
-	<span data-type="noteend" data-noteid="note_smallform_0231_002"></span>
+	></span>
+	Sturmbann<span data-type="hyphen"></span><br data-break="no" />führer
+	<span data-type="noteend" data-notenum="2" data-noteid="note_smallform_0231_002">2</span>
 	treffen. Da
 	<span data-type="choice">
 		<span data-type="sic">deht</span>
@@ -94,19 +95,20 @@
 	wir in ein gemütliches Gespräch. <br />Ob sie keinen Ausflug machen wolle, an einem so
 	<br />schönen Tag? Mit den Kindern? Sie habe doch <br />sicher Kinder? –
 	<span data-type="notestart" data-noteid="note_smallform_0231_003" data-notetype="annotation"
-	></span>Sie hieß Frau
+	></span>
+	Sie hieß Frau
 	<span data-type="entity" data-entitytype="person" data-key="person_0619">Amalie Boedeke</span>,
 	<br />war mit einem Kaufmann Branche Heringshandel <br />verheiratet und hatte drei Kinder.
-
-	<span data-type="noteend" data-noteid="note_smallform_0231_003"></span>Aber einen Aus<span
-		data-type="hyphen"
-	></span><br data-break="no" />flug machte sie nicht. Der Mann war Unterführer <br />in der
+	<span data-type="noteend" data-notenum="3" data-noteid="note_smallform_0231_003">3</span>Aber
+	einen Aus<span data-type="hyphen"></span><br data-break="no" />flug machte sie nicht. Der Mann war
+	Unterführer <br />in der
 	<span data-type="entity" data-entitytype="org" data-key="org_0199">S. A.</span> und hatte,
 	natürlich, Festtags-Dienst.
 	<br />
 	<span data-type="notestart" data-noteid="note_smallform_0231_004" data-notetype="annotation"
-	></span>Die Kinder hatten auch alle Dienst
-	<span data-type="noteend" data-noteid="note_smallform_0231_004"></span>.
+	></span>
+	Die Kinder hatten auch alle Dienst
+	<span data-type="noteend" data-notenum="4" data-noteid="note_smallform_0231_004">4</span>.
 	<span data-type="quote">Und wenn <br />man sie dann mal auf der Straße antrifft</span>
 	sagte
 	<br />Frau
@@ -167,7 +169,8 @@
 	>
 	–
 	<span data-type="notestart" data-noteid="note_smallform_0231_005" data-notetype="annotation"
-	></span>Die Guldenabwertung erfolgte, nach <br />einem großartigen Maifest der
+	></span>
+	Die Guldenabwertung erfolgte, nach <br />einem großartigen Maifest der
 	<span data-type="entity" data-entitytype="org" data-key="org_0002"
 		>nationalsozialistischen <br />Partei</span
 	>, am 2. Mai 1933.
@@ -177,7 +180,7 @@
 	<span data-type="entity" data-entitytype="person" data-key="person_0619">Boedeke</span> und
 	richtet einen triumphierenden
 	<br />Blick auf mich
-	<span data-type="noteend" data-noteid="note_smallform_0231_005"></span>.
+	<span data-type="noteend" data-notenum="5" data-noteid="note_smallform_0231_005">5</span>.
 </p>
 <p>
 	<br />Es ist offenbar schwer, in
@@ -203,22 +206,25 @@
 	<span data-type="entity" data-entitytype="place" data-key="place_0059">Paris</span> oder
 	<span data-type="entity" data-entitytype="place" data-key="place_0857">Dresden</span>.
 	<span data-type="notestart" data-noteid="note_smallform_0231_006" data-notetype="annotation"
-	></span>Jetzt <br />hatten sie zusammen eine kleine Musikalienhandlung.
+	></span>
+	Jetzt <br />hatten sie zusammen eine kleine Musikalienhandlung.
 	<br />Die neue, zeitgemäße Musik, die Marschalbums und <br />Lieder der
 	<span data-type="entity" data-entitytype="org" data-key="org_0198">Hitler-Jugend</span> durften
 	sie allerdings nicht <br />halten, weil sie Juden waren. Und weil nun also <br />das
-	<span data-type="entity" data-entitytype="bibl" data-key="UM3L78NJ">Horst-Wessel-Lied</span> nicht
-	in ihrem Schaufenster
+	<span data-type="entity" data-entitytype="bibl" data-key="UM3L78NJ">Horst-Wessel-Lied</span>
+	nicht in ihrem Schaufenster
 	<br />lag, wurden sie natürlich von der Partei und allen <br />Gutgesinnten boykottiert.
-	<span data-type="noteend" data-noteid="note_smallform_0231_006"></span>– Trotzdem hat das kleine
+	<span data-type="noteend" data-notenum="6" data-noteid="note_smallform_0231_006">6</span>–
+	Trotzdem hat das kleine
 	<br />Fräulein Jakobsohn kein Wort über Politik ge<span data-type="hyphen"></span><br
 		data-break="no"
 	/>redet, als wir am Nachmittag zusammen zur
 	<span data-type="notestart" data-noteid="note_smallform_0231_007" data-notetype="annotation"
-	></span>alten
+	></span>
+	alten
 	<br />Schloßkirche von
 	<span data-type="entity" data-entitytype="place" data-key="place_0855">Oliva</span>
-	<span data-type="noteend" data-noteid="note_smallform_0231_007"></span>
+	<span data-type="noteend" data-notenum="7" data-noteid="note_smallform_0231_007">7</span>
 	hinausgingen. Einen Aus<span data-type="hyphen"></span><br data-break="no" />länder zu treffen,
 	erklärte sie mir, sei genau wie eine
 	<br />Reise zu machen. Eine richtige Ferienreise sei das. <br />In einem kleinen, russischen
