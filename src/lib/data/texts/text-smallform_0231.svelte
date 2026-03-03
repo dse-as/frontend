@@ -257,8 +257,31 @@
 	<br />Ich fragte nicht, was aus ihr dann werden würde. <br />Wir machten uns auf den Heimweg. – Am
 	nächsten <br />Tag, vor meiner Abreise aus
 	<span data-type="entity" data-entitytype="place" data-key="place_0017">Danzig</span>, wurde beim
-	<br />Hotelportier für mich ein Paketchen abgegeben, es <br />enthielt ein Glas eingemachter
-	Preiselbeeren! –
+	<br />Hotelportier für mich ein
+	<span
+		data-type="notestart"
+		data-noteendnum="99a"
+		data-noteid="note_smallform_0231_99a"
+		data-notetype="annotation"
+	></span>Paketchen abgegeben, es <br />enthielt ein Glas eingemachter
+	<span
+		data-type="notestart"
+		data-noteendnum="99b"
+		data-noteid="note_smallform_0231_99b"
+		data-notetype="annotation"
+	></span>
+	<span
+		data-type="notestart"
+		data-noteendnum="99b"
+		data-noteid="note_smallform_0231_99b"
+		data-notetype="annotation"
+	></span>E Guete!
+	<span
+		data-type="noteend"
+		data-noteendnum="99a"
+		data-noteid="note_smallform_0231_99a"
+		data-notetype="annotation"
+	></span>–
 </p>
 
 <br /><byline><hi rendition="#g"> Annemarie Clark</hi>.</byline>
