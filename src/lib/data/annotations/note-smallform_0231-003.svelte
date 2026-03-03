@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_003"
+	data-noteid="note-smallform_0231-003"
 	data-targetEnd="a7"
 >
 	Es könnte sich dabei um dieselbe Person handeln, die Schwarzenbach in ihrem

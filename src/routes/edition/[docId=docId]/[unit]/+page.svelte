@@ -23,15 +23,16 @@
 			let params = page.url.searchParams;
 			params.set('mode', 'LF');
 			dflf = 'LF';
-			//! @sebi: the following redirect works but TS seems not to understand th `${}?${}` syntax...
+			//! @sebi: the following redirect works but TS seems not to understand the `${}?${}` syntax...
 			goto(resolve(`${page.url.pathname}?${params.toString()}`));
 		}
 	});
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
-	<!-- Series Menue -->
+	<!-- Series Menu -->
 	<SeriesMenu />
+
 	<!-- Metadata -->
 	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
 
@@ -133,13 +134,25 @@
 			}
 
 			/* Notes */
-			:global([data-type='notestart']::before) {
-				@apply rounded-full bg-red-500 px-2 font-bold;
+			:global([data-type='mark'][data-marktype='single-annotation']:hover),
+			:global([data-type='mark'][data-marktype='single-annotation'].highlighted) {
+				@apply cursor-pointer bg-primary-50-950 text-surface-950;
 				content: '[';
 			}
-			:global([data-type='noteend']::after) {
-				@apply rounded-full bg-red-500 px-2 font-bold;
-				content: ']';
+			:global([data-type='mark'][data-marktype='single-annotation'].highlighted) {
+				@apply bg-primary-100-900;
+			}
+			:global([data-type='markend']) {
+				@apply rounded-full bg-primary-50-950 px-1 align-super text-sm;
+			}
+			:global([data-type='markend'].highlighted) {
+				@apply bg-primary-100-900;
+			}
+			:global([data-type='markend']:not(.highlighted):hover) {
+				@apply cursor-pointer bg-primary-400-600;
+			}
+			:global([data-type='markend'])::before {
+				content: attr(data-notenum);
 			}
 		}
 	}

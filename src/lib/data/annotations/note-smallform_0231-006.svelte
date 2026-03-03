@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_006"
+	data-noteid="note-smallform_0231-006"
 	data-targetEnd="a6"
 >
 	Wie die Legende einer Fotografie von Schwarzenbach belegt, waren nicht-arische Geschäfte in und um <span

@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_002"
+	data-noteid="note-smallform_0231-002"
 	data-targetEnd="a2"
 >
 	Der Sturmbann war eine orgseinheit (in seiner Grösse einem Bataillon vergleichbar) von

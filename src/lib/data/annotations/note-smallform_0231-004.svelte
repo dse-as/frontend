@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_004"
+	data-noteid="note-smallform_0231-004"
 	data-targetEnd="a3"
 >
 	vgl. diverse Fotografien Schwarzenbachs von Kindern in Uniform auf den Strassen

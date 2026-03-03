@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_001"
+	data-noteid="note-smallform_0231-001"
 	data-targetEnd="a1"
 >
 	Schwarzenbach spielt an auf den Roman

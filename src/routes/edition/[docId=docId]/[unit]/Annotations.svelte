@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { handleNoteClick } from '$lib/functions/handleNoteClick';
+	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	let { annot, docId } = $props();
 
 	// Load Component with Global Comment
@@ -17,9 +19,23 @@
 	});
 </script>
 
-<div class="flex h-full flex-col gap-2 overflow-y-auto">
+<div data-dom="containerAnnotations" class="flex h-full flex-col gap-2 overflow-y-auto">
 	{#each Annotations as Annotation, idx}
-		<div data-dom="annotation" class="p-2">
+		{@const noteid = annotIds[idx]}
+		<div
+			data-dom="annotationBox"
+			data-noteid={noteid}
+			class="p-2"
+			onclick={() => {
+				handleNoteClick(noteid);
+				selectedNote.id = noteid;
+			}}
+			onkeydown={(e) => (e.key === 'Enter' || e.key === ' ' ? handleNoteClick(noteid) : null)}
+			role="button"
+			tabindex="0"
+			aria-pressed={selectedNote.id === noteid}
+			aria-label="Focus note"
+		>
 			<span>{idx + 1}</span>
 			<Annotation />
 		</div>
@@ -30,12 +46,15 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	[data-dom='annotation'] {
+	[data-dom='annotationBox'] {
 		:global([data-type='entity']) {
 			@apply underline decoration-2;
 		}
 		:global(p) {
 			@apply my-4;
+		}
+		:global(&.highlighted) {
+			@apply bg-green-300;
 		}
 	}
 </style>

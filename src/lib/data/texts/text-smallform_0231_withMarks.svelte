@@ -35,15 +35,15 @@
 
 <p>
 	<br />Ich will Ferien haben, beschloß ich,
-	<span data-type="notestart" data-noteid="note_smallform_0231_001" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-001" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_001']"
+		data-noteids={JSON.stringify(['note-smallform_0231-001'])}
 		data-marktype="single-annotation"
 	>
 		"Ferien vom <br />Ich"
-	</span><span data-type="noteend" data-notenum="1" data-noteid="note_smallform_0231_001"></span>–,
+	</span><span data-type="markend" data-notenum="1" data-noteid="note-smallform_0231-001"></span>–,
 	einen ganzen Tag lang weder von Politik <br />sprechen noch an der Schreibmaschine sitzen, sondern
 	<br />vor den Toren der Stadt, im Buchenwald von <br /><span
 		data-type="entity"
@@ -68,15 +68,15 @@
 		data-unit="textregion"
 	></span><span data-type="hyphen"></span><br data-break="no" />gassen, wo sich die
 	<span data-type="entity" data-entitytype="org" data-key="org_0199">S.A.</span>-Männer und
-	<span data-type="notestart" data-noteid="note_smallform_0231_002" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-002" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_002']"
+		data-noteids={JSON.stringify(['note-smallform_0231-002'])}
 		data-marktype="single-annotation"
 	>
 		Sturmbann<span data-type="hyphen"></span><br data-break="no" />führer
-	</span><span data-type="noteend" data-notenum="2" data-noteid="note_smallform_0231_002"></span>
+	</span><span data-type="markend" data-notenum="2" data-noteid="note-smallform_0231-002"></span>
 	treffen. Da
 	<span data-type="choice">
 		<span data-type="sic">deht</span>
@@ -105,31 +105,31 @@
 	– Als ich sie darüber <br />beruhigen konnte, daß nicht alle Ausländer Juden <br />seien, gerieten
 	wir in ein gemütliches Gespräch. <br />Ob sie keinen Ausflug machen wolle, an einem so
 	<br />schönen Tag? Mit den Kindern? Sie habe doch <br />sicher Kinder? –
-	<span data-type="notestart" data-noteid="note_smallform_0231_003" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-003" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_003']"
+		data-noteids={JSON.stringify(['note-smallform_0231-003'])}
 		data-marktype="single-annotation"
 	>
 		Sie hieß Frau
 		<span data-type="entity" data-entitytype="person" data-key="person_0619">Amalie Boedeke</span>,
 		<br />war mit einem Kaufmann Branche Heringshandel <br />verheiratet und hatte drei Kinder.
-	</span><span data-type="noteend" data-notenum="3" data-noteid="note_smallform_0231_003"
+	</span><span data-type="markend" data-notenum="3" data-noteid="note-smallform_0231-003"
 	></span>Aber einen Aus<span data-type="hyphen"></span><br data-break="no" />flug machte sie nicht.
 	Der Mann war Unterführer <br />in der
 	<span data-type="entity" data-entitytype="org" data-key="org_0199">S. A.</span> und hatte,
 	natürlich, Festtags-Dienst.
 	<br />
-	<span data-type="notestart" data-noteid="note_smallform_0231_004" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-004" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_004']"
+		data-noteids={JSON.stringify(['note-smallform_0231-004'])}
 		data-marktype="single-annotation"
 	>
 		Die Kinder hatten auch alle Dienst
-	</span><span data-type="noteend" data-notenum="4" data-noteid="note_smallform_0231_004"></span>.
+	</span><span data-type="markend" data-notenum="4" data-noteid="note-smallform_0231-004"></span>.
 	<span data-type="quote">Und wenn <br />man sie dann mal auf der Straße antrifft</span>
 	sagte
 	<br />Frau
@@ -189,11 +189,11 @@
 		<br />machen.</span
 	>
 	–
-	<span data-type="notestart" data-noteid="note_smallform_0231_005" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-005" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_005']"
+		data-noteids={JSON.stringify(['note-smallform_0231-005'])}
 		data-marktype="single-annotation"
 	>
 		Die Guldenabwertung erfolgte, nach <br />einem großartigen Maifest der
@@ -206,7 +206,7 @@
 		<span data-type="entity" data-entitytype="person" data-key="person_0619">Boedeke</span> und
 		richtet einen triumphierenden
 		<br />Blick auf mich
-	</span><span data-type="noteend" data-notenum="5" data-noteid="note_smallform_0231_005"></span>.
+	</span><span data-type="markend" data-notenum="5" data-noteid="note-smallform_0231-005"></span>.
 </p>
 <p>
 	<br />Es ist offenbar schwer, in
@@ -231,11 +231,11 @@
 	oder
 	<span data-type="entity" data-entitytype="place" data-key="place_0059">Paris</span> oder
 	<span data-type="entity" data-entitytype="place" data-key="place_0857">Dresden</span>.
-	<span data-type="notestart" data-noteid="note_smallform_0231_006" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-006" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_006']"
+		data-noteids={JSON.stringify(['note-smallform_0231-006'])}
 		data-marktype="single-annotation"
 	>
 		Jetzt <br />hatten sie zusammen eine kleine Musikalienhandlung.
@@ -245,22 +245,22 @@
 		<span data-type="entity" data-entitytype="bibl" data-key="UM3L78NJ">Horst-Wessel-Lied</span>
 		nicht in ihrem Schaufenster
 		<br />lag, wurden sie natürlich von der Partei und allen <br />Gutgesinnten boykottiert.
-	</span><span data-type="noteend" data-notenum="6" data-noteid="note_smallform_0231_006"></span>–
+	</span><span data-type="markend" data-notenum="6" data-noteid="note-smallform_0231-006"></span>–
 	Trotzdem hat das kleine
 	<br />Fräulein Jakobsohn kein Wort über Politik ge<span data-type="hyphen"></span><br
 		data-break="no"
 	/>redet, als wir am Nachmittag zusammen zur
-	<span data-type="notestart" data-noteid="note_smallform_0231_007" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-007" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_007']"
+		data-noteids={JSON.stringify(['note-smallform_0231-007'])}
 		data-marktype="single-annotation"
 	>
 		alten
 		<br />Schloßkirche von
 		<span data-type="entity" data-entitytype="place" data-key="place_0855">Oliva</span>
-	</span><span data-type="noteend" data-notenum="7" data-noteid="note_smallform_0231_007"></span>
+	</span><span data-type="markend" data-notenum="7" data-noteid="note-smallform_0231-007"></span>
 	hinausgingen. Einen Aus<span data-type="hyphen"></span><br data-break="no" />länder zu treffen,
 	erklärte sie mir, sei genau wie eine
 	<br />Reise zu machen. Eine richtige Ferienreise sei das. <br />In einem kleinen, russischen
@@ -294,24 +294,24 @@
 	nächsten <br />Tag, vor meiner Abreise aus
 	<span data-type="entity" data-entitytype="place" data-key="place_0017">Danzig</span>, wurde beim
 	<br />Hotelportier für mich ein
-	<span data-type="notestart" data-noteid="note_smallform_0231_99a" data-notetype="annotation"
+	<span data-type="markstart" data-noteid="note-smallform_0231-99a" data-notetype="annotation"
 	></span>
 	<span
 		data-type="mark"
-		data-noteids="['note_smallform_0231_99a']"
+		data-noteids={JSON.stringify(['note-smallform_0231_99a'])}
 		data-marktype="single-annotation"
 		>Paketchen abgegeben, es <br />enthielt ein Glas eingemachter
-		<span data-type="notestart" data-noteid="note_smallform_0231_99b" data-notetype="annotation"
+		<span data-type="markstart" data-noteid="note-smallform_0231-99b" data-notetype="annotation"
 		></span>
 		<span
 			data-type="mark"
-			data-noteids="['note_smallform_0231_99a', 'note_smallform_0231_99b']"
+			data-noteids={JSON.stringify(['note-smallform_0231_99a', 'note-smallform_0231_99b'])}
 			data-marktype="single-annotation">Preiselbeeren!</span
 		>
-		<span data-type="notestart" data-noteid="note_smallform_0231_99b" data-notetype="annotation"
+		<span data-type="markstart" data-noteid="note-smallform_0231-99b" data-notetype="annotation"
 		></span> E Guete!</span
 	>
-	<span data-type="noteend" data-noteid="note_smallform_0231_99a" data-notetype="annotation"></span>
+	<span data-type="markend" data-noteid="note-smallform_0231-99a" data-notetype="annotation"></span>
 	–
 </p>
 

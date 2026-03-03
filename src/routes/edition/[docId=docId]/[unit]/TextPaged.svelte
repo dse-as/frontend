@@ -11,7 +11,7 @@
 	})();
 </script>
 
-<div data-textflow="paged" class="overflow-y-auto p-10">
+<div data-dom="containerMaintext" data-textflow="paged" class="overflow-y-auto p-10">
 	{#if HtmlContent}
 		<HtmlContent />
 	{/if}

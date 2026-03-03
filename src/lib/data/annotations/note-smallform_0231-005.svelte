@@ -1,7 +1,7 @@
 <div
-	data-type="note"
+	data-type="noteContent"
 	data-notetype="annotation"
-	data-noteid="note_smallform_0231_005"
+	data-noteid="note-smallform_0231-005"
 	data-targetEnd="a4"
 >
 	Schwarzenbach gibt hier die nationalsozialistische Propaganda bezüglich der Abwertung des Danziger
