@@ -1,0 +1,18 @@
+{
+	"meta": {},
+	"dict_orgstypes": {
+		"orgstype_001": { "de_plural": "Periodika", "de_singular": "Periodikum" },
+		"orgstype_002": { "de_plural": "Hochschulen", "de_singular": "Hochschule" },
+		"orgstype_003": { "de_plural": "Verlage", "de_singular": "Verlag" },
+		"orgstype_004": { "de_plural": "Politische Organisationen", "de_singular": "Politische Organisation" },
+		"orgstype_005": { "de_plural": "Wirtschaftliche Organisationen", "de_singular": "Wirtschaftliche Organisation" },
+		"orgstype_006": { "de_plural": "Religiöse Organisationen", "de_singular": "Religiöse Organisation" },
+		"orgstype_007": { "de_plural": "Öffentliche Einrichtungen", "de_singular": "Öffentliche Einrichtung" },
+		"orgstype_008": { "de_plural": "Hotels", "de_singular": "Hotel" },
+		"orgstype_009": { "de_plural": "Theater", "de_singular": "Theater" },
+		"orgstype_010": { "de_plural": "Schulen", "de_singular": "Schule" },
+		"orgstype_011": { "de_plural": "Sammelbände", "de_singular": "Sammelband" },
+		"orgstype_012": { "de_plural": "Kliniken", "de_singular": "Klinik" },
+		"orgstype_013": { "de_plural": "Bars/Klubs/Lokale", "de_singular": "Bar/Klub/Lokal" }
+	}
+}
