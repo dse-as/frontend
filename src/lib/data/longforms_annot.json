@@ -1,0 +1,14 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"longforms_annot": {
+		"longform_0000": {
+			"globCommId": null,
+			"annotIds":[]
+		}
+	}
+}

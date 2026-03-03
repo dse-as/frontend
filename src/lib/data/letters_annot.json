@@ -1,0 +1,12 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"letters_annot": {
+		"letter_0001": { "globCommId": null, "annotIds":[] },
+		"letter_0004": { "globCommId": null, "annotIds":[] }
+	}
+}

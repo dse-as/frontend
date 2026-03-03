@@ -1,0 +1,50 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"longforms_meta": {
+        "longform_0000": {
+			"slug": "longform_0000",
+			"docType": "Test",
+			"units": {
+				"unitIds": ["text"],
+				"unitLabels": ["Text"]
+			},
+			"metadata": {
+				"label": "testlabel",
+				"editor_workflow": "foo",
+				"year": 1900,
+				"pubDate": "1.1.1900",
+				"title_full": "Longform Title full",
+				"pubPosthumOnly": "",
+				"pubPlace": "A Random Journal",
+				"signature": "",
+				"pubDetails": "",
+				"textstufen": "",
+				"series": "",
+				"comment": "delete me",
+				"keywords": {},
+				"maximum": "",
+				"travel": "",
+				"archiveCollation": "",
+				"pubSecondary": "",
+				"urlOnlineResource": "",
+				"note": ""
+			},
+			"manuscript": {
+				"hasiiif": false,
+				"url_iiif": ""
+			},
+			"entities": {},
+			"numPages": null,
+			"pageLimits": {"text":[null, null]},
+			"edition": {
+				"fullyEdited": false
+			}
+				
+		}
+    }
+}
