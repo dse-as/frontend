@@ -1,3 +1,3 @@
 ## Zum Umgang mit sensiblen Daten
 
-Dies ist ein **Test** zum _schauen_ ob es funktioniert.
+Dies ist ein **Test** -- denn wir wollen _wissen,_ ob es funktioniert.
