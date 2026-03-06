@@ -9,13 +9,13 @@
 
 	// Menu
 	const links = [
-		{ name: 'SNF Projekt', path: '', slug: '/snf-project' },
-		{ name: 'Edition', path: '', slug: '/edition' },
-		{ name: 'Register', path: '', slug: '/edition/register' },
-		{ name: 'Netzwerke', path: '', slug: '/networks' },
-		{ name: 'Themen', path: '', slug: '/topics' },
-		{ name: 'Schwarzenbach', path: '', slug: '/schwarzenbach' },
-		{ name: 'Suche', path: '', slug: '/search' }
+		{ name: 'SNF Projekt', path: '/snf-project' },
+		{ name: 'Edition', path: '/edition' },
+		{ name: 'Register', path: '/edition/register' },
+		{ name: 'Netzwerke', path: '/networks' },
+		{ name: 'Themen', path: '/topics' },
+		{ name: 'Schwarzenbach', path: '/schwarzenbach' },
+		{ name: 'Suche', path: '/search' }
 	];
 </script>
 
@@ -36,10 +36,12 @@
 					<li
 						class={[
 							'list-nav-item inline-block h-full hover:text-secondary-300-700',
-							link.slug === `/${page.url.pathname.split('/').pop()}` ? 'text-primary-800-200' : ''
+							link.path.split('/').pop() === `/${page.url.pathname.split('/').pop()}`
+								? 'text-primary-800-200'
+								: ''
 						]}
 					>
-						<a href={resolve(`${link.path}${link.slug}`)}>{@html link.name}</a>
+						<a href={resolve(link.path)}>{@html link.name}</a>
 					</li>
 				{/each}
 			</ul>
@@ -93,7 +95,7 @@
 									{#each links as link}
 										<li class="m-2!">
 											<a
-												href={resolve(`${link.path}${link.slug}`)}
+												href={resolve(link.path)}
 												onclick={() => {
 													openStateMenu = false; // close Menu
 												}}
