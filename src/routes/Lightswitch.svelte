@@ -7,7 +7,7 @@
 
 	const handleToggleLightswitch = (force = '') => {
 		if (force === 'dark') isDark = true;
-		else if (force == 'light') isDark = false;
+		else if (force === 'light') isDark = false;
 		else isDark = !isDark;
 		document.documentElement.setAttribute('data-darkModeState', darkModeState);
 	};
