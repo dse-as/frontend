@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { AppBar, Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
 	import { page } from '$app/state';
 
 	import Lightswitch from './Lightswitch.svelte';
+	import { resolve } from 'path';
 
 	let openStateMenu = $state(false);
 
@@ -23,7 +23,7 @@
 <AppBar class="flex h-12 flex-row items-center justify-between bg-surface-600-400 px-2 py-0">
 	<!-- Lead for Home Button -->
 	<AppBar.Lead class="flex items-center">
-		<a class="flex items-center py-2" href={`${base}/`}> <p>DSE-AS</p> </a>
+		<a class="flex items-center py-2" href={resolve('/')}> <p>DSE-AS</p> </a>
 	</AppBar.Lead>
 
 	<!-- Top Navigation Bar -->
@@ -39,7 +39,7 @@
 							link.slug === `/${page.url.pathname.split('/').pop()}` ? 'text-primary-800-200' : ''
 						]}
 					>
-						<a href="{base}{link.path}{link.slug}">{@html link.name}</a>
+						<a href={resolve(`${link.path}${link.slug}`)}>{@html link.name}</a>
 					</li>
 				{/each}
 			</ul>
@@ -93,7 +93,7 @@
 									{#each links as link}
 										<li class="m-2!">
 											<a
-												href={`${base}${link.path}${link.slug}`}
+												href={resolve(`${link.path}${link.slug}`)}
 												onclick={() => {
 													openStateMenu = false; // close Menu
 												}}
