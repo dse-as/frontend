@@ -1,0 +1,68 @@
+{
+	"entities": {
+		"people": {
+			"schwarzenbach-annemarie": {
+				"name": "Annemarie Schwarzenbach",
+				"category": "family",
+				"gndNumber": "118997718"
+			},
+			"schwarzenbach-renee": {
+				"name": "Renée Schwarzenbach",
+				"category": "family",
+				"gndNumber": "117379417"
+			}
+		},
+		"places": {
+			"bern": {
+				"name": "Bern",
+				"category": "city",
+				"gndNumber": "4005762-8"
+			}
+		},
+		"travels": {
+			"usa-1": {
+				"name": "Erste USA-Reise (19xx)"
+			},
+			"usa-2": {
+				"name": "Erste USA-Reise (19xx)"
+			},
+			"kongo-1": {
+				"name": "Reise durch Belgisch Kongo (19xx)"
+			}
+		},
+		"institutions": {
+			"weltwoche": {
+				"name": "Weltwoche"
+			},
+			"annabelle": {
+				"name": "Annabelle"
+			}
+		},
+		"works": {
+			"oberengadin": {
+				"name": "Beiträge zur Geschichte des Oberengadins im Mittelalter und zu Beginn der Neuzeit",
+				"pubDate": 1931,
+				"pubPosthum": false,
+				"type": "book"
+			},
+			"das_glueckliche_tal": {
+				"name": "Das glückliche Tal",
+				"pubDate": "19xx",
+				"pubPosthum": false,
+				"type": "book"
+			},
+			"tod_in_persien": {
+				"name": "Tod in Persien",
+				"pubDate": "2003",
+				"pubPosthum": true,
+				"type": "book"
+			}
+		},
+		"keywords": {
+			"test": {
+				"name": "Test",
+				"type": "test"
+			}
+		}
+	}
+}

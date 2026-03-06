@@ -1,0 +1,27 @@
+{
+	"register": {
+		"works": {
+			"oberengadin": {
+				"docId":"doc001",
+                "name": "Beiträge zur Geschichte des Oberengadins im Mittelalter und zu Beginn der Neuzeit",
+				"pubDate": 1931,
+				"pubPosthum": false,
+				"type": "book"
+			},
+			"das_glueckliche_tal": {
+				"docId":"doc002",
+                "name": "Das glückliche Tal",
+				"pubDate": "19xx",
+				"pubPosthum": false,
+				"type": "book"
+			},
+			"tod_in_persien": {
+				"docId":"doc003",
+                "name": "Tod in Persien",
+				"pubDate": "2003",
+				"pubPosthum": true,
+				"type": "book"
+			}
+		}
+	}
+}
