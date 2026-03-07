@@ -5,7 +5,7 @@
 	import { type TRegister } from '$lib/types/register/TRegister';
 
 	//! How to make this nicer? (@sebi)
-	let reg = register.register;
+	let { register: reg } = register;
 
 	let sortEventsBy = $state('name'); // 'name' or 'date'
 
