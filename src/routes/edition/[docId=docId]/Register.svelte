@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
-	import dict_register from '$lib/dictionaries/dict_register.json'; //! @sebi: Why do I get "Cannot find module '$lib/dictionaries/dict_register.json' or its corresponding type declarations"?
+	import dict_register from '$lib/dictionaries/dict_register.json';
 	import register from '$lib/data/register.json';
 	import { type TEntityTypes } from '$lib/types/register/TRegister';
 
@@ -22,7 +22,7 @@
 </script>
 
 <div class="h-full">
-	<!-- //! @sebi how to type openRegisters = details.value if I cannot access Skeleton's internals? -->
+	<!-- //! FIX how to type openRegisters = details.value if I cannot access Skeleton's internals? -->
 	<Accordion
 		multiple
 		class="h-full gap-0 overflow-y-auto"

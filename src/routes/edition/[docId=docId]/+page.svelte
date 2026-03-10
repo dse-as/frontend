@@ -23,7 +23,7 @@
 			let params = page.url.searchParams;
 			params.set('mode', 'LF');
 			dflf = 'LF';
-			//! @sebi: the following redirect works but TS seems not to understand the `${}?${}` syntax...
+			//! FIX the following redirect works but TS seems not to understand the `${}?${}` syntax...
 			goto(resolve(`${page.url.pathname}?${params.toString()}`));
 		}
 	});

@@ -16,7 +16,7 @@
 >
 	<TextFluid {docId} />
 
-	<!-- //! @sebi how to type visibleTab = details.value if I cannot access Skeleton's internals? -->
+	<!-- //! FIX: how to type visibleTab = details.value if I cannot access Skeleton's internals? -->
 	<Tabs
 		class="h-full overflow-hidden pl-5"
 		value={visibleTab}
