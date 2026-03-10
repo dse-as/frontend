@@ -1,11 +1,8 @@
 <script lang="ts">
 	import register from '$lib/data/register.json';
 
-	//! How to use the types? (@sebi)
 	import { type TRegister } from '$lib/types/register/TRegister';
-
-	//! How to make this nicer? (@sebi)
-	let { register: reg } = register;
+	let { register: reg } = register satisfies TRegister;
 
 	let sortEventsBy = $state('name'); // 'name' or 'date'
 
