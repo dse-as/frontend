@@ -4,17 +4,11 @@
 @import '@skeletonlabs/skeleton-svelte';
 @import '@skeletonlabs/skeleton/themes/cerberus';
 
-/* //! @sebi: why does this not work */
-
-:global(p) {
-	/* for testing */
-	@apply text-green-300;
-}
-:global([data-dom='global_comment']),
-:global([data-dom='annotation']),
-:global([data-textflow='fluid']),
-:global([data-textflow='paged']) {
-	:global(p) {
+[data-dom='global_comment'],
+[data-dom='annotation'],
+[data-textflow='fluid'],
+[data-textflow='paged'] {
+	p {
 		@apply my-4;
 	}
 }
