@@ -11,6 +11,9 @@ importers:
       '@fortawesome/fontawesome-free':
         specifier: ^7.2.0
         version: 7.2.0
+      openseadragon:
+        specifier: ^6.0.0
+        version: 6.0.0
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.1
@@ -1269,6 +1272,9 @@ packages:
 
   obug@2.1.1:
     resolution: {integrity: sha512-uTqF9MuPraAQ+IsnPf366RG4cP9RtUi7MLO1N3KEc+wb0a6yKpeL0lmk2IB1jY5KHPAlTc6T/JRdC/YqxHNwkQ==}
+
+  openseadragon@6.0.0:
+    resolution: {integrity: sha512-8B3HbYdW1EEoZQvp3BAdD42o+I6VznKMEG6BvzIFMqADPuKjmsWTaUgWJ23YgxG1sxdpvIgF/OV3oSNiAnO4lA==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -2828,6 +2834,8 @@ snapshots:
   natural-compare@1.4.0: {}
 
   obug@2.1.1: {}
+
+  openseadragon@6.0.0: {}
 
   optionator@0.9.4:
     dependencies:
