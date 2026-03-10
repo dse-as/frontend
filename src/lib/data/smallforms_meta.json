@@ -63,7 +63,10 @@
 			},
 			"manuscript": {
 				"hasiiif": true,
-				"url_iiif": "https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json"
+				"iiif_urls": [
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif"
+				]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
