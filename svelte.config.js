@@ -5,7 +5,7 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	preprocess: [
 		mdsvex({
-			extensions: ['.svx', '.md'],
+			extensions: ['.svx'],
 			smartypants: {
 				quotes: true,
 				ellipses: true,
@@ -20,7 +20,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter()
 	},
-	extensions: ['.svelte', '.svx', '.md']
+	extensions: ['.svelte', '.svx']
 };
 
 export default config;
