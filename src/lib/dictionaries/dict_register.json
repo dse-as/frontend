@@ -1,19 +1,15 @@
 {
 	"meta": {},
 	"dict_register": {
-		"people": { "singular": "person", "name_de": "Personen", "needed": "yes" },
-		"places": { "singular": "place", "name_de": "Orte", "needed": "yes" },
-		"events": { "singular": "event", "name_de": "Ereignisse", "needed": "yes" },
-		"travels": {
-			"singular": "travel",
-			"name_de": "Reisen",
-			"needed": "NOT SURE WHETHER WE NEED THIS!"
-		},
-		"orgs": { "singular": "org", "name_de": "Organisationen", "needed": "yes" },
-		"smallforms": { "singular": "smallform", "name_de": "Kleine Formen", "needed": "yes" },
-		"longforms": { "singular": "longform", "name_de": "Lange Formen", "needed": "yes" },
-		"letters": { "singular": "letter", "name_de": "Briefe", "needed": "yes" },
-		"bibls": { "singular": "bibl", "name_de": "Bibliografie", "needed": "yes" },
-		"keywords": { "singular": "keyword", "name_de": "Schlagwörter", "needed": "yes" }
+		"people": { "key_singular": "person", "label_plural": "Personen" },
+		"places": { "key_singular": "place", "label_plural": "Orte" },
+		"events": { "key_singular": "event", "label_plural": "Ereignisse" },
+		"travels": { "key_singular": "travel", "label_plural": "Reisen" },
+		"orgs": { "key_singular": "org", "label_plural": "Organisationen" },
+		"smallforms": { "key_singular": "smallform", "label_plural": "Kleine Formen" },
+		"longforms": { "key_singular": "longform", "label_plural": "Lange Formen" },
+		"letters": { "key_singular": "letter", "label_plural": "Briefe" },
+		"bibls": { "key_singular": "bibl", "label_plural": "Bibliografie" },
+		"keywords": { "key_singular": "keyword", "label_plural": "Schlagwörter" }
 	}
 }

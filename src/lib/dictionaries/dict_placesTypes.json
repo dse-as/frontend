@@ -1,27 +1,27 @@
 {
 	"meta": {},
 	"dict_placestypes": {
-		"placestype_001": { "de_plural": "Siedlungen", "de_singular": "Siedlung" },
-		"placestype_002": { "de_plural": "Ruinen/Ausgrabungen", "de_singular": "Ruine/Ausgrabung" },
-		"placestype_003": { "de_plural": "Berge", "de_singular": "Berg" },
-		"placestype_004": { "de_plural": "Länder", "de_singular": "Land" },
-		"placestype_005": { "de_plural": "Regionen", "de_singular": "Region" },
-		"placestype_006": { "de_plural": "Gewässer", "de_singular": "Gewässer" },
-		"placestype_007": { "de_plural": "Gebirge", "de_singular": "Gebirge" },
-		"placestype_008": { "de_plural": "Militärische Anlagen", "de_singular": "Militärische Anlage" },
-		"placestype_009": { "de_plural": "Wüsten", "de_singular": "Wüste" },
-		"placestype_010": { "de_plural": "Pärke", "de_singular": "Park" },
-		"placestype_011": { "de_plural": "Monumente", "de_singular": "Monument" },
+		"placestype_001": { "label_plural": "Siedlungen", "label_singular": "Siedlung" },
+		"placestype_002": { "label_plural": "Ruinen/Ausgrabungen", "label_singular": "Ruine/Ausgrabung" },
+		"placestype_003": { "label_plural": "Berge", "label_singular": "Berg" },
+		"placestype_004": { "label_plural": "Länder", "label_singular": "Land" },
+		"placestype_005": { "label_plural": "Regionen", "label_singular": "Region" },
+		"placestype_006": { "label_plural": "Gewässer", "label_singular": "Gewässer" },
+		"placestype_007": { "label_plural": "Gebirge", "label_singular": "Gebirge" },
+		"placestype_008": { "label_plural": "Militärische Anlagen", "label_singular": "Militärische Anlage" },
+		"placestype_009": { "label_plural": "Wüsten", "label_singular": "Wüste" },
+		"placestype_010": { "label_plural": "Pärke", "label_singular": "Park" },
+		"placestype_011": { "label_plural": "Monumente", "label_singular": "Monument" },
 		"placestype_012": {
-			"de_plural": "Bundesstaaten oder Kantone",
-			"de_singular": "Bundesstaat oder Kanton"
+			"label_plural": "Bundesstaaten oder Kantone",
+			"label_singular": "Bundesstaat oder Kanton"
 		},
-		"placestype_013": { "de_plural": "Gebäude", "de_singular": "Gebäude" },
-		"placestype_014": { "de_plural": "Pässe", "de_singular": "Pass" },
-		"placestype_015": { "de_plural": "Höhlen", "de_singular": "Höhle" },
-		"placestype_016": { "de_plural": "Inseln", "de_singular": "Insel" },
-		"placestype_017": { "de_plural": "Strassen", "de_singular": "Strasse" },
-		"placestype_018": { "de_plural": "Staudämme", "de_singular": "Staudamm" },
-		"placestype_019": { "de_plural": "Gletscher", "de_singular": "Gletscher" }
+		"placestype_013": { "label_plural": "Gebäude", "label_singular": "Gebäude" },
+		"placestype_014": { "label_plural": "Pässe", "label_singular": "Pass" },
+		"placestype_015": { "label_plural": "Höhlen", "label_singular": "Höhle" },
+		"placestype_016": { "label_plural": "Inseln", "label_singular": "Insel" },
+		"placestype_017": { "label_plural": "Strassen", "label_singular": "Strasse" },
+		"placestype_018": { "label_plural": "Staudämme", "label_singular": "Staudamm" },
+		"placestype_019": { "label_plural": "Gletscher", "label_singular": "Gletscher" }
 	}
 }

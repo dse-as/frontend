@@ -10,11 +10,8 @@ export type TSmallforms_text = {
 	smallforms_text: {
 		// document
 		[key in TSmallformsKeys]: { 
-			// unit
-			[key: string]: { 
 				name: string;
 				pathHTML: string;
-			};
 		};
 	};
 };

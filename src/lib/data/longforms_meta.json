@@ -9,10 +9,6 @@
         "longform_0000": {
 			"slug": "longform_0000",
 			"docType": "Test",
-			"units": {
-				"unitIds": ["text"],
-				"unitLabels": ["Text"]
-			},
 			"metadata": {
 				"label": "testlabel",
 				"editor_workflow": "foo",
@@ -40,7 +36,6 @@
 			},
 			"entities": {},
 			"numPages": null,
-			"pageLimits": {"text":[null, null]},
 			"edition": {
 				"fullyEdited": false
 			}

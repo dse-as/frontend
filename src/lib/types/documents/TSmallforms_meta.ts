@@ -32,10 +32,6 @@ export type TSmallforms_meta = {
 		[key in TSmallformsKeys]: {
 			slug: string; //! discuss whether this is identical to key
 			docType: TdocType;
-			units: {
-				unitIds: string[];
-				unitLabels: string[];
-			};
 			metadata: {
 				authors: string[];
 				pubDate: string;
@@ -87,9 +83,6 @@ export type TSmallforms_meta = {
 				url_iiif: string;
 			};
 			numPages: number | null;
-			pageLimits: {
-				[key: string]: [number | null, number | null]; //! for each unit (could be made more restrict to avoid invalid unitIds, but I leave it loose for now)
-			};
 			edition: {
 				fullyEdited: boolean;
 			};

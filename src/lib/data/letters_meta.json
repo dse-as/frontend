@@ -8,10 +8,6 @@
 	"letters_meta": {
 		"letters_0001": {
 			"docType": "Test",
-			"units": {
-				"unitIds": ["text"],
-				"unitLabels": ["Text"]
-			},
 			"metadata": {
 				"label": "testlabel",
 				"editor_workflow": "foo",
@@ -39,17 +35,12 @@
 			},
 			"entities": {},
 			"numPages": null,
-			"pageLimits": { "text": [null, null] },
 			"edition": {
 				"fullyEdited": false
 			}
 		},
 		"letters_0004": {
 			"docType": "Test4",
-			"units": {
-				"unitIds": ["text"],
-				"unitLabels": ["Text"]
-			},
 			"metadata": {
 				"label": "testlabel 4",
 				"editor_workflow": "foo 4",
@@ -77,7 +68,6 @@
 			},
 			"entities": {},
 			"numPages": null,
-			"pageLimits": { "text": [null, null] },
 			"edition": {
 				"fullyEdited": false
 			}

@@ -14,6 +14,7 @@ import lgf_annot from '$lib/data/longforms_annot.json';
 import let_annot from '$lib/data/letters_annot.json';
 
 // Unify over smallforms, longforms, annotations
+//! TODO add types
 // let meta:(TSmallforms_meta | TLongforms_meta | TLetters_meta) = {
 let meta = {
     ...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
@@ -29,7 +30,6 @@ let annot = {
 // Modify protoHTML
 //! todo (as little modifications as possible!)
 
-//! @sebi: what is wrong with the textstufen type? If I replace it with e.g. label (which is just a sibling key) everything works...
 // Object.keys(meta).forEach((key) =>{
 //     meta[key].metadata.textstufen = meta[key].metadata.textstufen ? meta[meta[key].metadata.textstufen].metadata.title_full : '';
 // })

@@ -36,7 +36,7 @@
 						class="flex items-center justify-between border-t-2 border-surface-200-800 hover:bg-transparent"
 					>
 						<span>
-							{dictReg[regType].name_de}
+							{dictReg[regType].label_plural}
 							<span class="font-normal">({meta[docId]?.entities[regType]?.length})</span>
 						</span>
 						<Accordion.ItemIndicator class="group">

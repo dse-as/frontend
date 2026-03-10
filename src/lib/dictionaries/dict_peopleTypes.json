@@ -1,40 +1,40 @@
 {
 	"meta": {},
 	"dict_peopletypes": {
-		"peopletype_001": { "de_plural": "Gottheiten", "de_singular": "Gottheit" },
-		"peopletype_002": { "de_plural": "Bergsteiger:innen", "de_singular": "Bergsteiger:in" },
-		"peopletype_003": { "de_plural": "Archäolog:innen", "de_singular": "Archäolog:in" },
-		"peopletype_004": { "de_plural": "Musiker:innen", "de_singular": "Musiker:in" },
-		"peopletype_005": { "de_plural": "Regisseur:innen", "de_singular": "Regisseur:in" },
-		"peopletype_006": { "de_plural": "Sagengestalten", "de_singular": "Sagengestalt" },
-		"peopletype_007": { "de_plural": "Verleger:innen", "de_singular": "Verleger:in" },
+		"peopletype_001": { "label_plural": "Gottheiten", "label_singular": "Gottheit" },
+		"peopletype_002": { "label_plural": "Bergsteiger:innen", "label_singular": "Bergsteiger:in" },
+		"peopletype_003": { "label_plural": "Archäolog:innen", "label_singular": "Archäolog:in" },
+		"peopletype_004": { "label_plural": "Musiker:innen", "label_singular": "Musiker:in" },
+		"peopletype_005": { "label_plural": "Regisseur:innen", "label_singular": "Regisseur:in" },
+		"peopletype_006": { "label_plural": "Sagengestalten", "label_singular": "Sagengestalt" },
+		"peopletype_007": { "label_plural": "Verleger:innen", "label_singular": "Verleger:in" },
 		"peopletype_008": {
-			"de_plural": "rassistische Bezeichnungen",
-			"de_singular": "rassistische Bezeichnung"
+			"label_plural": "rassistische Bezeichnungen",
+			"label_singular": "rassistische Bezeichnung"
 		},
-		"peopletype_009": { "de_plural": "Biblische Figuren", "de_singular": "Biblische Figur" },
+		"peopletype_009": { "label_plural": "Biblische Figuren", "label_singular": "Biblische Figur" },
 		"peopletype_010": {
-			"de_plural": "Scharzenbach-Forscher:innen",
-			"de_singular": "Scharzenbach-Forscher:in"
+			"label_plural": "Scharzenbach-Forscher:innen",
+			"label_singular": "Scharzenbach-Forscher:in"
 		},
-		"peopletype_011": { "de_plural": "Fotograf:innen", "de_singular": "Fotograf:in" },
-		"peopletype_012": { "de_plural": "Künstler:innen", "de_singular": "Künstler:in" },
-		"peopletype_013": { "de_plural": "Schauspieler:innen", "de_singular": "Schauspieler:in" },
-		"peopletype_014": { "de_plural": "Autor:innen", "de_singular": "Autor:in" },
+		"peopletype_011": { "label_plural": "Fotograf:innen", "label_singular": "Fotograf:in" },
+		"peopletype_012": { "label_plural": "Künstler:innen", "label_singular": "Künstler:in" },
+		"peopletype_013": { "label_plural": "Schauspieler:innen", "label_singular": "Schauspieler:in" },
+		"peopletype_014": { "label_plural": "Autor:innen", "label_singular": "Autor:in" },
 		"peopletype_015": {
-			"de_plural": "Mitarbeiter:in Mediumen",
-			"de_singular": "Mitarbeiter:in Medium"
+			"label_plural": "Mitarbeiter:in Mediumen",
+			"label_singular": "Mitarbeiter:in Medium"
 		},
 		"peopletype_016": {
-			"de_plural": "Historische Person (ohne persönliche Bekanntschaft)en",
-			"de_singular": "Historische Person (ohne persönliche Bekanntschaft)"
+			"label_plural": "Historische Person (ohne persönliche Bekanntschaft)en",
+			"label_singular": "Historische Person (ohne persönliche Bekanntschaft)"
 		},
-		"peopletype_017": { "de_plural": "Bekannte:ren", "de_singular": "Bekannte:r" },
-		"peopletype_018": { "de_plural": "Redakteur:innen", "de_singular": "Redakteur:in" },
-		"peopletype_019": { "de_plural": "Freund:innen", "de_singular": "Freund:in" },
+		"peopletype_017": { "label_plural": "Bekannte:ren", "label_singular": "Bekannte:r" },
+		"peopletype_018": { "label_plural": "Redakteur:innen", "label_singular": "Redakteur:in" },
+		"peopletype_019": { "label_plural": "Freund:innen", "label_singular": "Freund:in" },
 		"peopletype_020": {
-			"de_plural": "Familienangehörige:r'en",
-			"de_singular": "Familienangehörige:r'"
+			"label_plural": "Familienangehörige:r'en",
+			"label_singular": "Familienangehörige:r'"
 		}
 	}
 }

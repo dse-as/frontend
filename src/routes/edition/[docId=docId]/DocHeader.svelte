@@ -40,7 +40,7 @@
 							<a
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
-								data-entitytype={dictReg[regType].singular}
+								data-entitytype={dictReg[regType].key_singular}
 								href={`/edition/register#${regKey}`}
 								target="_blank"
 								rel="noopener noreferrer"
