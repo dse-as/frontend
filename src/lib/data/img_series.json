@@ -1,0 +1,12 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"img_series": {
+		"fish": { "name": "Fish", "filenames": ["img_0001", "img_0032", "img_0099"] },
+		"buildings": { "name": "Buildings", "filenames": ["img_0004", "img_0012", "img_0013", "img_0444"] }
+	}
+}
