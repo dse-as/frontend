@@ -20,11 +20,10 @@
 			dflf = 'DF';
 		} else {
 			// fallback (default)
-			let params = page.url.searchParams;
-			params.set('mode', 'LF');
+			const url = new URL(page.url);
+			url.searchParams.set('mode', 'LF');
 			dflf = 'LF';
-			//! FIX the following redirect works but TS seems not to understand the `${}?${}` syntax...
-			goto(resolve(`${page.url.pathname}?${params.toString()}`));
+			goto(url);
 		}
 	});
 </script>
