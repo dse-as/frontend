@@ -1,7 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
+import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	preprocess: [
+		mdsvex({
+			extensions: ['.svx'],
+			smartypants: {
+				quotes: true,
+				ellipses: true,
+				backticks: true,
+				dashes: 'oldschool'
+			}
+		})
+	],
 	kit: {
 		prerender: {
 			handleHttpError: 'warn', //consider removing for production
