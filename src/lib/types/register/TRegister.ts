@@ -17,7 +17,41 @@ export type TLongformsTypes = string; //! restrict to subet later
 export type TLettersTypes = string; //! restrict to subet later
 export type TBiblsTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
+// Entities
+export type TEntityTypes =
+	| 'people'
+	| 'places'
+	| 'events'
+	| 'orgs'
+	| 'smallforms'
+	| 'longforms'
+	| 'letters'
+	| 'bibl'
+	| 'keywords';
 
+export type TEntityNames =
+	| 'Personen'
+	| 'Orte'
+	| 'Events'
+	| 'Organisationen'
+	| 'Kleine Formen'
+	| 'Lange Formen'
+	| 'Briefe'
+	| 'Bibliografie'
+	| 'Stichworte';
+
+// Types for specific entities
+export type TPeopleTypes = string; //! restrict to subset later
+export type TPlacesTypes = string; //! restrict to subset later
+export type TEventsTypes = string; //! restrict to subset later
+export type TorgsTypes = string; //! restrict to subset later
+export type TSmallformsTypes = 'article' | 'feuilleton';
+export type TLongformsTypes = string; //! restrict to subset later
+export type TLettersTypes = string; //! restrict to subset later
+export type TBiblsTypes = string; //! restrict to subset later
+export type TKeywordsTypes = string; //! restrict to subset later
+
+// Register
 export type TRegister = {
 	meta: {
 		generated_by: string;
@@ -36,7 +70,7 @@ export type TRegister = {
 				dateBirth: string;
 				dateDeath: string;
 				type: TPeopleTypes;
-				organisationId: TOrganisationsKeys;
+				orgId: TOrgsKeys;
 				note: string;
 			};
 		};
@@ -60,21 +94,21 @@ export type TRegister = {
 				note: string;
 			};
 		};
-		organisations: {
-			[key in TOrganisationsKeys]: {
+		orgs: {
+			[key in TOrgsKeys]: {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
-				type: TOrganisationsTypes;
+				type: TorgsTypes;
 				note: string;
 			};
 		};
-		works: {
-			[key in TWorksKeys]: {
+		smallforms: {
+			[key in TSmallformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
-				type: TWorksTypes;
+				type: TSmallformsTypes;
 				gndNumber?: string; // optional
 			};
 		};

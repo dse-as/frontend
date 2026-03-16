@@ -1,0 +1,15 @@
+{
+	"meta": {},
+	"dict_register": {
+		"people": { "key_singular": "person", "label_plural": "Personen" },
+		"places": { "key_singular": "place", "label_plural": "Orte" },
+		"events": { "key_singular": "event", "label_plural": "Ereignisse" },
+		"travels": { "key_singular": "travel", "label_plural": "Reisen" },
+		"orgs": { "key_singular": "org", "label_plural": "Organisationen" },
+		"smallforms": { "key_singular": "smallform", "label_plural": "Kleine Formen" },
+		"longforms": { "key_singular": "longform", "label_plural": "Lange Formen" },
+		"letters": { "key_singular": "letter", "label_plural": "Briefe" },
+		"bibls": { "key_singular": "bibl", "label_plural": "Bibliografie" },
+		"keywords": { "key_singular": "keyword", "label_plural": "Schlagwörter" }
+	}
+}

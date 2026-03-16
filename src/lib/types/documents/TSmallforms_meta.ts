@@ -1,4 +1,12 @@
-import { type TSmallformsKeys } from "./TSmallformsKeys";
+import { type TEventsKeys } from '../register/TEventsKeys';
+import { type TOrgsKeys } from '../register/TOrgsKeys';
+import { type TPeopleKeys } from '../register/TPeopleKeys';
+import { type TPlacesKeys } from '../register/TPlacesKeys';
+import { type TSmallformsKeys } from './TSmallformsKeys';
+import { type TLongformsKeys } from './TLongformsKeys';
+import { type TLettersKeys } from './TLettersKeys';
+import { type TBiblKeys } from '../register/TBiblsKeys';
+import { type TKeywordsKeys } from '../register/TKeywordsKeys';
 
 export type TdocType =
 	| 'Typoskript'
@@ -24,10 +32,6 @@ export type TSmallforms_meta = {
 		[key in TSmallformsKeys]: {
 			slug: string; //! discuss whether this is identical to key
 			docType: TdocType;
-			units: {
-				unitIds: string[];
-				unitLabels: string[];
-			};
 			metadata: {
 				authors: string[];
 				pubDate: string;
@@ -36,7 +40,7 @@ export type TSmallforms_meta = {
 				title_short: string;
 				label: string;
 				editor_workflow: 'ez_ttf_of';
-				year: 1925;
+				year: string;
 				pubPosthumOnly: boolean;
 				pubPlace: string;
 				signature: string;
@@ -44,42 +48,43 @@ export type TSmallforms_meta = {
 				textstufen: string;
 				series: string;
 				comment: string;
-				keywords: [
-					people: string[],
-					places: string[],
-					events: string[],
-					orgs: string[],
-					smallforms: string[],
-					longforms: string[],
-					letters: string[],
-					keywords: string[]
-				];
-				maximum: 'keine';
-				travel: '';
-				archiveCollation: '';
-				pubSecondary: '';
-				urlOnlineResource: '';
-				note: '';
+				keywords: {
+					people?: TPeopleKeys[];
+					places?: TPlacesKeys[];
+					events?: TEventsKeys[];
+					orgs?: TOrgsKeys[];
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
+					bibl?: TBiblKeys[];
+					keywords?: TKeywordsKeys[];
+				};
+				maximum: string; //! what is this?
+				travel: string; //! what is this?
+				archiveCollation: string;
+				pubSecondary: string;
+				urlOnlineResource: string;
+				note: string;
+			};
+			entities: {
+				//! unsure if I should drop this, since fully redundant with register.json
+				people?: TPeopleKeys[];
+				places?: TPlacesKeys[];
+				events?: TEventsKeys[];
+				orgs?: TOrgsKeys[];
+				smallforms?: TSmallformsKeys[];
+				longforms?: TLongformsKeys[];
+				letters?: TLettersKeys[];
+				bibl?: TBiblKeys[];
+				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
 				hasiiif: boolean;
 				iiif_urls: string[];
 			};
 			numPages: number | null;
-			pageLimits: {
-				[key: string]: [number|null, number|null]; //! for each unit (could be made more restrict to avoid invalid unitIds, but I leave it loose for now)
-			};
 			edition: {
 				fullyEdited: boolean;
-				entities?: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					people?: string[];
-					places?: string[];
-					travels?: string[];
-					organisations?: string[];
-					works?: string[];
-					keywords?: string[];
-				};
 			};
 		};
 	};

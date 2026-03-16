@@ -1,0 +1,1 @@
+export type TBiblsKeys = 'UM3L78NJ' | 'VKTJ5RJ7' | '6FW9GPED' | '5JXX7VPC';

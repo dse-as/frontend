@@ -1,0 +1,40 @@
+{
+	"meta": {},
+	"dict_peopletypes": {
+		"peopletype_001": { "label_plural": "Gottheiten", "label_singular": "Gottheit" },
+		"peopletype_002": { "label_plural": "Bergsteiger:innen", "label_singular": "Bergsteiger:in" },
+		"peopletype_003": { "label_plural": "Archäolog:innen", "label_singular": "Archäolog:in" },
+		"peopletype_004": { "label_plural": "Musiker:innen", "label_singular": "Musiker:in" },
+		"peopletype_005": { "label_plural": "Regisseur:innen", "label_singular": "Regisseur:in" },
+		"peopletype_006": { "label_plural": "Sagengestalten", "label_singular": "Sagengestalt" },
+		"peopletype_007": { "label_plural": "Verleger:innen", "label_singular": "Verleger:in" },
+		"peopletype_008": {
+			"label_plural": "rassistische Bezeichnungen",
+			"label_singular": "rassistische Bezeichnung"
+		},
+		"peopletype_009": { "label_plural": "Biblische Figuren", "label_singular": "Biblische Figur" },
+		"peopletype_010": {
+			"label_plural": "Scharzenbach-Forscher:innen",
+			"label_singular": "Scharzenbach-Forscher:in"
+		},
+		"peopletype_011": { "label_plural": "Fotograf:innen", "label_singular": "Fotograf:in" },
+		"peopletype_012": { "label_plural": "Künstler:innen", "label_singular": "Künstler:in" },
+		"peopletype_013": { "label_plural": "Schauspieler:innen", "label_singular": "Schauspieler:in" },
+		"peopletype_014": { "label_plural": "Autor:innen", "label_singular": "Autor:in" },
+		"peopletype_015": {
+			"label_plural": "Mitarbeiter:in Mediumen",
+			"label_singular": "Mitarbeiter:in Medium"
+		},
+		"peopletype_016": {
+			"label_plural": "Historische Person (ohne persönliche Bekanntschaft)en",
+			"label_singular": "Historische Person (ohne persönliche Bekanntschaft)"
+		},
+		"peopletype_017": { "label_plural": "Bekannte:ren", "label_singular": "Bekannte:r" },
+		"peopletype_018": { "label_plural": "Redakteur:innen", "label_singular": "Redakteur:in" },
+		"peopletype_019": { "label_plural": "Freund:innen", "label_singular": "Freund:in" },
+		"peopletype_020": {
+			"label_plural": "Familienangehörige:r'en",
+			"label_singular": "Familienangehörige:r'"
+		}
+	}
+}

@@ -1,0 +1,1 @@
+export let selectedNote = $state({id:""});

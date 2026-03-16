@@ -4,3 +4,12 @@
 @import '@skeletonlabs/skeleton-svelte';
 
 @import '../../theme_dseas';
+
+[data-dom='global_comment'],
+[data-dom='annotation'],
+[data-textflow='fluid'],
+[data-textflow='paged'] {
+	p {
+		@apply my-4;
+	}
+}
