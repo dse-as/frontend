@@ -22,12 +22,11 @@
 </script>
 
 <div class="h-full">
-	<!-- //! FIX how to type openRegisters = details.value if I cannot access Skeleton's internals? -->
 	<Accordion
 		multiple
 		class="h-full gap-0 overflow-y-auto"
 		value={openRegisters}
-		onValueChange={(details) => (openRegisters = details.value)}
+		onValueChange={(details) => (openRegisters = details.value as TEntityTypes[])}
 	>
 		{#each regTypes as regType (regType)}
 			<Accordion.Item value={regType} class="gap-0">

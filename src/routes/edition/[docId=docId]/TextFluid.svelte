@@ -20,17 +20,6 @@
 		}
 	})();
 
-	//! FIX: I'm using event delegation here, since it would be bad practice
-	// to add listeners inside each of the `lib/data/document.svelte` files.
-	// Of course I tried to pass them via a :use function on the
-	// `[data-dom=containerMaintext]` element, but this did not work.
-	// Do you know of any other way to choose addEventListener() instead of event delegation?
-	// Otherwise I don't know how I would handle e.g. hovers.
-
-	//! FIX: Also, it may be good practice to programmatically add `tabindex=0` to each of
-	// the markend-spans for accessibility reasons. Any idea how to achieve this, agian without
-	// going to every single .svelte file?
-
 	function handleDocumentClick(ev) {
 		if (ev.target.closest('[data-type="mark"]')) {
 			handleMarkClick(ev);
