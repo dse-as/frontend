@@ -15,3 +15,45 @@
 </div>
 
 {@render children()}
+
+<footer
+	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-500"
+>
+	<p class="mb-5">Diese Webseite befindet sich in einer Beta-Version</p>
+	<p>
+		<a
+			class=" underline"
+			href="https://annemarie-schwarzenbach.ch/"
+			target="blank"
+			rel="noopener noreferrer">annemarie-schwarzenbach.ch/</a
+		>
+	</p>
+
+	<p>
+		Technischer Kontakt:
+		<a
+			class=" underline"
+			href="mailto:tech@annemarie-schwarzenbach.ch"
+			target="blank"
+			rel="noopener noreferrer">tech@annemarie-schwarzenbach.ch/</a
+		>
+	</p>
+	<div class="mt-10 flex w-full justify-around gap-10">
+		<a href="https://data.snf.ch/grants/grant/10000500">
+			<img class="h-16 object-contain" src="/logos/logo-snf.png" />
+		</a>
+
+		<a href="https://www.ds.uzh.ch">
+			<img class="h-16 object-contain" src="/logos/logo-uzh.png" />
+		</a>
+		<a href="https://www.unige.ch/lettres/alman/">
+			<img class="h-16 object-contain" src="/logos/logo-unige.gif" />
+		</a>
+		<a href="https://dh.unibe.ch">
+			<img class="h-16 object-contain" width="100px;" src="/logos/logo-uzh.png" />
+		</a>
+		<a href="https://dsl.unibe.ch">
+			<img class="h-16 object-contain" width="100px;" src="/logos/logo-dsl.png" />
+		</a>
+	</div>
+</footer>
