@@ -36,37 +36,20 @@
 	</p>
 	<div class="mt-10 flex w-full justify-around gap-10">
 		<a href="https://data.snf.ch/grants/grant/10000500">
-			<img
-				class="h-16 object-contain"
-				src="https://upload.wikimedia.org/wikipedia/commons/7/7d/SNF_logo_Swiss_National_Science_Foundation.png"
-			/>
+			<img class="h-16 object-contain" src="/logos/logo-snf.png" />
 		</a>
 
 		<a href="https://www.ds.uzh.ch">
-			<img
-				class="h-16 object-contain"
-				src="https://www.cd.uzh.ch/dam/jcr:c2f7701e-f4b6-4d91-ab93-85853a133f29/uzh-logo-black.png"
-			/>
+			<img class="h-16 object-contain" src="/logos/logo-uzh.png" />
 		</a>
-		<a href="https://www.unige.ch/lettres/alman/index.php?cID=658">
-			<img
-				class="h-16 object-contain"
-				src="http://www.unige.ch/presse/charte/logos_jpg/logo_nb70.jpg"
-			/>
+		<a href="https://www.unige.ch/lettres/alman/">
+			<img class="h-16 object-contain" src="/logos/logo-unige.gif" />
 		</a>
 		<a href="https://dh.unibe.ch">
-			<img
-				class="h-16 object-contain"
-				width="100px;"
-				src="https://www.jobs.apps.be.ch/directlink/1005086002/assets/images/logo_unibern.png"
-			/>
+			<img class="h-16 object-contain" width="100px;" src="/logos/logo-uzh.png" />
 		</a>
 		<a href="https://dsl.unibe.ch">
-			<img
-				class="h-16 object-contain"
-				width="100px;"
-				src="https://avatars.githubusercontent.com/u/130562494?s=200&v=4"
-			/>
+			<img class="h-16 object-contain" width="100px;" src="/logos/logo-dsl.png" />
 		</a>
 	</div>
 </footer>
