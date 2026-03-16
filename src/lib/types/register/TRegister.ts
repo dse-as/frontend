@@ -11,7 +11,7 @@ import type { TBiblsKeys } from './TBiblsKeys';
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
 export type TEventsTypes = string; //! restrict to subet later
-export type TorgsTypes = string; //! restrict to subet later
+export type TOrgsTypes = string; //! restrict to subet later
 export type TSmallformsTypes = 'article' | 'feuilleton';
 export type TLongformsTypes = string; //! restrict to subet later
 export type TLettersTypes = string; //! restrict to subet later
@@ -44,7 +44,7 @@ export type TEntityNames =
 export type TPeopleTypes = string; //! restrict to subset later
 export type TPlacesTypes = string; //! restrict to subset later
 export type TEventsTypes = string; //! restrict to subset later
-export type TorgsTypes = string; //! restrict to subset later
+export type TOrgsTypes = string; //! restrict to subset later
 export type TSmallformsTypes = 'article' | 'feuilleton';
 export type TLongformsTypes = string; //! restrict to subset later
 export type TLettersTypes = string; //! restrict to subset later
@@ -99,7 +99,7 @@ export type TRegister = {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
-				type: TorgsTypes;
+				type: TOrgsTypes;
 				note: string;
 			};
 		};

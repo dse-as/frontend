@@ -37,7 +37,7 @@
 		}
 		// Filter and sort data
 		return Object.entries(data)
-			.map(([key, entry]) => ({ key, ...entry })) // Include the key in each value
+			.map(([key, entry]) => ({ key, ...(entry as Object) })) // Include the key in each value
 			.filter((entry) => (filterValue ? entry.type === filterValue : true))
 			.sort((a, b) => sortFunction(a, b));
 	}
@@ -57,11 +57,11 @@
 					<span class="italic">{item.nameVariants.join(', ')}</span>
 				</p>
 			{/if}
-			{#if item.organisationId}
+			{#if item.orgId}
 				<p>
-					<strong>Affiliation:</strong>
-					<a href={`#${item.organisationId}`}>
-						{`${reg.organisations[item.organisationId]?.name}`}
+					<strong>Affiliationen:</strong>
+					<a href={`#${item.orgId}`}>
+						{`${reg.orgs[item.orgId]?.name}`}
 					</a>
 				</p>
 			{/if}
@@ -74,7 +74,7 @@
 				>)
 			{/if}
 		</p>
-	{:else if type === 'places' || type === 'organisations' || type === 'keywords'}
+	{:else if type === 'places' || type === 'orgs' || type === 'keywords'}
 		<a href={`#${item.key}`}>
 			<h3 id={item.key} class="h3">{item.name}</h3>
 		</a>
@@ -166,22 +166,22 @@
 	</div>
 {/snippet}
 
-<div class="grid h-screen grid-cols-[1fr_5fr] gap-0">
+<div class="grid h-screen grid-cols-[2fr_5fr] gap-0">
 	<!-- Navigation -->
 	<nav class="bg-surface-950-50 text-surface-50-950">
 		<h2 class="h2"><a href="#people">Personen</a></h2>
 		<h2 class="h2"><a href="#places">Orte</a></h2>
 		<h2 class="h2"><a href="#events">Events</a></h2>
-		<h2 class="h2"><a href="#organisations">Organisationen</a></h2>
-		<h2 class="h2"><a href="#works">Werke</a></h2>
+		<h2 class="h2"><a href="#orgs">Organisationen</a></h2>
+		<h2 class="h2"><a href="#bibls">Bibliographie</a></h2>
 		<h2 class="h2"><a href="#keywords">Schlagwörter</a></h2>
 	</nav>
 	<div class="h-full overflow-scroll">
 		{@render registerGroup('people', 'Personen', reg.people)}
 		{@render registerGroup('places', 'Orte', reg.places)}
 		{@render registerGroup('events', 'Events', reg.events)}
-		{@render registerGroup('organisations', 'Organisationen', reg.organisations)}
-		{@render registerGroup('works', 'Werke', reg.works)}
+		{@render registerGroup('orgs', 'Organisationen', reg.orgs)}
+		{@render registerGroup('bibls', 'Bibliographie', reg.bibls)}
 		{@render registerGroup('keywords', 'Schlagwörter', reg.keywords)}
 	</div>
 
