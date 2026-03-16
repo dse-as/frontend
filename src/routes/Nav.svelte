@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 
 	import Lightswitch from './Lightswitch.svelte';
-	import { resolve } from 'path';
+	import { resolve } from '$app/paths';
 
 	let openStateMenu = $state(false);
 
