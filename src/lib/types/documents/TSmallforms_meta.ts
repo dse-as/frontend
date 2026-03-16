@@ -44,7 +44,16 @@ export type TSmallforms_meta = {
 				textstufen: string;
 				series: string;
 				comment: string;
-				keywords: '';
+				keywords: [
+					people: string[],
+					places: string[],
+					events: string[],
+					orgs: string[],
+					smallforms: string[],
+					longforms: string[],
+					letters: string[],
+					keywords: string[]
+				];
 				maximum: 'keine';
 				travel: '';
 				archiveCollation: '';
@@ -54,7 +63,7 @@ export type TSmallforms_meta = {
 			};
 			manuscript: {
 				hasiiif: boolean;
-				url_iiif: string;
+				iiif_urls: string[];
 			};
 			numPages: number | null;
 			pageLimits: {
