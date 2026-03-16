@@ -1,0 +1,13 @@
+{
+	"meta": {
+		"generated_by": "workflow.xsl",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"doc_sequences": {
+		"letters": { "name": "Briefe", "docs": ["letter_0001", "letter_0032", "letter_0099"] },
+		"letters-mann-klaus-erika": { "name": "Briefe Klaus und Erika Mann", "docs": ["letter_0005", "letter_0006", "letter_0007", "letter_0800"] },
+		"random": { "name": "Random Sequence", "docs": ["smallform_0022", "smallform_0044", "smallform_0066", "smallform_0088"] }
+	}
+}
