@@ -6,7 +6,17 @@ import { type TOrgsKeys } from './TOrgsKeys';
 import { type TSmallformsKeys } from './TSmallformsKeys';
 import { type TLongformsKeys } from './TLongformsKeys';
 import { type TLettersKeys } from './TLettersKeys';
+import type { TBiblsKeys } from './TBiblsKeys';
 
+export type TPeopleTypes = string; //! restrict to subet later
+export type TPlacesTypes = string; //! restrict to subet later
+export type TEventsTypes = string; //! restrict to subet later
+export type TorgsTypes = string; //! restrict to subet later
+export type TSmallformsTypes = 'article' | 'feuilleton';
+export type TLongformsTypes = string; //! restrict to subet later
+export type TLettersTypes = string; //! restrict to subet later
+export type TBiblsTypes = string; //! restrict to subet later
+export type TKeywordsTypes = string; //! restrict to subet later
 // Entities
 export type TEntityTypes =
 	| 'people'
@@ -103,7 +113,7 @@ export type TRegister = {
 			};
 		};
 		longforms: {
-			[key in TSmallformsKeys]: {
+			[key in TLongformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
@@ -117,6 +127,15 @@ export type TRegister = {
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				type: TLettersTypes;
+				gndNumber?: string; // optional
+			};
+		};
+		bibls: {
+			[key in TBiblsKeys]: {
+				name: string;
+				type: TLettersTypes;
+				authorId: TPeopleKeys; //! string to account for uncertainties
+				pubDate: string;
 				gndNumber?: string; // optional
 			};
 		};

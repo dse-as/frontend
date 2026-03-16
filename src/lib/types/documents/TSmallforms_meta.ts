@@ -80,7 +80,7 @@ export type TSmallforms_meta = {
 			};
 			manuscript: {
 				hasiiif: boolean;
-				url_iiif: string;
+				iiif_urls: string[];
 			};
 			numPages: number | null;
 			edition: {

@@ -2,7 +2,8 @@
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton-svelte';
-@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@import '../../theme_dseas';
 
 [data-dom='global_comment'],
 [data-dom='annotation'],
