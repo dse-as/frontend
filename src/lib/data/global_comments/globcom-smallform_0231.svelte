@@ -7,7 +7,7 @@
 		<span data-type="entity" data-entitytype="place" data-key="place_0052">Moskau</span> (<span
 			data-type="entity"
 			data-entitytype="travel"
-			data-key="travel_00015">Moskaureise 1937</span
+			data-key="travel_0015">Moskaureise 1937</span
 		>), von wo sie die Hinterlassenschaft des Schweizer Bergsteigers
 		<span data-type="entity" data-entitytype="person" data-key="person_0073">Lorenz Saladins</span>
 		über

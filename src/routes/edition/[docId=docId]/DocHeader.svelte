@@ -44,7 +44,8 @@
 								href={`/edition/register#${regKey}`}
 								target="_blank"
 								rel="noopener noreferrer"
-								>{reg[regType][regKey].name}
+							>
+								{reg[regType][regKey]?.name}
 							</a>
 						{/each}
 					{/each}

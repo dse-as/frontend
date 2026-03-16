@@ -13,7 +13,7 @@ export type TEventsKeys =
 	| 'travel_0012'
 	| 'travel_0013'
 	| 'travel_0014'
-	| 'travel_00015'
+	| 'travel_0015'
 	| 'travel_0016'
 	| 'travel_0017'
 	| 'travel_0018'
