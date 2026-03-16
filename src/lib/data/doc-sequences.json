@@ -1,7 +1,0 @@
-{
-	"doc-sequences": {
-		"letters": { "name": "Briefe", "docs": ["doc001", "doc032", "doc099"] },
-		"letters-mann": { "name": "Buildings", "docs": ["doc005", "doc006", "doc007", "doc800"] },
-		"letters-annabelle": { "name": "Annabelle", "docs": ["doc022", "doc044", "doc066", "doc088"] }
-	}
-}
