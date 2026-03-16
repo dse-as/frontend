@@ -12,8 +12,7 @@
 <i class="fa-solid fa-coffee"></i>
 {@render children()}
 
-<div
-	data-dom="footer"
+<footer
 	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-500"
 >
 	<p class="mb-5">Diese Webseite befindet sich in einer Beta-Version</p>
@@ -70,4 +69,4 @@
 			/>
 		</a>
 	</div>
-</div>
+</footer>
