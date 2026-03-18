@@ -16,6 +16,7 @@
 	let dflf: TDFLF = $state('LF');
 
 	onMount(() => {
+		// Set mode
 		if (page.url.searchParams?.get('mode') === 'DF') {
 			dflf = 'DF';
 		} else {
@@ -25,6 +26,8 @@
 			dflf = 'LF';
 			goto(url);
 		}
+		// Set page
+		currentPage = Number(page.url.searchParams?.get('page')) || 1;
 	});
 </script>
 

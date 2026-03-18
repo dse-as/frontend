@@ -14,7 +14,7 @@
 	data-fassung="LF"
 	class="grid h-full grid-cols-1 gap-5 overflow-hidden md:grid-cols-[auto_500px]"
 >
-	<TextFluid {docId} />
+	<TextFluid {meta} {docId} />
 
 	<Tabs
 		class="h-full overflow-hidden pl-5"

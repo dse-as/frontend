@@ -1,4 +1,10 @@
 <span data-type="milestone" data-unit="textregion"></span>
+<span
+	data-type="pagebreak"
+	data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"
+	data-page="1"
+	data-n="10"
+/>
 <span data-type="head">
 	<br />
 	Baltisches Tagebuch.
@@ -272,7 +278,7 @@
 	<span data-type="quote">Vielleicht erreiche ich es <em>doch</em> noch!</span>
 	<span
 		data-type="pagebreak"
-		data-facs="https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0231.json"
+		data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif"
 		data-page="2"
 		data-n="10"
 	/>
@@ -313,6 +319,323 @@
 	>
 	<span data-type="markend" data-noteid="note-smallform_0231-99a" data-notetype="annotation"></span>
 	–
+</p>
+
+<p>
+	Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten
+	Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte
+	nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was
+	aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise
+	aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann
+	werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde.
+	Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... <span
+		data-type="pagebreak"
+		data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_001.tif"
+		data-page="3"
+		data-n="10"
+	/>
+	Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was
+	aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde.
+	Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier
+	für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg.
+	– Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus
+	ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen...
+	<span
+		data-type="pagebreak"
+		data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_002.tif"
+		data-page="4"
+		data-n="10"
+	/>Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten
+	Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte
+	nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor
+	meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was
+	aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise
+	aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann
+	werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig,
+	wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde.
+	Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am
+	nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen...Ich
+	fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag,
+	vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht,
+	was aus ihr dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner
+	Abreise aus Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr
+	dann werden würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus
+	Danzig, wurde beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden
+	würde. Wir machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde
+	beim Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir
+	machten uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim
+	Hotelportier für mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten
+	uns auf den Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für
+	mich ein Päckchen... Ich fragte nicht, was aus ihr dann werden würde. Wir machten uns auf den
+	Heimweg. – Am nächsten Tag, vor meiner Abreise aus Danzig, wurde beim Hotelportier für mich ein
+	Päckchen...
 </p>
 
 <br /><byline><hi rendition="#g"> Annemarie Clark</hi>.</byline>
