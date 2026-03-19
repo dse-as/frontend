@@ -6,6 +6,8 @@
 	import { unselectMarks } from '$lib/functions/unselectMarks';
 	import { unselectNotes } from '$lib/functions/unselectNotes';
 	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 
 	let containerMaintext: HTMLElement;
 	let { meta, docId } = $props();
@@ -108,10 +110,18 @@
 			document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 		}
 	}
+
 	function setupListeners(el) {
 		// ---------------------------------------------
 		// (2) Click listeners
 		el.addEventListener('click', handleDocumentClick);
+	}
+
+	function openDFpage(pagenum: number) {
+		const url = new URL(page.url);
+		url.searchParams.set('page', String(pagenum));
+		url.searchParams.set('mode', 'DF');
+		goto(url);
 	}
 </script>
 
@@ -130,7 +140,10 @@
 					<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
 
 					<!-- sticky facsimile -->
-					<button class="sticky top-0 float-right ml-2 bg-white">
+					<button
+						class="sticky top-0 float-right ml-2 bg-white"
+						onclick={() => openDFpage(item.page)}
+					>
 						<IIIF_Thumb url={item.facs} width="100" classes="rounded-xl" />
 						<span class="italic">Seite {item.page}</span>
 					</button>

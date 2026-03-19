@@ -4,6 +4,7 @@
 	import { resolve } from '$app/paths';
 
 	import LF from './LF.svelte';
+	import Gallery from './Gallery.svelte';
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import SeriesMenu from './SeriesMenu.svelte';
@@ -11,12 +12,12 @@
 
 	let { data } = $props();
 
-	let currentPage = $state(1);
+	let pagenum = $state(1);
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF = $state('LF');
 
 	onMount(() => {
-		// Set mode
+		// set mode
 		if (page.url.searchParams?.get('mode') === 'DF') {
 			dflf = 'DF';
 		} else {
@@ -26,8 +27,12 @@
 			dflf = 'LF';
 			goto(url);
 		}
-		// Set page
-		currentPage = Number(page.url.searchParams?.get('page')) || 1;
+	});
+
+	// Update mode and page
+	$effect(() => {
+		pagenum = Number(page.url.searchParams?.get('page')) || pagenum;
+		dflf = (page.url.searchParams?.get('mode') as TDFLF) || dflf;
 	});
 </script>
 
@@ -37,6 +42,9 @@
 
 	<!-- Metadata -->
 	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
+
+	<!-- Thumbnail Gallery -->
+	<Gallery metadata={data.meta} docId={page.params.docId} {pagenum} />
 
 	<!-- DFLF Toggle -->
 	<button
@@ -55,9 +63,9 @@
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden px-5">
 		{#if dflf === 'LF'}
-			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {currentPage} />
+			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} {currentPage} />
+			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
 		{/if}
 	</div>
 </div>
