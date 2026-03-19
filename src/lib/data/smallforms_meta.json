@@ -19,7 +19,7 @@
 				"pubPlace": "Wandervogel",
 				"signature": "",
 				"pubDetails": "Nr. 11/12, yeargang 17, S. 106",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Keine Datums- und Heftangaben auf Kopie. Unklar, ob es dieselbe Doppelnummer ist wie Oktober 3/4, strenggenommen kann es nicht sein, dass die Nummerierung (11/12) höher ist als im Herbst desselben yeares -> ev. Abschreibfehler 12->17 (yeargang und Heftnummer in 002 auf Kopie)",
 				"keywords": {
@@ -72,7 +72,7 @@
 				"pubPlace": "Wandervogel",
 				"signature": "",
 				"pubDetails": "Nr. 3/4, S. 17f. («Antwort» von Vren Högger S. 18f.)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Ev. Übertragung des Abschreibfehlers oben (yeargang 17). yeargang und Heftnummer in 002 auf Kopie. «Antwort» auch in die Edition? Wäre wohl sinnvoll.",
 				"keywords": "Jugend, Freundschaft, Jugendbewegung, Feminismus (?)",
@@ -107,7 +107,7 @@
 				"pubPlace": "Wandervogel",
 				"signature": "",
 				"pubDetails": "Nr. 3/4 (Okt.), S. 19f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Keine Datums- und Heftangaben auf Kopie. BF muss hinterfragt werden.",
 				"keywords": "Jugend, Jugendbewegung, Liebe, Freundschaft",
@@ -142,7 +142,7 @@
 				"pubPlace": "Wandervogel",
 				"signature": "",
 				"pubDetails": "Nr. 11/12, S. 86f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Keine Datums- und Heftangaben auf Kopie. KAS hat vermutet 1925 (die gleiche Nummer wie 001).",
 				"keywords": "Jugend, Jugendbewegung, Freundschaft",
@@ -177,7 +177,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/02",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "nachträgl.",
 				"keywords": {
@@ -221,7 +221,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/01",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0007",
+				"textstufen": ["smallform_0007"],
 				"series": "",
 				"comment": "Im SLA mit Titelzusatz: «(Aus dem 30jährigen Krieg)» - Im SLA auf 1928 datiert",
 				"keywords": {
@@ -243,8 +243,8 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
-				"iiif_urls": []
+				"hasiiif": true,
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -265,7 +265,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 1962, S. 10",
-				"textstufen": "smallform_0006",
+				"textstufen": ["smallform_0006"],
 				"series": "",
 				"comment": "",
 				"keywords": "Vergewaltigung, Sexualität, Freundschaft, Krieg, Traum, Jugend, Flüchtlinge",
@@ -300,7 +300,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/03",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fragmente ohne Titel, nachträgl.",
 				"keywords": {
@@ -344,7 +344,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/04",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fragment ohne Titel.",
 				"keywords": {
@@ -388,7 +388,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/05",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -432,7 +432,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2168, Bl. 3 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Jugend",
@@ -467,7 +467,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2168, Bl. 3 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Poetik, Jugend",
@@ -502,7 +502,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2236, Bl. 6 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Jugend, Freundschaft",
@@ -537,7 +537,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2269, Bl. 7 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Natur, Konservatismus",
@@ -572,7 +572,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2269, Bl. 7",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Kindheit, Freundschaft",
@@ -607,7 +607,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2337, Bl. 9",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension (etwas länger)",
 				"keywords": "Kindheit, Freundschaft",
@@ -642,7 +642,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2500, Mittagsausgabe, Bl. 6",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhtetik, Realismus, Phantastik",
@@ -677,7 +677,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/06 +07?",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Zur Entstehungsgeschichte vgl. letter_0126 (1. Brief an E. Fueter)",
 				"keywords": {
@@ -721,7 +721,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 522, Bl. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Jugend, Jugendbewegung, Bürgertum",
@@ -756,7 +756,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/001 ",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0021",
+				"textstufen": ["smallform_0021"],
 				"series": "",
 				"comment": "SLA: A-1/001 (erster erhaltener journalistischer Text als Manuskript). Zur Entstehungsgeschichte vgl. letter_0126 (1. Brief an E. Fueter)",
 				"keywords": {
@@ -800,7 +800,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 769, 2. Sonntagsausgabe, Bl. 8",
-				"textstufen": "smallform_0020",
+				"textstufen": ["smallform_0020"],
 				"series": "",
 				"comment": "Zur Entstehungsgeschichte vgl. letter_0126 (1. Brief an E. Fueter)",
 				"keywords": "Ästhetik, Jugendbewegung, Moral, Religion",
@@ -835,7 +835,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2163, 1. Sonntagsausgabe, Bl. 3",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kurzrezension",
 				"keywords": "Ästhetik, Romantik, Phantastik, Jugend",
@@ -870,7 +870,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2503, BIatt 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Ästhetik, Poetik, Jugendbewegung, Kommunismus",
@@ -905,7 +905,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/08",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -949,7 +949,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/28(e)",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Zur Entsteheungsgeschichte: letter_0171",
 				"keywords": {
@@ -993,7 +993,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/10",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -1037,7 +1037,7 @@
 				"pubPlace": "Zürcher Student",
 				"signature": "",
 				"pubDetails": "Nr. 1, S. 13-15",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -1081,7 +1081,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 1238, 2. Sonntagsausgabe, Bl. 8",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Reisen,  Reiseliteratur, Mode",
@@ -1116,7 +1116,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 1676, Bl. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Ästhetik, Natur, Sport",
@@ -1151,7 +1151,7 @@
 				"pubPlace": "Staatsarchiv des Kantons Zürich (Archiv der Universität Zürich, Sign. U 109e. 30 = veraltet). Signatur neu ermittelt: https://suche.staatsarchiv.djiktzh.ch/detail.aspx?ID=3305109",
 				"signature": "",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dazu auch: Fähnders/Tobler: Zum Erstdruck von Annemarie Schwarzenbachs Georg Trakl. In: Mitteilnngen aus dem Brenner-Archiv 23 (2004), S. 47-60",
 				"keywords": {
@@ -1195,7 +1195,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/11",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -1239,7 +1239,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/12",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -1283,7 +1283,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 709, 2. Sonntagsausgabe, Bl. 7",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Film, Intermedialität, Surrealismus, Phantastik, Ästhetik, Poetik",
@@ -1318,7 +1318,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 1715, 1. Sonntagsausgabe, Bl. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Film, Ästhetik, Unterhaltungsindustrie, Intermedialität",
@@ -1353,7 +1353,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2343, 2. Ausgabe, Bl. 5",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Film, Ästhetik, Sexualität",
@@ -1388,7 +1388,7 @@
 				"pubPlace": "Amalthea-Almanach",
 				"signature": "",
 				"pubDetails": "Amalthea-Almanach. Zürich/Leipzig/Wien: Amalthea, 1932, S. 59-62.",
-				"textstufen": "EM B 186",
+				"textstufen": ["EM B 186"],
 				"series": "",
 				"comment": "Typoskript in der Monacensia gefunden (smallform_0607). Kein Nachdruck!? Vermutlich der erste erhaltene Versuch, in einer lyrischen Sprache (beinahe Prosa-Gedicht) mit biblischen Anspielungen die Liebe zu einer Frau zu thematisieren. Vorwegnahme der späten Lyrik/Prosa. Verweise auf Wüste/Nomaden vor den ersten Reisen. Siehe: Gabriele Bischoff. »Du verlangst eine Liebe, die mit unseren gegenwärtigen Begrenzungen nicht vereinbarist.« -Die Liebe der Rut. In: Willems 1998, S. 47-56. Siehe auch: https://www2.cms.hu-berlin.de/queer-reading/schwarzenbach/",
 				"keywords": {
@@ -1432,7 +1432,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/13",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Gehört nicht zu den Kleinen Formen, sollte aber in der Projektphase digitalisiert und transkribiert (jedoch nicht inhaltlich annotiert) werden. ",
 				"keywords": {
@@ -1476,7 +1476,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2, Bl. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "N: Insel Europa",
 				"keywords": "Film, Ästhetik, Romantik, Unterhaltungsindustrie",
@@ -1511,7 +1511,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 36, S. 1168 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fotos von Marianne Breslauer. Ev. erste ZI-Publikation? Seitenzahl bei Fähnders für ZI jeweils sonderbar.",
 				"keywords": {
@@ -1555,7 +1555,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/15-a",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Insgesamt 3 Gedichte unter diesem Namen (Signatur A-2/15a-c)",
 				"keywords": {
@@ -1599,7 +1599,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/15-b",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Insgesamt 3 Gedichte unter diesem Namen (Signatur A-2/15a-c)",
 				"keywords": {
@@ -1643,7 +1643,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/15-a",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Insgesamt 3 Gedichte unter diesem Namen (Signatur A-2/15a-c)",
 				"keywords": {
@@ -1687,7 +1687,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 38, S. 1208",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Aufnahmen Brauer-Akademie [d.i. Marianne Breslauer]. (Bildbericht).",
 				"keywords": {
@@ -1731,7 +1731,7 @@
 				"pubPlace": "Schweizer Illustrierte Radio-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 41, o.S. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fotos von Marianne Breslauer",
 				"keywords": {
@@ -1775,7 +1775,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 40, S. 1294",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fotos von Marianne Breslauer",
 				"keywords": {
@@ -1819,7 +1819,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/003",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -1863,7 +1863,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/004",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Weltwoche (hs.) – wahrscheinlich nie abgedruckt",
 				"keywords": {
@@ -1907,7 +1907,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/005",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Weltwoche (hs.) – wahrscheinlich nie abgedruckt",
 				"keywords": {
@@ -1951,7 +1951,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/007",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0050",
+				"textstufen": ["smallform_0050"],
 				"series": "",
 				"comment": "Erzählung aus: Winter in Vorderasien. Im SLA: National Zeitung (hs.) –Nationalzeitungspublikationen beginnen hier.",
 				"keywords": {
@@ -1995,7 +1995,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 522, Abendblatt , Bl. 1",
-				"textstufen": "smallform_0049",
+				"textstufen": ["smallform_0049"],
 				"series": "",
 				"comment": "",
 				"keywords": "Modernisierung, Orientalismus, Armut, Landwirtschaft, Reisen",
@@ -2030,7 +2030,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/008",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0052",
+				"textstufen": ["smallform_0052"],
 				"series": "",
 				"comment": "Zimmermann, Reisen durch den Limes, S. 46.",
 				"keywords": {
@@ -2074,7 +2074,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 548, S. 2 ",
-				"textstufen": "smallform_0051",
+				"textstufen": ["smallform_0051"],
 				"series": "",
 				"comment": "",
 				"keywords": "Modernisierung, Moderne Architektur, Landwirtschaft",
@@ -2109,7 +2109,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/009",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0192",
+				"textstufen": ["smallform_0192"],
 				"series": "",
 				"comment": "Erzählung aus: Winter in Vorderasien (dort stark verändert)",
 				"keywords": {
@@ -2153,7 +2153,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/010",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Nummeriert: Bl.30/31",
 				"keywords": {
@@ -2197,7 +2197,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2191, 2. Sonntagsausgabe, Bl. 8",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -2241,7 +2241,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 50, S. 1644",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Modernisierung, Moderne Architektur, Baudenkmal, Natur",
@@ -2276,7 +2276,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/013",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -2320,7 +2320,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2304, 1. Sonntagsausgabe, Bl. 4",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Erzählung aus: Winter in Vorderasien",
 				"keywords": {
@@ -2364,7 +2364,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/015",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: An N.Z.Z. (Arnet) 18.XII.33 (hs.). -> Ev. Fehler bei der Datierung und Identisch mit BF 70?",
 				"keywords": {
@@ -2408,7 +2408,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/016",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Das ist ein ziemlich langes Typoskript! Ev. teilweise publiziert als «Syrische Weihnachtstage»? (BF 77)",
 				"keywords": {
@@ -2452,7 +2452,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/011",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0062",
+				"textstufen": ["smallform_0062"],
 				"series": "",
 				"comment": "\"SLA: An die \"\"Weltwoche\"\" 4.XII 33 (hs.). Erste Weltwoche-Publikation nach zwei früheren Versuchen?\"",
 				"keywords": {
@@ -2496,7 +2496,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 6, S. 4",
-				"textstufen": "smallform_0061",
+				"textstufen": ["smallform_0061"],
 				"series": "",
 				"comment": "",
 				"keywords": "Landwirtschaft, Kleidung, Armut, Modernisieurng, Frauenrolle, Reise, Intermedialität",
@@ -2531,7 +2531,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/018",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "An NZZ 28.12.33 (hs.) – vermutlich nicht gedruckt oder unter anderem Namen",
 				"keywords": {
@@ -2575,7 +2575,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/020",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Ev. nur Notizen.",
 				"keywords": {
@@ -2619,7 +2619,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/021",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -2663,7 +2663,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/022",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "hs.: Je le trouve très bien fais avec mes compliments m",
 				"keywords": {
@@ -2707,7 +2707,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 2398, 2. Sonntagsausgabe, Bl. 9",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -2751,7 +2751,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/002",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dat.: Weitere Daten: 1933-10-18",
 				"keywords": {
@@ -2795,7 +2795,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/006",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Weltwoche (hs.) – wahrscheinlich nie abgedruckt",
 				"keywords": {
@@ -2839,7 +2839,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/14",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kopien sind gebunden (zwei Bücher), Orig. in ZB Zürich",
 				"keywords": {
@@ -2883,7 +2883,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/014",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0072",
+				"textstufen": ["smallform_0072"],
 				"series": "",
 				"comment": "SLA: Basler Natzeitg. (hs.)",
 				"keywords": {
@@ -2927,7 +2927,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 3, Abendblatt , S. 1.",
-				"textstufen": "smallform_0071",
+				"textstufen": ["smallform_0071"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -2971,7 +2971,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/023",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3015,7 +3015,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/045",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Anm. auf Umschlagetikette: Diverse Aufsätze 1939/41",
 				"keywords": {
@@ -3059,7 +3059,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/017",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0076",
+				"textstufen": ["smallform_0076"],
 				"series": "",
 				"comment": "SLA: Bem.: Basler Natzeitg., abgeschickt 27.XII. (hs.). Dat.: year erschlossen.",
 				"keywords": {
@@ -3103,7 +3103,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 11, Abendblatt , S. 1.",
-				"textstufen": "smallform_0075",
+				"textstufen": ["smallform_0075"],
 				"series": "",
 				"comment": "A-1/017",
 				"keywords": {
@@ -3147,7 +3147,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 41, Abendblatt , S. 1.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Thematische Nähe zu smallform_0167",
 				"keywords": {
@@ -3191,7 +3191,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/024",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dat.: year erschlossen – ev. Überlappungen mit BF 84 und/oder BF 89",
 				"keywords": {
@@ -3235,7 +3235,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/025",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3279,7 +3279,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/012",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0081",
+				"textstufen": ["\"smallform_0081"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3323,7 +3323,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/019",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0080",
+				"textstufen": ["\"smallform_0080"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3367,7 +3367,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "Nr. 5, S. 4.",
-				"textstufen": "\"smallform_0080",
+				"textstufen": ["\"smallform_0080"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3411,7 +3411,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/026",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0084",
+				"textstufen": ["smallform_0084"],
 				"series": "",
 				"comment": "\"SLA: Basler Nat.zeitung (hs.); Winter in Vorderasien, S. 85-88 (verändert).\"",
 				"keywords": "Reisen, Natur, Flugzeug, ",
@@ -3446,7 +3446,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 65, Abendblatt, S. 1",
-				"textstufen": "smallform_0083",
+				"textstufen": ["smallform_0083"],
 				"series": "",
 				"comment": "Winter in Vorderasien, S. 85-88 (verändert).",
 				"keywords": "Reisen, Natur, Flugzeug, ",
@@ -3481,7 +3481,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 240, 1. Sonntagsausgabe, Bl. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3525,7 +3525,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/027",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 89, Abendblatt , S. 2f.",
-				"textstufen": "smallform_0087",
+				"textstufen": ["smallform_0087"],
 				"series": "",
 				"comment": "SLA : Basler Nat.zt. 16.2.34 (hs.)",
 				"keywords": {
@@ -3569,7 +3569,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 89, Abendblatt , S. 2f.",
-				"textstufen": "smallform_0086",
+				"textstufen": ["smallform_0086"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3613,7 +3613,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/028",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Neue Zürcher Zeitung 23.II.34 (hs.) – ev. nicht gedruckt",
 				"keywords": {
@@ -3657,7 +3657,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/029",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0090",
+				"textstufen": ["smallform_0090"],
 				"series": "",
 				"comment": "\"SLA: Basler Nationalzt. 26.II.34 (hs.)",
 				"keywords": " s. auch: Zürcher Illustrierte, 1934-10-19, S.1338 (= BF 103)\"",
@@ -3692,7 +3692,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 117, Abendblatt , S. 1f.",
-				"textstufen": "smallform_0089",
+				"textstufen": ["smallform_0089"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3736,7 +3736,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 123, Abendblatt , S. 2f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3780,7 +3780,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/030",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dat.: year erschlossen",
 				"keywords": {
@@ -3824,7 +3824,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/031",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3868,7 +3868,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 152, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3912,7 +3912,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 166, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -3956,7 +3956,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 657, Bl. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4000,7 +4000,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 180, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4044,7 +4044,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 17, S. 499",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4088,7 +4088,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 197, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Kein Nachdruck? Doch, in Orientreisen, das erst nach der Bibliographie entstanden ist.",
 				"keywords": {
@@ -4132,7 +4132,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 201, Abendblatt , S. 1.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4176,7 +4176,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 804, Bl. 3",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4220,7 +4220,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 24, S. 732f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4264,7 +4264,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 27, S. 831",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4308,7 +4308,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 28, S. 863",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4352,7 +4352,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 31, S. 984f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4396,7 +4396,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 32, S. 993",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Abdruck eines Fotos mit dem Hinweis ,,Aufnahme Schwarzenbach\"\" innerhalb des Artikels: Auch anderswo... Zum Eidgenössischen Schwing- und Aelplerfest in Bern am 11. und 12. August.\"",
 				"keywords": {
@@ -4440,7 +4440,7 @@
 				"pubPlace": "Die Sammlung",
 				"signature": "",
 				"pubDetails": "Nr. 1 (Sept), S. 50-52",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4484,7 +4484,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/035",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0109",
+				"textstufen": ["smallform_0109"],
 				"series": "",
 				"comment": "-> Vermutlich erster publizierter Text von ihrer zweiten Reise (über Moskau und Kaukasus erneut nach Persien)",
 				"keywords": {
@@ -4528,7 +4528,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 440, Abendblatt , S. 1",
-				"textstufen": "smallform_0108",
+				"textstufen": ["smallform_0108"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4572,7 +4572,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/034",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4616,7 +4616,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/036",
 				"pubDetails": "",
-				"textstufen": "?",
+				"textstufen": ["?"],
 				"series": "",
 				"comment": "\"Titel \"\"An der Grusinischen Heerstrasse\"\" wurde von AS ergänzt (hs.). Verhältnis zu BF 107, BF 101 und SLA A1-033 unklar. Ev. wurden aus einem Artikel zwei oder AS hat in NZZ und Nat. Zeit. sehr ähnliche Artikel untergebracht.\"",
 				"keywords": {
@@ -4660,7 +4660,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/038",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bem.: Ehemaliger Titel: Die Strasse. Dat.: year erschlossen",
 				"keywords": {
@@ -4704,7 +4704,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 1746, Bl. 4",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4748,7 +4748,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/039",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0124",
+				"textstufen": ["smallform_0124"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4792,7 +4792,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 454, S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4836,7 +4836,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/040",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Intermedialität: Siehe Beitrag 'In Persien', ZI 1934, Nr. 32, dort Bild v. zwei persischen Ringern (leider nicht im Nachlass erhalten) ",
 				"keywords": {
@@ -4880,7 +4880,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/037",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0118",
+				"textstufen": ["smallform_0118"],
 				"series": "",
 				"comment": "SLA: An die Basler Nationalzeitung (hs.)",
 				"keywords": {
@@ -4924,7 +4924,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 468, S. 1.",
-				"textstufen": "smallform_0117",
+				"textstufen": ["smallform_0117"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -4968,7 +4968,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/041",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0122",
+				"textstufen": ["smallform_0122"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5012,7 +5012,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/042",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Datierung: [1935 ?] eher 1940, Bem.: Vorschläge (hs.). -> Unklar, warum im SLA hier inventarisieriet",
 				"keywords": {
@@ -5056,7 +5056,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 42, S. 1338",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5100,7 +5100,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 502, S. 1",
-				"textstufen": "smallform_0119",
+				"textstufen": ["smallform_0119"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5144,7 +5144,7 @@
 				"pubPlace": "Die Sammlung",
 				"signature": "",
 				"pubDetails": "Nr. 3 (Nov.), S. 166",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Sinnvoll, S. 166f. zu digitalisieren, da die Werbung für das Buch gleich auf der näcshten Seite gesetzt ist.",
 				"keywords": {
@@ -5188,7 +5188,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 542, S. 1f. ",
-				"textstufen": "smallform_0114",
+				"textstufen": ["smallform_0114"],
 				"series": "",
 				"comment": "(laut Fähnders Auszug[?], ist jedoch einfach die gekürzte Publikation von smallform_0114)-> Wichtiger Text, Melancholie und Gleichgültigkeit wird nicht ‘im Orientalen’, sondern im erlebenden Subjekt verortet",
 				"keywords": {
@@ -5232,7 +5232,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 47, S. 1472f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5276,7 +5276,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/033",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0127",
+				"textstufen": ["smallform_0127"],
 				"series": "",
 				"comment": "SLA: N.Z.Z., 20.X.34 Dr. Weibel (hs., durchgestrichen)",
 				"keywords": {
@@ -5320,7 +5320,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 2112, 1. Sonntagsausgabe, Bl. 2",
-				"textstufen": "smallform_0126",
+				"textstufen": ["smallform_0126"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5364,7 +5364,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 574, S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5408,7 +5408,7 @@
 				"pubPlace": "Züricher Post",
 				"signature": "",
 				"pubDetails": "Nr. 303, S. 4",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5452,7 +5452,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 52, S. 1702",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5496,7 +5496,7 @@
 				"pubPlace": "Schweizerischer Frauenkalender",
 				"signature": "",
 				"pubDetails": "Jg. 24. Aarau 1934, S. 119-124",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5540,7 +5540,7 @@
 				"pubPlace": "Ja",
 				"signature": "Typoskript",
 				"pubDetails": "SLA",
-				"textstufen": "A-1/032",
+				"textstufen": ["A-1/032"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -5584,7 +5584,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Siehe zu dieser Novelle auch letter_0053 14.6.35 an Bourdet: Der Text handle von ihr und seiner Tante ",
 				"keywords": {
@@ -5628,7 +5628,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0149",
+				"textstufen": ["smallform_0149"],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35",
 				"keywords": " in veränderter Form u.d.T. \"\"Besuch im Orient\"\"",
@@ -5663,7 +5663,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5707,7 +5707,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5751,7 +5751,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5795,7 +5795,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5839,7 +5839,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5883,7 +5883,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5927,7 +5927,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -5971,7 +5971,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -6015,7 +6015,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -6059,7 +6059,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/16",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(aus „Der Falkenkäfig\"\", 1934/35).\"",
 				"keywords": {
@@ -6103,7 +6103,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/009",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0192",
+				"textstufen": ["smallform_0192"],
 				"series": "",
 				"comment": "\"Winter in Vorderasien, S. 42-44 (verändert).",
 				"keywords": {
@@ -6147,7 +6147,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 1, S. 8",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6191,7 +6191,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 7, S. 171",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6235,7 +6235,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 176, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6279,7 +6279,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 204, Abendblatt , S. 1",
-				"textstufen": "smallform_0134",
+				"textstufen": ["smallform_0134"],
 				"series": "",
 				"comment": "\"Vgl. A-2/16, \"\"Verklärtes Europa\"\" (aus „Der Falkenkäfig\"\", 1934/35)\"",
 				"keywords": {
@@ -6323,7 +6323,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 20, S. 612f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6367,7 +6367,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 246, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Erster Artikel als Clarac-Schwarzenbach",
 				"keywords": {
@@ -6411,7 +6411,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 272, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Verweis auf Karl Mays «Durchs wilde Kurdistan», das jener jedoch nie mit eigenen Augen gesehen hat (so weiss schon AS).",
 				"keywords": {
@@ -6455,7 +6455,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/046",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Datierung erschlossen: 1935 Sommer. Anm. auf Umschlagetikette: Diverse Aufsätze 1939/41",
 				"keywords": {
@@ -6499,7 +6499,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 36, S. 1131",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Nicht signiert",
 				"keywords": {
@@ -6543,7 +6543,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 431, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Nun nur noch als «Annemarie Clark» - ev. Distanzierung wegen Pfeffer-Mühle?",
 				"keywords": {
@@ -6587,7 +6587,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/048",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0157",
+				"textstufen": ["smallform_0157"],
 				"series": "",
 				"comment": "\"SLA: Datierung: year erschlossen. An Basler Nat. (hs.). ",
 				"keywords": {
@@ -6631,7 +6631,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 499, Abendblatt, S. 1f. ",
-				"textstufen": "smallform_0156",
+				"textstufen": ["smallform_0156"],
 				"series": "",
 				"comment": "A-1/048",
 				"keywords": {
@@ -6675,7 +6675,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 529, Abendblatt, S. 1 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Die Armenier (wie die Kaldäer, s.o., und, so AS, die Juden) als verfolgte Minderheit.",
 				"keywords": {
@@ -6719,7 +6719,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/049",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0160",
+				"textstufen": ["smallform_0160"],
 				"series": "",
 				"comment": "SLA: Bem.: Beil.: Bildbeschriftungen (1 Bl., Ts.), Dat.: year erschlossen -> Erste Erwähnung des Lahr-Tales",
 				"keywords": {
@@ -6763,7 +6763,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 541, Abendblatt, S. 1f. ",
-				"textstufen": "smallform_0159",
+				"textstufen": ["smallform_0159"],
 				"series": "",
 				"comment": "A-1/049",
 				"keywords": {
@@ -6807,7 +6807,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 573, Abendblatt (Nr. 137), S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6851,7 +6851,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/043",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6895,7 +6895,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/047",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Im Sammelband \"\"Bei diesem Regen\"\" wird der Text von Perret bewusst zur «Erzählung» zurechtgeschnitten, indem der Rahmen durch eine bereichtende Erzählinstanz weggelassen wird. In ganzer Länge kann er jedoch dem erzählenden Journalismus zugerechnet werden, wie ihn AS auch andernorts praktiziert hat.\"",
 				"keywords": {
@@ -6939,7 +6939,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 2, Abendblatt, S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -6983,7 +6983,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 4, S. 83",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7027,7 +7027,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 48, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7071,7 +7071,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 6, S. 147",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7115,7 +7115,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 7, S. 183 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7159,7 +7159,7 @@
 				"pubPlace": "ZI",
 				"signature": "A-1/044",
 				"pubDetails": "Nr. 9, S. 268f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Anm. auf Umschlagetikette: Diverse Aufsätze, 1939/41. -> Verhältnis zu BF 136 bzw. SLA A1-049 klären",
 				"keywords": {
@@ -7203,7 +7203,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 12, S. 363",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7247,7 +7247,7 @@
 				"pubPlace": "Sonntags-Beilage der National-Zeitung",
 				"signature": "",
 				"pubDetails": "17. yeargang, Nr. 169, S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Der Forschung (zumindest Fähnders) 2008 entgangen, 2011 dann von ihm (nach der Entdeckung der Beiträge im Argentintischen Tagblatt ) nachgedruckt.",
 				"keywords": {
@@ -7291,7 +7291,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 23, S. 695",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7335,7 +7335,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 264, Abendblatt, S. 1 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7379,7 +7379,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 312, Abendblatt, S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Falls auf dem Weg nach Mallorca mit EM und KM: nach dem entsprechenden Berich (smallform_173) erschienen, aber womöglich vorher entstanden. ",
 				"keywords": {
@@ -7423,7 +7423,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 466, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Präsidentschaftswahlen, Farmer, Papierindustrie, New Deal, Überschwemmung/Naturereignis",
@@ -7458,7 +7458,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 479, Morgenblatt , Titelseite ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "\"Präsidenschaftswahlen, Roosevelt, Kapitalismus [ökonomisches Denken der Amerikaner], New Deal, Pioniermythos, Landschaftszerstörung [ökologische Folgen der Landnutzung], amerikanischer Optimismus, [Kritik am amerikanischen Traum], Share-Croppers, Arbeitslosigkeit, der \"\"mittlere Weg\"\"/der \"\"amerikanische Weg\"\", Jugend\"",
@@ -7493,7 +7493,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 488, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Motiv der Strasse [Landstrasse], Tankstellen, Fast Food, Kritik am Pioniermythos, Individualismus, Präsident, Ford, Zeitmangel, Geld, Beschleinigung, Tourismus, Freizeit, Touristenlager, [Topos der Kulturlosigkeit Amerikas?], Motiv der Reise [Vergnügungsreise], Technisierung, Zukunft",
@@ -7528,7 +7528,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 44, S. 1380f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Aufnahmen: Resettlement Administration Washington ",
 				"keywords": "Armut, Arbeiterwohungen, soziales Gewissen, Naturereignis, Flüchtlinge, Wahlkampf, Präsidentenwahl, New Deal, Resettlement Administration, Pioniermythos, Kritik am Tellerwäscher-Mythos, Lebensstandard, Landwirtschaft, Automobil, Sharecropper, Afroamerikaner, Baumwollplantage",
@@ -7563,7 +7563,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/050",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0180",
+				"textstufen": ["smallform_0180"],
 				"series": "",
 				"comment": "SLA: Beil.: Brief an Dr. Hürlimann (2 Bl., Ts., Sils-Baselgia, 14.3.36)",
 				"keywords": {
@@ -7607,7 +7607,7 @@
 				"pubPlace": "Atlantis. Länder- Völker- Reisen/SLA",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 10 (Okt.), S. 623-627 ",
-				"textstufen": "smallform_0179",
+				"textstufen": ["smallform_0179"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -7651,7 +7651,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/051",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Unklar, ob nur Notizen",
 				"keywords": {
@@ -7695,7 +7695,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/052",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Vermutlich nur Notizen - aber auch eine hs. Karte!",
 				"keywords": {
@@ -7739,7 +7739,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/053",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bem.: Datierung: Anfang November. Dat.: year erschlossen",
 				"keywords": {
@@ -7783,7 +7783,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/055",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0185",
+				"textstufen": ["smallform_0185"],
 				"series": "",
 				"comment": "Bem.: Mitte November. Dat.: year erschlossen",
 				"keywords": {
@@ -7827,7 +7827,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 575, Morgenblatt , S. 1f.",
-				"textstufen": "smallform_0184",
+				"textstufen": ["smallform_0184"],
 				"series": "",
 				"comment": "",
 				"keywords": "\"Präsidentschaftswahlen, Roosevelt, New Deal, Demokratisches System, Wiederwahl, Kapitalismus, [amerikanische] Politik, der \"\"mittlere Weg\"\", Arbeitslosigkeit, Armut, Verschuldung, Baumwollpächter, die Linke\"",
@@ -7862,7 +7862,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 514, Abendblatt , S. 1 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Optimismus, Tellerwäscher-Mythos, Ausbeutung der Natur, Ausbeutung des Menschen, Opportunity, Freiheit [Ellbogenfreiheit], Marschallstab im Tornister, Wirtschaftskrise, Republikaner, Präsidentschaftswahlen, Landon, Arbeitslosigkeit, Reaktionäre, Jugend, Roosevelt, [Sinclair Lewis: It can't happen here], New Deal, Pessimismus",
@@ -7897,7 +7897,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 45, S. 1412f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Aufnahmen: Resettlement Administration Washington ",
 				"keywords": "Wähler, Präsidentschaftswahlen, Stereotypen, Reklame, Kreolinnen, Trapper, Arbeitslosigkeit, Bergwerksarbeiter, Kleinbauer, Tellerwäscher-Mythos, Landwirtschaft, Baumwoll-Plantage, Sklaverei, Afroamerikaner:innen, Indianer, Apachen",
@@ -7932,7 +7932,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 526, Abendblatt , o.S. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "[Vergleich mit New York], Kapitol, Motiv des Autos, Weite, Freizeitanlagen, Washington-Monument, Lincoln-Monument, New Deal, Roosevelt, Zukunft, Kunst und Kultur, Hollywood, Georgetown, Afroamerikaner:innen, Stadt des Südens, Klima [Hitze], Flughafen, Fast Food, Schmuggel, Drogen, Hafen, Strasse Nr. 2, Jazzmusik, Zeitung Afro-Amercian, [Vergleich mit Orient]",
@@ -7967,7 +7967,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 47, S. 1451",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -8011,7 +8011,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 284, Titelseite ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Cl.)",
 				"keywords": "Präsidentschaftswahlen, Roosevelt, Diktatur, Weltpresse, Demokratie, New Deal, Republikaner, Demokraten",
@@ -8046,7 +8046,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 49, S. 1515-1517. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Aufnahmen: Resettlement Administration Washington",
 				"keywords": "Landwirtschaft, Raubbau, Dürre, Umweltzerstörung, Verwüstung, Desertifikation, Überschwemmungen, Naturereignis, Naturkatastrophen, Verschwendung [Topos], Plantagen, Monokulturen, Trockenheit, Erster Weltkrieg, Sepuklation, Getreide, New Deal, Existenzkampf, Zukunft, Siedler, Industrie, Getreidehandel, Prosperität, Wiederaufforstung, An- und Umsiedlung",
@@ -8081,7 +8081,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 51, S. 1628f. ",
-				"textstufen": "smallform_0053",
+				"textstufen": ["smallform_0053"],
 				"series": "",
 				"comment": "Einziger uns bekannter Text in der ZI, der keine Fotoreportage ist. Hier (im Gegensatz zu WiV) primär Erzählung, narrartiv-literarische Aspekte im Fordergrund. Thematisch nimmt er eine Episode aus WiV auf. ",
 				"keywords": {
@@ -8125,7 +8125,7 @@
 				"pubPlace": "Mit Schweizern rund um die Erde",
 				"signature": "",
 				"pubDetails": "Mit Schweizern rund um die Erde. Reiseerlebnisse und Abenteuer von Schweizern auf dem Weltmeer und in den vier Erdteilen: Afrika, Asien, Nord- und Südamerika, Australien. Hg. Fritz Aebli. Aarau: Sauerländer, [1936], S. 120-130.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beschrieben wird u.a. das Tal der Pyramiden, das sie nachweislich auf der erstren Persienreise besucht hat (smallform_0102)",
 				"keywords": {
@@ -8169,7 +8169,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/054",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -8213,7 +8213,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 4, S. 99-101 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Photos: Resettlement Administration Washington",
 				"keywords": "Baumwolle, Plantage, Monokultur, Welthandel, Kinderarbeit, Landwirtschaft, Pachtbauern [share-cropper], Sklaverei, Armut, Elend, [Recht auf bessere Zukunft > Topos des Rechts auf Glück], Verschuldung, Weltwirtschaftskrise, Überproduktion, Arbeitslosigkeit, Rassismus, Gewerkschaft, Armut, Ernährung, Hygiene, Krankheit, Technisierung [Baumwollpflückmaschine], Streik, Kredite, Neuansiedlungen, Fortschrittskritik",
@@ -8248,7 +8248,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/057",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bem.: Datierung: Anf. Februar. Dat.: year erschlossen",
 				"keywords": {
@@ -8292,7 +8292,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 60, S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Bildung, Universität, Fussball, Alkohol, Jugend, Landstrasse, Reklame, Apltraum, Industrie, Landschaft, Architektur, Bekleidungsvorschriften, Dollar, Mathematik, Frauen, Wissenschaft, Emigration, Fremdsprache, Heimat, Nationalität, Exil, geistige Freiheit, Fortschritt, Pionierland",
@@ -8327,7 +8327,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/058",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"betreffend: Kampf um den Supreme Court",
 				"keywords": " General Motors-Strike",
@@ -8362,7 +8362,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 43, S. 9",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Verkehr, Motiv des Autos, Rationalisierung, Mythos Babylon, machine infernale, Umweltzerstörung, Arbeitersiedlung, Kinderspielplatz, Industrie, Urbanisierung, Zukunft, Flucht, Kulturation ",
@@ -8397,7 +8397,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/056",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0201",
+				"textstufen": ["smallform_0201"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -8441,7 +8441,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 176, S. 3 (4)",
-				"textstufen": "smallform_0200",
+				"textstufen": ["smallform_0200"],
 				"series": "",
 				"comment": "",
 				"keywords": "Industrie, Streik, Arbeiterbewegung, Verhandlung, kollektives Verhandeln, Gewerkschaft, Arbeit, Kapital, Bergarbeiter, Pioniere, Kohle, Kohlenabbau, Fotografie [Arbeit als Fotografin, Arbeitersiedlung, Elend, Kaugummi, Quäker, Arbeitslosigkeit, Wohltätigkeit, Kooperationen, Bildung [,Erziehung'], Rassismus, Freiheit, Stahlindustrie, Reichtum, Armut, Fabrik, Zukunft",
@@ -8476,7 +8476,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/059",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Wichtiges Dokument! ",
 				"keywords": {
@@ -8520,7 +8520,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/060",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bem.: siehe: Die Frage der Demokratie vom neuen Amerika aus gesehen (Orig.artikel), auf dem Ms. steht das hs. Datum 1940-04-29. Dat.: year erschlossen",
 				"keywords": {
@@ -8564,7 +8564,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/061",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Datierung: 1937 fraglich.",
 				"keywords": {
@@ -8608,7 +8608,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 157, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Fremdwahrnehmung, Fremder, Obdachlose, Wohltätigkeit, Überschwemmung, Industrie, Stahlindustrie, Auto, Friedhof, Pioniere, Indianer, Landwirtschaft, Aberglaube, Deutsche, Sekten, Arbeitslosigkeit, Gewerkschaften, Elend, Arbeitersiedlung, Friedhof, Kohle, Kohlenindustrie, Architektur, Kooperative",
@@ -8643,7 +8643,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 159, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Fabrik, Stahlindustrie, Kapital, Arbeit, Reichtum, Armut, Gegensätze, Fotografie [Fotografie-Verbot], Technisierung, Heldensage, Hölle [Metaphorik], Gewerkschaft, Streik, Stahlarbeiter, Bergarbeiter, Elend, Motiv des Schattens, Kritik am American Dream",
@@ -8678,7 +8678,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 81, S. 9f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Skifahren, Berge, Stadt, Monstrum New York, Topos der Kulturlosigkeit, Wall Street, Geld, Börse, Wolkenkratzer, Fremde, Einheimische, Krise, Wirtschaftskrise, Great Depression, Landschaft, Natur, Naturereignis [Stürme, Überschwemmung], Jugend, Patriotismus, Europa, Zukunft, Landwirtschaft, Architektur, Kunst, Hollywood, Reklame, Schnee, Autmobil, Swissness, Gastfreundschaft, Sport, Freizeit, Tradition, Volkslieder, Jugend, Demokratie, Pessimismus, Ford, Motiv der Landstrasse",
@@ -8713,7 +8713,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 17, Titelseite, S. 520f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Photos Schuh-Prisma",
 				"keywords": {
@@ -8757,7 +8757,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 185, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Bericht über den «Deutschen Gottglauben» Ludendorffs und der Nazis, klar kritisch und zuweilen von bissiger Ironie (scheint noch unerforscht)",
 				"keywords": {
@@ -8801,7 +8801,7 @@
 				"pubPlace": "Schweizer Radio-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 17, S. 22f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.S.)",
 				"keywords": "Demokratie, Arbeiterkampf, Gewerkschaften, Gegensätze, Armut, Reichtum, Luxus, Elend, Stadt-Land-Graben?, Vineta-Mythos, Zukunft, Grossstadt, Jugend, Kolonie, Pioniere, Fortschritt, Freiheit, Schmelztiegel-These, Arbeitslosigkeit",
@@ -8836,7 +8836,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 13, S. 3 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Erste bekannte Veröffentlichung im der Zeitung ABC",
 				"keywords": "Präsidentenwahl, Gewerkschafte, Bergarbeiter, Industrie, Streik, Arbeitersiedlung, Wohltätigkeit, Quäker, Kooperationen, Erziehung [Umerziehung], Menschenrechte",
@@ -8871,7 +8871,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 121, S. 7 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Technik, Fortschritt, Babylon,Hafen, Verkehr, Gegensätze [arm/reich, oben/unten], [New York als Monstrum], Landstrasse, Pioniermythos, Landwirtschaft, Industrie, Börse, Lichtreklame, Sprachmischung, Fordismus, Ford, Auto, Wirtschaftskrise, Arbeitslosgkeit, Dollarjagd, Zukunft",
@@ -8906,7 +8906,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/063",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -8950,7 +8950,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/064",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Stempel: Credit: from Black Star, New York",
 				"keywords": {
@@ -8994,7 +8994,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/068",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0223",
+				"textstufen": ["\"smallform_0223"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9038,7 +9038,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/069",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Unklar, ob mit BF 177 identisch",
 				"keywords": {
@@ -9082,7 +9082,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/070",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9126,7 +9126,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/071",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9170,7 +9170,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/072",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9214,7 +9214,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/073",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9258,7 +9258,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/074",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9302,7 +9302,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/075",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9346,7 +9346,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 243, Abendblatt , S. 1f. ",
-				"textstufen": "smallform_0215",
+				"textstufen": ["smallform_0215"],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9390,7 +9390,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Sonntags-Ausgabe, Nr. 253, S. 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9434,7 +9434,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 305, Abendblatt , S. 1f. ",
-				"textstufen": "smallform_0232",
+				"textstufen": ["smallform_0232"],
 				"series": "",
 				"comment": "\"Nahezu textgleich mit \"\"Baltisches Tagebuch V: Suomi - Land zwischen Ost und West\"\", Luzerner Tagblatt , Nr. 226, S. 9f. \"",
 				"keywords": {
@@ -9478,7 +9478,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 19, o.S. (Rubrik: Europäische Bilder)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9522,7 +9522,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 148, S. 9f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9566,7 +9566,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 160, S. 9f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9610,7 +9610,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 166, S. 9",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9654,7 +9654,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/062",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 208, S. 9f.",
-				"textstufen": "smallform_0231",
+				"textstufen": ["smallform_0231"],
 				"series": "",
 				"comment": "SLA: Dat.: year erschlossen. EZ: Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9677,7 +9677,12 @@
 			"entities": {},
 			"manuscript": {
 				"hasiiif": false,
-				"iiif_urls": []
+				"iiif_urls": [
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"
+				]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9698,7 +9703,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 208, S. 9f.",
-				"textstufen": "smallform_0230",
+				"textstufen": ["smallform_0230", "smallform_0006"],
 				"series": "",
 				"comment": "Sehr relevanter Brief: lettter_0288",
 				"keywords": {
@@ -9779,7 +9784,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 226, S. 9f. ",
-				"textstufen": "smallform_0225",
+				"textstufen": ["smallform_0225"],
 				"series": "",
 				"comment": "nahezu textgleich mit BF Nr. 177 (KAS 133)",
 				"keywords": {
@@ -9823,7 +9828,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 315, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9867,7 +9872,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 23, o.S. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9911,7 +9916,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/076",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Vgl. mit amerikanischen Publikationen: BF 203/BF 219",
 				"keywords": {
@@ -9955,7 +9960,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/077",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -9999,7 +10004,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/078",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10043,7 +10048,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/079",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10087,7 +10092,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/080",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "s Buch: Lorenz Saladin. Vgl. mit amerikanischen Publikationen: BF 203/BF 219",
 				"keywords": {
@@ -10131,7 +10136,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 41, S. 1308f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10175,7 +10180,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 44, Titelseite, S. 1378-1383",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fotos: Lorenz Saladin (Epic), bearbeitet von Dr. Annemarie Clark-Schwarzenbach",
 				"keywords": {
@@ -10219,7 +10224,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 38, S. 10",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Emigration, Präsidentenwahl, Vereinswesen, Freiheit, Motiv der Maschine, Nationalsozialismus, Konzentrationslager, Flucht, blinder Passagier, Schiffsreise, Pass / Papiere, Bürokratie",
@@ -10254,7 +10259,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 557, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "American dream, Kolonialismus, Architektur, Plantage, Universität, Bildung, Pionier, Sezessionskrieg, Sklaverei, Puritanismus, Share-cropper, Industrialisierung, Armut, Motiv der Landstrasse, Verkehr, Drugstore, Proletariat, Arbeiterbewegung, Ford, Fabrik, Kapitalismus, Rassismus, Auto, Zukunft",
@@ -10289,7 +10294,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 585, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Motiv der Strasse, American dream, Industrie, Raubbau, Armut, Landschaft, Überschwemmungen, Naturereignis, Technisierung, Arbeitersiedlung, Unterhaltungsindustrie, Mode / Kleidung, Drugstores, Fotografie, Werbung [Reklame], Motiv des Schatten, Elektrizität, Gegensätze, Reichtum, Tankstelle, Licht / Dunkelheit, Indianerin, Arbeitslosigkeit, Hunger, Auto, ",
@@ -10324,7 +10329,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 607, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Bergarbeiter, Arbeitersiedlung, Streik, Arbeiterorg / Arbeiterbewegung, Kommunismus, Arbeitslosigkeit, General store / Drugstore, Spiel, Swissness, Schweizer Einwanderer, Landwirtschaft, Hunger, Armut",
@@ -10359,7 +10364,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 43 (unter Annemarie Clark Schwarzenbach)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Rassismus, Tankstelle, Arbeiterbewegung, Bildung, Religion, Gewerkschaft, Asyl [Highlander Folk School], Fabriken, Industrie, Proletariat, Armut, Gerichtsprozesse, Korruption, Gefängnis, Frauen, Fordismus, Bedaux-System, Rationalisierung, Raubbau, Wiederaufforstung, Afroamerikaner:innen, Indianer ",
@@ -10394,7 +10399,7 @@
 				"pubPlace": "Argentinisches Tageblatt ",
 				"signature": "",
 				"pubDetails": "Jg. 49, Nr. 150294, S. 10",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Als Annemarie Clark. Bis 2011 unbekannt, bis es von Fähnders publiziert wurde. Laut ihm wahrscheinlich Nachdruck eines bisher ungefundenen Erstdrucks in der Nat.-Zeitung, da es sich um alle anderen Publikationen im Argentinischen Tageblatt um Nat.-Zeitungs-Nachdrucke handelt.",
 				"keywords": {
@@ -10438,7 +10443,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 45/46, S. 6 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Dr. A. Clark)",
 				"keywords": "Kommunismus, Sekte, Rassismus, Religion, Prosperität, Weltwirtschaftskrise, Baumwollsystem, Plantagen, Landwirtschaft, Technisierung, Sharecropper, Armut, Ernährung, Krankheit, Rassenvorurteil, Klassengegensatz, Fotografie, Proletariat, Lynchjustiz, Industrie, Pioniere, Fabriken, Kapitalismus, Technik, Gegensätze",
@@ -10473,7 +10478,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/066",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Beil.: Bildbeschriftungen zu \"\"Petsori\"\" (Estland) (1 Bl., Ts.)\"",
 				"keywords": {
@@ -10517,7 +10522,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/065",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"SLA: Baltische Staaten",
 				"keywords": " Stempel: Credit: from Black Star",
@@ -10552,7 +10557,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/067",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Bl.6 ist in zwei verschiedenen Fassungen vorhanden",
 				"keywords": {
@@ -10596,7 +10601,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/082",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10640,7 +10645,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/090",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Unklar, ob integral abgedruckt. Vgl. auch BF 202",
 				"keywords": {
@@ -10684,7 +10689,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/081",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10728,7 +10733,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/091",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Enthält: Besinnung auf Thomas Jefferson",
 				"keywords": " Besinnung auf den Bauernstand",
@@ -10763,7 +10768,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/092",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Beil: Bildbeschriftungen zu \"\"Kinder ohne Uniform\"\"\"",
 				"keywords": {
@@ -10807,7 +10812,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/093",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Beil.: Photos zu \"\"ein amerikanisches Drama\"\", 2 Bl., hs.\"",
 				"keywords": {
@@ -10851,7 +10856,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/094",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Zusfassung von Raper, Arthur F. - Preface to peasantry. - Chapel Hill : The University of N. Carolina Press, 1936",
 				"keywords": {
@@ -10895,7 +10900,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/095",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10939,7 +10944,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/096",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -10983,7 +10988,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/097",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11027,7 +11032,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/098",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11071,7 +11076,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/100",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Wahrscheinlich nur Notizen",
 				"keywords": {
@@ -11115,7 +11120,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/101",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Ev. Ausformulierung von SLA A1-098?",
 				"keywords": {
@@ -11159,7 +11164,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 27, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Baumwolle, Weltwirtschaftskrise, boll weevil, Plantage, Sharecroppers, Sezessionskrieg, Sklaverei, Kapitalismus, Spekulation, Ressourcen, Landwirtschaft, Armut, Spekulation",
@@ -11194,7 +11199,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 41, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Strasse, Motiv des Autos, Landschaft, Landwirtschaft, Baumwollernete, Armut, Plantage, Gastfreundschaft, Fremde, Misstrauen, Bürgerkrieg, Weltwirtschaftkrise, Sklaverei, Sharecropping, Rassismus, weisse Hegemonie, traditionale Kultur, Raubbau [Zerstörung der Wälder], Landschaftszerstörung, Vergangenheit, Zukunft, Proletariat",
@@ -11229,7 +11234,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 1, o.S. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Plantage, Industrie, Landwirtschaft, Misstrauen [gegenüber fremden Frauen], Tankstelle, Verschuldung, Streik, Gewerkschaft, Arbeiterorg, Kinderarbeit, Armut, Hunger, Elend, Motiv des Autos",
@@ -11264,7 +11269,7 @@
 				"pubPlace": "Asia",
 				"signature": "",
 				"pubDetails": "S. 91-97 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Fotografien von Lorenz Saladin. (die Seiten 90 u. 96, 97 u. 98 enthalten 9 Fotos mit Legenden von A.S.) (6)",
 				"keywords": {
@@ -11308,7 +11313,9 @@
 				"pubPlace": "Internationale Literatur. Deutsche Blätter 8",
 				"signature": "",
 				"pubDetails": "\"Nr. 2 (Febr.), S. 149-151 (unter C. [sie] Clark",
-				"textstufen": " letzter Teil des Typoskripts „Kleine Begegnungen in Deutschland (Mai 1937)\"\"\"",
+				"textstufen": [
+					" letzter Teil des Typoskripts „Kleine Begegnungen in Deutschland (Mai 1937)\"\"\""
+				],
 				"series": "smallform_0215",
 				"comment": "",
 				"keywords": "Sehr erzählerischer Bericht, beginnt wie eine Dorfgeschichte. Vermutlich über Begegnungen auf der Hinreise der Moskaureise 1937 (die offenbar durch Deutschland ging!)",
@@ -11343,7 +11350,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 11, S. 300f. (7)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11387,7 +11394,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 12, S. 332",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(Bildbericht: eine Fotografie mit Legende) [im Artikel \"\"Die Treuen im Auslande = La voix des Suisses de l'étranger\"\"]. Ungezeichnet.\"",
 				"keywords": "Auslandschweizer, Swissness,[Amerikaschweizer][Erster Weltkrieg, General Mobilmachung] ",
@@ -11422,7 +11429,7 @@
 				"pubPlace": "ABC",
 				"signature": "",
 				"pubDetails": "Nr. 6, o.S. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C.)",
 				"keywords": "Justizsystem, Gerichtsverhandlung, Industrie, Arbeitsbedingungen, Bildung, Doppelbelastung der Arbeiterinnen, Bedaux-System, Rationalisierung, Arbeiterorg, Arbeiterbewegung, Streik",
@@ -11457,7 +11464,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/99",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0274",
+				"textstufen": ["smallform_0274"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11501,7 +11508,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 231, S. 9 ",
-				"textstufen": "smallform_0273",
+				"textstufen": ["smallform_0273"],
 				"series": "",
 				"comment": "",
 				"keywords": "Gerichtsverhandlung, Prozess, Rassismus, Vergewaltigung, Todesstrafe, Justiz, Arbeitslosigkeit, Stigmatisierung, Lynchmord [Anti-Lynch-Gesetz], Strafvollzug [Kettensträflings-Gefängnisse], Plantagen, Ernährung, Krankheit, Sharecropper, Bildung, Kinderarbeit, Verschuldung, Bürgerkrieg, Sklaverei, soziale Klasse, Eurozentrismus, Proletariat, Seuche, Denkmal, Industrialisierung, Fabrik, Misstrauen [gegenüber AS], Kinderarbeit, Bedaux-System, Streiks, Gewerkschaft, Marktabhängigkeit, Ausbeutung [Geschichte der Ausbeutung], weisse Hegemonie, Kollektivsiedlung",
@@ -11536,7 +11543,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/103",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0276",
+				"textstufen": ["smallform_0276"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11580,7 +11587,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 98, S. 7f.",
-				"textstufen": "smallform_0275",
+				"textstufen": ["smallform_0275"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11624,7 +11631,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 236, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11668,7 +11675,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 22, S. 666",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -11712,7 +11719,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 128, 1. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Dr. A. Clark-Schwarzenbach)",
 				"keywords": "Optimismus, Weltwirtschaftskrise, Prosperität, Arbeitslosigkeit, Spekulation, Landschaftszerstörung, Verschwendung, Naturkatastrophe, Pioniere, Eroberung, Emigration, Tellerwäscher-Mythos,Desertifikation, Demokratie, Börse, Landwirtschaft, Kapitalismus, Radikalismus, soziale Klasse, Pessimismus, Jugend, Gegensätze",
@@ -11747,7 +11754,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 131, 1. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Dr. A. Clark-Schwarzenbach)",
 				"keywords": "Industrie, Sklaverei, Plantage, Verschuldung, Proletariat, Systemkritik, Börsekrise, Weltwirtschaftskrise, Elend, Bürgerkrieg [Sezessionskrieg], Fabrik, Denkmal, Seuche [Baumwollwurm], Arbeitslosigkeit, Fordismus, Klassenbewusstsein, Prosperität, Rassismus, Industrialisierung, Klassenkampf, Landwirtschaft",
@@ -11782,7 +11789,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 136, 1. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Landwirtschaft, Plantage, Naturkatastrophen, Landnutzung, Landschaftszerstörung, Verschwendung, Raubbau, Abholzung, Überschwemmung, Trockenheit, Desertifikation, Krankheit, Wohltätigkeit, Lebensgrundlage, Ernährung, Umsiedlungen, Wiederaufforstung, Industrialisierung",
@@ -11817,7 +11824,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 137, 2. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Bildung, Universität, Motiv der Landstrasse, Dschungel, traditionale Kultur, Weltwirtschaftskrise, Antibellum-Kultur, Armut, Landwirtschaft, Infratsruktur, Gegensätze, Staudamm, Elektrizitätsgewinnung, Technisierung, Fortschritt",
@@ -11852,7 +11859,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 139, 3. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Kultur [amerikanische Kultur], Landschaft, Film, [Dokumentarfilm], Fluss, Heimat, Weltwirtschaftskrise, Topos der Kulturlosigkeit, Reichtum, Multikulturalität, Patriotismus, traditionale Kultur, Vergangenheitskonstruktion, Exotismus, Theater [Unterhaltungskultur?], Rassismus, Bürgerkrieg, Weltwirtschaftskrise, Prosperität, Arbeitslosigkeit, Verschwendung, Ausbeutung, Landschaftszerstörung, Proletariat",
@@ -11887,7 +11894,7 @@
 				"pubPlace": "Fotoreportage",
 				"signature": "ZI",
 				"pubDetails": "",
-				"textstufen": "Nr. 24, S. 703-707",
+				"textstufen": ["Nr. 24, S. 703-707"],
 				"series": "",
 				"comment": "",
 				"keywords": "Fotots (teilweise?) von Barbara Wright",
@@ -11922,7 +11929,7 @@
 				"pubPlace": "Atlantis. Länder/Völker/Reise 10",
 				"signature": "",
 				"pubDetails": "Atlantis. Länder/Völker/Reise 10, 1938, Nr. 8 (August), S. 421-430",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Dr. A. Clark)",
 				"keywords": {
@@ -11966,7 +11973,7 @@
 				"pubPlace": "The Geographical Magazine",
 				"signature": "",
 				"pubDetails": "Vol. 7, Nr. 5, S. 343-353",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Weitgehend wortgetreue Übersetzung von smallform_286 mit Ausnahme eines zusätzlichen Absatzes, in dem sie Saladin vom Vorwurf verteidigt, von der UDSSR einen Spionageauftrag in der Grenzregion erhalten zu haben",
 				"keywords": " sowie des Schlusses, in dem die Genossen zu Wort kommen. \"",
@@ -12001,7 +12008,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 411, Abendblatt , S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Kurzgeschichte über Frau eines Offiziers im Nahen Osten, Einsamkeit und Heimweh.",
 				"keywords": {
@@ -12045,7 +12052,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 455, S. 3f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Vermutlich identisch mit BF 224/SLA 105",
 				"keywords": {
@@ -12089,7 +12096,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 41, S. 1264f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[Teil des Artikels \"\"Tagebuch der europäischen Politik vom 1. August bis 1. Oktober 1938\"\"]. Unklar, welche der Fotografien im Artikel \"\"Tagebuch der europäischen Politik vom 1. August bis 1. Oktober 1938\"\" von AS stammen, einige aus der Tschechoslowakei dürften es sein, müssen mit AS eigenen Fotografien abgeglichen werden. \"",
 				"keywords": {
@@ -12133,7 +12140,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 266, S. 17 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Rezension von Dr. O. Strasser: Europa von Morgen",
 				"keywords": {
@@ -12177,7 +12184,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/104",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: hs. Bem. auf Englisch",
 				"keywords": {
@@ -12221,7 +12228,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/102",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[*Österreich gründlich verändert (hs.)",
 				"keywords": " Österreich wartet auf den neuen Andreas Hofer (Titel durchgestrichen)] 1) nach Washington",
@@ -12256,7 +12263,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/105",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Dat.: year erschlossen – vermutlich publiziert als «Journalisten in Prag», KAS 167c",
 				"keywords": {
@@ -12300,7 +12307,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/106",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -12344,7 +12351,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/107",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beil.: Beschriftungen Photo 10-27: Photos: A. Clark, E. Auerbach, u. andere. 2 Bl., Ts.",
 				"keywords": {
@@ -12388,7 +12395,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/108",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Vermutlich Rezension",
 				"keywords": {
@@ -12432,7 +12439,7 @@
 				"pubPlace": "SLA",
 				"signature": "",
 				"pubDetails": "-",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Posthume Übersetzung von SLA 102 (smallform_0292)- von Fähnders als eigenständige Schrift aufgeführt, da für die Übersetzung der durchgestrichene Titel zur Übersetzung verwendet wurde.",
 				"keywords": {
@@ -12476,7 +12483,7 @@
 				"pubPlace": "Annabelle",
 				"signature": "",
 				"pubDetails": "2, 1939, Nr. 11 (Jan.), S. 24f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Erste Veröffentlichung in Annabelle?",
 				"keywords": {
@@ -12520,7 +12527,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 270, S. 5",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Poetologische Überlegungen Dichter/Staat",
 				"keywords": {
@@ -12564,7 +12571,7 @@
 				"pubPlace": "National-Zeitung (Die Seite der Frau)",
 				"signature": "",
 				"pubDetails": "Nr. 38, o.S.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Frauenrolle, Sport, Reisen, Reiseliteratur, Journalismus, Jugend, Ästhetik, Existenzphilosophie",
@@ -12599,7 +12606,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 346, Abendausgabe, Bl. 7",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -12643,7 +12650,7 @@
 				"pubPlace": "Annabelle",
 				"signature": "",
 				"pubDetails": "2, 1939, Nr. 13 (März), S. 12f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -12687,7 +12694,7 @@
 				"pubPlace": "Mass und Wert",
 				"signature": "",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Armut, Landwirtschaft, Bürgerkrieg, Industrialisierung, Gegensatz, Optimismus, American dream, Plantage, Proletariat, Freiheit, weisse Hegemonie, Fremdheit, Ausländer, Misstrauen, Korruption, Sharecropping, Sklaverei, Degeneration, Bildung, Krankheit, Verschuldung, Ernährung, Segregation, Rassismus, Lynchjustiz, Sekte, soziale Klasse, Gewerkschaft, New Deal, Seuche, Umsiedlung, kollektive Landwirtschaft, Ausbeutung, Arbeiterbewegung, Kinderarbeit, Revolution",
@@ -12722,7 +12729,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/117",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0305",
+				"textstufen": ["smallform_0305"],
 				"series": "",
 				"comment": "\"SLA: Original an National-Zeitg! Kopie z. Nachdruck an Press-Service (hs.)",
 				"keywords": " s. auch: Vom Okzident zum Orient\"",
@@ -12757,7 +12764,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 312, Abendblatt , S. 1 ",
-				"textstufen": "smallform_0304",
+				"textstufen": ["smallform_0304"],
 				"series": "",
 				"comment": "",
 				"keywords": "Modernisierung, Technik, Auto, Tradition, Geopolitik",
@@ -12792,7 +12799,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/109",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0307",
+				"textstufen": ["smallform_0307"],
 				"series": "",
 				"comment": "SLA: Original an National-Zeitg. Kopie zum Nachdruck für Press Service (hs.)",
 				"keywords": {
@@ -12836,7 +12843,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 326, Abendblatt , S. 1",
-				"textstufen": "smallform_0306",
+				"textstufen": ["smallform_0306"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -12880,7 +12887,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/119",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Press-Service Zürich (Stempel). Zusfassung der Artikel: \"\"Gespräch mit einem jungen Türken\"\" und \"\"Herat, am ersten August 1939.\"\" -> Heisst Zusammenfassung ev. nicht eher Zusammenstellung?\"",
 				"keywords": {
@@ -12924,7 +12931,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 384, Abendblatt , S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -12968,7 +12975,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 400, Abendblatt , S. 1f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13012,7 +13019,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 438, Abendblatt , S. 3 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13056,7 +13063,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 40, S. 1072f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Fotografien von Ella Maillart und/ oder von Annemarie Clark-Schwarzenbach)",
 				"keywords": {
@@ -13100,7 +13107,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 42, S. 1116f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Fotografien von Ella Maillart und/oder Annemarie Clark-Schwarzenbach) ",
 				"keywords": {
@@ -13144,7 +13151,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/110",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0315",
+				"textstufen": ["smallform_0315"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13188,7 +13195,7 @@
 				"pubPlace": "Der Bund",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Abendausgabe, Nr. 509, S. 1f. ",
-				"textstufen": "smallform_0314",
+				"textstufen": ["smallform_0314"],
 				"series": "",
 				"comment": "\"Erste Publikation in \"\"Der Bund\"\"\"",
 				"keywords": "Reisen, Schiffahrt, Auto, Natur, Baudenkmal, Handel",
@@ -13223,7 +13230,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/111",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0317",
+				"textstufen": ["smallform_0317"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13267,7 +13274,7 @@
 				"pubPlace": "Der Bund",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 511, S. 1f.",
-				"textstufen": "smallform_0316",
+				"textstufen": ["smallform_0316"],
 				"series": "",
 				"comment": "(ungezeichnet)",
 				"keywords": "Reisen, Auto, Natur, Religion, Modernisierung, Fotografie, Baudenkmal",
@@ -13302,7 +13309,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/112",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0319",
+				"textstufen": ["smallform_0319"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13346,7 +13353,7 @@
 				"pubPlace": "Der Bund",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 513 (4)",
-				"textstufen": "smallform_0318",
+				"textstufen": ["smallform_0318"],
 				"series": "",
 				"comment": "",
 				"keywords": "Reisen, Natur, Baudenkmal, Orientalismus, Geopolitik",
@@ -13381,7 +13388,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/124",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0321",
+				"textstufen": ["smallform_0321"],
 				"series": "",
 				"comment": "SLA: Nat.Ztg. Okt. (hs.)",
 				"keywords": {
@@ -13425,7 +13432,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 508, Abendblatt , S. 2f. ",
-				"textstufen": "smallform_0320",
+				"textstufen": ["smallform_0320"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13469,7 +13476,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/125",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0323",
+				"textstufen": ["smallform_0323"],
 				"series": "",
 				"comment": "SLA: Bem.: Weltwoche, 20.X. abgeschickt (hs). Dat.: year erschlossen",
 				"keywords": {
@@ -13513,7 +13520,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 316, S. 9, 13 ",
-				"textstufen": "smallform_0322",
+				"textstufen": ["smallform_0322"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13557,7 +13564,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/126",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0325",
+				"textstufen": ["smallform_0325"],
 				"series": "",
 				"comment": "SLA: Nat.Ztg. (hs.)",
 				"keywords": {
@@ -13601,7 +13608,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 560, Abendblatt , S. 2f.",
-				"textstufen": "smallform_0324",
+				"textstufen": ["smallform_0324"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13645,7 +13652,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/114",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0327",
+				"textstufen": ["smallform_0327"],
 				"series": "",
 				"comment": "SLA: Bem.: (Datum durchgestrichen). Dat.: year erschlossen",
 				"keywords": {
@@ -13689,7 +13696,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 572, Abendblatt , S. 2f. ",
-				"textstufen": "smallform_0326",
+				"textstufen": ["smallform_0326"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13733,7 +13740,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/138",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0329",
+				"textstufen": ["smallform_0329"],
 				"series": "",
 				"comment": "SLA: Serie u. Text ebenfalls der Z.J. vorgelegt (hs.). Beil.: Bildbeschriftungen, 1 Bl., Ts. [gemeint ist ev. die Zürcher Illustrierte]",
 				"keywords": {
@@ -13777,7 +13784,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 599, Abendblatt , S. 2f. ",
-				"textstufen": "smallform_0328",
+				"textstufen": ["smallform_0328"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13821,7 +13828,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/116",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13865,7 +13872,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/119",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"SLA: Original an Herrn Gasser, \"\"Weltwoche\"\" (hs. mit Unterschrift von AS)",
 				"keywords": " s. auch: Vom Okzident zum Orient\"",
@@ -13900,7 +13907,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/123",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -13944,7 +13951,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/121",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Bildbeschriftungen zu: Afghanistan - ein Land ohne Frauen?(1 Bl., Ts.), 1,1 Bl. Ts. - 2 Ex. (Orig. u. Kop. m. hs. Erg.)",
 				"keywords": {
@@ -13988,7 +13995,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/127",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Bem.: NZZ, 20. Nov. abgesch. (hs.). Dat.: year erschlossen",
 				"keywords": {
@@ -14032,7 +14039,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/133",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -14076,7 +14083,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/135",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"hs.: 10 Photobilder gr. + kl. Format bezeichnet. Bildtexte zu \"\"Karakuli\"\" 1, 1 Bl. - 2 Ex. (Orig. u. Kop. m. hs. Erg.)\"",
 				"keywords": {
@@ -14120,7 +14127,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/136",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"siehe: Die vierzig Säulen der Erinnerung: der persische Gartenteich",
 				"keywords": " alter Titel: Die Steppe -> Kann wohl kaum mit Die Steppe identisch sein, da viel kürzer. \"",
@@ -14155,7 +14162,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/138",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -14199,7 +14206,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/140",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beil.: Bildunterschriften, 1 Bl., Ts.",
 				"keywords": {
@@ -14243,7 +14250,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/142",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beil.: Bildbeschriftungen, 1 Bl., Ts., hs: Aufnahmen sämtliche von mir, Film 34",
 				"keywords": {
@@ -14287,7 +14294,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/144",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Original: NZZ (direkt) (hs.)",
 				"keywords": " I. Abzug\"",
@@ -14322,7 +14329,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/146",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Original: Weltwoche direkt (hs.)",
 				"keywords": " 1. Abzug -> Wirklich unveröffentlicht?\"",
@@ -14357,7 +14364,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/19",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"] Zum Aufbau der Erzählsammlung \"\"Die Vierzig Säulen der Erinnerung\"\": SLA: Die 2. Geschichte « Therapia », ursprünglich dazugehörend, wurde später gestrichen. Für die Geschichten 7, 8 und 9 existieren 1. Fassungen, die z.T. unvollständig und mit Korr. versehen sind.\"",
 				"keywords": {
@@ -14401,7 +14408,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/20",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0396",
+				"textstufen": ["smallform_0396"],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"] Nachträglich gestrichen. Veröffentlicht in der Nat. Zeitung 1940.\"",
 				"keywords": {
@@ -14445,7 +14452,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/21",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14489,7 +14496,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/22",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14533,7 +14540,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/23",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14577,7 +14584,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/24",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"] ",
 				"keywords": {
@@ -14621,7 +14628,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/25",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14665,7 +14672,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/26",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14709,7 +14716,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/27",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14753,7 +14760,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/28",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]",
 				"keywords": {
@@ -14797,7 +14804,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/29",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[«Die vierzig Säulen der Erinnerung\"\"]\"",
 				"keywords": {
@@ -14841,7 +14848,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/134",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -14885,7 +14892,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 1, S. 4f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Fotografien von Annemarie Clark-Schwarzenbach und/ oder Ella Maillart)(gezeichnet Ella Maillart)",
 				"keywords": {
@@ -14929,7 +14936,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/150",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Original: Thurgauer Zeitung (hs.)",
 				"keywords": " I. Abdruck -> Ev. dort abgedruckt unter dem Titel «Pufferstaat Afghanistan» (BF 270)? Siehe auch SLA A1-159 – nur eine Version ist zu publizieren.\"",
@@ -14964,7 +14971,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/153",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "BESCHÄDIGT!!",
 				"keywords": {
@@ -15008,7 +15015,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/154",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15052,7 +15059,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/155",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Datum von Hand durchgestrichen",
 				"keywords": {
@@ -15096,7 +15103,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/157",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15140,7 +15147,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 6, S. 126f. u. 140",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Fotografien von Annemarie Clark Schwarzenbach und/ oder Ella Maillart)(gezeichnet Ella Maillart)",
 				"keywords": {
@@ -15184,7 +15191,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/130",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0363",
+				"textstufen": ["smallform_0363"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15228,7 +15235,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 29, Abendblatt , S. 2f. ",
-				"textstufen": "smallform_0362",
+				"textstufen": ["smallform_0362"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15272,7 +15279,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr.17, 2. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15316,7 +15323,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 42, Morgenblatt , S. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "->Sonderbarerweise ist in anderen Zusammenhängen von dieser Reise die Rede, aber ohne Schiffsunglück",
 				"keywords": {
@@ -15360,7 +15367,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/152",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0367",
+				"textstufen": ["smallform_0367"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15404,7 +15411,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 325, S. 7 ",
-				"textstufen": "smallform_0366",
+				"textstufen": ["smallform_0366"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15448,7 +15455,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 59, Abendblatt , S. 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15492,7 +15499,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/151",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0370",
+				"textstufen": ["smallform_0370"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15536,7 +15543,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 71, Abendblatt , S. 2 ",
-				"textstufen": "smallform_0369",
+				"textstufen": ["smallform_0369"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15580,7 +15587,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/128",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0372",
+				"textstufen": ["\"smallform_0372"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15624,7 +15631,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/129",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0371",
+				"textstufen": ["\"smallform_0371"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15668,7 +15675,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "Nr. 228, Mittagsausgabe, Bl. 3 ",
-				"textstufen": "\"smallform_0371",
+				"textstufen": ["\"smallform_0371"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15712,7 +15719,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/132",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0375",
+				"textstufen": ["smallform_0375"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15756,7 +15763,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 327, S. 11 ",
-				"textstufen": "smallform_0374",
+				"textstufen": ["smallform_0374"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15800,7 +15807,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 4, Frauenblatt, S. 7 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15844,7 +15851,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/149",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0378",
+				"textstufen": ["smallform_0378"],
 				"series": "",
 				"comment": "\"SLA: Original: Thurgauer Ztg. (hs.)",
 				"keywords": " 1. Abzug\"",
@@ -15879,7 +15886,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 41, 2. Bl. , S. 5 (5)",
-				"textstufen": "smallform_0377",
+				"textstufen": ["smallform_0377"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -15923,7 +15930,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/159",
 				"pubDetails": "3, 3, 3 Bl., Ts. - 3 Ex. (Kop.n)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Korrespondenz des « Press Service Zürich ». Überarb. Fassung von: Aktuelles Afghanistan",
 				"keywords": {
@@ -15967,7 +15974,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/143",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0381",
+				"textstufen": ["smallform_0381"],
 				"series": "",
 				"comment": "\"SLA: Original: Weltwoche (direkt) (hs.)",
 				"keywords": " I. Abzug\"",
@@ -16002,7 +16009,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 328, S. 9",
-				"textstufen": "smallform_0380",
+				"textstufen": ["smallform_0380"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16046,7 +16053,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/147",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0383",
+				"textstufen": ["smallform_0383"],
 				"series": "",
 				"comment": "SLA: Erschienen als Leitartikel in der National-Zeitung, Freitag 23. Febr. [1940], Morgenblatt (hs. u. Ts.)",
 				"keywords": {
@@ -16090,7 +16097,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 90, Morgenblatt , S. 1 ",
-				"textstufen": "smallform_0382",
+				"textstufen": ["smallform_0382"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16134,7 +16141,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/160",
 				"pubDetails": "1 Bl., Ts. (Kop.)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Original: Zürcher Illustrierte (direkt)",
 				"keywords": " I. Abzug (hs.). Beil.: Bildbeschriftungen, 1 Bl. Ts.\"",
@@ -16169,7 +16176,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/113",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0386",
+				"textstufen": ["smallform_0386"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16213,7 +16220,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 101, Abendblatt , S. 2",
-				"textstufen": "smallform_0385",
+				"textstufen": ["smallform_0385"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16257,7 +16264,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 52, Bl. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Annemarie Clark Schwarzenbach)",
 				"keywords": {
@@ -16301,7 +16308,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/147",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0389",
+				"textstufen": ["smallform_0389"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16345,7 +16352,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 330, S. 17 ",
-				"textstufen": "smallform_0388",
+				"textstufen": ["smallform_0388"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16389,7 +16396,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/130",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0391",
+				"textstufen": ["smallform_0391"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16433,7 +16440,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 125, Abendblatt, S. 2",
-				"textstufen": "smallform_0390",
+				"textstufen": ["smallform_0390"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16477,7 +16484,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/163",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Texte zu vom Press-Service getroffenen Auswahl von Photos aus Indien -> Ev. Verwendung in Bildberichten",
 				"keywords": {
@@ -16521,7 +16528,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 11, S. 284f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Photos Annemarie Clark und Ella Maillart",
 				"keywords": {
@@ -16565,7 +16572,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/145",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0395",
+				"textstufen": ["smallform_0395"],
 				"series": "",
 				"comment": "\"SLA: Wortlaut gehört der Z.J. (hs.)",
 				"keywords": " Original: Zürcher Illustrierte (direkt), siehe: Vorderasiatische Auto-Anekdoten / ZI\"",
@@ -16600,7 +16607,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 13, S. 316f.",
-				"textstufen": "smallform_0394",
+				"textstufen": ["smallform_0394"],
 				"series": "",
 				"comment": "Photos Annemarie Clark und Ella Maillart",
 				"keywords": {
@@ -16644,7 +16651,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 154, Abendblatt , S. 2 (5)",
-				"textstufen": "smallform_0344",
+				"textstufen": ["smallform_0344"],
 				"series": "",
 				"comment": "A-2/20 (Die vierzig Säulen der Erinnerung)",
 				"keywords": {
@@ -16688,7 +16695,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 15, S. 396f. (5)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -16732,7 +16739,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/117",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0399",
+				"textstufen": ["smallform_0399"],
 				"series": "",
 				"comment": "\"SLA: Nat.Zeitung erschienen (hs.)",
 				"keywords": {
@@ -16776,7 +16783,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Sonntagsausgabe, Nr. 172, S. 9 (5)",
-				"textstufen": "smallform_0398",
+				"textstufen": ["smallform_0398"],
 				"series": "",
 				"comment": "\"A-1/117",
 				"keywords": {
@@ -16820,7 +16827,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/122",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0401",
+				"textstufen": ["smallform_0401"],
 				"series": "",
 				"comment": "EZ: Grundlage für Nat. Zeitung vom 28.4.1940",
 				"keywords": {
@@ -16864,7 +16871,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Sonntagsausgabe, Nr. 196, S. 9",
-				"textstufen": "smallform_0400",
+				"textstufen": ["smallform_0400"],
 				"series": "",
 				"comment": "A-1/165",
 				"keywords": {
@@ -16908,7 +16915,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/165",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0403",
+				"textstufen": ["smallform_0403"],
 				"series": "",
 				"comment": "\"SLA: Beil.: Kurzfassung (s. \"\"Die Schweiz Asiens: Afghanistan, Original: Zürcher Illustrierte direkt, 1. Abzug) u. Bildbeschriftungen (1 Bl., Kop. Wortlaut gehört der Z.I.). -> Datierung des SLA-Typoskripts kann nicht stimmen, da der Bildbericht davor erschienen ist.\"",
 				"keywords": {
@@ -16952,7 +16959,7 @@
 				"pubPlace": "Schweizer Radio-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 17, S. 1f. (unter A.C)",
-				"textstufen": "smallform_0402",
+				"textstufen": ["smallform_0402"],
 				"series": "",
 				"comment": "Phot. A. Clark und Ella Maillart (Bildbericht).",
 				"keywords": {
@@ -16996,7 +17003,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/164",
 				"pubDetails": "13 Bl., Ts. (Kop.)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Teil des Afghanistan-Tagebuchs ? (siehe auch SLA 214) Eher nicht, da keine Tagebuchform, sondern Rückblick auf die Zeit in Afghanistan mit politischen und kulturellen Betrachtungen.",
 				"keywords": {
@@ -17040,7 +17047,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/141",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0406",
+				"textstufen": ["\"smallform_0406"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17084,7 +17091,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/161",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0405",
+				"textstufen": ["\"smallform_0405"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17128,7 +17135,7 @@
 				"pubPlace": "AUTO (ACS)",
 				"signature": "",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "Nr. 9/10 (6)",
-				"textstufen": "\"smallform_0405",
+				"textstufen": ["\"smallform_0405"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17172,7 +17179,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/120",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0409",
+				"textstufen": ["smallform_0409"],
 				"series": "",
 				"comment": "SLA: NZZ (hs.)",
 				"keywords": {
@@ -17216,7 +17223,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 115, Bl. 2 ",
-				"textstufen": "smallform_0408",
+				"textstufen": ["smallform_0408"],
 				"series": "",
 				"comment": "(unter Annemarie Clark Schwarzenbach)",
 				"keywords": {
@@ -17260,7 +17267,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/137",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0411",
+				"textstufen": ["smallform_0411"],
 				"series": "",
 				"comment": "SLA: NZZ (hs.)",
 				"keywords": {
@@ -17304,7 +17311,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 115, S. 10 ",
-				"textstufen": "smallform_0410",
+				"textstufen": ["smallform_0410"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17348,7 +17355,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/166",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0413",
+				"textstufen": ["smallform_0413"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17392,7 +17399,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 230, Abendblatt, S. 2 ",
-				"textstufen": "smallform_0412",
+				"textstufen": ["smallform_0412"],
 				"series": "",
 				"comment": "A-1/166",
 				"keywords": {
@@ -17436,7 +17443,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 121, Bl. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C.)",
 				"keywords": "Schiffsreise, Zweiter Weltkrieg, Entfernung [hier: zeitlich + räumlich], Landschaft, Vernetzungen [Motiv der Strasse? > Wasserstrasse/Kanäle], Reise, Heimat, Furcht, Motiv des Schattens",
@@ -17471,7 +17478,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 22, S. 582",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17515,7 +17522,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 22, S. 598",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"1 Fotografie von Annemarie Schwarzenbach [Teil der \"\"Endseiten\"\"] . 1 Bild u. Legende (ungezeichnet)\"",
 				"keywords": "Weltausstellung, Swissness, traditionalle Kultur",
@@ -17550,7 +17557,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 131, S. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Dr. A.C.)",
 				"keywords": "Aufrüstung, Zweiter Weltkrieg, Rüstungsindustrie, Rüstungsausgaben, Arbeitskräftemangel, Präsidentenwahl, Presse, New Deal, Isolationismus, Demokratie, Kriegseintritt, Verteidigung",
@@ -17585,7 +17592,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/167",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Artikel- und Photoliste – wichtig!",
 				"keywords": {
@@ -17629,7 +17636,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 308, Abendblatt , S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Weltausstellung, Unterhaltungsindustrie [Schiessbuden, Feuerwerk], Swissness, traditionale Kultur, Gefangenschaft, Unfreiheit [Motiv des gefangenen Pandas], Krieg, Aufrüstung, Verteidigung, Polemik, Demokratie, Kommunismus, Antisemitismus, Jugend, Zukunft, Journalismus [Schreibsituation], ",
@@ -17664,7 +17671,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "Sonntagsausgabe Nr. 310, S. 5",
-				"textstufen": "\"smallform_0443",
+				"textstufen": ["\"smallform_0443"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17708,7 +17715,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 344, Abendblatt , S. 2f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Distanzen, Landschaft, Tourismus, romantische Landschaftsbeschreibung, Natur, Wildnis, Endlosigkeit, Insel, Idylle, Strasse, Heimat, Fremdheit, Gegensätze, Norden-Süden, Armut, Reichtum, Heuchlerei, Wohltätigkeit, [Passprobleme] Gefangenschaft, Exil, Hoffnung",
@@ -17743,7 +17750,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 30, S. 820 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht: eine Fotografie) [Rückseite] (unter Dr. A. Clark)",
 				"keywords": "schwarz-weiss, Gegensätze, Rassismus, weisse Hegemonie, Zweiter Weltkrieg, Bombardierung, Schiffsreise",
@@ -17778,7 +17785,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 350, S. 3 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A. C.-S.)",
 				"keywords": "Afroamerikaner:in, Rassismus?, Tourismus, yeareszeiten, Zivilisation, Zweiter Weltkrieg, Hoffnungslosigkeit, Idylle, Frieden, traditionale Kultur",
@@ -17813,7 +17820,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 354, Abendblatt , S. 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Hotel, Tourismus, Archäologie, Weltreise, Grossstadt [Vergleich mit NY], Haustier, Hund, Topos des wahren Reisenden [opp. zu Vergmügungsreisen]",
@@ -17848,7 +17855,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 32, S. 869 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"EZ: 'Nur' Bildunterschrift. (mit einem Foto von Ella Maillart",
 				"keywords": " ungezeichnet)\"",
@@ -17883,7 +17890,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 399, Abendblatt , Titelseite ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Zweiter Weltkrieg, Präsidentenwahl, Rüstungsprogramm, Isolationismus, Presse, Demokratie, Welthandel, Imperialismus, Kapitalismus, Totalitarismus, Nationalsozialismus",
@@ -17918,7 +17925,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Bl. 3, Mittagsausgabe, Bl. 3",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -17962,7 +17969,7 @@
 				"pubPlace": "The Living Age 1940",
 				"signature": "",
 				"pubDetails": "Vol. 358 (Aug.), S. 577-581",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Annemarie Clark Schwarzenbach)",
 				"keywords": {
@@ -18006,7 +18013,7 @@
 				"pubPlace": "The Geographical Magazine",
 				"signature": "",
 				"pubDetails": "Vol. 11, Nr. 5, S. 326-341 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(mit 8 Bildern von A. Clarac-Schwarzenbach u. 2 von Ella Maillart sowie weiteren von JCA Johnson und Myrtle Winter)",
 				"keywords": {
@@ -18050,7 +18057,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 415, Abendblatt , S. 2f. ",
-				"textstufen": "smallform_0601",
+				"textstufen": ["smallform_0601"],
 				"series": "",
 				"comment": "Storrer 2-B-Schwa (5)",
 				"keywords": "Erinnerung, Kindheit, Heimat, Landschaft, Motiv der Namen, Idylle",
@@ -18085,7 +18092,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 211, Bl. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C)",
 				"keywords": "Insel, Tourismus, Touristenseason, Infrastruktur, Fischerei, Idylle, Gärten, Landschaft, Moor, Motiv der Weite [Unendlichkeit], Reichtum, Armut, Tiere, Melancholie",
@@ -18120,7 +18127,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"pubDetails": "Nr. 215, S. 5 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "amerikanische Literatur, Demokratie, Diktatur, Presse, Journalismus, Nationalsozialismus, Motiv der Strasse, Auto, Krieg",
@@ -18155,7 +18162,7 @@
 				"pubPlace": "",
 				"signature": "A-1/156",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0434",
+				"textstufen": ["smallform_0434"],
 				"series": "",
 				"comment": "SLA: Luz. [Tagblatt ] (hs.)",
 				"keywords": {
@@ -18199,7 +18206,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 223, S. 13f. (5)",
-				"textstufen": "smallform_0433",
+				"textstufen": ["smallform_0433"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18243,7 +18250,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 231, Bl. 1 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C)",
 				"keywords": "Präsidentenwahl, Zweiter Weltkrieg, Isolationismus, Arbeitslosigkeit, Überproduktion, Weltwirtschaftskrise, Tellerwäscher-Mythos, Rüstungsprogramm, Aufrüstung",
@@ -18278,7 +18285,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 485, S. 1f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "amerikanische Kunst, Revolution, street art, traditionale Kultur, Afroamerikaner:in, Rassismus, soziale Kunst, Plantage, Sklaverei, Gewerkschaft, org der Künstler, Schriftsteller:in, Schreiben",
@@ -18313,7 +18320,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 362, S. 5",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "amerikanische Literatur, Rassismus, Kriminalität, Armut, Reichtum",
@@ -18348,7 +18355,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Mittagsausgabe, Nr. 1821, Bl. 4 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Präsidentenwahl, Demokratie, Journalismus, Propaganda, Isolationismus, Rüstungsprogramm, Arbeiterrechte, Zweiter Weltkrieg, Aussenpolitik",
@@ -18383,7 +18390,7 @@
 				"pubPlace": "Mitteilungen der Ostschweizerischen Geographisch-Kommerziellen Gesellschaft in St. Gallen",
 				"signature": "",
 				"pubDetails": "Jg. 1938/39. Frauenfeld: Huber, 1940, S. 1-11 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18427,7 +18434,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/164",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Unklar, ob BF und SLA wirklich identisch, da nur BF genauer datiert. Ev. das 'afghanische Tagebuch)",
 				"keywords": {
@@ -18471,7 +18478,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/168",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18515,7 +18522,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/169",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0420",
+				"textstufen": ["\"smallform_0420"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18559,7 +18566,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/170",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0420",
+				"textstufen": ["\"smallform_0420"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18603,7 +18610,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/171",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Thurg. Zt. (hs.)",
 				"keywords": {
@@ -18647,7 +18654,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/172",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA : Original an Thurg. Zt. (hs.)",
 				"keywords": {
@@ -18691,7 +18698,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/173",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18735,7 +18742,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/174",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Zusammenahng mit SLA 176?",
 				"keywords": {
@@ -18779,7 +18786,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/175",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18823,7 +18830,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/176",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18867,7 +18874,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/177",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Englische Übersetzung Afghanistan-Tagebuch?",
 				"keywords": {
@@ -18911,7 +18918,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/178",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18955,7 +18962,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/179",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -18999,7 +19006,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/180",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19043,7 +19050,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/181",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19087,7 +19094,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/182",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19131,7 +19138,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/183",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "M.L.B. Zollikon (hs.), [vermutlich bedeutet M.L.B. = Marie-Luise Bodmer]",
 				"keywords": {
@@ -19175,7 +19182,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/184",
 				"pubDetails": "",
-				"textstufen": "\"Ev. smallform_0469",
+				"textstufen": ["\"Ev. smallform_0469"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19219,7 +19226,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/20",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Datierung: 1940-11-00 (hs. von AS)",
 				"keywords": " 1941 Frühling (hs.). EZ: Vermutlich Durchschlag in Storrer 2-B-2-Schwa, mit Adress-Vermerk der Adresse von Marie-Louise Bodmer. \"",
@@ -19254,7 +19261,7 @@
 				"pubPlace": "\"yeareswechsel in U.S.A.: 1. Der Maginot-Ozean",
 				"signature": " 2. Missa Solemnis",
 				"pubDetails": " 3. Januar-Sensationen",
-				"textstufen": " 4. Die weissen Ebenen\"",
+				"textstufen": [" 4. Die weissen Ebenen\""],
 				"series": "",
 				"comment": "",
 				"keywords": "SLA",
@@ -19289,7 +19296,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/189",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "-> Ev. zu antifaschistisch für die Thurgauer Zeitung (die andere Teile der Serie gedruckt hat)?",
 				"keywords": {
@@ -19333,7 +19340,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/193",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19377,7 +19384,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/194",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19421,7 +19428,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 7, S. 148-151",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Swissness, Auslandschweizer, Amerikaschweizer, Pioniere, American dream, Abenteuer, Fotografie, Landschaft, Sport, Plantagen, Werbeindustrie, Handel, Verkehr, Schiffsreise, Technik, Tourismus, Motiv des Flusses, amerikanische Literatur, ",
@@ -19456,7 +19463,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/187",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0465",
+				"textstufen": ["smallform_0465"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19500,7 +19507,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 39, Bl. 3",
-				"textstufen": "smallform_0464",
+				"textstufen": ["smallform_0464"],
 				"series": "",
 				"comment": "",
 				"keywords": "Präsidentenwahl, Demokratie, Diktatur, Zweiter Weltkrieg",
@@ -19535,7 +19542,7 @@
 				"pubPlace": "",
 				"signature": "",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19579,7 +19586,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr: 48, Bl. 1",
-				"textstufen": "smallform_0466",
+				"textstufen": ["smallform_0466"],
 				"series": "",
 				"comment": "A-1/188",
 				"keywords": "Rüstungsprogramm, Zweiter Weltkrieg, Arbeiterorg, Streik, Verteidigung",
@@ -19614,7 +19621,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/185",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0469",
+				"textstufen": ["smallform_0469"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19658,7 +19665,7 @@
 				"pubPlace": "Schweizer Frauenblatt",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 9, S. 1f.",
-				"textstufen": "smallform_0468",
+				"textstufen": ["smallform_0468"],
 				"series": "",
 				"comment": "A-1/185",
 				"keywords": "Journalismus, Präsidentenwahl, Aussenpolitik, Zweiter Weltkrieg, Motiv des Boxkampfes, Frauen",
@@ -19693,7 +19700,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 56, Bl. 1",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Landwirtschaft, Technisierung, Grossbetriebe, Kapitalismus, Armut, Sharecropper, Baumwolle, Monokulturen, Ausbeutung der Natur, Motiv der Verschwendung, Naturereignis, Trockenheit, Überschwemmung, Raubbau, Staudamm, Infrastruktur, Aufforstung, Unterstützungsprogramme, Kleinbauer",
@@ -19728,7 +19735,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 382, S. 3, 9",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Schiffsreise, Entfernung, Papiere/Pass, Zweiter Weltkrieg, Fotografie, Journalismus, Kriegsreporterin, Kleidung, Heimat, Heimfahrt",
@@ -19763,7 +19770,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 111, Abendblatt , S. 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19807,7 +19814,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/190",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0474",
+				"textstufen": ["smallform_0474"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19851,7 +19858,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 57, Bl. 3",
-				"textstufen": "smallform_0473",
+				"textstufen": ["smallform_0473"],
 				"series": "",
 				"comment": "A-1/190",
 				"keywords": "Erster Weltkrieg, Zweiter Weltkrieg, Aufrüstung, Industrie, Rüstungsindustrie, Kriegsmaterial",
@@ -19886,7 +19893,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/196",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bem.: Vorschläge (hs.). EZ: - Wichtig!",
 				"keywords": {
@@ -19930,7 +19937,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/195",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0477",
+				"textstufen": ["smallform_0477"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -19974,7 +19981,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 417, Morgenausgabe, Bl. 2, ",
-				"textstufen": "smallform_0476",
+				"textstufen": ["smallform_0476"],
 				"series": "",
 				"comment": "A-1/195",
 				"keywords": {
@@ -20018,7 +20025,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"pubDetails": "Nr. 65, S. 5 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Annemarie Maroc-Schwarzenbach [sic])",
 				"keywords": {
@@ -20062,7 +20069,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 131, S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20106,7 +20113,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 69, S. 3f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": "Heimfahrt, Schiffsreise, Europasehnsucht, Heimat, Zweiter Weltkrieg, Motiv der Strasse [Verkehrsstrassen, Wasserstrassen etc.], Reise, Distanz / Entfernung, Globalisierung",
@@ -20141,7 +20148,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 446, Sonntagsausgabe, Bl. 4 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C.S.)",
 				"keywords": {
@@ -20185,7 +20192,7 @@
 				"pubPlace": "Schweizer Illustrierte",
 				"signature": "",
 				"pubDetails": "Nr. 13, S. 418f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Erste Publikation in der Schweizer Illustrierten.",
 				"keywords": {
@@ -20229,7 +20236,7 @@
 				"pubPlace": "DU",
 				"signature": "",
 				"pubDetails": "\"1941",
-				"textstufen": " Nr. 2 (April), S. 45\"",
+				"textstufen": [" Nr. 2 (April), S. 45\""],
 				"series": "",
 				"comment": "",
 				"keywords": "Erste Publikation im DU",
@@ -20264,7 +20271,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 386, S. 17",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C.S.)",
 				"keywords": "Film, Diktatur, Kunst, Komödie, Wirklichkeit, Nationalsozialismus, Zweiter Weltkrieg, Unterhaltungsindustrie, Isolationismus",
@@ -20299,7 +20306,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 163, Abendblatt , S. 2f.",
-				"textstufen": "smallform_0459",
+				"textstufen": ["smallform_0459"],
 				"series": "",
 				"comment": "",
 				"keywords": "Strasse, Auto, Naturereignis, Sturm, Verkehr, Gefangenschaft, Grosststadt, Tankstelle, Natur, Tiere, Freiheit, Natur, yeareszeit, Zivilisation, Individualismus, Melancholie, Psychiatrische Klinik ",
@@ -20334,7 +20341,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 85, 1. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20378,7 +20385,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/191",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0488",
+				"textstufen": ["smallform_0488"],
 				"series": "",
 				"comment": "SLA: vorangehend eine Erklärung, dass sie das Pseudonym Clark ab 1.1.41 nicht mehr verwende, sondern nur noch ihren richtigen Namen Clarac",
 				"keywords": {
@@ -20422,7 +20429,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 170, S. ??? ",
-				"textstufen": "smallform_0487",
+				"textstufen": ["smallform_0487"],
 				"series": "",
 				"comment": "",
 				"keywords": "Bildung, Ausbildung, Pflege, Armee, Frauen",
@@ -20457,7 +20464,7 @@
 				"pubPlace": "Schweizer Illustrierte",
 				"signature": "",
 				"pubDetails": "Nr. 16, S. 522f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"(Bildbericht .Photos ATP., Schwarzenbach) In Walter Fähnders Bibliographie fälschlicherweise \"\"Sie und Er\"\" zugeordnet. \"",
 				"keywords": {
@@ -20501,7 +20508,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 640, 2. Sonntagsausgabe, Bl. 2, ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A.C.-S.) Ev. Wiederverwendung von BF 321? Oder Fehler bei Fähnders? Nein, AS hat mehrfach (leicht variiert) über das Rote Kreuz in div. Zeitungen geschrieben (hat zeitweise selbst überlegt, für das Rote Kreuz zu arbeiten).",
 				"keywords": "Krieg, Kriegsgefangene, Diplomatie, Schiffahrt, Flüchtlinge",
@@ -20536,7 +20543,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 196, Abendblatt , S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Annemarie Clarac)",
 				"keywords": {
@@ -20580,7 +20587,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/197",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beil.: Bildreproduktionen",
 				"keywords": {
@@ -20624,7 +20631,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/199",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20668,7 +20675,7 @@
 				"pubPlace": "DU",
 				"signature": "",
 				"pubDetails": "1941, Nr. 3 (Mai), S. 18f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Fotografien von fremder Hand)",
 				"keywords": "Emigration, Einwanderung, Schmelztiegel, Zweiter Weltkrieg, Prominente",
@@ -20703,7 +20710,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 18, S. 475f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20747,7 +20754,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 19, S. 498f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Aufnahmen von Annemarie Clara- Schwarzenbach [sic])",
 				"keywords": "Moderne Architektur, Baudenkmal, Modernisierung, Armut, Tradition",
@@ -20782,7 +20789,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/158",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0498",
+				"textstufen": ["\"smallform_0498"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20826,7 +20833,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/162",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0497",
+				"textstufen": ["\"smallform_0497"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20870,7 +20877,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/192",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "\"smallform_0497",
+				"textstufen": ["\"smallform_0497"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20914,7 +20921,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"Publikationsdels (ggfls. um Rubrik ergänzen)": "Nr. 114, S. 1f.",
-				"textstufen": "\"smallform_0497",
+				"textstufen": ["\"smallform_0497"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -20958,7 +20965,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/198",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0502",
+				"textstufen": ["smallform_0502"],
 				"series": "",
 				"comment": "SLA : Datierung: Ende April. Mai 1941, erschienen in der Weltwoche (hs.)",
 				"keywords": {
@@ -21002,7 +21009,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 392, S. 11 ",
-				"textstufen": "smallform_0501",
+				"textstufen": ["smallform_0501"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21046,7 +21053,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 21, S. 554f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21090,7 +21097,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/200",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0505",
+				"textstufen": ["smallform_0505"],
 				"series": "",
 				"comment": "SLA : Wewo (hs.)",
 				"keywords": {
@@ -21134,7 +21141,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 251, Abendblatt , S. 2",
-				"textstufen": "smallform_0504",
+				"textstufen": ["smallform_0504"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21178,7 +21185,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 395, S. 11",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21222,7 +21229,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 265, Abendblatt , S.2 ",
-				"textstufen": "smallform_0603",
+				"textstufen": ["smallform_0603"],
 				"series": "",
 				"comment": "Im Afrika-Buch verröffentlicht ? Typoskript mittlerweile im SLA: Storrer 2-B-2-Schwa",
 				"keywords": {
@@ -21266,7 +21273,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/207",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21310,7 +21317,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/208",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Dat.: Ende Juli",
 				"keywords": " hs. Vermerk: (Titel vielleicht ändern?)\"",
@@ -21345,7 +21352,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 26, S. 710f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(Bildbericht. Photos von Annemarie Clarak Schwarzenbach)",
 				"keywords": {
@@ -21389,7 +21396,7 @@
 				"pubPlace": "Le Courrier d'Afrique",
 				"signature": "",
 				"pubDetails": "Nr. 190, Titelseite, S. 4 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter Anne-Marie Clarac-Schwarzenbach)",
 				"keywords": {
@@ -21433,7 +21440,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/213",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0513",
+				"textstufen": ["smallform_0513"],
 				"series": "",
 				"comment": "\"SLA : \"\"Tat\"\" nimmt es (hs.). Titel von AS ergänzt (hs.). s. Orig.artikel: Zwischen Afrika und Europa. EZ: -> Tatsächlich später dort abgedruckt, sieh BF 397\"",
 				"keywords": {
@@ -21477,7 +21484,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 400, S. 11 ",
-				"textstufen": "smallform_0512",
+				"textstufen": ["smallform_0512"],
 				"series": "",
 				"comment": "A-1/213",
 				"keywords": {
@@ -21521,7 +21528,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/209",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21565,7 +21572,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/210",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Anm. auf Umschlagetikette: Diverse Aufsätze 1939/41",
 				"keywords": {
@@ -21609,7 +21616,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 418, Abendblatt , S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21653,7 +21660,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/201",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0518",
+				"textstufen": ["smallform_0518"],
 				"series": "",
 				"comment": "SLA : hs. Vermerk von AS: Titel gleichgültig",
 				"keywords": {
@@ -21697,7 +21704,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 410, S. 11",
-				"textstufen": "smallform_0516",
+				"textstufen": ["smallform_0516"],
 				"series": "",
 				"comment": "A-1/201",
 				"keywords": {
@@ -21741,7 +21748,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/211",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -21785,7 +21792,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/212",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "hs. Vermerk: Muss unbedingt publiziert werden! Kann es gut plazieren!! B.",
 				"keywords": {
@@ -21829,7 +21836,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/214",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Teil des Afghanistan-Tagebuchs oder zum Bildbericht BF 349 gehörig?",
 				"keywords": {
@@ -21873,7 +21880,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 43, S. 1242f.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(ungezeichnet)",
 				"keywords": {
@@ -21917,7 +21924,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 516, Abendblatt, S 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0523",
 				"comment": "",
 				"keywords": {
@@ -21961,7 +21968,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 518, Abendblatt, S. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0523",
 				"comment": "",
 				"keywords": {
@@ -22005,7 +22012,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 530, Abendblatt, S. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0523",
 				"comment": "",
 				"keywords": {
@@ -22049,7 +22056,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 534, Abendblatt, S. 2f. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0523",
 				"comment": "",
 				"keywords": {
@@ -22093,7 +22100,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 269, Bl. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0527",
 				"comment": "",
 				"keywords": {
@@ -22137,7 +22144,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 269, 2. Bl. ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Alle Artikel \"\"Schweizer Pionierarbeit im Urwald\"\" könnten auch als einer behandelt werden (bzw. als Unterkategorie 'Artikelserie'?)\"",
 				"keywords": {
@@ -22181,7 +22188,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 273, 2. Bl. (8)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0527",
 				"comment": "",
 				"keywords": {
@@ -22225,7 +22232,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 273, 2. Bl. (8)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Alle Artikel \"\"Schweizer Pionierarbeit im Urwald\"\" könnten auch als einer behandelt werden (bzw. als Unterkategorie 'Artikelserie'?)\"",
 				"keywords": {
@@ -22269,7 +22276,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 275, 2. Bl. (8)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0527",
 				"comment": "",
 				"keywords": {
@@ -22313,7 +22320,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 275, 2. Bl. (8)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Alle Artikel \"\"Schweizer Pionierarbeit im Urwald\"\" könnten auch als einer behandelt werden (bzw. als Unterkategorie 'Artikelserie'?)\"",
 				"keywords": {
@@ -22357,7 +22364,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/202",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0534",
+				"textstufen": ["smallform_0534"],
 				"series": "",
 				"comment": "\"SLA: Beil.: Die Insel San Thomé: eine am Aequator liegende Portugiesische Kolonie / von Marie-Louise Bodmer (1 Bl., Ts.)",
 				"keywords": " Beil.: Beschriftung der Bilder von der Insel San Thomé (1 Bl., Ts.)\"",
@@ -22392,7 +22399,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 542, Abendblatt , S. 2 ",
-				"textstufen": "smallform_0533",
+				"textstufen": ["smallform_0533"],
 				"series": "",
 				"comment": "A-1/202",
 				"keywords": {
@@ -22436,7 +22443,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"pubDetails": "Nr. 421, S. 17",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -22480,7 +22487,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/203",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -22524,7 +22531,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/205",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "SLA: Orig. in der Stadtbibliothek München",
 				"keywords": {
@@ -22568,7 +22575,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/206",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dat.: year erschlossen. EZ: Wichtig! Nicht in Zählung aufnehmen",
 				"keywords": {
@@ -22612,7 +22619,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/21",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -22656,7 +22663,7 @@
 				"pubPlace": "SLA",
 				"signature": "",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Identisch mit BF 365, unklar weshalb zwei Einträge",
 				"keywords": {
@@ -22700,7 +22707,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/22",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0594",
+				"textstufen": ["smallform_0594"],
 				"series": "",
 				"comment": "Postum wurde IV durch Annabelle im Januar 1941 publiziert.",
 				"keywords": {
@@ -22744,7 +22751,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/217",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -22788,7 +22795,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 168, Abendblat, S. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0543",
 				"comment": "",
 				"keywords": {
@@ -22832,7 +22839,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 174, Abendblatt, S. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0543",
 				"comment": "",
 				"keywords": {
@@ -22876,7 +22883,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 180, Abendblatt, S. 2",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0543",
 				"comment": "",
 				"keywords": {
@@ -22920,7 +22927,7 @@
 				"pubPlace": "Schweizer Illustrierte",
 				"signature": "",
 				"pubDetails": "Nr. 18, Titelblatt ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(ungezeichnet)",
 				"keywords": {
@@ -22964,7 +22971,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 201, Abendblatt , S. 3",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "\"smallform_0543",
 				"comment": "",
 				"keywords": {
@@ -23008,7 +23015,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/222",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Beil.: 18 Photos",
 				"keywords": {
@@ -23052,7 +23059,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/223",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Dat.: year erschlossen",
 				"keywords": {
@@ -23096,7 +23103,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/218",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0551",
+				"textstufen": ["smallform_0551"],
 				"series": "",
 				"comment": "SLA : Erschien in W.W. (hs.)",
 				"keywords": {
@@ -23140,7 +23147,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 444, S. 11 ",
-				"textstufen": "smallform_0550",
+				"textstufen": ["smallform_0550"],
 				"series": "",
 				"comment": "A-1/218",
 				"keywords": {
@@ -23184,7 +23191,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Nr. 816, Pfingstausgabe, Bl. 3",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23228,7 +23235,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/224",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23272,7 +23279,7 @@
 				"pubPlace": "",
 				"signature": "A-1/219",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0555",
+				"textstufen": ["smallform_0555"],
 				"series": "",
 				"comment": "SLA: Nat.-Zt. erschienen. (hs.)",
 				"keywords": {
@@ -23316,7 +23323,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 235, Abendblatt S. 2",
-				"textstufen": "smallform_0554",
+				"textstufen": ["smallform_0554"],
 				"series": "",
 				"comment": "A-1/219",
 				"keywords": {
@@ -23360,7 +23367,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/231",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "siehe: La jeunesse française au Maroc",
 				"keywords": {
@@ -23404,7 +23411,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/232",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23448,7 +23455,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/233",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23492,7 +23499,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/234",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23536,7 +23543,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/237",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "siehe: Maroc : Bibliographie",
 				"keywords": {
@@ -23580,7 +23587,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/239",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23624,7 +23631,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/216",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0563",
+				"textstufen": ["smallform_0563"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23668,7 +23675,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 245, Abendblatt , S. 2",
-				"textstufen": "smallform_0562",
+				"textstufen": ["smallform_0562"],
 				"series": "",
 				"comment": "A-1/216",
 				"keywords": {
@@ -23712,7 +23719,7 @@
 				"pubPlace": "Sie und Er",
 				"signature": "",
 				"pubDetails": "Nr. 23, S. 715",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Siehe \"\"Diplomatenaustausch in Lissabon\"\", NZZ, 16.6.1942",
 				"keywords": {
@@ -23756,7 +23763,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/220",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0566",
+				"textstufen": ["smallform_0566"],
 				"series": "",
 				"comment": "SLA : Titel von AS ergänzt (hs.). Thurgauer erschienen (hs.) [u.d.T. Liebe zu Europa]",
 				"keywords": {
@@ -23800,7 +23807,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 130, Bl. 1 ",
-				"textstufen": "smallform_0565",
+				"textstufen": ["smallform_0565"],
 				"series": "",
 				"comment": "A-1/220",
 				"keywords": {
@@ -23844,7 +23851,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/215",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0568",
+				"textstufen": ["smallform_0568"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23888,7 +23895,7 @@
 				"pubPlace": "Schweizer Illustrierte ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 24, S. 756f. ",
-				"textstufen": "smallform_0567",
+				"textstufen": ["smallform_0567"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23932,7 +23939,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/228",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -23976,7 +23983,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "A-1/225",
 				"pubDetails": "Nr. 275, Abendblatt, S. 2.",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24020,7 +24027,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"pubDetails": "Abendausgabe, Nr. 964, Bl. 5 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter acs.)",
 				"keywords": "Schiffahrt, Diplomatie, Kriegsgefangene",
@@ -24055,7 +24062,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 150, Bl. 1 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A. Sch.)",
 				"keywords": {
@@ -24099,7 +24106,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/235",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0574",
+				"textstufen": ["smallform_0574"],
 				"series": "",
 				"comment": "SLA: Erschienen Nationalztg. 2.7.42 (hs.)",
 				"keywords": {
@@ -24143,7 +24150,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 209, S. 2.",
-				"textstufen": "smallform_0573",
+				"textstufen": ["smallform_0573"],
 				"series": "",
 				"comment": "A-1/235",
 				"keywords": {
@@ -24187,7 +24194,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/230",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0576",
+				"textstufen": ["smallform_0576"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24231,7 +24238,7 @@
 				"pubPlace": "Die Weltwoche",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 451, S.11 ",
-				"textstufen": "smallform_0575",
+				"textstufen": ["smallform_0575"],
 				"series": "",
 				"comment": "A-1/230",
 				"keywords": {
@@ -24275,7 +24282,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/226",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0578",
+				"textstufen": ["smallform_0578"],
 				"series": "",
 				"comment": "-> Limes-Begriff",
 				"keywords": {
@@ -24319,7 +24326,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 312, Abendblatt, S. 2",
-				"textstufen": "smallform_0577",
+				"textstufen": ["smallform_0577"],
 				"series": "",
 				"comment": "A-1/226",
 				"keywords": {
@@ -24363,7 +24370,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 160, Bl. 2 ",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "(unter A. Sch.)",
 				"keywords": {
@@ -24407,7 +24414,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/236",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0581",
+				"textstufen": ["smallform_0581"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24451,7 +24458,7 @@
 				"pubPlace": "National-Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 325, S. 2.",
-				"textstufen": "smallform_0580",
+				"textstufen": ["smallform_0580"],
 				"series": "",
 				"comment": "A-1/236",
 				"keywords": {
@@ -24495,7 +24502,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/227",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0583",
+				"textstufen": ["smallform_0583"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24539,7 +24546,7 @@
 				"pubPlace": "Thurgauer Zeitung",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 166, Bl. 2",
-				"textstufen": "smallform_0582",
+				"textstufen": ["smallform_0582"],
 				"series": "",
 				"comment": "(unter A. Sch.)",
 				"keywords": {
@@ -24583,7 +24590,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/229",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0585",
+				"textstufen": ["smallform_0585"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24627,7 +24634,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 1152, Morgenausgabe, Bl. 2",
-				"textstufen": "smallform_0584",
+				"textstufen": ["smallform_0584"],
 				"series": "",
 				"comment": "A-1/229",
 				"keywords": {
@@ -24671,7 +24678,7 @@
 				"pubPlace": "Gazette de Lausanne",
 				"signature": "",
 				"pubDetails": "Nr. 202, S. ???",
-				"textstufen": "\"Ev. smallform_0590",
+				"textstufen": ["\"Ev. smallform_0590"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24715,7 +24722,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/204",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0588",
+				"textstufen": ["smallform_0588"],
 				"series": "",
 				"comment": "SLA: Datierung: Ende Juni. Vermerk von AS: Kopie. Original an N.Z.Z. - bitte nachfragen ob verwendet) (hs.)",
 				"keywords": {
@@ -24759,7 +24766,7 @@
 				"pubPlace": "NZZ",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Mittagsausgabe, Nr. 1245, Bl. 3",
-				"textstufen": "smallform_0587",
+				"textstufen": ["smallform_0587"],
 				"series": "",
 				"comment": "A-1/204",
 				"keywords": {
@@ -24803,7 +24810,7 @@
 				"pubPlace": "Luzerner Tagblatt ",
 				"signature": "",
 				"pubDetails": "Nr. 184, S. 13",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24847,7 +24854,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/221",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0591",
+				"textstufen": ["smallform_0591"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -24891,7 +24898,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 190, S. 5",
-				"textstufen": "smallform_0590",
+				"textstufen": ["smallform_0590"],
 				"series": "",
 				"comment": "A-1/221",
 				"keywords": {
@@ -24935,7 +24942,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/238",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Titel dort ev. deutscher Schreibweise angepasst.",
 				"keywords": {
@@ -24979,7 +24986,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/26",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Tetouan, I 1942-06-00",
 				"keywords": " II 1942-06-22",
@@ -25014,7 +25021,7 @@
 				"pubPlace": "Annabelle",
 				"signature": "A-2/22",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 59, S.10",
-				"textstufen": "smallform_0541",
+				"textstufen": ["smallform_0541"],
 				"series": "",
 				"comment": "Posthume Veröffentlichung zur Würdigung von AS",
 				"keywords": {
@@ -25058,7 +25065,7 @@
 				"pubPlace": "Die Tat",
 				"signature": "",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "Nr. 37, S. 5 (3)",
-				"textstufen": "smallform_0512",
+				"textstufen": ["smallform_0512"],
 				"series": "",
 				"comment": "\"A-1/213 Die Tat schreibt, dass die 'kürzlich verstorbene' Autorin ihnen den Artikel nach einer Reise zugeschickt habe. Beschreibt Rückreise von Afrika und ist damit gleichsam das Gegenstückzu \"\"Zwischen den Kontinenten\"\" (smallform_0513). Unklar ist der Status des Typoskripts smallform_0512, das beide Titel trägt. \"",
 				"keywords": {
@@ -25102,7 +25109,7 @@
 				"pubPlace": "DU",
 				"signature": "",
 				"pubDetails": "1943, Nr. 3 (März), S. 28-32",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"[Gedicht, im Original ohne Titel",
 				"keywords": " ED: aus der 2. Version des unveröff. Manuskripts «Das Wunder des Baums»]",
@@ -25137,7 +25144,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-1/240",
 				"pubDetails": "2 Bl., Ts. (Orig.)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25181,7 +25188,7 @@
 				"pubPlace": "Monacensia",
 				"signature": "KM M 390",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Bislang in keiner Bibliographie! Vorgesehen für \"\"Washington Post\"\" - in der AS angibt, schon früher publiziert zu haben (S. 9). Bislang keine solche Publikation gefunden über online Suche.\"",
 				"keywords": {
@@ -25225,7 +25232,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "Diverse Kapitel: S. 1-13, 36-40, 91-94, 132-135, 160-185, 193-212 (insgesamte Buch-Länge: 243 Seiten)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25269,7 +25276,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "Diverse Kapitel: S. 1-10, 15-19, 188-250 (insgesamte Buch-Länge: 310 Seiten)",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25313,7 +25320,7 @@
 				"pubPlace": "SLA",
 				"signature": "Storrer 2-B-Schwa (5)",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0431",
+				"textstufen": ["smallform_0431"],
 				"series": "",
 				"comment": "Erschienen in Nat. Zeitung",
 				"keywords": {
@@ -25357,7 +25364,7 @@
 				"pubPlace": "SLA",
 				"signature": "Storrer 2-B-Schwa (5)",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "\"Mit ähnlichen Gedichten und \"\"Marc\"\" abgleichen \"",
 				"keywords": {
@@ -25401,7 +25408,7 @@
 				"pubPlace": "SLA",
 				"signature": "Storrer 2-B-Schwa (5)",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0603",
+				"textstufen": ["smallform_0603"],
 				"series": "",
 				"comment": "National-Zeitung Nr. 265, Abendblatt , S.2 (3)",
 				"keywords": {
@@ -25445,7 +25452,7 @@
 				"pubPlace": "SLA",
 				"signature": "Storrer 2-B-Schwa (5)",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0609",
+				"textstufen": ["smallform_0609"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25489,7 +25496,7 @@
 				"pubPlace": "SLA",
 				"signature": "Storrer 2-B-Schwa ",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25533,7 +25540,7 @@
 				"pubPlace": "Annabelle",
 				"signature": "Storrer 2-B-Schwa ",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Autorin ist nicht AS, es werden Fotos von ihr und EM verwendet",
 				"keywords": {
@@ -25577,7 +25584,7 @@
 				"pubPlace": "",
 				"signature": "",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25621,7 +25628,7 @@
 				"pubPlace": "Monacensia",
 				"signature": "EM B 186",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Original von smallform_0537",
 				"keywords": {
@@ -25665,7 +25672,7 @@
 				"pubPlace": "Monacensia",
 				"signature": "EM B 186",
 				"Publikationsails (ggfls. um Rubrik ergänzen)": "",
-				"textstufen": "smallform_0602",
+				"textstufen": ["smallform_0602"],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25709,7 +25716,7 @@
 				"pubPlace": "Monacensia",
 				"signature": "EM B 186",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25753,7 +25760,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 36-40",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25797,7 +25804,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 91-94",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Auf Github als smallform_599 abgelegt, auf Oxygen unter dem richtigen Titel aufgeführt - korrekte Verlinkung zu Digitalisaten überprüfen!",
 				"keywords": {
@@ -25841,7 +25848,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 126-131",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25885,7 +25892,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 132-135",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25929,7 +25936,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 160-185",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -25973,7 +25980,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 193-199",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26017,7 +26024,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 200-206",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26061,7 +26068,7 @@
 				"pubPlace": "Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932.",
 				"signature": "",
 				"pubDetails": "S. 207-212",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26105,7 +26112,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 15-19",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26149,7 +26156,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 188-199",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26193,7 +26200,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 199-210",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26237,7 +26244,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 211-213",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26281,7 +26288,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 213-221",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26325,7 +26332,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 221-225",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26369,7 +26376,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 225-232",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26413,7 +26420,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 232-242",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26457,7 +26464,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 243-246",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26501,7 +26508,7 @@
 				"pubPlace": "Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: RPiper & Co, 1933.",
 				"signature": "",
 				"pubDetails": "S. 246-251",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
@@ -26545,7 +26552,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 31, S. 972-974",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "AS als Mitarbeiterin erwähnt, Photos von Agentur Photopress u.a.",
 				"keywords": {
@@ -26589,7 +26596,7 @@
 				"pubPlace": "ZI",
 				"signature": "",
 				"pubDetails": "Nr. 45, S. 1455",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Ohne Signatur, Beteiligung durch AS jedoch aufgrund letter_0349 sehr wahrscheinlich.",
 				"keywords": {
@@ -26633,7 +26640,7 @@
 				"pubPlace": "",
 				"signature": "ZBZ, MS Rascher",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Entspricht vermutlich den gleichnamigen Texten im SLA, muss überprüft werden.",
 				"keywords": {
@@ -26677,7 +26684,7 @@
 				"pubPlace": "",
 				"signature": "ZBZ, MS Rascher",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Entspricht vermutlich den gleichnamigen Texten im SLA, muss überprüft werden.",
 				"keywords": {
@@ -26721,7 +26728,7 @@
 				"pubPlace": "",
 				"signature": "ZBZ, MS Rascher",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Bislang unbekannter Titel",
 				"keywords": {
@@ -26765,7 +26772,7 @@
 				"pubPlace": "",
 				"signature": "ZBZ, MS Rascher",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Entspricht vermutlich den gleichnamigen Texten im SLA, muss überprüft werden.",
 				"keywords": {
@@ -26809,7 +26816,7 @@
 				"pubPlace": "Schweizer Radio-Zeitung",
 				"signature": "",
 				"pubDetails": "Nr. 38. S.???",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "Ev. in Vorlass Perret enthalten, da er in einem Briefkommentar (Jenseits von New York, 2018, S. 267.) darauf hinweis. ",
 				"keywords": {
@@ -26853,7 +26860,7 @@
 				"pubPlace": "SLA",
 				"signature": "A-2/27",
 				"pubDetails": "",
-				"textstufen": "",
+				"textstufen": [],
 				"series": "",
 				"comment": "",
 				"keywords": {
