@@ -11,9 +11,3 @@
 </script>
 
 <div id="TEI"></div>
-
-<style>
-	/* :global([type='place']) {
-		background-color: aqua;
-	} */
-</style>

@@ -2,13 +2,80 @@
 /* to be comprehensive. The rules here are largely derived from earlier work */
 /* on TEI Boilerplate                                                        */
 
-tei-head {
-	background-color: aqua;
+[type='place'],
+[type='person'] {
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
 }
 [type='place'] {
-	background-color: red;
+	text-decoration-color: red;
+}
+[type='person'] {
+	text-decoration-color: blue;
 }
 
+/* Quotes */
+[type='quote']::before {
+	content: '«';
+}
+[type='quote']::after {
+	content: '»';
+}
+
+/* Structure */
+[type='head'] {
+	font-size: 1.5rem; /* text-2xl */
+	font-weight: 700; /* font-bold */
+}
+[type='pagebreak'] {
+}
+
+/* Choice */
+[type='choice'] {
+	border-radius: 1rem; /* rounded-xl */
+	border-width: 2px;
+	border-style: solid;
+}
+[type='sic'] {
+	text-decoration-line: line-through;
+	text-decoration-color: #ef4444; /* red-500 */
+	text-decoration-thickness: 3px;
+}
+[type='corr'] {
+	color: #16a34a; /* green-500 */
+}
+
+/* Notes */
+[type='mark'][marktype='single-annotation']:hover,
+[type='mark'][marktype='single-annotation'].highlighted {
+	cursor: pointer;
+	background-color: rgba(99, 102, 241, 0.95); /* bg-primary-50-950 approximated */
+	color: rgba(255, 255, 255, 0.95); /* text-surface-950 approximated */
+	/* content: '[';  not valid on regular elements */
+}
+[type='mark'][marktype='single-annotation'].highlighted {
+	background-color: rgba(99, 102, 241, 1); /* bg-primary-100-900 approximated */
+}
+[type='markend'] {
+	border-radius: 9999px; /* rounded-full */
+	background-color: rgba(99, 102, 241, 0.95); /* bg-primary-50-950 approximated */
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	vertical-align: super;
+	font-size: 0.875rem; /* text-sm */
+}
+[type='markend'].highlighted {
+	background-color: rgba(99, 102, 241, 1); /* bg-primary-100-900 approximated */
+}
+[type='markend']:not(.highlighted):hover {
+	cursor: pointer;
+	background-color: rgba(59, 130, 246, 0.6); /* bg-primary-400-600 approximated */
+}
+[type='markend']::before {
+	content: attr(data-notenum);
+}
+
+/* ------------------------------------------------------------------------------- */
 /* language support */
 /* render Arabic, Persian, Ottoman, Hebrew  as rtl */
 [lang='ar'],
@@ -98,8 +165,8 @@ tei-additions:before {
 tei-addrLine {
 	display: block;
 }
-tei-address[data-tei-rend~='block'],
-addresss[data-tei-rendition~='#block'] {
+tei-address[tei-rend~='block'],
+addresss[tei-rendition~='#block'] {
 	display: block;
 }
 tei-adminInfo {
@@ -140,7 +207,7 @@ tei-publicationstmt > tei-availability:before {
 	font-weight: bold;
 	content: 'Availability: ';
 }
-tei-publicationstmt > tei-availability[data-tei-status]:before {
+tei-publicationstmt > tei-availability[tei-status]:before {
 	font-weight: bold;
 	content: 'Availability (' attr(status) '): ';
 }
@@ -148,8 +215,8 @@ tei-publicationstmt > tei-availability[data-tei-status]:before {
 tei-back {
 	display: block;
 }
-tei-bibl[data-tei-rend~='block'],
-bibl[data-tei-rendition~='#block'] {
+tei-bibl[tei-rend~='block'],
+bibl[tei-rendition~='#block'] {
 	display: block;
 	padding-left: 2em;
 	text-indent: -2em;
@@ -164,7 +231,7 @@ tei-binding:before {
 	content: 'Binding: \a';
 	white-space: pre-wrap;
 }
-tei-binding[data-tei-contemporary]:before {
+tei-binding[tei-contemporary]:before {
 	content: 'Binding: \A' 'Contemporary: ' attr(contemporary) '\A';
 	white-space: pre-wrap;
 }
@@ -189,7 +256,7 @@ tei-caption {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-tei-case[data-tei-value]:before {
+tei-case[tei-value]:before {
 	font-weight: bold;
 	content: attr(value) ' ';
 }
@@ -225,7 +292,7 @@ tei-cell[cols='2'] {
 	grid-column: span 2;
 }
 /* for cell or row with @role = label */
-tei-cell[data-tei-role='label'] {
+tei-cell[tei-role='label'] {
 	font-weight: bold;
 }
 tei-climate {
@@ -259,21 +326,21 @@ tei-constitution:before {
 	font-weight: bold;
 	content: 'Constitution: ';
 }
-tei-constitution[data-tei-type] {
+tei-constitution[tei-type] {
 	display: block;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-tei-constitution[data-tei-type]:before {
+tei-constitution[tei-type]:before {
 	font-weight: bold;
 	content: 'Constitution (' attr(type) '): ';
 }
-tei-constitution[data-tei-type='frags'] {
+tei-constitution[tei-type='frags'] {
 	display: block;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-tei-constitution[data-tei-type='frags']:before {
+tei-constitution[tei-type='frags']:before {
 	font-weight: bold;
 	content: 'Constitution (fragments): ';
 }
@@ -286,7 +353,7 @@ tei-custodialhist {
 	margin-bottom: 1em;
 }
 /* d */
-tei-date[data-tei-when]:empty:before {
+tei-date[tei-when]:empty:before {
 	content: attr(when);
 }
 /* e */
@@ -331,13 +398,13 @@ tei-figure {
 	margin-right: auto;
 }
 /* g */
-tei-gap[data-tei-reason='lost']:before {
+tei-gap[tei-reason='lost']:before {
 	content: '[';
 }
-tei-gap[data-tei-reason='lost']:after {
+tei-gap[tei-reason='lost']:after {
 	content: attr(data-content) ']';
 }
-tei-gap[data-tei-reason='illegible']:after {
+tei-gap[tei-reason='illegible']:after {
 	content: attr(data-content);
 }
 tei-gi {
@@ -433,7 +500,7 @@ tei-l {
 	display: block;
 	width: 35em;
 }
-tei-l[data-lineno]:before {
+tei-l[lineno]:before {
 	content: attr(data-lineno);
 	position: absolute;
 	left: 2em;
@@ -590,7 +657,7 @@ tei-p {
 	margin-bottom: 1em;
 	text-align: justify;
 }
-*[data-tei-rendition~='#center'] p {
+*[tei-rendition~='#center'] p {
 	text-align: center;
 }
 tei-availability > p:first-child {
@@ -651,10 +718,10 @@ tei-q:before {
 tei-q:after {
 	content: '';
 }
-tei-q[data-tei-next]:after {
+tei-q[tei-next]:after {
 	content: '' !important;
 }
-tei-q[data-tei-prev]:before {
+tei-q[tei-prev]:before {
 	content: '' !important;
 }
 tei-quote {
@@ -774,10 +841,10 @@ tei-soCalled:before {
 tei-soCalled:after {
 	content: close-quote;
 }
-tei-soCalled[data-tei-next]:after {
+tei-soCalled[tei-next]:after {
 	content: '' !important;
 }
-tei-soCalled[data-tei-prev]:before {
+tei-soCalled[tei-prev]:before {
 	content: '' !important;
 }
 tei-sound {
@@ -795,7 +862,7 @@ tei-space:before {
 	font-weight: bold;
 	content: '';
 }
-tei-span[data-tei-data-n]:before {
+tei-span[tei-data-n]:before {
 	content: attr(data-n);
 }
 tei-speaker {
