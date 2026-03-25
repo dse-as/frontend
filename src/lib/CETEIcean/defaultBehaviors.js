@@ -6,8 +6,6 @@ export default {
 	},
 	tei: {
 		persName: [['[ref]', ['<a href="$rw@ref" target="_blank">', '</a>']]],
-    head: ["", "<br/>"],
-		eg: ['<pre>', '</pre>'],
 		// inserts a link inside <ptr> using the @target; the link in the
 		// @href is piped through the rw (rewrite) function before insertion
 		ptr: ['<a href="$rw@target">$@target</a>'],
@@ -26,69 +24,82 @@ export default {
 			}
 			return content;
 		},
-		list: [
-			// will only run on a list where @type="gloss"
-			[
-				'[type=gloss]',
-				function (elt) {
-					const doc = elt.ownerDocument;
-					let dl = doc.createElement('dl');
-					for (let child of Array.from(elt.children)) {
-						// nodeType 1 is Node.ELEMENT_NODE
-						if (child.nodeType == 1) {
-							if (child.localName == 'tei-label') {
-								let dt = doc.createElement('dt');
-								dt.innerHTML = child.innerHTML;
-								dl.appendChild(dt);
-							}
-							if (child.localName == 'tei-item') {
-								let dd = doc.createElement('dd');
-								dd.innerHTML = child.innerHTML;
-								dl.appendChild(dd);
-							}
-						}
-					}
-					return dl;
-				}
-			]
-		],
-		note: [
-			// Make endnotes
-			[
-				'[place=end]',
-				function (elt) {
-					const doc = elt.ownerDocument;
-					if (!this.noteIndex) {
-						this['noteIndex'] = 1;
-					} else {
-						this.noteIndex++;
-					}
-					let id = '_note_' + this.noteIndex;
-					let link = doc.createElement('a');
-					link.setAttribute('id', 'src' + id);
-					link.setAttribute('href', '#' + id);
-					link.innerHTML = this.noteIndex;
-					let content = doc.createElement('sup');
-					content.appendChild(link);
-					let notes = doc.querySelector('ol.notes');
-					if (!notes) {
-						notes = doc.createElement('ol');
-						notes.setAttribute('class', 'notes');
-						this.dom.appendChild(notes);
-					}
-					let note = doc.createElement('li');
-					note.id = id;
-					note.innerHTML = elt.innerHTML;
-					notes.appendChild(note);
-					return content;
-				}
-			],
-			['_', ['(', ')']]
-		],
+
+		anchor: function (el) {
+		const id = el.getAttribute("xml:id");
+		if (!id) return;
+
+		// Find matching note
+		const note = document.querySelector(
+			`tei-note[targetEnd="${id}"]`
+		);
+
+		if (!note) return;
+
+		// Collect nodes between anchor and note
+		let current = el.nextSibling;
+		const nodes = [];
+
+		while (current && current !== note) {
+			nodes.push(current);
+			current = current.nextSibling;
+		}
+
+		if (!nodes.length) return;
+
+		// Wrap nodes
+		const wrapper = document.createElement("span");
+		wrapper.classList.add("tei-annotation");
+
+		nodes[0].parentNode.insertBefore(wrapper, nodes[0]);
+		nodes.forEach((n) => wrapper.appendChild(n));
+
+		// Store note content
+		const noteContent = note.textContent;
+
+		// Interaction
+		wrapper.addEventListener("click", () => {
+			wrapper.classList.toggle("active");
+			alert(noteContent);
+		});
+
+		return el; // keep anchor
+		},
+
+		// // Make endnotes (form cookbook)
+		// note: function (elt) {
+		// 	if (!this.noteIndex) {
+		// 		this['noteIndex'] = 1;
+		// 	} else {
+		// 		this.noteIndex++;
+		// 	}
+		// 	const prefixNote = 'note';
+		// 	const prefixSrc = 'srcnote';
+		// 	let id = this.noteIndex;
+		// 	let link = document.createElement('a');
+		// 	link.setAttribute('id', `${prefixSrc}${id}`);
+		// 	link.setAttribute('href', `#${prefixNote}${id}`);
+		// 	link.innerHTML = this.noteIndex;
+		// 	let content = document.createElement('sup');
+		// 	content.appendChild(link);
+		// 	let notes = this.dom.querySelector('ol.notes');
+		// 	if (!notes) {
+		// 		notes = document.createElement('ol');
+		// 		notes.setAttribute('class', 'notes');
+		// 		this.dom.appendChild(notes);
+		// 	}
+		// 	let note = document.createElement('li');
+		// 	note.id = `${prefixNote}${id}`;
+		// 	note.innerHTML = `<a href='#${prefixSrc}${id}'><sup>${id}</sup> </a>${elt.innerHTML}`;
+		// 	notes.appendChild(note);
+		// 	return content;
+		// },
+
 		// Hide the teiHeader by default
 		teiHeader: function (e) {
 			this.hideContent(e, false);
 		},
+
 		// Make the title element the HTML title
 		title: [
 			[
@@ -101,20 +112,5 @@ export default {
 				}
 			]
 		]
-	},
-	teieg: {
-		egXML: function (elt) {
-			const doc = elt.ownerDocument;
-			let pre = doc.createElement('pre');
-			let code = doc.createElement('code');
-			pre.appendChild(code);
-			let content = this.serialize(elt, true).replace(/</g, '&lt;');
-			let ws = content.match(/^[\t ]+/);
-			if (ws) {
-				content = content.replace(new RegExp('^' + ws[0], 'mg'), '');
-			}
-			code.innerHTML = content;
-			return pre;
-		}
 	}
 };

@@ -1,0 +1,294 @@
+ 
+   <tei-teiheader data-origname="teiHeader" data-processed=""><cetei-original hidden="" data-original="" role="none"> 
+      <tei-filedesc data-origname="fileDesc" data-processed=""> 
+         <tei-titlestmt data-origname="titleStmt" data-processed=""> 
+            <tei-title data-origname="title" data-processed="">Baltisches Tagebuch IV. Kleine Begegnungen in Danzig</tei-title>
+          </tei-titlestmt>
+          <tei-publicationstmt data-origname="publicationStmt" data-processed=""> 
+            <tei-p data-origname="p" data-empty="" data-processed=""></tei-p>
+          </tei-publicationstmt>
+          <tei-notesstmt data-origname="notesStmt" data-processed=""> 
+            <tei-note type="global_comment" data-origname="note" data-origatts="type" data-processed="">
+               <tei-p data-origname="p" data-processed="">Enstehungskontext: Schwarzenbach reiste im Frühling 1937 über das <tei-rs type="place" key="place_0093" xml:id="r39" id="r39" data-origname="rs" data-origatts="type key xml:id" data-processed="">Baltikum</tei-rs>, <tei-rs type="place" key="place_0017" xml:id="r40" id="r40" data-origname="rs" data-origatts="type key xml:id" data-processed="">Danzig</tei-rs> und Ostpreussen nach <tei-rs type="place" key="place_0052" xml:id="r41" id="r41" data-origname="rs" data-origatts="type key xml:id" data-processed="">Moskau</tei-rs> (<tei-rs type="travel" key="travel_00015" xml:id="r42" id="r42" data-origname="rs" data-origatts="type key xml:id" data-processed="">Moskaureise 1937</tei-rs>), von wo sie die Hinterlassenschaft des
+                  Schweizer Bergsteigers <tei-rs type="person" key="person_0073" xml:id="r46" id="r46" data-origname="rs" data-origatts="type key xml:id" data-processed="">Lorenz Saladins</tei-rs> über <tei-rs type="place" key="place_0101" xml:id="r43" id="r43" data-origname="rs" data-origatts="type key xml:id" data-processed="">Finnland</tei-rs> und <tei-rs type="place" key="place_0096" xml:id="r44" id="r44" data-origname="rs" data-origatts="type key xml:id" data-processed="">Schweden</tei-rs> in die <tei-rs type="place" key="place_0110" xml:id="r45" id="r45" data-origname="rs" data-origatts="type key xml:id" data-processed="">Schweiz</tei-rs> brachte, insbesondere die Fotografien seiner letzten, tödlich geendeten Expedition.
+                  Von ihrem hier geschilderten Besuch in <tei-rs type="place" key="place_0017" xml:id="r47" id="r47" data-origname="rs" data-origatts="type key xml:id" data-processed="">Danzig</tei-rs> Anfang Mai machte Schwarzenbach
+                  viele Fotografien (siehe Stellenkommentare). Zudem berichtete sie <tei-rs type="person" key="person_0053" xml:id="r67" id="r67" data-origname="rs" data-origatts="type key xml:id" data-processed="">Klaus Mann</tei-rs>
+                  in einem – wohl auch aufgrund der anzunehmenden Brief-Zensur – hochironischen Ton über ihren Aufenthalt, vgl. <tei-rs type="letter" key="letter_0250" xml:id="r48" id="r48" data-origname="rs" data-origatts="type key xml:id" data-processed="">Brief an Klaus Mann vom 05.05.1937</tei-rs>. Das dortige 'Lob' des <tei-rs type="org" key="organisation_0002" xml:id="r50" id="r50" data-origname="rs" data-origatts="type key xml:id" data-processed="">Nationalsozialisten</tei-rs> findet sich auch im vorliegenden Text; die Leserschaft dürfte es
+                  angesichts der bekannten antifaschistischen Haltung der Autorin als Kritik verstanden haben. Ob auch der Text direkt aus <tei-rs type="place" key="place_0017" xml:id="r51" id="r51" data-origname="rs" data-origatts="type key xml:id" data-processed="">Danzig</tei-rs> an die Redaktion geschickt wurde, d.h. wie der genannte Brief der Zensur
+                  entgehen musste, ist nicht bekannt, liegt aber aufgrund der fünf Monate zwischen dem <tei-rs type="place" key="place_0017" xml:id="r49" id="r49" data-origname="rs" data-origatts="type key xml:id" data-processed="">Danzig</tei-rs>-Aufenthalt und der Publikation nicht nahe.</tei-p> 
+               <tei-p data-origname="p" data-processed="">Publikationskontext: Die fünfteiligen Serie "Baltisches Tagebuch" im <tei-rs type="org" key="organisation_0007" xml:id="r52" id="r52" data-origname="rs" data-origatts="type key xml:id" data-processed="">Luzerner
+                     Tagblatt</tei-rs> korrespondiert mit der gleichnamigen, in der <tei-rs type="org" key="organisation_0001" xml:id="r53" id="r53" data-origname="rs" data-origatts="type key xml:id" data-processed="">National-Zeitung</tei-rs> erschienenen dreiteiligen Serie (die jeweiligen Artikel zu <tei-rs type="place" key="place_0101" xml:id="r59" id="r59" data-origname="rs" data-origatts="type key xml:id" data-processed="">Finnland</tei-rs> sind sogar weitgehend identisch, vgl. in der <tei-rs type="org" key="organisation_0001" xml:id="r55" id="r55" data-origname="rs" data-origatts="type key xml:id" data-processed="">National-Zeitung</tei-rs>: <tei-rs type="smallform" key="smallform_0225" xml:id="r54" id="r54" data-origname="rs" data-origatts="type key xml:id" data-processed="">Baltisches Tagebuch: Suomi - Land zwischen Ost und
+                     West</tei-rs> , im <tei-rs type="org" key="organisation_0007" xml:id="r56" id="r56" data-origname="rs" data-origatts="type key xml:id" data-processed="">Luzerner Tagblatt</tei-rs>: <tei-rs type="smallform" key="smallform_0232" xml:id="r57" id="r57" data-origname="rs" data-origatts="type key xml:id" data-processed="">Baltisches Tagebuch V: Suomi - Land zwischen Ost und West</tei-rs>). Beide Feuilleton-Serien haben
+                  Vorstufen im längeren Typoskript <tei-rs type="smallform" key="smallform_0215" xml:id="r58" id="r58" data-origname="rs" data-origatts="type key xml:id" data-processed="">Baltisches Tagebuch</tei-rs> und weiterer
+                  Typoskripte. </tei-p>
+               <tei-p data-origname="p" data-processed="">Der vorliegende Text steht in direktem thematischen Zusammenahng mit <tei-rs type="smallform" key="smallform_0223" xml:id="r60" id="r60" data-origname="rs" data-origatts="type key xml:id" data-processed="">Baltisches Tagebuch. Jenseits des Korridors</tei-rs> in der <tei-rs type="org" key="organisation_0001" xml:id="r61" id="r61" data-origname="rs" data-origatts="type key xml:id" data-processed="">National-Zeitung,</tei-rs> kreisen doch beide um das Verhältnis der Bevölkerung ehemalig preussischer Gebiete zum <tei-rs type="org" key="organisation_0002" xml:id="r62" id="r62" data-origname="rs" data-origatts="type key xml:id" data-processed="">Nationalsozialismus</tei-rs>. Während in letzterem die ländliche Bevölkerung im Vordergrund
+                  steht, portraitiert ersteres die städtische Bevölkerung.</tei-p>
+               <tei-p data-origname="p" data-processed="">Historischer Kontext: Die <tei-rs type="place" key="place_0017" xml:id="r63" id="r63" data-origname="rs" data-origatts="type key xml:id" data-processed="">Freie Stadt Danzig</tei-rs> gehörte zwar 1937 noch nicht
+                  offiziell dem <tei-rs type="place" key="place_0107" xml:id="r64" id="r64" data-origname="rs" data-origatts="type key xml:id" data-processed="">Dritten Reich</tei-rs> an, wurde jedoch seit den Danziger Wahlen 1933
+                  nationalsozialistisch regiert. Mit dem Anschluss an <tei-rs type="place" key="place_0107" xml:id="r65" id="r65" data-origname="rs" data-origatts="type key xml:id" data-processed="">Deutschland</tei-rs> und dessen
+                  Angriff auf die polnisch verwaltete <tei-rs type="place" key="place_0858" xml:id="r68" id="r68" data-origname="rs" data-origatts="type key xml:id" data-processed="">Westerplatte</tei-rs> im Danziger Hafen 1939 begann
+                  hier der deutsche Angriff auf <tei-rs type="place" key="place_0108" xml:id="r66" id="r66" data-origname="rs" data-origatts="type key xml:id" data-processed="">Polen</tei-rs> und damit der 2. Weltkrieg.</tei-p>
+             </tei-note>
+          </tei-notesstmt>
+          <tei-sourcedesc data-origname="sourceDesc" data-processed=""> 
+            <tei-bibl corresp="smallform_0231" data-origname="bibl" data-origatts="corresp" data-processed=""> 
+               <tei-persname key="person_0082" type="author" data-origname="persName" data-origatts="key type" data-processed="">Schwarzenbach, Annemarie (1908-1942)</tei-persname>
+                <tei-bibl type="Feuilleton" data-origname="bibl" data-origatts="type" data-processed="">
+                  <tei-title key="organisation_0007" level="j" data-origname="title" data-origatts="key level" data-processed="">Luzerner Tagblatt</tei-title>
+                  <tei-date when="1937-09-04" data-origname="date" data-origatts="when" data-empty="" data-processed=""></tei-date>
+                  <tei-biblscope data-origname="biblScope" data-processed="">Nr. 208, S. 9–10</tei-biblscope>
+               </tei-bibl>
+             </tei-bibl>
+             <tei-listbibl type="related" data-origname="listBibl" data-origatts="type" data-processed=""> 
+               <tei-listbibl type="online" data-origname="listBibl" data-origatts="type" data-processed=""> 
+                  <tei-bibl data-origname="bibl" data-empty="" data-processed=""></tei-bibl>
+                </tei-listbibl>
+             </tei-listbibl>
+          </tei-sourcedesc>
+       </tei-filedesc>
+       <tei-profiledesc data-origname="profileDesc" data-processed=""> 
+         <tei-langusage data-origname="langUsage" data-processed=""> 
+            <tei-language ident="de" data-origname="language" data-origatts="ident" data-empty="" data-processed=""></tei-language>
+          </tei-langusage>
+          <tei-textclass data-origname="textClass" data-processed=""> 
+            <tei-keywords ana="keywords" data-origname="keywords" data-origatts="ana" data-processed=""> 
+               <tei-list data-origname="list" data-processed=""> 
+                  <tei-item sameas="4076374-2" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                  <tei-item sameas="4016494-9" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                  <tei-item sameas="4149920-7" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                  <tei-item sameas="4049275-8" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                  <tei-item sameas="4060491-3" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                  <tei-item sameas="4002333-3" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                </tei-list>
+             </tei-keywords>
+             <tei-keywords ana="travels" data-origname="keywords" data-origatts="ana" data-processed=""> 
+               <tei-list data-origname="list" data-processed=""> 
+                  <tei-item sameas="travel_00015" data-origname="item" data-origatts="sameAs" data-empty="" data-processed=""></tei-item>
+                </tei-list>
+             </tei-keywords>
+          </tei-textclass>
+       </tei-profiledesc>
+    </cetei-original></tei-teiheader>
+    <ns1-include xmlns:xi="http://www.w3.org/2001/XInclude" href="smallform_0231_facs.xml" data-origname="include" data-origatts="xmlns:xi href"> 
+      <ns1-fallback data-origname="fallback" data-empty=""></ns1-fallback>
+       <!--Inclusion path will be adjusted later.-->
+    </ns1-include>
+    <tei-text data-origname="text"> 
+      <tei-body data-origname="body" role="region" aria-label="body"> 
+         <tei-div type="smallform" data-origname="div" data-origatts="type" role="region" aria-label="div">
+            <tei-pb xml:id="p001" id="p001" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json" n="9" data-origname="pb" data-origatts="xml:id facs n" data-empty=""></tei-pb>
+            <tei-milestone unit="textregion" xml:id="p001_r_2" id="p001_r_2" data-origname="milestone" data-origatts="unit xml:id" data-empty=""></tei-milestone>            <tei-head data-origname="head" data-level="1">
+               <tei-lb xml:id="p001_r_2_tl_1" id="p001_r_2_tl_1" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Baltisches Tagebuch.
+               <tei-lb xml:id="p001_l" id="p001_l" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>IV.
+               <tei-lb xml:id="p001_r_2_tl_2" id="p001_r_2_tl_2" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Kleine Begegnungen in <tei-rs type="place" key="place_0017" xml:id="r2" id="r2" data-origname="rs" data-origatts="type key xml:id">Danzig</tei-rs>.</tei-head>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p001_r_2_tl_3" id="p001_r_2_tl_3" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich wollte einen friedlichen Sonntag in der alten
+               <tei-lb xml:id="p001_r_2_tl_4" id="p001_r_2_tl_4" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-rs type="place" key="place_0017" xml:id="r1" id="r1" data-origname="rs" data-origatts="type key xml:id">Hansastadt</tei-rs> verbringen. Ich lehnte mich, am frühen
+               <tei-lb xml:id="p001_r_2_tl_5" id="p001_r_2_tl_5" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Morgen, aus dem Fenster meines kleinen Hotel
+               <tei-lb xml:id="p001_r_2_tl_6" id="p001_r_2_tl_6" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>zimmers und sah unter mir das nun schon gewohnte
+               <tei-lb xml:id="p001_r_2_tl_7" id="p001_r_2_tl_7" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Bild einer belebten Straße, geschmückt mit vielen
+               <tei-lb xml:id="p001_r_2_tl_8" id="p001_r_2_tl_8" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Hakenkreuzfahnen, die von den Balkonen roter Back
+               <tei-lb xml:id="p001_r_2_tl_9" id="p001_r_2_tl_9" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>steinhäuser wehten, sah die dunklen Türme der Kir
+               <tei-lb xml:id="p001_r_2_tl_10" id="p001_r_2_tl_10" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>chen, die alten Dächer über schmalbrüstigen Häuser
+               <tei-lb xml:id="p001_r_2_tl_11" id="p001_r_2_tl_11" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>fronten, und den langsamen Fluß, der sich dann
+               <tei-lb xml:id="p001_r_2_tl_12" id="p001_r_2_tl_12" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>draußen zur Hafenbucht weitet –, und ich hörte
+               <tei-lb xml:id="p001_r_2_tl_13" id="p001_r_2_tl_13" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>den feiertaglichen Klang der Glocken, die in <tei-rs type="place" key="place_0017" xml:id="r3" id="r3" data-origname="rs" data-origatts="type key xml:id">Danzig</tei-rs>
+               <tei-lb xml:id="p001_r_2_tl_14" id="p001_r_2_tl_14" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>zwei- und dreistimmige Fugen in schönem Metall
+               <tei-lb xml:id="p001_r_2_tl_15" id="p001_r_2_tl_15" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>Klang zu spielen wissen. Der Abglanz einer durch
+               <tei-lb xml:id="p001_r_2_tl_16" id="p001_r_2_tl_16" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>graue Wolken gebrochenen Frühlingssonne lag über
+               <tei-lb xml:id="p001_r_2_tl_17" id="p001_r_2_tl_17" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>der Stadt und versilberte heiter den blauen Dunst
+               <tei-lb xml:id="p001_r_2_tl_18" id="p001_r_2_tl_18" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>über den Wasserwegen.</tei-p>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p001_r_2_tl_19" id="p001_r_2_tl_19" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich will Ferien haben, beschloß ich,
+               <tei-anchor xml:id="a1" id="a1" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>"Ferien vom
+               <tei-lb xml:id="p001_r_2_tl_20" id="p001_r_2_tl_20" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich"
+               <tei-note type="annotation" xml:id="n1" id="n1" targetend="a1" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Schwarzenbach spielt an auf den Roman <tei-rs type="bibl" key="VKTJ5RJ7" xml:id="r23" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r23">Ferien vom Ich</tei-rs> (1915) von <tei-rs type="person" key="person_0618" xml:id="r24" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r24">Paul Keller</tei-rs> bzw. seine erste <tei-rs type="bibl" key="6FW9GPED" xml:id="r25" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r25">Verfilmung</tei-rs> (1934); der Stoff handelt von einer fiktionalen Therapiemethode, in der
+                  Patient:innen für eine gewisse Zeit an einem ländlichen Rückzugsort die eigene Identität aufgegeben. Er nimmt moderne Formen
+                  therapeutischer Auszeit-Formate vorweg. Im vorliegenden Text hat die Identitätsaufgabe einen politischen Hintersinn: Das berichtende
+                  Ich enthält sich seiner 'politischen Identität' – an der Oberfläche zu Ferienzwecken, implizit als ironische Haltung, dass sein
+                  eigentliches Ich die beschriebene Realität keineswegs unkritisch sieht. Im Folgenden entkommt es denn auch nicht der
+               Politik.</cetei-original><sup><a id="srcnote15" href="#note15">15</a></sup></tei-note>–, einen ganzen Tag lang weder von Politik
+               <tei-lb xml:id="p001_r_2_tl_21" id="p001_r_2_tl_21" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sprechen noch an der Schreibmaschine sitzen, sondern
+               <tei-lb xml:id="p001_r_2_tl_22" id="p001_r_2_tl_22" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>vor den Toren der Stadt, im Buchenwald von
+               <tei-lb xml:id="p001_r_2_tl_23" id="p001_r_2_tl_23" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-rs type="place" key="place_0855" xml:id="r26" id="r26" data-origname="rs" data-origatts="type key xml:id">Oliva</tei-rs> und an der Meeresküste von <tei-rs type="place" key="place_0856" xml:id="r27" id="r27" data-origname="rs" data-origatts="type key xml:id">Zoppot</tei-rs> einen
+               <tei-lb xml:id="p001_l_1" id="p001_l_1" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Sonntags-Spaziergang machen. – Aber mit
+               <tei-lb xml:id="p001_r_2_tl_26" id="p001_r_2_tl_26" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>wem? – Ich stelle mir vor, daß die Danziger Bür
+               <tei-lb xml:id="p001_r_2_tl_27" id="p001_r_2_tl_27" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>gerinnen ebenso denken wie ich, daß sie ihren Kin
+               <tei-lb xml:id="p001_r_2_tl_28" id="p001_r_2_tl_28" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>dern die Sonntagskleidchen anziehen, viele Butter
+               <tei-lb xml:id="p001_r_2_tl_29" id="p001_r_2_tl_29" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>brote streichen, und einen schönen Ausflug mit ihnen
+               <tei-lb xml:id="p001_r_2_tl_30" id="p001_r_2_tl_30" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>ans Grüne machen. Ich werde mir jemanden
+               <tei-lb xml:id="p001_r_2_tl_32" id="p001_r_2_tl_32" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>suchen.</tei-p>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p001_r_2_tl_31" id="p001_r_2_tl_31" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich zog mich also an, verließ das Hotel, und ging
+               <tei-lb xml:id="p001_r_2_tl_33" id="p001_r_2_tl_33" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>zuerst einmal in das "Café zum Alten Tor". Man
+               <tei-lb xml:id="p001_r_2_tl_34" id="p001_r_2_tl_34" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>muß in <tei-rs type="place" key="place_0017" xml:id="r4" id="r4" data-origname="rs" data-origatts="type key xml:id">Danzig</tei-rs> wissen, in welches Kaffeehaus man
+               <tei-lb xml:id="p001_r_2_tl_35" id="p001_r_2_tl_35" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>geht. Da gibt es kleine Cafés in den engen Seiten <tei-milestone unit="textregion" xml:id="p001_r_3" id="p001_r_3" data-origname="milestone" data-origatts="unit xml:id" data-empty=""></tei-milestone>
+               <tei-lb xml:id="p001_r_3_tl_1" id="p001_r_3_tl_1" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>gassen, wo sich die <tei-rs type="org" key="organisation_0199" xml:id="r5" id="r5" data-origname="rs" data-origatts="type key xml:id">S.A.</tei-rs>-Männer und
+               <tei-anchor xml:id="a2" id="a2" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>Sturmbann
+               <tei-lb xml:id="p001_r_3_tl_2" id="p001_r_3_tl_2" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>führer
+               <tei-note type="annotation" xml:id="n2" id="n2" targetend="a2" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Der Sturmbann war eine Organisationseinheit (in seiner Grösse einem Bataillon
+                  vergleichbar) von paramilitärischen Organsisationen des <tei-rs type="org" key="organisation_0002" xml:id="r6" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r6">NSDAP</tei-rs> wie der <tei-rs type="org" key="organisation_0199" xml:id="r7" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r7">SA</tei-rs> und <tei-rs type="org" key="organisation_0252" xml:id="r8" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r8">SS</tei-rs>.</cetei-original><sup><a id="srcnote16" href="#note16">16</a></sup></tei-note>
+               treffen. Da <tei-choice data-origname="choice">
+                  <tei-sic data-origname="sic">deht</tei-sic>
+                  <tei-corr data-origname="corr">geht</tei-corr>
+               </tei-choice> es natürlich rauh und männ
+               <tei-lb xml:id="p001_r_3_tl_3" id="p001_r_3_tl_3" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>lich zu. In der Nähe des Bahnhofs sitzen, in einem
+               <tei-lb xml:id="p001_r_3_tl_4" id="p001_r_3_tl_4" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>rauchigen alten Raum, die "Verdächtigen": jüdische
+               <tei-lb xml:id="p001_r_3_tl_5" id="p001_r_3_tl_5" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Kaufleute, die früher einmal den Handel der
+               <tei-lb xml:id="p001_r_3_tl_6" id="p001_r_3_tl_6" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>städtischen Firmen mit den Bauern vermittelten,
+               <tei-lb xml:id="p001_r_3_tl_7" id="p001_r_3_tl_7" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>oder angesehene Holzhändler waren, junge, blasse,
+               <tei-lb xml:id="p001_r_3_tl_8" id="p001_r_3_tl_8" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>dunkelhaarige Studenten, die auf unerlaubten Um
+               <tei-lb xml:id="p001_r_3_tl_9" id="p001_r_3_tl_9" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>wegen ausländische Zeitungen erhalten und ältere
+               <tei-lb xml:id="p001_r_3_tl_10" id="p001_r_3_tl_10" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Herren, die in der üblen "Systemzeit" städtische
+               <tei-lb xml:id="p001_r_3_tl_11" id="p001_r_3_tl_11" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Verwaltungsämter inne hatten. Aber da gerate ich
+               <tei-lb xml:id="p001_r_3_tl_12" id="p001_r_3_tl_12" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>schon wieder in die "Politik". – Und dann gibt es,
+               <tei-lb xml:id="p001_r_3_tl_13" id="p001_r_3_tl_13" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>am Marktplatz, das Café, wo die ehrbaren Danziger
+               <tei-lb xml:id="p001_r_3_tl_14" id="p001_r_3_tl_14" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Bürgersfrauen Kuchen essen und sich mit ihren
+               <tei-lb xml:id="p001_r_3_tl_15" id="p001_r_3_tl_15" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Freundinnen über die lieben Nachbarn unterhalten.
+               <tei-lb xml:id="p001_r_3_tl_16" id="p001_r_3_tl_16" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Dort also ging ich hin – es war inzwischen fast
+               <tei-lb xml:id="p001_r_3_tl_17" id="p001_r_3_tl_17" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>halb 11 Uhr geworden – und saß gleich darauf
+               <tei-lb xml:id="p001_r_3_tl_18" id="p001_r_3_tl_18" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>neben einer einsamen Dame, die höflich zur Seite
+               <tei-lb xml:id="p001_r_3_tl_19" id="p001_r_3_tl_19" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>rückte, um mir auf der steifen, schmalen Polsterbank
+               <tei-lb xml:id="p001_r_3_tl_20" id="p001_r_3_tl_20" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Platz zu machen. <tei-quote data-origname="quote">Ein schöner Tag heute</tei-quote>, sagte
+               <tei-lb xml:id="p001_r_3_tl_21" id="p001_r_3_tl_21" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>ich – und sie antwortete zu meiner Ueberraschung:
+               <tei-lb xml:id="p001_l_2" id="p001_l_2" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-quote data-origname="quote">Sie sind wohl nicht von hier?</tei-quote> – <tei-quote data-origname="quote">Nein</tei-quote> –
+               <tei-lb xml:id="p001_r_3_tl_24" id="p001_r_3_tl_24" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-quote data-origname="quote">... aber auch keine Jüdin?</tei-quote> – Als ich sie darüber
+               <tei-lb xml:id="p001_r_3_tl_25" id="p001_r_3_tl_25" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>beruhigen konnte, daß nicht alle Ausländer Juden
+               <tei-lb xml:id="p001_r_3_tl_26" id="p001_r_3_tl_26" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>seien, gerieten wir in ein gemütliches Gespräch.
+               <tei-lb xml:id="p001_r_3_tl_27" id="p001_r_3_tl_27" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ob sie keinen Ausflug machen wolle, an einem so
+               <tei-lb xml:id="p001_r_3_tl_28" id="p001_r_3_tl_28" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>schönen Tag? Mit den Kindern? Sie habe doch
+               <tei-lb xml:id="p001_r_3_tl_29" id="p001_r_3_tl_29" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sicher Kinder? –
+               <tei-anchor xml:id="a7" id="a7" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>Sie hieß Frau <tei-rs type="person" key="person_0619" xml:id="r28" id="r28" data-origname="rs" data-origatts="type key xml:id">Amalie Boedeke</tei-rs>,
+               <tei-lb xml:id="p001_r_3_tl_30" id="p001_r_3_tl_30" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>war mit einem Kaufmann Branche Heringshandel
+               <tei-lb xml:id="p001_r_3_tl_31" id="p001_r_3_tl_31" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>verheiratet und hatte drei Kinder.
+               <tei-note type="annotation" xml:id="n7" id="n7" targetend="a7" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Es könnte sich dabei um dieselbe Person handeln, die Schwarzenbach in ihrem <tei-rs type="letter" key="letter_0250" xml:id="r69" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r69">Brief an Klaus Mann vom 5. Mai 1937</tei-rs> als eine <tei-quote data-origname="quote" data-processed="">ebenso schüchterne[] aber
+                     sehr brave[]
+                     <tei-lb xml:id="p001_tr_1_tl_18" data-origname="lb" data-origatts="xml:id" data-empty="" data-processed="" data-origid="p001_tr_1_tl_18"></tei-lb>kleinen Dame aus eingesessenen Kreisen</tei-quote> beschreibt. </cetei-original><sup><a id="srcnote17" href="#note17">17</a></sup></tei-note>Aber einen Aus
+               <tei-lb xml:id="p001_r_3_tl_32" id="p001_r_3_tl_32" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>flug machte sie nicht. Der Mann war Unterführer
+               <tei-lb xml:id="p001_r_3_tl_33" id="p001_r_3_tl_33" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>in der <tei-rs type="org" key="organisation_0199" xml:id="r9" id="r9" data-origname="rs" data-origatts="type key xml:id">S. A.</tei-rs> und hatte, natürlich,
+               Festtags-Dienst.
+               <tei-lb xml:id="p001_r_3_tl_34" id="p001_r_3_tl_34" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>
+               <tei-anchor xml:id="a3" id="a3" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>Die Kinder hatten auch alle Dienst
+               <tei-note type="annotation" xml:id="n3" id="n3" targetend="a3" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">vgl. diverse Fotografien Schwarzenbachs von Kindern in Uniform auf den Strassen <tei-rs type="place" key="place_0017" xml:id="r30" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r30">Danzigs</tei-rs>, z.B. A-5-13/037.</cetei-original><sup><a id="srcnote18" href="#note18">18</a></sup></tei-note>. <tei-quote data-origname="quote">Und wenn
+                  <tei-lb xml:id="p001_r_3_tl_35" id="p001_r_3_tl_35" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>man sie dann mal auf der Straße antrifft</tei-quote> sagte
+              
+               <tei-lb xml:id="p001_r_3_tl_36" id="p001_r_3_tl_36" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Frau <tei-rs type="person" key="person_0619" xml:id="r29" id="r29" data-origname="rs" data-origatts="type key xml:id">Boedeke</tei-rs>, <tei-quote data-origname="quote">dann kennt man sie gar nicht.
+                  Sie
+                  <tei-lb xml:id="p001_r_3_tl_37" id="p001_r_3_tl_37" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sehen ja alle ganz gleich aus, in ihren Hitler-Uni
+                  <tei-lb xml:id="p001_r_3_tl_38" id="p001_r_3_tl_38" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>formen. Nur der Horst, der Aelteste, der ist bei der
+                  <tei-lb xml:id="p001_r_3_tl_39" id="p001_r_3_tl_39" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Marine-<tei-rs type="org" key="organisation_0199" xml:id="r10" id="r10" data-origname="rs" data-origatts="type key xml:id">S.A.</tei-rs> und tragt Matrosenanzug. Das ist
+                     <tei-milestone unit="textregion" xml:id="p001_r_4" id="p001_r_4" data-origname="milestone" data-origatts="unit xml:id" data-empty=""></tei-milestone>
+                  <tei-lb xml:id="p001_r_4_tl_1" id="p001_r_4_tl_1" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>schmuck.</tei-quote> – Horst ist siebzehn Jahre alt, und man
+               <tei-lb xml:id="p001_r_4_tl_2" id="p001_r_4_tl_2" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>merkt, daß die Mutter stolz auf ihn ist. Nur weiß
+               <tei-lb xml:id="p001_r_4_tl_3" id="p001_r_4_tl_3" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sie gar nicht, was aus ihm werden soll. Er war so
+               <tei-lb xml:id="p001_r_4_tl_4" id="p001_r_4_tl_4" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>tüchtig in der Schule – aber das nützt ja heutzutage
+               <tei-lb xml:id="p001_r_4_tl_5" id="p001_r_4_tl_5" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>nichts mehr. Er hätte dann eine Lehrlingsstelle
+               <tei-lb xml:id="p001_r_4_tl_6" id="p001_r_4_tl_6" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>im Heringshafen haben können. Aber zuerst mußte
+               <tei-lb xml:id="p001_r_4_tl_7" id="p001_r_4_tl_7" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>er natürlich in irgendeine Truppe der <tei-rs type="org" key="organisation_0002" xml:id="r11" id="r11" data-origname="rs" data-origatts="type key xml:id">Partei</tei-rs> ein
+               <tei-lb xml:id="p001_r_4_tl_8" id="p001_r_4_tl_8" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>treten, sonst kommen die Jungen zu nichts. Und
+               <tei-lb xml:id="p001_r_4_tl_9" id="p001_r_4_tl_9" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>jetzt ist er bei der Marine-<tei-rs type="org" key="organisation_0199" xml:id="r12" id="r12" data-origname="rs" data-origatts="type key xml:id">S.A.</tei-rs>, das ist sehr
+               ehren
+               <tei-lb xml:id="p001_r_4_tl_10" id="p001_r_4_tl_10" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>voll, aber die Stelle hat er ausgeschlagen – er
+               <tei-lb xml:id="p001_r_4_tl_11" id="p001_r_4_tl_11" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>hat dafür keine Zeit übrig, wegen der vielen Uebun
+               <tei-lb xml:id="p001_r_4_tl_12" id="p001_r_4_tl_12" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>gen. <tei-quote data-origname="quote">Nun frage ich Sie</tei-quote>, sagt Frau Boedeke trübe,
+               <tei-lb xml:id="p001_r_4_tl_13" id="p001_r_4_tl_13" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-quote data-origname="quote">was soll aus dem Horst werden?</tei-quote> – <tei-quote data-origname="quote">Und Ihr
+                  <tei-lb xml:id="p001_r_4_tl_14" id="p001_r_4_tl_14" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Töchterchen?</tei-quote>, frage ich, – weil ich mich ja heute
+               <tei-lb xml:id="p001_r_4_tl_15" id="p001_r_4_tl_15" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>nicht auf politische Gespräche einlassen will, und
+               <tei-lb xml:id="p001_r_4_tl_16" id="p001_r_4_tl_16" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Marine-<tei-rs type="org" key="organisation_0199" xml:id="r13" id="r13" data-origname="rs" data-origatts="type key xml:id">S.A.</tei-rs> zur politischen Erziehung gehört. –
+               <tei-lb xml:id="p001_r_4_tl_17" id="p001_r_4_tl_17" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ja, die Anna, sie ist erst 12 Jahre alt, ein liebes,
+               <tei-lb xml:id="p001_r_4_tl_18" id="p001_r_4_tl_18" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>stilles Kind. Früher sind wir Sonntags zusammen
+               <tei-lb xml:id="p001_r_4_tl_19" id="p001_r_4_tl_19" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>an den Strand gegangen, in der alten Zeit. Aber
+               <tei-lb xml:id="p001_r_4_tl_20" id="p001_r_4_tl_20" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>jetzt ist sie ein <tei-rs type="org" key="organisation_0260" xml:id="r31" id="r31" data-origname="rs" data-origatts="type key xml:id">B.D.M.</tei-rs>-Mädchen, und muß viel
+               üben
+               <tei-lb xml:id="p001_r_4_tl_21" id="p001_r_4_tl_21" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>und auch marschieren und so etwas, damit sie eine
+               <tei-lb xml:id="p001_r_4_tl_22" id="p001_r_4_tl_22" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>richtige "Deutsche Frau" wird. – <tei-quote data-origname="quote">Da haben Sie
+                  <tei-lb xml:id="p001_r_4_tl_23" id="p001_r_4_tl_23" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>es ein bißchen einsam, Frau Boedeke?</tei-quote> Sie sieht
+               <tei-lb xml:id="p001_r_4_tl_24" id="p001_r_4_tl_24" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>mich mißtrauisch an. <tei-quote data-origname="quote">Wir üben keine Kritik</tei-quote> sagt
+               <tei-lb xml:id="p001_r_4_tl_25" id="p001_r_4_tl_25" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sie streng, – <tei-quote data-origname="quote">das duldet mein Mann nicht. Und
+                  <tei-lb xml:id="p001_r_4_tl_26" id="p001_r_4_tl_26" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>die Jugend gehört eben unserem <tei-rs type="person" key="person_0160" xml:id="r14" id="r14" data-origname="rs" data-origatts="type key xml:id">Führer</tei-rs>.</tei-quote> –
+               Sie
+               <tei-lb xml:id="p001_r_4_tl_27" id="p001_r_4_tl_27" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>verzehrt, ein bißchen hastig, ihren Sahnekuchen, dann
+               <tei-lb xml:id="p001_r_4_tl_28" id="p001_r_4_tl_28" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>fährt sie wieder im alten, leicht klagenden Ton
+               <tei-lb xml:id="p001_r_4_tl_29" id="p001_r_4_tl_29" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>fort: <tei-quote data-origname="quote">Ich bin ja nun auch sehr beschäftigt. Mein
+                  <tei-lb xml:id="p001_r_4_tl_30" id="p001_r_4_tl_30" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Mann sagt immer, es sei eine Schande, daß ich nicht
+                  <tei-lb xml:id="p001_r_4_tl_31" id="p001_r_4_tl_31" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>in der <tei-rs type="org" key="organisation_0261" xml:id="r32" id="r32" data-origname="rs" data-origatts="type key xml:id">N.S.-Frauenschaft</tei-rs> bin, wo wir Frauen po
+                  <tei-lb xml:id="p001_r_4_tl_32" id="p001_r_4_tl_32" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>litisch erzogen werden. Aber woher soll ich die Zeit
+                  <tei-lb xml:id="p001_r_4_tl_33" id="p001_r_4_tl_33" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>nehmen? – Früher hatten wir ein Mädchen, jetzt
+                  <tei-lb xml:id="p001_r_4_tl_34" id="p001_r_4_tl_34" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>seit der Guldenabwertung muß ich alles selber
+                  <tei-lb xml:id="p001_r_4_tl_35" id="p001_r_4_tl_35" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>machen.</tei-quote> –
+               <tei-anchor xml:id="a4" id="a4" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>Die Guldenabwertung erfolgte, nach
+               <tei-lb xml:id="p001_r_4_tl_36" id="p001_r_4_tl_36" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>einem großartigen Maifest der <tei-rs type="org" key="organisation_0002" xml:id="r15" id="r15" data-origname="rs" data-origatts="type key xml:id">nationalsozialistischen
+                  <tei-lb xml:id="p001_r_4_tl_37" id="p001_r_4_tl_37" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Partei</tei-rs>, am 2. Mai 1933. <tei-quote data-origname="quote">Die Juden und die Polen
+                  <tei-lb xml:id="p001_r_4_tl_38" id="p001_r_4_tl_38" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>hatten das ausgemacht, um uns zu schaden</tei-quote>, sagt <tei-milestone unit="textregion" xml:id="p001_r_1" id="p001_r_1" data-origname="milestone" data-origatts="unit xml:id" data-empty=""></tei-milestone>
+               <tei-lb xml:id="p001_r_1_tl_1" id="p001_r_1_tl_1" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Frau <tei-rs type="person" key="person_0619" xml:id="r33" id="r33" data-origname="rs" data-origatts="type key xml:id">Boedeke</tei-rs> und richtet einen triumphierenden
+               <tei-lb xml:id="p001_r_1_tl_2" id="p001_r_1_tl_2" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Blick auf mich
+               <tei-note type="annotation" xml:id="n4" id="n4" targetend="a4" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Schwarzenbach gibt hier die nationalsozialistische Propaganda bezüglich der
+                  Abwertung des Danziger Guldens korrekt wieder, die Zeitangabe liegt jedoch um zwei Jahre daneben (wobei hier auch Druckfehler
+                  möglich ist): Die Guldenabwertung fand erst am 1. Mai 1935 statt, vgl. <tei-rs type="bibl" key="5JXX7VPC" xml:id="r34" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r34">Markert
+                  1935</tei-rs>, S. 752.</cetei-original><sup><a id="srcnote19" href="#note19">19</a></sup></tei-note>.</tei-p>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p001_r_1_tl_3" id="p001_r_1_tl_3" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Es ist offenbar schwer, in <tei-rs type="place" key="place_0017" xml:id="r16" id="r16" data-origname="rs" data-origatts="type key xml:id">Danzig</tei-rs> "Ferien von der
+               <tei-lb xml:id="p001_r_1_tl_4" id="p001_r_1_tl_4" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Politik" zu machen. Oder irre ich mich? Ist das
+               <tei-lb xml:id="p001_r_1_tl_5" id="p001_r_1_tl_5" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>alles längst nicht mehr "Politik", ist das das täg
+               <tei-lb xml:id="p001_r_1_tl_6" id="p001_r_1_tl_6" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>liche Leben, das tägliche Brot, der Alltag der Bür
+               <tei-lb xml:id="p001_r_1_tl_7" id="p001_r_1_tl_7" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>ger dieser einst stolzen und freien <tei-rs type="place" key="place_0017" xml:id="r17" id="r17" data-origname="rs" data-origatts="type key xml:id">Hansestadt</tei-rs>? Sind
+               <tei-lb xml:id="p001_r_1_tl_8" id="p001_r_1_tl_8" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sie alle "politisch erzogen", die Siebzehnjährigen
+               <tei-lb xml:id="p001_r_1_tl_9" id="p001_r_1_tl_9" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>und die Schulmädchen und die Hausfrauen, die kein
+               <tei-lb xml:id="p001_r_1_tl_10" id="p001_r_1_tl_10" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Winkelchen ihrer Seele davor bewahren können,
+               <tei-lb xml:id="p001_r_1_tl_11" id="p001_r_1_tl_11" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>nicht einmal für einen Spaziergang am Feiertag?</tei-p>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p001_r_1_tl_12" id="p001_r_1_tl_12" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich habe dann schließlich jemanden gefunden, der
+               <tei-lb xml:id="p001_r_1_tl_13" id="p001_r_1_tl_13" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>mit mir ins Grüne und aus dem Fahnenwald hin
+               <tei-lb xml:id="p001_r_1_tl_14" id="p001_r_1_tl_14" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>aus an den weiten, friedlichen Strand hinaus fuhr.
+               <tei-lb xml:id="p001_r_1_tl_15" id="p001_r_1_tl_15" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Eine kleine Jüdin – ich traf sie im Café der
+               <tei-lb xml:id="p001_r_1_tl_16" id="p001_r_1_tl_16" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>"Verdächtigen", wo sie mit ihrem Bruder, einem
+               <tei-lb xml:id="p001_r_1_tl_17" id="p001_r_1_tl_17" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>vergrübelten Studenten, saß. Der Student hatte
+               <tei-lb xml:id="p001_r_1_tl_18" id="p001_r_1_tl_18" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>einmal hochfliegende Pläne, er wollte Musikkritiker
+               <tei-lb xml:id="p001_r_1_tl_19" id="p001_r_1_tl_19" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>werden, in <tei-rs type="place" key="place_0010" xml:id="r18" id="r18" data-origname="rs" data-origatts="type key xml:id">Berlin</tei-rs> oder <tei-rs type="place" key="place_0059" xml:id="r19" id="r19" data-origname="rs" data-origatts="type key xml:id">Paris</tei-rs> oder <tei-rs type="place" key="place_0857" xml:id="r35" id="r35" data-origname="rs" data-origatts="type key xml:id">Dresden</tei-rs>.
+               <tei-anchor xml:id="a6" id="a6" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>Jetzt
+               <tei-lb xml:id="p001_r_1_tl_20" id="p001_r_1_tl_20" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>hatten sie zusammen eine kleine Musikalienhandlung.
+               <tei-lb xml:id="p001_r_1_tl_21" id="p001_r_1_tl_21" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Die neue, zeitgemäße Musik, die Marschalbums und
+               <tei-lb xml:id="p001_r_1_tl_22" id="p001_r_1_tl_22" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Lieder der <tei-rs type="org" key="organisation_0198" xml:id="r20" id="r20" data-origname="rs" data-origatts="type key xml:id">Hitler-Jugend</tei-rs> durften sie allerdings
+               nicht
+               <tei-lb xml:id="p001_r_1_tl_23" id="p001_r_1_tl_23" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>halten, weil sie Juden waren. Und weil nun also
+               <tei-lb xml:id="p001_r_1_tl_24" id="p001_r_1_tl_24" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>das <tei-rs type="bibl" key="UM3L78NJ" xml:id="r36" id="r36" data-origname="rs" data-origatts="type key xml:id">Horst-Wessel-Lied</tei-rs> nicht in ihrem Schaufenster
+               <tei-lb xml:id="p001_r_1_tl_25" id="p001_r_1_tl_25" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>lag, wurden sie natürlich von der Partei und allen
+               <tei-lb xml:id="p001_r_1_tl_26" id="p001_r_1_tl_26" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Gutgesinnten boykottiert.
+               <tei-note type="annotation" xml:id="n6" id="n6" targetend="a6" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Wie die Legende einer Fotografie von Schwarzenbach belegt, waren nicht-arische
+                  Geschäfte in und um <tei-rs type="place" key="place_0017" xml:id="r22" data-origname="rs" data-origatts="type key xml:id" data-processed="" data-origid="r22">Danzig</tei-rs> auch durch das Fehlen eines im Schaufenster
+                  ausgelegten 'Arier-Ausweises' erkennbar, vgl. A-5-13/030.</cetei-original><sup><a id="srcnote20" href="#note20">20</a></sup></tei-note>– Trotzdem hat das kleine
+               <tei-lb xml:id="p001_r_1_tl_27" id="p001_r_1_tl_27" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Fräulein Jakobsohn kein Wort über Politik ge
+               <tei-lb xml:id="p001_r_1_tl_28" id="p001_r_1_tl_28" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>redet, als wir am Nachmittag zusammen zur
+               <tei-anchor xml:id="a5" id="a5" data-origname="anchor" data-origatts="xml:id" data-empty=""></tei-anchor>alten
+               <tei-lb xml:id="p001_r_1_tl_29" id="p001_r_1_tl_29" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Schloßkirche von <tei-rs type="place" key="place_0855" xml:id="r37" id="r37" data-origname="rs" data-origatts="type key xml:id">Oliva</tei-rs>
+               <tei-note type="annotation" xml:id="n5" id="n5" targetend="a5" data-origname="note" data-origatts="type xml:id targetEnd" data-processed=""><cetei-original hidden="" data-original="" role="none">Vgl. A-5-13/065, A-5-13/067.</cetei-original><sup><a id="srcnote21" href="#note21">21</a></sup></tei-note> hinausgingen. Einen Aus
+               <tei-lb xml:id="p001_r_1_tl_30" id="p001_r_1_tl_30" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>länder zu treffen, erklärte sie mir, sei genau wie eine
+               <tei-lb xml:id="p001_r_1_tl_31" id="p001_r_1_tl_31" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Reise zu machen. Eine richtige Ferienreise sei das.
+               <tei-lb xml:id="p001_r_1_tl_32" id="p001_r_1_tl_32" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>In einem kleinen, russischen Restaurant in <tei-rs type="place" key="place_0856" xml:id="r38" id="r38" data-origname="rs" data-origatts="type key xml:id">Zoppot</tei-rs>
+               <tei-lb xml:id="p001_r_1_tl_33" id="p001_r_1_tl_33" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>aßen wir nachher russische Kotelettes, zu denen ich
+               <tei-lb xml:id="p001_r_1_tl_34" id="p001_r_1_tl_34" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>mein Lieblingsgericht, Preiselbeeren, haben wollte,
+               <tei-lb xml:id="p001_r_1_tl_35" id="p001_r_1_tl_35" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>die es aber nicht gab. Wir tranken auch Wodka,
+               <tei-lb xml:id="p001_r_1_tl_36" id="p001_r_1_tl_36" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>und Fräulein Jakobsohn wurde davon heiter und
+               <tei-lb xml:id="p001_r_1_tl_37" id="p001_r_1_tl_37" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>gesprächig. – <tei-quote data-origname="quote">Vielleicht erreiche ich es <tei-hi rendition="#g" class="g" data-origname="hi" data-origatts="rendition">doch</tei-hi> noch!</tei-quote>
+               <tei-pb xml:id="p002" id="p002" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif/info.json" n="10" data-origname="pb" data-origatts="xml:id facs n" data-empty=""></tei-pb>
+               <tei-milestone unit="textregion" xml:id="p002_r" id="p002_r" data-origname="milestone" data-origatts="unit xml:id" data-empty=""></tei-milestone>
+               <tei-lb xml:id="p002_r_tl_1" id="p002_r_tl_1" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>sagte sie, und nickte mir mit einem glücklichen Lä
+               <tei-lb xml:id="p002_r_tl_2" id="p002_r_tl_2" break="no" data-origname="lb" data-origatts="xml:id break" data-empty=""></tei-lb>cheln zu. – <tei-quote data-origname="quote">Was wollen Sie denn erreichen?</tei-quote> –
+               <tei-lb xml:id="p002_r_tl_3" id="p002_r_tl_3" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-quote data-origname="quote">Daß mein Bruder einen Paß bekommt und ins
+                  <tei-lb xml:id="p002_r_tl_4" id="p002_r_tl_4" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ausland gehen kann</tei-quote><tei-choice data-origname="choice">
+                  <tei-sic data-origname="sic" data-empty=""></tei-sic>
+                  <tei-corr data-origname="corr">,</tei-corr>
+               </tei-choice> sagte sie, <tei-quote data-origname="quote">er geht mir sonst
+                  <tei-lb xml:id="p002_r_tl_5" id="p002_r_tl_5" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>hier zugrunde, und er hat so große Gaben!</tei-quote></tei-p>
+            <tei-p data-origname="p">
+               <tei-lb xml:id="p002_r_tl_6" id="p002_r_tl_6" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Ich fragte nicht, was aus ihr dann werden würde.
+               <tei-lb xml:id="p002_r_tl_7" id="p002_r_tl_7" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Wir machten uns auf den Heimweg. – Am nächsten
+               <tei-lb xml:id="p002_r_tl_8" id="p002_r_tl_8" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Tag, vor meiner Abreise aus <tei-rs type="place" key="place_0017" xml:id="r21" id="r21" data-origname="rs" data-origatts="type key xml:id">Danzig</tei-rs>, wurde beim
+               <tei-lb xml:id="p002_r_tl_9" id="p002_r_tl_9" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>Hotelportier für mich ein Paketchen abgegeben, es
+               <tei-lb xml:id="p002_r_tl_10" id="p002_r_tl_10" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb>enthielt ein Glas eingemachter Preiselbeeren! –</tei-p>
+            
+            <tei-lb xml:id="p002_r_tl_11" id="p002_r_tl_11" data-origname="lb" data-origatts="xml:id" data-empty=""></tei-lb><tei-byline data-origname="byline"><tei-hi rendition="#g" class="g" data-origname="hi" data-origatts="rendition"> Annemarie Clark</tei-hi>.</tei-byline>
+</tei-div>
+       </tei-body>
+    </tei-text>
+ 

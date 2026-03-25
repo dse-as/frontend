@@ -1,0 +1,4 @@
+- [ ] original -> server vs. browser
+- [ ] default vs. custom behavior (oxygen-split)
+- [ ] anchor für sonst noch was?
+- [ ] 

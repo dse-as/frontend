@@ -14,6 +14,64 @@
 	text-decoration-color: blue;
 }
 
+/* Annotation */
+:root {
+	--yellow-hover: #fef08a;
+	--yellow-active: #fde047;
+}
+.tei-seg {
+	transition: background-color 0.15s ease-in-out;
+}
+/* hover */
+.tei-seg.hover {
+	background-color: var(--yellow-hover);
+}
+/* active */
+.tei-seg.active {
+	background-color: var(--yellow-active);
+}
+
+/* ---------- */
+.tei-marker {
+	font-size: 0.75rem;
+	vertical-align: super;
+	cursor: pointer;
+	margin-left: 0.25rem;
+	color: var(--blue-600);
+}
+
+.tei-marker.hover {
+	text-decoration: underline;
+}
+
+.note-item.hover {
+	background-color: var(--yellow-100);
+}
+
+.note-item.active {
+	background-color: var(--yellow-200);
+	border-left: 4px solid var(--yellow-500);
+}
+
+/* Hide notes */
+tei-note > sup {
+	/* display: none; */
+	background-color: #9ad3af;
+	border-radius: 100%;
+	padding: 5px;
+}
+
+.tei-annotation {
+	cursor: pointer;
+	background-color: #fef08a;
+	transition-property: all;
+	transition-duration: 200ms;
+	background-color: 200ms;
+}
+
+.tei-annotation.active {
+	background-color: #f6c21a;
+}
 /* Quotes */
 [type='quote']::before {
 	content: '«';

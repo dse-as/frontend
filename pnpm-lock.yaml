@@ -14,6 +14,9 @@ importers:
       '@sveltejs/adapter-static':
         specifier: ^3.0.10
         version: 3.0.10(@sveltejs/kit@2.55.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.54.1)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)))(svelte@5.54.1)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)))
+      CETEIcean:
+        specifier: ^1.9.5
+        version: 1.9.5
       jsdom:
         specifier: ^29.0.1
         version: 29.0.1
@@ -934,6 +937,9 @@ packages:
 
   '@zag-js/utils@1.35.3':
     resolution: {integrity: sha512-LHcC+9y6TFhDsIz9I3koYxONl2JFfx5yQDzc6ZEQO2cqzXedRcN0R9IPqNGCX7JuhGt14ctDkVCm1JWGP2J6Wg==}
+
+  CETEIcean@1.9.5:
+    resolution: {integrity: sha512-h7ztuaI+RkOqDeqyCtrpwpopaDz908G6yxqBq2GhR3f9suqJqyByI1rR8WHcYqzMUYfT4xWWumSgQ+XDPa26bA==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2726,6 +2732,8 @@ snapshots:
       csstype: 3.2.3
 
   '@zag-js/utils@1.35.3': {}
+
+  CETEIcean@1.9.5: {}
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:

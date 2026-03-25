@@ -1,0 +1,24 @@
+<p xmlns="http://www.tei-c.org/ns/1.0">
+  Lorem ipsum 
+  <anchor xml:id="a1"/>First annotated text
+  <anchor xml:id="a2"/>overlapping second
+  <note xml:id="n1" targetEnd="a1">First annotation</note>
+  continues here
+  <note xml:id="n2" targetEnd="a2">Second annotation</note>
+  Lorem ipsum...
+  
+  <!-- Nested -->
+  <anchor xml:id="a3"/>Outer start 
+    <anchor xml:id="a4"/>Inner part
+    <note xml:id="n4" targetEnd="a4">Inner note</note>
+  outer end
+  <note xml:id="n3" targetEnd="a3">Outer note</note>.
+
+  <!-- Adjacent (touching) -->
+  <anchor xml:id="a5"/>Touching1<note xml:id="n5" targetEnd="a5">Note 5</note>
+  <anchor xml:id="a6"/> Touching2<note xml:id="n6" targetEnd="a6">Note 6</note>
+
+  <!-- Only whitespace separation -->
+  <anchor xml:id="a7"/>WordA <note xml:id="n7" targetEnd="a7">A</note>
+  <anchor xml:id="a8"/>WordB<note xml:id="n8" targetEnd="a8">B</note>
+</p>
