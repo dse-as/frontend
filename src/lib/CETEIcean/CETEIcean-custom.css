@@ -1,0 +1,138 @@
+[type='place'],
+[type='person'] {
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+}
+[type='place'] {
+	text-decoration-color: red;
+}
+[type='person'] {
+	text-decoration-color: blue;
+}
+
+/* -------------------------------- */
+
+:root {
+	--yellow-hover: #fef08a;
+	--yellow-active: #fde047;
+}
+.tei-seg {
+	transition: background-color 0.15s ease-in-out;
+}
+/* hover */
+.tei-seg.hover {
+	background-color: var(--yellow-hover);
+}
+/* active */
+.tei-seg.active {
+	background-color: var(--yellow-active);
+}
+
+/* -------------------------------- */
+
+.tei-marker {
+	font-size: 0.75rem;
+	vertical-align: super;
+	cursor: pointer;
+	margin-left: 0.25rem;
+	color: var(--blue-600);
+}
+
+.tei-marker.hover {
+	text-decoration: underline;
+}
+
+.note-item.hover {
+	background-color: var(--yellow-100);
+}
+
+.note-item.active {
+	background-color: var(--yellow-200);
+	border-left: 4px solid var(--yellow-500);
+}
+
+/* -------------------------------- */
+/* Hide notes */
+tei-note > sup {
+	/* display: none; */
+	background-color: #9ad3af;
+	border-radius: 100%;
+	padding: 5px;
+}
+
+.tei-annotation {
+	cursor: pointer;
+	background-color: #fef08a;
+	transition-property: all;
+	transition-duration: 200ms;
+	background-color: 200ms;
+}
+
+.tei-annotation.active {
+	background-color: #f6c21a;
+}
+
+/* -------------------------------- */
+/* Quotes */
+[type='quote']::before {
+	content: '«';
+}
+[type='quote']::after {
+	content: '»';
+}
+
+/* -------------------------------- */
+/* Structure */
+[type='head'] {
+	font-size: 1.5rem; /* text-2xl */
+	font-weight: 700; /* font-bold */
+}
+[type='pagebreak'] {
+}
+
+/* -------------------------------- */
+/* Choice */
+[type='choice'] {
+	border-radius: 1rem; /* rounded-xl */
+	border-width: 2px;
+	border-style: solid;
+}
+[type='sic'] {
+	text-decoration-line: line-through;
+	text-decoration-color: #ef4444; /* red-500 */
+	text-decoration-thickness: 3px;
+}
+[type='corr'] {
+	color: #16a34a; /* green-500 */
+}
+
+/* -------------------------------- */
+/* Notes */
+[type='mark'][marktype='single-annotation']:hover,
+[type='mark'][marktype='single-annotation'].highlighted {
+	cursor: pointer;
+	background-color: rgba(99, 102, 241, 0.95); /* bg-primary-50-950 approximated */
+	color: rgba(255, 255, 255, 0.95); /* text-surface-950 approximated */
+	/* content: '[';  not valid on regular elements */
+}
+[type='mark'][marktype='single-annotation'].highlighted {
+	background-color: rgba(99, 102, 241, 1); /* bg-primary-100-900 approximated */
+}
+[type='markend'] {
+	border-radius: 9999px; /* rounded-full */
+	background-color: rgba(99, 102, 241, 0.95); /* bg-primary-50-950 approximated */
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	vertical-align: super;
+	font-size: 0.875rem; /* text-sm */
+}
+[type='markend'].highlighted {
+	background-color: rgba(99, 102, 241, 1); /* bg-primary-100-900 approximated */
+}
+[type='markend']:not(.highlighted):hover {
+	cursor: pointer;
+	background-color: rgba(59, 130, 246, 0.6); /* bg-primary-400-600 approximated */
+}
+[type='markend']::before {
+	content: attr(data-notenum);
+}
