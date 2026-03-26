@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { smallforms_meta } from '$lib/data/smallforms_meta.json';
 
-	let { meta, annot, docId, currentPage } = $props();
+	let { meta, ceteiData, annot, docId, currentPage } = $props();
 	let urls = smallforms_meta[docId].manuscript.iiif_urls;
 </script>
 

@@ -93,7 +93,7 @@
       <body> 
          <div type="smallform">
             <pb xml:id="p001" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json" n="9"/>
-            <milestone unit="textregion" xml:id="p001_r_2"/>            <head>
+            <milestone unit="textregion" xml:id="p001_r_2"></milestone>            <head>
                <lb xml:id="p001_r_2_tl_1"/>Baltisches Tagebuch.
                <lb xml:id="p001_l"/>IV.
                <lb xml:id="p001_r_2_tl_2"/>Kleine Begegnungen in <rs type="place" key="place_0017" xml:id="r2">Danzig</rs>.</head>
@@ -141,7 +141,7 @@
                <lb xml:id="p001_r_2_tl_31"/>Ich zog mich also an, verließ das Hotel, und ging
                <lb xml:id="p001_r_2_tl_33"/>zuerst einmal in das "Café zum Alten Tor". Man
                <lb xml:id="p001_r_2_tl_34"/>muß in <rs type="place" key="place_0017" xml:id="r4">Danzig</rs> wissen, in welches Kaffeehaus man
-               <lb xml:id="p001_r_2_tl_35"/>geht. Da gibt es kleine Cafés in den engen Seiten <milestone unit="textregion" xml:id="p001_r_3"/>
+               <lb xml:id="p001_r_2_tl_35"/>geht. Da gibt es kleine Cafés in den engen Seiten <milestone unit="textregion" xml:id="p001_r_3"></milestone>
                <lb xml:id="p001_r_3_tl_1" break="no"/>gassen, wo sich die <rs type="org" key="organisation_0199" xml:id="r5">S.A.</rs>-Männer und
                <anchor xml:id="a2"/>Sturmbann
                <lb xml:id="p001_r_3_tl_2" break="no"/>führer

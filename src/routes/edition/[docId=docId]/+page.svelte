@@ -63,9 +63,21 @@
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden px-5">
 		{#if dflf === 'LF'}
-			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
+			<LF
+				meta={data.meta}
+				ceteiData={data.ceteiData}
+				annot={data.annot}
+				docId={page.params.docId}
+				{pagenum}
+			/>
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
+			<DF
+				meta={data.meta}
+				ceteiData={data.ceteiData}
+				annot={data.annot}
+				docId={page.params.docId}
+				{pagenum}
+			/>
 		{/if}
 	</div>
 </div>

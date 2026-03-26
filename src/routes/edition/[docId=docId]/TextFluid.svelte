@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, type Component } from 'svelte';
+	import { onMount, tick, type Component } from 'svelte';
 	import { handleMarkClick } from '$lib/functions/handleMarkClick';
 	import { handleMarkendClick } from '$lib/functions/handleMarkendClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
@@ -12,7 +12,7 @@
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
-	let { docId, ceteiData } = $props();
+	let { meta, ceteiData, docId } = $props();
 
 	// ---------------------------------------------
 	// Thumbnails
@@ -69,37 +69,47 @@
 	}
 
 	function setupFacsimile(el) {
-		// initial collect
-		collectPagebreaks(el);
+		let mounted = false;
+		(async () => {
+			await tick(); // wait for DOM updates, including {@html}
+			if (!mounted) return;
 
-		// reacts to layout / wrapping changes
-		resizeObserver = new ResizeObserver(() => {
-			updatePagebreakPositions();
-		});
-		resizeObserver.observe(el);
-
-		// reacts to DOM/text changes
-		mutationObserver = new MutationObserver(() => {
+			// initial collect
 			collectPagebreaks(el);
-		});
-		mutationObserver.observe(el, {
-			childList: true,
-			subtree: true,
-			characterData: true
-		});
 
-		// fallback for viewport changes
-		window.addEventListener('resize', updatePagebreakPositions);
+			// reacts to layout / wrapping changes
+			resizeObserver = new ResizeObserver(() => {
+				updatePagebreakPositions();
+			});
+			resizeObserver.observe(el);
 
-		// fonts can shift layout after load
-		if (document.fonts) {
-			document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
-		}
+			// reacts to DOM/text changes
+			mutationObserver = new MutationObserver(() => {
+				collectPagebreaks(el);
+			});
+			mutationObserver.observe(el, {
+				childList: true,
+				subtree: true,
+				characterData: true
+			});
+
+			// fallback for viewport changes
+			window.addEventListener('resize', updatePagebreakPositions);
+
+			// fonts can shift layout after load
+			if (document.fonts) {
+				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
+			}
+		})();
+		mounted = true;
+		return {
+			destroy() {
+				mounted = false;
+			}
+		};
 	}
 
 	function setupListeners(el) {
-		// ---------------------------------------------
-		// (2) Click listeners
 		el.addEventListener('click', handleDocumentClick);
 	}
 
@@ -118,14 +128,12 @@
 		// cetei.getHTML5(`/data/texts/text-${docId}.xml`, (data) => {
 		// 	containerTEI.appendChild(data);
 		// });
-
-		// CETEIcean with JSDOM from +server.page.js
-		containerTEI.appendChild(ceteiData);
+		// containerTEI.innerHTML = ceteiData.serialized;
+		// containerTEI.innerHTML = '<milestone></milestone><p>TEST</p>';
 	});
 </script>
 
 <div
-	data-dom="containerMaintext"
 	data-textflow="fluid"
 	class="grid grid-cols-[120px_1fr] gap-10 overflow-y-auto p-10"
 	bind:this={containerMaintext}
@@ -147,7 +155,10 @@
 		{/each}
 	</aside>
 	<!-- TEXT COLUMN -->
-	<main bind:this={containerTEI} class="max-w-none" use:setupFacsimile use:setupListeners />
+	<main bind:this={containerTEI} class="max-w-none" use:setupFacsimile use:setupListeners>
+		<!-- {@html ceteiData.serialized} -->
+		<!-- {@html '<milestone></milestone><p>TEST</p>'} -->
+	</main>
 </div>
 
 <style>
