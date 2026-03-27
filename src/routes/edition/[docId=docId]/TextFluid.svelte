@@ -124,6 +124,11 @@
 	// add behaviours here
 
 	const setupCustomElements = () => {
+		c.addBehaviors({
+			tei: {
+				note: ['(((', ')))']
+			}
+		});
 		c.processPage();
 	};
 </script>
