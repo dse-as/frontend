@@ -30,9 +30,55 @@ let annot = {
 let ceteiData: HTMLElement;
 
 export const load: LayoutServerLoad = async ({ fetch, params }) => {
-	const res = await fetch(`/data/texts/text-${params.docId}.xml`);
-	const xmlString = await res.text();
-	const ceteiData = processTEI(xmlString);
+	async function loadText(params) {
+		const defaultBody = `
+		<?xml version="1.0" encoding="UTF-8"?>
+			<TEI xmlns="http://www.tei-c.org/ns/1.0">
+				<text>
+					<body>
+						<div type="body" xml:lang="en">
+							<p>No content available.</p>
+						</div>
+					</body>
+				</text>
+			</TEI>`;
 
+		try {
+			// (1) Fetch xml data
+			const res = await fetch(`/data/texts/text-${params.docId}.xml`);
+
+			// Throw 404 if XML not found
+			if (!res.ok) {
+				if (res.status === 404) {
+					console.warn('XML not found, using default data');
+					return defaultBody;
+				}
+				throw new Error(`Fetch error: ${res.status} ${res.statusText}`);
+			}
+
+			// (2) Extract xmlString
+			const xmlString = await res.text();
+			// Warn if empty/invalid XML
+			if (!xmlString || !xmlString.trim()) {
+				console.warn('Empty XML response, using default data');
+				return defaultBody;
+			}
+
+			// (3) Apply CETEIcean's processTEI()
+			try {
+				const ceteiData = processTEI(xmlString);
+				return ceteiData;
+			} catch (parseErr) {
+				console.error('TEI parse error:', parseErr);
+				return defaultBody;
+			}
+		} catch (err) {
+			// (4) Catch other errors
+			console.error('Failed to load XML:', err);
+			return defaultBody;
+		}
+	}
+
+	ceteiData = await loadText(params);
 	return { meta, annot, ceteiData };
 };
