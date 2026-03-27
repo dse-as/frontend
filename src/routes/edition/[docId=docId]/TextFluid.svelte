@@ -31,7 +31,7 @@
 
 	function collectPagebreaks(el: HTMLElement) {
 		const nodes = el.querySelectorAll('tei-pb');
-
+		if (nodes.length) {
 			thumbs = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
 				id: i,
 				el: el,
@@ -40,6 +40,7 @@
 				top: 0
 			}));
 			updatePagebreakPositions();
+		}
 	}
 
 	function updatePagebreakPositions() {
