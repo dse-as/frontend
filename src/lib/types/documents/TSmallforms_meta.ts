@@ -45,7 +45,8 @@ export type TSmallforms_meta = {
 				pubPlace: string;
 				signature: string;
 				pubDetails: string;
-				textstufen: string;
+				textstufen_edited: string;
+				textzeugen_nonedited: string;
 				series: string;
 				comment: string;
 				keywords: {

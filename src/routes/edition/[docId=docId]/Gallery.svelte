@@ -14,9 +14,9 @@
 
 	let { metadata, docId, pagenum } = $props();
 
-	// Textstufen
-	const textstufen = metadata[docId]?.metadata.textstufen || [];
-	let showTextstufen = $state(false);
+	// Textzeugen
+	const textzeugen = metadata[docId]?.metadata.textzeugen_nonedited || [];
+	let showTextzeugen = $state(false);
 
 	// Gallery Items
 
@@ -69,16 +69,24 @@
 				</button>
 			{/each}
 		</div>
-		{#if showTextstufen}
+		{#if textzeugen.length && !showTextzeugen}
+			<button
+				class="m-5 self-start rounded-full underline"
+				onclick={() => {
+					showTextzeugen = true;
+				}}>Nichtedierte Textzeugen einblenden</button
+			>
+		{/if}
+		{#if showTextzeugen}
 			<div class="bg-surface-800 px-10 py-5 text-surface-200">
-				{#each textstufen as textstufe}
-					{@const items = collectGalleryItems(textstufe)}
-					<p>Textstufe {metadata[textstufe]?.metadata.label}</p>
+				{#each textzeugen as textzeuge}
+					{@const items = collectGalleryItems(textzeuge)}
+					<p>Textzeuge {metadata[textzeuge]?.metadata.label}</p>
 					<div class="flex w-full gap-5 overflow-x-auto rounded-xl px-10 py-5">
 						{#each items as item}
 							<a
 								class="ml-2 rounded-xl p-1"
-								href={`${textstufe}?page=${item.id}`}
+								href={`${textzeuge}?page=${item.id}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -88,23 +96,15 @@
 						{/each}
 					</div>
 				{/each}
-				{#if showTextstufen}
+				{#if showTextzeugen}
 					<button
 						class="center m-5 w-full self-start rounded-full underline"
 						onclick={() => {
-							showTextstufen = false;
-						}}>Textstufen ausblenden</button
+							showTextzeugen = false;
+						}}>Nichtedierte Textzeugen ausblenden</button
 					>
 				{/if}
 			</div>
-		{/if}
-		{#if textstufen.length && !showTextstufen}
-			<button
-				class="m-5 self-start rounded-full underline"
-				onclick={() => {
-					showTextstufen = true;
-				}}>Textstufen einblenden</button
-			>
 		{/if}
 	</div>
 </div>
