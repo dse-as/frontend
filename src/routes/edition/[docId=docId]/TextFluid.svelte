@@ -69,7 +69,9 @@
 	}
 
 	function setupFacsimile(el) {
+		let setupComplete = $state(false);
 		$effect(() => {
+			if (!setupComplete) return; // guard to only run once
 			// initial collect
 			collectPagebreaks(el);
 
@@ -96,12 +98,16 @@
 			if (document.fonts) {
 				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
+			setupComplete = true;
 		});
 	}
 
 	function setupListeners(el) {
+		let setupComplete = $state(false);
 		$effect(() => {
+			if (!setupComplete) return; // guard to only run once
 			el.addEventListener('click', handleDocumentClick);
+			setupComplete = true;
 		});
 	}
 
