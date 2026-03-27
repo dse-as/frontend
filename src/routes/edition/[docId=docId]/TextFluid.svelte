@@ -122,13 +122,19 @@
 	// Load text
 	const c = new CETEI();
 	// add behaviours here
+	c.addBehaviors({
+		tei: {
+			note: ['(((', ')))'], // why is this not working?
+			rs: [
+				[['[type=person]'], ['-->', '<--']],
+				[['[type=place]'], ['-->', '<--']]
+			]
+		}
+	});
+	c.addBehavior('tei', 'rs', [[['[type=person]'], ['>>>', '<<<']]]); // unfortunately overwrites ALL rs behaviors
+	c.addBehavior('tei', 'rs', [[['[type=place]'], ['>>>', '<<<']]]); // unfortunately overwrites ALL rs behaviors
 
 	const setupCustomElements = () => {
-		c.addBehaviors({
-			tei: {
-				note: ['(((', ')))']
-			}
-		});
 		c.processPage();
 	};
 </script>
