@@ -132,9 +132,10 @@
 		// containerTEI.innerHTML = '<milestone></milestone><p>TEST</p>';
 	});
 
+	const c = new CETEI();
+	// add behaviours here
+
 	const setupCustomElements = () => {
-		const c = new CETEI();
-		// add behaviours here
 		c.processPage();
 	};
 </script>
