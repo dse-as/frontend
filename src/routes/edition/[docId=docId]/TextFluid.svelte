@@ -128,7 +128,45 @@
 			rs: [
 				[['[type=person]'], ['-->', '<--']],
 				[['[type=place]'], ['-->', '<--']]
-			]
+			],
+			anchor: function (el) {
+				const id = el.getAttribute('xml:id');
+				if (!id) return;
+
+				// Find matching note
+				const note = document.querySelector(`tei-note[targetEnd="${id}"]`);
+
+				if (!note) return;
+
+				// Collect nodes between anchor and note
+				let current = el.nextSibling;
+				const nodes = [];
+
+				while (current && current !== note) {
+					nodes.push(current);
+					current = current.nextSibling;
+				}
+
+				if (!nodes.length) return;
+
+				// Wrap nodes
+				const wrapper = document.createElement('span');
+				wrapper.classList.add('tei-annotation');
+
+				nodes[0].parentNode.insertBefore(wrapper, nodes[0]);
+				nodes.forEach((n) => wrapper.appendChild(n));
+
+				// Store note content
+				const noteContent = note.textContent;
+
+				// Interaction
+				wrapper.addEventListener('click', () => {
+					wrapper.classList.toggle('active');
+					alert(noteContent);
+				});
+
+				return el; // keep anchor
+			}
 		}
 	});
 	c.addBehavior('tei', 'rs', [[['[type=person]'], ['>>>', '<<<']]]); // unfortunately overwrites ALL rs behaviors
