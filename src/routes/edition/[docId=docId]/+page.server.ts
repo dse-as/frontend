@@ -34,16 +34,5 @@ export const load: LayoutServerLoad = async ({ fetch, params }) => {
 	const xmlString = await res.text();
 	const ceteiData = processTEI(xmlString);
 
-	const findAll = (s, term = 'milestone', ctx = 500) => {
-		const res = [];
-		let i = s.indexOf(term);
-		while (i !== -1) {
-			res.push({ index: i, context: s.slice(Math.max(0, i - ctx), i + term.length + ctx) });
-			i = s.indexOf(term, i + term.length);
-		}
-		return res;
-	};
-	console.log(findAll(ceteiData.serialized));
-
 	return { meta, annot, ceteiData };
 };

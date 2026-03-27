@@ -131,6 +131,12 @@
 		// containerTEI.innerHTML = ceteiData.serialized;
 		// containerTEI.innerHTML = '<milestone></milestone><p>TEST</p>';
 	});
+
+	const setupCustomElements = () => {
+		const c = new CETEI();
+		// add behaviours here
+		c.processPage();
+	};
 </script>
 
 <div
@@ -156,8 +162,9 @@
 	</aside>
 	<!-- TEXT COLUMN -->
 	<main bind:this={containerTEI} class="max-w-none" use:setupFacsimile use:setupListeners>
-		<!-- {@html ceteiData.serialized} -->
-		<!-- {@html '<milestone></milestone><p>TEST</p>'} -->
+		<div {@attach setupCustomElements}>
+			{@html ceteiData.serialized}
+		</div>
 	</main>
 </div>
 
