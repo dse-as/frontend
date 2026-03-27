@@ -50,7 +50,6 @@
 				"keywords": []
 			},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -85,7 +84,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -120,7 +118,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -155,7 +152,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -199,7 +195,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -243,7 +238,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": true,
 				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"]
 			},
 			"numPages": null,
@@ -278,7 +272,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -322,7 +315,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -366,7 +358,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -410,7 +401,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -445,7 +435,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -480,7 +469,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -515,7 +503,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -550,7 +537,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -585,7 +571,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -620,7 +605,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -655,7 +639,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -699,7 +682,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -734,7 +716,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -778,7 +759,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -813,7 +793,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -848,7 +827,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -883,7 +861,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -927,7 +904,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -971,7 +947,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1015,7 +990,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1059,7 +1033,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1094,7 +1067,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1129,7 +1101,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1173,7 +1144,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1217,7 +1187,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1261,7 +1230,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1296,7 +1264,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1331,7 +1298,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1366,7 +1332,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1410,7 +1375,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1454,7 +1418,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1489,7 +1452,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1533,7 +1495,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1577,7 +1538,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1621,7 +1581,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1665,7 +1624,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1709,7 +1667,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1753,7 +1710,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1797,7 +1753,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1841,7 +1796,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1885,7 +1839,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1929,7 +1882,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -1973,7 +1925,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2008,7 +1959,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2052,7 +2002,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2087,7 +2036,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2131,7 +2079,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2175,7 +2122,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2219,7 +2165,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2254,7 +2199,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2298,7 +2242,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2342,7 +2285,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2386,7 +2328,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2430,7 +2371,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2474,7 +2414,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2509,7 +2448,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2553,7 +2491,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2597,7 +2534,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2641,7 +2577,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2685,7 +2620,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2729,7 +2663,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2773,7 +2706,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2817,7 +2749,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2861,7 +2792,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2905,7 +2835,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2949,7 +2878,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -2993,7 +2921,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3037,7 +2964,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3081,7 +3007,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3125,7 +3050,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3169,7 +3093,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3213,7 +3136,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3257,7 +3179,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3301,7 +3222,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3345,7 +3265,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3389,7 +3308,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3424,7 +3342,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3459,7 +3376,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3503,7 +3419,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3547,7 +3462,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3591,7 +3505,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3635,7 +3548,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3670,7 +3582,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3714,7 +3625,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3758,7 +3668,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3802,7 +3711,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3846,7 +3754,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3890,7 +3797,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3934,7 +3840,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -3978,7 +3883,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4022,7 +3926,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4066,7 +3969,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4110,7 +4012,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4154,7 +4055,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4198,7 +4098,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4242,7 +4141,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4286,7 +4184,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4330,7 +4227,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4374,7 +4270,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4418,7 +4313,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4462,7 +4356,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4506,7 +4399,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4550,7 +4442,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4594,7 +4485,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4638,7 +4528,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4682,7 +4571,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4726,7 +4614,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4770,7 +4657,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4814,7 +4700,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4858,7 +4743,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4902,7 +4786,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4946,7 +4829,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -4990,7 +4872,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5034,7 +4915,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5078,7 +4958,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5122,7 +5001,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5166,7 +5044,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5210,7 +5087,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5254,7 +5130,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5298,7 +5173,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5342,7 +5216,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5386,7 +5259,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5430,7 +5302,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5474,7 +5345,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5518,7 +5388,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5562,7 +5431,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5606,7 +5474,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5641,7 +5508,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5685,7 +5551,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5729,7 +5594,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5773,7 +5637,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5817,7 +5680,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5861,7 +5723,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5905,7 +5766,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5949,7 +5809,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -5993,7 +5852,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6037,7 +5895,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6081,7 +5938,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6125,7 +5981,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6169,7 +6024,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6213,7 +6067,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6257,7 +6110,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6301,7 +6153,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6345,7 +6196,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6389,7 +6239,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6433,7 +6282,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6477,7 +6325,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6521,7 +6368,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6565,7 +6411,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6609,7 +6454,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6653,7 +6497,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6697,7 +6540,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6741,7 +6583,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6785,7 +6626,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6829,7 +6669,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6873,7 +6712,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6917,7 +6755,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -6961,7 +6798,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7005,7 +6841,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7049,7 +6884,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7093,7 +6927,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7137,7 +6970,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7181,7 +7013,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7225,7 +7056,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7269,7 +7099,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7313,7 +7142,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7357,7 +7185,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7401,7 +7228,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7436,7 +7262,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7471,7 +7296,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7506,7 +7330,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7541,7 +7364,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7585,7 +7407,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7629,7 +7450,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7673,7 +7493,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7717,7 +7536,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7761,7 +7579,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7805,7 +7622,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7840,7 +7656,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7875,7 +7690,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7910,7 +7724,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7945,7 +7758,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -7989,7 +7801,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8024,7 +7835,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8059,7 +7869,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8103,7 +7912,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8147,7 +7955,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8191,7 +7998,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8226,7 +8032,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8270,7 +8075,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8305,7 +8109,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8340,7 +8143,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8375,7 +8177,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8419,7 +8220,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8454,7 +8254,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8498,7 +8297,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8542,7 +8340,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8586,7 +8383,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8621,7 +8417,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8656,7 +8451,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8691,7 +8485,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8735,7 +8528,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8779,7 +8571,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8814,7 +8605,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8849,7 +8639,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8884,7 +8673,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8928,7 +8716,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -8972,7 +8759,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9016,7 +8802,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9060,7 +8845,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9104,7 +8888,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9148,7 +8931,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9192,7 +8974,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9236,7 +9017,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9280,7 +9060,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9324,7 +9103,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9368,7 +9146,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9412,7 +9189,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9456,7 +9232,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9500,7 +9275,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9544,7 +9318,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9588,7 +9361,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9632,7 +9404,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9676,11 +9447,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": [
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
 					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"
 				]
 			},
@@ -9742,7 +9509,6 @@
 				"keywords": ["4076374-2", "4016494-9", "4149920-7", "4049275-8", "4060491-3", "4002333-3"]
 			},
 			"manuscript": {
-				"hasiiif": true,
 				"iiif_urls": [
 					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
 					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif",
@@ -9806,7 +9572,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9850,7 +9615,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9894,7 +9658,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9938,7 +9701,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -9982,7 +9744,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10026,7 +9787,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10070,7 +9830,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10114,7 +9873,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10158,7 +9916,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10202,7 +9959,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10237,7 +9993,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10272,7 +10027,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10307,7 +10061,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10342,7 +10095,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10377,7 +10129,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10421,7 +10172,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10456,7 +10206,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10500,7 +10249,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10535,7 +10283,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10579,7 +10326,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10623,7 +10369,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10667,7 +10412,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10711,7 +10455,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10746,7 +10489,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10790,7 +10532,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10834,7 +10575,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10878,7 +10618,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10922,7 +10661,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -10966,7 +10704,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11010,7 +10747,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11054,7 +10790,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11098,7 +10833,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11142,7 +10876,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11177,7 +10910,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11212,7 +10944,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11247,7 +10978,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11291,7 +11021,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11328,7 +11057,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11372,7 +11100,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11407,7 +11134,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11442,7 +11168,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11486,7 +11211,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11521,7 +11245,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11565,7 +11288,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11609,7 +11331,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11653,7 +11374,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11697,7 +11417,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11732,7 +11451,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11767,7 +11485,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11802,7 +11519,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11837,7 +11553,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11872,7 +11587,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11907,7 +11621,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11951,7 +11664,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -11986,7 +11698,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12030,7 +11741,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12074,7 +11784,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12118,7 +11827,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12162,7 +11870,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12206,7 +11913,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12241,7 +11947,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12285,7 +11990,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12329,7 +12033,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12373,7 +12076,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12417,7 +12119,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12461,7 +12162,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12505,7 +12205,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12549,7 +12248,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12584,7 +12282,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12628,7 +12325,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12672,7 +12368,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12707,7 +12402,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12742,7 +12436,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12777,7 +12470,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12821,7 +12513,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12865,7 +12556,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12909,7 +12599,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12953,7 +12642,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -12997,7 +12685,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13041,7 +12728,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13085,7 +12771,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13129,7 +12814,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13173,7 +12857,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13208,7 +12891,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13252,7 +12934,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13287,7 +12968,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13331,7 +13011,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13366,7 +13045,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13410,7 +13088,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13454,7 +13131,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13498,7 +13174,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13542,7 +13217,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13586,7 +13260,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13630,7 +13303,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13674,7 +13346,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13718,7 +13389,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13762,7 +13432,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13806,7 +13475,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13850,7 +13518,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13885,7 +13552,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13929,7 +13595,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -13973,7 +13638,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14017,7 +13681,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14061,7 +13724,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14105,7 +13767,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14140,7 +13801,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14184,7 +13844,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14228,7 +13887,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14272,7 +13930,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14307,7 +13964,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14342,7 +13998,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14386,7 +14041,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14430,7 +14084,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14474,7 +14127,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14518,7 +14170,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14562,7 +14213,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14606,7 +14256,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14650,7 +14299,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14694,7 +14342,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14738,7 +14385,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14782,7 +14428,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14826,7 +14471,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14870,7 +14514,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14914,7 +14557,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14949,7 +14591,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -14993,7 +14634,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15037,7 +14677,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15081,7 +14720,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15125,7 +14763,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15169,7 +14806,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15213,7 +14849,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15257,7 +14892,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15301,7 +14935,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15345,7 +14978,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15389,7 +15021,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15433,7 +15064,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15477,7 +15107,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15521,7 +15150,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15565,7 +15193,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15609,7 +15236,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15653,7 +15279,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15697,7 +15322,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15741,7 +15365,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15785,7 +15408,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15829,7 +15451,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15864,7 +15485,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15908,7 +15528,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15952,7 +15571,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -15987,7 +15605,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16031,7 +15648,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16075,7 +15691,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16119,7 +15734,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16154,7 +15768,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16198,7 +15811,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16242,7 +15854,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16286,7 +15897,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16330,7 +15940,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16374,7 +15983,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16418,7 +16026,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16462,7 +16069,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16506,7 +16112,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16550,7 +16155,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16585,7 +16189,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16629,7 +16232,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16673,7 +16275,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16717,7 +16318,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16761,7 +16361,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16805,7 +16404,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16849,7 +16447,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16893,7 +16490,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16937,7 +16533,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -16981,7 +16576,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17025,7 +16619,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17069,7 +16662,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17113,7 +16705,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17157,7 +16748,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17201,7 +16791,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17245,7 +16834,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17289,7 +16877,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17333,7 +16920,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17377,7 +16963,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17421,7 +17006,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17456,7 +17040,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17500,7 +17083,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17535,7 +17117,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17570,7 +17151,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17614,7 +17194,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17649,7 +17228,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17693,7 +17271,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17728,7 +17305,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17763,7 +17339,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17798,7 +17373,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17833,7 +17407,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17868,7 +17441,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17903,7 +17475,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17947,7 +17518,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -17991,7 +17561,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18035,7 +17604,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18070,7 +17638,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18105,7 +17672,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18140,7 +17706,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18184,7 +17749,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18228,7 +17792,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18263,7 +17826,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18298,7 +17860,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18333,7 +17894,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18368,7 +17928,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18412,7 +17971,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18456,7 +18014,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18500,7 +18057,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18544,7 +18100,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18588,7 +18143,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18632,7 +18186,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18676,7 +18229,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18720,7 +18272,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18764,7 +18315,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18808,7 +18358,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18852,7 +18401,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18896,7 +18444,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18940,7 +18487,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -18984,7 +18530,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19028,7 +18573,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19072,7 +18616,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19116,7 +18659,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19160,7 +18702,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19204,7 +18745,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19239,7 +18779,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19274,7 +18813,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19318,7 +18856,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19362,7 +18899,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19406,7 +18942,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19441,7 +18976,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19485,7 +19019,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19520,7 +19053,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19564,7 +19096,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19599,7 +19130,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19643,7 +19173,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19678,7 +19207,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19713,7 +19241,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19748,7 +19275,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19792,7 +19318,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19836,7 +19361,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19871,7 +19395,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19915,7 +19438,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -19959,7 +19481,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20003,7 +19524,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20047,7 +19567,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20091,7 +19610,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20126,7 +19644,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20170,7 +19687,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20214,7 +19730,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20249,7 +19764,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20284,7 +19798,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20319,7 +19832,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20363,7 +19875,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20407,7 +19918,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20442,7 +19952,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20486,7 +19995,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20521,7 +20029,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20565,7 +20072,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20609,7 +20115,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20653,7 +20158,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20688,7 +20192,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20732,7 +20235,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20767,7 +20269,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20811,7 +20312,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20855,7 +20355,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20899,7 +20398,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20943,7 +20441,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -20987,7 +20484,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21031,7 +20527,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21075,7 +20570,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21119,7 +20613,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21163,7 +20656,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21207,7 +20699,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21251,7 +20742,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21295,7 +20785,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21330,7 +20819,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21374,7 +20862,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21418,7 +20905,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21462,7 +20948,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21506,7 +20991,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21550,7 +21034,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21594,7 +21077,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21638,7 +21120,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21682,7 +21163,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21726,7 +21206,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21770,7 +21249,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21814,7 +21292,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21858,7 +21335,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21902,7 +21378,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21946,7 +21421,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -21990,7 +21464,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22034,7 +21507,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22078,7 +21550,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22122,7 +21593,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22166,7 +21636,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22210,7 +21679,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22254,7 +21722,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22298,7 +21765,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22342,7 +21808,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22377,7 +21842,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22421,7 +21885,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22465,7 +21928,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22509,7 +21971,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22553,7 +22014,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22597,7 +22057,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22641,7 +22100,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22685,7 +22143,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22729,7 +22186,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22773,7 +22229,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22817,7 +22272,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22861,7 +22315,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22905,7 +22358,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22949,7 +22401,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -22993,7 +22444,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23037,7 +22487,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23081,7 +22530,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23125,7 +22573,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23169,7 +22616,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23213,7 +22659,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23257,7 +22702,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23301,7 +22745,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23345,7 +22788,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23389,7 +22831,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23433,7 +22874,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23477,7 +22917,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23521,7 +22960,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23565,7 +23003,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23609,7 +23046,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23653,7 +23089,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23697,7 +23132,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23741,7 +23175,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23785,7 +23218,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23829,7 +23261,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23873,7 +23304,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23917,7 +23347,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -23961,7 +23390,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24005,7 +23433,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24040,7 +23467,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24084,7 +23510,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24128,7 +23553,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24172,7 +23596,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24216,7 +23639,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24260,7 +23682,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24304,7 +23725,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24348,7 +23768,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24392,7 +23811,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24436,7 +23854,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24480,7 +23897,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24524,7 +23940,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24568,7 +23983,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24612,7 +24026,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24656,7 +24069,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24700,7 +24112,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24744,7 +24155,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24788,7 +24198,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24832,7 +24241,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24876,7 +24284,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24920,7 +24327,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24964,7 +24370,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -24999,7 +24404,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25043,7 +24447,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25087,7 +24490,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25122,7 +24524,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25166,7 +24567,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25210,7 +24610,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25254,7 +24653,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25298,7 +24696,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25342,7 +24739,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25386,7 +24782,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25430,7 +24825,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25474,7 +24868,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25518,7 +24911,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25562,7 +24954,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25606,7 +24997,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25650,7 +25040,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25694,7 +25083,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25738,7 +25126,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25782,7 +25169,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25826,7 +25212,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25870,7 +25255,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25914,7 +25298,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -25958,7 +25341,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26002,7 +25384,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26046,7 +25427,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26090,7 +25470,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26134,7 +25513,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26178,7 +25556,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26222,7 +25599,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26266,7 +25642,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26310,7 +25685,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26354,7 +25728,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26398,7 +25771,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26442,7 +25814,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26486,7 +25857,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26530,7 +25900,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26574,7 +25943,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26618,7 +25986,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26662,7 +26029,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26706,7 +26072,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26750,7 +26115,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26794,7 +26158,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26838,7 +26201,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,
@@ -26882,7 +26244,6 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"hasiiif": false,
 				"iiif_urls": []
 			},
 			"numPages": null,

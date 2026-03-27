@@ -79,7 +79,6 @@ export type TLetters_meta = {
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
-				hasiiif: boolean;
 				url_iiif: string;
 			};
 			numPages: number | null;

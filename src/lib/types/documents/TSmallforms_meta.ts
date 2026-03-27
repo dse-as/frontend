@@ -79,7 +79,6 @@ export type TSmallforms_meta = {
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
-				hasiiif: boolean;
 				iiif_urls: string[];
 			};
 			numPages: number | null;
