@@ -73,7 +73,7 @@ export const load: LayoutServerLoad = async ({ fetch, params }) => {
 				return defaultBody;
 			}
 		} catch (err) {
-			// (4) Catch other errors
+			// catch any other errors
 			console.error('Failed to load XML:', err);
 			return defaultBody;
 		}
