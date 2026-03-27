@@ -16,16 +16,15 @@
 
 	// ---------------------------------------------
 	// Thumbnails
-	type TItem = {
+	type TThumbs = {
 		id: number;
 		el: HTMLElement;
 		facs: string;
-		page: string;
 		n: string;
 		top: number;
 	};
 
-	let items = $state([] as TItem[]);
+	let thumbs = $state([] as TThumbs[]);
 
 	let resizeObserver: ResizeObserver;
 	let mutationObserver: MutationObserver;
@@ -33,23 +32,23 @@
 	function collectPagebreaks(el: HTMLElement) {
 		const nodes = el.querySelectorAll('tei-pb');
 
-		items = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
-			id: i,
-			el: el,
-			facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
-			n: el.getAttribute('n') || '',
-			top: 0
-		}));
-		updatePagebreakPositions();
+			thumbs = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
+				id: i,
+				el: el,
+				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
+				n: el.getAttribute('n') || '',
+				top: 0
+			}));
+			updatePagebreakPositions();
 	}
 
 	function updatePagebreakPositions() {
-		items = items.map((item) => {
-			const rect = item.el.getBoundingClientRect();
+		thumbs = thumbs.map((thumb) => {
+			const rect = thumb.el.getBoundingClientRect();
 			const containerRect = containerMaintext.getBoundingClientRect();
 
 			return {
-				...item,
+				...thumb,
 				top: rect.top - containerRect.top + containerMaintext.scrollTop
 			};
 		});
@@ -129,17 +128,17 @@
 >
 	<!-- THUMBS COLUMN -->
 	<aside class="h-full">
-		{#each items as item, i (item.id)}
+		{#each thumbs as thumb, i (thumb.id)}
 			<!-- spacer -->
-			<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
+			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`} />
 
 			<!-- sticky facsimile -->
 			<button
 				class="sticky top-0 float-right ml-2 bg-white"
-				onclick={() => openDFpage(item.id + 1)}
+				onclick={() => openDFpage(thumb.id + 1)}
 			>
-				<IIIF_Thumb url={item.facs} width="100" classes="rounded-xl" />
-				<span class="italic">Seite {item.id + 1}</span>
+				<IIIF_Thumb url={thumb.facs} width="100" classes="rounded-xl" />
+				<span class="italic">Seite {thumb.id + 1}</span>
 			</button>
 		{/each}
 	</aside>
