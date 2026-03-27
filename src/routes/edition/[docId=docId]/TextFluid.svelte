@@ -69,11 +69,7 @@
 	}
 
 	function setupFacsimile(el) {
-		let mounted = false;
-		(async () => {
-			await tick(); // wait for DOM updates, including {@html}
-			if (!mounted) return;
-
+		$effect(() => {
 			// initial collect
 			collectPagebreaks(el);
 
@@ -100,17 +96,13 @@
 			if (document.fonts) {
 				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
-		})();
-		mounted = true;
-		return {
-			destroy() {
-				mounted = false;
-			}
-		};
+		});
 	}
 
 	function setupListeners(el) {
-		el.addEventListener('click', handleDocumentClick);
+		$effect(() => {
+			el.addEventListener('click', handleDocumentClick);
+		});
 	}
 
 	function openDFpage(pagenum: number) {
@@ -122,16 +114,6 @@
 
 	// ---------------------------------------------
 	// Load text
-	onMount(() => {
-		// CETEIcean in the Browser
-		// const cetei = new CETEI();
-		// cetei.getHTML5(`/data/texts/text-${docId}.xml`, (data) => {
-		// 	containerTEI.appendChild(data);
-		// });
-		// containerTEI.innerHTML = ceteiData.serialized;
-		// containerTEI.innerHTML = '<milestone></milestone><p>TEST</p>';
-	});
-
 	const c = new CETEI();
 	// add behaviours here
 
@@ -162,7 +144,12 @@
 		{/each}
 	</aside>
 	<!-- TEXT COLUMN -->
-	<main bind:this={containerTEI} class="max-w-none" use:setupFacsimile use:setupListeners>
+	<main
+		bind:this={containerTEI}
+		class="max-w-none"
+		{@attach setupFacsimile}
+		{@attach setupListeners}
+	>
 		<div {@attach setupCustomElements}>
 			{@html ceteiData.serialized}
 		</div>
