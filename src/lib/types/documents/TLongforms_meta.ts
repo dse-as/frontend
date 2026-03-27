@@ -80,7 +80,7 @@ export type TLongforms_meta = {
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
-				url_iiif: string;
+				url_iiifs: string[];
 			};
 			numPages: number | null;
 			edition: {

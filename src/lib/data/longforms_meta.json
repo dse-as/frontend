@@ -32,7 +32,7 @@
 				"note": ""
 			},
 			"manuscript": {
-				"url_iiif": ""
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/longform_0001_001.tif"]
 			},
 			"entities": {},
 			"numPages": null,

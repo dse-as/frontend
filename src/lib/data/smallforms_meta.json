@@ -51,7 +51,7 @@
 				"keywords": []
 			},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0001_001.tif"]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -86,7 +86,8 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": [					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0002_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0002_002.tif"]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -1754,7 +1755,10 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": [					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_002.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_003.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_004.tif"]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9785,7 +9789,10 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": [
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_002.tif"
+				]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9829,7 +9836,10 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": [
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0233_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0233_002.tif"
+				]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9873,7 +9883,10 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": []
+				"iiif_urls": [
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0234_001.tif",
+					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0234_002.tif"
+				]
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },

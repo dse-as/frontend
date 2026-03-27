@@ -6,8 +6,43 @@
 		"description": ""
 	},
 	"doc_sequences": {
-		"letters": { "name": "Briefe", "docs": ["letter_0001", "letter_0032", "letter_0099"] },
-		"letters-mann-klaus-erika": { "name": "Briefe Klaus und Erika Mann", "docs": ["letter_0005", "letter_0006", "letter_0007", "letter_0800"] },
-		"random": { "name": "Random Sequence", "docs": ["smallform_0022", "smallform_0044", "smallform_0066", "smallform_0088"] }
+		"textstufen": {},
+		"travels": {
+			"travel_0001": {"url_slug": "reise_0001", "name":"Dokumente von travel_0001", "preamble": "Dokumente von der Reise 0001", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0002": {"url_slug": "reise_0002", "name":"Dokumente von travel_0002", "preamble": "Dokumente von der Reise 0002", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0003": {"url_slug": "reise_0003", "name":"Dokumente von travel_0003", "preamble": "Dokumente von der Reise 0003", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0004": {"url_slug": "reise_0004", "name":"Dokumente von travel_0004", "preamble": "Dokumente von der Reise 0004", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0005": {"url_slug": "reise_0005", "name":"Dokumente von travel_0005", "preamble": "Dokumente von der Reise 0005", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0006": {"url_slug": "reise_0006", "name":"Dokumente von travel_0006", "preamble": "Dokumente von der Reise 0006", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0007": {"url_slug": "reise_0007", "name":"Dokumente von travel_0007", "preamble": "Dokumente von der Reise 0007", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0008": {"url_slug": "reise_0008", "name":"Dokumente von travel_0008", "preamble": "Dokumente von der Reise 0008", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0009": {"url_slug": "reise_0009", "name":"Dokumente von travel_0009", "preamble": "Dokumente von der Reise 0009", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0010": {"url_slug": "reise_0010", "name":"Dokumente von travel_0010", "preamble": "Dokumente von der Reise 0010", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0011": {"url_slug": "reise_0011", "name":"Dokumente von travel_0011", "preamble": "Dokumente von der Reise 0011", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0012": {"url_slug": "reise_0012", "name":"Dokumente von travel_0012", "preamble": "Dokumente von der Reise 0012", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0013": {"url_slug": "reise_0013", "name":"Dokumente von travel_0013", "preamble": "Dokumente von der Reise 0013", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0014": {"url_slug": "reise_0014", "name":"Dokumente von travel_0014", "preamble": "Dokumente von der Reise 0014", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0015": {"url_slug": "moskaureise_1937", "name":"Dokumente von MOSKAUREISE 1937", "preamble": "Dokumente von der Moskaureise 1937", "docs":["letter_0002", "letter_0003", "smallform_0001", "smallform_0231", "smallform_0232","smallform_0233", "smallform_0234", "letter_0004"]},
+			"travel_0016": {"url_slug": "reise_0016", "name":"Dokumente von travel_0016", "preamble": "Dokumente von der Reise 0016", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0017": {"url_slug": "reise_0017", "name":"Dokumente von travel_0017", "preamble": "Dokumente von der Reise 0017", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0018": {"url_slug": "reise_0018", "name":"Dokumente von travel_0018", "preamble": "Dokumente von der Reise 0018", "docs":["smallform_0231", "letter_0002", "letter_0003"]},
+			"travel_0019": {"url_slug": "reise_0019", "name":"Dokumente von travel_0019", "preamble": "Dokumente von der Reise 0019", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0020": {"url_slug": "reise_0020", "name":"Dokumente von travel_0020", "preamble": "Dokumente von der Reise 0020", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0021": {"url_slug": "reise_0021", "name":"Dokumente von travel_0021", "preamble": "Dokumente von der Reise 0021", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0022": {"url_slug": "reise_0022", "name":"Dokumente von travel_0022", "preamble": "Dokumente von der Reise 0022", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0023": {"url_slug": "reise_0023", "name":"Dokumente von travel_0023", "preamble": "Dokumente von der Reise 0023", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0024": {"url_slug": "reise_0024", "name":"Dokumente von travel_0024", "preamble": "Dokumente von der Reise 0024", "docs":["letter_0001", "letter_0002", "letter_0003"]},
+			"travel_0025": {"url_slug": "reise_0025", "name":"Dokumente von travel_0025", "preamble": "Dokumente von der Reise 0025", "docs":["letter_0001", "letter_0002", "letter_0003"]}
+		},
+		"corrs": { 
+			"corr_0001": {"url_slug": "full", "name": "Briefe", "preamble": "Alle Briefe", "docs": ["letter_0001", "letter_0002", "letter_0003", "letter_0004"] },
+			"corr_0002":{ "url_slug": "hotel_letters", "name": "Hotelbriefe", "preamble": "Dokumente zum Thema 0002", "docs": ["letter_0002", "letter_0003"]},
+			"corr_0003": {"url_slug": "klaus_und_erika_mann", "name": "Briefwechsel mit Klaus und Erika Mann", "preamble": "Dokumente von der Reise 0001", "docs": ["letter_0001", "letter_0002", "letter_0003"]}
+		},
+		"topics": {
+			"topic_0001":{ "url_slug": "gender", "name": "Gender", "preamble": "Dokumente zum Thema 0001", "docs": ["smallform_0002", "smallform_0044", "smallform_0231", "smallform_0232"]},
+			"topic_0002":{ "url_slug": "intermediality", "name": "Intermedialität", "preamble": "Dokumente zum Thema 0002", "docs": []},
+			"topic_0003":{ "url_slug": "family", "name": "Familie", "preamble": "Dokumente zum Thema 0002", "docs": []}
+		}
 	}
 }

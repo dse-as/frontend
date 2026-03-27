@@ -11,7 +11,7 @@
 	// Load Component with Global Comment
 	import type { Component } from 'svelte';
 	let GlobalComment: Component | null = $state(null);
-	let globalCommentId = annot[docId]?.globCommId;
+	let globalCommentId = $derived(annot[docId]?.globCommId);
 	(async () => {
 		if (docId && globalCommentId) {
 			GlobalComment = (await import(`$lib/data/global_comments/${globalCommentId}.svelte`)).default;

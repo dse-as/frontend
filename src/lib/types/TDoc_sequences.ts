@@ -1,3 +1,6 @@
+export type TSeqType = 'corrs' | 'travels' | 'topics';
+export type TSeqId = string;
+
 export type TDoc_sequences = {
 	meta: {
 		generated_by: string;
@@ -6,8 +9,9 @@ export type TDoc_sequences = {
 		description: string;
 	};
 	doc_sequences: {
-		[key: string]: {
+		[key in TSeqType]: {
 			name: string;
+			preamble: string;
 			docs: string[];
 		};
 	};

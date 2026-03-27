@@ -7,7 +7,7 @@
 	let containerRef: HTMLDivElement;
 
 	type TItem = {
-		id: number;
+		pagenum_running: number;
 		fac: string;
 		page: number;
 	};
@@ -20,10 +20,10 @@
 
 	// Gallery Items
 
-	function collectGalleryItems(id) {
+	function collectGalleryItems(pagenum_running) {
 		const items: TItem[] =
-			metadata[id]?.manuscript.iiif_urls.map((el: string, idx: number) => {
-				return { id: idx + 1, fac: el, page: idx + 1 };
+			metadata[pagenum_running]?.manuscript.iiif_urls.map((el: string, idx: number) => {
+				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
 			}) || [];
 		return items;
 	}
@@ -61,8 +61,8 @@
 			{#each collectGalleryItems(docId) as item, index}
 				<button
 					bind:this={buttonRefs[index]}
-					class={`ml-2 rounded-xl p-1 ${item.id === pagenum && 'bg-red-500'}`}
-					onclick={() => handleSelectPage(item.id)}
+					class={`ml-2 rounded-xl p-1 ${item.pagenum_running === pagenum && 'bg-red-200'}`}
+					onclick={() => handleSelectPage(item.pagenum_running)}
 				>
 					<IIIF_Thumb url={item.fac} width="100" classes="rounded-xl" />
 					<span class="italic">Seite {item.page}</span>
@@ -86,7 +86,7 @@
 						{#each items as item}
 							<a
 								class="ml-2 rounded-xl p-1"
-								href={`${textzeuge}?page=${item.id}`}
+								href={`${textzeuge}?page=${item.pagenum_running}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

@@ -34,11 +34,17 @@
 		pagenum = Number(page.url.searchParams?.get('page')) || pagenum;
 		dflf = (page.url.searchParams?.get('mode') as TDFLF) || dflf;
 	});
+	$inspect(data.currentSeq);
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
 	<!-- Series Menu -->
-	<SeriesMenu />
+	<SeriesMenu
+		metadata={data.meta}
+		docId={page.params.docId}
+		{pagenum}
+		currentSeq={data.currentSeq}
+	/>
 
 	<!-- Metadata -->
 	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />

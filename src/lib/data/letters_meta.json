@@ -6,14 +6,14 @@
 		"description": ""
 	},
 	"letters_meta": {
-		"letters_0001": {
+		"letter_0001": {
 			"docType": "Test",
 			"metadata": {
 				"label": "testlabel",
 				"editor_workflow": "foo",
-				"year": 1900,
-				"pubDate": "1100-01-01",
-				"title_full": "Letter Title 1 full",
+				"year": 1901,
+				"pubDate": "1901-01-01",
+				"title_full": "Random Letter 1",
 				"pubPosthumOnly": "",
 				"pubPlace": "A Random Letter 1",
 				"signature": "",
@@ -31,7 +31,7 @@
 				"note": ""
 			},
 			"manuscript": {
-				"url_iiif": ""
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0001_001.tif"]
 			},
 			"entities": {},
 			"numPages": null,
@@ -39,14 +39,80 @@
 				"fullyEdited": false
 			}
 		},
-		"letters_0004": {
+		"letter_0002": {
+			"docType": "Test",
+			"metadata": {
+				"label": "testlabel",
+				"editor_workflow": "foo",
+				"year": 1902,
+				"pubDate": "1902-01-01",
+				"title_full": "Random Letter 2",
+				"pubPosthumOnly": "",
+				"pubPlace": "A Random Letter 2",
+				"signature": "",
+				"pubDetails": "",
+				"textstufen_edited": "",
+				"textzeugen_nonedited": [],
+				"series": "",
+				"comment": "delete me",
+				"keywords": {},
+				"maximum": "",
+				"travel": "",
+				"archiveCollation": "",
+				"pubSecondary": "",
+				"urlOnlineResource": "",
+				"note": ""
+			},
+			"manuscript": {
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0002_001.tif"]
+			},
+			"entities": {},
+			"numPages": null,
+			"edition": {
+				"fullyEdited": false
+			}
+		},
+		"letter_0003": {
+			"docType": "Test",
+			"metadata": {
+				"label": "testlabel",
+				"editor_workflow": "foo",
+				"year": 1903,
+				"pubDate": "1903-01-01",
+				"title_full": "Random Letter 3",
+				"pubPosthumOnly": "",
+				"pubPlace": "A Random Letter 3",
+				"signature": "",
+				"pubDetails": "",
+				"textstufen_edited": "",
+				"textzeugen_nonedited": [],
+				"series": "",
+				"comment": "delete me",
+				"keywords": {},
+				"maximum": "",
+				"travel": "",
+				"archiveCollation": "",
+				"pubSecondary": "",
+				"urlOnlineResource": "",
+				"note": ""
+			},
+			"manuscript": {
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0003_001.tif"]
+			},
+			"entities": {},
+			"numPages": null,
+			"edition": {
+				"fullyEdited": false
+			}
+		},
+		"letter_0004": {
 			"docType": "Test4",
 			"metadata": {
 				"label": "testlabel 4",
 				"editor_workflow": "foo 4",
-				"year": 1900,
-				"pubDate": "1400-01-01",
-				"title_full": "Letter Title 4 full",
+				"year": 1904,
+				"pubDate": "1904-01-01",
+				"title_full": "Random Letter 4",
 				"pubPosthumOnly": "",
 				"pubPlace": "A Random Letter 4",
 				"signature": "",
@@ -64,7 +130,7 @@
 				"note": ""
 			},
 			"manuscript": {
-				"url_iiif": ""
+				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0004_001.tif"]
 			},
 			"entities": {},
 			"numPages": null,
