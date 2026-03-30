@@ -12,4 +12,7 @@
 	p {
 		@apply my-4;
 	}
+	a {
+		@apply hover:text-primary-500;
+	}
 }

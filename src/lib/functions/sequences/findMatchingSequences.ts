@@ -18,7 +18,7 @@ export type MatchResult = {
 };
 
 //  Finds all sequences across groups where the given docId appears.
-export function findMatchingSequences(docSequences: DocSequences, docId: string): MatchResult {
+export function findMatchingSequences(docSequences: DocSequences, docId: string, filterSeqIds:string[]): MatchResult {
   const result: MatchResult = {};
 
   for (const groupId of Object.keys(docSequences)) {
@@ -26,7 +26,8 @@ export function findMatchingSequences(docSequences: DocSequences, docId: string)
     for (const sequenceId of Object.keys(group)) {
       const sequence = group[sequenceId];
       const idx = sequence.docs.indexOf(docId);
-      if (idx !== -1) {
+      const isFiltered = filterSeqIds.some(id => 	id === sequenceId);
+      if (idx !== -1 && !isFiltered) {
         if (!result[groupId]) result[groupId] = {};
         result[groupId][sequenceId] = {
           name: sequence.name,
@@ -36,7 +37,6 @@ export function findMatchingSequences(docSequences: DocSequences, docId: string)
       }
     }
   }
-
   return result;
 }
 

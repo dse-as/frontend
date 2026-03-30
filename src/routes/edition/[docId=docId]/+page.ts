@@ -4,8 +4,8 @@ import { doc_sequences } from '$lib/data/doc_sequences.json';
 export const load: PageLoad = ({params, url}) => {
     const currentSeqId = url.searchParams.get('seq');
     
-    console.log('THIS FORCES RERUN', params.docId)
-    
+    const foo = params.docId; // force rerun on change of docId
+	
 	function findTypeById(id) {
         for (const type in doc_sequences) {
 			if (doc_sequences[type][id]) {
@@ -18,6 +18,7 @@ export const load: PageLoad = ({params, url}) => {
 	const currentSeqType = findTypeById(currentSeqId);
 
 	return {
-		currentSeq: { type: currentSeqType, id: currentSeqId }
+		currentSeq: { type: currentSeqType, id: currentSeqId },
+        
 	};
 };
