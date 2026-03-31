@@ -51,7 +51,7 @@
 				"keywords": []
 			},
 			"manuscript": {
-				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0001_001.tif"]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -86,8 +86,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": [					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0002_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0002_002.tif"]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -245,7 +244,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -1755,10 +1754,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": [					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_002.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_003.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0044_004.tif"]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9681,7 +9677,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": ["https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9742,10 +9738,7 @@
 				"keywords": ["4076374-2", "4016494-9", "4149920-7", "4049275-8", "4060491-3", "4002333-3"]
 			},
 			"manuscript": {
-				"iiif_urls": [
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif"
-				]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9789,10 +9782,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": [
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0232_002.tif"
-				]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9836,10 +9826,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": [
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0233_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0233_002.tif"
-				]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -9883,10 +9870,7 @@
 			},
 			"entities": {},
 			"manuscript": {
-				"iiif_urls": [
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0234_001.tif",
-					"https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0234_002.tif"
-				]
+				"iiif_urls": []
 			},
 			"numPages": null,
 			"pageLimits": { "text": [null, null] },
@@ -11304,9 +11288,8 @@
 				"pubPlace": "Internationale Literatur. Deutsche Blätter 8",
 				"signature": "",
 				"pubDetails": "\"Nr. 2 (Febr.), S. 149-151 (unter C. [sie] Clark",
-				"textstufen_edited": [
-					" letzter Teil des Typoskripts „Kleine Begegnungen in Deutschland (Mai 1937)\"\"\""
-				],
+				"textstufen_edited": [],
+				"textzeugen_nonedited": [],
 				"series": "smallform_0215",
 				"comment": "",
 				"keywords": "Sehr erzählerischer Bericht, beginnt wie eine Dorfgeschichte. Vermutlich über Begegnungen auf der Hinreise der Moskaureise 1937 (die offenbar durch Deutschland ging!)",
