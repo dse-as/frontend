@@ -408,14 +408,14 @@
 
 		<!-- Other Sequences Selector -->
 		{#if !isSelectedValidSeq}
-			{#if Object.keys(seqOther).length}
-				<div class="flex flex-wrap justify-center gap-x-4 gap-y-2">
-					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-100-900')}
-				</div>
-			{:else}
+			{#if !Object.keys(seqOther).length}
 				<div class="my-6 flex w-full flex-col items-center justify-center gap-10 font-bold">
 					<i class="fa-solid fa-link-slash fa-xl"></i>
 					<p>Für dieses Dokument wurden keine Sequenzen verlinkt.</p>
+				</div>
+			{:else}
+				<div class="flex flex-wrap justify-center gap-x-4 gap-y-2">
+					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-100-900')}
 				</div>
 			{/if}
 		{:else if Object.keys(seqOther).length}
