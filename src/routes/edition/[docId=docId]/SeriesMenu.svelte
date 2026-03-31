@@ -34,7 +34,7 @@
 	let isHoveredSeqLargePanel = $state(false);
 	let isHoveredAlltypes = $state(false);
 	let timeoutIdCloseSeqPanel = $state();
-	let timeoutIdResetVisibleType = $state();
+	let timeoutIdResetActiveType = $state();
 
 	// UI-Elements
 	let elSeqMiniPanel: HTMLElement | undefined = $state(undefined);
@@ -53,12 +53,12 @@
 
 	// UI-Choices
 	let keepPanelOpen = $state(false);
-	let visibleType: TSeqType | null = $state(null);
+	let activeType: TSeqType | null = $state(null);
 
 	// Functions
 	function handleEscape(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
-			if (visibleType) resetVisibleType(0);
+			if (activeType) resetActiveType(0);
 			else closeSeqPanel(0);
 		}
 	}
@@ -84,17 +84,17 @@
 
 	function closeSeqPanel(delay = 0) {
 		timeoutIdCloseSeqPanel = setTimeout(() => {
-			resetVisibleType(0);
+			resetActiveType(0);
 			isOpenSeqPanel = false;
 			keepPanelOpen = false;
 			hasLeftTriggerAfterOpening = false; // reset
 		}, delay);
 	}
 
-	function resetVisibleType(delay = 0, exception = false) {
+	function resetActiveType(delay = 0, exception = false) {
 		if (exception) return;
-		timeoutIdResetVisibleType = setTimeout(() => {
-			visibleType = null;
+		timeoutIdResetActiveType = setTimeout(() => {
+			activeType = null;
 			elSeqLargePanel?.focus();
 		}, delay);
 	}
@@ -116,7 +116,7 @@
 
 	function cycleBlocks(el) {
 		let currentIndex = 0;
-		const foo = visibleType; // force rerun on change of visibleType
+		const foo = activeType; // force rerun on change of activeType
 		let blocks: HTMLElement[] = el.querySelectorAll('[data-type=selectable-block]');
 
 		function focusCurrent() {
@@ -242,7 +242,7 @@
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
-				visibleType = Object.keys(seqMatching)[0];
+				activeType = Object.keys(seqMatching)[0];
 			}}>Sequenz wählen...</button
 		>
 	</div>
@@ -383,20 +383,20 @@
 				role="dialog"
 				tabindex="0"
 				onmouseenter={() => {
-					clearTimeout(timeoutIdResetVisibleType);
+					clearTimeout(timeoutIdResetActiveType);
 				}}
 				onmouseleave={() => {
-					if (isSelectedValidSeq) resetVisibleType(500, isHoveredAlltypes);
+					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 			>
 				{#each Object.keys(seqOther) as seqType}
 					<button
-						class={[classes, visibleType === seqType && 'bg-surface-50-950 font-bold']}
+						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
-							visibleType = seqType;
+							activeType = seqType;
 						}}
 						onclick={() => {
-							visibleType = seqType;
+							activeType = seqType;
 							keepPanelOpen = true;
 						}}
 					>
@@ -428,7 +428,7 @@
 		{/if}
 
 		<!-- Other Sequences -->
-		{#if visibleType}
+		{#if activeType}
 			<div
 				role="dialog"
 				tabindex="0"
@@ -438,15 +438,15 @@
 				]}
 				onmouseenter={() => {
 					isHoveredAlltypes = true;
-					clearTimeout(timeoutIdResetVisibleType);
+					clearTimeout(timeoutIdResetActiveType);
 				}}
 				onmouseleave={() => {
 					isHoveredAlltypes = false;
-					if (isSelectedValidSeq) resetVisibleType(500, isHoveredAlltypes);
+					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 				{@attach cycleBlocks}
 			>
-				{#each Object.keys(seqOther[visibleType]) as seqId}
+				{#each Object.keys(seqOther[activeType]) as seqId}
 					<div
 						class="group flex w-full flex-col gap-5 py-5"
 						tabindex="0"
@@ -454,7 +454,7 @@
 						data-type="selectable-block"
 					>
 						<div class={['flex min-h-18 w-full flex-col items-start rounded-xl px-4 py-1']}>
-							<h6 class="mr-5 h6">{seqAll[visibleType][seqId].preamble}</h6>
+							<h6 class="mr-5 h6">{seqAll[activeType][seqId].preamble}</h6>
 							<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 								<div class="flex gap-4">
 									<a
@@ -467,20 +467,20 @@
 										}}
 										>Sequenz auswählen
 									</a>
-									{#if seqAll[visibleType][seqId].url_slug}
+									{#if seqAll[activeType][seqId].url_slug}
 										<a
 											class="h-full underline hover:text-primary-500"
-											href={`${dictSeq[currentSeq.type]?.url_overview}/${seqAll[visibleType][seqId].url_slug}`}
+											href={`${dictSeq[activeType]?.url_overview}/${seqAll[activeType][seqId].url_slug}`}
 											target="_blank"
 											rel="noopener noreferrer"
-											>{dictSeq[visibleType]?.label_overview}
+											>{dictSeq[activeType]?.label_overview}
 										</a>
 									{/if}
 								</div>
 							</div>
 						</div>
 						<div class="flex w-full gap-2 overflow-x-auto px-10 py-1">
-							{@render sequenceList(visibleType, seqId, seqId === currentSeq.id)}
+							{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
 						</div>
 					</div>
 				{/each}
