@@ -144,8 +144,9 @@
 				handleKeyDown(ev, block);
 			});
 		});
-		// Initial focus on the first selectable div
-		focusCurrent();
+
+		// Initial focus on the panel itself
+		el.focus();
 
 		// Clean-up
 		return () => {
