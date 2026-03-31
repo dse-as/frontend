@@ -77,7 +77,9 @@
 
 	function openSeqPanel() {
 		isOpenSeqPanel = true;
-		// elSeqLargePanel?.focus();
+		setTimeout(() => {
+			elSeqLargePanel?.focus();
+		}, 100);
 	}
 
 	function closeSeqPanel(delay = 0) {
@@ -113,33 +115,39 @@
 	}
 
 	function cycleBlocks(el) {
-		const blocks: HTMLElement[] = el.querySelectorAll('[data-type=selectable-block]');
 		let currentIndex = 0;
+		const foo = visibleType; // force rerun on change of visibleType
+		let blocks: HTMLElement[] = el.querySelectorAll('[data-type=selectable-block]');
+
 		function focusCurrent() {
-			blocks[currentIndex].focus();
+			blocks?.[currentIndex]?.focus();
 		}
 
-		function handleKeyDown(ev) {
-			ev.preventDefault(); // Prevent default scrolling
+		function handleKeyDown(ev: Event, block: HTMLElement) {
 			if (ev.key === 'ArrowDown') {
 				currentIndex = (currentIndex + 1) % blocks.length;
 				focusCurrent();
+				ev.preventDefault(); // Prevent default scrolling
 			} else if (ev.key === 'ArrowUp') {
 				currentIndex = (currentIndex - 1 + blocks.length) % blocks.length;
 				focusCurrent();
+				ev.preventDefault(); // Prevent default scrolling
 			} else if (ev.key === 'Enter') {
-				const blockElements = block.querySelectorAll('button');
+				const blockElements = block.querySelectorAll('a');
 				blockElements[0].focus();
-				// ev.preventDefault();
+				ev.preventDefault(); // Prevent default scrolling
 			}
 		}
 		// Cycle through blocks using keyboard
 		blocks.forEach((block) => {
-			block.addEventListener('keydown', handleKeyDown);
+			block.addEventListener('keydown', (ev) => {
+				handleKeyDown(ev, block);
+			});
 		});
-
 		// Initial focus on the first selectable div
 		focusCurrent();
+
+		// Clean-up
 		return () => {
 			blocks.forEach((block) => {
 				block.removeEventListener('keydown', handleKeyDown);
@@ -368,7 +376,7 @@
 			</div>
 		{/if}
 
-		<!-- Other Sequences Selector -->
+		<!-- Other Sequences Selector (Snippet) -->
 		{#snippet otherSeqSelectors(classes: String)}
 			<div
 				role="dialog"
@@ -397,6 +405,7 @@
 			</div>
 		{/snippet}
 
+		<!-- Other Sequences Selector -->
 		{#if !isSelectedValidSeq}
 			{#if Object.keys(seqOther).length}
 				<div class="flex flex-wrap justify-center gap-x-4 gap-y-2">
@@ -409,12 +418,12 @@
 				</div>
 			{/if}
 		{:else if Object.keys(seqOther).length}
-			<div class={['mt-5 ml-10 flex min-h-10 flex-wrap items-end justify-start py-2']}>
+			<div class={['my-5 ml-10 flex min-h-10 flex-wrap items-end justify-start py-2']}>
 				<p class="mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
 				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50-950')}
 			</div>
 		{:else}
-			<div class="mt-5 ml-10 min-h-10"></div>
+			<div class="my-5 ml-10 min-h-10"></div>
 		{/if}
 
 		<!-- Other Sequences -->
@@ -423,7 +432,7 @@
 				role="dialog"
 				tabindex="0"
 				class={[
-					'relative flex max-h-[60vh] w-full min-w-200 flex-col gap-2 overflow-y-auto bg-surface-500 p-5 pb-15',
+					'relative flex max-h-[60vh] w-full min-w-200 flex-col gap-2 overflow-y-auto bg-surface-500 p-5 pb-15 text-surface-950',
 					isSelectedValidSeq && 'border-t-2'
 				]}
 				onmouseenter={() => {
