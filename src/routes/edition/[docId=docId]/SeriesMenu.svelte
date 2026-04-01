@@ -25,6 +25,7 @@
 	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.id]);
 	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
 	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
+	let hasOtherSequences = $derived(Object.keys(seqOther).length ? true : false);
 
 	// UI-State
 	let isSelectedValidSeq = $derived(currentSeq.type ? true : false);
@@ -303,16 +304,23 @@
 					}
 				}}
 			>
-				<i
-					class={[
-						'fa-solid',
-						!isOpenSeqPanel
-							? 'fa-chevron-down'
-							: !hasLeftTriggerAfterOpening
-								? 'fa-lock'
-								: 'fa-chevron-up'
-					]}
-				></i>
+				<div style="position: relative; display: inline-block;">
+					<i
+						class={[
+							'fa-solid',
+							!isOpenSeqPanel
+								? 'fa-chevron-down'
+								: !hasLeftTriggerAfterOpening
+									? 'fa-lock'
+									: 'fa-chevron-up'
+						]}
+					></i>
+					{#if hasOtherSequences && !isOpenSeqPanel}
+						<i
+							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800-200 pt-2 text-surface-50-950"
+						></i>
+					{/if}
+				</div>
 			</button>
 
 			<a
@@ -407,7 +415,7 @@
 
 		<!-- Other Sequences Selector -->
 		{#if !isSelectedValidSeq}
-			{#if !Object.keys(seqOther).length}
+			{#if !hasOtherSequences}
 				<!-- No sequences -->
 				<div class="my-6 flex w-full flex-col items-center justify-center gap-10 font-bold">
 					<i class="fa-solid fa-link-slash fa-xl"></i>
@@ -419,7 +427,7 @@
 					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-100-900')}
 				</div>
 			{/if}
-		{:else if Object.keys(seqOther).length}
+		{:else if hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
 			<div class={['my-5 ml-10 flex min-h-10 flex-wrap items-end justify-start py-2']}>
 				<p class="mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
