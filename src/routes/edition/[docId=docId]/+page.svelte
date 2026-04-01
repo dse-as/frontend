@@ -36,7 +36,7 @@
 	});
 </script>
 
-<div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
+<div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
 	<Sequences
 		metadata={data.meta}
@@ -66,7 +66,7 @@
 	>
 
 	<!-- Content -->
-	<div class="h-[90vh] w-full grow overflow-hidden px-5">
+	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
 			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
 		{:else if dflf === 'DF'}

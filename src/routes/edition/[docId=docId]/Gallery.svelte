@@ -53,7 +53,7 @@
 	});
 </script>
 
-<div class="w-full px-40">
+<div class="w-full">
 	<div
 		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 transition-all duration-200"
 	>

@@ -14,7 +14,7 @@
 	<Nav />
 </div>
 
-{@render children()}
+<div class="px-10 pt-10 pb-20">{@render children()}</div>
 
 <footer
 	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-500"

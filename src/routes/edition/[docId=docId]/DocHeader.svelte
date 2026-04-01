@@ -20,7 +20,7 @@
 </script>
 
 {#if metadata[docId]}
-	<div class="w-full px-40 pb-10">
+	<div class="w-full pb-10">
 		<h1 class="h1">{metadata[docId]?.metadata.title_full}</h1>
 		<h2 class="h2">
 			Publiziert in {metadata[docId]?.metadata.pubPlace} ({metadata[docId]?.metadata.year})

@@ -2,7 +2,7 @@
 	let { data } = $props();
 </script>
 
-<div class="m-10">
+<div class="">
 	{#snippet list(meta)}
 		<ul class="my-4">
 			{#each Object.keys(meta) as key (key)}
