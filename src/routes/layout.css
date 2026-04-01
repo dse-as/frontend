@@ -5,6 +5,7 @@
 
 @import '../../theme_dseas';
 
+/* Edendum Styling */
 [data-dom='global_comment'],
 [data-dom='annotation'],
 [data-textflow='fluid'],
@@ -17,6 +18,10 @@
 	}
 }
 
+/* General Styling */
+a {
+	@apply hover:text-primary-500;
+}
 .my-btn-round {
 	@apply w-max cursor-pointer rounded-full border bg-surface-50-950 px-4 py-1 hover:bg-surface-100-900;
 }
