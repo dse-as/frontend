@@ -1,5 +1,5 @@
 <script>
-	let { url, minSize = '100', classes = '' } = $props();
+	let { url, minWidth = '50', minHeight = '80', classes = '' } = $props();
 	let isLoading = $state(true);
 </script>
 
@@ -7,15 +7,15 @@
 	{#if isLoading}
 		<div
 			class="flex h-full w-full items-center justify-center rounded-xl border"
-			style={`min-width:${minSize}px; min-height:${minSize}px;`}
+			style={`min-width:${minWidth}px; min-height:${minWidth}px;`}
 		>
 			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
 		</div>
 	{:else}
 		<img
 			class={`flex h-auto max-h-full w-full max-w-full items-center justify-center bg-surface-50 object-cover`}
-			style={`min-width:${minSize}px; min-height:${minSize}px;`}
-			src={`${url}/full/${minSize},/0/default.jpg`}
+			style={`min-width:${minWidth}px; min-height:${minWidth}px;`}
+			src={`${url}/full/${Math.max(Number(minWidth), Number(minHeight))},/0/default.jpg`}
 			alt="iiif"
 		/>
 	{/if}
@@ -27,7 +27,8 @@
 
 <img
 	class={`hidden`}
-	src={`${url}/full/${minSize},/0/default.jpg`}
+	src={`${url}/full/${Math.max(Number(minWidth), Number(minHeight))},/0/default.jpg`}
+	alt="hidden (just for loading)"
 	onload={() => {
 		isLoading = false;
 	}}

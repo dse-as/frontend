@@ -93,7 +93,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IIIF_Thumb url={item.fac} width="100" classes="rounded-xl" />
+								<IIIF_Thumb url={item.fac} minWidth="100" classes="rounded-xl" />
 								<span class="italic">Seite {item.page}</span>
 							</a>
 						{/each}
