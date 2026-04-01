@@ -145,9 +145,6 @@
 			});
 		});
 
-		// Initial focus on the panel itself
-		el.focus();
-
 		// Clean-up
 		return () => {
 			blocks.forEach((block) => {
