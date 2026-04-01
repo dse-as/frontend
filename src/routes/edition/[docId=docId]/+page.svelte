@@ -12,9 +12,9 @@
 
 	let { data } = $props();
 
-	let pagenum = $state(1);
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF = $state('LF');
+	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
+	let pagenum: Number = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
 		// set mode
@@ -30,10 +30,6 @@
 	});
 
 	// Update mode and page
-	$effect(() => {
-		pagenum = Number(page.url.searchParams?.get('page')) || pagenum;
-		dflf = (page.url.searchParams?.get('mode') as TDFLF) || dflf;
-	});
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6">
