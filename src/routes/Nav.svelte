@@ -9,13 +9,13 @@
 
 	// Menu
 	const links = [
-		{ name: 'SNF Projekt', path: '/snf-project' },
-		{ name: 'Edition', path: '/edition' },
-		{ name: 'Register', path: '/edition/register' },
-		{ name: 'Netzwerke', path: '/networks' },
-		{ name: 'Themen', path: '/topics' },
-		{ name: 'Schwarzenbach', path: '/schwarzenbach' },
-		{ name: 'Suche', path: '/search' }
+		{ name: 'SNF Projekt', path: resolve('/snf-project') },
+		{ name: 'Edition', path: resolve('/edition') },
+		{ name: 'Register', path: resolve('/edition/register') },
+		{ name: 'Netzwerke', path: resolve('/networks') },
+		{ name: 'Themen', path: resolve('/topics') },
+		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
+		{ name: 'Suche', path: resolve('/search') }
 	];
 </script>
 
@@ -39,7 +39,7 @@
 								: ''
 						]}
 					>
-						<a href={resolve(link.path)}>{@html link.name}</a>
+						<a href={link.path}>{@html link.name}</a>
 					</li>
 				{/each}
 			</ul>

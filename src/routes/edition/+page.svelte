@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
 	let { data } = $props();
 </script>
 
@@ -7,7 +9,9 @@
 		<ul class="my-4">
 			{#each Object.keys(meta) as key (key)}
 				<li>
-					<a href={`edition/${key}`}>{meta[key].metadata.title_full} ({meta[key].metadata.year})</a>
+				<a href={resolve(`/edition/${key}`)}
+					>{meta[key].metadata.title_full} ({meta[key].metadata.year})</a
+				>
 				</li>
 			{/each}
 		</ul>

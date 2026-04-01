@@ -1,4 +1,6 @@
 <script>
+	import { resolve } from '$app/paths';
+
 	let { data } = $props();
 	let corrData = $derived(data.seqAll.correspondence);
 </script>
@@ -7,11 +9,13 @@
 
 <div class="mt-5 flex flex-wrap gap-2">
 	<button class="my-btn-round"
-		><a href={`/edition/${corrData['corr_spec_0001'].docs[0]}?seq=corr_spec_0001`}>Alle Briefe</a
+		><a href={resolve(`/edition/${corrData['corr_spec_0001'].docs[0]}?seq=corr_spec_0001`)}
+			>Alle Briefe</a
 		></button
 	>
 	<button class="my-btn-round"
-		><a href={`/edition/${corrData['corr_spec_0002'].docs[0]}?seq=corr_spec_0002`}>Hotelbriefe</a
+		><a href={resolve(`/edition/${corrData['corr_spec_0002'].docs[0]}?seq=corr_spec_0002`)}
+			>Hotelbriefe</a
 		></button
 	>
 </div>
@@ -27,7 +31,7 @@
 				'my-btn-round',
 				!firstDocId && 'pointer-events-none border-surface-500 text-surface-500'
 			]}
-			href={`/edition/${firstDocId}?seq=${corrId}`}>{corrData[corrId].name}</a
+			href={resolve(`/edition/${firstDocId}?seq=${corrId}`)}>{corrData[corrId].name}</a
 		>
 	{/each}
 </div>

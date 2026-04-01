@@ -5,6 +5,7 @@
 
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
+	import { resolve } from '$app/paths';
 	const reg = register.register;
 	const dictReg = dict_register.dict_register;
 
@@ -41,7 +42,7 @@
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
 								data-entitytype={dictReg[regType].key_singular}
-								href={`/edition/register#${regKey}`}
+								href={resolve(`/edition/register#${regKey}`)}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

@@ -50,7 +50,7 @@
 		onclick={() => {
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
 			page.url.searchParams.set('mode', dflf);
-			goto(resolve(`${page.url.pathname}?${page.url.searchParams.toString()}`), {
+			goto(`${page.url.pathname}?${page.url.searchParams.toString()}`, {
 				replaceState: true
 			});
 		}}
