@@ -59,7 +59,7 @@
 	// Functions
 	function handleEscape(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
-			if (activeType) resetActiveType(0);
+			if (activeType && isSelectedValidSeq) resetActiveType(0);
 			else closeSeqPanel(0);
 		}
 	}
@@ -467,34 +467,34 @@
 				>
 					{#each Object.keys(seqOther[activeType]) as seqId}
 						<div
-						class="group flex w-full flex-col gap-5 py-5"
-						tabindex="0"
-						role="dialog"
-						data-type="selectable-block"
-					>
-						<div class={['flex min-h-18 w-full flex-col items-start rounded-xl px-4 py-1']}>
-							<h6 class="mr-5 h6">{seqAll[activeType][seqId].preamble}</h6>
-							<div class="hidden group-focus-within:block group-hover:block group-focus:block">
-								<div class="flex gap-4">
-									<a
-										class="h-full underline hover:text-primary-500"
-										href={`${docId}?seq=${seqId}`}
-										onclick={() => {
-											if (!keepPanelOpen) {
-												closeSeqPanel(0);
-											}
-										}}
-										>Sequenz auswählen
-									</a>
-									{#if seqAll[activeType][seqId].url_slug}
+							class="group flex w-full flex-col gap-5 py-5"
+							tabindex="0"
+							role="dialog"
+							data-type="selectable-block"
+						>
+							<div class={['flex min-h-18 w-full flex-col items-start rounded-xl px-4 py-1']}>
+								<h6 class="mr-5 h6">{seqAll[activeType][seqId].preamble}</h6>
+								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
+									<div class="flex gap-4">
 										<a
 											class="h-full underline hover:text-primary-500"
-											href={`${dictSeq[activeType]?.url_overview}/${seqAll[activeType][seqId].url_slug}`}
-											target="_blank"
-											rel="noopener noreferrer"
-											>{dictSeq[activeType]?.label_overview}
+											href={`${docId}?seq=${seqId}`}
+											onclick={() => {
+												if (!keepPanelOpen) {
+													closeSeqPanel(0);
+												}
+											}}
+											>Sequenz auswählen
 										</a>
-									{/if}
+										{#if seqAll[activeType][seqId].url_slug}
+											<a
+												class="h-full underline hover:text-primary-500"
+												href={`${dictSeq[activeType]?.url_overview}/${seqAll[activeType][seqId].url_slug}`}
+												target="_blank"
+												rel="noopener noreferrer"
+												>{dictSeq[activeType]?.label_overview}
+											</a>
+										{/if}
 									</div>
 								</div>
 							</div>
