@@ -17,7 +17,7 @@
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
 		},
-		"corrs": {
+		"correspondence": {
 			"key_singular": "correspondence",
 			"label_plural": "Korrespondenzen",
 			"url_overview": "/correspondence",

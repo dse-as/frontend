@@ -1,4 +1,4 @@
-export type TSeqType = 'corrs' | 'travels' | 'topics';
+export type TSeqType = 'correspondence' | 'travels' | 'topics';
 export type TSeqId = string;
 
 export type TDoc_sequences = {
