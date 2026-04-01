@@ -32,6 +32,14 @@
 			"label_overview": "In Themenansicht ansehen",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
+		},
+		"series": {
+			"key_singular": "series",
+			"label_plural": "Publikations Serien",
+			"url_overview": "/series",
+			"label_overview": "In Serienansicht ansehen",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
 		}
 	}
 }
