@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import { updateSearchParams } from '$lib/functions/updateSearchParams';
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;
@@ -92,7 +93,7 @@
 						{#each items as item}
 							<a
 								class="ml-2 rounded-xl p-1"
-								href={`${textzeuge}?page=${item.pagenum_running}`}
+								href={`${textzeuge}?${updateSearchParams(page.url.searchParams, { page: item.pagenum_running })}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

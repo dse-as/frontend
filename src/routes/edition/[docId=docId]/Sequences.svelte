@@ -5,6 +5,8 @@
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
 	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
+	import { updateSearchParams } from '$lib/functions/updateSearchParams';
+	import { page } from '$app/state';
 
 	let { metadata, docId, pagenum, currentSeq = { type: 'travels', id: 'travel_0015' } } = $props();
 
@@ -161,7 +163,7 @@
 {#snippet seqItem(itemId, seqId, isCurrentSeqList)}
 	{@const itemInfo = lookupInfo(itemId)}
 	<a
-		href={`${itemId}?seq=${seqId}`}
+		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
 		class={[
 			'w-70 rounded-xl p-1',
 			docId !== itemId && 'hover:bg-surface-100-900',
@@ -281,7 +283,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-100-900',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${prevId}?seq=${currentSeq.id}`}
+				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !prevId && 'text-surface-500']}>
 					<i class="fa-solid fa-chevron-left"></i>
@@ -331,7 +333,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-100-900',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${nextId}?seq=${currentSeq.id}`}
+				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !nextId && 'text-surface-500']}>
 					<p>{dictSeq[currentSeq.type]?.label_next}</p>
@@ -480,7 +482,7 @@
 									<div class="flex gap-4">
 										<a
 											class="h-full underline hover:text-primary-500"
-											href={`${docId}?seq=${seqId}`}
+											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqId, page: null })}`}
 											onclick={() => {
 												if (!keepPanelOpen) {
 													closeSeqPanel(0);

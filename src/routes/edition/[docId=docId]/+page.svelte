@@ -17,7 +17,7 @@
 	let pagenum: Number = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
-		// set mode
+		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
 			dflf = 'DF';
 		} else {
@@ -25,11 +25,9 @@
 			const url = new URL(page.url);
 			url.searchParams.set('mode', 'LF');
 			dflf = 'LF';
-			goto(url);
+			goto(url, { replaceState: true });
 		}
 	});
-
-	// Update mode and page
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6">
@@ -51,7 +49,10 @@
 	<button
 		onclick={() => {
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
-			goto(resolve(`${page.url.pathname}?mode=${dflf}`));
+			page.url.searchParams.set('mode', dflf);
+			goto(resolve(`${page.url.pathname}?${page.url.searchParams.toString()}`), {
+				replaceState: true
+			});
 		}}
 		class={[
 			'top-30 left-20 z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
