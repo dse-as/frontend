@@ -42,7 +42,7 @@
 	let elSeqMiniPanelSize = $derived.by(() => {
 		if (elSeqMiniPanel) {
 			return {
-				top: (elSeqMiniPanel.getBoundingClientRect().top || 0) - 60,
+				top: (elSeqMiniPanel.getBoundingClientRect().top || 0) - 120,
 				bottom: (elSeqMiniPanel.getBoundingClientRect().bottom || 0) - 60,
 				width: elSeqMiniPanel.clientWidth
 			};
@@ -239,7 +239,7 @@
 
 <!-- Fixed Small NavPanel -->
 {#if !isSelectedValidSeq}
-	<div bind:this={elSeqMiniPanel} class="z-90003 my-5 py-5">
+	<div bind:this={elSeqMiniPanel} class="z-90003">
 		<button
 			class="z-90003 rounded-full border bg-surface-50-950 px-4 py-2 font-bold hover:bg-surface-100-900"
 			onclick={() => {
@@ -253,7 +253,7 @@
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		bind:this={elSeqMiniPanel}
-		class="relative z-90003 my-5 mb-25"
+		class="relative z-90003 mb-25"
 		onmouseenter={() => {
 			isHoveredSeqNavPanel = true;
 		}}
