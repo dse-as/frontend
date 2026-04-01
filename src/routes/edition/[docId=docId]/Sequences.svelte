@@ -42,7 +42,7 @@
 	let elSeqMiniPanelSize = $derived.by(() => {
 		if (elSeqMiniPanel) {
 			return {
-				top: (elSeqMiniPanel.getBoundingClientRect().top || 0) - 120,
+				top: (elSeqMiniPanel.getBoundingClientRect().top || 0) - 115,
 				bottom: (elSeqMiniPanel.getBoundingClientRect().bottom || 0) - 60,
 				width: elSeqMiniPanel.clientWidth
 			};
@@ -349,7 +349,7 @@
 		tabindex="0"
 		bind:this={elSeqLargePanel}
 		class={[
-			'absolute z-90002 flex h-max w-8/10 min-w-200 flex-col overflow-x-auto rounded-xl border-2 transition-all duration-200',
+			'absolute z-90002 flex h-max w-8/10 min-w-200 flex-col rounded-xl border-2 transition-all duration-200',
 			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-500 pt-25'
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
@@ -360,7 +360,7 @@
 	>
 		<!-- Slider to Keep panel open -->
 		<Switch
-			class="absolute top-3 right-3"
+			class="absolute top-6 right-6"
 			checked={keepPanelOpen}
 			onCheckedChange={(details) => (keepPanelOpen = details.checked)}
 		>
@@ -382,7 +382,7 @@
 
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			<div class="flex w-full gap-2 overflow-x-auto px-10 py-1">
+			<div class="flex w-full gap-2 overflow-x-auto px-6 py-1">
 				{@render sequenceList(currentSeq.type, currentSeq.id, true)}
 			</div>
 		{/if}
@@ -446,8 +446,8 @@
 				role="dialog"
 				tabindex="0"
 				class={[
-					'relative flex max-h-[35vh] w-full min-w-200 flex-col gap-2 overflow-y-auto bg-surface-500 p-5 pb-15 text-surface-950',
-					isSelectedValidSeq && 'border-t-2'
+					'relative bg-surface-500 p-5 px-6 pb-15 text-surface-950',
+					isSelectedValidSeq ? 'border-t-2' : ''
 				]}
 				onmouseenter={() => {
 					isHoveredAlltypes = true;
@@ -459,8 +459,14 @@
 				}}
 				{@attach cycleBlocks}
 			>
-				{#each Object.keys(seqOther[activeType]) as seqId}
-					<div
+				<div
+					class={[
+						'flex h-full flex-col gap-2 overflow-y-auto',
+						isSelectedValidSeq ? 'max-h-[35vh]' : 'max-h-[70vh]'
+					]}
+				>
+					{#each Object.keys(seqOther[activeType]) as seqId}
+						<div
 						class="group flex w-full flex-col gap-5 py-5"
 						tabindex="0"
 						role="dialog"
@@ -489,14 +495,15 @@
 											>{dictSeq[activeType]?.label_overview}
 										</a>
 									{/if}
+									</div>
 								</div>
 							</div>
+							<div class="flex w-full gap-2 overflow-x-auto py-1">
+								{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
+							</div>
 						</div>
-						<div class="flex w-full gap-2 overflow-x-auto px-10 py-1">
-							{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
-						</div>
-					</div>
-				{/each}
+					{/each}
+				</div>
 			</div>
 		{/if}
 	</div>
