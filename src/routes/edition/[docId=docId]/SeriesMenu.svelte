@@ -174,8 +174,16 @@
 			if (!keepPanelOpen) closeSeqPanel(0);
 		}}
 	>
-		<div class="grid grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-			<IIIF_Thumb url={itemInfo.fac} minSize="50" classes="rounded-xl" />
+		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+			<div class="flex h-full w-full items-center justify-center">
+				{#if itemInfo.fac}
+					<IIIF_Thumb url={itemInfo.fac} minSize="50" classes="rounded-xl" />
+				{:else}
+					<div class="flex h-full w-full items-center justify-center rounded-xl border">
+						<i class="fa-solid fa-xmark fa-2xl"></i>
+					</div>
+				{/if}
+			</div>
 			<div class="flex flex-col">
 				<span class="italic">{itemInfo.details.title}</span>
 				<span class="">{itemInfo.details.datestring}</span>
