@@ -57,7 +57,10 @@
 	<div
 		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 transition-all duration-200"
 	>
-		<div bind:this={containerRef} class="flex w-full gap-2 overflow-x-auto px-10 py-5">
+		<div
+			bind:this={containerRef}
+			class="flex min-h-[200px] w-full gap-2 overflow-x-auto px-10 py-5"
+		>
 			{#each collectGalleryItems(docId) as item, index (item.fac)}
 				<button
 					bind:this={buttonRefs[index]}
@@ -67,7 +70,7 @@
 					]}
 					onclick={() => handleSelectPage(item.pagenum_running)}
 				>
-					<IIIF_Thumb url={item.fac} width="100" classes={['rounded-xl']} />
+					<IIIF_Thumb url={item.fac} maxWidth="120" maxHeight="120" classes="rounded-xl" />
 					<span class="italic">Seite {item.page}</span>
 				</button>
 			{/each}
@@ -93,7 +96,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IIIF_Thumb url={item.fac} minWidth="100" classes="rounded-xl" />
+								<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
 								<span class="italic">Seite {item.page}</span>
 							</a>
 						{/each}

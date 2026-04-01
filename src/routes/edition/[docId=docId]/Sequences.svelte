@@ -174,7 +174,7 @@
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb url={itemInfo.fac} minWidth="50" minHeight="80" classes="rounded-xl" />
+				<IIIF_Thumb url={itemInfo.fac} maxWidth="80" maxHeight="80" classes="rounded-xl" />
 			</div>
 			<div class="flex flex-col">
 				<span class="italic">{itemInfo.details.title}</span>
@@ -187,7 +187,8 @@
 {#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: Boolean)}
 	{@const itemsBeforeIds = seqMatching[seqType]?.[seqId]?.docsBefore || []}
 	{@const itemsAfterIds = seqMatching[seqType]?.[seqId]?.docsAfter || []}
-	<div class="flex grow overflow-x-auto pb-6">
+	<div class="flex min-h-[140px] grow overflow-x-auto pb-6">
+		<!-- Documents before -->
 		<div
 			class={[
 				'flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
@@ -198,12 +199,14 @@
 				{@render seqItem(itemId, seqId, isCurrentSeqList)}
 			{/each}
 		</div>
+		<!-- Current Document -->
 		<div
 			class={['mx-2 flex grow-0 justify-center rounded-xl bg-transparent']}
 			{@attach centerCurrentItemInGallery}
 		>
 			{@render seqItem(docId, seqId, isCurrentSeqList)}
 		</div>
+		<!-- Documents after -->
 		<div
 			class={[
 				'flex min-w-1/2 shrink-0 justify-start gap-2 rounded-xl',

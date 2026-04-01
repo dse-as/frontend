@@ -144,7 +144,7 @@
 						class="sticky top-0 float-right ml-2 bg-white"
 						onclick={() => openDFpage(item.page)}
 					>
-						<IIIF_Thumb url={item.facs} minSize="100" classes="rounded-xl" />
+						<IIIF_Thumb url={item.facs} maxWidth="100" maxHeight="100" classes="rounded-xl" />
 						<span class="italic">Seite {item.page}</span>
 					</button>
 				{/each}

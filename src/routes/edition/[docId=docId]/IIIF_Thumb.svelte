@@ -1,21 +1,22 @@
 <script>
-	let { url, minWidth = '50', minHeight = '80', classes = '' } = $props();
+	let { url, maxWidth = '100', maxHeight = '100', classes = '' } = $props();
+	const iiif_imageAPI_width = '100';
 	let isLoading = $state(true);
 </script>
 
 {#if url}
 	{#if isLoading}
 		<div
-			class="flex h-full w-full items-center justify-center rounded-xl border"
-			style={`min-width:${minWidth}px; min-height:${minWidth}px;`}
+			class="flex items-center justify-center rounded-xl border"
+			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
 			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
 		</div>
 	{:else}
 		<img
-			class={`flex h-auto max-h-full w-full max-w-full items-center justify-center bg-surface-50 object-cover`}
-			style={`min-width:${minWidth}px; min-height:${minWidth}px;`}
-			src={`${url}/full/${Math.max(Number(minWidth), Number(minHeight))},/0/default.jpg`}
+			class={`flex h-max w-max items-center justify-center bg-surface-50 object-cover`}
+			style={`max-width:${maxWidth}px; max-height:${maxHeight}px;`}
+			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
 			alt="iiif"
 		/>
 	{/if}
@@ -27,7 +28,7 @@
 
 <img
 	class={`hidden`}
-	src={`${url}/full/${Math.max(Number(minWidth), Number(minHeight))},/0/default.jpg`}
+	src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
 	alt="hidden (just for loading)"
 	onload={() => {
 		isLoading = false;
