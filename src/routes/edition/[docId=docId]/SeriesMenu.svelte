@@ -414,16 +414,19 @@
 		<!-- Other Sequences Selector -->
 		{#if !isSelectedValidSeq}
 			{#if !Object.keys(seqOther).length}
+				<!-- No sequences -->
 				<div class="my-6 flex w-full flex-col items-center justify-center gap-10 font-bold">
 					<i class="fa-solid fa-link-slash fa-xl"></i>
 					<p>Für dieses Dokument wurden keine Sequenzen verlinkt.</p>
 				</div>
 			{:else}
-				<div class="flex flex-wrap justify-center gap-x-4 gap-y-2">
+				<!-- Select sequences (currently none selected) -->
+				<div class="mb-5 flex flex-wrap justify-center gap-x-4 gap-y-2">
 					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-100-900')}
 				</div>
 			{/if}
 		{:else if Object.keys(seqOther).length}
+			<!-- Select sequences (other than the one currently sequence selected)-->
 			<div class={['my-5 ml-10 flex min-h-10 flex-wrap items-end justify-start py-2']}>
 				<p class="mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
 				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50-950')}
@@ -438,7 +441,7 @@
 				role="dialog"
 				tabindex="0"
 				class={[
-					'relative flex max-h-[60vh] w-full min-w-200 flex-col gap-2 overflow-y-auto bg-surface-500 p-5 pb-15 text-surface-950',
+					'relative flex max-h-[35vh] w-full min-w-200 flex-col gap-2 overflow-y-auto bg-surface-500 p-5 pb-15 text-surface-950',
 					isSelectedValidSeq && 'border-t-2'
 				]}
 				onmouseenter={() => {
