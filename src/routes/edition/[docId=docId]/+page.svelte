@@ -7,7 +7,7 @@
 	import Gallery from './Gallery.svelte';
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
-	import SeriesMenu from './SeriesMenu.svelte';
+	import Sequences from './Sequences.svelte';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
@@ -37,8 +37,8 @@
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
-	<!-- Series Menu -->
-	<SeriesMenu
+	<!-- Sequences -->
+	<Sequences
 		metadata={data.meta}
 		docId={page.params.docId}
 		{pagenum}
