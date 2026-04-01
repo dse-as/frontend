@@ -446,8 +446,8 @@
 				role="dialog"
 				tabindex="0"
 				class={[
-					'relative bg-surface-500 p-5 px-6 pb-15 text-surface-950',
-					isSelectedValidSeq ? 'border-t-2' : ''
+					'relative rounded-b-xl bg-surface-500 p-6 text-surface-950',
+					isSelectedValidSeq && 'border-t-2'
 				]}
 				onmouseenter={() => {
 					isHoveredAlltypes = true;
@@ -461,10 +461,11 @@
 			>
 				<div
 					class={[
-						'flex h-full flex-col gap-2 overflow-y-auto',
+						'flex h-full flex-col gap-2 overflow-y-auto px-1', // px-1 makes sure, focus region of groups is visible
 						isSelectedValidSeq ? 'max-h-[35vh]' : 'max-h-[70vh]'
 					]}
 				>
+					<!-- Groups with other Sequences-->
 					{#each Object.keys(seqOther[activeType]) as seqId}
 						<div
 							class="group flex w-full flex-col gap-5 py-5"
@@ -472,7 +473,8 @@
 							role="dialog"
 							data-type="selectable-block"
 						>
-							<div class={['flex min-h-18 w-full flex-col items-start rounded-xl px-4 py-1']}>
+							<!-- Title with shortcuts -->
+							<div class={['mx-1 flex min-h-18 w-full flex-col items-start px-4 py-1']}>
 								<h6 class="mr-5 h6">{seqAll[activeType][seqId].preamble}</h6>
 								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 									<div class="flex gap-4">
@@ -498,6 +500,7 @@
 									</div>
 								</div>
 							</div>
+							<!-- sequenceList with thumbnails -->
 							<div class="flex w-full gap-2 overflow-x-auto py-1">
 								{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
 							</div>
