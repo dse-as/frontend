@@ -1,8 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  # push:
-  #   branches: ['main']
   workflow_dispatch:
 
 jobs:
@@ -10,10 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 10
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -21,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: build
+      - name: Build
         env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
+          BASE_PATH: "/${{ github.event.repository.name }}"
           # BASE_PATH: ''
-          NODE_OPTIONS: '--max_old_space_size=9000'
+          NODE_OPTIONS: "--max_old_space_size=9000"
         run: |
           pnpm run build
 
@@ -33,7 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # this should match the `pages` option in your adapter-static options
-          path: 'build/'
+          path: "build/"
 
   deploy:
     needs: build_site

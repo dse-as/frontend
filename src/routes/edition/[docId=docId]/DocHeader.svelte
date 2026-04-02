@@ -5,13 +5,14 @@
 
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
+	import { resolve } from '$app/paths';
 	const reg = register.register;
 	const dictReg = dict_register.dict_register;
 
 	// Load Component with Global Comment
 	import type { Component } from 'svelte';
 	let GlobalComment: Component | null = $state(null);
-	let globalCommentId = annot[docId]?.globCommId;
+	let globalCommentId = $derived(annot[docId]?.globCommId);
 	(async () => {
 		if (docId && globalCommentId) {
 			GlobalComment = (await import(`$lib/data/global_comments/${globalCommentId}.svelte`)).default;
@@ -20,7 +21,7 @@
 </script>
 
 {#if metadata[docId]}
-	<div class="px-40 pb-10">
+	<div class="w-full pb-10">
 		<h1 class="h1">{metadata[docId]?.metadata.title_full}</h1>
 		<h2 class="h2">
 			Publiziert in {metadata[docId]?.metadata.pubPlace} ({metadata[docId]?.metadata.year})
@@ -41,7 +42,7 @@
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
 								data-entitytype={dictReg[regType].key_singular}
-								href={`/edition/register#${regKey}`}
+								href={resolve(`/edition/register#${regKey}`)}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

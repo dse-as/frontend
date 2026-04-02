@@ -16,7 +16,7 @@
 
 	// ---------------------------------------------
 	// Thumbnails
-	type TThumbs = {
+	type TItem = {
 		id: number;
 		el: HTMLElement;
 		facs: string;
@@ -24,7 +24,7 @@
 		top: number;
 	};
 
-	let thumbs = $state([] as TThumbs[]);
+	let items = $state([] as TItem[]);
 
 	let resizeObserver: ResizeObserver;
 	let mutationObserver: MutationObserver;
@@ -32,7 +32,7 @@
 	function collectPagebreaks(el: HTMLElement) {
 		const nodes = el.querySelectorAll('tei-pb');
 		if (nodes.length) {
-			thumbs = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
+			items = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
 				id: i,
 				el: el,
 				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
@@ -44,12 +44,12 @@
 	}
 
 	function updatePagebreakPositions() {
-		thumbs = thumbs.map((thumb) => {
-			const rect = thumb.el.getBoundingClientRect();
+		items = items.map((item) => {
+			const rect = item.el.getBoundingClientRect();
 			const containerRect = containerMaintext.getBoundingClientRect();
 
 			return {
-				...thumb,
+				...item,
 				top: rect.top - containerRect.top + containerMaintext.scrollTop
 			};
 		});
@@ -184,20 +184,17 @@
 >
 	<!-- THUMBS COLUMN -->
 	<aside class="h-full">
-		{#each thumbs as thumb, i (thumb.id)}
+		{#each items as item, i (item.id)}
 			<!-- spacer -->
-			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`} />
+			<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
 
-			<!-- sticky facsimile -->
-			<button
-				class="sticky top-0 float-right ml-2 bg-white"
-				onclick={() => openDFpage(thumb.id + 1)}
-			>
-				<IIIF_Thumb url={thumb.facs} width="100" classes="rounded-xl" />
-				<span class="italic">Seite {thumb.id + 1}</span>
+			<button class="sticky top-0 float-right ml-2 bg-white" onclick={() => openDFpage(item.page)}>
+				<IIIF_Thumb url={item.facs} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+				<span class="italic">Seite {item.page}</span>
 			</button>
 		{/each}
 	</aside>
+
 	<!-- TEXT COLUMN -->
 	<main
 		bind:this={containerTEI}

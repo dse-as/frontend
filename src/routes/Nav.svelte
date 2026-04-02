@@ -9,39 +9,37 @@
 
 	// Menu
 	const links = [
-		{ name: 'SNF Projekt', path: '/snf-project' },
-		{ name: 'Edition', path: '/edition' },
-		{ name: 'Register', path: '/edition/register' },
-		{ name: 'Netzwerke', path: '/networks' },
-		{ name: 'Themen', path: '/topics' },
-		{ name: 'Schwarzenbach', path: '/schwarzenbach' },
-		{ name: 'Suche', path: '/search' }
+		{ name: 'SNF Projekt', path: resolve('/snf-project') },
+		{ name: 'Edition', path: resolve('/edition') },
+		{ name: 'Register', path: resolve('/edition/register') },
+		{ name: 'Netzwerke', path: resolve('/networks') },
+		{ name: 'Themen', path: resolve('/topics') },
+		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
+		{ name: 'Suche', path: resolve('/search') }
 	];
 </script>
 
 <!-- Menu -->
-<AppBar class="flex h-12 flex-row items-center justify-between bg-surface-600-400 px-2 py-0">
+<AppBar class="flex h-12 flex-row items-center justify-between bg-surface-500 px-2 py-0">
 	<!-- Lead for Home Button -->
 	<AppBar.Lead class="flex items-center">
-		<a class="flex items-center py-2" href={resolve('/')}> <p>DSE-AS</p> </a>
+		<a class="flex items-center py-2 font-bold" href={resolve('/')}> DSE-AS </a>
 	</AppBar.Lead>
 
 	<!-- Top Navigation Bar -->
 	<AppBar.Headline class="">
 		<nav class="hidden lg:block">
-			<ul
-				class="my-2 flex w-full flex-wrap items-start justify-start gap-x-8 gap-y-6 text-surface-50"
-			>
+			<ul class="my-2 flex w-full flex-wrap items-start justify-start gap-x-8 gap-y-6">
 				{#each links as link}
 					<li
 						class={[
-							'list-nav-item inline-block h-full hover:text-secondary-300-700',
+							'list-nav-item inline-block h-full text-surface-950 hover:text-primary-500',
 							link.path.split('/').pop() === `/${page.url.pathname.split('/').pop()}`
 								? 'text-primary-800-200'
 								: ''
 						]}
 					>
-						<a href={resolve(link.path)}>{@html link.name}</a>
+						<a href={link.path}>{@html link.name}</a>
 					</li>
 				{/each}
 			</ul>

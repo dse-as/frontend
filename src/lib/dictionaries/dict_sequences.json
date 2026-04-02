@@ -1,0 +1,45 @@
+{
+	"meta": {},
+	"dict_sequences": {
+		"textstufen": {
+			"key_singular": "textstufe",
+			"label_plural": "Textstufen",
+			"url_overview": null,
+			"label_overview": null,
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
+		},
+		"travels": {
+			"key_singular": "travel",
+			"label_plural": "Reisen",
+			"url_overview": "/topics/travels",
+			"label_overview": "In Reiseansicht ansehen",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
+		},
+		"correspondence": {
+			"key_singular": "correspondence",
+			"label_plural": "Korrespondenzen",
+			"url_overview": "/correspondence",
+			"label_overview": "In Korrespondenzansicht ansehen",
+			"label_next": "Nächster Brief",
+			"label_prev": "Vorheriger Brief"
+		},
+		"topics": {
+			"key_singular": "topic",
+			"label_plural": "Themen",
+			"url_overview": "/topics",
+			"label_overview": "In Themenansicht ansehen",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
+		},
+		"series": {
+			"key_singular": "series",
+			"label_plural": "Publikations Serien",
+			"url_overview": "/series",
+			"label_overview": "In Serienansicht ansehen",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
+		}
+	}
+}

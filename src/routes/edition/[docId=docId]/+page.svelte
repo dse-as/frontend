@@ -7,17 +7,17 @@
 	import Gallery from './Gallery.svelte';
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
-	import SeriesMenu from './SeriesMenu.svelte';
+	import Sequences from './Sequences.svelte';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
-	let pagenum = $state(1);
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF = $state('LF');
+	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
+	let pagenum: Number = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
-		// set mode
+		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
 			dflf = 'DF';
 		} else {
@@ -25,20 +25,19 @@
 			const url = new URL(page.url);
 			url.searchParams.set('mode', 'LF');
 			dflf = 'LF';
-			goto(url);
+			goto(url, { replaceState: true });
 		}
-	});
-
-	// Update mode and page
-	$effect(() => {
-		pagenum = Number(page.url.searchParams?.get('page')) || pagenum;
-		dflf = (page.url.searchParams?.get('mode') as TDFLF) || dflf;
 	});
 </script>
 
-<div class="relative flex h-full flex-col items-center gap-6 overflow-auto pb-10">
-	<!-- Series Menu -->
-	<SeriesMenu />
+<div class="relative flex h-full flex-col items-center gap-6">
+	<!-- Sequences -->
+	<Sequences
+		metadata={data.meta}
+		docId={page.params.docId}
+		{pagenum}
+		currentSeq={data.currentSeq}
+	/>
 
 	<!-- Metadata -->
 	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
@@ -50,7 +49,10 @@
 	<button
 		onclick={() => {
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
-			goto(resolve(`${page.url.pathname}?mode=${dflf}`));
+			page.url.searchParams.set('mode', dflf);
+			goto(`${page.url.pathname}?${page.url.searchParams.toString()}`, {
+				replaceState: true
+			});
 		}}
 		class={[
 			'top-30 left-20 z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
@@ -61,14 +63,14 @@
 	>
 
 	<!-- Content -->
-	<div class="h-[90vh] w-full grow overflow-hidden px-5">
+	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
 			<LF
 				meta={data.meta}
 				ceteiData={data.ceteiData}
 				annot={data.annot}
 				docId={page.params.docId}
-				{pagenum}
+				currentPage={pagenum}
 			/>
 		{:else if dflf === 'DF'}
 			<DF
@@ -76,7 +78,7 @@
 				ceteiData={data.ceteiData}
 				annot={data.annot}
 				docId={page.params.docId}
-				{pagenum}
+				currentPage={pagenum}
 			/>
 		{/if}
 	</div>

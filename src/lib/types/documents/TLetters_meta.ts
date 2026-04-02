@@ -45,7 +45,8 @@ export type TLetters_meta = {
 				pubPlace: string;
 				signature: string;
 				pubDetails: string;
-				textstufen: string;
+				textstufen_edited: string;
+				textzeugen_nonedited: string;
 				series: string;
 				comment: string;
 				keywords: {
@@ -79,8 +80,7 @@ export type TLetters_meta = {
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {
-				hasiiif: boolean;
-				url_iiif: string;
+				url_iiifs: string[];
 			};
 			numPages: number | null;
 			edition: {

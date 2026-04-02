@@ -4,6 +4,7 @@
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import register from '$lib/data/register.json';
 	import { type TEntityTypes } from '$lib/types/register/TRegister';
+	import { resolve } from '$app/paths';
 
 	let { meta, docId } = $props();
 
@@ -54,7 +55,7 @@
 							<h2 class="h6">{reg[regType][entry].name}</h2>
 							<a
 								class="text-blue-500 underline"
-								href={`/edition/register#${entry}`}
+								href={resolve(`/edition/register#${entry}`)}
 								target="_blank"
 								rel="noopener noreferrer">Go to Register</a
 							>
