@@ -3,9 +3,10 @@
 
 	let { data } = $props();
 	let corrData = $derived(data.seqAll.correspondence);
+	const specialCorrs = ['corr_spec_0001'];
 </script>
 
-<h1 class="h1">Briefwechsel</h1>
+<h1 class="h1">Korrespondenzen</h1>
 
 <div class="mt-5 flex flex-wrap gap-2">
 	<button class="my-btn-round"
@@ -13,17 +14,12 @@
 			>Alle Briefe</a
 		></button
 	>
-	<button class="my-btn-round"
-		><a href={resolve(`/edition/${corrData['corr_spec_0002'].docs[0]}?seq=corr_spec_0002`)}
-			>Hotelbriefe</a
-		></button
-	>
 </div>
 
-<h2 class="mt-10 h2">Briefwechsel mit...</h2>
+<h2 class="mt-10 h2">Korrespondenzen mit...</h2>
 <div class="mt-5 flex flex-wrap gap-2">
 	{#each Object.keys(corrData).filter((corrId) => {
-		return !['corr_spec_0001', 'corr_spec_0002'].includes(corrId);
+		return !specialCorrs.includes(corrId);
 	}) as corrId}
 		{@const firstDocId = corrData[corrId].docs[0]}
 		<a
@@ -35,3 +31,6 @@
 		>
 	{/each}
 </div>
+
+<h2 class="mt-10 h2">Korrespondenzen in...</h2>
+<div class="mt-5 flex flex-wrap gap-2">TODO</div>
