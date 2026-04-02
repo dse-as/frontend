@@ -65,9 +65,9 @@
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
-			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
+			<LF meta={data.meta} annot={data.annot} docId={page.params.docId} currentPage={pagenum} />
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} {pagenum} />
+			<DF meta={data.meta} annot={data.annot} docId={page.params.docId} currentPage={pagenum} />
 		{/if}
 	</div>
 </div>
