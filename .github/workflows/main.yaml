@@ -8,19 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3 # Updated to version supporting Node.js 24
+        uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3 # Updated to version supporting Node.js 24
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '24' # Setting Node version to 24
+          node-version: '24'
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install Dependencies
+        run: |
+          npm install -g pnpm
+          pnpm install
 
       - name: Build
         env:
