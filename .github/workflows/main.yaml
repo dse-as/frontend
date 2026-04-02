@@ -18,10 +18,13 @@ jobs:
           node-version: 24
           cache: pnpm
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
         run: pnpm install
 
-      - name: build
+      - name: Build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
           # BASE_PATH: ''
