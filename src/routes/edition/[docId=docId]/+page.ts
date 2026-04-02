@@ -2,13 +2,11 @@ export const prerender = false;
 import type { PageLoad } from './$types';
 import { doc_sequences } from '$lib/data/doc_sequences.json';
 
-export const load: PageLoad = ({params, url}) => {
-    const currentSeqId = url.searchParams.get('seq');
-    
-    const foo = params.docId; // force rerun on change of docId
-	
+export const load: PageLoad = ({ params, url }) => {
+	const currentSeqId = url.searchParams.get('seq');
+
 	function findTypeById(id) {
-        for (const type in doc_sequences) {
+		for (const type in doc_sequences) {
 			if (doc_sequences[type][id]) {
 				return type;
 			}
@@ -19,7 +17,6 @@ export const load: PageLoad = ({params, url}) => {
 	const currentSeqType = findTypeById(currentSeqId);
 
 	return {
-		currentSeq: { type: currentSeqType, id: currentSeqId },
-        
+		currentSeq: { type: currentSeqType, id: currentSeqId }
 	};
 };

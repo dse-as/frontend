@@ -7,6 +7,7 @@
 	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
 	import { updateSearchParams } from '$lib/functions/updateSearchParams';
 	import { page } from '$app/state';
+	import { invalidateAll } from '$app/navigation';
 
 	let { metadata, docId, pagenum, currentSeq = { type: 'travels', id: 'travel_0015' } } = $props();
 
@@ -103,7 +104,8 @@
 	}
 
 	function centerCurrentItemInGallery(el) {
-		const foo = docId; // force rerun on change of docId
+		docId; // force rerun on change of docId
+
 		const container = el.parentNode;
 		// Scroll the container to the specified position
 		container.scroll({
@@ -118,8 +120,9 @@
 	}
 
 	function cycleBlocks(el) {
+		activeType; // force rerun on change of activeType (since number of blocks depends on type)
+
 		let currentIndex = 0;
-		const foo = activeType; // force rerun on change of activeType
 		let blocks: HTMLElement[] = el.querySelectorAll('[data-type=selectable-block]');
 
 		function focusCurrent() {
@@ -172,6 +175,7 @@
 		]}
 		onclick={() => {
 			if (!keepPanelOpen) closeSeqPanel(0);
+			invalidateAll();
 		}}
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
