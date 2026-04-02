@@ -1,3 +1,4 @@
+export const prerender = false;
 import type { PageLoad } from './$types';
 import { doc_sequences } from '$lib/data/doc_sequences.json';
 
