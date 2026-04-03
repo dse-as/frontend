@@ -2,7 +2,7 @@ export const prerender = false;
 import type { PageLoad } from './$types';
 import { doc_sequences } from '$lib/data/doc_sequences.json';
 
-export const load: PageLoad = ({ params, url }) => {
+export const load: PageLoad = ({ data, params, url }) => {
 	const currentSeqId = url.searchParams.get('seq');
 
 	function findTypeById(id) {
@@ -17,6 +17,8 @@ export const load: PageLoad = ({ params, url }) => {
 	const currentSeqType = findTypeById(currentSeqId);
 
 	return {
-		currentSeq: { type: currentSeqType, id: currentSeqId }
+		currentSeq: { type: currentSeqType, id: currentSeqId },
+		...data
 	};
 };
+

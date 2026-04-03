@@ -36,5 +36,5 @@ let annot = {
 
 // Export unified meta, text and annot
 export const load: LayoutServerLoad = async () => {
-    return { meta, smf_meta, lgf_meta, let_meta, annot };
+    return { meta, smf_meta, lgf_meta, let_meta, annot};
 };

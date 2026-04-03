@@ -1,52 +1,28 @@
+import processTEI from './processTEI';
 export const prerender = true;
 
-import { type TSmallforms_meta } from '$lib/types/documents/TSmallforms_meta';
-import { type TLongforms_meta } from '$lib/types/documents/TLongforms_meta';
-import { type TLetters_meta } from '$lib/types/documents/TLetters_meta';
-import type { LayoutServerLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
-import smf_meta from '$lib/data/smallforms_meta.json';
-import lgf_meta from '$lib/data/longforms_meta.json';
-import let_meta from '$lib/data/letters_meta.json';
-import smf_annot from '$lib/data/smallforms_annot.json';
-import lgf_annot from '$lib/data/longforms_annot.json';
-import let_annot from '$lib/data/letters_annot.json';
-
-import processTEI from './processTEI';
-// Unify over smallforms, longforms, annotations
-//! TODO add types
-// let meta:(TSmallforms_meta | TLongforms_meta | TLetters_meta) = {
-let meta = {
-	...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
-	...Object.fromEntries(Object.entries(lgf_meta.longforms_meta)),
-	...Object.fromEntries(Object.entries(let_meta.letters_meta))
-};
-let annot = {
-	...Object.fromEntries(Object.entries(smf_annot.smallforms_annot)),
-	...Object.fromEntries(Object.entries(lgf_annot.longforms_annot)),
-	...Object.fromEntries(Object.entries(let_annot.letters_annot))
-};
-
-let ceteiData: HTMLElement;
-
-export const load: LayoutServerLoad = async ({ fetch, params }) => {
+export const load: PageServerLoad = async ({ params }) => {
 	async function loadText(params) {
-		const defaultBody = `
-		<?xml version="1.0" encoding="UTF-8"?>
-			<TEI xmlns="http://www.tei-c.org/ns/1.0">
-				<text>
-					<body>
-						<div type="body" xml:lang="en">
-							<p>No content available.</p>
-						</div>
-					</body>
-				</text>
-			</TEI>`;
+		const defaultBody = {
+			serialized: `
+	<?xml version="1.0" encoding="UTF-8"?>
+		<TEI xmlns="http://www.tei-c.org/ns/1.0">
+			<text>
+				<body>
+					<div type="body" xml:lang="en">
+						<p>No content available.</p>
+					</div>
+				</body>
+			</text>
+		</TEI>`,
+			elements: []
+		};
 
 		try {
 			// (1) Fetch xml data
 			const res = await fetch(`/data/texts/text-${params.docId}.xml`);
-
 			// Throw 404 if XML not found
 			if (!res.ok) {
 				if (res.status === 404) {
@@ -78,7 +54,6 @@ export const load: LayoutServerLoad = async ({ fetch, params }) => {
 			return defaultBody;
 		}
 	}
-
-	ceteiData = await loadText(params);
-	return { meta, annot, ceteiData };
+	const ceteiData = await loadText(params);
+	return { ceteiData };
 };
