@@ -240,7 +240,7 @@
 		if (!keepPanelOpen) closeSeqPanel(500);
 	}}
 	aria-label="Panel schliessen"
-	class="fixed z-100 h-full w-full bg-surface-50-950/80"
+	class="fixed top-0 z-100 h-full w-full bg-surface-50-950/80"
 ></div>
 
 <!-- Fixed Small NavPanel -->
