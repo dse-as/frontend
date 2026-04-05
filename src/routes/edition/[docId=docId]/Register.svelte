@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 
-	import dict_register from '$lib/dictionaries/dict_register.json';
-	import register from '$lib/data/register.json';
+	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
+	import { register as reg } from '$lib/data/register.json';
 	import { type TEntityTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
 
 	let { meta, docId } = $props();
 
-	const reg = register.register;
-	const dictReg = dict_register.dict_register;
 	const regTypes = Object.keys(reg) as Array<keyof typeof reg>;
 
 	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {

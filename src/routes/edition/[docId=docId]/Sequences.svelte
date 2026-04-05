@@ -355,7 +355,7 @@
 		tabindex="0"
 		bind:this={elSeqLargePanel}
 		class={[
-			'absolute z-90002 flex h-max w-8/10 min-w-200 flex-col rounded-xl border-2 transition-all duration-200',
+			'absolute z-90002 flex h-max w-8/10 flex-col rounded-xl border-2 transition-all duration-200',
 			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-500 pt-25'
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
@@ -366,7 +366,7 @@
 	>
 		<!-- Slider to Keep panel open -->
 		<Switch
-			class="absolute top-6 right-6"
+			class="absolute top-6 right-6 z-90009"
 			checked={keepPanelOpen}
 			onCheckedChange={(details) => (keepPanelOpen = details.checked)}
 		>

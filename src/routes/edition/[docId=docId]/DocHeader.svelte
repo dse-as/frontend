@@ -1,13 +1,12 @@
 <script lang="ts">
 	let { metadata, annot, docId } = $props();
 	let isExpandedBox1 = $state(false);
-	let isExpandedBox2 = $state(false);
+	let isExpandedMetadata = $state(false);
 
 	import register from '$lib/data/register.json';
-	import dict_register from '$lib/dictionaries/dict_register.json';
+	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	const reg = register.register;
-	const dictReg = dict_register.dict_register;
 
 	// Load Component with Global Comment
 	import type { Component } from 'svelte';
@@ -18,6 +17,9 @@
 			GlobalComment = (await import(`$lib/data/global_comments/${globalCommentId}.svelte`)).default;
 		}
 	})();
+
+	// Metadata
+	let stateMetadata = $state('comment');
 </script>
 
 {#if metadata[docId]}
@@ -27,34 +29,7 @@
 			Publiziert in {metadata[docId]?.metadata.pubPlace} ({metadata[docId]?.metadata.year})
 		</h2>
 
-		<!-- Global Entities -->
-		{#if Object.keys(dictReg).some((regType) => {
-			const keywords = metadata[docId]?.metadata.keywords[regType];
-			return keywords && keywords.length > 0;
-		})}
-			<div class="mt-10">
-				<h5 class="mb-4 h5"><strong>Schlagwörter</strong></h5>
-				<div data-dom="global_entities" class="flex flex-wrap gap-2">
-					{#each Object.keys(dictReg) as regType}
-						{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
-						{#each regKeys ? Object.values(regKeys) : [] as regKey}
-							<a
-								class="whitespace-nowrap text-surface-950"
-								data-type="entity"
-								data-entitytype={dictReg[regType].key_singular}
-								href={resolve(`/edition/register#${regKey}`)}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{reg[regType][regKey]?.name}
-							</a>
-						{/each}
-					{/each}
-				</div>
-			</div>
-		{/if}
-
-		<!-- Global Comment -->
+		<!-- Überblickskommentar -->
 		{#if globalCommentId}
 			<div class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}>
 				<div class={[isExpandedBox1 ? 'h-auto' : 'max-h-40 overflow-hidden']}>
@@ -91,37 +66,89 @@
 		{/if}
 
 		<!-- Metadata Table -->
-		<div
-			class={[
-				'relative mt-5 mb-20 bg-surface-700-300 px-5 pt-5 text-surface-100-900',
-				isExpandedBox2 ? 'pb-20' : 'pb-0'
-			]}
-		>
-			<div class={[isExpandedBox2 ? 'h-auto' : 'max-h-13 overflow-hidden']}>
-				<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
-				<div data-dom="metadata_table" class="">
-					{#each Object.entries(metadata[docId]?.metadata) as entry}
-						<!-- //! Later, the metadata section should be restructured, such that no filtering out is needed.
-					Alternatively, this list here could be created manually, which is actually better for ordering.-->
-						{#if entry[0] !== 'keywords'}
-							<p><strong>{entry[0]}:</strong> {entry[1]}</p>
+		{#snippet metadataButton(state: string, text: string)}
+			<button
+				class={['my-btn-round', stateMetadata === state && 'my-btn-active']}
+				onclick={() => {
+					if (stateMetadata === state) {
+						stateMetadata = null;
+						isExpandedMetadata = false;
+					} else {
+						stateMetadata = state;
+						isExpandedMetadata = true;
+					}
+				}}>{text}</button
+			>
+		{/snippet}
+		{#snippet metadataEntry(label, content)}
+			<p><span class="font-bold">{label}:</span>{content}</p>
+		{/snippet}
+		<div class="rounded-xl border-2 p-5">
+			<div class="flex w-full justify-center gap-5">
+				{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
+				{@render metadataButton('sources', 'Quellenangaben')}
+				{@render metadataButton('keywords', 'Schlagwörter')}
+				{@render metadataButton('citation', 'Zitierhinweise')}
+				{@render metadataButton('download', 'Download-Links')}
+				{@render metadataButton('all', 'Alles (Temporär)')}
+			</div>
+			{#if isExpandedMetadata}
+				<div class={['relative mt-5 mb-20 px-5 pt-5']}>
+					{#if stateMetadata === 'eckdaten'}
+						<div class="flex flex-col gap-2">
+							{@render metadataEntry('Voller Titel', title_full)}
+							{@render metadataEntry('Publikationsdatum', pubDate)}
+							{@render metadataEntry('Publikationsort', pubPlace)}
+							{@render metadataEntry('Publikation einzig post-hum', pubPosthumOnly)}
+							{@render metadataEntry('Publikationsdetails', pubDetails)}
+						</div>
+					{:else if stateMetadata === 'sources'}
+						<div>
+							{@render metadataEntry('Signatur', signature)}
+						</div>
+					{:else if stateMetadata === 'keywords'}
+						<!-- Global Entities -->
+						{#if Object.keys(dictReg).some((regType) => {
+							const keywords = metadata[docId]?.metadata.keywords[regType];
+							return keywords && keywords.length > 0;
+						})}
+							<h5 class="mb-4 h5"><strong>Schlagwörter</strong></h5>
+							<div data-dom="global_entities" class="flex flex-wrap gap-2">
+								{#each Object.keys(dictReg) as regType}
+									{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
+									{#each regKeys ? Object.values(regKeys) : [] as regKey}
+										<a
+											class="whitespace-nowrap text-surface-950"
+											data-type="entity"
+											data-entitytype={dictReg[regType].key_singular}
+											href={resolve(`/edition/register#${regKey}`)}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											{reg[regType][regKey]?.name}
+										</a>
+									{/each}
+								{/each}
+							</div>
 						{/if}
-					{/each}
+					{:else if stateMetadata === 'citation'}
+						<div></div>
+					{:else if stateMetadata === 'download'}
+						<div></div>
+					{:else if stateMetadata === 'all'}
+						<div class={[isExpandedMetadata ? 'h-auto' : 'max-h-13 overflow-hidden']}>
+							<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
+							<div data-dom="metadata_table" class="">
+								{#each Object.entries(metadata[docId]?.metadata) as entry}
+									{#if entry[0] !== 'keywords'}
+										<p><strong>{entry[0]}:</strong> {entry[1]}</p>
+									{/if}
+								{/each}
+							</div>
+						</div>
+					{/if}
 				</div>
-			</div>
-
-			<!-- Button to Open/Close -->
-			<div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -20px;">
-				<button
-					class="z-10 h-12 w-12 rounded-full border-2 border-surface-700-300 bg-surface-50-950 text-surface-700-300"
-					aria-label="expand box"
-					onclick={() => {
-						isExpandedBox2 = !isExpandedBox2;
-					}}
-				>
-					<i class={['fa-solid', isExpandedBox2 ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
-				</button>
-			</div>
+			{/if}
 		</div>
 	</div>
 {:else}
