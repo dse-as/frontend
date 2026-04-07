@@ -84,7 +84,10 @@
 	{#snippet regItem(item)}
 		<a
 			id={item.key}
-			class="align-left mx-8 block w-80 border-b px-5 py-3 text-left"
+			class={[
+				'align-left block w-80 border-b px-5 py-3 text-left',
+				isMultiColumn ? 'mx-8' : 'mx-2'
+			]}
 			href={item.key}
 		>
 			<span class="overflow-hidden whitespace-normal">
@@ -96,7 +99,10 @@
 	{#snippet letter(letter)}
 		<p
 			id={letter}
-			class="align-left mx-8 block min-h-25 w-80 border-b px-5 pt-10 text-left font-serif text-5xl font-bold"
+			class={[
+				'align-left block min-h-25 w-80 border-b px-5 pt-10 text-left font-serif text-5xl font-bold',
+				isMultiColumn ? 'mx-8' : 'mx-2'
+			]}
 		>
 			{letter}
 		</p>

@@ -13,7 +13,7 @@
 	p {
 		@apply my-4;
 	}
-	a {bg-amber-300 
+	a {
 		@apply hover:text-primary-500;
 	}
 }
@@ -23,7 +23,7 @@ a {
 	@apply hover:text-primary-500;
 }
 .my-btn-round {
-	@apply w-max cursor-pointer rounded-full border bg-surface-50-950 px-4 py-1 hover:bg-surface-100-900;
+	@apply w-max cursor-pointer rounded-full border bg-surface-50-950 px-4 py-1 text-center hover:bg-surface-100-900 hover:text-surface-950-50;
 }
 .my-btn-active {
 	@apply bg-surface-100-900;

@@ -22,12 +22,12 @@
 <!-- Large Register-Menu  -->
 <h1
 	class={[
-		'absolute top-35 left-0 pl-10 h1 transition-all duration-400',
+		'absolute pl-10 transition-all duration-400',
 		isOverview1
-			? 'w-full text-center'
+			? 'top-45 w-full text-center h1'
 			: isOverview2
-				? 'w-1 text-center whitespace-nowrap'
-				: 'w-1 text-center h4 whitespace-nowrap'
+				? 'top-45 left-0 w-1  text-center h1 whitespace-nowrap'
+				: 'top-38 left-5 w-1 text-center h4 whitespace-nowrap'
 	]}
 >
 	{isOverview1 ? 'Register' : dictReg[regType]?.register_name}
@@ -42,14 +42,14 @@
 		class={[
 			'flex transition-all duration-200',
 			isOverview1
-				? 'mx-auto mt-50 w-1/2 flex-wrap items-center justify-center gap-4 p-2'
+				? 'mx-auto mt-50 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
 				: 'h-full w-full gap-2 p-2'
 		]}
 	>
 		{#each regButtons as rb (rb)}
 			<a
 				class={[
-					'rounded-full bg-white  px-4 py-1',
+					'my-btn-round hover:text-red-500',
 					isOverview1 ? 'border-2 text-2xl ' : 'border text-sm'
 				]}
 				href={`/edition/register/${rb}`}
