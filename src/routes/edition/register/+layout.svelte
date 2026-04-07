@@ -4,7 +4,6 @@
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
 	let { children } = $props();
-	import { slide } from 'svelte/transition';
 	import { findKeyBySlug } from '../../../lib/functions/findKeyBySlug';
 	import { flip } from 'svelte/animate';
 	let regSlug = $derived(page.params.regSlug);
@@ -12,20 +11,14 @@
 	let isOverview2 = $derived(Object.keys(reg).includes(regSlug));
 	let regType = $derived(isOverview2 ? regSlug : findKeyBySlug(reg, regSlug));
 
-	const regButtons = [
-		{ type: 'people', text: 'Personen' },
-		{ type: 'places', text: 'Orte' },
-		{ type: 'keywords', text: 'Schlagwörter' },
-		{ type: 'orgs', text: 'Organisationen' },
-		{ type: 'events', text: 'Reisen und Aufenthalte' },
-		{ type: 'bibls', text: 'Bibliographie' }
-	];
+	const regButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'];
 </script>
 
 <!-- Navigation -->
 {#if regSlug}
 	{@render nav()}
 {/if}
+
 <!-- Large Register-Menu  -->
 <h1
 	class={[
@@ -39,6 +32,7 @@
 >
 	{isOverview1 ? 'Register' : dictReg[regType]?.register_name}
 </h1>
+<!-- Navigation for  -->
 {#if isOverview1}
 	{@render nav()}
 {/if}
@@ -52,16 +46,16 @@
 				: 'h-full w-full gap-2 p-2'
 		]}
 	>
-		{#each regButtons as rb (rb.type)}
+		{#each regButtons as rb (rb)}
 			<a
 				class={[
 					'rounded-full bg-white  px-4 py-1',
 					isOverview1 ? 'border-2 text-2xl ' : 'border text-sm'
 				]}
-				href={`/edition/register/${rb.type}`}
+				href={`/edition/register/${rb}`}
 				animate:flip={{ delay: 200 }}
 			>
-				{rb.text}
+				{dictReg[rb]?.label_plural}
 			</a>
 		{/each}
 	</nav>

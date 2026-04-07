@@ -3,7 +3,7 @@
 	"dict_register": {
 		"people": {"register_name":"Personenregister", "key_singular": "person", "label_plural": "Personen" },
 		"places": {"register_name":"Ortsregister", "key_singular": "place", "label_plural": "Orte" },
-		"events": {"register_name":"Register der Reisen und Aufenthalte", "key_singular": "event", "label_plural": "Ereignisse" },
+		"events": {"register_name":"Register der Reisen und Aufenthalte", "key_singular": "event", "label_plural": "Reisen und Aufenthalte" },
 		"travels": {"register_name":"Reiseregister", "key_singular": "travel", "label_plural": "Reisen" },
 		"orgs": {"register_name":"Organisationsregister", "key_singular": "org", "label_plural": "Organisationen" },
 		"bibls": {"register_name":"Bibliografieregister", "key_singular": "bibl", "label_plural": "Bibliografie" },
