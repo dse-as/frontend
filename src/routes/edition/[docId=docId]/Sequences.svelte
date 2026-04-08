@@ -8,6 +8,7 @@
 	import { updateSearchParams } from '$lib/functions/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
+	import { lookupDocInfo } from '$lib/functions/lookupDocInfo';
 
 	let { metadata, docId, pagenum, currentSeq = { type: 'travels', id: 'travel_0015' } } = $props();
 
@@ -65,18 +66,6 @@
 			if (activeType && isSelectedValidSeq) resetActiveType(0);
 			else closeSeqPanel(0);
 		}
-	}
-
-	function lookupInfo(docId): TItem {
-		return {
-			docId: docId,
-			fac: metadata[docId].manuscript.iiif_urls[0],
-			details: {
-				type: 'smallform', //! changethis
-				title: metadata[docId].metadata.title_full,
-				datestring: metadata[docId].metadata.pubDate
-			}
-		};
 	}
 
 	function openSeqPanel() {
@@ -164,7 +153,7 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId, seqId, isCurrentSeqList)}
-	{@const itemInfo = lookupInfo(itemId)}
+	{@const itemInfo = lookupDocInfo(itemId, metadata)}
 	<a
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
 		class={[
