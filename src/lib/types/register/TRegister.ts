@@ -4,6 +4,9 @@ import { type TEventsKeys } from './TEventsKeys';
 import { type TKeywordsKeys } from './TKeywordsKeys';
 import { type TOrgsKeys } from './TOrgsKeys';
 import type { TBiblsKeys } from './TBiblsKeys';
+import type { TSmallformsKeys } from '../documents/TSmallformsKeys';
+import type { TLettersKeys } from '../documents/TLettersKeys';
+import type { TLongformsKeys } from '../documents/TLongformsKeys';
 
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
@@ -12,13 +15,7 @@ export type TOrgsTypes = string; //! restrict to subet later
 export type TBiblsTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
 // Entities
-export type TEntityTypes =
-	| 'people'
-	| 'places'
-	| 'events'
-	| 'orgs'
-	| 'bibl'
-	| 'keywords';
+export type TEntityTypes = 'people' | 'places' | 'events' | 'orgs' | 'bibl' | 'keywords';
 
 export type TEntityNames =
 	| 'Personen'
@@ -57,6 +54,7 @@ export type TRegister = {
 				type: TPeopleTypes;
 				orgId: TOrgsKeys;
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		places: {
@@ -69,6 +67,7 @@ export type TRegister = {
 				coords: [number, number];
 				country: string;
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		events: {
@@ -77,6 +76,7 @@ export type TRegister = {
 				type: TEventsTypes;
 				date?: { from: string; to: string };
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		orgs: {
@@ -86,6 +86,7 @@ export type TRegister = {
 				gndNumber?: string; // optional
 				type: TOrgsTypes;
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		bibls: {
@@ -95,6 +96,7 @@ export type TRegister = {
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				gndNumber?: string; // optional
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		keywords: {
@@ -102,6 +104,7 @@ export type TRegister = {
 				name: string;
 				type: TKeywordsTypes;
 				gndNumber?: string; // optional
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 	};
