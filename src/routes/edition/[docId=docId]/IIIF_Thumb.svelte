@@ -2,6 +2,7 @@
 	let { url, maxWidth = '100', maxHeight = '100', classes = '' } = $props();
 	const iiif_imageAPI_width = '100';
 	let isLoading = $state(true);
+	let loadedWithError = $state(false);
 </script>
 
 {#if url}
@@ -11,6 +12,13 @@
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
 			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
+		</div>
+	{:else if loadedWithError}
+		<div
+			class="flex items-center justify-center rounded-xl border"
+			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
+		>
+			<i class="fa-solid fa-xmark fa-2xl text-red-500"></i>
 		</div>
 	{:else}
 		<img
@@ -32,5 +40,7 @@
 	alt="hidden (just for loading)"
 	onload={() => {
 		isLoading = false;
+		loadedWithError = false;
 	}}
+	onerror={() => (loadedWithError = true)}
 />
