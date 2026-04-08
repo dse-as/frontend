@@ -1,82 +1,106 @@
 <script lang="ts">
 	import { register as reg } from '$lib/data/register.json';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
+	import { lookupDocInfo } from '$lib/functions/lookupDocInfo';
 
-	let { type, item } = $props();
+	let { metadata, regType, regItem } = $props();
 </script>
 
-<div class="p-20 pt-10">
-	<div>
-		<!-- People -->
-		{#if type === 'people'}
-			<h1 id={item.key} class="h1">{item.name ? `${item.name}` : '...'}</h1>
-			<p>{item.type}</p>
+<div class="w-full p-20 pt-10">
+	<!-- People -->
+	{#if regType === 'people'}
+		<h1 id={regItem.key} class="h1">{regItem.name ? `${regItem.name}` : '...'}</h1>
+		<p>{regItem.type}</p>
 
-			<div class="mt-2">
-				{#if item.nameVariants.length}
-					<p>
-						<strong>Alternative Namen: </strong>
-						<span class="italic">{item.nameVariants.join(', ')}</span>
-					</p>
-				{/if}
-
-				{#if item.orgId}
-					<p>
-						<strong>Affiliationen:</strong>
-						<a href={`#${item.orgId}`}>
-							{`${reg.orgs[item.orgId]?.name}`}
-						</a>
-					</p>
-				{/if}
-			</div>
-
-			<p class="mt-2">
-				{#if item.note}{item.note}{/if}
-				{#if item.gndNumber}
-					(<a class="text-primary-500 underline" href={`https://d-nb.info/gnd/${item.gndNumber}`}
-						>GND</a
-					>)
-				{/if}
-			</p>
-
-			<!-- Places / Organisations / Keywords -->
-		{:else if type === 'places' || type === 'orgs' || type === 'keywords'}
-			<h1 id={item.key} class="h1">{item.name}</h1>
-			<div class="p-10">
-				{#each Object.keys(item) as key}<p><strong>{key}:</strong> {item[key]}</p>{/each}
-			</div>
-			{#if item.gndNumber}<a
-					class="text-primary-500 underline"
-					href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
-				>
+		<div class="mt-2">
+			{#if regItem.nameVariants.length}
+				<p>
+					<strong>Alternative Namen: </strong>
+					<span class="italic">{regItem.nameVariants.join(', ')}</span>
+				</p>
 			{/if}
 
-			<!-- Events -->
-		{:else if type === 'events'}
-			<h1 id={item.key} class="h1">{item.name}</h1>
-			{#if item.date}
-				<p>{item.date.from} bis {item.date.to}</p>
+			{#if regItem.orgId}
+				<p>
+					<strong>Affiliationen:</strong>
+					<a href={`#${regItem.orgId}`}>
+						{`${reg.orgs[regItem.orgId]?.name}`}
+					</a>
+				</p>
 			{/if}
+		</div>
 
-			<!-- Works -->
-		{:else if type === 'works'}
-			<h1 id={item.key} class="h1">{item.name}</h1>
-			{@const author = reg.people?.[item.authorId]}
-			<p>
-				{#if author?.firstname}
-					<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-				{:else}
-					<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-				{/if}
-				{#if item.pubDate}
-					<span>({item.pubDate})</span>
-				{/if}
-			</p>
-
-			{#if item.gndNumber}<a
-					class="text-primary-500 underline"
-					href={`https://d-nb.info/gnd/${item.gndNumber}`}>See in GND</a
-				>
+		<p class="mt-2">
+			{#if regItem.note}{regItem.note}{/if}
+			{#if regItem.gndNumber}
+				(<a class="text-primary-500 underline" href={`https://d-nb.info/gnd/${regItem.gndNumber}`}
+					>GND</a
+				>)
 			{/if}
+		</p>
+
+		<!-- Places / Organisations / Keywords -->
+	{:else if regType === 'places' || regType === 'orgs' || regType === 'keywords'}
+		<h1 id={regItem.key} class="h1">{regItem.name}</h1>
+		<div class="p-10">
+			{#each Object.keys(regItem) as key}<p><strong>{key}:</strong> {regItem[key]}</p>{/each}
+		</div>
+		{#if regItem.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${regItem.gndNumber}`}>See in GND</a
+			>
 		{/if}
+
+		<!-- Events -->
+	{:else if regType === 'events'}
+		<h1 id={regItem.key} class="h1">{regItem.name}</h1>
+		{#if regItem.date}
+			<p>{regItem.date.from} bis {regItem.date.to}</p>
+		{/if}
+
+		<!-- Works -->
+	{:else if regType === 'works'}
+		<h1 id={regItem.key} class="h1">{regItem.name}</h1>
+		{@const author = reg.people?.[regItem.authorId]}
+		<p>
+			{#if author?.firstname}
+				<a href={`#${regItem.authorId}`}>By {author.firstname} {author.lastname}</a>
+			{:else}
+				<a href={`#${regItem.authorId}`}>By {author.firstname} {author.lastname}</a>
+			{/if}
+			{#if regItem.pubDate}
+				<span>({regItem.pubDate})</span>
+			{/if}
+		</p>
+
+		{#if regItem.gndNumber}<a
+				class="text-primary-500 underline"
+				href={`https://d-nb.info/gnd/${regItem.gndNumber}`}>See in GND</a
+			>
+		{/if}
+	{/if}
+
+	<!-- Linked documents -->
+	<div class="flex w-full flex-wrap gap-5 rounded-xl border-2 p-10">
+		<p>{regType} - {regItem.key} - {Object.keys(reg[regType][regItem.key])}</p>
+		{#each reg[regType][regItem.key]?.docs as docId}
+			{@const regItemInfo = lookupDocInfo(docId, metadata)}
+			<a
+				href={`/edition/${docId}`}
+				class="w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+				target="blank"
+				rel="noopener noreferrer"
+			>
+				<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+					<div class="flex h-full w-full items-center justify-center">
+						<IIIF_Thumb url={regItemInfo.fac} maxWidth="80" maxHeight="80" classes="rounded-xl" />
+					</div>
+					<div class="flex flex-col">
+						<span class="italic">{regItemInfo.details.title}</span>
+						<span class="">{regItemInfo.details.datestring}</span>
+					</div>
+				</div>
+			</a>
+		{/each}
 	</div>
 </div>

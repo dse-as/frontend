@@ -13,6 +13,8 @@
 	let regType: string | null = $derived(findKeyBySlug(reg, regSlug));
 	// const secondOrderKeys = [regType].flatMap((key) => Object.keys(reg[key]) as Array<string>);
 
+	let { data } = $props();
+
 	function preventVerticalScroll() {
 		// Get the current horizontal position
 		const scrollX = window.scrollX;
@@ -48,6 +50,10 @@
 {:else}
 	<div class="mt-10 grid h-full w-full grid-cols-[auto_1fr]">
 		<RegList isMultiColumn={false} {regType} {regSlug} />
-		<RegContent type={regType} item={reg[regType]?.[regSlug]} />
+		<RegContent
+			{regType}
+			regItem={{ ...reg[regType]?.[regSlug], key: regSlug }}
+			metadata={data.meta}
+		/>
 	</div>
 {/if}
