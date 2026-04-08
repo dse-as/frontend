@@ -61,11 +61,7 @@
 
 	function scrollToItem(itemKey) {
 		const targetElement = document.getElementById(itemKey);
-		console.log(targetElement);
-		console.log(targetElement.offsetTop);
-		console.log(scrollableDiv.offsetTop);
 		if (targetElement) {
-			console.log('HIII');
 			scrollableDiv.scrollTo({
 				top: targetElement.offsetTop - scrollableDiv.offsetTop,
 				behavior: 'smooth'
@@ -74,7 +70,6 @@
 	}
 
 	$effect(() => {
-		console.log(regSlug);
 		if (regSlug) scrollToItem(regSlug);
 	});
 </script>
