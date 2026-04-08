@@ -190,7 +190,7 @@
 		:global([data-entitytype='letter']) {
 			@apply rounded-xl bg-blue-100 px-2 font-bold;
 		}
-		:global([data-entitytype='bibl']) {
+		:global([data-entitytype='bibls']) {
 			@apply rounded-xl bg-purple-100 px-2 font-bold;
 		}
 		:global([data-entitytype='keyword']) {

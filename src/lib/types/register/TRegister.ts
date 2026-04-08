@@ -15,7 +15,7 @@ export type TOrgsTypes = string; //! restrict to subet later
 export type TBiblsTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
 // Entities
-export type TEntityTypes = 'people' | 'places' | 'events' | 'orgs' | 'bibl' | 'keywords';
+export type TEntityTypes = 'people' | 'places' | 'events' | 'orgs' | 'bibls' | 'keywords';
 
 export type TEntityNames =
 	| 'Personen'
