@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Data processing
+/data_processing/workflow-get-xml-and-extract-entities/downloaded_files
