@@ -5,7 +5,7 @@
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	import { unselectMarks } from '$lib/functions/unselectMarks';
 	import { unselectNotes } from '$lib/functions/unselectNotes';
-	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import CETEI from 'CETEIcean';

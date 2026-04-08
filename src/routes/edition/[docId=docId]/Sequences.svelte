@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';

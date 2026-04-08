@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/updateSearchParams';
 
 	let buttonRefs: HTMLButtonElement[] = [];

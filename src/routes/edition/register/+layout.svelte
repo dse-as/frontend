@@ -4,7 +4,7 @@
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
 	let { children } = $props();
-	import { findKeyBySlug } from '../../../lib/functions/findKeyBySlug';
+	import { findKeyBySlug } from '$lib/functions/findKeyBySlug';
 	import { flip } from 'svelte/animate';
 	let regSlug = $derived(page.params.regSlug);
 	let isOverview1 = $derived(!regSlug ? true : false);
