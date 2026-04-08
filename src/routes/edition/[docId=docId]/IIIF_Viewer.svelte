@@ -73,7 +73,8 @@
 					}
 				},
 				showNavigator: true,
-				sequenceMode: false
+				sequenceMode: false,
+				crossOriginPolicy: 'Anonymous'
 			});
 
 			observer = new ResizeObserver((_entries) => {
