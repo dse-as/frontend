@@ -5,10 +5,10 @@
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
 	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
-	import { updateSearchParams } from '$lib/functions/updateSearchParams';
+	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
-	import { lookupDocInfo } from '$lib/functions/lookupDocInfo';
+	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
 
 	let { metadata, docId, pagenum, currentSeq = { type: 'travels', id: 'travel_0015' } } = $props();
 

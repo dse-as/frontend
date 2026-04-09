@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { updateSearchParams } from '$lib/functions/updateSearchParams';
+	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;

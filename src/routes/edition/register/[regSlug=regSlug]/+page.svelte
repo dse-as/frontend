@@ -3,7 +3,7 @@
 	import { register as reg } from '$lib/data/register.json';
 	import RegContent from './RegContent.svelte';
 	import RegList from './RegList.svelte';
-	import { findKeyBySlug } from '$lib/functions/findKeyBySlug';
+	import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
 	import { onMount } from 'svelte';
 
 	let regSlug: string = $derived(page.params.regSlug);
