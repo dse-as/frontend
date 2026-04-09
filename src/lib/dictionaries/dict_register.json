@@ -1,12 +1,90 @@
 {
 	"meta": {},
 	"dict_register": {
-		"people": {"register_name":"Personenregister", "key_singular": "person", "label_plural": "Personen" },
-		"places": {"register_name":"Ortsregister", "key_singular": "place", "label_plural": "Orte" },
-		"events": {"register_name":"Register der Reisen und Aufenthalte", "key_singular": "event", "label_plural": "Reisen und Aufenthalte" },
-		"travels": {"register_name":"Reiseregister", "key_singular": "travel", "label_plural": "Reisen" },
-		"orgs": {"register_name":"Organisationsregister", "key_singular": "org", "label_plural": "Organisationen" },
-		"bibls": {"register_name":"Bibliografieregister", "key_singular": "bibl", "label_plural": "Bibliografie" },
-		"keywords": {"register_name":"Schlagwortregister", "key_singular": "keyword", "label_plural": "Schlagwörter" }
+		"people": {
+			"register_name": "Personenregister",
+			"key_singular": "person",
+			"label_plural": "Personen",
+			"attributes": {
+				"name": { "label": "Name" },
+				"firstname": { "label": "Vorname" },
+				"lastname": { "label": "Nachname" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"dateBirth": { "label": "Geburtsjahr" },
+				"dateDeath": { "label": "Todesjahr" },
+				"type": { "label": "Personenkategorie" },
+				"orgId": { "label": "Verknüpfte Organisation" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		},
+		"places": {
+			"register_name": "Ortsregister",
+			"key_singular": "place",
+			"label_plural": "Orte",
+			"attributes": {
+				"name": { "label": "Name" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"geoNamesID": { "label": "GND-Nummer" },
+				"geoNamesLink": { "label": "Geonames Link" },
+				"type": { "label": "Ortskategorie" },
+				"coords": { "label": "Koordinaten" },
+				"country": { "label": "Land" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		},
+		"events": {
+			"register_name": "Register der Reisen und Aufenthalte",
+			"key_singular": "event",
+			"label_plural": "Reisen und Aufenthalte",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Ortskategorie" },
+				"date": { "label": "Datum" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		},
+		"orgs": {
+			"register_name": "Organisationsregister",
+			"key_singular": "org",
+			"label_plural": "Organisationen",
+			"attributes": {
+				"name": { "label": "Name" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"type": { "label": "Organisationskategorie" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		},
+		"bibls": {
+			"register_name": "Bibliografieregister",
+			"key_singular": "bibl",
+			"label_plural": "Bibliografie",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Dokumentkategorie" },
+				"authorId": { "label": "Autor:in" },
+				"pubDate": { "label": "Veröffentlichungsdatum" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		},
+		"keywords": {
+			"register_name": "Schlagwortregister",
+			"key_singular": "keyword",
+			"label_plural": "Schlagwörter",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Dokumentkategorie" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			}
+		}
 	}
 }
