@@ -17,7 +17,46 @@
 		return acc;
 	}, []);
 
+	function getAllKeys(reg) {
+		const keysList = [];
+
+		// Iterate over each property in the reg object
+		Object.keys(reg).forEach((type) => {
+			// Check if the property is an object
+			if (typeof reg[type] === 'object' && reg[type] !== null) {
+				Object.keys(reg[type]).forEach((item) => {
+					if (typeof reg[type][item] === 'object' && reg[type][item] !== null) {
+						// Iterate over the keys in the nested object
+						Object.keys(reg[type][item]).forEach((key) => {
+							keysList.push(key);
+						});
+					}
+				});
+			}
+		});
+
+		return keysList;
+	}
+	console.log(getAllKeys(reg));
+
 	let openRegisters: TEntityTypes[] = $state(nonEmptyRegTypes);
+
+	// Collect all regKeys in the register that are linked to the document
+	let regEntries = $derived.by(() => {
+		const regEntries = {};
+
+		Object.keys(reg).forEach((regType) => {
+			regEntries[regType] = [];
+
+			Object.entries(reg[regType]).forEach(([key, regEntry]) => {
+				if (regEntry?.docs?.includes(docId)) {
+					regEntries[regType].push(key);
+				}
+			});
+		});
+		return regEntries;
+	});
+	$inspect(regEntries);
 </script>
 
 <div class="h-full">
@@ -35,7 +74,7 @@
 					>
 						<span>
 							{dictReg[regType].label_plural}
-							<span class="font-normal">({meta[docId]?.entities[regType]?.length})</span>
+							<span class="font-normal">({regEntries[regType]?.length})</span>
 						</span>
 						<Accordion.ItemIndicator class="group">
 							<span class="hidden group-data-[state=open]:block"
@@ -48,14 +87,14 @@
 					</Accordion.ItemTrigger>
 				</h1>
 				<Accordion.ItemContent class="m-0 p-0">
-					{#each meta[docId]?.entities[regType] as entry (entry)}
+					{#each regEntries[regType] as entry (entry)}
 						<div class="py-3 pl-10 hover:bg-surface-50-950">
 							<h2 class="h6">{reg[regType][entry].name}</h2>
 							<a
 								class="text-blue-500 underline"
-								href={resolve(`/edition/register#${entry}`)}
+								href={resolve(`/edition/register/${entry}`)}
 								target="_blank"
-								rel="noopener noreferrer">Go to Register</a
+								rel="noopener noreferrer">Registereintrag öffnen</a
 							>
 						</div>
 					{/each}
