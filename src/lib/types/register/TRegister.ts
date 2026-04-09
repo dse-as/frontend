@@ -33,6 +33,9 @@ export type TOrgsTypes = string; //! restrict to subset later
 export type TBiblsTypes = string; //! restrict to subset later
 export type TKeywordsTypes = string; //! restrict to subset later
 
+// All Register Keys
+export type TRegKeys = TPlacesKeys | TPeopleKeys | TEventsKeys | TKeywordsKeys | TOrgsKeys | TBiblsKeys;
+
 // Register
 export type TRegister = {
 	meta: {
@@ -96,6 +99,7 @@ export type TRegister = {
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				gndNumber?: string; // optional
+				note?: string; // optional
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
@@ -104,6 +108,7 @@ export type TRegister = {
 				name: string;
 				type: TKeywordsTypes;
 				gndNumber?: string; // optional
+				note?: string; // optional
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
