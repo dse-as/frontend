@@ -22,19 +22,6 @@
 						HOVER: 'zoomin_hover.svg',
 						DOWN: 'zoomin_pressed.svg'
 					},
-					next: {
-						REST: 'next_rest.svg',
-						GROUP: 'next_grouphover.svg',
-
-						HOVER: 'next_hover.svg',
-						DOWN: 'next_pressed.svg'
-					},
-					previous: {
-						REST: 'previous_rest.svg',
-						GROUP: 'previous_grouphover.svg',
-						HOVER: 'previous_hover.svg',
-						DOWN: 'previous_pressed.svg'
-					},
 					fullpage: {
 						REST: 'fullpage_rest.svg',
 						GROUP: 'fullpage_grouphover.svg',
@@ -64,15 +51,10 @@
 						GROUP: 'rotateright_grouphover.svg',
 						HOVER: 'rotateright_hover.svg',
 						DOWN: 'rotateright_pressed.svg'
-					},
-					flip: {
-						REST: 'flip_rest.svg',
-						GROUP: 'flip_grouphover.svg',
-						HOVER: 'flip_hover.svg',
-						DOWN: 'flip_pressed.svg'
 					}
 				},
 				showNavigator: true,
+				showRotationControl: true,
 				sequenceMode: false,
 				crossOriginPolicy: 'Anonymous'
 			});
