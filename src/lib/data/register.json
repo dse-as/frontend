@@ -25213,8 +25213,9 @@
 			"VKTJ5RJ7": {
 				"name": "Ferien vom Ich",
 				"type": null,
-				"authorId": "",
-				"pubDate": ""
+				"authorId": "person_0002",
+				"pubDate": "",
+				"docs": ["smallform_0231"]
 			},
 			"6FW9GPED": {
 				"name": "Verfilmung",
