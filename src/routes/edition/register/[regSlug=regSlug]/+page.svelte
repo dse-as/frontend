@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { register as reg } from '$lib/data/register.json';
-	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import RegContent from './RegContent.svelte';
 	import RegList from './RegList.svelte';
 	import { findKeyBySlug } from '$lib/functions/findKeyBySlug';
@@ -48,11 +47,12 @@
 		<RegList isMultiColumn={true} regType={regSlug} />
 	</div>
 {:else}
-	<div class="mt-10 grid h-full w-full grid-cols-[auto_1fr]">
+	<div class="absolute mt-10 grid h-full w-full grid-cols-[auto_1fr] overflow-y-auto">
 		<RegList isMultiColumn={false} {regType} {regSlug} />
 		<RegContent
 			{regType}
-			regItem={{ ...reg[regType]?.[regSlug], key: regSlug }}
+			attributes={reg[regType]?.[regSlug]}
+			regId={regSlug}
 			metadata={data.meta}
 		/>
 	</div>

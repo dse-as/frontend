@@ -11,7 +11,7 @@
 	let isOverview2 = $derived(Object.keys(reg).includes(regSlug));
 	let regType = $derived(isOverview2 ? regSlug : findKeyBySlug(reg, regSlug));
 
-	const regButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'];
+	const regIdsForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'];
 </script>
 
 <!-- Navigation -->
@@ -46,16 +46,17 @@
 				: 'h-full w-full gap-2 p-2'
 		]}
 	>
-		{#each regButtons as rb (rb)}
+		{#each regIdsForButtons as regId (regId)}
 			<a
 				class={[
-					'my-btn-round hover:text-red-500',
-					isOverview1 ? 'border-2 text-2xl ' : 'border text-sm'
+					'my-btn-round hover:bg-surface-200-800!',
+					isOverview1 ? 'border-2 text-2xl' : 'border text-sm',
+					regType === regId && 'my-btn-active'
 				]}
-				href={`/edition/register/${rb}`}
+				href={`/edition/register/${regId}`}
 				animate:flip={{ delay: 200 }}
 			>
-				{dictReg[rb]?.label_plural}
+				{dictReg[regId]?.label_plural}
 			</a>
 		{/each}
 	</nav>
