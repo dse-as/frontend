@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, tick, type Component } from 'svelte';
-	import { handleMarkClick } from '$lib/functions/handleMarkClick';
+	import { handleMarkClick } from '$lib/functions/interactive_edendum/handleMarkClick';
 	import { handleMarkendClick } from '$lib/functions/handleMarkendClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	import { unselectMarks } from '$lib/functions/unselectMarks';
