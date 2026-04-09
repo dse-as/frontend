@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { handleNoteClick } from '$lib/functions/handleNoteClick';
+	import { handleNoteClick } from '$lib/functions/interactive_edendum/handleNoteClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	let { annot, docId } = $props();
 

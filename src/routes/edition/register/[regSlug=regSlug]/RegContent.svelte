@@ -8,7 +8,7 @@
 
 	let { metadata, regType, attributes, regId } = $props();
 
-	import { printDateRange, printBirthRange } from '$lib/functions/dateFunctions';
+	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 </script>
 
 <div class="h-full w-full overflow-y-auto p-20 pt-16">
