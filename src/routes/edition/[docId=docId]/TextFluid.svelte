@@ -69,46 +69,48 @@
 	}
 
 	function setupFacsimile(el) {
-		let setupComplete = $state(false);
-		$effect(() => {
-			if (!setupComplete) return; // guard to only run once
-			// initial collect
-			collectPagebreaks(el);
+		// initial collect
+		collectPagebreaks(el);
 
-			// reacts to layout / wrapping changes
-			resizeObserver = new ResizeObserver(() => {
-				updatePagebreakPositions();
-			});
-			resizeObserver.observe(el);
-
-			// reacts to DOM/text changes
-			mutationObserver = new MutationObserver(() => {
-				collectPagebreaks(el);
-			});
-			mutationObserver.observe(el, {
-				childList: true,
-				subtree: true,
-				characterData: true
-			});
-
-			// fallback for viewport changes
-			window.addEventListener('resize', updatePagebreakPositions);
-
-			// fonts can shift layout after load
-			if (document.fonts) {
-				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
-			}
-			setupComplete = true;
+		// reacts to layout / wrapping changes
+		resizeObserver = new ResizeObserver(() => {
+			updatePagebreakPositions();
 		});
+		resizeObserver.observe(el);
+
+		// reacts to DOM/text changes
+		mutationObserver = new MutationObserver(() => {
+			collectPagebreaks(el);
+		});
+		mutationObserver.observe(el, {
+			childList: true,
+			subtree: true,
+			characterData: true
+		});
+
+		// fallback for viewport changes
+		window.addEventListener('resize', updatePagebreakPositions);
+
+		// fonts can shift layout after load
+		if (document.fonts) {
+			document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
+		}
+
+		return () => {
+			resizeObserver?.disconnect();
+			mutationObserver?.disconnect();
+			window.removeEventListener('resize', updatePagebreakPositions);
+			if (document.fonts) {
+				document.fonts.removeEventListener('loadingdone', updatePagebreakPositions);
+			}
+		};
 	}
 
 	function setupListeners(el) {
-		let setupComplete = $state(false);
-		$effect(() => {
-			if (!setupComplete) return; // guard to only run once
-			el.addEventListener('click', handleDocumentClick);
-			setupComplete = true;
-		});
+		el.addEventListener('click', handleDocumentClick);
+		return () => {
+			el.removeEventListener('click', handleDocumentClick);
+		};
 	}
 
 	function openDFpage(pagenum: number) {
