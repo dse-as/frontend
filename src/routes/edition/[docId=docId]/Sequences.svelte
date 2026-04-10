@@ -145,16 +145,18 @@
 			}
 		}
 		// Cycle through blocks using keyboard
+		const handlers = new Map<HTMLElement, (ev: Event) => void>();
 		blocks.forEach((block) => {
-			block.addEventListener('keydown', (ev) => {
-				handleKeyDown(ev, block);
-			});
+			const handler = (ev: Event) => handleKeyDown(ev, block);
+			handlers.set(block, handler);
+			block.addEventListener('keydown', handler);
 		});
 
 		// Clean-up
 		return () => {
 			blocks.forEach((block) => {
-				block.removeEventListener('keydown', handleKeyDown);
+				const handler = handlers.get(block);
+				if (handler) block.removeEventListener('keydown', handler);
 			});
 		};
 	}

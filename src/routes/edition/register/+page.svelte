@@ -97,11 +97,7 @@
 		</a>
 		{@const author = reg.people?.[item.authorId]}
 		<p>
-			{#if author?.firstname}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{:else}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{/if}
+			<a href={`#${item.authorId}`}>By {author?.firstname ?? ''} {author?.lastname ?? ''}</a>
 			{#if item.pubDate}
 				<span>({item.pubDate})</span>
 			{/if}
