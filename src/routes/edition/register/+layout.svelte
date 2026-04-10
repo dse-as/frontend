@@ -1,21 +1,19 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { register as reg } from '$lib/data/register.json';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
-	let { children } = $props();
-	import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug';
+	let { data, children } = $props();
 	import { flip } from 'svelte/animate';
-	let regSlug = $derived(page.params.regSlug);
-	let isOverview1 = $derived(!regSlug ? true : false);
-	let isOverview2 = $derived(Object.keys(reg).includes(regSlug));
-	let regType = $derived(isOverview2 ? regSlug : findKeyBySlug(reg, regSlug));
 
 	const regIdsForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'];
+
+	// Locally used datasets
+	// - data.regView
+	// - data.regSlug
+	// - data.regType
 </script>
 
 <!-- Navigation -->
-{#if regSlug}
+{#if data.regSlug}
 	{@render nav()}
 {/if}
 
@@ -24,17 +22,17 @@
 <h1
 	class={[
 		'absolute transition-all duration-400',
-		isOverview1
+		data.regView === 'regView1'
 			? 'top-45 left-0 w-full text-center h1'
-			: isOverview2
+			: data.regView === 'regView2'
 				? 'top-45 left-0 w-1 pl-10  text-center h1 whitespace-nowrap'
 				: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 	]}
 >
-	{isOverview1 ? 'Register' : dictReg[regType]?.register_name}
+	{data.regView === 'regView1' ? 'Register' : dictReg[data.regType]?.register_name}
 </h1>
 <!-- Navigation for  -->
-{#if isOverview1}
+{#if data.regView === 'regView1'}
 	{@render nav()}
 {/if}
 
@@ -42,7 +40,7 @@
 	<nav
 		class={[
 			'flex transition-all duration-200',
-			isOverview1
+			data.regView === 'regView1'
 				? 'mx-auto mt-50 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
 				: 'h-full w-full gap-2'
 		]}
@@ -51,8 +49,8 @@
 			<a
 				class={[
 					'my-btn-round hover:bg-surface-200-800!',
-					isOverview1 ? 'border-2 text-2xl' : 'border text-sm',
-					regType === regId && 'my-btn-active'
+					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
+					data.regType === regId && 'my-btn-active'
 				]}
 				href={`/edition/register/${regId}`}
 				animate:flip={{ delay: 200 }}

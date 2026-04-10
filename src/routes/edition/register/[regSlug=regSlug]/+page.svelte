@@ -1,18 +1,15 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { register as reg } from '$lib/data/register.json';
 	import RegContent from './RegContent.svelte';
 	import RegList from './RegList.svelte';
-	import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
 	import { onMount } from 'svelte';
 
-	let regSlug: string = $derived(page.params.regSlug);
-	const firstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
-
-	let regType: string | null = $derived(findKeyBySlug(reg, regSlug));
-	// const secondOrderKeys = [regType].flatMap((key) => Object.keys(reg[key]) as Array<string>);
-
 	let { data } = $props();
+	// Locally used datasets
+	// - data.meta
+	// - data.regView
+	// - data.regSlug
+	// - data.regType
+	// - data.regAttributes
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position
@@ -45,28 +42,30 @@
 		}
 	});
 
+	//! FIX: This is a workaround to pass the same *absolute* value to RegList and RegContent
+	// Ideally the height would be relative (e.g. h-full).
+	// However, this will make overflow its flex content (i.e. the list and linked items).
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
 </script>
 
-{#if firstOrderKeys.includes(regSlug)}
+{#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-60 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={regSlug} bind:groupByCat />
+		<RegList isMultiColumn={true} regType={data.regSlug} regItem={null} bind:groupByCat />
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<RegList
 			isMultiColumn={false}
-			{regType}
-			{regSlug}
+			regType={data.regType}
+			regItem={data.regSlug}
 			{cheatPageHeightInRegSingleColView}
 			bind:groupByCat
 		/>
 		<RegContent
-			{regType}
-			attributes={reg[regType]?.[regSlug]}
-			regId={regSlug}
+			regType={data.regType}
+			regAttributes={data.regAttributes}
 			metadata={data.meta}
 			{cheatPageHeightInRegSingleColView}
 		/>

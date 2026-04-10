@@ -1,12 +1,16 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
+	//! IMPROVE: It would be nice to drop the import of reg and move everything to the server load function.
+	// To do so, each regAttribute has to be parsed for orgId and personId in the load function.
 	import { register as reg } from '$lib/data/register.json';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
-	import { resolve } from '$app/paths';
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
-	let { metadata, regType, attributes, regId, cheatPageHeightInRegSingleColView = '' } = $props();
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
+
+	let { metadata, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
@@ -37,7 +41,9 @@
 				<tbody>
 					<tr>
 						<td class="w-80 px-4 py-2 font-bold">{dictReg[regType].attributes[attKey]?.label}:</td>
-						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, attributes[attKey])}</td>
+						<td class="px-4 py-2 text-left"
+							>{@render MetadataValue(attKey, regAttributes[attKey])}</td
+						>
 					</tr>
 				</tbody>
 			{/if}
@@ -115,50 +121,50 @@
 	<!-- MetadataTable (by Type) -->
 	{#if regType === 'people'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
-			{attributes.name}
-			{printBirthRange(attributes.dateBirth, attributes.dateDeath)}
+			{regAttributes.name}
+			{printBirthRange(regAttributes.dateBirth, regAttributes.dateDeath)}
 		</h1>
 		{@render MetadataTable([
 			'lastname',
 			'firstname',
-			attributes.nameVariants.length && 'nameVariants', // only show when existing
+			regAttributes.nameVariants.length && 'nameVariants', // only show when existing
 			'type',
 			'gndNumber',
 			'orgId',
 			'note'
 		])}
 	{:else if regType === 'places'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{attributes.name}</h1>
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
-			attributes.nameVariants.length && 'nameVariants',
-			attributes.gndNumber && 'gndNumber',
-			attributes.geoNamesLink && 'geoNamesLink',
+			regAttributes.nameVariants.length && 'nameVariants',
+			regAttributes.gndNumber && 'gndNumber',
+			regAttributes.geoNamesLink && 'geoNamesLink',
 			'coords',
-			attributes.country && 'country',
+			regAttributes.country && 'country',
 			'note'
 		])}
 	{:else if regType === 'orgs'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{attributes.name}</h1>
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
-			attributes.nameVariants.length && 'nameVariants',
-			attributes.gndNumber && 'gndNumber',
+			regAttributes.nameVariants.length && 'nameVariants',
+			regAttributes.gndNumber && 'gndNumber',
 			'note'
 		])}
 	{:else if regType === 'keywords'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{attributes.name}</h1>
-		{@render MetadataTable(['type', attributes.gndNumber && 'gndNumber', 'note'])}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+		{@render MetadataTable(['type', regAttributes.gndNumber && 'gndNumber', 'note'])}
 	{:else if regType === 'events'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{attributes.name}</h1>
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable(['date', 'note'])}
 	{:else if regType === 'bibls'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{attributes.name}</h1>
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
 			'authorId',
 			'pubDate',
-			attributes.gndNumber && 'gndNumber',
+			regAttributes.gndNumber && 'gndNumber',
 			'note'
 		])}
 	{/if}
@@ -169,11 +175,11 @@
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
 			Korrespondenz mit Annemarie Schwarzenbach
 		</h2>
-		{@render LinkedItemsContainer(reg[regType][regId]?.docs)}
+		{@render LinkedItemsContainer(regAttributes?.docs)}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Weitere Dokumente</h2>
-		{@render LinkedItemsContainer(reg[regType][regId]?.docs)}
+		{@render LinkedItemsContainer(regAttributes?.docs)}
 	{:else}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verlinkte Dokumente</h2>
-		<div class="min-h-[40vh]">{@render LinkedItemsContainer(reg[regType][regId]?.docs)}</div>
+		<div class="min-h-[40vh]">{@render LinkedItemsContainer(regAttributes?.docs)}</div>
 	{/if}
 </div>

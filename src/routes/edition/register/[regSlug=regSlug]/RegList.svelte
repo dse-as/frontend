@@ -1,16 +1,18 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
+
 	import { register as reg } from '$lib/data/register.json';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
-	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
-	import { goto } from '$app/navigation';
-	import { slugify } from '$lib/functions/ease_of_use/slugify';
+
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
+	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
+	import { slugify } from '$lib/functions/ease_of_use/slugify';
 
 	let {
 		isMultiColumn,
 		regType,
-		regSlug = null,
+		regItem = null,
 		cheatPageHeightInRegSingleColView = '',
 		groupByCat = $bindable(false)
 	} = $props();
@@ -32,7 +34,7 @@
 		].sort()
 	);
 
-	// Variables for Alphabet and autoCatLabels
+	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
 	let sortVariableKeyForAlphabet = $derived(
 		regType === 'people' ? 'lastname' : regType === 'events' ? sortBy : 'name'
@@ -42,7 +44,7 @@
 		[
 			...new Set(
 				Object.values(reg[regType]).map((el) => {
-					// Remove special-chars out of the Alphabet/autoCatLabels
+					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
 					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
 				})
 			)
@@ -65,17 +67,17 @@
 	}
 
 	$effect(() => {
-		if (regSlug) scrollToItem(regSlug);
+		if (regItem) scrollToItem(regItem);
 	});
 </script>
 
 <!-- Snippet for Register Items -->
-{#snippet regItem(item)}
+{#snippet regListItem(item)}
 	<a
 		id={item.key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && item.key === regSlug && 'bg-surface-100-900 font-bold'
+			!isMultiColumn && item.key === regItem && 'bg-surface-100-900 font-bold'
 		]}
 		href={item.key}
 	>
@@ -220,7 +222,7 @@
 			{#each allTypeKeys as typeKey (typeKey)}
 				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label || typeKey || '?')}
 				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
-					{@render regItem(item)}
+					{@render regListItem(item)}
 				{/each}
 			{/each}
 		{:else if regType}
@@ -234,7 +236,7 @@
 					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=first)` -->
 					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}
 				{/if}
-				{@render regItem(item)}
+				{@render regListItem(item)}
 			{/each}
 		{/if}
 	</div>
