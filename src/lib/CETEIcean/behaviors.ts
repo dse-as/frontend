@@ -11,6 +11,7 @@ export const behaviors = (dom) => {
 				let link = dom.createElement('a');
 				link.setAttribute('id', 'src' + id);
 				link.setAttribute('href', '#' + id);
+				link.dataset.noteId = this.noteIndex;
 				link.innerHTML = this.noteIndex;
 				let content = dom.createElement('sup');
 				content.appendChild(link);

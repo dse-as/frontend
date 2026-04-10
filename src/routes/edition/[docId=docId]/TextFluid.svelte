@@ -124,7 +124,6 @@
 	const c = new CETEI();
 
 	const setupCustomElements = () => {
-		// add behaviours here
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
@@ -154,10 +153,9 @@
 		class="max-w-none"
 		{@attach setupFacsimile}
 		{@attach setupListeners}
+		{@attach setupCustomElements}
 	>
-		<div {@attach setupCustomElements}>
-			{@html ceteiData.serialized}
-		</div>
+		{@html ceteiData.serialized}
 	</main>
 </div>
 

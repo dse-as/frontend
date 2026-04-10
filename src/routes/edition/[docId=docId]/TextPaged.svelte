@@ -1,20 +1,23 @@
 <script lang="ts">
-	import type { Component } from 'svelte';
+	import CETEI from 'CETEIcean';
+	import { behaviors } from '$lib/CETEIcean/behaviors';
 
-	let { docId, currentPage } = $props();
-	let HtmlContent: Component | null = $state(null);
+	let { docId, currentPage, ceteiData } = $props();
+	const c = new CETEI();
 
-	(async () => {
-		if (docId) {
-			HtmlContent = (await import(`$lib/data/texts/text-${docId}.svelte`)).default;
-		}
-	})();
+	const setupCustomElements = () => {
+		c.addBehaviors(behaviors(document));
+		c.processPage();
+	};
 </script>
 
-<div data-dom="containerMaintext" data-textflow="paged" class="overflow-y-auto p-10">
-	{#if HtmlContent}
-		<HtmlContent />
-	{/if}
+<div
+	data-dom="containerMaintext"
+	data-textflow="paged"
+	class="overflow-y-auto p-10"
+	{@attach setupCustomElements}
+>
+	{@html ceteiData.serialized}
 </div>
 
 <style>
