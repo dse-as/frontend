@@ -4,10 +4,8 @@
 	let { ceteiData, docId } = $props();
 
 	let notesHtml = $derived.by(() => {
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(ceteiData.serialized, 'text/html');
-		const ol = doc.querySelector('ol.notes');
-		return ol ? ol.innerHTML : '';
+		const match = ceteiData.serialized.match(/<ol class="notes">(.*?)<\/ol>/s);
+		return match ? match[1] : '';
 	});
 </script>
 
