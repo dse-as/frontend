@@ -37,7 +37,6 @@
 
 		return keysList;
 	}
-	console.log(getAllKeys(reg));
 
 	let openRegisters: TEntityTypes[] = $state(nonEmptyRegTypes);
 
@@ -56,7 +55,6 @@
 		});
 		return regEntries;
 	});
-	$inspect(regEntries);
 </script>
 
 <div class="h-full">

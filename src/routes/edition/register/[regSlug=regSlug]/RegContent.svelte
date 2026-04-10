@@ -4,7 +4,6 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
 	import { resolve } from '$app/paths';
-	// import { TRegister, TRegKeys, TEntityTypes } from '$lib/types/register/TRegister';
 
 	let { metadata, regType, attributes, regId } = $props();
 
