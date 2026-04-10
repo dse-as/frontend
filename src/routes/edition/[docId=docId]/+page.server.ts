@@ -1,10 +1,11 @@
 import processTEI from './processTEI';
+import type { ProcessedTEI } from './processTEI';
 export const prerender = true;
 
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
-	async function loadText(params) {
+	async function loadText(params: { docId: string }): Promise<ProcessedTEI> {
 		const defaultBody = {
 			serialized: `
 	<?xml version="1.0" encoding="UTF-8"?>

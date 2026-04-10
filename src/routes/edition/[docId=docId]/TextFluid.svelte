@@ -57,10 +57,10 @@
 
 	// ---------------------------------------------
 	// Click handlers
-	function handleDocumentClick(ev) {
-		if (ev.target.closest('[data-type="mark"]')) {
+	function handleDocumentClick(ev: MouseEvent) {
+		if ((ev.target as HTMLElement).closest('[data-type="mark"]')) {
 			handleMarkClick(ev);
-		} else if (ev.target.closest('[data-type="markend"]')) {
+		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
 			handleMarkendClick(ev);
 		} else if (selectedNote.id) {
 			unselectMarks();
@@ -68,7 +68,7 @@
 		}
 	}
 
-	function setupFacsimile(el) {
+	function setupFacsimile(el: HTMLElement) {
 		// initial collect
 		collectPagebreaks(el);
 

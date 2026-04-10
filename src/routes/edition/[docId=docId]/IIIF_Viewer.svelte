@@ -1,16 +1,16 @@
-<script module>
+<script module lang="ts">
 	import { assets } from '$app/paths';
-	let OpenSeadragon;
+	let OpenSeadragon: any;
 </script>
 
-<script>
+<script lang="ts">
 	const uuid = crypto.randomUUID();
-	let viewer;
+	let viewer: any;
 
-	let { iiif_url } = $props();
+	let { iiif_url }: { iiif_url: string } = $props();
 
-	const generateViewer = (node, manifest) => {
-		let observer;
+	const generateViewer = (node: HTMLElement, manifest: string) => {
+		let observer: ResizeObserver;
 		const createViewer = () => {
 			viewer = new OpenSeadragon.Viewer({
 				id: node.id,
@@ -38,7 +38,7 @@
 		}
 
 		return {
-			update(iiif) {
+			update(iiif: string) {
 				if (!viewer) return;
 				viewer.open($state.snapshot(iiif));
 			},

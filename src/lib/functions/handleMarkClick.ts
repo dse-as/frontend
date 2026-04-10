@@ -3,12 +3,12 @@ import { selectNote } from './selectNote';
 import { scrollToNote } from './scrollToNote';
 import { selectedNote } from '$lib/globals/state/ui.svelte';
 
-export function handleMarkClick(ev) {
-	let ids = [];
+export function handleMarkClick(ev: MouseEvent) {
+	let ids: string[] = [];
 	try {
-		ids = JSON.parse(ev.target.dataset.noteids);
+		ids = JSON.parse((ev.target as HTMLElement).dataset.noteids!);
 	} catch (error) {
-		ids = [ev.target.dataset.noteids];
+		ids = [(ev.target as HTMLElement).dataset.noteids!];
 	}
 
 	switch (ids.length) {
