@@ -4,7 +4,7 @@ export const prerender = true;
 
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, fetch }) => {
 	async function loadText(params: { docId: string }): Promise<ProcessedTEI> {
 		const defaultBody = {
 			serialized: `
