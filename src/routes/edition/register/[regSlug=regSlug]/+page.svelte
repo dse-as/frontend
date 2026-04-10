@@ -21,6 +21,10 @@
 		// Force the window to scroll vertically to 0
 		window.scrollTo(scrollX, 0);
 	}
+
+	// Boolean for listGrouping (must survive re-mounting of RegList component)
+	let groupByCat = $state(false);
+
 	onMount(() => {
 		preventVerticalScroll(); // Call when component mounts
 
@@ -40,20 +44,31 @@
 			}
 		}
 	});
+
+	const cheatPageHeightInRegSingleColView = 'height:85vh;';
 </script>
 
 {#if firstOrderKeys.includes(regSlug)}
-	<div class="absolute top-50 left-0 h-full w-full px-5">
-		<RegList isMultiColumn={true} regType={regSlug} />
+	<!-- Overview with Multi-Column List -->
+	<div class="absolute top-60 left-0 w-full px-10">
+		<RegList isMultiColumn={true} regType={regSlug} bind:groupByCat />
 	</div>
 {:else}
-	<div class="absolute mt-10 grid h-full w-full grid-cols-[auto_1fr] overflow-y-auto">
-		<RegList isMultiColumn={false} {regType} {regSlug} />
+	<!-- Detail View with Single-Column List and Content -->
+	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
+		<RegList
+			isMultiColumn={false}
+			{regType}
+			{regSlug}
+			{cheatPageHeightInRegSingleColView}
+			bind:groupByCat
+		/>
 		<RegContent
 			{regType}
 			attributes={reg[regType]?.[regSlug]}
 			regId={regSlug}
 			metadata={data.meta}
+			{cheatPageHeightInRegSingleColView}
 		/>
 	</div>
 {/if}

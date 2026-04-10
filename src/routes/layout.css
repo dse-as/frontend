@@ -26,5 +26,5 @@ a {
 	@apply w-max cursor-pointer rounded-full border bg-surface-50-950 px-4 py-1 text-center hover:bg-surface-100-900 hover:text-surface-950-50;
 }
 .my-btn-active {
-	@apply cursor-default bg-primary-500/15! text-primary-950-50! hover:bg-primary-500/15! hover:text-primary-950-50!;
+	@apply bg-primary-500/15! text-primary-950-50! hover:bg-primary-500/15! hover:text-primary-950-50!;
 }
