@@ -31,7 +31,7 @@
 		</Tabs.Content>
 
 		<Tabs.Content value="comments" class="h-full overflow-hidden">
-			<Annotations {meta} {annot} {docId} />
+			<Annotations {meta} {ceteiData} {docId} />
 		</Tabs.Content>
 	</Tabs>
 </div>
