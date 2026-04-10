@@ -15,6 +15,10 @@
 	let containerTEI: HTMLElement;
 	let { meta, ceteiData, docId } = $props();
 
+	let serializedWithoutNotes = $derived(
+		ceteiData.serialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
+	);
+
 	// ---------------------------------------------
 	// Thumbnails
 	type TItem = {
@@ -155,7 +159,7 @@
 		{@attach setupListeners}
 		{@attach setupCustomElements}
 	>
-		{@html ceteiData.serialized}
+		{@html serializedWithoutNotes}
 	</main>
 </div>
 
