@@ -10,6 +10,6 @@ let keys_letters = Object.keys(letters_meta.letters_meta);
 
 let keys_all = [...keys_smallforms, ...keys_longforms, ...keys_letters];
 
-export const match = ((param: string): param is typeof keys_all[number] => {
+export const match = ((param: string): param is (typeof keys_all)[number] => {
 	return keys_all.includes(param);
 }) satisfies ParamMatcher;
