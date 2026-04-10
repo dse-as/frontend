@@ -40,7 +40,7 @@ export type TLetters_meta = {
 				title_short: string;
 				label: string;
 				editor_workflow: 'ez_ttf_of';
-				year: 1925;
+				year: string;
 				pubPosthumOnly: boolean;
 				pubPlace: string;
 				signature: string;
