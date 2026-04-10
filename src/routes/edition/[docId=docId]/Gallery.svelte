@@ -16,7 +16,7 @@
 	let { metadata, docId, pagenum } = $props();
 
 	// Textzeugen
-	const textzeugen = metadata[docId]?.metadata.textzeugen_nonedited || [];
+	const textzeugen = $derived(metadata[docId]?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
