@@ -5,8 +5,6 @@
 	let topicData = $derived(
 		Object.values(data.seqAll.topics).find((item) => item.url_slug === data.slug)
 	);
-	console.log(data.seqAll.topics);
-	$inspect(topicData?.preamble);
 </script>
 
 <h1 class="h1">{topicData?.preamble}</h1>
