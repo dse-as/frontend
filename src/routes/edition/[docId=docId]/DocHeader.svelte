@@ -13,11 +13,13 @@
 	import type { Component } from 'svelte';
 	let GlobalComment: Component | null = $state(null);
 	let globalCommentId = $derived(annot[docId]?.globCommId);
-	(async () => {
+	$effect(() => {
 		if (docId && globalCommentId) {
-			GlobalComment = (await import(`$lib/data/global_comments/${globalCommentId}.svelte`)).default;
+			import(`$lib/data/global_comments/${globalCommentId}.svelte`).then(
+				(mod) => (GlobalComment = mod.default)
+			);
 		}
-	})();
+	});
 </script>
 
 {#if metadata[docId]}

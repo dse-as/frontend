@@ -3,10 +3,12 @@
 	import TextPaged from './TextPaged.svelte';
 
 	let { meta, ceteiData, annot, docId, currentPage } = $props();
-	let urls = meta[docId].manuscript.iiif_urls;
+	let urls = $derived(meta[docId]?.manuscript?.iiif_urls ?? []);
 </script>
 
 <div data-fassung="DF" class="grid h-full grid-cols-1 overflow-hidden md:grid-cols-2">
-	<IIIF_Viewer iiif_url={urls[0]} />
+	{#if urls.length}
+		<IIIF_Viewer iiif_url={urls[0]} />
+	{/if}
 	<TextPaged {docId} {currentPage} />
 </div>

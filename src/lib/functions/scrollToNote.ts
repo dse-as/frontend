@@ -1,11 +1,14 @@
 export function scrollToNote(id: string) {
 	const elContainer = document.querySelector('[data-dom=containerAnnotations]');
-	const elNoteRef = document.querySelector(`[data-dom=annotationBox][data-noteid=${id}]`);
+	const elNoteRef = document.querySelector<HTMLElement>(
+		`[data-dom=annotationBox][data-noteid=${id}]`
+	);
 
+	if (!elContainer || !elNoteRef) return;
 	// Scroll to note
-	elContainer?.scrollTo({
+	elContainer.scrollTo({
 		left: elContainer.scrollLeft,
-		top: elNoteRef?.offsetTop,
+		top: elNoteRef.offsetTop,
 		behavior: 'smooth'
 	});
 }
