@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Component } from 'svelte';
 	import { handleNoteClick } from '$lib/functions/handleNoteClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	let { annot, docId } = $props();
@@ -6,8 +7,6 @@
 	// Load Component with Global Comment
 	let Annotations: Component[] | [] = $state([]);
 	let annotIds = annot[docId]?.annotIds ? annot[docId].annotIds : [];
-
-	import type { Component } from 'svelte';
 	annotIds.forEach((annotId) => {
 		(async () => {
 			if (docId) {

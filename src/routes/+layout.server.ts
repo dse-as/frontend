@@ -12,12 +12,12 @@ import let_annot from '$lib/data/letters_annot.json';
 // Unify over smallforms, longforms, annotations
 //! TODO add types
 // let meta:(TSmallforms_meta | TLongforms_meta | TLetters_meta) = {
-let meta = {
+const meta = {
 	...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
 	...Object.fromEntries(Object.entries(lgf_meta.longforms_meta)),
 	...Object.fromEntries(Object.entries(let_meta.letters_meta))
 };
-let annot = {
+const annot = {
 	...Object.fromEntries(Object.entries(smf_annot.smallforms_annot)),
 	...Object.fromEntries(Object.entries(lgf_annot.longforms_annot)),
 	...Object.fromEntries(Object.entries(let_annot.letters_annot))

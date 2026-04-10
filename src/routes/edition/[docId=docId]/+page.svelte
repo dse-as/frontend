@@ -14,7 +14,7 @@
 
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
-	let pagenum: Number = $derived(Number(page.url.searchParams?.get('page')) || 1);
+	let pagenum: number = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
 		// get mode from URL

@@ -192,7 +192,7 @@
 	</a>
 {/snippet}
 
-{#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: Boolean)}
+{#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: boolean)}
 	{@const itemsBeforeIds = seqMatching[seqType]?.[seqId]?.docsBefore || []}
 	{@const itemsAfterIds = seqMatching[seqType]?.[seqId]?.docsAfter || []}
 	<div class="flex min-h-[140px] grow overflow-x-auto pb-6">
@@ -396,7 +396,7 @@
 		{/if}
 
 		<!-- Other Sequences Selector (Snippet) -->
-		{#snippet otherSeqSelectors(classes: String)}
+		{#snippet otherSeqSelectors(classes: string)}
 			<div
 				role="dialog"
 				tabindex="0"

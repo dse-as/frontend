@@ -1,16 +1,15 @@
 <script lang="ts">
+	import type { Component } from 'svelte';
+	import register from '$lib/data/register.json';
+	import dict_register from '$lib/dictionaries/dict_register.json';
+	import { resolve } from '$app/paths';
+
 	let { metadata, annot, docId } = $props();
 	let isExpandedBox1 = $state(false);
 	let isExpandedBox2 = $state(false);
 
-	import register from '$lib/data/register.json';
-	import dict_register from '$lib/dictionaries/dict_register.json';
-	import { resolve } from '$app/paths';
 	const reg = register.register;
 	const dictReg = dict_register.dict_register;
-
-	// Load Component with Global Comment
-	import type { Component } from 'svelte';
 	let GlobalComment: Component | null = $state(null);
 	let globalCommentId = $derived(annot[docId]?.globCommId);
 	$effect(() => {
