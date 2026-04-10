@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
 
-	let { docId, currentPage } = $props();
+	let { docId } = $props();
 	let HtmlContent: Component | null = $state(null);
 
 	(async () => {
@@ -17,7 +17,7 @@
 	{/if}
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

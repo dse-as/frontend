@@ -84,7 +84,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

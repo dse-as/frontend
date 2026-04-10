@@ -130,7 +130,7 @@
 	<h1 class="text-red-500">metadata.{docId} is not defined</h1>
 {/if}
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

@@ -4,7 +4,7 @@
 
 {@render children()}
 
-<style>
+<style lang="postcss">
 	/* Global Styles for the blog */
 	:global(h1) {
 		font-size: xx-large;
