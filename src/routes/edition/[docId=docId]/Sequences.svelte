@@ -9,7 +9,10 @@
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
 
-	let { metadata, docId, pagenum, currentSeq = { type: 'travels', id: 'travel_0015' } } = $props();
+	const seqAllTyped = seqAll as Record<string, Record<string, { url_slug?: string | null; name?: string; preamble?: string; docs: string[] }>>;
+	const dictSeqTyped = dictSeq as Record<string, { key_singular: string; label_plural: string; url_overview: string | null; label_overview: string | null; label_next: string; label_prev: string }>;
+
+	let { metadata, docId, pagenum, currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' } } = $props();
 
 	// Types
 	type TItem = {
@@ -23,8 +26,8 @@
 	};
 
 	// Sequences
-	let seqMatching = $derived(findMatchingSequences(seqAll, docId, []));
-	let seqOther = $derived(findMatchingSequences(seqAll, docId, [currentSeq.id]));
+	let seqMatching = $derived(findMatchingSequences(seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>, docId, []));
+	let seqOther = $derived(findMatchingSequences(seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>, docId, [currentSeq.id]));
 	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.id]);
 	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
 	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
@@ -37,8 +40,8 @@
 	let isHoveredSeqNavPanel = $state(false);
 	let isHoveredSeqLargePanel = $state(false);
 	let isHoveredAlltypes = $state(false);
-	let timeoutIdCloseSeqPanel = $state();
-	let timeoutIdResetActiveType = $state();
+	let timeoutIdCloseSeqPanel: ReturnType<typeof setTimeout> | undefined = $state();
+	let timeoutIdResetActiveType: ReturnType<typeof setTimeout> | undefined = $state();
 
 	// UI-Elements
 	let elSeqMiniPanel: HTMLElement | undefined = $state(undefined);
@@ -67,12 +70,12 @@
 		}
 	}
 
-	function lookupInfo(docId): TItem {
+	function lookupInfo(docId: string): TItem {
 		return {
 			docId: docId,
 			fac: metadata[docId].manuscript.iiif_urls[0],
 			details: {
-				type: 'smallform', //! changethis
+				type: 'textstufen' as TSeqType, //! changethis
 				title: metadata[docId].metadata.title_full,
 				datestring: metadata[docId].metadata.pubDate
 			}
@@ -103,10 +106,11 @@
 		}, delay);
 	}
 
-	function centerCurrentItemInGallery(el) {
+	function centerCurrentItemInGallery(el: HTMLElement) {
 		docId; // force rerun on change of docId
 
-		const container = el.parentNode;
+		const container = el.parentElement;
+		if (!container) return;
 		// Scroll the container to the specified position
 		container.scroll({
 			behavior: 'instant',
@@ -119,17 +123,17 @@
 		});
 	}
 
-	function cycleBlocks(el) {
+	function cycleBlocks(el: HTMLElement) {
 		activeType; // force rerun on change of activeType (since number of blocks depends on type)
 
 		let currentIndex = 0;
-		let blocks: HTMLElement[] = el.querySelectorAll('[data-type=selectable-block]');
+		let blocks: HTMLElement[] = Array.from(el.querySelectorAll('[data-type=selectable-block]'));
 
 		function focusCurrent() {
 			blocks?.[currentIndex]?.focus();
 		}
 
-		function handleKeyDown(ev: Event, block: HTMLElement) {
+		function handleKeyDown(ev: KeyboardEvent, block: HTMLElement) {
 			if (ev.key === 'ArrowDown') {
 				currentIndex = (currentIndex + 1) % blocks.length;
 				focusCurrent();
@@ -145,9 +149,9 @@
 			}
 		}
 		// Cycle through blocks using keyboard
-		const handlers = new Map<HTMLElement, (ev: Event) => void>();
+		const handlers = new Map<HTMLElement, (ev: KeyboardEvent) => void>();
 		blocks.forEach((block) => {
-			const handler = (ev: Event) => handleKeyDown(ev, block);
+			const handler = (ev: KeyboardEvent) => handleKeyDown(ev, block);
 			handlers.set(block, handler);
 			block.addEventListener('keydown', handler);
 		});
@@ -165,7 +169,7 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId, seqId, isCurrentSeqList)}
+{#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
 	{@const itemInfo = lookupInfo(itemId)}
 	<a
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
@@ -253,7 +257,7 @@
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
-				activeType = Object.keys(seqMatching)[0];
+				activeType = Object.keys(seqMatching)[0] as TSeqType;
 			}}>Sequenz wählen...</button
 		>
 	</div>
@@ -274,10 +278,10 @@
 				<h6 class="h6">
 					Sequenz: <a
 						class="hover:underline"
-						href={`${dictSeq[currentSeq.type]?.url_overview}/${seqAll[currentSeq.type][currentSeq.id].url_slug}`}
-						target="_blank"
-						rel="noopener noreferrer"
-						>{seqAll[currentSeq.type][currentSeq.id].preamble}
+					href={`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug}`}
+					target="_blank"
+					rel="noopener noreferrer"
+					>{seqAllTyped[currentSeq.type]?.[currentSeq.id]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -293,7 +297,7 @@
 			>
 				<div class={['flex flex-row items-center gap-2', !prevId && 'text-surface-500']}>
 					<i class="fa-solid fa-chevron-left"></i>
-					<p>{dictSeq[currentSeq.type]?.label_prev}</p>
+					<p>{dictSeqTyped[currentSeq.type]?.label_prev}</p>
 				</div>
 			</a>
 			<button
@@ -342,7 +346,7 @@
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !nextId && 'text-surface-500']}>
-					<p>{dictSeq[currentSeq.type]?.label_next}</p>
+					<p>{dictSeqTyped[currentSeq.type]?.label_next}</p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 			</a>
@@ -411,14 +415,14 @@
 					<button
 						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
-							activeType = seqType;
+							activeType = seqType as TSeqType;
 						}}
 						onclick={() => {
-							activeType = seqType;
+							activeType = seqType as TSeqType;
 							keepPanelOpen = true;
 						}}
 					>
-						{dictSeq[seqType].label_plural}
+						{dictSeqTyped[seqType].label_plural}
 					</button>
 				{/each}
 			</div>
@@ -474,7 +478,7 @@
 					]}
 				>
 					<!-- Groups with other Sequences-->
-					{#each Object.keys(seqOther[activeType]) as seqId}
+					{#each Object.keys(seqOther[activeType!] ?? {}) as seqId}
 						<div
 							class="group flex w-full flex-col gap-5 py-5"
 							tabindex="0"
@@ -483,7 +487,7 @@
 						>
 							<!-- Title with shortcuts -->
 							<div class={['mx-1 flex min-h-18 w-full flex-col items-start px-4 py-1']}>
-								<h6 class="mr-5 h6">{seqAll[activeType][seqId].preamble}</h6>
+							<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqId].preamble}</h6>
 								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 									<div class="flex gap-4">
 										<a
@@ -496,13 +500,13 @@
 											}}
 											>Sequenz auswählen
 										</a>
-										{#if seqAll[activeType][seqId].url_slug}
+										{#if seqAllTyped[activeType!][seqId].url_slug}
 											<a
 												class="h-full underline hover:text-primary-500"
-												href={`${dictSeq[activeType]?.url_overview}/${seqAll[activeType][seqId].url_slug}`}
+												href={`${dictSeqTyped[activeType!]?.url_overview}/${seqAllTyped[activeType!][seqId].url_slug}`}
 												target="_blank"
 												rel="noopener noreferrer"
-												>{dictSeq[activeType]?.label_overview}
+												>{dictSeqTyped[activeType!]?.label_overview}
 											</a>
 										{/if}
 									</div>

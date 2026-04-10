@@ -8,8 +8,8 @@
 	let isExpandedBox1 = $state(false);
 	let isExpandedBox2 = $state(false);
 
-	const reg = register.register;
-	const dictReg = dict_register.dict_register;
+	const reg = register.register as Record<string, Record<string, any>>;
+	const dictReg = dict_register.dict_register as Record<string, { key_singular: string; label_plural: string }>;
 	let GlobalComment: Component | null = $state(null);
 	let globalCommentId = $derived(annot[docId]?.globCommId);
 	$effect(() => {
@@ -38,7 +38,7 @@
 				<div data-dom="global_entities" class="flex flex-wrap gap-2">
 					{#each Object.keys(dictReg) as regType}
 						{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
-						{#each regKeys ? Object.values(regKeys) : [] as regKey}
+						{#each regKeys ? (Object.values(regKeys) as string[]) : [] as regKey}
 							<a
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"

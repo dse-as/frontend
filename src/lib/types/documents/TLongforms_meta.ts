@@ -5,7 +5,7 @@ import { type TPlacesKeys } from '../register/TPlacesKeys';
 import { type TSmallformsKeys } from './TSmallformsKeys';
 import { type TLongformsKeys } from './TLongformsKeys';
 import { type TLettersKeys } from './TLettersKeys';
-import { type TBiblKeys } from '../register/TBiblsKeys';
+import { type TBiblsKeys } from '../register/TBiblsKeys';
 import { type TKeywordsKeys } from '../register/TKeywordsKeys';
 
 export type TdocType =
@@ -57,7 +57,7 @@ export type TLongforms_meta = {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
 					letters?: TLettersKeys[];
-					bibl?: TBiblKeys[];
+					bibl?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
 				maximum: 'keine';
@@ -76,7 +76,7 @@ export type TLongforms_meta = {
 				smallforms?: TSmallformsKeys[];
 				longforms?: TLongformsKeys[];
 				letters?: TLettersKeys[];
-				bibl?: TBiblKeys[];
+				bibl?: TBiblsKeys[];
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import List from '../List.svelte';
 
 	let { data } = $props();
-	let dataset = $derived(data.seqAll.textstufen);
+	let dataset = $derived(data.seqAll.textstufen as Record<string, any>);
 </script>
 
 <h1 class="h1">Serien</h1>

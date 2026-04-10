@@ -1,7 +1,9 @@
 export type DocSequences = {
 	[groupId: string]: {
 		[sequenceId: string]: {
-			name: string;
+			name?: string;
+			preamble?: string;
+			url_slug?: string | null;
 			docs: string[];
 		};
 	};
@@ -10,7 +12,7 @@ export type DocSequences = {
 export type MatchResult = {
 	[groupId: string]: {
 		[sequenceId: string]: {
-			name: string;
+			name?: string;
 			docsBefore: string[];
 			docsAfter: string[];
 		};

@@ -21,6 +21,7 @@
 		el: HTMLElement;
 		facs: string;
 		n: string;
+		page: number;
 		top: number;
 	};
 
@@ -37,6 +38,7 @@
 				el: el,
 				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
 				n: el.getAttribute('n') || '',
+				page: i + 1,
 				top: 0
 			}));
 			updatePagebreakPositions();
@@ -106,7 +108,7 @@
 		};
 	}
 
-	function setupListeners(el) {
+	function setupListeners(el: HTMLElement) {
 		el.addEventListener('click', handleDocumentClick);
 		return () => {
 			el.removeEventListener('click', handleDocumentClick);

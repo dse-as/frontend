@@ -5,9 +5,9 @@
 	let { annot, docId } = $props();
 
 	// Load Component with Global Comment
-	let Annotations: Component[] | [] = $state([]);
-	let annotIds = annot[docId]?.annotIds ? annot[docId].annotIds : [];
-	annotIds.forEach((annotId) => {
+	let Annotations: Component[] = $state([]);
+	let annotIds: string[] = annot[docId]?.annotIds ? annot[docId].annotIds : [];
+	annotIds.forEach((annotId: string) => {
 		(async () => {
 			if (docId) {
 				try {

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import List from '../List.svelte';
 
 	let { data } = $props();
-	let dataset = $derived(data.seqAll.travels);
+	let dataset = $derived(data.seqAll.travels as Record<string, any>);
 </script>
 
 <h1 class="h1">Reisen</h1>
