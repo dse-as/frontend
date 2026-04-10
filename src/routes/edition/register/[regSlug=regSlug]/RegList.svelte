@@ -8,22 +8,21 @@
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
+	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
 
-	let {
-		isMultiColumn,
-		regType,
-		regItem = null,
-		cheatPageHeightInRegSingleColView = '',
-		groupByCat = $bindable(false)
-	} = $props();
+	// Props
+	let { isMultiColumn, regType, regItem = null, cheatPageHeightInRegSingleColView = '' } = $props();
 
 	// States for sorting and grouping
 	let hasGroupControls = $derived(['events', 'orgs', 'people', 'places'].includes(regType));
 	let hasSortControls = $derived(regType === 'events');
 	let hasControls = $derived(hasGroupControls || hasSortControls);
 
-	let sortByManual = $state(regType === 'people' ? 'lastname' : 'name'); // 'name' or 'date' //! FIX: Should not re-run when changing between multi/single column layout
-	let sortBy = $derived(regType === 'events' ? sortByManual : 'name');
+	// Defaults
+	const defaultSortBy = regType === 'people' ? 'lastname' : 'name';
+	uiRegSortBy.id = uiRegSortBy.id ? uiRegSortBy.id : defaultSortBy; // If empty set to default
+	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
+
 	let allTypeKeys = $derived(
 		[
 			...new Set(
@@ -128,12 +127,12 @@
 			{#snippet sortButton(name, sortKey)}
 				<button
 					class={[
-						sortByManual === sortKey
+						uiRegSortBy.id === sortKey
 							? 'pointer-events-none font-bold text-surface-950-50'
 							: 'text-primary-500 underline'
 					]}
 					onclick={() => {
-						sortByManual = sortKey;
+						uiRegSortBy.id = sortKey;
 					}}>{name}</button
 				>
 			{/snippet}
@@ -150,7 +149,10 @@
 {#snippet groupControls()}
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
-			<Switch checked={groupByCat} onCheckedChange={(details) => (groupByCat = details.checked)}>
+			<Switch
+				checked={uiRegGroupByCat.value}
+				onCheckedChange={(details) => (uiRegGroupByCat.value = details.checked)}
+			>
 				<Switch.Control>
 					<Switch.Thumb />
 				</Switch.Control>
@@ -217,7 +219,7 @@
 			</div>
 		{/if}
 
-		{#if hasGroupControls && groupByCat}
+		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
 				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label || typeKey || '?')}
@@ -242,7 +244,7 @@
 	</div>
 
 	<!-- Alphabet Shortcuts -->
-	{#if isMultiColumn && (!hasGroupControls || !groupByCat)}
+	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
 		<!-- Hide the alphabet for regTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
 		<div class="mt-10 flex w-full justify-center gap-2">
 			{#each autoCatLabels as letter (letter)}

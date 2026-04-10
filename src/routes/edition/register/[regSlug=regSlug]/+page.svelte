@@ -19,9 +19,6 @@
 		window.scrollTo(scrollX, 0);
 	}
 
-	// Boolean for listGrouping (must survive re-mounting of RegList component)
-	let groupByCat = $state(false);
-
 	onMount(() => {
 		preventVerticalScroll(); // Call when component mounts
 
@@ -51,7 +48,7 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-60 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={data.regSlug} regItem={null} bind:groupByCat />
+		<RegList isMultiColumn={true} regType={data.regSlug} regItem={null} />
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
@@ -61,7 +58,6 @@
 			regType={data.regType}
 			regItem={data.regSlug}
 			{cheatPageHeightInRegSingleColView}
-			bind:groupByCat
 		/>
 		<RegContent
 			regType={data.regType}
