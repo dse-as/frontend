@@ -65,7 +65,6 @@ tei-note > sup {
 	background-color: #fef08a;
 	transition-property: all;
 	transition-duration: 200ms;
-	background-color: 200ms;
 }
 
 .tei-annotation.active {
