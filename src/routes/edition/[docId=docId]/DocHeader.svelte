@@ -9,7 +9,10 @@
 	let isExpandedBox2 = $state(false);
 
 	const reg = register.register as Record<string, Record<string, any>>;
-	const dictReg = dict_register.dict_register as Record<string, { key_singular: string; label_plural: string }>;
+	const dictReg = dict_register.dict_register as Record<
+		string,
+		{ key_singular: string; label_plural: string }
+	>;
 	let GlobalComment: Component | null = $state(null);
 	let globalCommentId = $derived(annot[docId]?.globCommId);
 	$effect(() => {

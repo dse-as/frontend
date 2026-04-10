@@ -9,7 +9,10 @@
 	let { meta, docId } = $props();
 
 	const reg = register.register as Record<string, Record<string, any>>;
-	const dictReg = dict_register.dict_register as Record<string, { key_singular: string; label_plural: string }>;
+	const dictReg = dict_register.dict_register as Record<
+		string,
+		{ key_singular: string; label_plural: string }
+	>;
 	const regTypes = Object.keys(reg);
 
 	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {

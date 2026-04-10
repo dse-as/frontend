@@ -9,10 +9,28 @@
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
 
-	const seqAllTyped = seqAll as Record<string, Record<string, { url_slug?: string | null; name?: string; preamble?: string; docs: string[] }>>;
-	const dictSeqTyped = dictSeq as Record<string, { key_singular: string; label_plural: string; url_overview: string | null; label_overview: string | null; label_next: string; label_prev: string }>;
+	const seqAllTyped = seqAll as Record<
+		string,
+		Record<string, { url_slug?: string | null; name?: string; preamble?: string; docs: string[] }>
+	>;
+	const dictSeqTyped = dictSeq as Record<
+		string,
+		{
+			key_singular: string;
+			label_plural: string;
+			url_overview: string | null;
+			label_overview: string | null;
+			label_next: string;
+			label_prev: string;
+		}
+	>;
 
-	let { metadata, docId, pagenum, currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' } } = $props();
+	let {
+		metadata,
+		docId,
+		pagenum,
+		currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' }
+	} = $props();
 
 	// Types
 	type TItem = {
@@ -26,8 +44,20 @@
 	};
 
 	// Sequences
-	let seqMatching = $derived(findMatchingSequences(seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>, docId, []));
-	let seqOther = $derived(findMatchingSequences(seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>, docId, [currentSeq.id]));
+	let seqMatching = $derived(
+		findMatchingSequences(
+			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
+			docId,
+			[]
+		)
+	);
+	let seqOther = $derived(
+		findMatchingSequences(
+			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
+			docId,
+			[currentSeq.id]
+		)
+	);
 	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.id]);
 	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
 	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
@@ -278,10 +308,10 @@
 				<h6 class="h6">
 					Sequenz: <a
 						class="hover:underline"
-					href={`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug}`}
-					target="_blank"
-					rel="noopener noreferrer"
-					>{seqAllTyped[currentSeq.type]?.[currentSeq.id]?.preamble}
+						href={`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						>{seqAllTyped[currentSeq.type]?.[currentSeq.id]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -487,7 +517,7 @@
 						>
 							<!-- Title with shortcuts -->
 							<div class={['mx-1 flex min-h-18 w-full flex-col items-start px-4 py-1']}>
-							<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqId].preamble}</h6>
+								<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqId].preamble}</h6>
 								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 									<div class="flex gap-4">
 										<a

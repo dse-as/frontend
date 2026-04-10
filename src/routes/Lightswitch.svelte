@@ -23,7 +23,12 @@
 	});
 </script>
 
-<Switch class="**:text-lg" name="mode" checked={isDark} onCheckedChange={() => handleToggleLightswitch()}>
+<Switch
+	class="**:text-lg"
+	name="mode"
+	checked={isDark}
+	onCheckedChange={() => handleToggleLightswitch()}
+>
 	<Switch.Control class="bg-surface-200 data-[state=checked]:bg-secondary-300">
 		<Switch.Thumb>
 			<Switch.Context>
