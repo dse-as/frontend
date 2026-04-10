@@ -127,7 +127,7 @@
 	// Load text
 	const c = new CETEI();
 
-	const setupCustomElements = () => {
+	const setupCustomElements = (el: HTMLElement) => {
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};

@@ -30,3 +30,29 @@ export const behaviors = (dom) => {
 		}
 	};
 };
+
+/** Run after processPage() to wrap nodes between anchors and their matching notes */
+export function wrapAnnotations(container: HTMLElement) {
+	const notes = container.querySelectorAll('tei-note[targetend]');
+	notes.forEach((note) => {
+		const targetId = note.getAttribute('targetend');
+		if (!targetId) return;
+		const anchor = container.querySelector(`tei-anchor[id="${targetId}"]`);
+		if (!anchor) return;
+
+		// Collect sibling nodes between anchor and note
+		let current = anchor.nextSibling;
+		const nodes: Node[] = [];
+		while (current && current !== note) {
+			nodes.push(current);
+			current = current.nextSibling;
+		}
+		if (!nodes.length) return;
+		const wrapper = container.ownerDocument.createElement('span');
+		wrapper.classList.add('tei-annotation');
+		wrapper.dataset.noteTarget = targetId;
+
+		nodes[0].parentNode!.insertBefore(wrapper, nodes[0]);
+		nodes.forEach((n) => wrapper.appendChild(n));
+	});
+}
