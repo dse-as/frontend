@@ -7,7 +7,7 @@
 	type TVisibleTab = 'register' | 'comments';
 	let visibleTab: TVisibleTab = $state('register');
 
-	let { meta, ceteiData, annot, docId, currentPage } = $props();
+	let { meta, ceteiData, annot, docId } = $props();
 </script>
 
 <div
@@ -31,7 +31,7 @@
 		</Tabs.Content>
 
 		<Tabs.Content value="comments" class="h-full overflow-hidden">
-			<Annotations {meta} {annot} {docId} />
+			<Annotations {annot} {docId} />
 		</Tabs.Content>
 	</Tabs>
 </div>

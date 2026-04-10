@@ -70,16 +70,9 @@
 				ceteiData={data.ceteiData}
 				annot={data.annot}
 				docId={page.params.docId}
-				currentPage={pagenum}
 			/>
 		{:else if dflf === 'DF'}
-			<DF
-				meta={data.meta}
-				ceteiData={data.ceteiData}
-				annot={data.annot}
-				docId={page.params.docId}
-				currentPage={pagenum}
-			/>
+			<DF meta={data.meta} docId={page.params.docId} />
 		{/if}
 	</div>
 </div>
