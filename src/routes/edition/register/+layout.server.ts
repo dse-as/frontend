@@ -19,7 +19,8 @@ export const load: LayoutServerLoad = ({ params, url }) => {
 			: // e.g. /edition/register/[person_0001]
 				'regView3';
 
-	let regType: string | null | undefined = regView === 'regView2' ? regSlug : findKeyBySlug(reg, regSlug);
+	let regType: string | null | undefined =
+		regView === 'regView2' ? regSlug : findKeyBySlug(reg, regSlug);
 
 	return { reg, regSlug, regType, allfirstOrderKeys, regView };
 };

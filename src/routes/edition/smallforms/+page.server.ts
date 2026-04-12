@@ -21,8 +21,8 @@ export const prerender = true;
 // };
 
 export const load: PageServerLoad = async ({ parent, params, url }) => {
-    const { regType, regSlug } = await parent();
+	const { regType, regSlug } = await parent();
 
-    const regAttributes = reg?.[regType]?.[regSlug]
+	const regAttributes = reg?.[regType]?.[regSlug];
 	return { regAttributes };
 };

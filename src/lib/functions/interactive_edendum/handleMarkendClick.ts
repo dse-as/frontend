@@ -4,13 +4,13 @@ import { scrollToNote } from './scrollToNote';
 import { selectedNote } from '$lib/globals/state/ui.svelte';
 
 export function handleMarkendClick(ev) {
-	let id = "";
+	let id = '';
 	try {
 		id = ev.target.dataset.noteid;
 	} catch (error) {
 		id = ev.target.dataset.noteid;
 	}
-	if (id){
+	if (id) {
 		selectedNote.id = id;
 		selectMark(id);
 		selectNote(id);

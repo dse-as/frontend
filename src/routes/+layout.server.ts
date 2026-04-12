@@ -17,14 +17,14 @@ import let_annot from '$lib/data/letters_annot.json';
 //! TODO add types
 // let meta:(TSmallforms_meta | TLongforms_meta | TLetters_meta) = {
 let meta = {
-    ...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
-    ...Object.fromEntries(Object.entries(lgf_meta.longforms_meta)),
-    ...Object.fromEntries(Object.entries(let_meta.letters_meta))
+	...Object.fromEntries(Object.entries(smf_meta.smallforms_meta)),
+	...Object.fromEntries(Object.entries(lgf_meta.longforms_meta)),
+	...Object.fromEntries(Object.entries(let_meta.letters_meta))
 };
 let annot = {
-    ...Object.fromEntries(Object.entries(smf_annot.smallforms_annot)),
-    ...Object.fromEntries(Object.entries(lgf_annot.longforms_annot)),
-    ...Object.fromEntries(Object.entries(let_annot.letters_annot))
+	...Object.fromEntries(Object.entries(smf_annot.smallforms_annot)),
+	...Object.fromEntries(Object.entries(lgf_annot.longforms_annot)),
+	...Object.fromEntries(Object.entries(let_annot.letters_annot))
 };
 
 // Modify protoHTML
@@ -36,5 +36,5 @@ let annot = {
 
 // Export unified meta, text and annot
 export const load: LayoutServerLoad = async () => {
-    return { meta, smf_meta, lgf_meta, let_meta, annot};
+	return { meta, smf_meta, lgf_meta, let_meta, annot };
 };

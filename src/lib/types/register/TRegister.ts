@@ -34,7 +34,13 @@ export type TBiblsTypes = string; //! restrict to subset later
 export type TKeywordsTypes = string; //! restrict to subset later
 
 // All Register Keys
-export type TRegKeys = TPlacesKeys | TPeopleKeys | TEventsKeys | TKeywordsKeys | TOrgsKeys | TBiblsKeys;
+export type TRegKeys =
+	| TPlacesKeys
+	| TPeopleKeys
+	| TEventsKeys
+	| TKeywordsKeys
+	| TOrgsKeys
+	| TBiblsKeys;
 
 // Register
 export type TRegister = {

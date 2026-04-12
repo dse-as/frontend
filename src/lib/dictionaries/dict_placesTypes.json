@@ -2,13 +2,19 @@
 	"meta": {},
 	"dict_placestypes": {
 		"placestype_001": { "label_plural": "Siedlungen", "label_singular": "Siedlung" },
-		"placestype_002": { "label_plural": "Ruinen/Ausgrabungen", "label_singular": "Ruine/Ausgrabung" },
+		"placestype_002": {
+			"label_plural": "Ruinen/Ausgrabungen",
+			"label_singular": "Ruine/Ausgrabung"
+		},
 		"placestype_003": { "label_plural": "Berge", "label_singular": "Berg" },
 		"placestype_004": { "label_plural": "Länder", "label_singular": "Land" },
 		"placestype_005": { "label_plural": "Regionen", "label_singular": "Region" },
 		"placestype_006": { "label_plural": "Gewässer", "label_singular": "Gewässer" },
 		"placestype_007": { "label_plural": "Gebirge", "label_singular": "Gebirge" },
-		"placestype_008": { "label_plural": "Militärische Anlagen", "label_singular": "Militärische Anlage" },
+		"placestype_008": {
+			"label_plural": "Militärische Anlagen",
+			"label_singular": "Militärische Anlage"
+		},
 		"placestype_009": { "label_plural": "Wüsten", "label_singular": "Wüste" },
 		"placestype_010": { "label_plural": "Pärke", "label_singular": "Park" },
 		"placestype_011": { "label_plural": "Monumente", "label_singular": "Monument" },

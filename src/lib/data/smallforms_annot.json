@@ -8,15 +8,15 @@
 	"smallforms_annot": {
 		"smallform_0002": {
 			"globCommId": null,
-			"annotIds":[]
+			"annotIds": []
 		},
 		"smallform_0115": {
 			"globCommId": null,
-			"annotIds":[]
+			"annotIds": []
 		},
 		"smallform_0231": {
 			"globCommId": "globcom-smallform_0231",
-			"annotIds":[
+			"annotIds": [
 				"note-smallform_0231-001",
 				"note-smallform_0231-002",
 				"note-smallform_0231-003",
@@ -28,7 +28,7 @@
 		},
 		"smallform_0614": {
 			"globCommId": null,
-			"annotIds":[]
+			"annotIds": []
 		}
 	}
 }

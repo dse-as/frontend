@@ -1,4 +1,4 @@
-export function formatDateToGerman(isoDate:string) {
+export function formatDateToGerman(isoDate: string) {
 	const date = new Date(isoDate);
 
 	// Check if the date is valid
@@ -24,14 +24,14 @@ export function formatDateToGerman(isoDate:string) {
 	}
 }
 
-export function printBirthRange(dateBirth:string, dateDeath:string) {
+export function printBirthRange(dateBirth: string, dateDeath: string) {
 	if (dateBirth && dateDeath) return `${dateBirth}–${dateDeath}`;
 	else if (dateBirth) return `*${dateBirth}`;
 	else if (dateDeath) return `?–${dateDeath}`;
 	else return '';
 }
 
-export function printDateRange(from:string, to:string) {
+export function printDateRange(from: string, to: string) {
 	if (from && to && from === to) return `${formatDateToGerman(from)}`;
 	else if (from && to) return `${formatDateToGerman(from)} – ${formatDateToGerman(to)}`;
 	else if (from) return `${formatDateToGerman(from)} – ?`;

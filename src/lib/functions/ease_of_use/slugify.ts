@@ -11,7 +11,7 @@ export function slugify(string, include = { slash: false }) {
 		è: 'e',
 		ë: 'e',
 		ß: 'ss',
-		ç: 'c',
+		ç: 'c'
 	};
 
 	// Custom replacements

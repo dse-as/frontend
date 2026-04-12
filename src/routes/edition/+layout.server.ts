@@ -17,16 +17,17 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 
 	// What registerPage are we looking at?
 	// let edView = !edSlug
-	let edView = edSlug === 'edition'
-		? //edition
-			'edView1'
-		: edSlug && Object.keys(dictDocPicker).includes(edSlug)
-			? // e.g. /edition/[smallforms]
-				'edView2'
-			: Object.keys(meta).includes(edSlug)
-				? // e.g. /edition/[smallform_0001]
-					'edView3'
-				: '';
+	let edView =
+		edSlug === 'edition'
+			? //edition
+				'edView1'
+			: edSlug && Object.keys(dictDocPicker).includes(edSlug)
+				? // e.g. /edition/[smallforms]
+					'edView2'
+				: Object.keys(meta).includes(edSlug)
+					? // e.g. /edition/[smallform_0001]
+						'edView3'
+					: '';
 
 	let edType: string | null | undefined = edView === 'edView2' ? edSlug : findEdTypeByDocId(edSlug);
 
