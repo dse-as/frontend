@@ -73,48 +73,57 @@
 	}
 
 	function setupFacsimile(el: HTMLElement) {
-		// initial collect
-		collectPagebreaks(el);
+		let setupComplete = $state(false);
+		$effect(() => {
+			if (!setupComplete) return; // guard to only run once
 
-		// reacts to layout / wrapping changes
-		resizeObserver = new ResizeObserver(() => {
-			updatePagebreakPositions();
-		});
-		resizeObserver.observe(el);
-
-		// reacts to DOM/text changes
-		mutationObserver = new MutationObserver(() => {
+			// initial collect
 			collectPagebreaks(el);
-		});
-		mutationObserver.observe(el, {
-			childList: true,
-			subtree: true,
-			characterData: true
-		});
 
-		// fallback for viewport changes
-		window.addEventListener('resize', updatePagebreakPositions);
+			// reacts to layout / wrapping changes
+			resizeObserver = new ResizeObserver(() => {
+				updatePagebreakPositions();
+			});
+			resizeObserver.observe(el);
 
-		// fonts can shift layout after load
-		if (document.fonts) {
-			document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
-		}
+			// reacts to DOM/text changes
+			mutationObserver = new MutationObserver(() => {
+				collectPagebreaks(el);
+			});
+			mutationObserver.observe(el, {
+				childList: true,
+				subtree: true,
+				characterData: true
+			});
 
-		return () => {
-			resizeObserver?.disconnect();
-			mutationObserver?.disconnect();
-			window.removeEventListener('resize', updatePagebreakPositions);
+			// fallback for viewport changes
+			window.addEventListener('resize', updatePagebreakPositions);
+
+			// fonts can shift layout after load
 			if (document.fonts) {
-				document.fonts.removeEventListener('loadingdone', updatePagebreakPositions);
+				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
-		};
+			setupComplete = true;
+
+			// Clean-up
+			return () => {
+				resizeObserver?.disconnect();
+				mutationObserver?.disconnect();
+				window.removeEventListener('resize', updatePagebreakPositions);
+				if (document.fonts) {
+					document.fonts.removeEventListener('loadingdone', updatePagebreakPositions);
+				}
+			};
+		});
 	}
 
 	function setupListeners(el: HTMLElement) {
-		el.addEventListener('click', handleDocumentClick);
-		return () => {
-			el.removeEventListener('click', handleDocumentClick);
-		};
+		let setupComplete = $state(false);
+		$effect(() => {
+			if (!setupComplete) return; // guard to only run once
+			el.addEventListener('click', handleDocumentClick);
+			setupComplete = true;
+		});
 	}
 
 	function openDFpage(pagenum: number) {
