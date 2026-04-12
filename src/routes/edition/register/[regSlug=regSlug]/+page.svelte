@@ -4,12 +4,6 @@
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
-	// Locally used datasets
-	// - data.meta
-	// - data.regView
-	// - data.regSlug
-	// - data.regType
-	// - data.regAttributes
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position

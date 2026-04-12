@@ -1,10 +1,10 @@
 export const prerender = true;
 
-import type { ServerLoad } from '@sveltejs/kit';
+import type { LayoutServerLoad } from './$types';
 import { register as reg } from '$lib/data/register.json';
 import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
 
-export const load: ServerLoad = ({ params, url }) => {
+export const load: LayoutServerLoad = ({ params, url }) => {
 	const regSlug: string | undefined = params.regSlug;
 	// const regType: string | null = findKeyBySlug(reg, regSlug);
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;

@@ -19,7 +19,7 @@
 	let hasControls = $derived(hasGroupControls || hasSortControls);
 
 	// Defaults
-	const defaultSortBy = regType === 'people' ? 'lastname' : 'name';
+	const defaultSortBy = regType === 'people' ? 'lastname' : 'name'; // won't work if not also set 'name' in ui.svelte.ts (//! Fix this)
 	uiRegSortBy.id = uiRegSortBy.id ? uiRegSortBy.id : defaultSortBy; // If empty set to default
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
 
