@@ -39,7 +39,7 @@
 		regType === 'people' ? 'lastname' : regType === 'events' ? sortBy : 'name'
 	);
 	let currentAutoCatLabel: string | null = null;
-	let autoCatLabels = $derived(() => {
+	let autoCatLabels = $derived(
 		[
 			...new Set(
 				Object.values(reg[regType]).map((el) => {
@@ -47,8 +47,8 @@
 					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
 				})
 			)
-		].sort();
-	});
+		].sort()
+	);
 
 	// Scroll to the specific item
 	let regListScrollContainer: HTMLElement | undefined = $state();
