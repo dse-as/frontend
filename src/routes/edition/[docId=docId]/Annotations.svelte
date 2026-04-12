@@ -1,59 +1,34 @@
 <script lang="ts">
-	import type { Component } from 'svelte';
-	import { handleNoteClick } from '$lib/functions/handleNoteClick';
-	import { selectedNote } from '$lib/globals/state/ui.svelte';
-	let { annot, docId } = $props();
+	let { ceteiData } = $props();
 
-	// Load Component with Global Comment
-	let Annotations: Component[] = $state([]);
-	let annotIds: string[] = annot[docId]?.annotIds ? annot[docId].annotIds : [];
-	annotIds.forEach((annotId: string) => {
-		(async () => {
-			if (docId) {
-				try {
-					Annotations.push((await import(`$lib/data/annotations/${annotId}.svelte`)).default);
-				} catch (error) {}
-			}
-		})();
+	let notesHtml = $derived.by(() => {
+		const match = ceteiData.serialized.match(/<ol class="notes">(.*?)<\/ol>/s);
+		return match ? match[1] : '';
 	});
 </script>
 
 <div data-dom="containerAnnotations" class="flex h-full flex-col gap-2 overflow-y-auto">
-	{#each Annotations as Annotation, idx}
-		{@const noteid = annotIds[idx]}
-		<div
-			data-dom="annotationBox"
-			data-noteid={noteid}
-			class="p-2"
-			onclick={() => {
-				handleNoteClick(noteid);
-				selectedNote.id = noteid;
-			}}
-			onkeydown={(e) => (e.key === 'Enter' || e.key === ' ' ? handleNoteClick(noteid) : null)}
-			role="button"
-			tabindex="0"
-			aria-pressed={selectedNote.id === noteid}
-			aria-label="Focus note"
-		>
-			<span>{idx + 1}</span>
-			<Annotation />
-		</div>
-	{/each}
+	<ol class="notes">
+		{@html notesHtml}
+	</ol>
 </div>
 
 <style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	[data-dom='annotationBox'] {
+	.notes {
 		:global([data-type='entity']) {
 			@apply underline decoration-2;
 		}
 		:global(p) {
 			@apply my-4;
 		}
-		:global(&.highlighted) {
+		:global(li.highlighted) {
 			@apply bg-green-300;
+		}
+		:global(a) {
+			@apply mr-5 underline;
 		}
 	}
 </style>

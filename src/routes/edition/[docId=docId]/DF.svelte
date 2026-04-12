@@ -2,7 +2,7 @@
 	import IIIF_Viewer from './IIIF_Viewer.svelte';
 	import TextPaged from './TextPaged.svelte';
 
-	let { meta, docId } = $props();
+	let { meta, ceteiData, docId } = $props();
 	let urls = $derived(meta[docId]?.manuscript?.iiif_urls ?? []);
 </script>
 
@@ -10,5 +10,5 @@
 	{#if urls.length}
 		<IIIF_Viewer iiif_url={urls[0]} />
 	{/if}
-	<TextPaged {docId} />
+	<TextPaged {ceteiData} />
 </div>

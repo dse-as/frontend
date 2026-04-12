@@ -40,7 +40,7 @@
 	/>
 
 	<!-- Metadata -->
-	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
+	<DocHeader metadata={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
 
 	<!-- Thumbnail Gallery -->
 	<Gallery metadata={data.meta} docId={page.params.docId} {pagenum} />
@@ -68,11 +68,14 @@
 			<LF
 				meta={data.meta}
 				ceteiData={data.ceteiData}
-				annot={data.annot}
 				docId={page.params.docId}
 			/>
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} docId={page.params.docId} />
+			<DF
+				meta={data.meta}
+				ceteiData={data.ceteiData}
+				docId={page.params.docId}
+			/>
 		{/if}
 	</div>
 </div>
