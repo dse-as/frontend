@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { handleMarkClick } from '$lib/functions/handleMarkClick';
-	import { handleMarkendClick } from '$lib/functions/handleMarkendClick';
+	import { handleMarkClick } from '$lib/functions/interactive_edendum/handleMarkClick';
+	import { handleMarkendClick } from '$lib/functions/interactive_edendum/handleMarkendClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
-	import { unselectMarks } from '$lib/functions/unselectMarks';
-	import { unselectNotes } from '$lib/functions/unselectNotes';
-	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import { unselectMarks } from '$lib/functions/interactive_edendum/unselectMarks';
+	import { unselectNotes } from '$lib/functions/interactive_edendum/unselectNotes';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import CETEI from 'CETEIcean';

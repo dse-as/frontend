@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { handleNoteClick } from '$lib/functions/interactive_edendum/handleNoteClick';
+	import { selectedNote } from '$lib/globals/state/ui.svelte';
 	let { ceteiData } = $props();
 
 	let notesHtml = $derived.by(() => {

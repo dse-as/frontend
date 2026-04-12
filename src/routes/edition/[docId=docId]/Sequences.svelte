@@ -1,13 +1,14 @@
 <script lang="ts">
-	import IIIF_Thumb from './IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
 	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
-	import { updateSearchParams } from '$lib/functions/updateSearchParams';
+	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
+	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -100,18 +101,6 @@
 		}
 	}
 
-	function lookupInfo(docId: string): TItem {
-		return {
-			docId: docId,
-			fac: metadata[docId].manuscript.iiif_urls[0],
-			details: {
-				type: 'textstufen' as TSeqType, //! changethis
-				title: metadata[docId].metadata.title_full,
-				datestring: metadata[docId].metadata.pubDate
-			}
-		};
-	}
-
 	function openSeqPanel() {
 		isOpenSeqPanel = true;
 		setTimeout(() => {
@@ -200,7 +189,7 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
-	{@const itemInfo = lookupInfo(itemId)}
+	{@const itemInfo = lookupDocInfo(itemId, metadata)}
 	<a
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
 		class={[
@@ -391,7 +380,7 @@
 		tabindex="0"
 		bind:this={elSeqLargePanel}
 		class={[
-			'absolute z-90002 flex h-max w-8/10 min-w-200 flex-col rounded-xl border-2 transition-all duration-200',
+			'absolute z-90002 flex h-max w-8/10 flex-col rounded-xl border-2 transition-all duration-200',
 			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-500 pt-25'
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
@@ -402,7 +391,7 @@
 	>
 		<!-- Slider to Keep panel open -->
 		<Switch
-			class="absolute top-6 right-6"
+			class="absolute top-6 right-6 z-90009"
 			checked={keepPanelOpen}
 			onCheckedChange={(details) => (keepPanelOpen = details.checked)}
 		>

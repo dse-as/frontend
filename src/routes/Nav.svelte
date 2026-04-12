@@ -15,7 +15,8 @@
 		{ name: 'Netzwerke', path: resolve('/networks') },
 		{ name: 'Themen', path: resolve('/topics') },
 		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
-		{ name: 'Suche', path: resolve('/search') }
+		{ name: 'Suche', path: resolve('/search') },
+		{ name: '(Sequenzen)', path: resolve('/sequences') }
 	];
 </script>
 

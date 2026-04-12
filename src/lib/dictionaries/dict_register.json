@@ -1,15 +1,254 @@
 {
 	"meta": {},
 	"dict_register": {
-		"people": { "key_singular": "person", "label_plural": "Personen" },
-		"places": { "key_singular": "place", "label_plural": "Orte" },
-		"events": { "key_singular": "event", "label_plural": "Ereignisse" },
-		"travels": { "key_singular": "travel", "label_plural": "Reisen" },
-		"orgs": { "key_singular": "org", "label_plural": "Organisationen" },
-		"smallforms": { "key_singular": "smallform", "label_plural": "Kleine Formen" },
-		"longforms": { "key_singular": "longform", "label_plural": "Lange Formen" },
-		"letters": { "key_singular": "letter", "label_plural": "Briefe" },
-		"bibls": { "key_singular": "bibl", "label_plural": "Bibliografie" },
-		"keywords": { "key_singular": "keyword", "label_plural": "Schlagwörter" }
+		"people": {
+			"register_name": "Personenregister",
+			"key_singular": "person",
+			"label_plural": "Personen",
+			"attributes": {
+				"name": { "label": "Name" },
+				"firstname": { "label": "Vorname" },
+				"lastname": { "label": "Nachname" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"dateBirth": { "label": "Geburtsjahr" },
+				"dateDeath": { "label": "Todesjahr" },
+				"type": { "label": "Personenkategorie" },
+				"orgId": { "label": "Verknüpfte Organisation" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {
+				"Autor:in": { "label": "Autor:in", "slug": null },
+				"Autor:in, Bekannte:r": { "label": "Autor:in, Bekannte:r", "slug": null },
+				"Autor:in, Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Autor:in, Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Bekannte:r": { "label": "Bekannte:r", "slug": null },
+				"Bekannte:r, Archäolog:in": { "label": "Bekannte:r, Archäolog:in", "slug": null },
+				"Bekannte:r, Autor:in": { "label": "Bekannte:r, Autor:in", "slug": null },
+				"Bekannte:r, Bergsteiger:in": { "label": "Bekannte:r, Bergsteiger:in", "slug": null },
+				"Bekannte:r, Künstler:in": { "label": "Bekannte:r, Künstler:in", "slug": null },
+				"Bekannte:r, Mitarbeiter:in Medium": {
+					"label": "Bekannte:r, Mitarbeiter:in Medium",
+					"slug": null
+				},
+				"Bekannte:r, Musiker:in": { "label": "Bekannte:r, Musiker:in", "slug": null },
+				"Bekannte:r, Redakteur:in": { "label": "Bekannte:r, Redakteur:in", "slug": null },
+				"Bekannte:r, Schauspieler:in": { "label": "Bekannte:r, Schauspieler:in", "slug": null },
+				"Bekannte:r, Schauspieler:in, Autor:in": {
+					"label": "Bekannte:r, Schauspieler:in, Autor:in ",
+					"slug": null
+				},
+				"Bekannte:r, Verleger:in": { "label": "Bekannte:r, Verleger:in", "slug": null },
+				"Biblische Figur": { "label": "Biblische Figur", "slug": null },
+				"Familienangehörige:r": { "label": "Familienangehörige:r", "slug": null },
+				"Fotograf:in": { "label": "Fotograf:in", "slug": null },
+				"Fotograf:in, Bekannte:r": { "label": "Fotograf:in, Bekannte:r", "slug": null },
+				"Fotograf:in, Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Fotograf:in, Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Fotograf:in, Regisseur:in": { "label": "Fotograf:in, Regisseur:in", "slug": null },
+				"Freund:in": { "label": "Freund:in", "slug": null },
+				"Freund:in, Autor:in": { "label": "Freund:in, Autor:in", "slug": null },
+				"Freund:in, Familienangehörige:r": {
+					"label": "Freund:in, Familienangehörige:r",
+					"slug": null
+				},
+				"Freund:in, Fotograf:in": { "label": "Freund:in, Fotograf:in", "slug": null },
+				"Freund:in, Künstler:in": { "label": "Freund:in, Künstler:in", "slug": null },
+				"Freund:in, Mitarbeiter:in Medium": {
+					"label": "Freund:in, Mitarbeiter:in Medium",
+					"slug": null
+				},
+				"Freund:in, Schauspieler:in": { "label": "Freund:in, Schauspieler:in", "slug": null },
+				"Freund:in, Schauspieler:in, Musiker:in": {
+					"label": "Freund:in, Schauspieler:in, Musiker:in ",
+					"slug": null
+				},
+				"Freund:in, Verleger:in": { "label": "Freund:in, Verleger:in", "slug": null },
+				"Gottheit": { "label": "Gottheit", "slug": null },
+				"Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Autor:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Autor:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Autor:in, Künstler:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Autor:in, Künstler:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Fotograf:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Fotograf:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Künstler:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Künstler:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Musiker:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Musiker:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Redakteur:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Redakteur:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Regisseur:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Regisseur:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Schauspieler:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Schauspieler:in ",
+					"slug": null
+				},
+				"Historische Person (ohne persönliche Bekanntschaft), Verleger:in": {
+					"label": "Historische Person (ohne persönliche Bekanntschaft), Verleger:in ",
+					"slug": null
+				},
+				"Künstler:in, Fotograf:in": { "label": "Künstler:in, Fotograf:in", "slug": null },
+				"Künstler:in, Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Künstler:in, Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Mitarbeiter:in Medium": { "label": "Mitarbeiter:in Medium", "slug": null },
+				"Musiker:in": { "label": "Musiker:in", "slug": null },
+				"Redakteur:in": { "label": "Redakteur:in", "slug": null },
+				"Regisseur:in": { "label": "Regisseur:in", "slug": null },
+				"Regisseur:in, Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Regisseur:in, Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Regisseur:in, Schauspieler:in": { "label": "Regisseur:in, Schauspieler:in", "slug": null },
+				"Sagengestalt": { "label": "Sagengestalt", "slug": null },
+				"Sagengestalt, Historische Person (ohne persönliche Bekanntschaft)": {
+					"label": "Sagengestalt, Historische Person (ohne persönliche Bekanntschaft) ",
+					"slug": null
+				},
+				"Schauspieler:in": { "label": "Schauspieler:in", "slug": null },
+				"Verleger:in": { "label": "Verleger:in", "slug": null },
+				"Verleger:in, Autor:in": { "label": "Verleger:in, Autor:in", "slug": null },
+				"rassistische Bezeichnung": { "label": "rassistische Bezeichnung", "slug": null }
+			}
+		},
+		"places": {
+			"register_name": "Ortsregister",
+			"key_singular": "place",
+			"label_plural": "Orte",
+			"attributes": {
+				"name": { "label": "Name" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"geoNamesID": { "label": "GND-Nummer" },
+				"geoNamesLink": { "label": "Geonames Link" },
+				"type": { "label": "Ortskategorie" },
+				"coords": { "label": "Koordinaten" },
+				"country": { "label": "Land" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {
+				"Berg": { "label": null },
+				"Bundesstaat oder Kanton": { "label": null },
+				"Gebirge": { "label": null },
+				"Gebäude": { "label": null },
+				"Gewässer": { "label": null },
+				"Gletscher": { "label": null },
+				"Höhle": { "label": null },
+				"Insel": { "label": null },
+				"Land": { "label": null },
+				"Militärische Anlage": { "label": null },
+				"Monument": { "label": null },
+				"Park": { "label": null },
+				"Pass": { "label": null },
+				"Region": { "label": null },
+				"Ruine/Ausgrabung": { "label": null },
+				"Siedlung": { "label": null },
+				"Staudamm": { "label": null },
+				"Strasse": { "label": null },
+				"Wüste": { "label": null }
+			}
+		},
+		"events": {
+			"register_name": "Register der Reisen und Aufenthalte",
+			"key_singular": "event",
+			"label_plural": "Reisen und Aufenthalte",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Ortskategorie" },
+				"date": { "label": "Datum" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {
+				"event": { "label": "Event", "slug": "Event" },
+				"travel": { "label": "Reise", "slug": "Reise" }
+			}
+		},
+		"orgs": {
+			"register_name": "Organisationsregister",
+			"key_singular": "org",
+			"label_plural": "Organisationen",
+			"attributes": {
+				"name": { "label": "Name" },
+				"nameVariants": { "label": "Namensvarianten" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"type": { "label": "Organisationskategorie" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {
+				"Bar/Klub/Lokal": { "label": "Bar/Klub/Lokal", "slug": "Bar_Klub_Lokal" },
+				"Hochschule": { "label": "Hochschule", "slug": "Hochschule" },
+				"Hotel": { "label": "Hotel", "slug": "Hotel" },
+				"Klinik": { "label": "Klinik", "slug": "Klinik" },
+				"Periodikum": { "label": "Periodikum", "slug": "Periodikum" },
+				"Politische org": { "label": "Politische Organisation", "slug": "Politische_Organisation" },
+				"Religiöse org": { "label": "Religiöse Organisation", "slug": "Religiöse_Organisation" },
+				"Sammelband": { "label": "Sammelband", "slug": "Sammelband" },
+				"Schule": { "label": "Schule", "slug": "Schule" },
+				"Theater": { "label": "Theater", "slug": "Theater" },
+				"Verlag": { "label": "Verlag", "slug": "Verlag" },
+				"Wirtschaftliche org": {
+					"label": "Wirtschaftliche Organisation",
+					"slug": "Wirtschaftliche_Organisation"
+				},
+				"Öffentliche Einrichtung": {
+					"label": "Öffentliche Einrichtung",
+					"slug": "Öffentliche Einrichtung"
+				}
+			}
+		},
+		"bibls": {
+			"register_name": "Bibliografieregister",
+			"key_singular": "bibl",
+			"label_plural": "Bibliografie",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Dokumentkategorie" },
+				"authorId": { "label": "Autor:in" },
+				"pubDate": { "label": "Veröffentlichungsdatum" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {}
+		},
+		"keywords": {
+			"register_name": "Schlagwortregister",
+			"key_singular": "keyword",
+			"label_plural": "Schlagwörter",
+			"attributes": {
+				"name": { "label": "Name" },
+				"type": { "label": "Dokumentkategorie" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"note": { "label": "Bemerkungen" },
+				"docs": { "label": "Verknüpfte Dokumente" }
+			},
+			"type_labels": {}
+		}
 	}
 }

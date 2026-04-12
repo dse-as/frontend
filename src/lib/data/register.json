@@ -21562,211 +21562,555 @@
 				"type": "travel",
 				"name": "Venedig 1930",
 				"note": "",
-				"date": { "from": "1930", "to": "1930" }
+				"date": {
+					"from": "1930",
+					"to": "1930"
+				}
 			},
 			"travel_0002": {
 				"type": "travel",
 				"name": "Frankreich (Bandol und Paris) 1931",
 				"note": "",
-				"date": { "from": "1931", "to": "1931" }
+				"date": {
+					"from": "1931",
+					"to": "1931"
+				},
+				"docs": ["smallform_0028"]
 			},
 			"travel_0003": {
 				"type": "travel",
 				"name": "Venedig 1932",
 				"note": "",
-				"date": { "from": "1932", "to": "1932" }
+				"date": {
+					"from": "1932",
+					"to": "1932"
+				}
 			},
 			"travel_0004": {
 				"type": "travel",
 				"name": "Skandinavienreise 1932",
 				"note": "",
-				"date": { "from": "1932-07", "to": "1932-08" }
+				"date": {
+					"from": "1932-07",
+					"to": "1932-08"
+				},
+				"docs": ["letter_0004", "letter_0340"]
 			},
 			"travel_0005": {
 				"type": "travel",
 				"name": "Frankreich (Lavandou) 1933",
 				"note": "",
-				"date": { "from": "1933", "to": "1933" }
+				"date": {
+					"from": "1933",
+					"to": "1933"
+				},
+				"docs": ["letter_0012", "letter_0298", "letter_0335"]
 			},
 			"travel_0006": {
 				"type": "travel",
 				"name": "Spanien 1933",
 				"note": "",
-				"date": { "from": "1933", "to": "1933" }
+				"date": {
+					"from": "1933",
+					"to": "1933"
+				},
+				"docs": ["letter_0014"]
 			},
 			"travel_0007": {
 				"type": "travel",
 				"name": "Iran 1933-34 (\"Erste Persienreise\")",
 				"note": "",
-				"date": { "from": "1933", "to": "1934" }
+				"date": {
+					"from": "1933",
+					"to": "1934"
+				},
+				"docs": [
+					"smallform_0052",
+					"smallform_0055",
+					"smallform_0072",
+					"smallform_0084",
+					"smallform_0087",
+					"smallform_0090",
+					"smallform_0115",
+					"smallform_0146",
+					"smallform_0148",
+					"smallform_0150",
+					"smallform_0154",
+					"smallform_0167",
+					"smallform_0171",
+					"smallform_0193",
+					"smallform_0302",
+					"letter_0020",
+					"letter_0022",
+					"letter_0023",
+					"letter_0024",
+					"letter_0025",
+					"letter_0026",
+					"letter_0027",
+					"letter_0028",
+					"letter_0070",
+					"letter_0071",
+					"letter_0243",
+					"letter_0248",
+					"letter_0252",
+					"letter_0260",
+					"letter_0276",
+					"letter_0277",
+					"letter_0281"
+				]
 			},
 			"travel_0008": {
 				"type": "travel",
 				"name": "Bad Gastein 1934",
 				"note": "",
-				"date": { "from": "1934", "to": "1934" }
+				"date": {
+					"from": "1934",
+					"to": "1934"
+				},
+				"docs": ["letter_0036", "letter_0037", "letter_0272", "letter_0274"]
 			},
 			"travel_0009": {
 				"type": "travel",
 				"name": "Moskau/Iran 1934-35 (\"Zweite Persienreise\")",
 				"note": "",
-				"date": { "from": "1934", "to": "1935" }
+				"date": {
+					"from": "1934",
+					"to": "1935"
+				},
+				"docs": [
+					"smallform_0130",
+					"smallform_0147",
+					"smallform_0149",
+					"smallform_0150",
+					"smallform_0302",
+					"letter_0035",
+					"letter_0039",
+					"letter_0040",
+					"letter_0041",
+					"letter_0042",
+					"letter_0043",
+					"letter_0073",
+					"letter_0249",
+					"letter_0407"
+				]
 			},
 			"travel_0010": {
 				"type": "travel",
 				"name": "Frankreich (Nantes) 1935",
 				"note": "",
-				"date": { "from": "1935", "to": "1935" }
+				"date": {
+					"from": "1935",
+					"to": "1935"
+				}
 			},
 			"travel_0011": {
 				"type": "travel",
 				"name": "Iran 1935 (\"Dritte Persienreise\")",
 				"note": "",
-				"date": { "from": "1935", "to": "1935" }
+				"date": {
+					"from": "1935",
+					"to": "1935"
+				},
+				"docs": [
+					"smallform_0115",
+					"smallform_0151",
+					"smallform_0152",
+					"smallform_0155",
+					"smallform_0157",
+					"smallform_0158",
+					"smallform_0160",
+					"smallform_0161",
+					"smallform_0164",
+					"smallform_0165",
+					"smallform_0166",
+					"smallform_0168",
+					"smallform_0169",
+					"smallform_0170",
+					"smallform_0172",
+					"smallform_0189",
+					"smallform_0193",
+					"letter_0053",
+					"letter_0054",
+					"letter_0075",
+					"letter_0076",
+					"letter_0254",
+					"letter_0255",
+					"letter_0263",
+					"letter_0265",
+					"letter_0270",
+					"letter_0271",
+					"letter_0390"
+				]
 			},
 			"travel_0012": {
 				"type": "travel",
 				"name": "London 1936",
 				"note": "",
-				"date": { "from": "1936", "to": "1936" }
+				"date": {
+					"from": "1936",
+					"to": "1936"
+				}
 			},
 			"travel_0013": {
 				"type": "travel",
 				"name": "Mallorca 1936",
 				"note": "",
-				"date": { "from": "1936", "to": "1936" }
+				"date": {
+					"from": "1936",
+					"to": "1936"
+				},
+				"docs": ["smallform_0173", "smallform_0174", "letter_0078"]
 			},
 			"travel_0014": {
 				"type": "travel",
 				"name": "USA 1936–1937 (\"Erste USA-Reise\")",
 				"note": "",
-				"date": { "from": "1936-08-24", "to": "1937-02-24" }
+				"date": {
+					"from": "1936-08-24",
+					"to": "1937-02-24"
+				},
+				"docs": [
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0177",
+					"smallform_0178",
+					"smallform_0185",
+					"smallform_0186",
+					"smallform_0187",
+					"smallform_0188",
+					"smallform_0190",
+					"smallform_0191",
+					"smallform_0195",
+					"smallform_0197",
+					"smallform_0199",
+					"smallform_0201",
+					"smallform_0205",
+					"smallform_0206",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0211",
+					"smallform_0212",
+					"letter_0080",
+					"letter_0081",
+					"letter_0284",
+					"letter_0292",
+					"letter_0293",
+					"letter_0296",
+					"letter_0370",
+					"letter_0381",
+					"letter_0388"
+				]
 			},
 			"travel_0015": {
 				"type": "travel",
 				"name": "Moskau 1937",
 				"note": "",
-				"date": { "from": "1937-05", "to": "1937-07" }
+				"date": {
+					"from": "1937-05",
+					"to": "1937-07"
+				},
+				"docs": [
+					"smallform_0223",
+					"smallform_0224",
+					"smallform_0225",
+					"smallform_0226",
+					"smallform_0227",
+					"smallform_0229",
+					"smallform_0232",
+					"smallform_0233",
+					"smallform_0270"
+				]
 			},
 			"travel_0016": {
 				"type": "travel",
 				"name": "USA 1937–1938 (\"Zweite USA-Reise\")",
 				"note": "",
-				"date": { "from": "1937-09", "to": "1938-02-12" }
+				"date": {
+					"from": "1937-09",
+					"to": "1938-02-12"
+				},
+				"docs": [
+					"smallform_0242",
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0245",
+					"smallform_0246",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0271",
+					"smallform_0272",
+					"smallform_0274",
+					"smallform_0279",
+					"smallform_0280",
+					"smallform_0281",
+					"smallform_0282",
+					"smallform_0283",
+					"smallform_0284",
+					"smallform_0302",
+					"smallform_0303",
+					"letter_0083",
+					"letter_0084",
+					"letter_0086",
+					"letter_0119",
+					"letter_0256",
+					"letter_0257",
+					"letter_0294",
+					"letter_0355",
+					"letter_0357",
+					"letter_0361",
+					"letter_0365"
+				]
 			},
 			"travel_0017": {
 				"type": "travel",
 				"name": "Österreich 1938",
 				"note": "",
-				"date": { "from": "1938-03-20", "to": "1938-03-21" }
+				"date": {
+					"from": "1938-03-20",
+					"to": "1938-03-21"
+				},
+				"docs": ["smallform_0276"]
 			},
 			"travel_0018": {
 				"type": "travel",
 				"name": "Prag 1938",
 				"note": "",
-				"date": { "from": "1938", "to": "1938" }
+				"date": {
+					"from": "1938",
+					"to": "1938"
+				}
 			},
 			"travel_0019": {
 				"type": "travel",
 				"name": "Afghanistan 1939–1940",
 				"note": "",
-				"date": { "from": "1939", "to": "1940" }
+				"date": {
+					"from": "1939",
+					"to": "1940"
+				},
+				"docs": [
+					"smallform_0310",
+					"smallform_0321",
+					"smallform_0399",
+					"smallform_0420",
+					"smallform_0471",
+					"letter_0261"
+				]
 			},
 			"travel_0020": {
 				"type": "travel",
 				"name": "USA 1940–41 (\"Dritte USA-Reise\")",
 				"note": "",
-				"date": { "from": "1940", "to": "1941" }
+				"date": {
+					"from": "1940",
+					"to": "1941"
+				},
+				"docs": [
+					"smallform_0413",
+					"smallform_0414",
+					"smallform_0416",
+					"smallform_0417",
+					"smallform_0419",
+					"smallform_0420",
+					"smallform_0421",
+					"smallform_0423",
+					"smallform_0426",
+					"smallform_0431",
+					"smallform_0432",
+					"smallform_0435",
+					"smallform_0436",
+					"smallform_0437",
+					"smallform_0438",
+					"smallform_0463",
+					"smallform_0465",
+					"smallform_0467",
+					"smallform_0469",
+					"smallform_0470",
+					"smallform_0471",
+					"smallform_0474",
+					"smallform_0480",
+					"smallform_0484",
+					"smallform_0485",
+					"smallform_0488",
+					"smallform_0494",
+					"letter_0113",
+					"letter_0121",
+					"letter_0241",
+					"letter_0242",
+					"letter_0262",
+					"letter_0264",
+					"letter_0266",
+					"letter_0351",
+					"letter_0360",
+					"letter_0367",
+					"letter_0369"
+				]
 			},
 			"travel_0021": {
 				"type": "travel",
 				"name": "Kongo 1941–42",
 				"note": "",
-				"date": { "from": "1941", "to": "1942" }
+				"date": {
+					"from": "1941",
+					"to": "1942"
+				},
+				"docs": ["smallform_0529", "letter_0186"]
 			},
 			"travel_0022": {
 				"type": "travel",
 				"name": "Marokko 1942",
 				"note": "",
-				"date": { "from": "1942", "to": "1942" }
+				"date": {
+					"from": "1942",
+					"to": "1942"
+				}
 			},
 			"travel_0023": {
 				"type": "travel",
 				"name": "Italien 1930",
 				"note": "",
-				"date": { "from": "1930-02", "to": "1930-02" }
+				"date": {
+					"from": "1930-02",
+					"to": "1930-02"
+				}
 			},
 			"travel_0024": {
 				"type": "travel",
 				"name": "Lissabon 1941",
 				"note": "",
-				"date": { "from": "1941", "to": "1941" }
+				"date": {
+					"from": "1941",
+					"to": "1941"
+				},
+				"docs": ["smallform_0471", "letter_0113", "letter_0351"]
 			},
 			"travel_0025": {
 				"type": "travel",
 				"name": "Lissabon 1942",
 				"note": "",
-				"date": { "from": "1942", "to": "1942" }
+				"date": {
+					"from": "1942",
+					"to": "1942"
+				},
+				"docs": ["letter_0401", "letter_0426", "letter_0428", "letter_0430"]
 			},
 			"event_0001": {
 				"type": "event",
 				"name": "Paris-Aufenthalte 1929",
 				"note": "",
-				"date": { "from": "1929", "to": "1929" }
+				"date": {
+					"from": "1929",
+					"to": "1929"
+				}
 			},
 			"event_0002": {
 				"type": "event",
 				"name": "Berlin-Aufenthalte 1931 – 33",
 				"note": "",
-				"date": { "from": "1931", "to": "1933" }
+				"date": {
+					"from": "1931",
+					"to": "1933"
+				},
+				"docs": ["letter_0003", "letter_0005", "letter_0127", "letter_0253", "letter_0338"]
 			},
 			"event_0003": {
 				"type": "event",
 				"name": "Sils-Aufenthalte 1934 – 1942",
 				"note": "",
-				"date": { "from": "1934", "to": "1942" }
+				"date": {
+					"from": "1934",
+					"to": "1942"
+				},
+				"docs": [
+					"letter_0079",
+					"letter_0080",
+					"letter_0084",
+					"letter_0087",
+					"letter_0119",
+					"letter_0247",
+					"letter_0257",
+					"letter_0292",
+					"letter_0293",
+					"letter_0294",
+					"letter_0295",
+					"letter_0339",
+					"letter_0355",
+					"letter_0377",
+					"letter_0381",
+					"letter_0422"
+				]
 			},
 			"event_0004": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Samaden) Januar – März (?) 1935",
 				"note": "",
-				"date": { "from": "1935-01", "to": "1935-03" }
+				"date": {
+					"from": "1935-01",
+					"to": "1935-03"
+				},
+				"docs": ["letter_0278", "letter_0402", "letter_0442", "letter_0443"]
 			},
 			"event_0005": {
 				"type": "event",
 				"name": "",
 				"note": "",
-				"date": { "from": "", "to": "" }
+				"date": {
+					"from": "",
+					"to": ""
+				},
+				"docs": ["letter_0056", "letter_0258", "letter_0267", "letter_0268"]
 			},
 			"event_0006": {
 				"type": "event",
 				"name": "Klinik-Aufenthalte (Samedan) März – Mai (?) 1938",
 				"note": "",
-				"date": { "from": "1938-03", "to": "1938-05" }
+				"date": {
+					"from": "1938-03",
+					"to": "1938-05"
+				},
+				"docs": ["letter_0085", "letter_0279", "letter_0280", "letter_0377"]
 			},
 			"event_0007": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Kreuzlingen) Juli – August 1938",
 				"note": "",
-				"date": { "from": "1938-07", "to": "1938-08" }
+				"date": {
+					"from": "1938-07",
+					"to": "1938-08"
+				},
+				"docs": ["letter_0282", "letter_0476"]
 			},
 			"event_0008": {
 				"type": "event",
 				"name": "",
 				"note": "",
-				"date": { "from": "", "to": "" }
+				"date": {
+					"from": "",
+					"to": ""
+				},
+				"docs": ["letter_0404"]
 			},
 			"event_0009": {
 				"type": "event",
 				"name": "",
 				"note": "",
-				"date": { "from": "", "to": "" }
+				"date": {
+					"from": "",
+					"to": ""
+				},
+				"docs": ["smallform_0485", "letter_0266"]
 			},
 			"event_0010": {
 				"type": "event",
 				"name": "Klinik-Aufenthalt (Yverdon-les-Bains) 1938 – 1939",
 				"note": "Klinik Bellevue (Vgl. Alexis Schwarzenbach 2008, S. 302)",
-				"date": { "from": "1938-10", "to": "1939-01" }
+				"date": {
+					"from": "1938-10",
+					"to": "1939-01"
+				},
+				"docs": ["letter_0058", "letter_0086", "letter_0244"]
 			}
 		},
 		"orgs": {
@@ -24869,8 +25213,9 @@
 			"VKTJ5RJ7": {
 				"name": "Ferien vom Ich",
 				"type": null,
-				"authorId": "",
-				"pubDate": ""
+				"authorId": "person_0002",
+				"pubDate": "",
+				"docs": ["smallform_0231"]
 			},
 			"6FW9GPED": {
 				"name": "Verfilmung",
@@ -24886,339 +25231,3139 @@
 			}
 		},
 		"keywords": {
-			"4000096-5": { "name": "Aberglaube", "type": "", "gndNumber": "4000096-5" },
-			"4141014-2": { "name": "Abenteuer", "type": "", "gndNumber": "4141014-2" },
-			"4137441-1": { "name": "Abstinenz", "type": "", "gndNumber": "4137441-1" },
-			"4201448-7": { "name": "American dream", "type": "", "gndNumber": "4201448-7" },
-			"7504355-5": { "name": "Amerikanische Literatur", "type": "", "gndNumber": "7504355-5" },
-			"4002053-8": { "name": "Angst (existenzielle Angst)", "type": "", "gndNumber": "4002053-8" },
-			"4122803-0": { "name": "Antifaschismus", "type": "", "gndNumber": "4122803-0" },
-			"4068754-5": { "name": "Antike", "type": "", "gndNumber": "4068754-5" },
-			"4002333-3": { "name": "Antisemitismus", "type": "", "gndNumber": "4002333-3" },
-			"4142675-7": { "name": "Antiklerikalismus", "type": "", "gndNumber": "4142675-7" },
-			"4002567-6": { "name": "Arbeit", "type": "", "gndNumber": "4002567-6" },
-			"4205756-5": { "name": "Arbeiterwohnung", "type": "", "gndNumber": "4205756-5" },
-			"4279705-6": { "name": "Arbeitskräftemangel", "type": "", "gndNumber": "4279705-6" },
-			"4002716-8": { "name": "Arbeitslager", "type": "", "gndNumber": "4002716-8" },
-			"4002730-2": { "name": "Arbeitslosigkeit", "type": "", "gndNumber": "4002730-2" },
-			"4002827-6": { "name": "Archäologie", "type": "", "gndNumber": "4002827-6" },
-			"4002851-3": { "name": "Architektur", "type": "", "gndNumber": "4002851-3" },
-			"7502947-9": { "name": "Moderne Architektur", "type": "", "gndNumber": "7502947-9" },
-			"4130286-2": { "name": "Aristokratie", "type": "", "gndNumber": "4130286-2" },
-			"4002963-3": { "name": "Armut", "type": "", "gndNumber": "4002963-3" },
-			"4085933-2": { "name": "Armenier", "type": "", "gndNumber": "4085933-2" },
-			"4112603-8": { "name": "Artusroman", "type": "", "gndNumber": "4112603-8" },
-			"4143260-5": { "name": "Asyl", "type": "", "gndNumber": "4143260-5" },
-			"4000626-8": { "name": "Ästhetik", "type": "", "gndNumber": "4000626-8" },
-			"4143278-2": { "name": "Asketik", "type": "", "gndNumber": "4143278-2" },
-			"4129464-6": { "name": "Ausgrabung", "type": "", "gndNumber": "4129464-6" },
-			"4076001-7": { "name": "Auto", "type": "", "gndNumber": "4076001-7" },
-			"4003516-5": { "name": "Aufforstung", "type": "", "gndNumber": "4003516-5" },
-			"4003677-7": { "name": "Ausbeutung", "type": "", "gndNumber": "4003677-7" },
-			"4003846-4": { "name": "Aussenpolitik", "type": "", "gndNumber": "4003846-4" },
-			"4004973-5": { "name": "Baudenkmal", "type": "", "gndNumber": "4004973-5" },
-			"4216372-9": { "name": "Beduinen", "type": "", "gndNumber": "4216372-9" },
-			"4144619-7": { "name": "Berg", "type": "", "gndNumber": "4144619-7" },
-			"4005694-6": { "name": "Bergsteigen", "type": "", "gndNumber": "4005694-6" },
-			"4191412-0": { "name": "Berühmte Persönlichkeit", "type": "", "gndNumber": "4191412-0" },
-			"4786807-7": { "name": "Beschleunigung", "type": "", "gndNumber": "4786807-7" },
-			"4204578-2": { "name": "Bestattungsritus", "type": "", "gndNumber": "4204578-2" },
-			"4006077-9": { "name": "Bestseller", "type": "", "gndNumber": "4006077-9" },
-			"4006650-2": { "name": "Bildung", "type": "", "gndNumber": "4006650-2" },
-			"1149977590": { "name": "Blackfacing", "type": "", "gndNumber": "1149977590" },
-			"4334973-0": { "name": "Blinder Passagier", "type": "", "gndNumber": "4334973-0" },
-			"4007502-3": { "name": "Börse", "type": "", "gndNumber": "4007502-3" },
-			"4008822-4": { "name": "Bürokratie", "type": "", "gndNumber": "4008822-4" },
-			"4069722-8": { "name": "Bürgertum", "type": "", "gndNumber": "4069722-8" },
-			"4010074-1": { "name": "Christentum", "type": "", "gndNumber": "4010074-1" },
-			"4132275-7": { "name": "Degeneration", "type": "", "gndNumber": "4132275-7" },
-			"4011413-2": { "name": "Demokratie", "type": "", "gndNumber": "4011413-2" },
-			"4011453-3": { "name": "Denkmal", "type": "", "gndNumber": "4011453-3" },
-			"4011474-0": { "name": "Depression", "type": "", "gndNumber": "4011474-0" },
-			"4149920-7": { "name": "Diktatur", "type": "", "gndNumber": "4149920-7" },
-			"1028576870": { "name": "Distanz", "type": "", "gndNumber": "1028576870" },
-			"4012653-5": { "name": "Dokumentarfilm", "type": "", "gndNumber": "4012653-5" },
-			"4745694-2": { "name": "Dollar", "type": "", "gndNumber": "4745694-2" },
-			"4198658-1": { "name": "Drogenkonsum", "type": "", "gndNumber": "4198658-1" },
-			"4122122-9": { "name": "Drogenentzug", "type": "", "gndNumber": "4122122-9" },
-			"4309343-7": { "name": "Dschungel", "type": "", "gndNumber": "4309343-7" },
-			"4150868-3": { "name": "Dunkelheit", "type": "", "gndNumber": "4150868-3" },
-			"4013630-9": { "name": "Ehe", "type": "", "gndNumber": "4013630-9" },
-			"4013960-8": { "name": "Einwanderung", "type": "", "gndNumber": "4013960-8" },
-			"4333082-4": { "name": "Entfernung", "type": "", "gndNumber": "4333082-4" },
-			"4014748-4": { "name": "Engel", "type": "", "gndNumber": "4014748-4" },
-			"4015332-0": { "name": "Ernährung", "type": "", "gndNumber": "4015332-0" },
-			"4079163-4": { "name": "Erster Weltkrieg", "type": "", "gndNumber": "4079163-4" },
-			"4015959-0": { "name": "Exil", "type": "", "gndNumber": "4015959-0" },
-			"4015972-3": { "name": "Existenzphilosophie", "type": "", "gndNumber": "4015972-3" },
-			"4727032-9": { "name": "Existenzkampf", "type": "", "gndNumber": "4727032-9" },
-			"4015993-0": { "name": "Exotismus", "type": "", "gndNumber": "4015993-0" },
-			"4153349-5": { "name": "Expeditionsbergsteigen", "type": "", "gndNumber": "4153349-5" },
-			"4016044-0": { "name": "Expressionismus", "type": "", "gndNumber": "4016044-0" },
-			"4113480-1": { "name": "Europa", "type": "", "gndNumber": "4113480-1" },
-			"4200132-8": { "name": "Eurozentrismus", "type": "", "gndNumber": "4200132-8" },
-			"4217343-7": { "name": "Fabrikgebäude", "type": "", "gndNumber": "4217343-7" },
-			"4153665-4": { "name": "Familienroman", "type": "", "gndNumber": "4153665-4" },
-			"4016494-9": { "name": "Faschismus", "type": "", "gndNumber": "4016494-9" },
-			"4222126-2": { "name": "Feminismus", "type": "", "gndNumber": "4222126-2" },
-			"4154026-8": { "name": "Fernhandel", "type": "", "gndNumber": "4154026-8" },
-			"4017102-4": { "name": "Film", "type": "", "gndNumber": "4017102-4" },
-			"4017310-0": { "name": "Fischerei", "type": "", "gndNumber": "4017310-0" },
-			"4017604-6": { "name": "Flüchtling", "type": "", "gndNumber": "4017604-6" },
-			"4154675-1": { "name": "Flucht", "type": "", "gndNumber": "4154675-1" },
-			"4017672-1": { "name": "Flugzeug", "type": "", "gndNumber": "4017672-1" },
-			"4131972-2": { "name": "Fluss", "type": "", "gndNumber": "4131972-2" },
-			"4017985-0": { "name": "Fortschritt", "type": "", "gndNumber": "4017985-0" },
-			"4045895-7": { "name": "Fotografie", "type": "", "gndNumber": "4045895-7" },
-			"7507676-7": { "name": "Frauenrolle (Soziale Rolle)", "type": "", "gndNumber": "7507676-7" },
-			"4018326-9": { "name": "Freiheit", "type": "", "gndNumber": "4018326-9" },
-			"4247924-1": { "name": "Freizeitindustrie", "type": "", "gndNumber": "4247924-1" },
-			"4253929-8": { "name": "Fremdenlegion", "type": "", "gndNumber": "4253929-8" },
-			"4018421-3": { "name": "Fremdheit", "type": "", "gndNumber": "4018421-3" },
-			"4018424-9": { "name": "Fremdsprache", "type": "", "gndNumber": "4018424-9" },
-			"4018480-8": { "name": "Freundschaft", "type": "", "gndNumber": "4018480-8" },
-			"4135563-5": { "name": "Friede", "type": "", "gndNumber": "4135563-5" },
-			"4018537-0": { "name": "Friedhof", "type": "", "gndNumber": "4018537-0" },
-			"4018944-2": { "name": "Furcht", "type": "", "gndNumber": "4018944-2" },
-			"4019286-6": { "name": "Garten", "type": "", "gndNumber": "4019286-6" },
-			"4137693-6": { "name": "Gastfreundschaft", "type": "", "gndNumber": "4137693-6" },
-			"4274032-0": { "name": "Gefangenschaft", "type": "", "gndNumber": "4274032-0" },
-			"4071628-4": { "name": "Gefängnis", "type": "", "gndNumber": "4071628-4" },
-			"4156282-3": { "name": "Gegensatz", "type": "", "gndNumber": "4156282-3" },
+			"4000096-5": {
+				"name": "Aberglaube",
+				"type": "",
+				"gndNumber": "4000096-5",
+				"docs": ["smallform_0130", "smallform_0166"]
+			},
+			"4141014-2": {
+				"name": "Abenteuer",
+				"type": "",
+				"gndNumber": "4141014-2",
+				"docs": ["smallform_0015", "smallform_0090", "smallform_0463"]
+			},
+			"4137441-1": {
+				"name": "Abstinenz",
+				"type": "",
+				"gndNumber": "4137441-1",
+				"docs": ["smallform_0019"]
+			},
+			"4201448-7": {
+				"name": "American dream",
+				"type": "",
+				"gndNumber": "4201448-7",
+				"docs": [
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0279",
+					"smallform_0435",
+					"smallform_0463"
+				]
+			},
+			"7504355-5": {
+				"name": "Amerikanische Literatur",
+				"type": "",
+				"gndNumber": "7504355-5",
+				"docs": [
+					"smallform_0107",
+					"smallform_0420",
+					"smallform_0432",
+					"smallform_0436",
+					"smallform_0437",
+					"smallform_0463"
+				]
+			},
+			"4002053-8": {
+				"name": "Angst (existenzielle Angst)",
+				"type": "",
+				"gndNumber": "4002053-8",
+				"docs": ["letter_0233", "letter_0280"]
+			},
+			"4122803-0": {
+				"name": "Antifaschismus",
+				"type": "",
+				"gndNumber": "4122803-0",
+				"docs": [
+					"smallform_0469",
+					"letter_0029",
+					"letter_0121",
+					"letter_0241",
+					"letter_0253",
+					"letter_0266",
+					"letter_0279",
+					"letter_0283",
+					"letter_0287",
+					"letter_0294",
+					"letter_0335",
+					"letter_0420"
+				]
+			},
+			"4068754-5": {
+				"name": "Antike",
+				"type": "",
+				"gndNumber": "4068754-5",
+				"docs": [
+					"smallform_0096",
+					"smallform_0152",
+					"smallform_0154",
+					"smallform_0155",
+					"smallform_0168",
+					"smallform_0189"
+				]
+			},
+			"4002333-3": {
+				"name": "Antisemitismus",
+				"type": "",
+				"gndNumber": "4002333-3",
+				"docs": [
+					"smallform_0226",
+					"smallform_0227",
+					"smallform_0231",
+					"smallform_0276",
+					"letter_0242",
+					"letter_0250",
+					"letter_0281",
+					"letter_0288",
+					"letter_0339",
+					"letter_0407",
+					"letter_0417"
+				]
+			},
+			"4142675-7": {
+				"name": "Antiklerikalismus",
+				"type": "",
+				"gndNumber": "4142675-7"
+			},
+			"4002567-6": {
+				"name": "Arbeit",
+				"type": "",
+				"gndNumber": "4002567-6"
+			},
+			"4205756-5": {
+				"name": "Arbeiterwohnung",
+				"type": "",
+				"gndNumber": "4205756-5",
+				"docs": [
+					"smallform_0178",
+					"smallform_0205",
+					"smallform_0211",
+					"smallform_0267",
+					"smallform_0284"
+				]
+			},
+			"4279705-6": {
+				"name": "Arbeitskräftemangel",
+				"type": "",
+				"gndNumber": "4279705-6"
+			},
+			"4002716-8": {
+				"name": "Arbeitslager",
+				"type": "",
+				"gndNumber": "4002716-8",
+				"docs": ["smallform_0242"]
+			},
+			"4002730-2": {
+				"name": "Arbeitslosigkeit",
+				"type": "",
+				"gndNumber": "4002730-2",
+				"docs": [
+					"smallform_0176",
+					"smallform_0185",
+					"smallform_0186",
+					"smallform_0187",
+					"smallform_0195",
+					"smallform_0201",
+					"smallform_0205",
+					"smallform_0210",
+					"smallform_0212",
+					"smallform_0244",
+					"smallform_0245",
+					"smallform_0267",
+					"smallform_0279",
+					"smallform_0280",
+					"smallform_0283",
+					"smallform_0284"
+				]
+			},
+			"4002827-6": {
+				"name": "Archäologie",
+				"type": "",
+				"gndNumber": "4002827-6",
+				"docs": [
+					"smallform_0096",
+					"smallform_0150",
+					"smallform_0155",
+					"letter_0023",
+					"letter_0024",
+					"letter_0026",
+					"letter_0029",
+					"letter_0068",
+					"letter_0334"
+				]
+			},
+			"4002851-3": {
+				"name": "Architektur",
+				"type": "",
+				"gndNumber": "4002851-3",
+				"docs": ["smallform_0090", "smallform_0197", "smallform_0243"]
+			},
+			"7502947-9": {
+				"name": "Moderne Architektur",
+				"type": "",
+				"gndNumber": "7502947-9"
+			},
+			"4130286-2": {
+				"name": "Aristokratie",
+				"type": "",
+				"gndNumber": "4130286-2",
+				"docs": ["smallform_0617"]
+			},
+			"4002963-3": {
+				"name": "Armut",
+				"type": "",
+				"gndNumber": "4002963-3",
+				"docs": [
+					"smallform_0123",
+					"smallform_0178",
+					"smallform_0187",
+					"smallform_0195",
+					"smallform_0201",
+					"smallform_0206",
+					"smallform_0208",
+					"smallform_0210",
+					"smallform_0211",
+					"smallform_0212",
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0245",
+					"smallform_0246",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0274",
+					"smallform_0282",
+					"smallform_0284",
+					"smallform_0303",
+					"smallform_0421",
+					"smallform_0437",
+					"smallform_0470",
+					"letter_0256"
+				]
+			},
+			"4085933-2": {
+				"name": "Armenier",
+				"type": "",
+				"gndNumber": "4085933-2",
+				"docs": ["smallform_0157"]
+			},
+			"4112603-8": {
+				"name": "Artusroman",
+				"type": "",
+				"gndNumber": "4112603-8",
+				"docs": ["smallform_0003"]
+			},
+			"4143260-5": {
+				"name": "Asyl",
+				"type": "",
+				"gndNumber": "4143260-5"
+			},
+			"4000626-8": {
+				"name": "Ästhetik",
+				"type": "",
+				"gndNumber": "4000626-8",
+				"docs": [
+					"smallform_0011",
+					"smallform_0012",
+					"smallform_0013",
+					"smallform_0014",
+					"smallform_0015",
+					"smallform_0016",
+					"smallform_0017",
+					"smallform_0019",
+					"smallform_0022",
+					"smallform_0023",
+					"smallform_0027",
+					"smallform_0029",
+					"smallform_0034",
+					"smallform_0035",
+					"smallform_0038",
+					"smallform_0107",
+					"smallform_0168",
+					"letter_0126"
+				]
+			},
+			"4143278-2": {
+				"name": "Asketik",
+				"type": "",
+				"gndNumber": "4143278-2",
+				"docs": ["letter_0052"]
+			},
+			"4129464-6": {
+				"name": "Ausgrabung",
+				"type": "",
+				"gndNumber": "4129464-6",
+				"docs": ["smallform_0150", "letter_0023", "letter_0024", "letter_0026", "letter_0029"]
+			},
+			"4076001-7": {
+				"name": "Auto",
+				"type": "",
+				"gndNumber": "4076001-7",
+				"docs": [
+					"smallform_0084",
+					"smallform_0165",
+					"smallform_0177",
+					"smallform_0178",
+					"smallform_0188",
+					"smallform_0197",
+					"smallform_0199",
+					"smallform_0205",
+					"smallform_0212",
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0276",
+					"smallform_0413",
+					"smallform_0485",
+					"smallform_0529",
+					"smallform_0611",
+					"letter_0065",
+					"letter_0066",
+					"letter_0080",
+					"letter_0235",
+					"letter_0286",
+					"letter_0390"
+				]
+			},
+			"4003516-5": {
+				"name": "Aufforstung",
+				"type": "",
+				"gndNumber": "4003516-5",
+				"docs": ["smallform_0191", "smallform_0281"]
+			},
+			"4003677-7": {
+				"name": "Ausbeutung",
+				"type": "",
+				"gndNumber": "4003677-7",
+				"docs": [
+					"smallform_0186",
+					"smallform_0191",
+					"smallform_0246",
+					"smallform_0266",
+					"smallform_0274",
+					"smallform_0303",
+					"smallform_0470"
+				]
+			},
+			"4003846-4": {
+				"name": "Aussenpolitik",
+				"type": "",
+				"gndNumber": "4003846-4",
+				"docs": ["smallform_0435", "smallform_0438", "smallform_0469", "letter_0121"]
+			},
+			"4004973-5": {
+				"name": "Baudenkmal",
+				"type": "",
+				"gndNumber": "4004973-5",
+				"docs": [
+					"smallform_0096",
+					"smallform_0115",
+					"smallform_0146",
+					"smallform_0150",
+					"smallform_0154",
+					"smallform_0155",
+					"smallform_0617"
+				]
+			},
+			"4216372-9": {
+				"name": "Beduinen",
+				"type": "",
+				"gndNumber": "4216372-9",
+				"docs": [
+					"smallform_0148",
+					"smallform_0151",
+					"smallform_0155",
+					"smallform_0165",
+					"smallform_0168",
+					"smallform_0171",
+					"smallform_0189",
+					"smallform_0321"
+				]
+			},
+			"4144619-7": {
+				"name": "Berg",
+				"type": "",
+				"gndNumber": "4144619-7",
+				"docs": [
+					"smallform_0029",
+					"smallform_0130",
+					"smallform_0160",
+					"smallform_0169",
+					"smallform_0170",
+					"smallform_0172",
+					"smallform_0207",
+					"smallform_0611",
+					"smallform_0613",
+					"smallform_0614",
+					"smallform_0615",
+					"letter_0331"
+				]
+			},
+			"4005694-6": {
+				"name": "Bergsteigen",
+				"type": "",
+				"gndNumber": "4005694-6",
+				"docs": ["smallform_0614", "smallform_0615", "letter_0283"]
+			},
+			"4191412-0": {
+				"name": "Berühmte Persönlichkeit",
+				"type": "",
+				"gndNumber": "4191412-0",
+				"docs": [
+					"smallform_0028",
+					"smallform_0189",
+					"smallform_0197",
+					"smallform_0209",
+					"smallform_0494",
+					"smallform_0615",
+					"letter_0067",
+					"letter_0230",
+					"letter_0332"
+				]
+			},
+			"4786807-7": {
+				"name": "Beschleunigung",
+				"type": "",
+				"gndNumber": "4786807-7",
+				"docs": ["smallform_0177"]
+			},
+			"4204578-2": {
+				"name": "Bestattungsritus",
+				"type": "",
+				"gndNumber": "4204578-2",
+				"docs": ["smallform_0146", "smallform_0147"]
+			},
+			"4006077-9": {
+				"name": "Bestseller",
+				"type": "",
+				"gndNumber": "4006077-9"
+			},
+			"4006650-2": {
+				"name": "Bildung",
+				"type": "",
+				"gndNumber": "4006650-2",
+				"docs": [
+					"smallform_0131",
+					"smallform_0246",
+					"smallform_0270",
+					"smallform_0272",
+					"smallform_0282",
+					"smallform_0488"
+				]
+			},
+			"1149977590": {
+				"name": "Blackfacing",
+				"type": "",
+				"gndNumber": "1149977590"
+			},
+			"4334973-0": {
+				"name": "Blinder Passagier",
+				"type": "",
+				"gndNumber": "4334973-0",
+				"docs": ["smallform_0242"]
+			},
+			"4007502-3": {
+				"name": "Börse",
+				"type": "",
+				"gndNumber": "4007502-3"
+			},
+			"4008822-4": {
+				"name": "Bürokratie",
+				"type": "",
+				"gndNumber": "4008822-4",
+				"docs": ["smallform_0242"]
+			},
+			"4069722-8": {
+				"name": "Bürgertum",
+				"type": "",
+				"gndNumber": "4069722-8",
+				"docs": ["smallform_0019", "smallform_0027"]
+			},
+			"4010074-1": {
+				"name": "Christentum",
+				"type": "",
+				"gndNumber": "4010074-1",
+				"docs": [
+					"smallform_0115",
+					"smallform_0147",
+					"smallform_0158",
+					"smallform_0161",
+					"smallform_0166",
+					"smallform_0174",
+					"smallform_0208",
+					"smallform_0209"
+				]
+			},
+			"4132275-7": {
+				"name": "Degeneration",
+				"type": "",
+				"gndNumber": "4132275-7"
+			},
+			"4011413-2": {
+				"name": "Demokratie",
+				"type": "",
+				"gndNumber": "4011413-2",
+				"docs": [
+					"smallform_0027",
+					"smallform_0175",
+					"smallform_0185",
+					"smallform_0187",
+					"smallform_0190",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0242",
+					"smallform_0279",
+					"smallform_0284",
+					"smallform_0417",
+					"smallform_0419",
+					"smallform_0420",
+					"smallform_0426",
+					"smallform_0432",
+					"smallform_0435",
+					"smallform_0438",
+					"smallform_0465",
+					"smallform_0469",
+					"letter_0058",
+					"letter_0121",
+					"letter_0241",
+					"letter_0360"
+				]
+			},
+			"4011453-3": {
+				"name": "Denkmal",
+				"type": "",
+				"gndNumber": "4011453-3",
+				"docs": ["smallform_0188", "smallform_0280"]
+			},
+			"4011474-0": {
+				"name": "Depression",
+				"type": "",
+				"gndNumber": "4011474-0",
+				"docs": ["letter_0058", "letter_0086"]
+			},
+			"4149920-7": {
+				"name": "Diktatur",
+				"type": "",
+				"gndNumber": "4149920-7",
+				"docs": [
+					"smallform_0027",
+					"smallform_0123",
+					"smallform_0185",
+					"smallform_0190",
+					"smallform_0231",
+					"smallform_0276",
+					"smallform_0426",
+					"smallform_0432",
+					"smallform_0465",
+					"smallform_0484"
+				]
+			},
+			"1028576870": {
+				"name": "Distanz",
+				"type": "",
+				"gndNumber": "1028576870",
+				"docs": ["smallform_0087", "smallform_0090", "smallform_0421"]
+			},
+			"4012653-5": {
+				"name": "Dokumentarfilm",
+				"type": "",
+				"gndNumber": "4012653-5"
+			},
+			"4745694-2": {
+				"name": "Dollar",
+				"type": "",
+				"gndNumber": "4745694-2",
+				"docs": ["smallform_0212"]
+			},
+			"4198658-1": {
+				"name": "Drogenkonsum",
+				"type": "",
+				"gndNumber": "4198658-1",
+				"docs": [
+					"smallform_0188",
+					"letter_0058",
+					"letter_0086",
+					"letter_0243",
+					"letter_0258",
+					"letter_0262",
+					"letter_0267",
+					"letter_0268",
+					"letter_0273",
+					"letter_0276",
+					"letter_0279",
+					"letter_0280",
+					"letter_0286",
+					"letter_0290",
+					"letter_0291",
+					"letter_0294",
+					"letter_0424",
+					"letter_0443"
+				]
+			},
+			"4122122-9": {
+				"name": "Drogenentzug",
+				"type": "",
+				"gndNumber": "4122122-9",
+				"docs": ["letter_0058", "letter_0085", "letter_0258", "letter_0424", "letter_0443"]
+			},
+			"4309343-7": {
+				"name": "Dschungel",
+				"type": "",
+				"gndNumber": "4309343-7",
+				"docs": ["smallform_0130", "smallform_0529"]
+			},
+			"4150868-3": {
+				"name": "Dunkelheit",
+				"type": "",
+				"gndNumber": "4150868-3",
+				"docs": ["smallform_0244", "letter_0297"]
+			},
+			"4013630-9": {
+				"name": "Ehe",
+				"type": "",
+				"gndNumber": "4013630-9",
+				"docs": ["letter_0429"]
+			},
+			"4013960-8": {
+				"name": "Einwanderung",
+				"type": "",
+				"gndNumber": "4013960-8",
+				"docs": [
+					"smallform_0205",
+					"smallform_0242",
+					"smallform_0245",
+					"smallform_0279",
+					"smallform_0494"
+				]
+			},
+			"4333082-4": {
+				"name": "Entfernung",
+				"type": "",
+				"gndNumber": "4333082-4",
+				"docs": ["smallform_0084", "smallform_0414", "smallform_0480"]
+			},
+			"4014748-4": {
+				"name": "Engel",
+				"type": "",
+				"gndNumber": "4014748-4",
+				"docs": ["smallform_0033", "smallform_0107"]
+			},
+			"4015332-0": {
+				"name": "Ernährung",
+				"type": "",
+				"gndNumber": "4015332-0",
+				"docs": [
+					"smallform_0028",
+					"smallform_0177",
+					"smallform_0195",
+					"smallform_0248",
+					"smallform_0303",
+					"smallform_0612",
+					"letter_0078",
+					"letter_0431"
+				]
+			},
+			"4079163-4": {
+				"name": "Erster Weltkrieg",
+				"type": "",
+				"gndNumber": "4079163-4",
+				"docs": ["smallform_0030", "smallform_0158", "smallform_0474", "letter_0403", "letter_0406"]
+			},
+			"4015959-0": {
+				"name": "Exil",
+				"type": "",
+				"gndNumber": "4015959-0",
+				"docs": [
+					"smallform_0173",
+					"smallform_0197",
+					"smallform_0494",
+					"letter_0067",
+					"letter_0081",
+					"letter_0241",
+					"letter_0243",
+					"letter_0253",
+					"letter_0254",
+					"letter_0255",
+					"letter_0262",
+					"letter_0264",
+					"letter_0280",
+					"letter_0283",
+					"letter_0284",
+					"letter_0286",
+					"letter_0287",
+					"letter_0290",
+					"letter_0291",
+					"letter_0295",
+					"letter_0298",
+					"letter_0336",
+					"letter_0339",
+					"letter_0420"
+				]
+			},
+			"4015972-3": {
+				"name": "Existenzphilosophie",
+				"type": "",
+				"gndNumber": "4015972-3",
+				"docs": ["smallform_0321"]
+			},
+			"4727032-9": {
+				"name": "Existenzkampf",
+				"type": "",
+				"gndNumber": "4727032-9",
+				"docs": ["smallform_0191", "smallform_0201", "smallform_0284"]
+			},
+			"4015993-0": {
+				"name": "Exotismus",
+				"type": "",
+				"gndNumber": "4015993-0",
+				"docs": ["smallform_0130"]
+			},
+			"4153349-5": {
+				"name": "Expeditionsbergsteigen",
+				"type": "",
+				"gndNumber": "4153349-5"
+			},
+			"4016044-0": {
+				"name": "Expressionismus",
+				"type": "",
+				"gndNumber": "4016044-0",
+				"docs": ["smallform_0030"]
+			},
+			"4113480-1": {
+				"name": "Europa",
+				"type": "",
+				"gndNumber": "4113480-1",
+				"docs": [
+					"smallform_0173",
+					"smallform_0177",
+					"smallform_0207",
+					"smallform_0225",
+					"smallform_0228",
+					"smallform_0232",
+					"smallform_0413",
+					"smallform_0414",
+					"smallform_0421",
+					"smallform_0426",
+					"smallform_0469",
+					"smallform_0471",
+					"smallform_0474",
+					"smallform_0480",
+					"letter_0121",
+					"letter_0241",
+					"letter_0242",
+					"letter_0262",
+					"letter_0266"
+				]
+			},
+			"4200132-8": {
+				"name": "Eurozentrismus",
+				"type": "",
+				"gndNumber": "4200132-8",
+				"docs": ["smallform_0052", "smallform_0055", "smallform_0421", "letter_0054"]
+			},
+			"4217343-7": {
+				"name": "Fabrikgebäude",
+				"type": "",
+				"gndNumber": "4217343-7",
+				"docs": ["smallform_0201", "smallform_0206"]
+			},
+			"4153665-4": {
+				"name": "Familienroman",
+				"type": "",
+				"gndNumber": "4153665-4",
+				"docs": ["smallform_0107"]
+			},
+			"4016494-9": {
+				"name": "Faschismus",
+				"type": "",
+				"gndNumber": "4016494-9",
+				"docs": [
+					"smallform_0123",
+					"smallform_0185",
+					"smallform_0223",
+					"smallform_0226",
+					"smallform_0231",
+					"smallform_0276",
+					"smallform_0426",
+					"smallform_0469",
+					"smallform_0617",
+					"letter_0022",
+					"letter_0052",
+					"letter_0058",
+					"letter_0072",
+					"letter_0086",
+					"letter_0241",
+					"letter_0250",
+					"letter_0253",
+					"letter_0272",
+					"letter_0274",
+					"letter_0277",
+					"letter_0279",
+					"letter_0287",
+					"letter_0292",
+					"letter_0407",
+					"letter_0420"
+				]
+			},
+			"4222126-2": {
+				"name": "Feminismus",
+				"type": "",
+				"gndNumber": "4222126-2"
+			},
+			"4154026-8": {
+				"name": "Fernhandel",
+				"type": "",
+				"gndNumber": "4154026-8"
+			},
+			"4017102-4": {
+				"name": "Film",
+				"type": "",
+				"gndNumber": "4017102-4",
+				"docs": [
+					"smallform_0033",
+					"smallform_0034",
+					"smallform_0035",
+					"smallform_0038",
+					"smallform_0283",
+					"smallform_0484",
+					"letter_0067",
+					"letter_0210",
+					"letter_0334",
+					"letter_0338",
+					"letter_0346",
+					"letter_0347"
+				]
+			},
+			"4017310-0": {
+				"name": "Fischerei",
+				"type": "",
+				"gndNumber": "4017310-0",
+				"docs": ["smallform_0130", "smallform_0169", "smallform_0421", "smallform_0423"]
+			},
+			"4017604-6": {
+				"name": "Flüchtling",
+				"type": "",
+				"gndNumber": "4017604-6",
+				"docs": ["smallform_0227", "smallform_0471", "smallform_0494", "letter_0351"]
+			},
+			"4154675-1": {
+				"name": "Flucht",
+				"type": "",
+				"gndNumber": "4154675-1",
+				"docs": ["smallform_0157", "smallform_0199", "smallform_0242", "letter_0086"]
+			},
+			"4017672-1": {
+				"name": "Flugzeug",
+				"type": "",
+				"gndNumber": "4017672-1",
+				"docs": ["smallform_0084"]
+			},
+			"4131972-2": {
+				"name": "Fluss",
+				"type": "",
+				"gndNumber": "4131972-2",
+				"docs": [
+					"smallform_0165",
+					"smallform_0244",
+					"smallform_0283",
+					"smallform_0463",
+					"letter_0357"
+				]
+			},
+			"4017985-0": {
+				"name": "Fortschritt",
+				"type": "",
+				"gndNumber": "4017985-0",
+				"docs": ["smallform_0055", "smallform_0087", "smallform_0185"]
+			},
+			"4045895-7": {
+				"name": "Fotografie",
+				"type": "",
+				"gndNumber": "4045895-7",
+				"docs": [
+					"smallform_0201",
+					"smallform_0206",
+					"smallform_0224",
+					"smallform_0244",
+					"smallform_0248",
+					"smallform_0266",
+					"smallform_0274",
+					"smallform_0302",
+					"letter_0064",
+					"letter_0065",
+					"letter_0066",
+					"letter_0067",
+					"letter_0070",
+					"letter_0072",
+					"letter_0073",
+					"letter_0074",
+					"letter_0080",
+					"letter_0081",
+					"letter_0082",
+					"letter_0083",
+					"letter_0084",
+					"letter_0085",
+					"letter_0087",
+					"letter_0351",
+					"letter_0355",
+					"letter_0357",
+					"letter_0361",
+					"letter_0365",
+					"letter_0370",
+					"letter_0381",
+					"letter_0388"
+				]
+			},
+			"7507676-7": {
+				"name": "Frauenrolle (Soziale Rolle)",
+				"type": "",
+				"gndNumber": "7507676-7",
+				"docs": [
+					"smallform_0002",
+					"smallform_0028",
+					"smallform_0171",
+					"smallform_0189",
+					"smallform_0302",
+					"smallform_0469",
+					"smallform_0488",
+					"letter_0355"
+				]
+			},
+			"4018326-9": {
+				"name": "Freiheit",
+				"type": "",
+				"gndNumber": "4018326-9",
+				"docs": [
+					"smallform_0027",
+					"smallform_0084",
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0186",
+					"smallform_0242",
+					"letter_0241",
+					"letter_0294",
+					"letter_0360"
+				]
+			},
+			"4247924-1": {
+				"name": "Freizeitindustrie",
+				"type": "",
+				"gndNumber": "4247924-1",
+				"docs": [
+					"smallform_0177",
+					"smallform_0188",
+					"smallform_0283",
+					"smallform_0611",
+					"smallform_0616"
+				]
+			},
+			"4253929-8": {
+				"name": "Fremdenlegion",
+				"type": "",
+				"gndNumber": "4253929-8",
+				"docs": ["smallform_0151"]
+			},
+			"4018421-3": {
+				"name": "Fremdheit",
+				"type": "",
+				"gndNumber": "4018421-3",
+				"docs": ["smallform_0151", "smallform_0197", "smallform_0205", "smallform_0303"]
+			},
+			"4018424-9": {
+				"name": "Fremdsprache",
+				"type": "",
+				"gndNumber": "4018424-9",
+				"docs": ["smallform_0197"]
+			},
+			"4018480-8": {
+				"name": "Freundschaft",
+				"type": "",
+				"gndNumber": "4018480-8",
+				"docs": [
+					"smallform_0001",
+					"smallform_0003",
+					"smallform_0004",
+					"smallform_0013",
+					"smallform_0015",
+					"smallform_0016",
+					"smallform_0131",
+					"letter_0076",
+					"letter_0238",
+					"letter_0264",
+					"letter_0293",
+					"letter_0294",
+					"letter_0296",
+					"letter_0328",
+					"letter_0402",
+					"letter_0407",
+					"letter_0411",
+					"letter_0442"
+				]
+			},
+			"4135563-5": {
+				"name": "Friede",
+				"type": "",
+				"gndNumber": "4135563-5",
+				"docs": ["smallform_0423"]
+			},
+			"4018537-0": {
+				"name": "Friedhof",
+				"type": "",
+				"gndNumber": "4018537-0"
+			},
+			"4018944-2": {
+				"name": "Furcht",
+				"type": "",
+				"gndNumber": "4018944-2",
+				"docs": ["smallform_0414"]
+			},
+			"4019286-6": {
+				"name": "Garten",
+				"type": "",
+				"gndNumber": "4019286-6"
+			},
+			"4137693-6": {
+				"name": "Gastfreundschaft",
+				"type": "",
+				"gndNumber": "4137693-6",
+				"docs": [
+					"smallform_0207",
+					"smallform_0245",
+					"smallform_0246",
+					"smallform_0266",
+					"letter_0256"
+				]
+			},
+			"4274032-0": {
+				"name": "Gefangenschaft",
+				"type": "",
+				"gndNumber": "4274032-0",
+				"docs": ["smallform_0419", "smallform_0485"]
+			},
+			"4071628-4": {
+				"name": "Gefängnis",
+				"type": "",
+				"gndNumber": "4071628-4",
+				"docs": ["smallform_0272", "smallform_0274", "smallform_0284", "letter_0266"]
+			},
+			"4156282-3": {
+				"name": "Gegensatz",
+				"type": "",
+				"gndNumber": "4156282-3"
+			},
 			"1244179744": {
 				"name": "Geistige Landesverteidigung",
 				"type": "",
-				"gndNumber": "1244179744"
+				"gndNumber": "1244179744",
+				"docs": ["smallform_0276", "letter_0121", "letter_0355"]
 			},
-			"4156416-9": { "name": "Geld", "type": "", "gndNumber": "4156416-9" },
-			"4020015-2": { "name": "Gemeinschaft", "type": "", "gndNumber": "4020015-2" },
-			"4271334-1": { "name": "Germanophobie", "type": "", "gndNumber": "4271334-1" },
-			"4135260-9": { "name": "Genussmittel", "type": "", "gndNumber": "4135260-9" },
-			"4020356-6": { "name": "Gerichtverhandlung", "type": "", "gndNumber": "4020356-6" },
-			"4341334-1": { "name": "Getreidewirtschaft", "type": "", "gndNumber": "4341334-1" },
-			"4020517-4": { "name": "Geschichte", "type": "", "gndNumber": "4020517-4" },
-			"4157065-0": { "name": "Gesellschaftsroman", "type": "", "gndNumber": "4157065-0" },
-			"4156741-9": { "name": "Geopolitik", "type": "", "gndNumber": "4156741-9" },
-			"4020872-2": { "name": "Gewerkschaft", "type": "", "gndNumber": "4020872-2" },
-			"4557997-0": { "name": "Globalisierung", "type": "", "gndNumber": "4557997-0" },
-			"4021569-6": { "name": "Golfsport", "type": "", "gndNumber": "4021569-6" },
-			"4022149-0": { "name": "Grossbetrieb", "type": "", "gndNumber": "4022149-0" },
-			"4022233-0": { "name": "Großstadt", "type": "", "gndNumber": "4022233-0" },
-			"4023222-0": { "name": "Handel", "type": "", "gndNumber": "4023222-0" },
-			"4023299-2": { "name": "Handwerk", "type": "", "gndNumber": "4023299-2" },
-			"4023979-2": { "name": "Hegemonie", "type": "", "gndNumber": "4023979-2" },
-			"4122192-8": { "name": "Heimat", "type": "", "gndNumber": "4122192-8" },
-			"4231285-1": { "name": "Heimatlosigkeit", "type": "", "gndNumber": "4231285-1" },
-			"4025292-9": { "name": "Hochzeit", "type": "", "gndNumber": "4025292-9" },
-			"4383351-2": { "name": "Hoffnung", "type": "", "gndNumber": "4383351-2" },
-			"4160405-2": { "name": "Hoffnungslosigkeit", "type": "", "gndNumber": "4160405-2" },
-			"4025798-8": { "name": "Homosexualität", "type": "", "gndNumber": "4025798-8" },
-			"4160816-1": { "name": "Hungersnot", "type": "", "gndNumber": "4160816-1" },
-			"4026331-9": { "name": "Hygiene", "type": "", "gndNumber": "4026331-9" },
-			"4026496-8": { "name": "Idylle", "type": "", "gndNumber": "4026496-8" },
-			"4026651-5": { "name": "Imperialismus", "type": "", "gndNumber": "4026651-5" },
-			"4026718-0": { "name": "Indianer", "type": "", "gndNumber": "4026718-0" },
-			"4187207-1": { "name": "Indigenes Volk", "type": "", "gndNumber": "4187207-1" },
-			"4131852-3": { "name": "Individualismus", "type": "", "gndNumber": "4131852-3" },
-			"4026776-3": { "name": "Industrialisierung", "type": "", "gndNumber": "4026776-3" },
-			"4026779-9": { "name": "Industrie", "type": "", "gndNumber": "4026779-9" },
-			"4026944-9": { "name": "Infrastruktur", "type": "", "gndNumber": "4026944-9" },
-			"4128227-9": { "name": "Insel", "type": "", "gndNumber": "4128227-9" },
-			"4605581-2": { "name": "Intermedialität", "type": "", "gndNumber": "4605581-2" },
-			"4027316-7": { "name": "Internat", "type": "", "gndNumber": "4027316-7" },
-			"4027743-4": { "name": "Islam", "type": "", "gndNumber": "4027743-4" },
-			"4162512-2": { "name": "Isolationismus", "type": "", "gndNumber": "4162512-2" },
-			"4027999-6": { "name": "Jahreszeit", "type": "", "gndNumber": "4027999-6" },
-			"4028779-8": { "name": "Journalismus", "type": "", "gndNumber": "4028779-8" },
-			"4114087-4": { "name": "Judentum", "type": "", "gndNumber": "4114087-4" },
-			"4201466-9": { "name": "Justiz", "type": "", "gndNumber": "4201466-9" },
-			"4028859-6": { "name": "Jugend", "type": "", "gndNumber": "4028859-6" },
-			"4028871-7": { "name": "Jugendbewegung", "type": "", "gndNumber": "4028871-7" },
-			"4029577-1": { "name": "Kapitalismus", "type": "", "gndNumber": "4029577-1" },
-			"4418991-6": { "name": "Kaugummi", "type": "", "gndNumber": "4418991-6" },
-			"4030550-8": { "name": "Kindheit", "type": "", "gndNumber": "4030550-8" },
-			"4128152-4": { "name": "Kinderarbeit", "type": "", "gndNumber": "4128152-4" },
-			"4031011-5": { "name": "Kleidung", "type": "", "gndNumber": "4031011-5" },
-			"4123525-3": { "name": "Kleinbauer", "type": "", "gndNumber": "4123525-3" },
-			"4031110-7": { "name": "Kleinstadt", "type": "", "gndNumber": "4031110-7" },
-			"4031170-3": { "name": "Klima", "type": "", "gndNumber": "4031170-3" },
-			"4164015-9": { "name": "Klassenbewusstsein", "type": "", "gndNumber": "4164015-9" },
-			"4130866-9": { "name": "Klassenkampf", "type": "", "gndNumber": "4130866-9" },
-			"4164683-6": { "name": "Kollektivismus", "type": "", "gndNumber": "4164683-6" },
-			"4073624-6": { "name": "Kolonialismus", "type": "", "gndNumber": "4073624-6" },
-			"4031892-8": { "name": "Kommunismus", "type": "", "gndNumber": "4031892-8" },
-			"4031952-0": { "name": "Komödie", "type": "", "gndNumber": "4031952-0" },
-			"4032187-3": { "name": "Konservatismus", "type": "", "gndNumber": "4032187-3" },
-			"4313630-8": { "name": "Korrespondent", "type": "", "gndNumber": "4313630-8" },
-			"4032524-6": { "name": "Korruption", "type": "", "gndNumber": "4032524-6" },
-			"4032844-2": { "name": "Krankheit", "type": "", "gndNumber": "4032844-2" },
-			"4033114-3": { "name": "Krieg", "type": "", "gndNumber": "4033114-3" },
-			"4165684-2": { "name": "Kriegseintritt", "type": "", "gndNumber": "4165684-2" },
-			"4033131-3": { "name": "Kriegsgefangenschaft", "type": "", "gndNumber": "4033131-3" },
-			"4033178-7": { "name": "Kriminalität", "type": "", "gndNumber": "4033178-7" },
-			"4125698-0": { "name": "Kultur", "type": "", "gndNumber": "4125698-0" },
-			"4114333-4": { "name": "Kunst", "type": "", "gndNumber": "4114333-4" },
-			"4034402-2": { "name": "Landwirtschaft", "type": "", "gndNumber": "4034402-2" },
-			"4166649-5": { "name": "Landschaftszerstörung", "type": "", "gndNumber": "4166649-5" },
-			"4134319-0": { "name": "Lebensstandard", "type": "", "gndNumber": "4134319-0" },
-			"4035296-1": { "name": "Lektüre", "type": "", "gndNumber": "4035296-1" },
-			"4035646-2": { "name": "Liebe", "type": "", "gndNumber": "4035646-2" },
-			"4202427-4": { "name": "Licht", "type": "", "gndNumber": "4202427-4" },
+			"4156416-9": {
+				"name": "Geld",
+				"type": "",
+				"gndNumber": "4156416-9",
+				"docs": [
+					"smallform_0177",
+					"smallform_0225",
+					"smallform_0232",
+					"letter_0056",
+					"letter_0242",
+					"letter_0254",
+					"letter_0255",
+					"letter_0256",
+					"letter_0257",
+					"letter_0262",
+					"letter_0265",
+					"letter_0283",
+					"letter_0292",
+					"letter_0295",
+					"letter_0296",
+					"letter_0334",
+					"letter_0335",
+					"letter_0336",
+					"letter_0338",
+					"letter_0346",
+					"letter_0347",
+					"letter_0348",
+					"letter_0367",
+					"letter_0381",
+					"letter_0420"
+				]
+			},
+			"4020015-2": {
+				"name": "Gemeinschaft",
+				"type": "",
+				"gndNumber": "4020015-2",
+				"docs": ["smallform_0001", "letter_0257"]
+			},
+			"4271334-1": {
+				"name": "Germanophobie",
+				"type": "",
+				"gndNumber": "4271334-1",
+				"docs": ["smallform_0224"]
+			},
+			"4135260-9": {
+				"name": "Genussmittel",
+				"type": "",
+				"gndNumber": "4135260-9"
+			},
+			"4020356-6": {
+				"name": "Gerichtverhandlung",
+				"type": "",
+				"gndNumber": "4020356-6",
+				"docs": ["smallform_0246", "smallform_0272", "smallform_0274"]
+			},
+			"4341334-1": {
+				"name": "Getreidewirtschaft",
+				"type": "",
+				"gndNumber": "4341334-1",
+				"docs": ["smallform_0191", "smallform_0281", "smallform_0470"]
+			},
+			"4020517-4": {
+				"name": "Geschichte",
+				"type": "",
+				"gndNumber": "4020517-4",
+				"docs": [
+					"smallform_0030",
+					"smallform_0096",
+					"smallform_0115",
+					"smallform_0148",
+					"smallform_0150",
+					"smallform_0152",
+					"smallform_0154",
+					"smallform_0155",
+					"smallform_0158",
+					"smallform_0160",
+					"smallform_0161",
+					"smallform_0164",
+					"smallform_0166",
+					"smallform_0167",
+					"smallform_0169",
+					"smallform_0174",
+					"smallform_0189",
+					"smallform_0224",
+					"smallform_0229",
+					"smallform_0614",
+					"letter_0331"
+				]
+			},
+			"4157065-0": {
+				"name": "Gesellschaftsroman",
+				"type": "",
+				"gndNumber": "4157065-0",
+				"docs": ["smallform_0107"]
+			},
+			"4156741-9": {
+				"name": "Geopolitik",
+				"type": "",
+				"gndNumber": "4156741-9",
+				"docs": ["smallform_0426", "smallform_0474"]
+			},
+			"4020872-2": {
+				"name": "Gewerkschaft",
+				"type": "",
+				"gndNumber": "4020872-2",
+				"docs": [
+					"smallform_0206",
+					"smallform_0210",
+					"smallform_0211",
+					"smallform_0246",
+					"smallform_0248",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0272",
+					"smallform_0303",
+					"smallform_0436",
+					"smallform_0467",
+					"letter_0296"
+				]
+			},
+			"4557997-0": {
+				"name": "Globalisierung",
+				"type": "",
+				"gndNumber": "4557997-0",
+				"docs": ["smallform_0480"]
+			},
+			"4021569-6": {
+				"name": "Golfsport",
+				"type": "",
+				"gndNumber": "4021569-6",
+				"docs": ["smallform_0616", "smallform_0617"]
+			},
+			"4022149-0": {
+				"name": "Grossbetrieb",
+				"type": "",
+				"gndNumber": "4022149-0"
+			},
+			"4022233-0": {
+				"name": "Großstadt",
+				"type": "",
+				"gndNumber": "4022233-0",
+				"docs": [
+					"smallform_0154",
+					"smallform_0188",
+					"smallform_0199",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0212",
+					"smallform_0420",
+					"smallform_0485",
+					"letter_0072"
+				]
+			},
+			"4023222-0": {
+				"name": "Handel",
+				"type": "",
+				"gndNumber": "4023222-0",
+				"docs": ["smallform_0130", "smallform_0463"]
+			},
+			"4023299-2": {
+				"name": "Handwerk",
+				"type": "",
+				"gndNumber": "4023299-2"
+			},
+			"4023979-2": {
+				"name": "Hegemonie",
+				"type": "",
+				"gndNumber": "4023979-2"
+			},
+			"4122192-8": {
+				"name": "Heimat",
+				"type": "",
+				"gndNumber": "4122192-8",
+				"docs": ["smallform_0414", "smallform_0471", "letter_0241", "letter_0293", "letter_0430"]
+			},
+			"4231285-1": {
+				"name": "Heimatlosigkeit",
+				"type": "",
+				"gndNumber": "4231285-1"
+			},
+			"4025292-9": {
+				"name": "Hochzeit",
+				"type": "",
+				"gndNumber": "4025292-9",
+				"docs": ["letter_0410", "letter_0432"]
+			},
+			"4383351-2": {
+				"name": "Hoffnung",
+				"type": "",
+				"gndNumber": "4383351-2"
+			},
+			"4160405-2": {
+				"name": "Hoffnungslosigkeit",
+				"type": "",
+				"gndNumber": "4160405-2",
+				"docs": ["smallform_0420"]
+			},
+			"4025798-8": {
+				"name": "Homosexualität",
+				"type": "",
+				"gndNumber": "4025798-8",
+				"docs": ["smallform_0013"]
+			},
+			"4160816-1": {
+				"name": "Hungersnot",
+				"type": "",
+				"gndNumber": "4160816-1",
+				"docs": ["smallform_0178"]
+			},
+			"4026331-9": {
+				"name": "Hygiene",
+				"type": "",
+				"gndNumber": "4026331-9",
+				"docs": ["smallform_0178"]
+			},
+			"4026496-8": {
+				"name": "Idylle",
+				"type": "",
+				"gndNumber": "4026496-8",
+				"docs": ["smallform_0421", "smallform_0423"]
+			},
+			"4026651-5": {
+				"name": "Imperialismus",
+				"type": "",
+				"gndNumber": "4026651-5"
+			},
+			"4026718-0": {
+				"name": "Indianer",
+				"type": "",
+				"gndNumber": "4026718-0"
+			},
+			"4187207-1": {
+				"name": "Indigenes Volk",
+				"type": "",
+				"gndNumber": "4187207-1",
+				"docs": ["smallform_0187"]
+			},
+			"4131852-3": {
+				"name": "Individualismus",
+				"type": "",
+				"gndNumber": "4131852-3",
+				"docs": ["smallform_0175", "smallform_0176", "smallform_0177"]
+			},
+			"4026776-3": {
+				"name": "Industrialisierung",
+				"type": "",
+				"gndNumber": "4026776-3",
+				"docs": [
+					"smallform_0243",
+					"smallform_0274",
+					"smallform_0279",
+					"smallform_0280",
+					"smallform_0281",
+					"smallform_0303",
+					"letter_0256"
+				]
+			},
+			"4026779-9": {
+				"name": "Industrie",
+				"type": "",
+				"gndNumber": "4026779-9",
+				"docs": [
+					"smallform_0201",
+					"smallform_0205",
+					"smallform_0206",
+					"smallform_0210",
+					"smallform_0211",
+					"smallform_0212",
+					"smallform_0244",
+					"smallform_0246",
+					"smallform_0267",
+					"smallform_0272",
+					"smallform_0284",
+					"letter_0296"
+				]
+			},
+			"4026944-9": {
+				"name": "Infrastruktur",
+				"type": "",
+				"gndNumber": "4026944-9",
+				"docs": ["smallform_0087", "smallform_0177", "smallform_0188", "smallform_0282"]
+			},
+			"4128227-9": {
+				"name": "Insel",
+				"type": "",
+				"gndNumber": "4128227-9",
+				"docs": ["smallform_0173", "smallform_0423"]
+			},
+			"4605581-2": {
+				"name": "Intermedialität",
+				"type": "",
+				"gndNumber": "4605581-2",
+				"docs": [
+					"smallform_0033",
+					"smallform_0034",
+					"smallform_0201",
+					"smallform_0205",
+					"smallform_0206",
+					"smallform_0224",
+					"smallform_0266",
+					"smallform_0274",
+					"smallform_0282",
+					"smallform_0283",
+					"smallform_0284",
+					"smallform_0302",
+					"smallform_0414",
+					"smallform_0417",
+					"smallform_0465",
+					"smallform_0469",
+					"letter_0064",
+					"letter_0066",
+					"letter_0080",
+					"letter_0081",
+					"letter_0083",
+					"letter_0084",
+					"letter_0119",
+					"letter_0337",
+					"letter_0355",
+					"letter_0361",
+					"letter_0365",
+					"letter_0388",
+					"letter_0400"
+				]
+			},
+			"4027316-7": {
+				"name": "Internat",
+				"type": "",
+				"gndNumber": "4027316-7",
+				"docs": ["smallform_0013", "smallform_0131"]
+			},
+			"4027743-4": {
+				"name": "Islam",
+				"type": "",
+				"gndNumber": "4027743-4",
+				"docs": ["smallform_0160", "smallform_0166", "smallform_0174"]
+			},
+			"4162512-2": {
+				"name": "Isolationismus",
+				"type": "",
+				"gndNumber": "4162512-2",
+				"docs": ["smallform_0417", "smallform_0435", "smallform_0438", "smallform_0484"]
+			},
+			"4027999-6": {
+				"name": "Jahreszeit",
+				"type": "",
+				"gndNumber": "4027999-6"
+			},
+			"4028779-8": {
+				"name": "Journalismus",
+				"type": "",
+				"gndNumber": "4028779-8",
+				"docs": [
+					"smallform_0302",
+					"smallform_0417",
+					"smallform_0419",
+					"smallform_0426",
+					"smallform_0432",
+					"smallform_0438",
+					"smallform_0465",
+					"smallform_0469",
+					"smallform_0471",
+					"letter_0058",
+					"letter_0080",
+					"letter_0081",
+					"letter_0083",
+					"letter_0084",
+					"letter_0113",
+					"letter_0119",
+					"letter_0121",
+					"letter_0247",
+					"letter_0256",
+					"letter_0277",
+					"letter_0282",
+					"letter_0294",
+					"letter_0295",
+					"letter_0298",
+					"letter_0333",
+					"letter_0351",
+					"letter_0355",
+					"letter_0357",
+					"letter_0360",
+					"letter_0361",
+					"letter_0365",
+					"letter_0367",
+					"letter_0369",
+					"letter_0370",
+					"letter_0377",
+					"letter_0381",
+					"letter_0388",
+					"letter_0430",
+					"letter_0476"
+				]
+			},
+			"4114087-4": {
+				"name": "Judentum",
+				"type": "",
+				"gndNumber": "4114087-4"
+			},
+			"4201466-9": {
+				"name": "Justiz",
+				"type": "",
+				"gndNumber": "4201466-9",
+				"docs": ["smallform_0437"]
+			},
+			"4028859-6": {
+				"name": "Jugend",
+				"type": "",
+				"gndNumber": "4028859-6",
+				"docs": [
+					"smallform_0001",
+					"smallform_0002",
+					"smallform_0003",
+					"smallform_0004",
+					"smallform_0011",
+					"smallform_0012",
+					"smallform_0013",
+					"smallform_0019",
+					"smallform_0022",
+					"smallform_0023",
+					"smallform_0028",
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0186",
+					"smallform_0197",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0279",
+					"letter_0295",
+					"letter_0298"
+				]
+			},
+			"4028871-7": {
+				"name": "Jugendbewegung",
+				"type": "",
+				"gndNumber": "4028871-7",
+				"docs": [
+					"smallform_0001",
+					"smallform_0002",
+					"smallform_0003",
+					"smallform_0004",
+					"smallform_0019",
+					"smallform_0021",
+					"smallform_0207",
+					"letter_0407"
+				]
+			},
+			"4029577-1": {
+				"name": "Kapitalismus",
+				"type": "",
+				"gndNumber": "4029577-1",
+				"docs": [
+					"smallform_0176",
+					"smallform_0185",
+					"smallform_0190",
+					"smallform_0206",
+					"smallform_0243",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0279",
+					"smallform_0470"
+				]
+			},
+			"4418991-6": {
+				"name": "Kaugummi",
+				"type": "",
+				"gndNumber": "4418991-6"
+			},
+			"4030550-8": {
+				"name": "Kindheit",
+				"type": "",
+				"gndNumber": "4030550-8",
+				"docs": ["smallform_0015", "smallform_0016"]
+			},
+			"4128152-4": {
+				"name": "Kinderarbeit",
+				"type": "",
+				"gndNumber": "4128152-4",
+				"docs": ["smallform_0195", "smallform_0267", "smallform_0274", "smallform_0303"]
+			},
+			"4031011-5": {
+				"name": "Kleidung",
+				"type": "",
+				"gndNumber": "4031011-5"
+			},
+			"4123525-3": {
+				"name": "Kleinbauer",
+				"type": "",
+				"gndNumber": "4123525-3",
+				"docs": ["smallform_0187", "smallform_0191"]
+			},
+			"4031110-7": {
+				"name": "Kleinstadt",
+				"type": "",
+				"gndNumber": "4031110-7",
+				"docs": ["smallform_0224", "smallform_0228", "smallform_0612", "smallform_0614"]
+			},
+			"4031170-3": {
+				"name": "Klima",
+				"type": "",
+				"gndNumber": "4031170-3"
+			},
+			"4164015-9": {
+				"name": "Klassenbewusstsein",
+				"type": "",
+				"gndNumber": "4164015-9",
+				"docs": ["smallform_0280"]
+			},
+			"4130866-9": {
+				"name": "Klassenkampf",
+				"type": "",
+				"gndNumber": "4130866-9",
+				"docs": ["smallform_0201", "smallform_0206", "smallform_0280"]
+			},
+			"4164683-6": {
+				"name": "Kollektivismus",
+				"type": "",
+				"gndNumber": "4164683-6",
+				"docs": ["smallform_0201"]
+			},
+			"4073624-6": {
+				"name": "Kolonialismus",
+				"type": "",
+				"gndNumber": "4073624-6",
+				"docs": [
+					"smallform_0151",
+					"smallform_0210",
+					"smallform_0243",
+					"smallform_0271",
+					"smallform_0529",
+					"letter_0338"
+				]
+			},
+			"4031892-8": {
+				"name": "Kommunismus",
+				"type": "",
+				"gndNumber": "4031892-8",
+				"docs": [
+					"smallform_0023",
+					"smallform_0190",
+					"smallform_0226",
+					"smallform_0245",
+					"smallform_0248",
+					"letter_0040",
+					"letter_0245",
+					"letter_0253",
+					"letter_0283",
+					"letter_0288",
+					"letter_0292",
+					"letter_0407"
+				]
+			},
+			"4031952-0": {
+				"name": "Komödie",
+				"type": "",
+				"gndNumber": "4031952-0",
+				"docs": ["smallform_0484"]
+			},
+			"4032187-3": {
+				"name": "Konservatismus",
+				"type": "",
+				"gndNumber": "4032187-3",
+				"docs": ["smallform_0014", "smallform_0175"]
+			},
+			"4313630-8": {
+				"name": "Korrespondent",
+				"type": "",
+				"gndNumber": "4313630-8"
+			},
+			"4032524-6": {
+				"name": "Korruption",
+				"type": "",
+				"gndNumber": "4032524-6"
+			},
+			"4032844-2": {
+				"name": "Krankheit",
+				"type": "",
+				"gndNumber": "4032844-2",
+				"docs": [
+					"smallform_0130",
+					"smallform_0248",
+					"smallform_0274",
+					"letter_0056",
+					"letter_0058",
+					"letter_0081",
+					"letter_0082",
+					"letter_0086",
+					"letter_0127",
+					"letter_0217",
+					"letter_0261",
+					"letter_0262",
+					"letter_0279",
+					"letter_0282",
+					"letter_0294",
+					"letter_0343",
+					"letter_0370",
+					"letter_0377",
+					"letter_0402",
+					"letter_0404",
+					"letter_0411",
+					"letter_0476"
+				]
+			},
+			"4033114-3": {
+				"name": "Krieg",
+				"type": "",
+				"gndNumber": "4033114-3",
+				"docs": [
+					"smallform_0123",
+					"smallform_0148",
+					"smallform_0157",
+					"smallform_0160",
+					"smallform_0276",
+					"letter_0058",
+					"letter_0075",
+					"letter_0261",
+					"letter_0339",
+					"letter_0355",
+					"letter_0403",
+					"letter_0406",
+					"letter_0476"
+				]
+			},
+			"4165684-2": {
+				"name": "Kriegseintritt",
+				"type": "",
+				"gndNumber": "4165684-2",
+				"docs": ["smallform_0417"]
+			},
+			"4033131-3": {
+				"name": "Kriegsgefangenschaft",
+				"type": "",
+				"gndNumber": "4033131-3"
+			},
+			"4033178-7": {
+				"name": "Kriminalität",
+				"type": "",
+				"gndNumber": "4033178-7",
+				"docs": ["smallform_0437"]
+			},
+			"4125698-0": {
+				"name": "Kultur",
+				"type": "",
+				"gndNumber": "4125698-0",
+				"docs": ["smallform_0087", "smallform_0188", "smallform_0283", "smallform_0436"]
+			},
+			"4114333-4": {
+				"name": "Kunst",
+				"type": "",
+				"gndNumber": "4114333-4",
+				"docs": [
+					"smallform_0027",
+					"smallform_0484",
+					"letter_0332",
+					"letter_0333",
+					"letter_0339",
+					"letter_0344"
+				]
+			},
+			"4034402-2": {
+				"name": "Landwirtschaft",
+				"type": "",
+				"gndNumber": "4034402-2",
+				"docs": [
+					"smallform_0052",
+					"smallform_0055",
+					"smallform_0096",
+					"smallform_0123",
+					"smallform_0130",
+					"smallform_0172",
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0178",
+					"smallform_0187",
+					"smallform_0191",
+					"smallform_0195",
+					"smallform_0205",
+					"smallform_0207",
+					"smallform_0223",
+					"smallform_0224",
+					"smallform_0245",
+					"smallform_0246",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0271",
+					"smallform_0274",
+					"smallform_0279",
+					"smallform_0280",
+					"smallform_0281",
+					"smallform_0282",
+					"smallform_0284",
+					"smallform_0303",
+					"smallform_0470",
+					"smallform_0529"
+				]
+			},
+			"4166649-5": {
+				"name": "Landschaftszerstörung",
+				"type": "",
+				"gndNumber": "4166649-5",
+				"docs": [
+					"smallform_0186",
+					"smallform_0199",
+					"smallform_0245",
+					"smallform_0279",
+					"smallform_0281"
+				]
+			},
+			"4134319-0": {
+				"name": "Lebensstandard",
+				"type": "",
+				"gndNumber": "4134319-0",
+				"docs": ["smallform_0178", "smallform_0187"]
+			},
+			"4035296-1": {
+				"name": "Lektüre",
+				"type": "",
+				"gndNumber": "4035296-1",
+				"docs": ["letter_0290", "letter_0297"]
+			},
+			"4035646-2": {
+				"name": "Liebe",
+				"type": "",
+				"gndNumber": "4035646-2",
+				"docs": [
+					"smallform_0001",
+					"smallform_0003",
+					"smallform_0022",
+					"smallform_0131",
+					"smallform_0171",
+					"letter_0241",
+					"letter_0257",
+					"letter_0294"
+				]
+			},
+			"4202427-4": {
+				"name": "Licht",
+				"type": "",
+				"gndNumber": "4202427-4",
+				"docs": ["smallform_0084", "smallform_0244"]
+			},
 			"4167873-4": {
 				"name": "Literaturgeschichte (Disziplin)",
 				"type": "",
-				"gndNumber": "4167873-4"
+				"gndNumber": "4167873-4",
+				"docs": ["smallform_0030", "letter_0423"]
 			},
-			"4168383-3": { "name": "Lynchjustiz", "type": "", "gndNumber": "4168383-3" },
-			"4036774-5": { "name": "Lyrik", "type": "", "gndNumber": "4036774-5" },
-			"4198902-8": { "name": "Maschine", "type": "", "gndNumber": "4198902-8" },
-			"4038515-2": { "name": "Melancholie", "type": "", "gndNumber": "4038515-2" },
-			"4074725-6": { "name": "Menschenrechte", "type": "", "gndNumber": "4074725-6" },
-			"4039305-7": { "name": "Militär", "type": "", "gndNumber": "4039305-7" },
-			"4063255-6": { "name": "Militärausgaben", "type": "", "gndNumber": "4063255-6" },
-			"4726796-3": { "name": "Misstrauen", "type": "", "gndNumber": "4726796-3" },
-			"4129108-6": { "name": "Mittelalter", "type": "", "gndNumber": "4129108-6" },
-			"4039501-7": { "name": "Minnesang", "type": "", "gndNumber": "4039501-7" },
-			"4170285-2": { "name": "Mobilmachung", "type": "", "gndNumber": "4170285-2" },
-			"4039792-0": { "name": "Mode", "type": "", "gndNumber": "4039792-0" },
-			"4170344-3": { "name": "Möglichkeit", "type": "", "gndNumber": "4170344-3" },
-			"4120755-5": { "name": "Modernisierung", "type": "", "gndNumber": "4120755-5" },
-			"4137447-2": { "name": "Monokultur", "type": "", "gndNumber": "4137447-2" },
-			"4040222-8": { "name": "Moral", "type": "", "gndNumber": "4040222-8" },
-			"4214151-5": { "name": "Multikulturelle Gesellschaft", "type": "", "gndNumber": "4214151-5" },
-			"4040802-4": { "name": "Musik", "type": "", "gndNumber": "4040802-4" },
-			"7502323-4": { "name": "Mutter-Tochter-Beziehung", "type": "", "gndNumber": "7502323-4" },
-			"4041300-7": { "name": "Nationalismus", "type": "", "gndNumber": "4041300-7" },
-			"4041316-0": { "name": "Nationalsozialismus", "type": "", "gndNumber": "4041316-0" },
-			"4171217-1": { "name": "Nationalität", "type": "", "gndNumber": "4171217-1" },
-			"4041358-5": { "name": "Natur", "type": "", "gndNumber": "4041358-5" },
-			"4427668-0": { "name": "Naturereignis", "type": "", "gndNumber": "4427668-0" },
-			"4171681-4": { "name": "New Deal", "type": "", "gndNumber": "4171681-4" },
-			"4042452-2": { "name": "Nomaden", "type": "", "gndNumber": "4042452-2" },
-			"4042870-9": { "name": "Obdachlosigkeit", "type": "", "gndNumber": "4042870-9" },
-			"1139293370": { "name": "Orientalismus", "type": "", "gndNumber": "1139293370" },
-			"4043912-4": { "name": "Orthodoxe Kirche (Ostkirche)", "type": "", "gndNumber": "4043912-4" },
-			"4043665-2": { "name": "Optimismus", "type": "", "gndNumber": "4043665-2" },
-			"4214966-6": { "name": "Pächter", "type": "", "gndNumber": "4214966-6" },
-			"4132835-8": { "name": "Patriotismus", "type": "", "gndNumber": "4132835-8" },
-			"4045324-8": { "name": "Pessimismus", "type": "", "gndNumber": "4045324-8" },
-			"4045673-0": { "name": "Phantastik", "type": "", "gndNumber": "4045673-0" },
-			"4655583-3": { "name": "Pionier", "type": "", "gndNumber": "4655583-3" },
-			"4136213-5": { "name": "Plantage", "type": "", "gndNumber": "4136213-5" },
-			"4046449-0": { "name": "Poetik", "type": "", "gndNumber": "4046449-0" },
-			"4047020-9": { "name": "Präsidentenwahl", "type": "", "gndNumber": "4047020-9" },
-			"4047150-0": { "name": "Presse", "type": "", "gndNumber": "4047150-0" },
-			"4076374-2": { "name": "Propaganda", "type": "", "gndNumber": "4076374-2" },
-			"4047878-6": { "name": "Puritanismus", "type": "", "gndNumber": "4047878-6" },
-			"4050963-1": { "name": "Radio", "type": "", "gndNumber": "4050963-1" },
-			"4048499-3": { "name": "Rationalisierung", "type": "", "gndNumber": "4048499-3" },
-			"4048531-6": { "name": "Raubbau", "type": "", "gndNumber": "4048531-6" },
-			"4048680-1": { "name": "Realismus", "type": "", "gndNumber": "4048680-1" },
-			"4076527-1": { "name": "Rassismus", "type": "", "gndNumber": "4076527-1" },
-			"4177612-4": { "name": "Reiseliteratur", "type": "", "gndNumber": "4177612-4" },
-			"4049275-8": { "name": "Reisen", "type": "", "gndNumber": "4049275-8" },
-			"4049319-2": { "name": "Reiten", "type": "", "gndNumber": "4049319-2" },
-			"4049185-7": { "name": "Reichtum", "type": "", "gndNumber": "4049185-7" },
-			"4049396-9": { "name": "Religion", "type": "", "gndNumber": "4049396-9" },
-			"4049680-6": { "name": "Revolution", "type": "", "gndNumber": "4049680-6" },
-			"4178275-6": { "name": "Röhm-Putsch", "type": "", "gndNumber": "4178275-6" },
-			"4050491-8": { "name": "Romantik", "type": "", "gndNumber": "4050491-8" },
-			"4115806-4": { "name": "Rüstungsindustrie", "type": "", "gndNumber": "4115806-4" },
-			"4050894-8": { "name": "Aufrüstung", "type": "", "gndNumber": "4050894-8" },
-			"4051949-1": { "name": "Schädling", "type": "", "gndNumber": "4051949-1" },
-			"4116371-0": { "name": "Schatten", "type": "", "gndNumber": "4116371-0" },
-			"4116383-7": { "name": "Schifffahrt", "type": "", "gndNumber": "4116383-7" },
-			"4194681-9": { "name": "Schiffsreise", "type": "", "gndNumber": "4194681-9" },
-			"4052455-3": { "name": "Schiiten", "type": "", "gndNumber": "4052455-3" },
-			"4116418-0": { "name": "Schreiben", "type": "", "gndNumber": "4116418-0" },
-			"4053474-1": { "name": "Schule", "type": "", "gndNumber": "4053474-1" },
-			"4053461-3": { "name": "Schulden", "type": "", "gndNumber": "4053461-3" },
-			"4416843-3": { "name": "Schweizer Einwanderer", "type": "", "gndNumber": "4416843-3" },
-			"4712413-1": { "name": "Schweizer Einwanderin", "type": "", "gndNumber": "4712413-1" },
-			"4077343-7": { "name": "Sekte", "type": "", "gndNumber": "4077343-7" },
-			"4054684-6": { "name": "Sexualität", "type": "", "gndNumber": "4054684-6" },
-			"4136055-2": { "name": "Sezessionskrieg (1861-1865)", "type": "", "gndNumber": "4136055-2" },
-			"4332482-4": { "name": "Siedler", "type": "", "gndNumber": "4332482-4" },
-			"4055245-7": { "name": "Skisport", "type": "", "gndNumber": "4055245-7" },
-			"4055260-3": { "name": "Sklaverei", "type": "", "gndNumber": "4055260-3" },
-			"4077571-9": { "name": "soziale Klasse", "type": "", "gndNumber": "4077571-9" },
-			"4055695-5": { "name": "Sozialdemokratie", "type": "", "gndNumber": "4055695-5" },
-			"4697347-3": { "name": "Spekulation", "type": "", "gndNumber": "4697347-3" },
-			"4056366-2": { "name": "Sport", "type": "", "gndNumber": "4056366-2" },
-			"4454910-6": { "name": "Sprachmischung", "type": "", "gndNumber": "4454910-6" },
-			"4056883-0": { "name": "Stalinismus", "type": "", "gndNumber": "4056883-0" },
-			"4057020-4": { "name": "Staudamm", "type": "", "gndNumber": "4057020-4" },
-			"4057883-5": { "name": "Strasse", "type": "", "gndNumber": "4057883-5" },
-			"4058029-5": { "name": "Streik", "type": "", "gndNumber": "4058029-5" },
-			"4054423-0": { "name": "Suizid", "type": "", "gndNumber": "4054423-0" },
-			"4058665-0": { "name": "Surrealismus", "type": "", "gndNumber": "4058665-0" },
-			"4184403-8": { "name": "Tankstelle", "type": "", "gndNumber": "4184403-8" },
-			"4059205-4": { "name": "Technik", "type": "", "gndNumber": "4059205-4" },
-			"4454574-5": { "name": "Technisierung", "type": "", "gndNumber": "4454574-5" },
-			"4060087-7": { "name": "Tiere", "type": "", "gndNumber": "4060087-7" },
-			"4060491-3": { "name": "Totalitarismus", "type": "", "gndNumber": "4060491-3" },
-			"4018406-7": { "name": "Tourismus", "type": "", "gndNumber": "4018406-7" },
-			"4323955-9": { "name": "Traditionale Kultur", "type": "", "gndNumber": "4323955-9" },
-			"4060747-1": { "name": "Traum", "type": "", "gndNumber": "4060747-1" },
-			"4186270-3": { "name": "Trockenheit", "type": "", "gndNumber": "4186270-3" },
-			"4247898-4": { "name": "Überproduktion", "type": "", "gndNumber": "4247898-4" },
-			"4186634-4": { "name": "Überschwemmung", "type": "", "gndNumber": "4186634-4" },
-			"4061614-9": { "name": "Umsiedlung", "type": "", "gndNumber": "4061614-9" },
-			"4384665-8": { "name": "Unendlichkeit", "type": "", "gndNumber": "4384665-8" },
-			"4732816-2": { "name": "Unfreiheit", "type": "", "gndNumber": "4732816-2" },
-			"4061778-6": { "name": "Universität", "type": "", "gndNumber": "4061778-6" },
-			"4186999-0": { "name": "Unterhaltungsindustrie", "type": "", "gndNumber": "4186999-0" },
-			"4062714-7": { "name": "Verein", "type": "", "gndNumber": "4062714-7" },
-			"4316381-6": { "name": "Vergangenheit", "type": "", "gndNumber": "4316381-6" },
-			"4042696-8": { "name": "Vergewaltigung", "type": "", "gndNumber": "4042696-8" },
-			"4062901-6": { "name": "Verkehr", "type": "", "gndNumber": "4062901-6" },
-			"4359141-3": { "name": "Vernetzung", "type": "", "gndNumber": "4359141-3" },
-			"4187981-8": { "name": "Verschuldung", "type": "", "gndNumber": "4187981-8" },
-			"4063165-5": { "name": "Verschwendung", "type": "", "gndNumber": "4063165-5" },
-			"4063234-9": { "name": "Verstädterung", "type": "", "gndNumber": "4063234-9" },
-			"4063254-4": { "name": "Verteidigung", "type": "", "gndNumber": "4063254-4" },
-			"4137001-6": { "name": "Verzweiflung", "type": "", "gndNumber": "4137001-6" },
-			"4117585-2": { "name": "Wandervogel", "type": "", "gndNumber": "4117585-2" },
-			"4064292-6": { "name": "Wahlkampf", "type": "", "gndNumber": "4064292-6" },
-			"5324656-1": { "name": "Weltausstellung New York", "type": "", "gndNumber": "5324656-1" },
+			"4168383-3": {
+				"name": "Lynchjustiz",
+				"type": "",
+				"gndNumber": "4168383-3",
+				"docs": ["smallform_0248", "smallform_0274", "smallform_0284", "smallform_0303"]
+			},
+			"4036774-5": {
+				"name": "Lyrik",
+				"type": "",
+				"gndNumber": "4036774-5",
+				"docs": ["smallform_0030", "letter_0244", "letter_0247"]
+			},
+			"4198902-8": {
+				"name": "Maschine",
+				"type": "",
+				"gndNumber": "4198902-8"
+			},
+			"4038515-2": {
+				"name": "Melancholie",
+				"type": "",
+				"gndNumber": "4038515-2",
+				"docs": ["smallform_0485"]
+			},
+			"4074725-6": {
+				"name": "Menschenrechte",
+				"type": "",
+				"gndNumber": "4074725-6",
+				"docs": ["smallform_0211"]
+			},
+			"4039305-7": {
+				"name": "Militär",
+				"type": "",
+				"gndNumber": "4039305-7",
+				"docs": [
+					"smallform_0030",
+					"smallform_0276",
+					"smallform_0474",
+					"smallform_0485",
+					"smallform_0488",
+					"letter_0406",
+					"letter_0431"
+				]
+			},
+			"4063255-6": {
+				"name": "Militärausgaben",
+				"type": "",
+				"gndNumber": "4063255-6",
+				"docs": ["smallform_0417"]
+			},
+			"4726796-3": {
+				"name": "Misstrauen",
+				"type": "",
+				"gndNumber": "4726796-3"
+			},
+			"4129108-6": {
+				"name": "Mittelalter",
+				"type": "",
+				"gndNumber": "4129108-6",
+				"docs": ["smallform_0003", "smallform_0166"]
+			},
+			"4039501-7": {
+				"name": "Minnesang",
+				"type": "",
+				"gndNumber": "4039501-7",
+				"docs": ["smallform_0003"]
+			},
+			"4170285-2": {
+				"name": "Mobilmachung",
+				"type": "",
+				"gndNumber": "4170285-2",
+				"docs": ["letter_0121"]
+			},
+			"4039792-0": {
+				"name": "Mode",
+				"type": "",
+				"gndNumber": "4039792-0",
+				"docs": ["smallform_0028", "smallform_0616"]
+			},
+			"4170344-3": {
+				"name": "Möglichkeit",
+				"type": "",
+				"gndNumber": "4170344-3"
+			},
+			"4120755-5": {
+				"name": "Modernisierung",
+				"type": "",
+				"gndNumber": "4120755-5",
+				"docs": [
+					"smallform_0052",
+					"smallform_0148",
+					"smallform_0164",
+					"smallform_0168",
+					"smallform_0170",
+					"smallform_0172",
+					"smallform_0227",
+					"smallform_0229",
+					"smallform_0321"
+				]
+			},
+			"4137447-2": {
+				"name": "Monokultur",
+				"type": "",
+				"gndNumber": "4137447-2",
+				"docs": ["smallform_0191", "smallform_0195", "smallform_0248"]
+			},
+			"4040222-8": {
+				"name": "Moral",
+				"type": "",
+				"gndNumber": "4040222-8",
+				"docs": ["smallform_0021", "smallform_0131", "letter_0443"]
+			},
+			"4214151-5": {
+				"name": "Multikulturelle Gesellschaft",
+				"type": "",
+				"gndNumber": "4214151-5",
+				"docs": ["smallform_0187", "smallform_0212", "smallform_0283"]
+			},
+			"4040802-4": {
+				"name": "Musik",
+				"type": "",
+				"gndNumber": "4040802-4",
+				"docs": ["letter_0238", "letter_0281", "letter_0415", "letter_0417", "letter_0423"]
+			},
+			"7502323-4": {
+				"name": "Mutter-Tochter-Beziehung",
+				"type": "",
+				"gndNumber": "7502323-4",
+				"docs": [
+					"smallform_0131",
+					"letter_0294",
+					"letter_0402",
+					"letter_0418",
+					"letter_0424",
+					"letter_0430",
+					"letter_0442"
+				]
+			},
+			"4041300-7": {
+				"name": "Nationalismus",
+				"type": "",
+				"gndNumber": "4041300-7",
+				"docs": [
+					"smallform_0164",
+					"smallform_0209",
+					"smallform_0224",
+					"smallform_0225",
+					"smallform_0226",
+					"smallform_0227",
+					"smallform_0228",
+					"smallform_0229",
+					"smallform_0232",
+					"smallform_0270",
+					"letter_0003",
+					"letter_0023",
+					"letter_0253",
+					"letter_0407"
+				]
+			},
+			"4041316-0": {
+				"name": "Nationalsozialismus",
+				"type": "",
+				"gndNumber": "4041316-0",
+				"docs": [
+					"smallform_0209",
+					"smallform_0223",
+					"smallform_0226",
+					"smallform_0242",
+					"smallform_0426",
+					"smallform_0432",
+					"smallform_0469",
+					"smallform_0484",
+					"letter_0010",
+					"letter_0011",
+					"letter_0017",
+					"letter_0022",
+					"letter_0023",
+					"letter_0026",
+					"letter_0033",
+					"letter_0040",
+					"letter_0044",
+					"letter_0083",
+					"letter_0086",
+					"letter_0121",
+					"letter_0241",
+					"letter_0250",
+					"letter_0272",
+					"letter_0274",
+					"letter_0277",
+					"letter_0287",
+					"letter_0292",
+					"letter_0407",
+					"letter_0418",
+					"letter_0420"
+				]
+			},
+			"4171217-1": {
+				"name": "Nationalität",
+				"type": "",
+				"gndNumber": "4171217-1",
+				"docs": ["smallform_0225", "smallform_0232"]
+			},
+			"4041358-5": {
+				"name": "Natur",
+				"type": "",
+				"gndNumber": "4041358-5",
+				"docs": ["smallform_0014", "smallform_0029", "smallform_0152"]
+			},
+			"4427668-0": {
+				"name": "Naturereignis",
+				"type": "",
+				"gndNumber": "4427668-0",
+				"docs": ["smallform_0165", "smallform_0175", "smallform_0281", "smallform_0283"]
+			},
+			"4171681-4": {
+				"name": "New Deal",
+				"type": "",
+				"gndNumber": "4171681-4",
+				"docs": [
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0178",
+					"smallform_0185",
+					"smallform_0186",
+					"smallform_0187",
+					"smallform_0188",
+					"smallform_0190",
+					"smallform_0191",
+					"smallform_0195",
+					"smallform_0211",
+					"smallform_0281",
+					"smallform_0282",
+					"smallform_0303",
+					"smallform_0417",
+					"smallform_0436",
+					"smallform_0470"
+				]
+			},
+			"4042452-2": {
+				"name": "Nomaden",
+				"type": "",
+				"gndNumber": "4042452-2",
+				"docs": [
+					"smallform_0151",
+					"smallform_0155",
+					"smallform_0160",
+					"smallform_0161",
+					"smallform_0170",
+					"smallform_0171"
+				]
+			},
+			"4042870-9": {
+				"name": "Obdachlosigkeit",
+				"type": "",
+				"gndNumber": "4042870-9"
+			},
+			"1139293370": {
+				"name": "Orientalismus",
+				"type": "",
+				"gndNumber": "1139293370",
+				"docs": [
+					"smallform_0052",
+					"smallform_0055",
+					"smallform_0087",
+					"smallform_0148",
+					"smallform_0151",
+					"smallform_0164",
+					"smallform_0171"
+				]
+			},
+			"4043912-4": {
+				"name": "Orthodoxe Kirche (Ostkirche)",
+				"type": "",
+				"gndNumber": "4043912-4",
+				"docs": ["smallform_0147", "smallform_0228"]
+			},
+			"4043665-2": {
+				"name": "Optimismus",
+				"type": "",
+				"gndNumber": "4043665-2",
+				"docs": ["smallform_0186", "smallform_0284"]
+			},
+			"4214966-6": {
+				"name": "Pächter",
+				"type": "",
+				"gndNumber": "4214966-6",
+				"docs": [
+					"smallform_0178",
+					"smallform_0195",
+					"smallform_0243",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0274",
+					"smallform_0284",
+					"smallform_0303"
+				]
+			},
+			"4132835-8": {
+				"name": "Patriotismus",
+				"type": "",
+				"gndNumber": "4132835-8",
+				"docs": ["smallform_0283"]
+			},
+			"4045324-8": {
+				"name": "Pessimismus",
+				"type": "",
+				"gndNumber": "4045324-8",
+				"docs": ["smallform_0186", "smallform_0207", "smallform_0284"]
+			},
+			"4045673-0": {
+				"name": "Phantastik",
+				"type": "",
+				"gndNumber": "4045673-0",
+				"docs": ["smallform_0017", "smallform_0022", "smallform_0033"]
+			},
+			"4655583-3": {
+				"name": "Pionier",
+				"type": "",
+				"gndNumber": "4655583-3",
+				"docs": ["smallform_0176", "smallform_0177", "smallform_0186", "smallform_0248"]
+			},
+			"4136213-5": {
+				"name": "Plantage",
+				"type": "",
+				"gndNumber": "4136213-5",
+				"docs": [
+					"smallform_0176",
+					"smallform_0178",
+					"smallform_0191",
+					"smallform_0195",
+					"smallform_0243",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0274",
+					"smallform_0280",
+					"smallform_0281",
+					"smallform_0284",
+					"smallform_0303",
+					"letter_0256"
+				]
+			},
+			"4046449-0": {
+				"name": "Poetik",
+				"type": "",
+				"gndNumber": "4046449-0",
+				"docs": [
+					"smallform_0012",
+					"smallform_0023",
+					"smallform_0030",
+					"smallform_0033",
+					"smallform_0107",
+					"smallform_0302",
+					"letter_0053",
+					"letter_0119",
+					"letter_0126",
+					"letter_0244",
+					"letter_0247",
+					"letter_0255",
+					"letter_0274",
+					"letter_0418"
+				]
+			},
+			"4047020-9": {
+				"name": "Präsidentenwahl",
+				"type": "",
+				"gndNumber": "4047020-9",
+				"docs": [
+					"smallform_0175",
+					"smallform_0176",
+					"smallform_0178",
+					"smallform_0185",
+					"smallform_0186",
+					"smallform_0187",
+					"smallform_0190",
+					"smallform_0211",
+					"smallform_0242",
+					"smallform_0419",
+					"smallform_0426",
+					"smallform_0435",
+					"smallform_0438",
+					"smallform_0465",
+					"smallform_0467",
+					"smallform_0470"
+				]
+			},
+			"4047150-0": {
+				"name": "Presse",
+				"type": "",
+				"gndNumber": "4047150-0",
+				"docs": [
+					"smallform_0175",
+					"smallform_0190",
+					"smallform_0414",
+					"smallform_0417",
+					"smallform_0432",
+					"letter_0064",
+					"letter_0079",
+					"letter_0119",
+					"letter_0284",
+					"letter_0335",
+					"letter_0336",
+					"letter_0348",
+					"letter_0365",
+					"letter_0400"
+				]
+			},
+			"4076374-2": {
+				"name": "Propaganda",
+				"type": "",
+				"gndNumber": "4076374-2",
+				"docs": [
+					"smallform_0176",
+					"smallform_0231",
+					"smallform_0438",
+					"smallform_0484",
+					"letter_0023",
+					"letter_0428",
+					"letter_0430"
+				]
+			},
+			"4047878-6": {
+				"name": "Puritanismus",
+				"type": "",
+				"gndNumber": "4047878-6",
+				"docs": ["smallform_0175", "smallform_0243"]
+			},
+			"4050963-1": {
+				"name": "Radio",
+				"type": "",
+				"gndNumber": "4050963-1",
+				"docs": ["letter_0064"]
+			},
+			"4048499-3": {
+				"name": "Rationalisierung",
+				"type": "",
+				"gndNumber": "4048499-3",
+				"docs": [
+					"smallform_0199",
+					"smallform_0206",
+					"smallform_0246",
+					"smallform_0272",
+					"smallform_0485"
+				]
+			},
+			"4048531-6": {
+				"name": "Raubbau",
+				"type": "",
+				"gndNumber": "4048531-6",
+				"docs": [
+					"smallform_0176",
+					"smallform_0191",
+					"smallform_0246",
+					"smallform_0281",
+					"smallform_0470"
+				]
+			},
+			"4048680-1": {
+				"name": "Realismus",
+				"type": "",
+				"gndNumber": "4048680-1",
+				"docs": ["smallform_0017"]
+			},
+			"4076527-1": {
+				"name": "Rassismus",
+				"type": "",
+				"gndNumber": "4076527-1",
+				"docs": [
+					"smallform_0161",
+					"smallform_0176",
+					"smallform_0187",
+					"smallform_0195",
+					"smallform_0227",
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0246",
+					"smallform_0248",
+					"smallform_0266",
+					"smallform_0274",
+					"smallform_0276",
+					"smallform_0280",
+					"smallform_0303",
+					"smallform_0420",
+					"smallform_0423",
+					"smallform_0436",
+					"smallform_0437",
+					"letter_0033",
+					"letter_0186",
+					"letter_0245",
+					"letter_0248",
+					"letter_0250",
+					"letter_0256",
+					"letter_0288",
+					"letter_0357",
+					"letter_0388"
+				]
+			},
+			"4177612-4": {
+				"name": "Reiseliteratur",
+				"type": "",
+				"gndNumber": "4177612-4",
+				"docs": [
+					"smallform_0028",
+					"smallform_0084",
+					"smallform_0087",
+					"smallform_0090",
+					"smallform_0302"
+				]
+			},
+			"4049275-8": {
+				"name": "Reisen",
+				"type": "",
+				"gndNumber": "4049275-8",
+				"docs": [
+					"smallform_0028",
+					"smallform_0087",
+					"smallform_0090",
+					"smallform_0173",
+					"smallform_0174",
+					"smallform_0231",
+					"smallform_0302",
+					"smallform_0321",
+					"smallform_0413",
+					"smallform_0414",
+					"smallform_0419",
+					"smallform_0421",
+					"smallform_0432",
+					"smallform_0480",
+					"letter_0021",
+					"letter_0056",
+					"letter_0070",
+					"letter_0071",
+					"letter_0073",
+					"letter_0075",
+					"letter_0076",
+					"letter_0077",
+					"letter_0078",
+					"letter_0079",
+					"letter_0083",
+					"letter_0087",
+					"letter_0113",
+					"letter_0126",
+					"letter_0127",
+					"letter_0210",
+					"letter_0230",
+					"letter_0256",
+					"letter_0257",
+					"letter_0264",
+					"letter_0265",
+					"letter_0294",
+					"letter_0329",
+					"letter_0337",
+					"letter_0355",
+					"letter_0361",
+					"letter_0367",
+					"letter_0369",
+					"letter_0377",
+					"letter_0381",
+					"letter_0388",
+					"letter_0390",
+					"letter_0400",
+					"letter_0410",
+					"letter_0418",
+					"letter_0428",
+					"letter_0432"
+				]
+			},
+			"4049319-2": {
+				"name": "Reiten",
+				"type": "",
+				"gndNumber": "4049319-2",
+				"docs": [
+					"smallform_0004",
+					"smallform_0223",
+					"smallform_0611",
+					"smallform_0617",
+					"letter_0254",
+					"letter_0390",
+					"letter_0407",
+					"letter_0418",
+					"letter_0422"
+				]
+			},
+			"4049185-7": {
+				"name": "Reichtum",
+				"type": "",
+				"gndNumber": "4049185-7",
+				"docs": ["smallform_0206", "smallform_0210", "smallform_0244", "smallform_0437"]
+			},
+			"4049396-9": {
+				"name": "Religion",
+				"type": "",
+				"gndNumber": "4049396-9",
+				"docs": [
+					"smallform_0021",
+					"smallform_0146",
+					"smallform_0147",
+					"smallform_0158",
+					"smallform_0166",
+					"smallform_0177",
+					"smallform_0208",
+					"smallform_0209",
+					"smallform_0226",
+					"smallform_0246"
+				]
+			},
+			"4049680-6": {
+				"name": "Revolution",
+				"type": "",
+				"gndNumber": "4049680-6",
+				"docs": ["smallform_0027"]
+			},
+			"4178275-6": {
+				"name": "Röhm-Putsch",
+				"type": "",
+				"gndNumber": "4178275-6",
+				"docs": ["letter_0245", "letter_0272", "letter_0274"]
+			},
+			"4050491-8": {
+				"name": "Romantik",
+				"type": "",
+				"gndNumber": "4050491-8",
+				"docs": ["smallform_0003", "smallform_0022", "smallform_0038"]
+			},
+			"4115806-4": {
+				"name": "Rüstungsindustrie",
+				"type": "",
+				"gndNumber": "4115806-4",
+				"docs": [
+					"smallform_0417",
+					"smallform_0435",
+					"smallform_0438",
+					"smallform_0467",
+					"smallform_0474"
+				]
+			},
+			"4050894-8": {
+				"name": "Aufrüstung",
+				"type": "",
+				"gndNumber": "4050894-8",
+				"docs": ["smallform_0417", "smallform_0426"]
+			},
+			"4051949-1": {
+				"name": "Schädling",
+				"type": "",
+				"gndNumber": "4051949-1"
+			},
+			"4116371-0": {
+				"name": "Schatten",
+				"type": "",
+				"gndNumber": "4116371-0",
+				"docs": ["smallform_0206", "smallform_0244"]
+			},
+			"4116383-7": {
+				"name": "Schifffahrt",
+				"type": "",
+				"gndNumber": "4116383-7",
+				"docs": [
+					"smallform_0421",
+					"smallform_0463",
+					"smallform_0529",
+					"smallform_0612",
+					"smallform_0616",
+					"letter_0357"
+				]
+			},
+			"4194681-9": {
+				"name": "Schiffsreise",
+				"type": "",
+				"gndNumber": "4194681-9",
+				"docs": [
+					"smallform_0242",
+					"smallform_0413",
+					"smallform_0414",
+					"smallform_0416",
+					"smallform_0471",
+					"smallform_0480",
+					"smallform_0529",
+					"letter_0261",
+					"letter_0266",
+					"letter_0294",
+					"letter_0410"
+				]
+			},
+			"4052455-3": {
+				"name": "Schiiten",
+				"type": "",
+				"gndNumber": "4052455-3",
+				"docs": ["smallform_0146"]
+			},
+			"4116418-0": {
+				"name": "Schreiben",
+				"type": "",
+				"gndNumber": "4116418-0",
+				"docs": [
+					"smallform_0302",
+					"smallform_0420",
+					"letter_0081",
+					"letter_0084",
+					"letter_0086",
+					"letter_0119",
+					"letter_0241",
+					"letter_0256",
+					"letter_0262",
+					"letter_0293",
+					"letter_0370"
+				]
+			},
+			"4053474-1": {
+				"name": "Schule",
+				"type": "",
+				"gndNumber": "4053474-1",
+				"docs": ["letter_0411", "letter_0423"]
+			},
+			"4053461-3": {
+				"name": "Schulden",
+				"type": "",
+				"gndNumber": "4053461-3"
+			},
+			"4416843-3": {
+				"name": "Schweizer Einwanderer",
+				"type": "",
+				"gndNumber": "4416843-3",
+				"docs": ["smallform_0188", "smallform_0245", "smallform_0271", "smallform_0463"]
+			},
+			"4712413-1": {
+				"name": "Schweizer Einwanderin",
+				"type": "",
+				"gndNumber": "4712413-1",
+				"docs": ["smallform_0245", "smallform_0416"]
+			},
+			"4077343-7": {
+				"name": "Sekte",
+				"type": "",
+				"gndNumber": "4077343-7",
+				"docs": ["smallform_0160", "smallform_0248", "smallform_0303"]
+			},
+			"4054684-6": {
+				"name": "Sexualität",
+				"type": "",
+				"gndNumber": "4054684-6",
+				"docs": ["smallform_0035"]
+			},
+			"4136055-2": {
+				"name": "Sezessionskrieg (1861-1865)",
+				"type": "",
+				"gndNumber": "4136055-2",
+				"docs": [
+					"smallform_0175",
+					"smallform_0195",
+					"smallform_0243",
+					"smallform_0265",
+					"smallform_0274",
+					"smallform_0280",
+					"smallform_0283",
+					"smallform_0284",
+					"smallform_0303"
+				]
+			},
+			"4332482-4": {
+				"name": "Siedler",
+				"type": "",
+				"gndNumber": "4332482-4",
+				"docs": ["smallform_0175"]
+			},
+			"4055245-7": {
+				"name": "Skisport",
+				"type": "",
+				"gndNumber": "4055245-7",
+				"docs": [
+					"smallform_0029",
+					"smallform_0167",
+					"smallform_0614",
+					"smallform_0615",
+					"letter_0074",
+					"letter_0075",
+					"letter_0293",
+					"letter_0297",
+					"letter_0422",
+					"letter_0423"
+				]
+			},
+			"4055260-3": {
+				"name": "Sklaverei",
+				"type": "",
+				"gndNumber": "4055260-3",
+				"docs": [
+					"smallform_0175",
+					"smallform_0187",
+					"smallform_0243",
+					"smallform_0265",
+					"smallform_0274",
+					"smallform_0280",
+					"smallform_0284",
+					"smallform_0303"
+				]
+			},
+			"4077571-9": {
+				"name": "soziale Klasse",
+				"type": "",
+				"gndNumber": "4077571-9",
+				"docs": [
+					"smallform_0178",
+					"smallform_0201",
+					"smallform_0206",
+					"smallform_0208",
+					"smallform_0272",
+					"smallform_0279",
+					"smallform_0284"
+				]
+			},
+			"4055695-5": {
+				"name": "Sozialdemokratie",
+				"type": "",
+				"gndNumber": "4055695-5",
+				"docs": ["smallform_0226", "smallform_0270", "letter_0253", "letter_0288"]
+			},
+			"4697347-3": {
+				"name": "Spekulation",
+				"type": "",
+				"gndNumber": "4697347-3",
+				"docs": ["smallform_0265"]
+			},
+			"4056366-2": {
+				"name": "Sport",
+				"type": "",
+				"gndNumber": "4056366-2",
+				"docs": ["smallform_0197", "smallform_0207", "smallform_0613", "letter_0235", "letter_0422"]
+			},
+			"4454910-6": {
+				"name": "Sprachmischung",
+				"type": "",
+				"gndNumber": "4454910-6"
+			},
+			"4056883-0": {
+				"name": "Stalinismus",
+				"type": "",
+				"gndNumber": "4056883-0",
+				"docs": ["letter_0245", "letter_0407"]
+			},
+			"4057020-4": {
+				"name": "Staudamm",
+				"type": "",
+				"gndNumber": "4057020-4",
+				"docs": ["smallform_0282"]
+			},
+			"4057883-5": {
+				"name": "Strasse",
+				"type": "",
+				"gndNumber": "4057883-5",
+				"docs": [
+					"smallform_0177",
+					"smallform_0188",
+					"smallform_0197",
+					"smallform_0199",
+					"smallform_0207",
+					"smallform_0212",
+					"smallform_0243",
+					"smallform_0244",
+					"smallform_0245",
+					"smallform_0266",
+					"smallform_0282",
+					"smallform_0414",
+					"smallform_0421",
+					"smallform_0480",
+					"smallform_0485"
+				]
+			},
+			"4058029-5": {
+				"name": "Streik",
+				"type": "",
+				"gndNumber": "4058029-5",
+				"docs": [
+					"smallform_0201",
+					"smallform_0206",
+					"smallform_0211",
+					"smallform_0245",
+					"smallform_0267",
+					"smallform_0272",
+					"smallform_0467"
+				]
+			},
+			"4054423-0": {
+				"name": "Suizid",
+				"type": "",
+				"gndNumber": "4054423-0",
+				"docs": ["letter_0254", "letter_0278", "letter_0294"]
+			},
+			"4058665-0": {
+				"name": "Surrealismus",
+				"type": "",
+				"gndNumber": "4058665-0",
+				"docs": ["smallform_0033"]
+			},
+			"4184403-8": {
+				"name": "Tankstelle",
+				"type": "",
+				"gndNumber": "4184403-8",
+				"docs": ["smallform_0177", "smallform_0485"]
+			},
+			"4059205-4": {
+				"name": "Technik",
+				"type": "",
+				"gndNumber": "4059205-4",
+				"docs": [
+					"smallform_0170",
+					"smallform_0172",
+					"smallform_0177",
+					"smallform_0282",
+					"smallform_0463",
+					"letter_0357"
+				]
+			},
+			"4454574-5": {
+				"name": "Technisierung",
+				"type": "",
+				"gndNumber": "4454574-5",
+				"docs": [
+					"smallform_0187",
+					"smallform_0195",
+					"smallform_0199",
+					"smallform_0248",
+					"smallform_0321",
+					"smallform_0470"
+				]
+			},
+			"4060087-7": {
+				"name": "Tiere",
+				"type": "",
+				"gndNumber": "4060087-7"
+			},
+			"4060491-3": {
+				"name": "Totalitarismus",
+				"type": "",
+				"gndNumber": "4060491-3",
+				"docs": ["smallform_0223", "smallform_0231", "smallform_0426", "letter_0245", "letter_0420"]
+			},
+			"4018406-7": {
+				"name": "Tourismus",
+				"type": "",
+				"gndNumber": "4018406-7",
+				"docs": [
+					"smallform_0028",
+					"smallform_0029",
+					"smallform_0173",
+					"smallform_0177",
+					"smallform_0207",
+					"smallform_0421",
+					"smallform_0423",
+					"smallform_0611",
+					"smallform_0612",
+					"smallform_0613",
+					"smallform_0615",
+					"smallform_0616",
+					"smallform_0617",
+					"letter_0292"
+				]
+			},
+			"4323955-9": {
+				"name": "Traditionale Kultur",
+				"type": "",
+				"gndNumber": "4323955-9",
+				"docs": [
+					"smallform_0147",
+					"smallform_0148",
+					"smallform_0166",
+					"smallform_0207",
+					"smallform_0224",
+					"smallform_0282",
+					"smallform_0283",
+					"smallform_0423",
+					"smallform_0436"
+				]
+			},
+			"4060747-1": {
+				"name": "Traum",
+				"type": "",
+				"gndNumber": "4060747-1",
+				"docs": ["smallform_0022"]
+			},
+			"4186270-3": {
+				"name": "Trockenheit",
+				"type": "",
+				"gndNumber": "4186270-3",
+				"docs": ["smallform_0176", "smallform_0191", "smallform_0244", "smallform_0470"]
+			},
+			"4247898-4": {
+				"name": "Überproduktion",
+				"type": "",
+				"gndNumber": "4247898-4"
+			},
+			"4186634-4": {
+				"name": "Überschwemmung",
+				"type": "",
+				"gndNumber": "4186634-4",
+				"docs": ["smallform_0175"]
+			},
+			"4061614-9": {
+				"name": "Umsiedlung",
+				"type": "",
+				"gndNumber": "4061614-9",
+				"docs": [
+					"smallform_0178",
+					"smallform_0191",
+					"smallform_0195",
+					"smallform_0205",
+					"smallform_0211",
+					"smallform_0281",
+					"smallform_0284"
+				]
+			},
+			"4384665-8": {
+				"name": "Unendlichkeit",
+				"type": "",
+				"gndNumber": "4384665-8"
+			},
+			"4732816-2": {
+				"name": "Unfreiheit",
+				"type": "",
+				"gndNumber": "4732816-2",
+				"docs": ["smallform_0242"]
+			},
+			"4061778-6": {
+				"name": "Universität",
+				"type": "",
+				"gndNumber": "4061778-6",
+				"docs": [
+					"smallform_0055",
+					"smallform_0150",
+					"smallform_0197",
+					"smallform_0243",
+					"smallform_0282",
+					"letter_0296"
+				]
+			},
+			"4186999-0": {
+				"name": "Unterhaltungsindustrie",
+				"type": "",
+				"gndNumber": "4186999-0",
+				"docs": ["smallform_0034", "smallform_0038"]
+			},
+			"4062714-7": {
+				"name": "Verein",
+				"type": "",
+				"gndNumber": "4062714-7"
+			},
+			"4316381-6": {
+				"name": "Vergangenheit",
+				"type": "",
+				"gndNumber": "4316381-6"
+			},
+			"4042696-8": {
+				"name": "Vergewaltigung",
+				"type": "",
+				"gndNumber": "4042696-8",
+				"docs": ["smallform_0274"]
+			},
+			"4062901-6": {
+				"name": "Verkehr",
+				"type": "",
+				"gndNumber": "4062901-6",
+				"docs": [
+					"smallform_0146",
+					"smallform_0170",
+					"smallform_0172",
+					"smallform_0188",
+					"smallform_0199",
+					"smallform_0212",
+					"smallform_0228",
+					"smallform_0485",
+					"smallform_0617"
+				]
+			},
+			"4359141-3": {
+				"name": "Vernetzung",
+				"type": "",
+				"gndNumber": "4359141-3",
+				"docs": ["smallform_0421", "smallform_0480", "smallform_0485"]
+			},
+			"4187981-8": {
+				"name": "Verschuldung",
+				"type": "",
+				"gndNumber": "4187981-8"
+			},
+			"4063165-5": {
+				"name": "Verschwendung",
+				"type": "",
+				"gndNumber": "4063165-5"
+			},
+			"4063234-9": {
+				"name": "Verstädterung",
+				"type": "",
+				"gndNumber": "4063234-9",
+				"docs": ["smallform_0199"]
+			},
+			"4063254-4": {
+				"name": "Verteidigung",
+				"type": "",
+				"gndNumber": "4063254-4",
+				"docs": ["smallform_0467"]
+			},
+			"4137001-6": {
+				"name": "Verzweiflung",
+				"type": "",
+				"gndNumber": "4137001-6"
+			},
+			"4117585-2": {
+				"name": "Wandervogel",
+				"type": "",
+				"gndNumber": "4117585-2"
+			},
+			"4064292-6": {
+				"name": "Wahlkampf",
+				"type": "",
+				"gndNumber": "4064292-6"
+			},
+			"5324656-1": {
+				"name": "Weltausstellung New York",
+				"type": "",
+				"gndNumber": "5324656-1",
+				"docs": ["smallform_0416", "smallform_0419", "smallform_0471"]
+			},
 			"4079171-3": {
 				"name": "Weltwirtschaftskrise (1929-1932)",
 				"type": "",
-				"gndNumber": "4079171-3"
+				"gndNumber": "4079171-3",
+				"docs": [
+					"smallform_0175",
+					"smallform_0178",
+					"smallform_0185",
+					"smallform_0187",
+					"smallform_0195",
+					"smallform_0205",
+					"smallform_0206",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0211",
+					"smallform_0212",
+					"smallform_0248",
+					"smallform_0265",
+					"smallform_0266",
+					"smallform_0267",
+					"smallform_0271",
+					"smallform_0279",
+					"smallform_0280",
+					"smallform_0282",
+					"smallform_0283",
+					"smallform_0284",
+					"smallform_0435"
+				]
 			},
-			"4065541-6": { "name": "Werbung", "type": "", "gndNumber": "4065541-6" },
-			"4127225-0": { "name": "Wildnis", "type": "", "gndNumber": "4127225-0" },
-			"4066334-6": { "name": "Wintersport", "type": "", "gndNumber": "4066334-6" },
-			"4066380-2": { "name": "Wirklichkeit", "type": "", "gndNumber": "4066380-2" },
-			"4066466-1": { "name": "Wirtschaftskrise", "type": "", "gndNumber": "4066466-1" },
-			"4066562-8": { "name": "Wissenschaft", "type": "", "gndNumber": "4066562-8" },
-			"1138650579": { "name": "Wohlstand", "type": "", "gndNumber": "1138650579" },
-			"4251872-6": { "name": "Wohltätigkeitsorg", "type": "", "gndNumber": "4251872-6" },
-			"4067043-0": { "name": "Wüste", "type": "", "gndNumber": "4067043-0" },
-			"4067601-8": { "name": "Zensur", "type": "", "gndNumber": "4067601-8" },
-			"4067864-7": { "name": "Zionismus", "type": "", "gndNumber": "4067864-7" },
-			"4067906-8": { "name": "Zivilisation", "type": "", "gndNumber": "4067906-8" },
-			"7617561-3": { "name": "Zwangsarbeit", "type": "", "gndNumber": "7617561-3" },
-			"4079167-1": { "name": "Zweiter Weltkrieg", "type": "", "gndNumber": "4079167-1" },
-			"1250270871": { "name": "Zwischenkriegszeit", "type": "", "gndNumber": "1250270871" },
-			"4068097-6": { "name": "Zukunft", "type": "", "gndNumber": "4068097-6" },
-			"antebellum": { "name": "Antebellum-Kultur", "type": "", "gndNumber": "" },
-			"auslandschweizer": { "name": "Auslandschweizer", "type": "", "gndNumber": "" },
-			"bedeaux": { "name": "Bedeaux-System", "type": "", "gndNumber": "" },
-			"emigration": { "name": "Emigration", "type": "", "gndNumber": "" },
-			"endlosigkeit": { "name": "Endlosigkeit", "type": "", "gndNumber": "" },
-			"heimfahrt": { "name": "Heimfahrt / Heimreise", "type": "", "gndNumber": "" },
-			"heuchlerei": { "name": "Heuchlerei", "type": "", "gndNumber": "" },
-			"rüstungsprogramm": { "name": "Rüstungsprogramm", "type": "", "gndNumber": "" },
-			"schmelztiegel": { "name": "Schmelztiegel (Motiv)", "type": "", "gndNumber": "" },
-			"swissness": { "name": "Swissness / Schweizerisches", "type": "", "gndNumber": "" },
+			"4065541-6": {
+				"name": "Werbung",
+				"type": "",
+				"gndNumber": "4065541-6",
+				"docs": ["smallform_0244"]
+			},
+			"4127225-0": {
+				"name": "Wildnis",
+				"type": "",
+				"gndNumber": "4127225-0",
+				"docs": ["smallform_0152"]
+			},
+			"4066334-6": {
+				"name": "Wintersport",
+				"type": "",
+				"gndNumber": "4066334-6",
+				"docs": ["smallform_0613", "smallform_0615"]
+			},
+			"4066380-2": {
+				"name": "Wirklichkeit",
+				"type": "",
+				"gndNumber": "4066380-2"
+			},
+			"4066466-1": {
+				"name": "Wirtschaftskrise",
+				"type": "",
+				"gndNumber": "4066466-1",
+				"docs": ["letter_0346"]
+			},
+			"4066562-8": {
+				"name": "Wissenschaft",
+				"type": "",
+				"gndNumber": "4066562-8",
+				"docs": ["smallform_0052", "smallform_0055", "smallform_0197", "letter_0332", "letter_0344"]
+			},
+			"1138650579": {
+				"name": "Wohlstand",
+				"type": "",
+				"gndNumber": "1138650579"
+			},
+			"4251872-6": {
+				"name": "Wohltätigkeitsorg",
+				"type": "",
+				"gndNumber": "4251872-6"
+			},
+			"4067043-0": {
+				"name": "Wüste",
+				"type": "",
+				"gndNumber": "4067043-0"
+			},
+			"4067601-8": {
+				"name": "Zensur",
+				"type": "",
+				"gndNumber": "4067601-8",
+				"docs": ["letter_0083", "letter_0250"]
+			},
+			"4067864-7": {
+				"name": "Zionismus",
+				"type": "",
+				"gndNumber": "4067864-7",
+				"docs": ["letter_0281"]
+			},
+			"4067906-8": {
+				"name": "Zivilisation",
+				"type": "",
+				"gndNumber": "4067906-8",
+				"docs": ["smallform_0209"]
+			},
+			"7617561-3": {
+				"name": "Zwangsarbeit",
+				"type": "",
+				"gndNumber": "7617561-3",
+				"docs": ["smallform_0284"]
+			},
+			"4079167-1": {
+				"name": "Zweiter Weltkrieg",
+				"type": "",
+				"gndNumber": "4079167-1",
+				"docs": [
+					"smallform_0413",
+					"smallform_0414",
+					"smallform_0417",
+					"smallform_0419",
+					"smallform_0420",
+					"smallform_0421",
+					"smallform_0423",
+					"smallform_0426",
+					"smallform_0432",
+					"smallform_0435",
+					"smallform_0438",
+					"smallform_0465",
+					"smallform_0467",
+					"smallform_0469",
+					"smallform_0471",
+					"smallform_0474",
+					"smallform_0480",
+					"smallform_0484",
+					"smallform_0485",
+					"smallform_0488",
+					"smallform_0494",
+					"letter_0121",
+					"letter_0241",
+					"letter_0262",
+					"letter_0264",
+					"letter_0266",
+					"letter_0351",
+					"letter_0360",
+					"letter_0369"
+				]
+			},
+			"1250270871": {
+				"name": "Zwischenkriegszeit",
+				"type": "",
+				"gndNumber": "1250270871"
+			},
+			"4068097-6": {
+				"name": "Zukunft",
+				"type": "",
+				"gndNumber": "4068097-6",
+				"docs": [
+					"smallform_0177",
+					"smallform_0188",
+					"smallform_0199",
+					"smallform_0201",
+					"smallform_0207",
+					"smallform_0210",
+					"smallform_0212",
+					"letter_0081"
+				]
+			},
+			"antebellum": {
+				"name": "Antebellum-Kultur",
+				"type": "",
+				"gndNumber": ""
+			},
+			"auslandschweizer": {
+				"name": "Auslandschweizer",
+				"type": "",
+				"gndNumber": ""
+			},
+			"bedeaux": {
+				"name": "Bedeaux-System",
+				"type": "",
+				"gndNumber": ""
+			},
+			"emigration": {
+				"name": "Emigration",
+				"type": "",
+				"gndNumber": ""
+			},
+			"endlosigkeit": {
+				"name": "Endlosigkeit",
+				"type": "",
+				"gndNumber": ""
+			},
+			"heimfahrt": {
+				"name": "Heimfahrt / Heimreise",
+				"type": "",
+				"gndNumber": ""
+			},
+			"heuchlerei": {
+				"name": "Heuchlerei",
+				"type": "",
+				"gndNumber": ""
+			},
+			"rüstungsprogramm": {
+				"name": "Rüstungsprogramm",
+				"type": "",
+				"gndNumber": ""
+			},
+			"schmelztiegel": {
+				"name": "Schmelztiegel (Motiv)",
+				"type": "",
+				"gndNumber": ""
+			},
+			"swissness": {
+				"name": "Swissness / Schweizerisches",
+				"type": "",
+				"gndNumber": ""
+			},
 			"vergangenheitskonstruktion": {
 				"name": "Vergangenheitskonstruktion",
 				"type": "",
 				"gndNumber": ""
 			},
-			"weisse": { "name": "weisse Hegemonie", "type": "", "gndNumber": "" },
-			"weite": { "name": "Weite", "type": "", "gndNumber": "" }
+			"weisse": {
+				"name": "weisse Hegemonie",
+				"type": "",
+				"gndNumber": ""
+			},
+			"weite": {
+				"name": "Weite",
+				"type": "",
+				"gndNumber": ""
+			}
 		}
 	}
 }

@@ -615,8 +615,8 @@
 		"correspondence": {
 			"corr_spec_0001": {
 				"url_slug": "full",
-				"name": "Alle Briefe",
-				"preamble": "Alle Briefe",
+				"name": "Gesamtkorrespondenz",
+				"preamble": "Gesamtkorrespondenz",
 				"docs": [
 					"letter_0001",
 					"letter_0002",
@@ -953,23 +953,6 @@
 				"preamble": "Briefwechsel mit Georg Thürer",
 				"personId": "person_0092",
 				"docs": []
-			}
-		},
-		"topics": {
-			"topic_0001": {
-				"url_slug": "gender",
-				"preamble": "Dokumente zum Thema Gender",
-				"docs": ["smallform_0002", "smallform_0044", "smallform_0231", "smallform_0232"]
-			},
-			"topic_0002": {
-				"url_slug": "intermediality",
-				"preamble": "Dokumente zum Thema Intermedialität",
-				"docs": ["smallform_0231", "smallform_0232"]
-			},
-			"topic_0003": {
-				"url_slug": "family",
-				"preamble": "Dokumente zum Thema Familie",
-				"docs": ["letter_0001", "smallform_0044"]
 			}
 		},
 		"series": {

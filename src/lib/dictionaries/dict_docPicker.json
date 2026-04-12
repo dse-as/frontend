@@ -1,0 +1,26 @@
+{
+	"meta": {},
+	"dict_docPicker": {
+		"smallforms": {
+			"name": "Kleine Formen",
+			"key_singular": "smallform",
+			"label_plural": "Kleine Formen",
+			"attributes": {},
+			"type_labels": {}
+		},
+		"longforms": {
+			"name": "Lange Formen",
+			"key_singular": "longform",
+			"label_plural": "Lange Formen",
+			"attributes": {},
+			"type_labels": {}
+		},
+		"letters": {
+			"name": "Briefe",
+			"key_singular": "letter",
+			"label_plural": "Briefe",
+			"attributes": {},
+			"type_labels": {}
+		}
+	}
+}

@@ -3,42 +3,36 @@ import { type TPeopleKeys } from './TPeopleKeys';
 import { type TEventsKeys } from './TEventsKeys';
 import { type TKeywordsKeys } from './TKeywordsKeys';
 import { type TOrgsKeys } from './TOrgsKeys';
-import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
-import { type TLongformsKeys } from '../documents/TLongformsKeys';
-import { type TLettersKeys } from '../documents/TLettersKeys';
 import type { TBiblsKeys } from './TBiblsKeys';
+import type { TSmallformsKeys } from '../documents/TSmallformsKeys';
+import type { TLettersKeys } from '../documents/TLettersKeys';
+import type { TLongformsKeys } from '../documents/TLongformsKeys';
 
 export type TPeopleTypes = string; //! restrict to subet later
 export type TPlacesTypes = string; //! restrict to subet later
 export type TEventsTypes = string; //! restrict to subet later
 export type TOrgsTypes = string; //! restrict to subet later
-export type TSmallformsTypes = 'article' | 'feuilleton';
-export type TLongformsTypes = string; //! restrict to subet later
-export type TLettersTypes = string; //! restrict to subet later
 export type TBiblsTypes = string; //! restrict to subet later
 export type TKeywordsTypes = string; //! restrict to subet later
 // Entities
-export type TEntityTypes =
-	| 'people'
-	| 'places'
-	| 'events'
-	| 'orgs'
-	| 'smallforms'
-	| 'longforms'
-	| 'letters'
-	| 'bibls'
-	| 'keywords';
+export type TEntityTypes = 'people' | 'places' | 'events' | 'orgs' | 'bibls' | 'keywords';
 
 export type TEntityNames =
 	| 'Personen'
 	| 'Orte'
 	| 'Events'
 	| 'Organisationen'
-	| 'Kleine Formen'
-	| 'Lange Formen'
-	| 'Briefe'
 	| 'Bibliografie'
 	| 'Stichworte';
+
+// All Register Keys
+export type TRegKeys =
+	| TPeopleKeys
+	| TPlacesKeys
+	| TEventsKeys
+	| TKeywordsKeys
+	| TOrgsKeys
+	| TBiblsKeys;
 
 // Register
 export type TRegister = {
@@ -61,6 +55,7 @@ export type TRegister = {
 				type: TPeopleTypes;
 				orgId: TOrgsKeys;
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		places: {
@@ -73,6 +68,7 @@ export type TRegister = {
 				coords: [number, number];
 				country: string;
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		events: {
@@ -81,6 +77,7 @@ export type TRegister = {
 				type: TEventsTypes;
 				date?: { from: string; to: string };
 				note: string;
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		orgs: {
@@ -90,33 +87,7 @@ export type TRegister = {
 				gndNumber?: string; // optional
 				type: TOrgsTypes;
 				note: string;
-			};
-		};
-		smallforms?: {
-			[key in TSmallformsKeys]: {
-				name: string;
-				authorId: TPeopleKeys; //! string to account for uncertainties
-				pubDate: string;
-				type: TSmallformsTypes;
-				gndNumber?: string; // optional
-			};
-		};
-		longforms?: {
-			[key in TLongformsKeys]: {
-				name: string;
-				authorId: TPeopleKeys; //! string to account for uncertainties
-				pubDate: string;
-				type: TSmallformsTypes;
-				gndNumber?: string; // optional
-			};
-		};
-		letters?: {
-			[key in TLettersKeys]: {
-				name: string;
-				authorId: TPeopleKeys; //! string to account for uncertainties
-				pubDate: string;
-				type: TLettersTypes;
-				gndNumber?: string; // optional
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		bibls: {
@@ -126,6 +97,8 @@ export type TRegister = {
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				gndNumber?: string; // optional
+				note?: string; // optional
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		keywords: {
@@ -133,6 +106,8 @@ export type TRegister = {
 				name: string;
 				type: TKeywordsTypes;
 				gndNumber?: string; // optional
+				note?: string; // optional
+				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 	};

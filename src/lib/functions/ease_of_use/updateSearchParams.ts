@@ -1,7 +1,4 @@
-export function updateSearchParams(
-	searchParams: URLSearchParams,
-	keyValue: Record<string, string | null | undefined>
-) {
+export function updateSearchParams(searchParams, keyValue) {
 	// This function updates (or deletes) searchParams and directly returns searchParams.toString()
 	// This is useful for usage in anchor-tags.
 	//! Probably, this could be replaced with https://runed.dev/docs/utilities/use-search-params
