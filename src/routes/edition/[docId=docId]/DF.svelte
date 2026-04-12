@@ -2,7 +2,7 @@
 	import IIIF_Viewer from './IIIF_Viewer.svelte';
 	import TextPaged from './TextPaged.svelte';
 
-	let { meta, ceteiData, annot, docId, currentPage } = $props();
+	let { meta, ceteiData, docId, currentPage } = $props();
 	let urls = meta[docId].manuscript.iiif_urls;
 </script>
 

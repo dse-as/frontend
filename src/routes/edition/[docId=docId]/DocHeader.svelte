@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { metadata, annot, docId } = $props();
+	let { metadata, ceteiData, docId } = $props();
 	let isExpandedBox1 = $state(false);
 	let isExpandedBox2 = $state(false);
 
@@ -9,15 +9,12 @@
 	const reg = register.register;
 	const dictReg = dict_register.dict_register;
 
-	// Load Component with Global Comment
-	import type { Component } from 'svelte';
-	let GlobalComment: Component | null = $state(null);
-	let globalCommentId = $derived(annot[docId]?.globCommId);
-	(async () => {
-		if (docId && globalCommentId) {
-			GlobalComment = (await import(`$lib/data/global_comments/${globalCommentId}.svelte`)).default;
-		}
-	})();
+	// let globalComponent = 'Hello, I am the component';
+
+	let globalComponent = $derived.by(() => {
+		const match = ceteiData.serialized.match(/<tei-notesstmt\b[^>]*>(.*?)<\/tei-notesstmt>/s);
+		return match ? match[1] : '';
+	});
 </script>
 
 {#if metadata[docId]}
@@ -55,12 +52,12 @@
 		{/if}
 
 		<!-- Global Comment -->
-		{#if globalCommentId}
+		{#if globalComponent}
 			<div class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}>
 				<div class={[isExpandedBox1 ? 'h-auto' : 'max-h-40 overflow-hidden']}>
 					<h5 class="mb-4 h5"><strong>Kommentar</strong></h5>
 					<div data-dom="global_comment">
-						<GlobalComment />
+						{@html globalComponent}
 					</div>
 				</div>
 
