@@ -29,5 +29,8 @@
 		:global(li.highlighted) {
 			@apply bg-green-300;
 		}
+		:global(a) {
+			@apply mr-5 underline;
+		}
 	}
 </style>

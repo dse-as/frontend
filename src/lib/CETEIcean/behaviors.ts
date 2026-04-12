@@ -9,7 +9,7 @@ export const behaviors = (dom) => {
 				}
 				let id = 'note' + this.noteIndex;
 				let link = dom.createElement('a');
-				link.setAttribute('id', 'src' + id);
+				link.setAttribute('id', `src_${id}`);
 				link.setAttribute('href', '#' + id);
 				link.dataset.noteId = this.noteIndex;
 				link.innerHTML = this.noteIndex;
@@ -23,7 +23,7 @@ export const behaviors = (dom) => {
 				}
 				let note = dom.createElement('li');
 				note.id = id;
-				note.innerHTML = '<a href="#src' + id + '">^</a> ' + elt.innerHTML;
+				note.innerHTML = `<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + elt.innerHTML;
 				notes.appendChild(note);
 				return content;
 			}
