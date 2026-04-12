@@ -9,6 +9,9 @@
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
+	let serializedWithoutNotes = $derived(
+		ceteiData.serialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
+	);
 </script>
 
 <div
@@ -17,7 +20,7 @@
 	class="overflow-y-auto p-10"
 	{@attach setupCustomElements}
 >
-	{@html ceteiData.serialized}
+	{@html serializedWithoutNotes}
 </div>
 
 <style>
