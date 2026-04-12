@@ -42,7 +42,7 @@
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
 								data-entitytype={dictReg[regType].key_singular}
-								href={resolve(`/edition/register#${regKey}`)}
+								href={resolve(`/edition/register/${regKey}`)}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -121,15 +121,18 @@
 				<div class={['relative mt-5 mb-20 px-5 pt-5']}>
 					{#if stateMetadata === 'eckdaten'}
 						<div class="flex flex-col gap-2">
-							{@render metadataEntry('Voller Titel', title_full)}
-							{@render metadataEntry('Publikationsdatum', pubDate)}
-							{@render metadataEntry('Publikationsort', pubPlace)}
-							{@render metadataEntry('Publikation einzig post-hum', pubPosthumOnly)}
-							{@render metadataEntry('Publikationsdetails', pubDetails)}
+							{@render metadataEntry('Voller Titel', metadata[docId]?.metadata.title_full)}
+							{@render metadataEntry('Publikationsdatum', metadata[docId]?.metadata.pubDate)}
+							{@render metadataEntry('Publikationsort', metadata[docId]?.metadata.pubPlace)}
+							{@render metadataEntry(
+								'Publikation einzig post-hum',
+								metadata[docId]?.metadata.pubPosthumOnly
+							)}
+							{@render metadataEntry('Publikationsdetails', metadata[docId]?.metadata.pubDetails)}
 						</div>
 					{:else if stateMetadata === 'sources'}
 						<div>
-							{@render metadataEntry('Signatur', signature)}
+							{@render metadataEntry('Signatur', metadata[docId]?.metadata.signature)}
 						</div>
 					{:else if stateMetadata === 'keywords'}
 						<!-- Global Entities -->
@@ -146,7 +149,7 @@
 											class="whitespace-nowrap text-surface-950"
 											data-type="entity"
 											data-entitytype={dictReg[regType].key_singular}
-											href={resolve(`/edition/register#${regKey}`)}
+											href={resolve(`/edition/register/${regKey}`)}
 											target="_blank"
 											rel="noopener noreferrer"
 										>
