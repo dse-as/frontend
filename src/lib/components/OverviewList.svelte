@@ -235,7 +235,7 @@
 						? item.date.from.slice(0, 4)
 						: normalizeChars(item[sortBy][0]?.toUpperCase())}
 				{#if autoCatLabel && autoCatLabel !== currentAutoCatLabel}
-					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=first)` -->
+					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=auto)` -->
 					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}
 				{/if}
 				{@render regListItem(item)}
