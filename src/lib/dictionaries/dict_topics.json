@@ -1,0 +1,27 @@
+{
+	"meta": {},
+	"dict_topics": {
+		"topic_0001": {
+			"sequence_name": "Gender",
+			"key_singular": "gender",
+			"label_plural": "Dokumente zum Thema Gender",
+			"url_overview": "/topics/gender",
+			"label_overview": "In Themenansicht ansehen"
+		},
+		"topic_0002": {
+			"sequence_name": "Intermedialität",
+			"key_singular": "intermediality",
+			"label_plural": "Dokumente zum Thema Intermedialität",
+			"url_overview": "/topics/intermediality",
+			"label_overview": "In Themenansicht ansehen"
+		},
+		"topic_0003": {
+			"url_slug": "intermediality",
+			"sequence_name": "Familie",
+			"key_singular": "family",
+			"label_plural": "Dokumente zum Thema Familie",
+			"url_overview": "/topics/family",
+			"label_overview": "In Themenansicht ansehen"
+		}
+	}
+}

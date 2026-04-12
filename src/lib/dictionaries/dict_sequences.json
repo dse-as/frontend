@@ -2,6 +2,7 @@
 	"meta": {},
 	"dict_sequences": {
 		"textstufen": {
+			"sequence_name": "Textstufen",
 			"key_singular": "textstufe",
 			"label_plural": "Textstufen",
 			"url_overview": null,
@@ -10,6 +11,7 @@
 			"label_prev": "Vorheriges Dokument"
 		},
 		"travels": {
+			"sequence_name": "Reisen",
 			"key_singular": "travel",
 			"label_plural": "Reisen",
 			"url_overview": "/topics/travels",
@@ -18,14 +20,16 @@
 			"label_prev": "Vorheriges Dokument"
 		},
 		"correspondence": {
+			"sequence_name": "Korrespondenz",
 			"key_singular": "correspondence",
-			"label_plural": "Korrespondenzen",
+			"label_plural": "Korrespondenz",
 			"url_overview": "/correspondence",
 			"label_overview": "In Korrespondenzansicht ansehen",
 			"label_next": "Nächster Brief",
 			"label_prev": "Vorheriger Brief"
 		},
 		"topics": {
+			"sequence_name": "Themen",
 			"key_singular": "topic",
 			"label_plural": "Themen",
 			"url_overview": "/topics",
@@ -34,8 +38,9 @@
 			"label_prev": "Vorheriges Dokument"
 		},
 		"series": {
+			"sequence_name": "Publikationsserien",
 			"key_singular": "series",
-			"label_plural": "Publikations Serien",
+			"label_plural": "Publikationsserien",
 			"url_overview": "/series",
 			"label_overview": "In Serienansicht ansehen",
 			"label_next": "Nächstes Dokument",

@@ -1,0 +1,25 @@
+{
+	"meta": {
+		"generated_by": "mock-data",
+		"task": "",
+		"generated_on": "datestring",
+		"description": ""
+	},
+	"doc_topics": {
+		"topic_0001": {
+			"url_slug": "gender",
+			"preamble": "Dokumente zum Thema Gender",
+			"docs": ["smallform_0002", "smallform_0044", "smallform_0231", "smallform_0232"]
+		},
+		"topic_0002": {
+			"url_slug": "intermediality",
+			"preamble": "Dokumente zum Thema Intermedialität",
+			"docs": ["smallform_0231", "smallform_0232"]
+		},
+		"topic_0003": {
+			"url_slug": "family",
+			"preamble": "Dokumente zum Thema Familie",
+			"docs": ["letter_0001", "smallform_0044"]
+		}
+	}
+}
