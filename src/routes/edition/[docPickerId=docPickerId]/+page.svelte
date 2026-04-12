@@ -61,7 +61,7 @@
 		/>
 		<OverviewContent
 			ovType={data.edType}
-			ovAttrs={data.regAttributes}
+			ovAttrs={data.fullMeta[data.edType]?.[data.edSlug]}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
 		/>
