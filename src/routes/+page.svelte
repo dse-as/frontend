@@ -1,1 +1,1 @@
-<h1>DSE Annemarie Schwarzenbach</h1>
+<h1 class="h1">DSE Annemarie Schwarzenbach</h1>

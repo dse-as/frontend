@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
+	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;
@@ -13,17 +15,17 @@
 		page: number;
 	};
 
-	let { metadata, docId, pagenum } = $props();
+	let { fullMeta, docId, docMeta, pagenum } = $props();
 
 	// Textzeugen
-	const textzeugen = $derived(metadata[docId]?.metadata.textzeugen_nonedited || []);
+	const tzgIds = $derived(docMeta?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
 
-	function collectGalleryItems(pagenum_running: string) {
+	function collectGalleryItems(docId: string) {
 		const items: TItem[] =
-			metadata[pagenum_running]?.manuscript.iiif_urls.map((el: string, idx: number) => {
+			docMeta?.manuscript.iiif_urls.map((el: string, idx: number) => {
 				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
 			}) || [];
 		return items;
@@ -59,7 +61,7 @@
 		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 transition-all duration-200"
 	>
 		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10 py-5">
-			{#each collectGalleryItems(docId) as item, index (item.fac)}
+			{#each collectGalleryItems(docId) as item, index (item.page)}
 				<button
 					bind:this={buttonRefs[index]}
 					class={[
@@ -73,7 +75,7 @@
 				</button>
 			{/each}
 		</div>
-		{#if textzeugen.length && !showTextzeugen}
+		{#if tzgIds.length && !showTextzeugen}
 			<button
 				class="m-5 self-start rounded-full underline"
 				onclick={() => {
@@ -83,20 +85,25 @@
 		{/if}
 		{#if showTextzeugen}
 			<div class="bg-surface-800 px-10 py-5 text-surface-200">
-				{#each textzeugen as textzeuge}
-					{@const items = collectGalleryItems(textzeuge)}
-					<p>Textzeuge {metadata[textzeuge]?.metadata.label}</p>
+				{#each tzgIds as tzgId}
+					{@const tzgType = findEdTypeByDocId(tzgId)}
+					{@const items = collectGalleryItems(tzgId)}
+					<h6 class="h6">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
 					<div class="flex w-full gap-5 overflow-x-auto rounded-xl px-10 py-5">
-						{#each items as item}
+						{#each items as item (item.page)}
 							<a
 								class="ml-2 rounded-xl p-1"
-								href={`${textzeuge}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
+								href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
 								<span class="italic">Seite {item.page}</span>
 							</a>
+						{:else}
+							<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
+								>Keine Faksimile gefunden</a
+							>
 						{/each}
 					</div>
 				{/each}

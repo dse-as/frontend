@@ -1,10 +1,9 @@
 <script lang="ts">
-	let { metadata, ceteiData, docId } = $props();
+	let { docMeta, ceteiData } = $props();
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	let isExpandedBox1 = $state(false);
-	let isExpandedBox2 = $state(false);
 
 	const reg = register.register as Record<string, Record<string, any>>;
 	const dictReg = dict_register.dict_register as Record<
@@ -16,27 +15,27 @@
 		return match ? match[1] : '';
 	});
 
-	let stateMetadata = $state('eckdaten');
+	let stateMetadata = $state(undefined);
 	let isExpandedMetadata = $state(false);
 </script>
 
-{#if metadata[docId]}
+{#if docMeta}
 	<div class="w-full pb-10">
-		<h1 class="h1">{metadata[docId]?.metadata.title_full}</h1>
+		<h1 class="h1">{docMeta.metadata.title_full}</h1>
 		<h2 class="h2">
-			Publiziert in {metadata[docId]?.metadata.pubPlace} ({metadata[docId]?.metadata.year})
+			Publiziert in {docMeta.metadata.pubPlace} ({docMeta.metadata.year})
 		</h2>
 
 		<!-- Global Entities -->
 		{#if Object.keys(dictReg).some((regType) => {
-			const keywords = metadata[docId]?.metadata.keywords[regType];
+			const keywords = docMeta.metadata.keywords[regType];
 			return keywords && keywords.length > 0;
 		})}
 			<div class="mt-10">
 				<h5 class="mb-4 h5"><strong>Schlagwörter</strong></h5>
 				<div data-dom="global_entities" class="flex flex-wrap gap-2">
 					{#each Object.keys(dictReg) as regType}
-						{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
+						{@const regKeys = docMeta.metadata.keywords[regType]}
 						{#each regKeys ? (Object.values(regKeys) as string[]) : [] as regKey}
 							<a
 								class="whitespace-nowrap text-surface-950"
@@ -115,35 +114,35 @@
 				{@render metadataButton('keywords', 'Schlagwörter')}
 				{@render metadataButton('citation', 'Zitierhinweise')}
 				{@render metadataButton('download', 'Download-Links')}
-				{@render metadataButton('all', 'Alles (Temporär)')}
+				<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 			</div>
 			{#if isExpandedMetadata}
 				<div class={['relative mt-5 mb-20 px-5 pt-5']}>
 					{#if stateMetadata === 'eckdaten'}
 						<div class="flex flex-col gap-2">
-							{@render metadataEntry('Voller Titel', metadata[docId]?.metadata.title_full)}
-							{@render metadataEntry('Publikationsdatum', metadata[docId]?.metadata.pubDate)}
-							{@render metadataEntry('Publikationsort', metadata[docId]?.metadata.pubPlace)}
+							{@render metadataEntry('Voller Titel', docMeta.metadata.title_full)}
+							{@render metadataEntry('Publikationsdatum', docMeta.metadata.pubDate)}
+							{@render metadataEntry('Publikationsort', docMeta.metadata.pubPlace)}
 							{@render metadataEntry(
 								'Publikation einzig post-hum',
-								metadata[docId]?.metadata.pubPosthumOnly
+								docMeta.metadata.pubPosthumOnly
 							)}
-							{@render metadataEntry('Publikationsdetails', metadata[docId]?.metadata.pubDetails)}
+							{@render metadataEntry('Publikationsdetails', docMeta.metadata.pubDetails)}
 						</div>
 					{:else if stateMetadata === 'sources'}
 						<div>
-							{@render metadataEntry('Signatur', metadata[docId]?.metadata.signature)}
+							{@render metadataEntry('Signatur', docMeta.metadata.signature)}
 						</div>
 					{:else if stateMetadata === 'keywords'}
 						<!-- Global Entities -->
 						{#if Object.keys(dictReg).some((regType) => {
-							const keywords = metadata[docId]?.metadata.keywords[regType];
+							const keywords = docMeta.metadata.keywords[regType];
 							return keywords && keywords.length > 0;
 						})}
 							<h5 class="mb-4 h5"><strong>Schlagwörter</strong></h5>
 							<div data-dom="global_entities" class="flex flex-wrap gap-2">
 								{#each Object.keys(dictReg) as regType}
-									{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
+									{@const regKeys = docMeta.metadata.keywords[regType]}
 									{#each regKeys ? Object.values(regKeys) : [] as regKey}
 										<a
 											class="whitespace-nowrap text-surface-950"
@@ -167,7 +166,7 @@
 						<div class={[isExpandedMetadata ? 'h-auto' : 'max-h-13 overflow-hidden']}>
 							<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
 							<div data-dom="metadata_table" class="">
-								{#each Object.entries(metadata[docId]?.metadata) as entry}
+								{#each Object.entries(docMeta.metadata) as entry}
 									{#if entry[0] !== 'keywords'}
 										<p><strong>{entry[0]}:</strong> {entry[1]}</p>
 									{/if}
@@ -180,7 +179,7 @@
 		</div>
 	</div>
 {:else}
-	<h1 class="text-red-500">metadata.{docId} is not defined</h1>
+	<h1 class="text-red-500">metadata is not defined</h1>
 {/if}
 
 <style lang="postcss">

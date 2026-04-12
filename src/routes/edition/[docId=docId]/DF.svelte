@@ -2,8 +2,8 @@
 	import IIIF_Viewer from './IIIF_Viewer.svelte';
 	import TextPaged from './TextPaged.svelte';
 
-	let { meta, ceteiData, docId } = $props();
-	let urls = $derived(meta[docId]?.manuscript?.iiif_urls ?? []);
+	let { docMeta, ceteiData } = $props();
+	let urls = $derived(docMeta?.manuscript?.iiif_urls ?? []);
 </script>
 
 <div data-fassung="DF" class="grid h-full grid-cols-1 overflow-hidden md:grid-cols-2">

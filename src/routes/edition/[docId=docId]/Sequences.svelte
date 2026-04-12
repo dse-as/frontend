@@ -8,7 +8,7 @@
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
-	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
+	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -27,9 +27,8 @@
 	>;
 
 	let {
-		metadata,
+		fullMeta,
 		docId,
-		pagenum,
 		currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' }
 	} = $props();
 
@@ -189,7 +188,8 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
-	{@const itemInfo = lookupDocInfo(itemId, metadata)}
+	{@const itemType = findEdTypeByDocId(itemId)}
+	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
 		class={[
@@ -205,11 +205,16 @@
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb url={itemInfo.fac} maxWidth="80" maxHeight="80" classes="rounded-xl" />
+				<IIIF_Thumb
+					url={itemMeta?.manuscript?.iiif_urls[0]}
+					maxWidth="80"
+					maxHeight="80"
+					classes="rounded-xl"
+				/>
 			</div>
 			<div class="flex flex-col">
-				<span class="italic">{itemInfo.details.title}</span>
-				<span class="">{itemInfo.details.datestring}</span>
+				<span class="italic">{itemMeta?.metadata?.title_full}</span>
+				<span class="">{itemMeta?.metadata?.pubDate}</span>
 			</div>
 		</div>
 	</a>

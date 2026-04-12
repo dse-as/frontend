@@ -2,16 +2,10 @@ export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
 import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
-
-function findEdTypeByDocId(docId: string) {
-	if (docId.includes('smallform')) return 'smallforms';
-	else if (docId.includes('longform')) return 'longforms';
-	else if (docId.includes('letter')) return 'letters';
-	else return '';
-}
+import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
 export const load: LayoutServerLoad = async ({ parent, url }) => {
-	const { meta } = await parent();
+	const { fullMeta } = await parent();
 
 	const edSlug: string | undefined = url.pathname.split('/').pop(); //! better use params.edSlug;
 
@@ -24,13 +18,13 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 			: edSlug && Object.keys(dictDocPicker).includes(edSlug)
 				? // e.g. /edition/[smallforms]
 					'edView2'
-				: Object.keys(meta).includes(edSlug)
-					? // e.g. /edition/[smallform_0001]
+				: Object.values(fullMeta).some((inner) => Object.keys(inner).includes(edSlug)) &&
+					  url.pathname.includes('doc-overview') //! FIX change this, once the slugs are stable
+					? // e.g. /edition/doc-overview/[smallform_0001]
 						'edView3'
-					: '';
+					: null;
 
 	let edType: string | null | undefined = edView === 'edView2' ? edSlug : findEdTypeByDocId(edSlug);
 
-	console.log('view/type', edView, edType);
 	return { edSlug, edType, edView };
 };

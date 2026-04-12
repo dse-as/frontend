@@ -155,7 +155,12 @@
 			<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
 
 			<button class="sticky top-0 float-right ml-2 bg-white" onclick={() => openDFpage(item.page)}>
-				<IIIF_Thumb url={item.facs} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+				<IIIF_Thumb
+					url={item.docMeta?.manuscript?.iiif_urls[0]}
+					maxWidth="100"
+					maxHeight="100"
+					classes="rounded-xl"
+				/>
 				<span class="italic">Seite {item.page}</span>
 			</button>
 		{/each}

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
 
 	import LF from './LF.svelte';
 	import Gallery from './Gallery.svelte';
@@ -32,18 +31,13 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences
-		metadata={data.meta}
-		docId={page.params.docId}
-		{pagenum}
-		currentSeq={data.currentSeq}
-	/>
+	<Sequences fullMeta={data.fullMeta} docId={data.docId} currentSeq={data.currentSeq} />
 
 	<!-- Metadata -->
-	<DocHeader metadata={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
+	<DocHeader docMeta={data.docMeta} ceteiData={data.ceteiData} />
 
 	<!-- Thumbnail Gallery -->
-	<Gallery metadata={data.meta} docId={page.params.docId} {pagenum} />
+	<Gallery fullMeta={data.fullMeta} docId={data.docId} docMeta={data.docMeta} {pagenum} />
 
 	<!-- DFLF Toggle -->
 	<button
@@ -59,15 +53,16 @@
 			dflf == 'DF'
 				? 'bg-surface-300-700 text-surface-950-50'
 				: 'bg-surface-700-300 text-surface-100-900'
-		]}>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}</button
-	>
+		]}
+		>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}
+	</button>
 
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
-			<LF meta={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
+			<LF docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} />
 		{:else if dflf === 'DF'}
-			<DF meta={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
+			<DF docMeta={data.docMeta} ceteiData={data.ceteiData} />
 		{/if}
 	</div>
 </div>

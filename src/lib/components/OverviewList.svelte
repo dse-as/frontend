@@ -2,31 +2,38 @@
 	import { goto } from '$app/navigation';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
-	import { register as reg } from '$lib/data/register.json';
-	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
+	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
 
 	// Props
-	let { isMultiColumn, regType, regItem = null, cheatPageHeightInRegSingleColView = '' } = $props();
+	let {
+		isMultiColumn,
+		ovMeta,
+		ovType,
+		ovItem = null,
+		cheatPageHeightInRegSingleColView = ''
+	} = $props();
 
 	// States for sorting and grouping
-	let hasGroupControls = $derived(['events', 'orgs', 'people', 'places'].includes(regType));
-	let hasSortControls = $derived(regType === 'events');
+	let hasGroupControls = $derived(
+		['letters', 'smallforms', 'longforms', 'events', 'orgs', 'people', 'places'].includes(ovType)
+	);
+	let hasSortControls = $derived(['letters', 'smallforms', 'longforms', 'events'].includes(ovType));
 	let hasControls = $derived(hasGroupControls || hasSortControls);
 
 	// Defaults
-	const defaultSortBy = regType === 'people' ? 'lastname' : 'name'; // won't work if not also set 'name' in ui.svelte.ts (//! Fix this)
+	const defaultSortBy = ovType === 'people' ? 'lastname' : 'name'; // won't work if not also set 'name' in ui.svelte.ts (//! Fix this)
 	uiRegSortBy.id = uiRegSortBy.id ? uiRegSortBy.id : defaultSortBy; // If empty set to default
-	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
+	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for ovTypes without sorting options.
+	$inspect(sortBy);
 
 	let allTypeKeys = $derived(
 		[
 			...new Set(
-				Object.values(reg[regType]).map((el) => {
+				Object.values(ovMeta).map((el) => {
 					return el.type;
 				})
 			)
@@ -36,13 +43,13 @@
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
 	let sortVariableKeyForAlphabet = $derived(
-		regType === 'people' ? 'lastname' : regType === 'events' ? sortBy : 'name'
+		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
 	);
 	let currentAutoCatLabel: string | null = null;
 	let autoCatLabels = $derived(
 		[
 			...new Set(
-				Object.values(reg[regType]).map((el) => {
+				Object.values(ovMeta).map((el) => {
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
 					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
 				})
@@ -66,7 +73,7 @@
 	}
 
 	$effect(() => {
-		if (regItem) scrollToItem(regItem);
+		if (ovItem) scrollToItem(ovItem);
 	});
 </script>
 
@@ -76,7 +83,7 @@
 		id={item.key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && item.key === regItem && 'bg-surface-100-900 font-bold'
+			!isMultiColumn && item.key === ovItem && 'bg-surface-100-900 font-bold'
 		]}
 		href={item.key}
 	>
@@ -222,14 +229,14 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label || typeKey || '?')}
-				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
+				{@render groupTitle(dictDocPicker[ovType].type_labels[typeKey]?.label || typeKey || '?')}
+				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
 					{@render regListItem(item)}
 				{/each}
 			{/each}
-		{:else if regType}
+		{:else if ovType}
 			<!-- All other types -->
-			{#each filterAndSortData(reg[regType], sortBy) as item (item.key)}
+			{#each filterAndSortData(ovMeta, sortBy) as item (item.key)}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
 						? item.date.from.slice(0, 4)
@@ -245,7 +252,7 @@
 
 	<!-- Alphabet Shortcuts -->
 	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
-		<!-- Hide the alphabet for regTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
+		<!-- Hide the alphabet for ovTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
 		<div class="mt-10 flex w-full justify-center gap-2">
 			{#each autoCatLabels as letter (letter)}
 				<button
