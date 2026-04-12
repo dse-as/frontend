@@ -7,14 +7,14 @@
 	type TVisibleTab = 'register' | 'comments';
 	let visibleTab: TVisibleTab = $state('register');
 
-	let { meta, ceteiData, docId } = $props();
+	let { docId, docMeta, ceteiData } = $props();
 </script>
 
 <div
 	data-fassung="LF"
 	class="grid h-full grid-cols-1 gap-5 overflow-hidden md:grid-cols-[auto_500px]"
 >
-	<TextFluid {meta} {ceteiData} {docId} />
+	<TextFluid {ceteiData} />
 
 	<Tabs
 		class="h-full overflow-hidden pl-5"
@@ -27,7 +27,7 @@
 			<Tabs.Indicator />
 		</Tabs.List>
 		<Tabs.Content value="register" class="h-full overflow-y-auto">
-			<Register {meta} {docId} />
+			<Register {docId} {docMeta} />
 		</Tabs.Content>
 
 		<Tabs.Content value="comments" class="h-full overflow-hidden">

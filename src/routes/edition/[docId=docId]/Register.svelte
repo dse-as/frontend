@@ -11,11 +11,11 @@
 	>;
 	const reg = register.register as Record<string, Record<string, any>>;
 
-	let { meta, docId } = $props();
+	let { docId, docMeta } = $props();
 
 	const regTypes = Object.keys(reg);
 	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {
-		if (meta[docId]?.entities[regType]?.length > 0) {
+		if (docMeta?.entities[regType]?.length > 0) {
 			acc.push(regType as TEntityTypes);
 		}
 		return acc;

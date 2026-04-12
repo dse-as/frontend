@@ -5,12 +5,12 @@
 	// To do so, each regAttribute has to be parsed for orgId and personId in the load function.
 	import { register as reg } from '$lib/data/register.json';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-	import { lookupDocInfo } from '$lib/functions/ease_of_use/lookupDocInfo';
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
+	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
-	let { metadata, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
+	let { fullMeta, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
@@ -92,21 +92,27 @@
 {/snippet}
 
 <!-- Snippet for LinkedItems (inside LinkedItemsList) -->
-{#snippet LinkedItems(docId)}
-	{@const attributesInfo = lookupDocInfo(docId, metadata)}
+{#snippet LinkedItems(itemId)}
+	{@const itemType = findEdTypeByDocId(itemId)}
+	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
-		href={`/edition/${docId}`}
+		href={`/edition/${itemId}`}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
 		target="blank"
 		rel="noopener noreferrer"
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb url={attributesInfo.fac} maxWidth="80" maxHeight="80" classes="rounded-xl" />
+				<IIIF_Thumb
+					url={itemMeta?.manuscript?.iiif_urls[0]}
+					maxWidth="80"
+					maxHeight="80"
+					classes="rounded-xl"
+				/>
 			</div>
 			<div class="flex flex-col">
-				<span class="italic">{attributesInfo.details.title}</span>
-				<span class="">{attributesInfo.details.datestring}</span>
+				<span class="italic">{itemMeta?.metadata?.title_full}</span>
+				<span class="">{itemMeta?.metadata?.pubDate}</span>
 			</div>
 		</div>
 	</a>

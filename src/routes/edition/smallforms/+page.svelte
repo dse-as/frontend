@@ -57,7 +57,7 @@
 		<OverviewContent
 			regType={data.edType}
 			regAttributes={data.regAttributes}
-			metadata={data.meta}
+			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
 		/>
 	</div>
