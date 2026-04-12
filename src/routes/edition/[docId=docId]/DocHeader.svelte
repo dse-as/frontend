@@ -1,7 +1,7 @@
 <script lang="ts">
 	let { metadata, ceteiData, docId } = $props();
 	import register from '$lib/data/register.json';
-	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
+	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	let isExpandedBox1 = $state(false);
 	let isExpandedBox2 = $state(false);
@@ -15,6 +15,9 @@
 		const match = ceteiData.serialized.match(/<tei-notesstmt\b[^>]*>(.*?)<\/tei-notesstmt>/s);
 		return match ? match[1] : '';
 	});
+
+	let stateMetadata = $state('eckdaten');
+	let isExpandedMetadata = $state(false);
 </script>
 
 {#if metadata[docId]}

@@ -57,7 +57,7 @@ export type TSmallforms_meta = {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
 					letters?: TLettersKeys[];
-					bibls?: TBiblKeys[];
+					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
 				maximum: string; //! what is this?
@@ -76,7 +76,7 @@ export type TSmallforms_meta = {
 				smallforms?: TSmallformsKeys[];
 				longforms?: TLongformsKeys[];
 				letters?: TLettersKeys[];
-				bibls?: TBiblKeys[];
+				bibls?: TBiblsKeys[];
 				keywords?: TKeywordsKeys[];
 			};
 			manuscript: {

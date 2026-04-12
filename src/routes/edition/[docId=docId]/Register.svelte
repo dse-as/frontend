@@ -1,48 +1,25 @@
 <script lang="ts">
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
-
-	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-	import { register as reg } from '$lib/data/register.json';
+	import dict_register from '$lib/dictionaries/dict_register.json';
+	import register from '$lib/data/register.json';
 	import { type TEntityTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
 
-	let { meta, docId } = $props();
-
-	const reg = register.register as Record<string, Record<string, any>>;
 	const dictReg = dict_register.dict_register as Record<
 		string,
 		{ key_singular: string; label_plural: string }
 	>;
-	const regTypes = Object.keys(reg);
+	const reg = register.register as Record<string, Record<string, any>>;
 
+	let { meta, docId } = $props();
+
+	const regTypes = Object.keys(reg);
 	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {
 		if (meta[docId]?.entities[regType]?.length > 0) {
 			acc.push(regType as TEntityTypes);
 		}
 		return acc;
 	}, []);
-
-	function getAllKeys(reg) {
-		const keysList = [];
-
-		// Iterate over each property in the reg object
-		Object.keys(reg).forEach((type) => {
-			// Check if the property is an object
-			if (typeof reg[type] === 'object' && reg[type] !== null) {
-				Object.keys(reg[type]).forEach((item) => {
-					if (typeof reg[type][item] === 'object' && reg[type][item] !== null) {
-						// Iterate over the keys in the nested object
-						Object.keys(reg[type][item]).forEach((key) => {
-							keysList.push(key);
-						});
-					}
-				});
-			}
-		});
-
-		return keysList;
-	}
-
 	let openRegisters: TEntityTypes[] = $state(nonEmptyRegTypes);
 
 	// Collect all regKeys in the register that are linked to the document
