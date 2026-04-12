@@ -9,10 +9,13 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import CETEI from 'CETEIcean';
+	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
 	let { meta, ceteiData, docId } = $props();
+
+	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
 	// ---------------------------------------------
 	// Thumbnails
@@ -121,20 +124,9 @@
 	// ---------------------------------------------
 	// Load text
 	const c = new CETEI();
-	// add behaviours here
-	c.addBehaviors({
-		tei: {
-			note: ['(((', ')))'], // why is this not working?
-			rs: [
-				[['[type=person]'], ['-->', '<--']],
-				[['[type=place]'], ['-->', '<--']]
-			]
-		}
-	});
-	c.addBehavior('tei', 'rs', [[['[type=person]'], ['>>>', '<<<']]]); // unfortunately overwrites ALL rs behaviors
-	c.addBehavior('tei', 'rs', [[['[type=place]'], ['>>>', '<<<']]]); // unfortunately overwrites ALL rs behaviors
 
-	const setupCustomElements = () => {
+	const setupCustomElements = (el: HTMLElement) => {
+		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
 </script>
@@ -163,10 +155,9 @@
 		class="max-w-none"
 		{@attach setupFacsimile}
 		{@attach setupListeners}
+		{@attach setupCustomElements}
 	>
-		<div {@attach setupCustomElements}>
-			{@html ceteiData.serialized}
-		</div>
+		{@html serializedWithoutNotes}
 	</main>
 </div>
 

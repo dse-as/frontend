@@ -8,5 +8,5 @@
 
 <div data-fassung="DF" class="grid h-full grid-cols-1 overflow-hidden md:grid-cols-2">
 	<IIIF_Viewer iiif_url={urls[0]} />
-	<TextPaged {docId} {currentPage} />
+	<TextPaged {docId} {currentPage} {ceteiData} />
 </div>

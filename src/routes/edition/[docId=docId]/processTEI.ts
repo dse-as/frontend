@@ -1,3 +1,4 @@
+import { behaviors, wrapAnnotations } from '$lib/CETEIcean/behaviors';
 import CETEI from 'CETEIcean';
 import { JSDOM } from 'jsdom';
 
@@ -20,10 +21,11 @@ const processTEI = (xml: string): ProcessedTEI => {
 	});
 
 	//apply behaviors here, if needed, before serializing
-
+	ceteicean.addBehaviors(behaviors(htmlDoc));
 	const domFragment = ceteicean.domToHTML5(xmlDoc);
 	const container = htmlDoc.createElement('div');
 	container.appendChild(domFragment);
+	wrapAnnotations(container);
 	const serialized = container.innerHTML;
 
 	return {
