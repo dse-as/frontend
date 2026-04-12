@@ -10,7 +10,7 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
-	let { fullMeta, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
+	let { fullMeta, ovType, ovAttrs, cheatPageHeightInRegSingleColView = '' } = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
@@ -40,10 +40,8 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictReg[regType].attributes[attKey]?.label}:</td>
-						<td class="px-4 py-2 text-left"
-							>{@render MetadataValue(attKey, regAttributes[attKey])}</td
-						>
+						<td class="w-80 px-4 py-2 font-bold">{dictReg[ovType].attributes[attKey]?.label}:</td>
+						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, ovAttrs[attKey])}</td>
 					</tr>
 				</tbody>
 			{/if}
@@ -125,67 +123,80 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if regType === 'people'}
+	{#if ovType === 'letters'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
+		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
+	{:else if ovType === 'smallforms'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
-			{regAttributes.name}
-			{printBirthRange(regAttributes.dateBirth, regAttributes.dateDeath)}
+			{ovAttrs.name}
+		</h1>
+		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
+	{:else if ovType === 'longforms'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+			{ovAttrs.name}
+		</h1>
+		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
+	{:else if ovType === 'people'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+			{ovAttrs.name}
+			{printBirthRange(ovAttrs.dateBirth, ovAttrs.dateDeath)}
 		</h1>
 		{@render MetadataTable([
 			'lastname',
 			'firstname',
-			regAttributes.nameVariants.length && 'nameVariants', // only show when existing
+			ovAttrs.nameVariants.length && 'nameVariants', // only show when existing
 			'type',
 			'gndNumber',
 			'orgId',
 			'note'
 		])}
-	{:else if regType === 'places'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+	{:else if ovType === 'places'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
 		{@render MetadataTable([
 			'type',
-			regAttributes.nameVariants.length && 'nameVariants',
-			regAttributes.gndNumber && 'gndNumber',
-			regAttributes.geoNamesLink && 'geoNamesLink',
+			ovAttrs.nameVariants.length && 'nameVariants',
+			ovAttrs.gndNumber && 'gndNumber',
+			ovAttrs.geoNamesLink && 'geoNamesLink',
 			'coords',
-			regAttributes.country && 'country',
+			ovAttrs.country && 'country',
 			'note'
 		])}
-	{:else if regType === 'orgs'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+	{:else if ovType === 'orgs'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
 		{@render MetadataTable([
 			'type',
-			regAttributes.nameVariants.length && 'nameVariants',
-			regAttributes.gndNumber && 'gndNumber',
+			ovAttrs.nameVariants.length && 'nameVariants',
+			ovAttrs.gndNumber && 'gndNumber',
 			'note'
 		])}
-	{:else if regType === 'keywords'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
-		{@render MetadataTable(['type', regAttributes.gndNumber && 'gndNumber', 'note'])}
-	{:else if regType === 'events'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+	{:else if ovType === 'keywords'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
+		{@render MetadataTable(['type', ovAttrs.gndNumber && 'gndNumber', 'note'])}
+	{:else if ovType === 'events'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
 		{@render MetadataTable(['date', 'note'])}
-	{:else if regType === 'bibls'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+	{:else if ovType === 'bibls'}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
 		{@render MetadataTable([
 			'type',
 			'authorId',
 			'pubDate',
-			regAttributes.gndNumber && 'gndNumber',
+			ovAttrs.gndNumber && 'gndNumber',
 			'note'
 		])}
 	{/if}
 
 	<!-- Linked documents -->
-	{#if regType === 'people'}
+	{#if ovType === 'people'}
 		<!-- //! These lists can later be toggled on/off depending on content -->
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
 			Korrespondenz mit Annemarie Schwarzenbach
 		</h2>
-		{@render LinkedItemsContainer(regAttributes?.docs)}
+		{@render LinkedItemsContainer(ovAttrs?.docs)}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Weitere Dokumente</h2>
-		{@render LinkedItemsContainer(regAttributes?.docs)}
+		{@render LinkedItemsContainer(ovAttrs?.docs)}
 	{:else}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verlinkte Dokumente</h2>
-		<div class="min-h-[40vh]">{@render LinkedItemsContainer(regAttributes?.docs)}</div>
+		<div class="min-h-[40vh]">{@render LinkedItemsContainer(ovAttrs?.docs)}</div>
 	{/if}
 </div>

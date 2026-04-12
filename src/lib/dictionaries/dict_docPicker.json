@@ -6,21 +6,37 @@
 			"key_singular": "smallform",
 			"label_plural": "Kleine Formen",
 			"attributes": {},
-			"type_labels": {}
+			"type_labels": {
+				"Typoskript": { "label": "Typoskript", "slug": null },
+				"Manuskript": { "label": "Manuskript", "slug": null },
+				"Feuilleton": { "label": "Feuilleton", "slug": null },
+				"Rezension": { "label": "Rezension", "slug": null },
+				"Beilage": { "label": "Beilage", "slug": null },
+				"Fotoreportage": { "label": "Fotoreportage", "slug": null },
+				"Fotografie": { "label": "Fotografie", "slug": null },
+				"Zeitschriftenartikel": { "label": "Zeitschriftenartikel", "slug": null },
+				"Zeitungsartikel": { "label": "Zeitungsartikel", "slug": null },
+				"Sammelband-Beitrag": { "label": "Sammelband-Beitrag", "slug": null },
+				"Serie'": { "label": "Serie", "slug": null }
+			}
 		},
 		"longforms": {
 			"name": "Lange Formen",
 			"key_singular": "longform",
 			"label_plural": "Lange Formen",
 			"attributes": {},
-			"type_labels": {}
+			"type_labels": {
+				"longform'": { "label": "Lange Form", "slug": null }
+			}
 		},
 		"letters": {
 			"name": "Briefe",
 			"key_singular": "letter",
 			"label_plural": "Briefe",
 			"attributes": {},
-			"type_labels": {}
+			"type_labels": {
+				"Brief'": { "label": "Brief", "slug": null }
+			}
 		}
 	}
 }

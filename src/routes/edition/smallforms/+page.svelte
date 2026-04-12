@@ -41,22 +41,27 @@
 
 {#if data.edView === 'edView2'}
 	<!-- Overview with Multi-Column List -->
-	<p>{'edSlug: '} {data.edSlug}</p>
 	<div class="absolute top-60 left-0 w-full px-10">
-		<OverviewList isMultiColumn={true} regType={data.edSlug} regItem={null} />
+		<OverviewList
+			isMultiColumn={true}
+			ovMeta={data.fullMeta[data.edType]}
+			ovType={data.edSlug}
+			ovItem={null}
+		/>
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<OverviewList
 			isMultiColumn={false}
-			regType={data.edType}
-			regItem={data.edSlug}
+			ovMeta={data.fullMeta[data.edType]}
+			ovType={data.edType}
+			ovItem={data.edSlug}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<OverviewContent
-			regType={data.edType}
-			regAttributes={data.regAttributes}
+			ovType={data.edType}
+			ovAttrs={data.regAttributes}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
 		/>
