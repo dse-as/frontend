@@ -56,3 +56,8 @@ export function wrapAnnotations(container: HTMLElement) {
 		nodes.forEach((n) => wrapper.appendChild(n));
 	});
 }
+
+/** Run on client text components to remove the footnotes list from the main tetx */
+export function removeNotesFromMaintext(ceteiSerialized: String) {
+	return ceteiSerialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
+};

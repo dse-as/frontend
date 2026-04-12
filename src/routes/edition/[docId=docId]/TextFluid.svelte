@@ -9,15 +9,13 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import CETEI from 'CETEIcean';
-	import { behaviors } from '$lib/CETEIcean/behaviors';
+	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
 	let { meta, ceteiData, docId } = $props();
 
-	let serializedWithoutNotes = $derived(
-		ceteiData.serialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
-	);
+	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
 	// ---------------------------------------------
 	// Thumbnails

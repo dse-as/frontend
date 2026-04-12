@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CETEI from 'CETEIcean';
-	import { behaviors } from '$lib/CETEIcean/behaviors';
+	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
 
 	let { docId, currentPage, ceteiData } = $props();
 	const c = new CETEI();
@@ -9,9 +9,7 @@
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
-	let serializedWithoutNotes = $derived(
-		ceteiData.serialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
-	);
+	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 </script>
 
 <div
