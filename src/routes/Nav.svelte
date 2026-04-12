@@ -93,7 +93,7 @@
 									{#each links as link}
 										<li class="m-2!">
 											<a
-												href={resolve(link.path)}
+												href={link.path}
 												onclick={() => {
 													openStateMenu = false; // close Menu
 												}}

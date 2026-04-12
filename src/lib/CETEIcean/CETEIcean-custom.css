@@ -35,7 +35,7 @@
 	vertical-align: super;
 	cursor: pointer;
 	margin-left: 0.25rem;
-	color: var(--blue-600);
+	color: var(--color-blue-600);
 }
 
 .tei-marker.hover {
@@ -43,12 +43,12 @@
 }
 
 .note-item.hover {
-	background-color: var(--yellow-100);
+	background-color: var(--color-yellow-100);
 }
 
 .note-item.active {
-	background-color: var(--yellow-200);
-	border-left: 4px solid var(--yellow-500);
+	background-color: var(--color-yellow-200);
+	border-left: 4px solid var(--color-yellow-500);
 }
 
 /* -------------------------------- */
@@ -65,7 +65,6 @@ tei-note > sup {
 	background-color: #fef08a;
 	transition-property: all;
 	transition-duration: 200ms;
-	background-color: 200ms;
 }
 
 .tei-annotation.active {
@@ -87,9 +86,6 @@ tei-note > sup {
 	font-size: 1.5rem; /* text-2xl */
 	font-weight: 700; /* font-bold */
 }
-[type='pagebreak'] {
-}
-
 /* -------------------------------- */
 /* Choice */
 [type='choice'] {

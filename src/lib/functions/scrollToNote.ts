@@ -1,7 +1,14 @@
-export function scrollToNote (id){
-    const elContainer = document.querySelector('[data-dom=containerAnnotations]');
-    const elNoteRef = document.querySelector(`[data-dom=annotationBox][data-noteid=${id}]`);
+export function scrollToNote(id: string) {
+	const elContainer = document.querySelector('[data-dom=containerAnnotations]');
+	const elNoteRef = document.querySelector<HTMLElement>(
+		`[data-dom=annotationBox][data-noteid=${id}]`
+	);
 
-    // Scroll to note
-    elContainer?.scrollTo({left: elContainer.scrollLeft, top:elNoteRef?.offsetTop, behavior: 'smooth'})
+	if (!elContainer || !elNoteRef) return;
+	// Scroll to note
+	elContainer.scrollTo({
+		left: elContainer.scrollLeft,
+		top: elNoteRef.offsetTop,
+		behavior: 'smooth'
+	});
 }

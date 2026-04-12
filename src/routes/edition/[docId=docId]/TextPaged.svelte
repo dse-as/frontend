@@ -2,8 +2,8 @@
 	import CETEI from 'CETEIcean';
 	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
 
-	let { docId, currentPage, ceteiData } = $props();
 	const c = new CETEI();
+	let { ceteiData } = $props();
 
 	const setupCustomElements = (el: HTMLElement) => {
 		c.addBehaviors(behaviors(document));
@@ -21,7 +21,7 @@
 	{@html serializedWithoutNotes}
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

@@ -14,7 +14,7 @@
 
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
-	let pagenum: Number = $derived(Number(page.url.searchParams?.get('page')) || 1);
+	let pagenum: number = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
 		// get mode from URL
@@ -69,20 +69,18 @@
 				meta={data.meta}
 				ceteiData={data.ceteiData}
 				docId={page.params.docId}
-				currentPage={pagenum}
 			/>
 		{:else if dflf === 'DF'}
 			<DF
 				meta={data.meta}
 				ceteiData={data.ceteiData}
 				docId={page.params.docId}
-				currentPage={pagenum}
 			/>
 		{/if}
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

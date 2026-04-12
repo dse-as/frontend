@@ -3,9 +3,9 @@ import { type TPeopleKeys } from './TPeopleKeys';
 import { type TEventsKeys } from './TEventsKeys';
 import { type TKeywordsKeys } from './TKeywordsKeys';
 import { type TOrgsKeys } from './TOrgsKeys';
-import { type TSmallformsKeys } from './TSmallformsKeys';
-import { type TLongformsKeys } from './TLongformsKeys';
-import { type TLettersKeys } from './TLettersKeys';
+import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
+import { type TLongformsKeys } from '../documents/TLongformsKeys';
+import { type TLettersKeys } from '../documents/TLettersKeys';
 import type { TBiblsKeys } from './TBiblsKeys';
 
 export type TPeopleTypes = string; //! restrict to subet later
@@ -26,7 +26,7 @@ export type TEntityTypes =
 	| 'smallforms'
 	| 'longforms'
 	| 'letters'
-	| 'bibl'
+	| 'bibls'
 	| 'keywords';
 
 export type TEntityNames =
@@ -39,17 +39,6 @@ export type TEntityNames =
 	| 'Briefe'
 	| 'Bibliografie'
 	| 'Stichworte';
-
-// Types for specific entities
-export type TPeopleTypes = string; //! restrict to subset later
-export type TPlacesTypes = string; //! restrict to subset later
-export type TEventsTypes = string; //! restrict to subset later
-export type TOrgsTypes = string; //! restrict to subset later
-export type TSmallformsTypes = 'article' | 'feuilleton';
-export type TLongformsTypes = string; //! restrict to subset later
-export type TLettersTypes = string; //! restrict to subset later
-export type TBiblsTypes = string; //! restrict to subset later
-export type TKeywordsTypes = string; //! restrict to subset later
 
 // Register
 export type TRegister = {
@@ -103,7 +92,7 @@ export type TRegister = {
 				note: string;
 			};
 		};
-		smallforms: {
+		smallforms?: {
 			[key in TSmallformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
@@ -112,7 +101,7 @@ export type TRegister = {
 				gndNumber?: string; // optional
 			};
 		};
-		longforms: {
+		longforms?: {
 			[key in TLongformsKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties
@@ -121,7 +110,7 @@ export type TRegister = {
 				gndNumber?: string; // optional
 			};
 		};
-		letters: {
+		letters?: {
 			[key in TLettersKeys]: {
 				name: string;
 				authorId: TPeopleKeys; //! string to account for uncertainties

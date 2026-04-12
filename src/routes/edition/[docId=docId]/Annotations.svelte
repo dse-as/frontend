@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { handleNoteClick } from '$lib/functions/handleNoteClick';
-	import { selectedNote } from '$lib/globals/state/ui.svelte';
-	let { ceteiData, docId } = $props();
+	let { ceteiData } = $props();
 
 	let notesHtml = $derived.by(() => {
 		const match = ceteiData.serialized.match(/<ol class="notes">(.*?)<\/ol>/s);
@@ -15,7 +13,7 @@
 	</ol>
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

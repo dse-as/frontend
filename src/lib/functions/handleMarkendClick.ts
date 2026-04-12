@@ -3,14 +3,10 @@ import { selectNote } from './selectNote';
 import { scrollToNote } from './scrollToNote';
 import { selectedNote } from '$lib/globals/state/ui.svelte';
 
-export function handleMarkendClick(ev) {
-	let id = "";
-	try {
-		id = ev.target.dataset.noteid;
-	} catch (error) {
-		id = ev.target.dataset.noteid;
-	}
-	if (id){
+export function handleMarkendClick(ev: MouseEvent) {
+	const target = (ev.target as HTMLElement)?.closest<HTMLElement>('[data-noteid]');
+	const id = target?.dataset.noteid ?? '';
+	if (id) {
 		selectedNote.id = id;
 		selectMark(id);
 		selectNote(id);

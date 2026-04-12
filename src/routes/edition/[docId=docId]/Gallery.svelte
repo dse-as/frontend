@@ -16,12 +16,12 @@
 	let { metadata, docId, pagenum } = $props();
 
 	// Textzeugen
-	const textzeugen = metadata[docId]?.metadata.textzeugen_nonedited || [];
+	const textzeugen = $derived(metadata[docId]?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
 
-	function collectGalleryItems(pagenum_running) {
+	function collectGalleryItems(pagenum_running: string) {
 		const items: TItem[] =
 			metadata[pagenum_running]?.manuscript.iiif_urls.map((el: string, idx: number) => {
 				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
@@ -30,7 +30,7 @@
 	}
 
 	// Scroll Gallery
-	function scrollGalleryToPage(pagenum) {
+	function scrollGalleryToPage(pagenum: number) {
 		const btn = buttonRefs[pagenum - 1];
 		if (btn && containerRef) {
 			const btnLeft = btn.offsetLeft;
@@ -58,10 +58,7 @@
 	<div
 		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 transition-all duration-200"
 	>
-		<div
-			bind:this={containerRef}
-			class="flex min-h-[200px] w-full gap-2 overflow-x-auto px-10 py-5"
-		>
+		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10 py-5">
 			{#each collectGalleryItems(docId) as item, index (item.fac)}
 				<button
 					bind:this={buttonRefs[index]}
@@ -93,7 +90,7 @@
 						{#each items as item}
 							<a
 								class="ml-2 rounded-xl p-1"
-								href={`${textzeuge}?${updateSearchParams(page.url.searchParams, { page: item.pagenum_running })}`}
+								href={`${textzeuge}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

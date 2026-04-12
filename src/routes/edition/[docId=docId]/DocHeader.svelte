@@ -1,17 +1,17 @@
 <script lang="ts">
 	let { metadata, ceteiData, docId } = $props();
-	let isExpandedBox1 = $state(false);
-	let isExpandedBox2 = $state(false);
-
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
-	const reg = register.register;
-	const dictReg = dict_register.dict_register;
+	let isExpandedBox1 = $state(false);
+	let isExpandedBox2 = $state(false);
 
-	// let globalComponent = 'Hello, I am the component';
-
-	let globalComponent = $derived.by(() => {
+	const reg = register.register as Record<string, Record<string, any>>;
+	const dictReg = dict_register.dict_register as Record<
+		string,
+		{ key_singular: string; label_plural: string }
+	>;
+	let globalComment = $derived.by(() => {
 		const match = ceteiData.serialized.match(/<tei-notesstmt\b[^>]*>(.*?)<\/tei-notesstmt>/s);
 		return match ? match[1] : '';
 	});
@@ -34,7 +34,7 @@
 				<div data-dom="global_entities" class="flex flex-wrap gap-2">
 					{#each Object.keys(dictReg) as regType}
 						{@const regKeys = metadata[docId]?.metadata.keywords[regType]}
-						{#each regKeys ? Object.values(regKeys) : [] as regKey}
+						{#each regKeys ? (Object.values(regKeys) as string[]) : [] as regKey}
 							<a
 								class="whitespace-nowrap text-surface-950"
 								data-type="entity"
@@ -52,12 +52,12 @@
 		{/if}
 
 		<!-- Global Comment -->
-		{#if globalComponent}
+		{#if globalComment}
 			<div class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}>
 				<div class={[isExpandedBox1 ? 'h-auto' : 'max-h-40 overflow-hidden']}>
 					<h5 class="mb-4 h5"><strong>Kommentar</strong></h5>
 					<div data-dom="global_comment">
-						{@html globalComponent}
+						{@html globalComment}
 					</div>
 				</div>
 
@@ -125,7 +125,7 @@
 	<h1 class="text-red-500">metadata.{docId} is not defined</h1>
 {/if}
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

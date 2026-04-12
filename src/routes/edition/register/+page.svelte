@@ -1,16 +1,15 @@
 <script lang="ts">
 	import register from '$lib/data/register.json';
 
-	import { type TRegister } from '$lib/types/register/TRegister';
-	let { register: reg } = register satisfies TRegister;
+	const reg = register.register as Record<string, Record<string, any>>;
 
 	let sortEventsBy = $state('name'); // 'name' or 'date'
 
-	function sortData(data, sortBy, filterValue = undefined) {
-		let sortFunction;
+	function sortData(data: Record<string, any>, sortBy: string, filterValue?: string) {
+		let sortFunction: (a: Record<string, any>, b: Record<string, any>) => number;
 		if (sortBy === 'date') {
-			sortFunction = (a, b) => {
-				const compare = (x, y) => {
+			sortFunction = (a: Record<string, any>, b: Record<string, any>) => {
+				const compare = (x: string | undefined, y: string | undefined) => {
 					if (!x && !y) return 0; // treat as equal
 					if (!x) return 1; // Push `x` to the end
 					if (!y) return -1; // Push `y` to the end
@@ -22,8 +21,7 @@
 			};
 		} else {
 			// Sort alphabetically by sortBy
-			sortFunction = (a, b) => {
-				// a[sortBy]?.localeCompare(b[sortBy]) || 0;
+			sortFunction = (a: Record<string, any>, b: Record<string, any>) => {
 				const aName = a[sortBy];
 				const bName = b[sortBy];
 
@@ -37,14 +35,14 @@
 		}
 		// Filter and sort data
 		return Object.entries(data)
-			.map(([key, entry]) => ({ key, ...(entry as Object) })) // Include the key in each value
+			.map(([key, entry]) => ({ key, ...(entry as Record<string, any>) }) as Record<string, any>)
 			.filter((entry) => (filterValue ? entry.type === filterValue : true))
 			.sort((a, b) => sortFunction(a, b));
 	}
 </script>
 
 <!-- Snippet for Entity-Item -->
-{#snippet entityItem(type, item)}
+{#snippet entityItem(type: string, item: Record<string, any>)}
 	{#if type === 'people'}
 		<a href={`#${item.key}`}>
 			<h3 id={item.key} class="h3">{item.name ? `${item.name}` : '...'}</h3>
@@ -97,11 +95,7 @@
 		</a>
 		{@const author = reg.people?.[item.authorId]}
 		<p>
-			{#if author?.firstname}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{:else}
-				<a href={`#${item.authorId}`}>By {author.firstname} {author.lastname}</a>
-			{/if}
+			<a href={`#${item.authorId}`}>By {author?.firstname ?? ''} {author?.lastname ?? ''}</a>
 			{#if item.pubDate}
 				<span>({item.pubDate})</span>
 			{/if}
@@ -115,7 +109,7 @@
 {/snippet}
 
 <!-- Snippet for Register Group -->
-{#snippet registerGroup(type, title, subreg)}
+{#snippet registerGroup(type: string, title: string, subreg: Record<string, any>)}
 	<div>
 		<!-- Group Title -->
 		<div class="flex flex-col bg-surface-950-50 p-3">

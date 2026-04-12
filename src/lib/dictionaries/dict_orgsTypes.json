@@ -4,10 +4,22 @@
 		"orgstype_001": { "label_plural": "Periodika", "label_singular": "Periodikum" },
 		"orgstype_002": { "label_plural": "Hochschulen", "label_singular": "Hochschule" },
 		"orgstype_003": { "label_plural": "Verlage", "label_singular": "Verlag" },
-		"orgstype_004": { "label_plural": "Politische Organisationen", "label_singular": "Politische Organisation" },
-		"orgstype_005": { "label_plural": "Wirtschaftliche Organisationen", "label_singular": "Wirtschaftliche Organisation" },
-		"orgstype_006": { "label_plural": "Religiöse Organisationen", "label_singular": "Religiöse Organisation" },
-		"orgstype_007": { "label_plural": "Öffentliche Einrichtungen", "label_singular": "Öffentliche Einrichtung" },
+		"orgstype_004": {
+			"label_plural": "Politische Organisationen",
+			"label_singular": "Politische Organisation"
+		},
+		"orgstype_005": {
+			"label_plural": "Wirtschaftliche Organisationen",
+			"label_singular": "Wirtschaftliche Organisation"
+		},
+		"orgstype_006": {
+			"label_plural": "Religiöse Organisationen",
+			"label_singular": "Religiöse Organisation"
+		},
+		"orgstype_007": {
+			"label_plural": "Öffentliche Einrichtungen",
+			"label_singular": "Öffentliche Einrichtung"
+		},
 		"orgstype_008": { "label_plural": "Hotels", "label_singular": "Hotel" },
 		"orgstype_009": { "label_plural": "Theater", "label_singular": "Theater" },
 		"orgstype_010": { "label_plural": "Schulen", "label_singular": "Schule" },

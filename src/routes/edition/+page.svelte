@@ -4,7 +4,7 @@
 	let { data } = $props();
 </script>
 
-{#snippet list(meta)}
+{#snippet list(meta: Record<string, any>)}
 	<ul class="my-4 h-full overflow-y-auto">
 		{#each Object.keys(meta) as key (key)}
 			<li>

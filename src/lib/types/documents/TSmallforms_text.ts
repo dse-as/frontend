@@ -1,4 +1,4 @@
-import { type TSmallformsKeys } from "./TSmallformsKeys";
+import { type TSmallformsKeys } from './TSmallformsKeys';
 
 export type TSmallforms_text = {
 	meta: {
@@ -9,9 +9,9 @@ export type TSmallforms_text = {
 	};
 	smallforms_text: {
 		// document
-		[key in TSmallformsKeys]: { 
-				name: string;
-				pathHTML: string;
+		[key in TSmallformsKeys]: {
+			name: string;
+			pathHTML: string;
 		};
 	};
 };

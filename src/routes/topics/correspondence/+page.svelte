@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 
 	let { data } = $props();
-	let corrData = $derived(data.seqAll.correspondence);
+	let corrData = $derived(data.seqAll.correspondence as Record<string, any>);
 	const specialCorrs = ['corr_spec_0001'];
 </script>
 

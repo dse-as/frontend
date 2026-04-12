@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount, tick, type Component } from 'svelte';
 	import { handleMarkClick } from '$lib/functions/handleMarkClick';
 	import { handleMarkendClick } from '$lib/functions/handleMarkendClick';
 	import { selectedNote } from '$lib/globals/state/ui.svelte';
@@ -13,7 +12,7 @@
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
-	let { meta, ceteiData, docId } = $props();
+	let { ceteiData } = $props();
 
 	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
@@ -24,6 +23,7 @@
 		el: HTMLElement;
 		facs: string;
 		n: string;
+		page: number;
 		top: number;
 	};
 
@@ -40,6 +40,7 @@
 				el: el,
 				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
 				n: el.getAttribute('n') || '',
+				page: i + 1,
 				top: 0
 			}));
 			updatePagebreakPositions();
@@ -60,10 +61,10 @@
 
 	// ---------------------------------------------
 	// Click handlers
-	function handleDocumentClick(ev) {
-		if (ev.target.closest('[data-type="mark"]')) {
+	function handleDocumentClick(ev: MouseEvent) {
+		if ((ev.target as HTMLElement).closest('[data-type="mark"]')) {
 			handleMarkClick(ev);
-		} else if (ev.target.closest('[data-type="markend"]')) {
+		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
 			handleMarkendClick(ev);
 		} else if (selectedNote.id) {
 			unselectMarks();
@@ -71,10 +72,11 @@
 		}
 	}
 
-	function setupFacsimile(el) {
+	function setupFacsimile(el: HTMLElement) {
 		let setupComplete = $state(false);
 		$effect(() => {
 			if (!setupComplete) return; // guard to only run once
+
 			// initial collect
 			collectPagebreaks(el);
 
@@ -102,10 +104,20 @@
 				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
 			setupComplete = true;
+
+			// Clean-up
+			return () => {
+				resizeObserver?.disconnect();
+				mutationObserver?.disconnect();
+				window.removeEventListener('resize', updatePagebreakPositions);
+				if (document.fonts) {
+					document.fonts.removeEventListener('loadingdone', updatePagebreakPositions);
+				}
+			};
 		});
 	}
 
-	function setupListeners(el) {
+	function setupListeners(el: HTMLElement) {
 		let setupComplete = $state(false);
 		$effect(() => {
 			if (!setupComplete) return; // guard to only run once
@@ -161,7 +173,7 @@
 	</main>
 </div>
 
-<style>
+<style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 

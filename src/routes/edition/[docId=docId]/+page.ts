@@ -5,9 +5,9 @@ import { doc_sequences } from '$lib/data/doc_sequences.json';
 export const load: PageLoad = ({ data, params, url }) => {
 	const currentSeqId = url.searchParams.get('seq');
 
-	function findTypeById(id) {
+	function findTypeById(id: string | null): string | null {
 		for (const type in doc_sequences) {
-			if (doc_sequences[type][id]) {
+			if ((doc_sequences as Record<string, Record<string, unknown>>)[type][id!]) {
 				return type;
 			}
 		}
@@ -21,4 +21,3 @@ export const load: PageLoad = ({ data, params, url }) => {
 		...data
 	};
 };
-

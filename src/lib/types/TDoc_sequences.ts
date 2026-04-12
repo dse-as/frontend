@@ -1,4 +1,4 @@
-export type TSeqType = 'correspondence' | 'travels' | 'topics';
+export type TSeqType = 'textstufen' | 'travels' | 'correspondence' | 'topics' | 'series';
 export type TSeqId = string;
 
 export type TDoc_sequences = {
