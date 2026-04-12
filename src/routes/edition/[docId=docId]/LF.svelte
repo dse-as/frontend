@@ -7,7 +7,7 @@
 	type TVisibleTab = 'register' | 'comments';
 	let visibleTab: TVisibleTab = $state('register');
 
-	let { meta, ceteiData, annot, docId, currentPage } = $props();
+	let { meta, ceteiData, docId, currentPage } = $props();
 </script>
 
 <div

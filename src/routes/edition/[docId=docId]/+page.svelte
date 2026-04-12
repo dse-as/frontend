@@ -40,7 +40,7 @@
 	/>
 
 	<!-- Metadata -->
-	<DocHeader metadata={data.meta} annot={data.annot} docId={page.params.docId} />
+	<DocHeader metadata={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
 
 	<!-- Thumbnail Gallery -->
 	<Gallery metadata={data.meta} docId={page.params.docId} {pagenum} />
@@ -68,7 +68,6 @@
 			<LF
 				meta={data.meta}
 				ceteiData={data.ceteiData}
-				annot={data.annot}
 				docId={page.params.docId}
 				currentPage={pagenum}
 			/>
@@ -76,7 +75,6 @@
 			<DF
 				meta={data.meta}
 				ceteiData={data.ceteiData}
-				annot={data.annot}
 				docId={page.params.docId}
 				currentPage={pagenum}
 			/>
