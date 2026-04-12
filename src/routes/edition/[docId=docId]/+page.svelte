@@ -65,17 +65,9 @@
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
-			<LF
-				meta={data.meta}
-				ceteiData={data.ceteiData}
-				docId={page.params.docId}
-			/>
+			<LF meta={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
 		{:else if dflf === 'DF'}
-			<DF
-				meta={data.meta}
-				ceteiData={data.ceteiData}
-				docId={page.params.docId}
-			/>
+			<DF meta={data.meta} ceteiData={data.ceteiData} docId={page.params.docId} />
 		{/if}
 	</div>
 </div>

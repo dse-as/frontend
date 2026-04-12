@@ -24,5 +24,5 @@ const meta = {
 
 // Export unified meta and text
 export const load: LayoutServerLoad = async () => {
-    return { meta, smf_meta, lgf_meta, let_meta};
+	return { meta, smf_meta, lgf_meta, let_meta };
 };

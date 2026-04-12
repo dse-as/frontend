@@ -25,7 +25,10 @@ declare module 'CETEIcean' {
 	 * - `functions`: custom utility functions added to `this.utilities`
 	 */
 	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-	interface BehaviorsObject extends Record<string, BehaviorSet | Record<string, string> | Record<string, (...args: any[]) => any> | undefined> {
+	interface BehaviorsObject extends Record<
+		string,
+		BehaviorSet | Record<string, string> | Record<string, (...args: any[]) => any> | undefined
+	> {
 		/** Map namespace URIs to prefixes. */
 		namespaces?: Record<string, string>;
 		/** Custom utility functions to attach to `this.utilities`. */
@@ -61,7 +64,11 @@ declare module 'CETEIcean' {
 		rw(url: string): string;
 		resetAndSerialize(el: Element, stripElt?: boolean, ws?: string): string;
 		serialize(el: Element | Document | DocumentFragment, stripElt?: boolean, ws?: string): string;
-		serializeHTML(el: Element | Document | DocumentFragment, stripElt?: boolean, ws?: string): string;
+		serializeHTML(
+			el: Element | Document | DocumentFragment,
+			stripElt?: boolean,
+			ws?: string
+		): string;
 		unEscapeEntities(str: string): string;
 		tagName(name: string): string;
 		defineCustomElement(name: string, behavior?: (() => void) | null, debug?: boolean): void;
@@ -128,7 +135,11 @@ declare module 'CETEIcean' {
 		 * @param element - The local element name.
 		 * @param behavior - The behavior definition.
 		 */
-		addBehavior(ns: string | Record<string, string>, element: string, behavior: BehaviorValue): void;
+		addBehavior(
+			ns: string | Record<string, string>,
+			element: string,
+			behavior: BehaviorValue
+		): void;
 
 		/**
 		 * Remove a previously defined or default behavior.
@@ -198,5 +209,13 @@ declare module 'CETEIcean' {
 		static restorePosition(): void;
 	}
 
-	export type { BehaviorValue, BehaviorSet, BehaviorsObject, CETEIOptions, CETEIUtilities, PerElementFn, ResultCallback };
+	export type {
+		BehaviorValue,
+		BehaviorSet,
+		BehaviorsObject,
+		CETEIOptions,
+		CETEIUtilities,
+		PerElementFn,
+		ResultCallback
+	};
 }

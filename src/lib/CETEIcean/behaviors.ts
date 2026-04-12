@@ -23,7 +23,8 @@ export const behaviors = (dom) => {
 				}
 				let note = dom.createElement('li');
 				note.id = id;
-				note.innerHTML = `<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + elt.innerHTML;
+				note.innerHTML =
+					`<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + elt.innerHTML;
 				notes.appendChild(note);
 				return content;
 			}
@@ -59,5 +60,5 @@ export function wrapAnnotations(container: HTMLElement) {
 
 /** Run on client text components to remove the footnotes list from the main tetx */
 export function removeNotesFromMaintext(ceteiSerialized: String) {
-	return ceteiSerialized.replace(/<ol class="notes">.*?<\/ol>/s, '')
-};
+	return ceteiSerialized.replace(/<ol class="notes">.*?<\/ol>/s, '');
+}
