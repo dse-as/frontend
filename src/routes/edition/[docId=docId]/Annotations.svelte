@@ -17,6 +17,15 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
+	[data-dom='containerAnnotations'] {
+		:global(li) {
+			margin-bottom: 25px;
+			cursor: pointer;
+		}
+		:global(li:hover) {
+			@apply bg-surface-100-900;
+		}
+	}
 	.notes {
 		:global([data-type='entity']) {
 			@apply underline decoration-2;

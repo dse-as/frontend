@@ -41,7 +41,7 @@
 
 {#if data.edView === 'edView2'}
 	<!-- Overview with Multi-Column List -->
-	<div class="absolute top-60 left-0 w-full px-10">
+	<div class="absolute top-45 left-0 w-full px-10">
 		<OverviewList
 			isMultiColumn={true}
 			ovMeta={data.fullMeta[data.edType]}

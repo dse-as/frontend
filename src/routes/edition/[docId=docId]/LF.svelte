@@ -12,12 +12,12 @@
 
 <div
 	data-fassung="LF"
-	class="grid h-full grid-cols-1 gap-25 overflow-hidden md:grid-cols-[auto_500px]"
+	class="grid h-full grid-cols-1 gap-25 overflow-hidden md:grid-cols-[auto_600px]"
 >
 	<TextFluid {ceteiData} />
 
 	<Tabs
-		class="h-full overflow-hidden pl-5"
+		class="mx-auto h-full w-full overflow-hidden pl-5"
 		value={visibleTab}
 		onValueChange={(details) => (visibleTab = details.value as TVisibleTab)}
 	>

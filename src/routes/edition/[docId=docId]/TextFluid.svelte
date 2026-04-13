@@ -162,7 +162,7 @@
 
 <div
 	data-textflow="fluid"
-	class="mt-10 grid grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
+	class="mx-auto mt-10 grid max-w-300 grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
 	bind:this={containerMaintext}
 >
 	<!-- THUMBS COLUMN -->

@@ -8,17 +8,17 @@
 	"documents": {
 		"letters": {
 			"letter_0001": {
-				"name": "Letter 0001",
+				"name": "Brief 0001",
 				"date": {"from":"1911-01-01","to":"1911-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0001",
+					"label": "Brief 0001",
 					"editor_workflow": "foo",
 					"year": 1901,
 					"pubDate": "1901-01-01",
-					"title_full": "Letter 0001",
+					"title_full": "Brief 0001",
 					"pubPosthumOnly": "",
-					"pubPlace": "Letter 0001",
+					"pubPlace": "Brief 0001",
 					"signature": "",
 					"pubDetails": "",
 					"textstufen_edited": "",
@@ -47,17 +47,17 @@
 				}
 			},
 			"letter_0002": {
-				"name": "Letter 0002",
+				"name": "Brief 0002",
 				"date": {"from":"1902-01-01","to":"1902-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0002",
+					"label": "Brief 0002",
 					"editor_workflow": "foo",
 					"year": 1902,
 					"pubDate": "1902-01-01",
-					"title_full": "Letter 0002",
+					"title_full": "Brief 0002",
 					"pubPosthumOnly": "",
-					"pubPlace": "Letter 0002",
+					"pubPlace": "Brief 0002",
 					"signature": "",
 					"pubDetails": "",
 					"textstufen_edited": "",
@@ -86,17 +86,17 @@
 				}
 			},
 			"letter_0003": {
-				"name": "Letter 0003",
+				"name": "Brief 0003",
 				"date": {"from":"1903-01-01","to":"1903-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0003",
+					"label": "Brief 0003",
 					"editor_workflow": "foo",
 					"year": 1903,
 					"pubDate": "1903-01-01",
-					"title_full": "Letter 0003",
+					"title_full": "Brief 0003",
 					"pubPosthumOnly": "",
-					"pubPlace": "Letter 0003",
+					"pubPlace": "Brief 0003",
 					"signature": "",
 					"pubDetails": "",
 					"textstufen_edited": "",
@@ -129,17 +129,17 @@
 				}
 			},
 			"letter_0004": {
-				"name": "Letter 0004",
+				"name": "Brief 0004",
 				"date": {"from":"1904-01-01","to":"1904-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0004",
+					"label": "Brief 0004",
 					"editor_workflow": "foo 4",
 					"year": 1904,
 					"pubDate": "1904-01-01",
-					"title_full": "Letter 0004",
+					"title_full": "Brief 0004",
 					"pubPosthumOnly": "",
-					"pubPlace": "Letter 0004",
+					"pubPlace": "Brief 0004",
 					"signature": "",
 					"pubDetails": "",
 					"textstufen_edited": "",
@@ -171,15 +171,15 @@
 			},
 
 			"letter_0005": {
-				"name": "Letter 0005",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0005",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0005",
+					"label": "Brief 0005",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0005",
+					"title_full": "Brief 0005",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -212,15 +212,15 @@
 				}
 			},
 			"letter_0006": {
-				"name": "Letter 0006",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0006",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0006",
+					"label": "Brief 0006",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0006",
+					"title_full": "Brief 0006",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -255,15 +255,15 @@
 				}
 			},
 			"letter_0007": {
-				"name": "Letter 0007",
+				"name": "Brief 0007",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0007",
+					"label": "Brief 0007",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0007",
+					"title_full": "Brief 0007",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -294,15 +294,15 @@
 				}
 			},
 			"letter_0008": {
-				"name": "Letter 0008",
+				"name": "Brief 0008",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0008",
+					"label": "Brief 0008",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0008",
+					"title_full": "Brief 0008",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -335,15 +335,15 @@
 				}
 			},
 			"letter_0009": {
-				"name": "Letter 0009",
+				"name": "Brief 0009",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0009",
+					"label": "Brief 0009",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0009",
+					"title_full": "Brief 0009",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -374,15 +374,15 @@
 				}
 			},
 			"letter_0010": {
-				"name": "Letter 0010",
+				"name": "Brief 0010",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0010",
+					"label": "Brief 0010",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0010",
+					"title_full": "Brief 0010",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -415,15 +415,15 @@
 				}
 			},
 			"letter_0011": {
-				"name": "Letter 0011",
+				"name": "Brief 0011",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0011",
+					"label": "Brief 0011",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0011",
+					"title_full": "Brief 0011",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -458,15 +458,15 @@
 				}
 			},
 			"letter_0012": {
-				"name": "Letter 0012",
+				"name": "Brief 0012",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0012",
+					"label": "Brief 0012",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0012",
+					"title_full": "Brief 0012",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -497,15 +497,15 @@
 				}
 			},
 			"letter_0013": {
-				"name": "Letter 0013",
+				"name": "Brief 0013",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0013",
+					"label": "Brief 0013",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0013",
+					"title_full": "Brief 0013",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -536,15 +536,15 @@
 				}
 			},
 			"letter_0014": {
-				"name": "Letter 0014",
+				"name": "Brief 0014",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0014",
+					"label": "Brief 0014",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0014",
+					"title_full": "Brief 0014",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -575,15 +575,15 @@
 				}
 			},
 			"letter_0015": {
-				"name": "Letter 0015",
+				"name": "Brief 0015",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0015",
+					"label": "Brief 0015",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0015",
+					"title_full": "Brief 0015",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -616,15 +616,15 @@
 				}
 			},
 			"letter_0016": {
-				"name": "Letter 0016",
+				"name": "Brief 0016",
 				"date": {"from":"1912-01-01","to":"1912-01-01"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0016",
+					"label": "Brief 0016",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0016",
+					"title_full": "Brief 0016",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -655,15 +655,15 @@
 				}
 			},
 			"letter_0017": {
-				"name": "Letter 0017",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0017",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0017",
+					"label": "Brief 0017",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0017",
+					"title_full": "Brief 0017",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -694,15 +694,15 @@
 				}
 			},
 			"letter_0018": {
-				"name": "Letter 0018",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0018",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0018",
+					"label": "Brief 0018",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0018",
+					"title_full": "Brief 0018",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -733,15 +733,15 @@
 				}
 			},
 			"letter_0019": {
-				"name": "Letter 0019",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0019",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0019",
+					"label": "Brief 0019",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0019",
+					"title_full": "Brief 0019",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -776,15 +776,15 @@
 				}
 			},
 			"letter_0020": {
-				"name": "Letter 0020",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0020",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0020",
+					"label": "Brief 0020",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0020",
+					"title_full": "Brief 0020",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -817,15 +817,15 @@
 				}
 			},
 			"letter_0021": {
-				"name": "Letter 0021",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0021",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0021",
+					"label": "Brief 0021",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0021",
+					"title_full": "Brief 0021",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -860,15 +860,15 @@
 				}
 			},
 			"letter_0022": {
-				"name": "Letter 0022",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0022",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0022",
+					"label": "Brief 0022",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0022",
+					"title_full": "Brief 0022",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -901,15 +901,15 @@
 				}
 			},
 			"letter_0023": {
-				"name": "Letter 0023",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0023",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0023",
+					"label": "Brief 0023",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0023",
+					"title_full": "Brief 0023",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -944,15 +944,15 @@
 				}
 			},
 			"letter_0024": {
-				"name": "Letter 0024",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0024",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0024",
+					"label": "Brief 0024",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0024",
+					"title_full": "Brief 0024",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -987,15 +987,15 @@
 				}
 			},
 			"letter_0025": {
-				"name": "Letter 0025",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0025",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0025",
+					"label": "Brief 0025",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0025",
+					"title_full": "Brief 0025",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1030,15 +1030,15 @@
 				}
 			},
 			"letter_0026": {
-				"name": "Letter 0026",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0026",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0026",
+					"label": "Brief 0026",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0026",
+					"title_full": "Brief 0026",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1073,15 +1073,15 @@
 				}
 			},
 			"letter_0027": {
-				"name": "Letter 0027",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0027",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0027",
+					"label": "Brief 0027",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0027",
+					"title_full": "Brief 0027",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1114,15 +1114,15 @@
 				}
 			},
 			"letter_0028": {
-				"name": "Letter 0028",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0028",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0028",
+					"label": "Brief 0028",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0028",
+					"title_full": "Brief 0028",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1153,15 +1153,15 @@
 				}
 			},
 			"letter_0029": {
-				"name": "Letter 0029",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0029",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0029",
+					"label": "Brief 0029",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0029",
+					"title_full": "Brief 0029",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1194,15 +1194,15 @@
 				}
 			},
 			"letter_0030": {
-				"name": "Letter 0030",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0030",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0030",
+					"label": "Brief 0030",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0030",
+					"title_full": "Brief 0030",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1235,15 +1235,15 @@
 				}
 			},
 			"letter_0031": {
-				"name": "Letter 0031",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0031",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0031",
+					"label": "Brief 0031",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0031",
+					"title_full": "Brief 0031",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1276,15 +1276,15 @@
 				}
 			},
 			"letter_0032": {
-				"name": "Letter 0032",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0032",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0032",
+					"label": "Brief 0032",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0032",
+					"title_full": "Brief 0032",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1317,15 +1317,15 @@
 				}
 			},
 			"letter_0033": {
-				"name": "Letter 0033",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0033",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0033",
+					"label": "Brief 0033",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0033",
+					"title_full": "Brief 0033",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1358,15 +1358,15 @@
 				}
 			},
 			"letter_0034": {
-				"name": "Letter 0034",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0034",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0034",
+					"label": "Brief 0034",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0034",
+					"title_full": "Brief 0034",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1399,15 +1399,15 @@
 				}
 			},
 			"letter_0035": {
-				"name": "Letter 0035",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0035",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0035",
+					"label": "Brief 0035",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0035",
+					"title_full": "Brief 0035",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1440,15 +1440,15 @@
 				}
 			},
 			"letter_0036": {
-				"name": "Letter 0036",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0036",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0036",
+					"label": "Brief 0036",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0036",
+					"title_full": "Brief 0036",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1481,15 +1481,15 @@
 				}
 			},
 			"letter_0037": {
-				"name": "Letter 0037",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0037",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0037",
+					"label": "Brief 0037",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0037",
+					"title_full": "Brief 0037",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1524,15 +1524,15 @@
 				}
 			},
 			"letter_0038": {
-				"name": "Letter 0038",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0038",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0038",
+					"label": "Brief 0038",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0038",
+					"title_full": "Brief 0038",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1567,15 +1567,15 @@
 				}
 			},
 			"letter_0039": {
-				"name": "Letter 0039",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0039",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0039",
+					"label": "Brief 0039",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0039",
+					"title_full": "Brief 0039",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1606,15 +1606,15 @@
 				}
 			},
 			"letter_0040": {
-				"name": "Letter 0040",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0040",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0040",
+					"label": "Brief 0040",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0040",
+					"title_full": "Brief 0040",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1647,15 +1647,15 @@
 				}
 			},
 			"letter_0041": {
-				"name": "Letter 0041",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0041",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0041",
+					"label": "Brief 0041",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0041",
+					"title_full": "Brief 0041",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1686,15 +1686,15 @@
 				}
 			},
 			"letter_0042": {
-				"name": "Letter 0042",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0042",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0042",
+					"label": "Brief 0042",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0042",
+					"title_full": "Brief 0042",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1727,15 +1727,15 @@
 				}
 			},
 			"letter_0043": {
-				"name": "Letter 0043",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0043",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0043",
+					"label": "Brief 0043",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0043",
+					"title_full": "Brief 0043",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1768,15 +1768,15 @@
 				}
 			},
 			"letter_0044": {
-				"name": "Letter 0044",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0044",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0044",
+					"label": "Brief 0044",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0044",
+					"title_full": "Brief 0044",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1808,15 +1808,15 @@
 				}
 			},
 			"letter_0045": {
-				"name": "Letter 0045",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0045",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0045",
+					"label": "Brief 0045",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0045",
+					"title_full": "Brief 0045",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1849,15 +1849,15 @@
 				}
 			},
 			"letter_0046": {
-				"name": "Letter 0046",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0046",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0046",
+					"label": "Brief 0046",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0046",
+					"title_full": "Brief 0046",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1890,15 +1890,15 @@
 				}
 			},
 			"letter_0047": {
-				"name": "Letter 0047",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0047",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0047",
+					"label": "Brief 0047",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0047",
+					"title_full": "Brief 0047",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1931,15 +1931,15 @@
 				}
 			},
 			"letter_0048": {
-				"name": "Letter 0048",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0048",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0048",
+					"label": "Brief 0048",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0048",
+					"title_full": "Brief 0048",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -1970,15 +1970,15 @@
 				}
 			},
 			"letter_0049": {
-				"name": "Letter 0049",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0049",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0049",
+					"label": "Brief 0049",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0049",
+					"title_full": "Brief 0049",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2011,15 +2011,15 @@
 				}
 			},
 			"letter_0050": {
-				"name": "Letter 0050",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0050",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0050",
+					"label": "Brief 0050",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0050",
+					"title_full": "Brief 0050",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2052,15 +2052,15 @@
 				}
 			},
 			"letter_0051": {
-				"name": "Letter 0051",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0051",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0051",
+					"label": "Brief 0051",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0051",
+					"title_full": "Brief 0051",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2093,15 +2093,15 @@
 				}
 			},
 			"letter_0052": {
-				"name": "Letter 0052",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0052",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0052",
+					"label": "Brief 0052",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0052",
+					"title_full": "Brief 0052",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2136,15 +2136,15 @@
 				}
 			},
 			"letter_0053": {
-				"name": "Letter 0053",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0053",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0053",
+					"label": "Brief 0053",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0053",
+					"title_full": "Brief 0053",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2177,15 +2177,15 @@
 				}
 			},
 			"letter_0054": {
-				"name": "Letter 0054",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0054",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0054",
+					"label": "Brief 0054",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0054",
+					"title_full": "Brief 0054",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2220,15 +2220,15 @@
 				}
 			},
 			"letter_0055": {
-				"name": "Letter 0055",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0055",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0055",
+					"label": "Brief 0055",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0055",
+					"title_full": "Brief 0055",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2263,15 +2263,15 @@
 				}
 			},
 			"letter_0056": {
-				"name": "Letter 0056",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0056",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0056",
+					"label": "Brief 0056",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0056",
+					"title_full": "Brief 0056",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2306,15 +2306,15 @@
 				}
 			},
 			"letter_0057": {
-				"name": "Letter 0057",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0057",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0057",
+					"label": "Brief 0057",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0057",
+					"title_full": "Brief 0057",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2345,15 +2345,15 @@
 				}
 			},
 			"letter_0058": {
-				"name": "Letter 0058",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0058",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0058",
+					"label": "Brief 0058",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0058",
+					"title_full": "Brief 0058",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2386,15 +2386,15 @@
 				}
 			},
 			"letter_0059": {
-				"name": "Letter 0059",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0059",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0059",
+					"label": "Brief 0059",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0059",
+					"title_full": "Brief 0059",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2429,15 +2429,15 @@
 				}
 			},
 			"letter_0060": {
-				"name": "Letter 0060",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0060",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0060",
+					"label": "Brief 0060",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0060",
+					"title_full": "Brief 0060",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2470,15 +2470,15 @@
 				}
 			},
 			"letter_0061": {
-				"name": "Letter 0061",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0061",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0061",
+					"label": "Brief 0061",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0061",
+					"title_full": "Brief 0061",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2511,15 +2511,15 @@
 				}
 			},
 			"letter_0062": {
-				"name": "Letter 0062",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0062",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0062",
+					"label": "Brief 0062",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0062",
+					"title_full": "Brief 0062",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2550,15 +2550,15 @@
 				}
 			},
 			"letter_0063": {
-				"name": "Letter 0063",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0063",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0063",
+					"label": "Brief 0063",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0063",
+					"title_full": "Brief 0063",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2589,15 +2589,15 @@
 				}
 			},
 			"letter_0064": {
-				"name": "Letter 0064",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0064",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0064",
+					"label": "Brief 0064",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0064",
+					"title_full": "Brief 0064",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2629,15 +2629,15 @@
 				}
 			},
 			"letter_0065": {
-				"name": "Letter 0065",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0065",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0065",
+					"label": "Brief 0065",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0065",
+					"title_full": "Brief 0065",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2669,15 +2669,15 @@
 				}
 			},
 			"letter_0066": {
-				"name": "Letter 0066",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0066",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0066",
+					"label": "Brief 0066",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0066",
+					"title_full": "Brief 0066",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2709,15 +2709,15 @@
 				}
 			},
 			"letter_0067": {
-				"name": "Letter 0067",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0067",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0067",
+					"label": "Brief 0067",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0067",
+					"title_full": "Brief 0067",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2749,15 +2749,15 @@
 				}
 			},
 			"letter_0068": {
-				"name": "Letter 0068",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0068",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0068",
+					"label": "Brief 0068",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0068",
+					"title_full": "Brief 0068",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2791,15 +2791,15 @@
 				}
 			},
 			"letter_0069": {
-				"name": "Letter 0069",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0069",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0069",
+					"label": "Brief 0069",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0069",
+					"title_full": "Brief 0069",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2831,15 +2831,15 @@
 				}
 			},
 			"letter_0070": {
-				"name": "Letter 0070",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0070",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0070",
+					"label": "Brief 0070",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0070",
+					"title_full": "Brief 0070",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2871,15 +2871,15 @@
 				}
 			},
 			"letter_0071": {
-				"name": "Letter 0071",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0071",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0071",
+					"label": "Brief 0071",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0071",
+					"title_full": "Brief 0071",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2911,15 +2911,15 @@
 				}
 			},
 			"letter_0072": {
-				"name": "Letter 0072",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0072",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0072",
+					"label": "Brief 0072",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0072",
+					"title_full": "Brief 0072",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2951,15 +2951,15 @@
 				}
 			},
 			"letter_0073": {
-				"name": "Letter 0073",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0073",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0073",
+					"label": "Brief 0073",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0073",
+					"title_full": "Brief 0073",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -2991,15 +2991,15 @@
 				}
 			},
 			"letter_0074": {
-				"name": "Letter 0074",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0074",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0074",
+					"label": "Brief 0074",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0074",
+					"title_full": "Brief 0074",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3031,15 +3031,15 @@
 				}
 			},
 			"letter_0075": {
-				"name": "Letter 0075",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0075",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0075",
+					"label": "Brief 0075",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0075",
+					"title_full": "Brief 0075",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3071,15 +3071,15 @@
 				}
 			},
 			"letter_0076": {
-				"name": "Letter 0076",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0076",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0076",
+					"label": "Brief 0076",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0076",
+					"title_full": "Brief 0076",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3111,15 +3111,15 @@
 				}
 			},
 			"letter_0077": {
-				"name": "Letter 0077",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0077",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0077",
+					"label": "Brief 0077",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0077",
+					"title_full": "Brief 0077",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3151,15 +3151,15 @@
 				}
 			},
 			"letter_0078": {
-				"name": "Letter 0078",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0078",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0078",
+					"label": "Brief 0078",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0078",
+					"title_full": "Brief 0078",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3191,15 +3191,15 @@
 				}
 			},
 			"letter_0079": {
-				"name": "Letter 0079",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0079",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0079",
+					"label": "Brief 0079",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0079",
+					"title_full": "Brief 0079",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3231,15 +3231,15 @@
 				}
 			},
 			"letter_0080": {
-				"name": "Letter 0080",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0080",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0080",
+					"label": "Brief 0080",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0080",
+					"title_full": "Brief 0080",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3273,15 +3273,15 @@
 				}
 			},
 			"letter_0081": {
-				"name": "Letter 0081",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0081",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0081",
+					"label": "Brief 0081",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0081",
+					"title_full": "Brief 0081",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3313,15 +3313,15 @@
 				}
 			},
 			"letter_0082": {
-				"name": "Letter 0082",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0082",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0082",
+					"label": "Brief 0082",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0082",
+					"title_full": "Brief 0082",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3353,15 +3353,15 @@
 				}
 			},
 			"letter_0083": {
-				"name": "Letter 0083",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0083",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0083",
+					"label": "Brief 0083",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0083",
+					"title_full": "Brief 0083",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3395,15 +3395,15 @@
 				}
 			},
 			"letter_0084": {
-				"name": "Letter 0084",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0084",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0084",
+					"label": "Brief 0084",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0084",
+					"title_full": "Brief 0084",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3435,15 +3435,15 @@
 				}
 			},
 			"letter_0085": {
-				"name": "Letter 0085",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0085",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0085",
+					"label": "Brief 0085",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0085",
+					"title_full": "Brief 0085",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3477,15 +3477,15 @@
 				}
 			},
 			"letter_0086": {
-				"name": "Letter 0086",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0086",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0086",
+					"label": "Brief 0086",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0086",
+					"title_full": "Brief 0086",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3517,15 +3517,15 @@
 				}
 			},
 			"letter_0087": {
-				"name": "Letter 0087",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0087",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0087",
+					"label": "Brief 0087",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0087",
+					"title_full": "Brief 0087",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3561,15 +3561,15 @@
 				}
 			},
 			"letter_0088": {
-				"name": "Letter 0088",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0088",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0088",
+					"label": "Brief 0088",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0088",
+					"title_full": "Brief 0088",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3599,15 +3599,15 @@
 				}
 			},
 			"letter_0089": {
-				"name": "Letter 0089",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0089",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0089",
+					"label": "Brief 0089",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0089",
+					"title_full": "Brief 0089",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3639,15 +3639,15 @@
 				}
 			},
 			"letter_0090": {
-				"name": "Letter 0090",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0090",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0090",
+					"label": "Brief 0090",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0090",
+					"title_full": "Brief 0090",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3678,15 +3678,15 @@
 				}
 			},
 			"letter_0091": {
-				"name": "Letter 0091",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0091",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0091",
+					"label": "Brief 0091",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0091",
+					"title_full": "Brief 0091",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3720,15 +3720,15 @@
 				}
 			},
 			"letter_0092": {
-				"name": "Letter 0092",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0092",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0092",
+					"label": "Brief 0092",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0092",
+					"title_full": "Brief 0092",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3760,15 +3760,15 @@
 				}
 			},
 			"letter_0093": {
-				"name": "Letter 0093",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0093",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0093",
+					"label": "Brief 0093",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0093",
+					"title_full": "Brief 0093",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3802,15 +3802,15 @@
 				}
 			},
 			"letter_0094": {
-				"name": "Letter 0094",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0094",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0094",
+					"label": "Brief 0094",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0094",
+					"title_full": "Brief 0094",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3840,15 +3840,15 @@
 				}
 			},
 			"letter_0095": {
-				"name": "Letter 0095",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0095",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0095",
+					"label": "Brief 0095",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0095",
+					"title_full": "Brief 0095",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3880,15 +3880,15 @@
 				}
 			},
 			"letter_0096": {
-				"name": "Letter 0096",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0096",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0096",
+					"label": "Brief 0096",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0096",
+					"title_full": "Brief 0096",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3924,15 +3924,15 @@
 				}
 			},
 			"letter_0097": {
-				"name": "Letter 0097",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0097",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0097",
+					"label": "Brief 0097",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0097",
+					"title_full": "Brief 0097",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -3964,15 +3964,15 @@
 				}
 			},
 			"letter_0098": {
-				"name": "Letter 0098",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0098",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0098",
+					"label": "Brief 0098",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0098",
+					"title_full": "Brief 0098",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4002,15 +4002,15 @@
 				}
 			},
 			"letter_0099": {
-				"name": "Letter 0099",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0099",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0099",
+					"label": "Brief 0099",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0099",
+					"title_full": "Brief 0099",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4042,15 +4042,15 @@
 				}
 			},
 			"letter_0100": {
-				"name": "Letter 0100",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0100",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0100",
+					"label": "Brief 0100",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0100",
+					"title_full": "Brief 0100",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4081,15 +4081,15 @@
 				}
 			},
 			"letter_0101": {
-				"name": "Letter 0101",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0101",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0101",
+					"label": "Brief 0101",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0101",
+					"title_full": "Brief 0101",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4121,15 +4121,15 @@
 				}
 			},
 			"letter_0102": {
-				"name": "Letter 0102",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0102",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0102",
+					"label": "Brief 0102",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0102",
+					"title_full": "Brief 0102",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4156,15 +4156,15 @@
 				}
 			},
 			"letter_0103": {
-				"name": "Letter 0103",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0103",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0103",
+					"label": "Brief 0103",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0103",
+					"title_full": "Brief 0103",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4196,15 +4196,15 @@
 				}
 			},
 			"letter_0104": {
-				"name": "Letter 0104",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0104",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0104",
+					"label": "Brief 0104",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0104",
+					"title_full": "Brief 0104",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4234,15 +4234,15 @@
 				}
 			},
 			"letter_0105": {
-				"name": "Letter 0105",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0105",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0105",
+					"label": "Brief 0105",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0105",
+					"title_full": "Brief 0105",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4282,15 +4282,15 @@
 				}
 			},
 			"letter_0106": {
-				"name": "Letter 0106",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0106",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0106",
+					"label": "Brief 0106",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0106",
+					"title_full": "Brief 0106",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4320,15 +4320,15 @@
 				}
 			},
 			"letter_0107": {
-				"name": "Letter 0107",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0107",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0107",
+					"label": "Brief 0107",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0107",
+					"title_full": "Brief 0107",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4359,15 +4359,15 @@
 				}
 			},
 			"letter_0108": {
-				"name": "Letter 0108",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0108",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0108",
+					"label": "Brief 0108",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0108",
+					"title_full": "Brief 0108",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4399,15 +4399,15 @@
 				}
 			},
 			"letter_0109": {
-				"name": "Letter 0109",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0109",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0109",
+					"label": "Brief 0109",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0109",
+					"title_full": "Brief 0109",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4437,15 +4437,15 @@
 				}
 			},
 			"letter_0110": {
-				"name": "Letter 0110",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0110",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0110",
+					"label": "Brief 0110",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0110",
+					"title_full": "Brief 0110",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4477,15 +4477,15 @@
 				}
 			},
 			"letter_0111": {
-				"name": "Letter 0111",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0111",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0111",
+					"label": "Brief 0111",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0111",
+					"title_full": "Brief 0111",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4515,15 +4515,15 @@
 				}
 			},
 			"letter_0112": {
-				"name": "Letter 0112",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0112",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0112",
+					"label": "Brief 0112",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0112",
+					"title_full": "Brief 0112",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4555,15 +4555,15 @@
 				}
 			},
 			"letter_0113": {
-				"name": "Letter 0113",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0113",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0113",
+					"label": "Brief 0113",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0113",
+					"title_full": "Brief 0113",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4593,15 +4593,15 @@
 				}
 			},
 			"letter_0114": {
-				"name": "Letter 0114",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0114",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0114",
+					"label": "Brief 0114",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0114",
+					"title_full": "Brief 0114",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4632,15 +4632,15 @@
 				}
 			},
 			"letter_0115": {
-				"name": "Letter 0115",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0115",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0115",
+					"label": "Brief 0115",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0115",
+					"title_full": "Brief 0115",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4671,15 +4671,15 @@
 				}
 			},
 			"letter_0116": {
-				"name": "Letter 0116",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0116",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0116",
+					"label": "Brief 0116",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0116",
+					"title_full": "Brief 0116",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4710,15 +4710,15 @@
 				}
 			},
 			"letter_0117": {
-				"name": "Letter 0117",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0117",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0117",
+					"label": "Brief 0117",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0117",
+					"title_full": "Brief 0117",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4750,15 +4750,15 @@
 				}
 			},
 			"letter_0118": {
-				"name": "Letter 0118",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0118",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0118",
+					"label": "Brief 0118",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0118",
+					"title_full": "Brief 0118",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4785,15 +4785,15 @@
 				}
 			},
 			"letter_0119": {
-				"name": "Letter 0119",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0119",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0119",
+					"label": "Brief 0119",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0119",
+					"title_full": "Brief 0119",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4823,15 +4823,15 @@
 				}
 			},
 			"letter_0120": {
-				"name": "Letter 0120",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0120",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0120",
+					"label": "Brief 0120",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0120",
+					"title_full": "Brief 0120",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4861,15 +4861,15 @@
 				}
 			},
 			"letter_0121": {
-				"name": "Letter 0121",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0121",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0121",
+					"label": "Brief 0121",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0121",
+					"title_full": "Brief 0121",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4906,15 +4906,15 @@
 				}
 			},
 			"letter_0122": {
-				"name": "Letter 0122",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0122",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0122",
+					"label": "Brief 0122",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0122",
+					"title_full": "Brief 0122",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4944,15 +4944,15 @@
 				}
 			},
 			"letter_0123": {
-				"name": "Letter 0123",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0123",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0123",
+					"label": "Brief 0123",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0123",
+					"title_full": "Brief 0123",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -4983,15 +4983,15 @@
 				}
 			},
 			"letter_0124": {
-				"name": "Letter 0124",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0124",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0124",
+					"label": "Brief 0124",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0124",
+					"title_full": "Brief 0124",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5023,15 +5023,15 @@
 				}
 			},
 			"letter_0125": {
-				"name": "Letter 0125",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0125",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0125",
+					"label": "Brief 0125",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0125",
+					"title_full": "Brief 0125",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5058,15 +5058,15 @@
 				}
 			},
 			"letter_0126": {
-				"name": "Letter 0126",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0126",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0126",
+					"label": "Brief 0126",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0126",
+					"title_full": "Brief 0126",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5098,15 +5098,15 @@
 				}
 			},
 			"letter_0127": {
-				"name": "Letter 0127",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0127",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0127",
+					"label": "Brief 0127",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0127",
+					"title_full": "Brief 0127",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5133,15 +5133,15 @@
 				}
 			},
 			"letter_0128": {
-				"name": "Letter 0128",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0128",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0128",
+					"label": "Brief 0128",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0128",
+					"title_full": "Brief 0128",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5168,15 +5168,15 @@
 				}
 			},
 			"letter_0129": {
-				"name": "Letter 0129",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0129",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0129",
+					"label": "Brief 0129",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0129",
+					"title_full": "Brief 0129",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5203,15 +5203,15 @@
 				}
 			},
 			"letter_0130": {
-				"name": "Letter 0130",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0130",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0130",
+					"label": "Brief 0130",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0130",
+					"title_full": "Brief 0130",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5241,15 +5241,15 @@
 				}
 			},
 			"letter_0131": {
-				"name": "Letter 0131",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0131",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0131",
+					"label": "Brief 0131",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0131",
+					"title_full": "Brief 0131",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5279,15 +5279,15 @@
 				}
 			},
 			"letter_0132": {
-				"name": "Letter 0132",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0132",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0132",
+					"label": "Brief 0132",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0132",
+					"title_full": "Brief 0132",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5318,15 +5318,15 @@
 				}
 			},
 			"letter_0133": {
-				"name": "Letter 0133",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0133",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0133",
+					"label": "Brief 0133",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0133",
+					"title_full": "Brief 0133",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5358,15 +5358,15 @@
 				}
 			},
 			"letter_0134": {
-				"name": "Letter 0134",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0134",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0134",
+					"label": "Brief 0134",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0134",
+					"title_full": "Brief 0134",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5393,15 +5393,15 @@
 				}
 			},
 			"letter_0135": {
-				"name": "Letter 0135",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0135",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0135",
+					"label": "Brief 0135",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0135",
+					"title_full": "Brief 0135",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5431,15 +5431,15 @@
 				}
 			},
 			"letter_0136": {
-				"name": "Letter 0136",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0136",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0136",
+					"label": "Brief 0136",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0136",
+					"title_full": "Brief 0136",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5466,15 +5466,15 @@
 				}
 			},
 			"letter_0137": {
-				"name": "Letter 0137",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0137",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0137",
+					"label": "Brief 0137",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0137",
+					"title_full": "Brief 0137",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5504,15 +5504,15 @@
 				}
 			},
 			"letter_0138": {
-				"name": "Letter 0138",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0138",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0138",
+					"label": "Brief 0138",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0138",
+					"title_full": "Brief 0138",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5539,15 +5539,15 @@
 				}
 			},
 			"letter_0139": {
-				"name": "Letter 0139",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0139",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0139",
+					"label": "Brief 0139",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0139",
+					"title_full": "Brief 0139",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5574,15 +5574,15 @@
 				}
 			},
 			"letter_0140": {
-				"name": "Letter 0140",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0140",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0140",
+					"label": "Brief 0140",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0140",
+					"title_full": "Brief 0140",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5613,15 +5613,15 @@
 				}
 			},
 			"letter_0141": {
-				"name": "Letter 0141",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0141",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0141",
+					"label": "Brief 0141",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0141",
+					"title_full": "Brief 0141",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5651,15 +5651,15 @@
 				}
 			},
 			"letter_0142": {
-				"name": "Letter 0142",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0142",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0142",
+					"label": "Brief 0142",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0142",
+					"title_full": "Brief 0142",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5689,15 +5689,15 @@
 				}
 			},
 			"letter_0143": {
-				"name": "Letter 0143",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0143",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0143",
+					"label": "Brief 0143",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0143",
+					"title_full": "Brief 0143",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5727,15 +5727,15 @@
 				}
 			},
 			"letter_0144": {
-				"name": "Letter 0144",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0144",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0144",
+					"label": "Brief 0144",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0144",
+					"title_full": "Brief 0144",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5765,15 +5765,15 @@
 				}
 			},
 			"letter_0145": {
-				"name": "Letter 0145",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0145",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0145",
+					"label": "Brief 0145",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0145",
+					"title_full": "Brief 0145",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5800,15 +5800,15 @@
 				}
 			},
 			"letter_0146": {
-				"name": "Letter 0146",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0146",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0146",
+					"label": "Brief 0146",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0146",
+					"title_full": "Brief 0146",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5838,15 +5838,15 @@
 				}
 			},
 			"letter_0147": {
-				"name": "Letter 0147",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0147",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0147",
+					"label": "Brief 0147",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0147",
+					"title_full": "Brief 0147",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5876,15 +5876,15 @@
 				}
 			},
 			"letter_0148": {
-				"name": "Letter 0148",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0148",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0148",
+					"label": "Brief 0148",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0148",
+					"title_full": "Brief 0148",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5914,15 +5914,15 @@
 				}
 			},
 			"letter_0149": {
-				"name": "Letter 0149",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0149",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0149",
+					"label": "Brief 0149",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0149",
+					"title_full": "Brief 0149",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5952,15 +5952,15 @@
 				}
 			},
 			"letter_0150": {
-				"name": "Letter 0150",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0150",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0150",
+					"label": "Brief 0150",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0150",
+					"title_full": "Brief 0150",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -5990,15 +5990,15 @@
 				}
 			},
 			"letter_0151": {
-				"name": "Letter 0151",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0151",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0151",
+					"label": "Brief 0151",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0151",
+					"title_full": "Brief 0151",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6028,15 +6028,15 @@
 				}
 			},
 			"letter_0299": {
-				"name": "Letter 0299",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0299",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0299",
+					"label": "Brief 0299",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0299",
+					"title_full": "Brief 0299",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6066,15 +6066,15 @@
 				}
 			},
 			"letter_0300": {
-				"name": "Letter 0300",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0300",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0300",
+					"label": "Brief 0300",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0300",
+					"title_full": "Brief 0300",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6104,15 +6104,15 @@
 				}
 			},
 			"letter_0301": {
-				"name": "Letter 0301",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0301",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0301",
+					"label": "Brief 0301",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0301",
+					"title_full": "Brief 0301",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6139,15 +6139,15 @@
 				}
 			},
 			"letter_0302": {
-				"name": "Letter 0302",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0302",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0302",
+					"label": "Brief 0302",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0302",
+					"title_full": "Brief 0302",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6177,15 +6177,15 @@
 				}
 			},
 			"letter_0303": {
-				"name": "Letter 0303",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0303",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0303",
+					"label": "Brief 0303",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0303",
+					"title_full": "Brief 0303",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6218,15 +6218,15 @@
 				}
 			},
 			"letter_0304": {
-				"name": "Letter 0304",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0304",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0304",
+					"label": "Brief 0304",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0304",
+					"title_full": "Brief 0304",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6256,15 +6256,15 @@
 				}
 			},
 			"letter_0305": {
-				"name": "Letter 0305",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0305",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0305",
+					"label": "Brief 0305",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0305",
+					"title_full": "Brief 0305",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6291,15 +6291,15 @@
 				}
 			},
 			"letter_0327": {
-				"name": "Letter 0327",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0327",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0327",
+					"label": "Brief 0327",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0327",
+					"title_full": "Brief 0327",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6326,15 +6326,15 @@
 				}
 			},
 			"letter_0328": {
-				"name": "Letter 0328",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0328",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0328",
+					"label": "Brief 0328",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0328",
+					"title_full": "Brief 0328",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6364,15 +6364,15 @@
 				}
 			},
 			"letter_0329": {
-				"name": "Letter 0329",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0329",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0329",
+					"label": "Brief 0329",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0329",
+					"title_full": "Brief 0329",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6402,15 +6402,15 @@
 				}
 			},
 			"letter_0330": {
-				"name": "Letter 0330",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0330",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0330",
+					"label": "Brief 0330",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0330",
+					"title_full": "Brief 0330",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6441,15 +6441,15 @@
 				}
 			},
 			"letter_0331": {
-				"name": "Letter 0331",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0331",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0331",
+					"label": "Brief 0331",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0331",
+					"title_full": "Brief 0331",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6480,15 +6480,15 @@
 				}
 			},
 			"letter_0332": {
-				"name": "Letter 0332",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0332",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0332",
+					"label": "Brief 0332",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0332",
+					"title_full": "Brief 0332",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6515,15 +6515,15 @@
 				}
 			},
 			"letter_0333": {
-				"name": "Letter 0333",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0333",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0333",
+					"label": "Brief 0333",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0333",
+					"title_full": "Brief 0333",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6553,15 +6553,15 @@
 				}
 			},
 			"letter_0334": {
-				"name": "Letter 0334",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0334",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0334",
+					"label": "Brief 0334",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0334",
+					"title_full": "Brief 0334",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6593,15 +6593,15 @@
 				}
 			},
 			"letter_0335": {
-				"name": "Letter 0335",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0335",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0335",
+					"label": "Brief 0335",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0335",
+					"title_full": "Brief 0335",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6631,15 +6631,15 @@
 				}
 			},
 			"letter_0336": {
-				"name": "Letter 0336",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0336",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0336",
+					"label": "Brief 0336",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0336",
+					"title_full": "Brief 0336",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6671,15 +6671,15 @@
 				}
 			},
 			"letter_0337": {
-				"name": "Letter 0337",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0337",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0337",
+					"label": "Brief 0337",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0337",
+					"title_full": "Brief 0337",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6709,15 +6709,15 @@
 				}
 			},
 			"letter_0338": {
-				"name": "Letter 0338",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0338",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0338",
+					"label": "Brief 0338",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0338",
+					"title_full": "Brief 0338",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6748,15 +6748,15 @@
 				}
 			},
 			"letter_0339": {
-				"name": "Letter 0339",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0339",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0339",
+					"label": "Brief 0339",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0339",
+					"title_full": "Brief 0339",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6787,15 +6787,15 @@
 				}
 			},
 			"letter_0340": {
-				"name": "Letter 0340",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0340",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0340",
+					"label": "Brief 0340",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0340",
+					"title_full": "Brief 0340",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6825,15 +6825,15 @@
 				}
 			},
 			"letter_0341": {
-				"name": "Letter 0341",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0341",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0341",
+					"label": "Brief 0341",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0341",
+					"title_full": "Brief 0341",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6865,15 +6865,15 @@
 				}
 			},
 			"letter_0342": {
-				"name": "Letter 0342",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0342",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0342",
+					"label": "Brief 0342",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0342",
+					"title_full": "Brief 0342",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6903,15 +6903,15 @@
 				}
 			},
 			"letter_0343": {
-				"name": "Letter 0343",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0343",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0343",
+					"label": "Brief 0343",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0343",
+					"title_full": "Brief 0343",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6943,15 +6943,15 @@
 				}
 			},
 			"letter_0344": {
-				"name": "Letter 0344",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0344",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0344",
+					"label": "Brief 0344",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0344",
+					"title_full": "Brief 0344",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -6982,15 +6982,15 @@
 				}
 			},
 			"letter_0345": {
-				"name": "Letter 0345",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0345",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0345",
+					"label": "Brief 0345",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0345",
+					"title_full": "Brief 0345",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -7020,15 +7020,15 @@
 				}
 			},
 			"letter_0346": {
-				"name": "Letter 0346",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0346",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0346",
+					"label": "Brief 0346",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0346",
+					"title_full": "Brief 0346",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -7059,15 +7059,15 @@
 				}
 			},
 			"letter_0347": {
-				"name": "Letter 0347",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0347",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0347",
+					"label": "Brief 0347",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0347",
+					"title_full": "Brief 0347",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -7097,15 +7097,15 @@
 				}
 			},
 			"letter_0348": {
-				"name": "Letter 0348",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Brief 0348",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Brief",
 				"metadata": {
-					"label": "Letter 0348",
+					"label": "Brief 0348",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Letter 0348",
+					"title_full": "Brief 0348",
 					"pubPosthumOnly": "",
 					"pubPlace": "A letter from X",
 					"signature": "",
@@ -21079,7 +21079,7 @@
 			"smallform_0298": {
 				"slug": "smallform_0298",
 				"name": "Eine Schweizerin reitet durch verbotenes Land. Zu dem Reisebericht von Ella K. Maillart, 1939-01-01",
-				"date": {"from":"1939-01-01","to":"1939-01-01"},
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "",
 				"metadata": {
 					"label": "Eine Schweizerin reitet durch verbotenes Land. Zu dem Reisebericht von Ella K. Maillart, 1939-01-01",
@@ -37293,15 +37293,15 @@
 		"longforms": {
 			"longform_0001": {
 				"slug": "Longform 0001",
-				"name": "Longform 0001",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Beiträge zur Geschichte des Oberengadins",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0001",
+					"label": "Beiträge zur Geschichte des Oberengadins",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0001",
+					"title_full": "Beiträge zur Geschichte des Oberengadins",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",
@@ -37532,15 +37532,15 @@
 			},
 			"longform_0003": {
 				"slug": "Longform 0003",
-				"name": "Longform 0003",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Freunde um Bernhard",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0003",
+					"label": "Freunde um Bernhard",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0003",
+					"title_full": "Freunde um Bernhard",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",
@@ -37770,15 +37770,15 @@
 			},
 			"longform_0004": {
 				"slug": "Longform 0004",
-				"name": "Longform 0004",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Lyrische Novelle",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0004",
+					"label": "Lyrische Novelle",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0004",
+					"title_full": "Lyrische Novelle",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",
@@ -37898,15 +37898,15 @@
 			},
 			"longform_0006": {
 				"slug": "Longform 0006",
-				"name": "Longform 0006",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Winter in Vorderasien",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0006",
+					"label": "Winter in Vorderasien",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0006",
+					"title_full": "Winter in Vorderasien",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",
@@ -38152,15 +38152,15 @@
 			},
 			"longform_0008": {
 				"slug": "Longform 0008",
-				"name": "Longform 0008",
-				"date": {"from":"9999-01-01","to":"2000-01-01"},
+				"name": "Ein Leben für die Berge",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0008",
+					"label": "Ein Leben für die Berge",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0008",
+					"title_full": "Ein Leben für die Berge",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",
@@ -38407,17 +38407,15 @@
 			},
 			"longform_0010": {
 				"slug": "Longform 0010",
-				"name": "Longform 0010",
-				
-
-
+				"name": "Das glückliche Tal",
+				"date": {"from":"9999-01-01","to":"9999-12-31"},
 				"type": "Longform",
 				"metadata": {
-					"label": "Longform 0010",
+					"label": "Das glückliche Tal",
 					"editor_workflow": "",
 					"year": 9999,
 					"pubDate": "9999-01-01",
-					"title_full": "Longform 0010",
+					"title_full": "Das glückliche Tal",
 					"pubPosthumOnly": "",
 					"pubPlace": "Some place",
 					"signature": "",

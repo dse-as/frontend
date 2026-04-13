@@ -5,7 +5,7 @@
 			"sequence_name": "Textstufen",
 			"key_singular": "textstufe",
 			"label_plural": "Textstufen",
-			"url_overview": null,
+			"url_overview": "/sequences",
 			"label_overview": null,
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
@@ -14,7 +14,7 @@
 			"sequence_name": "Reisen",
 			"key_singular": "travel",
 			"label_plural": "Reisen",
-			"url_overview": "/topics/travels",
+			"url_overview": "/register",
 			"label_overview": "In Reiseansicht ansehen",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"

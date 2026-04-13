@@ -87,7 +87,7 @@
 		{#each docIds as docId}
 			{@render LinkedItems(docId)}
 		{:else}
-			<p class="px-4">Keine verlinkten Dokumente gefunden.</p>{/each}
+			<p class="px-4 text-surface-700">Keine verlinkten Dokumente gefunden.</p>{/each}
 	</div>
 {/snippet}
 
@@ -181,11 +181,15 @@
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
 			Korrespondenz mit Annemarie Schwarzenbach
 		</h2>
+		{@render LinkedItemsContainer([])}
+		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
 		{@render LinkedItemsContainer(regAttributes?.docs)}
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Weitere Dokumente</h2>
-		{@render LinkedItemsContainer(regAttributes?.docs)}
+		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
+		{@render LinkedItemsContainer([])}
 	{:else}
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verlinkte Dokumente</h2>
+		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
 		<div class="min-h-[40vh]">{@render LinkedItemsContainer(regAttributes?.docs)}</div>
+		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
+		{@render LinkedItemsContainer([])}
 	{/if}
 </div>

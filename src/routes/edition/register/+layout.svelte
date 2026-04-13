@@ -18,7 +18,7 @@
 		class={[
 			'flex transition-all duration-200',
 			data.regView === 'regView1'
-				? 'mx-auto mt-50 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
+				? 'mx-auto mt-40 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
 				: 'h-full w-full gap-2'
 		]}
 	>
@@ -48,9 +48,9 @@
 	class={[
 		'absolute transition-all duration-400',
 		data.regView === 'regView1'
-			? 'top-45 left-0 w-full text-center h1'
+			? 'top-35 left-0 w-full text-center h1'
 			: data.regView === 'regView2'
-				? 'top-45 left-0 w-1 pl-10  text-center h1 whitespace-nowrap'
+				? 'top-35 left-0 w-1 pl-10  text-center h1 whitespace-nowrap'
 				: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 	]}
 >

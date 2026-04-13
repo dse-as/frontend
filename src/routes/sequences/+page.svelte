@@ -2,11 +2,15 @@
 	import { resolve } from '$app/paths';
 </script>
 
-<h1 class="mt-10 h1">Reihungen</h1>
-<nav class="mt-2">
-	<ul class="flex flex-wrap gap-2">
-		<li class="my-btn-round"><a href={resolve('/sequences/textstufen')}>Textstufen</a></li>
-		<li class="my-btn-round"><a href={resolve('/sequences/series')}>Serien</a></li>
-		<li class="my-btn-round"><a href={resolve('/sequences/travels')}>Reisen</a></li>
-	</ul>
-</nav>
+<div class="mx-auto mt-13 flex w-full max-w-300 flex-col items-center justify-center">
+	<h1 class="h1">Reihungen</h1>
+	<nav class="mt-10">
+		<ul class="flex flex-wrap gap-4">
+			<li class="my-btn-round text-2xl">
+				<a href={resolve('/sequences/textstufen')}>Textstufen</a>
+			</li>
+			<li class="my-btn-round text-2xl"><a href={resolve('/sequences/series')}>Serien</a></li>
+			<li class="my-btn-round text-2xl"><a href={resolve('/sequences/travels')}>Reisen</a></li>
+		</ul>
+	</nav>
+</div>

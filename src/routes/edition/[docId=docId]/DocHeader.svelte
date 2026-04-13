@@ -4,7 +4,7 @@
 	import { resolve } from '$app/paths';
 	let isExpandedBox1 = $state(false);
 
-	let { docId, docMeta, ceteiData, currentPage } = $props();
+	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
 
 	const reg = register.register as Record<string, Record<string, any>>;
 	const dictReg = dict_register.dict_register as Record<
@@ -104,11 +104,11 @@
 						<tbody class="flex flex-col gap-2">
 							{@render metadataEntry(
 								'Dieses Dokument',
-								`Digitale Edition Schwarzenbach (2028): ${docMeta.metadata.title_full}`
+								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full}`
 							)}
 							{@render metadataEntry(
 								'Aktuell sichtbare Seite',
-								`Digitale Edition Schwarzenbach (2028): ${docMeta.metadata.title_full},  Seite ${currentPage}`
+								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full},  Seite ${currentPage}`
 							)}
 						</tbody>
 					</table>
@@ -141,10 +141,11 @@
 {#if docMeta}
 	<div class="w-full">
 		<h1 class="h1">{docMeta.metadata.title_full}</h1>
-		<h2 class="h2">
-			Publiziert in {docMeta.metadata.pubPlace} ({docMeta.metadata.year})
-		</h2>
-
+		{#if docType === 'smallforms'}
+			<h2 class="h2">
+				Publiziert in {docMeta.metadata.pubPlace} ({docMeta.metadata.year})
+			</h2>
+		{/if}
 		<!-- Global Comment -->
 		{#if globalComment}
 			<div class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}>

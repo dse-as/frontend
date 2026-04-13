@@ -811,7 +811,7 @@
 			"correspondence_0006": {
 				"url_slug": null,
 				"name": "Claude Bourdet",
-				"preamble": "Briefwechsel mit Claude Bourdet",
+				"preamble": "Korrespondenz mit Claude Bourdet",
 				"personId": "person_0006",
 				"docs": [
 					"letter_0001",
@@ -877,14 +877,14 @@
 			"correspondence_0007": {
 				"url_slug": null,
 				"name": "Margret Boveri",
-				"preamble": "Briefwechsel mit Margret Boveri",
+				"preamble": "Korrespondenz mit Margret Boveri",
 				"personId": "person_0007",
 				"docs": ["letter_0059", "letter_0060", "letter_0061", "letter_0062", "letter_0063"]
 			},
 			"correspondence_0008": {
 				"url_slug": null,
 				"name": "Marianne Breslauer",
-				"preamble": "Briefwechsel mit Marianne Breslauer",
+				"preamble": "Korrespondenz mit Marianne Breslauer",
 				"personId": "person_0008",
 				"docs": [
 					"letter_0064",
@@ -916,7 +916,7 @@
 			"correspondence_0010": {
 				"url_slug": null,
 				"name": "Carl Jacob Burckhardt",
-				"preamble": "Briefwechsel mit Carl Jacob Burckhardt",
+				"preamble": "Korrespondenz mit Carl Jacob Burckhardt",
 				"personId": "person_0010",
 				"docs": [
 					"letter_0088",
@@ -952,126 +952,126 @@
 			"correspondence_0011": {
 				"url_slug": null,
 				"name": "Martha Cadisch",
-				"preamble": "Briefwechsel mit Martha Cadisch",
+				"preamble": "Korrespondenz mit Martha Cadisch",
 				"personId": "person_0011",
 				"docs": []
 			},
 			"correspondence_0022": {
 				"url_slug": null,
 				"name": "Anita Forrer",
-				"preamble": "Briefwechsel mit Anita Forrer",
+				"preamble": "Korrespondenz mit Anita Forrer",
 				"personId": "person_0022",
 				"docs": []
 			},
 			"correspondence_0024": {
 				"url_slug": null,
 				"name": "Eduard Fueter",
-				"preamble": "Briefwechsel mit Eduard Fueter",
+				"preamble": "Korrespondenz mit Eduard Fueter",
 				"personId": "person_0024",
 				"docs": []
 			},
 			"correspondence_0031": {
 				"url_slug": null,
 				"name": "Albrecht Haushofer",
-				"preamble": "Briefwechsel mit Albrecht Haushofer",
+				"preamble": "Korrespondenz mit Albrecht Haushofer",
 				"personId": "person_0031",
 				"docs": []
 			},
 			"correspondence_0038": {
 				"url_slug": null,
 				"name": "Otto Kleiber",
-				"preamble": "Briefwechsel mit Otto Kleiber",
+				"preamble": "Korrespondenz mit Otto Kleiber",
 				"personId": "person_0038",
 				"docs": []
 			},
 			"correspondence_0181": {
 				"url_slug": null,
 				"name": "Arnold Kübler",
-				"preamble": "Briefwechsel mit Arnold Kübler",
+				"preamble": "Korrespondenz mit Arnold Kübler",
 				"personId": "person_0181",
 				"docs": []
 			},
 			"correspondence_0048": {
 				"url_slug": null,
 				"name": "Dagmar Maillart",
-				"preamble": "Briefwechsel mit Dagmar Maillart",
+				"preamble": "Korrespondenz mit Dagmar Maillart",
 				"personId": "person_0048",
 				"docs": []
 			},
 			"correspondence_0049": {
 				"url_slug": null,
 				"name": "Ella Maillart",
-				"preamble": "Briefwechsel mit Ella Maillart",
+				"preamble": "Korrespondenz mit Ella Maillart",
 				"personId": "person_0049",
 				"docs": []
 			},
 			"correspondence_0050": {
 				"url_slug": null,
 				"name": "Erika Mann",
-				"preamble": "Briefwechsel mit Erika Mann",
+				"preamble": "Korrespondenz mit Erika Mann",
 				"personId": "person_0050",
 				"docs": []
 			},
 			"correspondence_0053": {
 				"url_slug": null,
 				"name": "Klaus Mann",
-				"preamble": "Briefwechsel mit Klaus Mann",
+				"preamble": "Korrespondenz mit Klaus Mann",
 				"personId": "person_0053",
 				"docs": []
 			},
 			"correspondence_0058": {
 				"url_slug": null,
 				"name": "Carson McCullers",
-				"preamble": "Briefwechsel mit Carson McCullers",
+				"preamble": "Korrespondenz mit Carson McCullers",
 				"personId": "person_0058",
 				"docs": []
 			},
 			"correspondence_XXXX": {
 				"url_slug": null,
 				"name": "Max Rascher",
-				"preamble": "Briefwechsel mit Max Rascher",
+				"preamble": "Korrespondenz mit Max Rascher",
 				"personId": "person_XXXX",
 				"docs": []
 			},
 			"correspondence_0300": {
 				"url_slug": null,
 				"name": "Erich Maria Remarque",
-				"preamble": "Briefwechsel mit Erich Maria Remarque",
+				"preamble": "Korrespondenz mit Erich Maria Remarque",
 				"personId": "person_0300",
 				"docs": []
 			},
 			"correspondence_0553": {
 				"url_slug": null,
 				"name": "Georg Reinhart",
-				"preamble": "Briefwechsel mit Georg Reinhart",
+				"preamble": "Korrespondenz mit Georg Reinhart",
 				"personId": "person_0553",
 				"docs": []
 			},
 			"correspondence_0083": {
 				"url_slug": null,
 				"name": "Hans Schwarzenbach",
-				"preamble": "Briefwechsel mit Hans Schwarzenbach",
+				"preamble": "Korrespondenz mit Hans Schwarzenbach",
 				"personId": "person_0083",
 				"docs": []
 			},
 			"correspondence_0084": {
 				"url_slug": null,
 				"name": "Renée Schwarzenbach",
-				"preamble": "Briefwechsel mit Renée Schwarzenbach",
+				"preamble": "Korrespondenz mit Renée Schwarzenbach",
 				"personId": "person_0084",
 				"docs": []
 			},
 			"correspondence_0085": {
 				"url_slug": null,
 				"name": "Carl Seelig",
-				"preamble": "Briefwechsel mit Carl Seelig",
+				"preamble": "Korrespondenz mit Carl Seelig",
 				"personId": "person_0085",
 				"docs": []
 			},
 			"correspondence_0092": {
 				"url_slug": null,
 				"name": "Georg Thürer",
-				"preamble": "Briefwechsel mit Georg Thürer",
+				"preamble": "Korrespondenz mit Georg Thürer",
 				"personId": "person_0092",
 				"docs": []
 			}

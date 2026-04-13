@@ -34,7 +34,13 @@
 	<Sequences fullMeta={data.fullMeta} docId={data.docId} currentSeq={data.currentSeq} />
 
 	<!-- Metadata -->
-	<DocHeader docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} {currentPage} />
+	<DocHeader
+		docId={data.docId}
+		docType={data.docType}
+		docMeta={data.docMeta}
+		ceteiData={data.ceteiData}
+		{currentPage}
+	/>
 
 	<!-- DFLF Toggle -->
 	<button

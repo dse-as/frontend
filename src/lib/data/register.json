@@ -593,7 +593,8 @@
 				"dateDeath": "1949",
 				"type": "Freund:in, Autor:in",
 				"orgId": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"person_0056": {
 				"name": "",
@@ -785,7 +786,8 @@
 				"dateDeath": "1936",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
 				"orgId": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"person_0074": {
 				"name": "",
@@ -881,7 +883,8 @@
 				"dateDeath": "1942",
 				"type": "",
 				"orgId": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"person_0083": {
 				"name": "Schwarzenbach, Hans",
@@ -1805,7 +1808,8 @@
 				"dateDeath": "1945",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
 				"orgId": "org_0002",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"person_0161": {
 				"name": "al-Mansūr, Abū Dschaʿfar al-Mansūr",
@@ -7280,7 +7284,8 @@
 				"dateDeath": "1932",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
 				"orgId": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"person_0619": {
 				"name": "Boedeke, Amalia",
@@ -7292,7 +7297,8 @@
 				"dateDeath": "",
 				"type": "Bekannte:r",
 				"orgId": "",
-				"note": "Kein GND-Eintrag, Zufallsbekannte in Danzig (taucht ev. nur einmal auf)."
+				"note": "Kein GND-Eintrag, Zufallsbekannte in Danzig (taucht ev. nur einmal auf).",
+				"docs": ["smallform_0231"]
 			},
 			"person_0620": {
 				"name": "Feist/Faist, Hans",
@@ -11414,7 +11420,8 @@
 				"type": "Siedlung",
 				"coords": [],
 				"country": "DE",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0011": {
 				"name": "Bern",
@@ -11484,7 +11491,8 @@
 				"type": "Siedlung",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0018": {
 				"name": "Darmstadt",
@@ -11834,7 +11842,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0053": {
 				"name": "München",
@@ -11904,7 +11913,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0060": {
 				"name": "Philadelphia",
@@ -12234,7 +12244,8 @@
 				"type": "",
 				"coords": [56.85514, 25.32515],
 				"country": "",
-				"note": "Unklar, ob wir länderübergreifende Regionen Referenzieren sollen"
+				"note": "Unklar, ob wir länderübergreifende Regionen Referenzieren sollen",
+				"docs": ["smallform_0231"]
 			},
 			"place_0094": {
 				"name": "Estland",
@@ -12264,7 +12275,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0097": {
 				"name": "Leningrad",
@@ -12314,7 +12326,8 @@
 				"type": "Land",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]	
 			},
 			"place_0102": {
 				"name": "Skandinavien",
@@ -12374,7 +12387,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0108": {
 				"name": "Polen",
@@ -12384,7 +12398,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0109": {
 				"name": "Vilnius",
@@ -12404,7 +12419,8 @@
 				"type": "",
 				"coords": [],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0111": {
 				"name": "Mykene",
@@ -19774,7 +19790,8 @@
 				"type": "Siedlung",
 				"coords": [54.40723, 18.55363],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0856": {
 				"name": "Zoppot",
@@ -19784,7 +19801,8 @@
 				"type": "Siedlung",
 				"coords": [54.4418, 18.56003],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0857": {
 				"name": "Dresden",
@@ -19794,7 +19812,8 @@
 				"type": "Siedlung",
 				"coords": [51.05089, 13.73832],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0858": {
 				"name": "Westerplatte",
@@ -19804,7 +19823,8 @@
 				"type": "Insel",
 				"coords": [54.40753, 18.66984],
 				"country": "",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"place_0859": {
 				"name": "Ruhala",
@@ -21816,6 +21836,7 @@
 					"smallform_0226",
 					"smallform_0227",
 					"smallform_0229",
+					"smallform_0231",
 					"smallform_0232",
 					"smallform_0233",
 					"smallform_0270"
@@ -22119,14 +22140,16 @@
 				"nameVariants": [],
 				"gndNumber": "1086762878",
 				"type": "Periodikum",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0002": {
 				"name": "NSDAP",
 				"nameVariants": [],
 				"gndNumber": "1012979-0",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0003": {
 				"name": "ABC (Zürich)",
@@ -22161,7 +22184,8 @@
 				"nameVariants": [],
 				"gndNumber": "1289263922",
 				"type": "Periodikum",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0008": {
 				"name": "Konservatorium Moskau",
@@ -23506,14 +23530,16 @@
 				"nameVariants": [],
 				"gndNumber": "31334-8",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0199": {
 				"name": "SA (Sturmabteilung der NSDAP)",
 				"nameVariants": [],
 				"gndNumber": "63215-6",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0200": {
 				"name": "Bureau International du Travail",
@@ -23884,7 +23910,8 @@
 				"nameVariants": [],
 				"gndNumber": "10162246-6",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0253": {
 				"name": "Der Stürmer (Zeitung)",
@@ -23940,14 +23967,16 @@
 				"nameVariants": [],
 				"gndNumber": "31336-1",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0261": {
 				"name": "NS-Frauenschaft",
 				"nameVariants": [],
 				"gndNumber": "112157-1",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"org_0262": {
 				"name": "OTRACO (Office d'Exploitation des Transports Coloniaux)",
@@ -25208,7 +25237,8 @@
 				"name": "Horst-Wessel-Lied",
 				"type": null,
 				"authorId": "",
-				"pubDate": ""
+				"pubDate": "",
+				"docs": ["smallform_0231"]
 			},
 			"VKTJ5RJ7": {
 				"name": "Ferien vom Ich",
@@ -25221,13 +25251,15 @@
 				"name": "Verfilmung",
 				"type": null,
 				"authorId": "",
-				"pubDate": ""
+				"pubDate": "",
+				"docs": ["smallform_0231"]
 			},
 			"5JXX7VPC": {
 				"name": "Markert 1935",
 				"type": null,
 				"authorId": "",
-				"pubDate": "1935"
+				"pubDate": "1935",
+				"docs": ["smallform_0231"]
 			}
 		},
 		"keywords": {
