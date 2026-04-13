@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
+	import { resolve } from '$app/paths';
 
 	let { data, children } = $props();
 
@@ -28,7 +29,7 @@
 					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
 					data.regType === regId && 'my-btn-active'
 				]}
-				href={`/edition/register/${regId}`}
+				href={resolve(`/edition/register/${regId}`)}
 			>
 				{dictReg[regId]?.label_plural}
 			</a>

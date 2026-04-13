@@ -94,7 +94,7 @@
 	{@const itemType = findEdTypeByDocId(itemId)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
-		href={`/edition/${itemId}`}
+		href={resolve(`/edition/${itemId}`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
 		target="blank"
 		rel="noopener noreferrer"

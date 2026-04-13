@@ -482,7 +482,7 @@
 				role="dialog"
 				tabindex="0"
 				class={[
-					'relative rounded-b-xl bg-surface-500 p-6 text-surface-950',
+					'relative rounded-b-xl bg-surface-50-950 p-6 text-surface-950',
 					isSelectedValidSeq && 'border-t-2'
 				]}
 				onmouseenter={() => {

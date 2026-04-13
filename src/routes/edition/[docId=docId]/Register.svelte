@@ -68,10 +68,12 @@
 				</h1>
 				<Accordion.ItemContent class="m-0 p-0">
 					{#each regEntries[regType] as entry (entry)}
-						<div class="py-3 pl-10 hover:bg-surface-50-950">
+						<div
+							class="group flex flex-wrap items-center justify-start gap-5 rounded-2xl py-3 pl-10 hover:bg-surface-100-900"
+						>
 							<h2 class="h6">{reg[regType][entry].name}</h2>
 							<a
-								class="text-blue-500 underline"
+								class="hidden text-primary-500 underline group-hover:block"
 								href={resolve(`/edition/register/${entry}`)}
 								target="_blank"
 								rel="noopener noreferrer">Registereintrag öffnen</a
