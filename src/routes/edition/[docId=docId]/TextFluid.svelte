@@ -16,6 +16,8 @@
 
 	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
+	let setupComplete = $state(false);
+
 	// ---------------------------------------------
 	// Thumbnails
 	type TItem = {
@@ -29,13 +31,16 @@
 
 	let items = $state([] as TItem[]);
 
+	$inspect(items);
 	let resizeObserver: ResizeObserver;
 	let mutationObserver: MutationObserver;
 
 	function collectPagebreaks(el: HTMLElement) {
 		const nodes = el.querySelectorAll('tei-pb');
+		console.log('NODES', nodes);
+
 		if (nodes.length) {
-			items = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
+			const newItems = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
 				id: i,
 				el: el,
 				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
@@ -43,7 +48,15 @@
 				page: i + 1,
 				top: 0
 			}));
-			updatePagebreakPositions();
+
+			// 🔑 prevent unnecessary state updates (breaks feedback loop)
+			const same =
+				newItems.length === items.length && newItems.every((n, i) => n.el === items[i]?.el);
+
+			if (!same) {
+				items = newItems;
+				updatePagebreakPositions();
+			}
 		}
 	}
 
@@ -73,10 +86,7 @@
 	}
 
 	function setupFacsimile(el: HTMLElement) {
-		let setupComplete = $state(false);
 		$effect(() => {
-			if (!setupComplete) return; // guard to only run once
-
 			// initial collect
 			collectPagebreaks(el);
 
@@ -87,13 +97,19 @@
 			resizeObserver.observe(el);
 
 			// reacts to DOM/text changes
+			let mutationTimeout: number;
+
 			mutationObserver = new MutationObserver(() => {
-				collectPagebreaks(el);
+				clearTimeout(mutationTimeout);
+				mutationTimeout = setTimeout(() => {
+					collectPagebreaks(el);
+				}, 50);
 			});
+
 			mutationObserver.observe(el, {
 				childList: true,
-				subtree: true,
-				characterData: true
+				subtree: true
+				// ❌ removed characterData to reduce noise
 			});
 
 			// fallback for viewport changes
@@ -103,13 +119,13 @@
 			if (document.fonts) {
 				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
-			setupComplete = true;
 
-			// Clean-up
+			// ✅ cleanup (prevents stacking + hidden loops)
 			return () => {
 				resizeObserver?.disconnect();
 				mutationObserver?.disconnect();
 				window.removeEventListener('resize', updatePagebreakPositions);
+
 				if (document.fonts) {
 					document.fonts.removeEventListener('loadingdone', updatePagebreakPositions);
 				}
@@ -118,11 +134,12 @@
 	}
 
 	function setupListeners(el: HTMLElement) {
-		let setupComplete = $state(false);
 		$effect(() => {
-			if (!setupComplete) return; // guard to only run once
 			el.addEventListener('click', handleDocumentClick);
-			setupComplete = true;
+
+			return () => {
+				el.removeEventListener('click', handleDocumentClick);
+			};
 		});
 	}
 
@@ -130,7 +147,7 @@
 		const url = new URL(page.url);
 		url.searchParams.set('page', String(pagenum));
 		url.searchParams.set('mode', 'DF');
-		goto(url);
+		goto(url, { noScroll: true });
 	}
 
 	// ---------------------------------------------
@@ -145,7 +162,7 @@
 
 <div
 	data-textflow="fluid"
-	class="grid grid-cols-[120px_1fr] gap-10 overflow-y-auto p-10"
+	class="mt-10 grid grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
 	bind:this={containerMaintext}
 >
 	<!-- THUMBS COLUMN -->
@@ -154,13 +171,11 @@
 			<!-- spacer -->
 			<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
 
-			<button class="sticky top-0 float-right ml-2 bg-white" onclick={() => openDFpage(item.page)}>
-				<IIIF_Thumb
-					url={item.docMeta?.manuscript?.iiif_urls[0]}
-					maxWidth="100"
-					maxHeight="100"
-					classes="rounded-xl"
-				/>
+			<button
+				class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
+				onclick={() => openDFpage(item.page)}
+			>
+				<IIIF_Thumb url={item.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
 				<span class="italic">Seite {item.page}</span>
 			</button>
 		{/each}
@@ -186,8 +201,8 @@
 		:global(p) {
 			@apply my-4;
 		}
-		:global([data-type='pagebreak'])::after {
-			content: 'PAGEBREAK ' attr(data-page);
+		:global(tei-pb)::after {
+			/* content: 'PAGEBREAK ' attr(data-page); */
 			@apply bg-red-500 p-2 font-bold;
 		}
 	}

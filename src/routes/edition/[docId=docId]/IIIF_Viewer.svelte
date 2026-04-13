@@ -7,7 +7,7 @@
 	const uuid = crypto.randomUUID();
 	let viewer: any;
 
-	let { iiif_url }: { iiif_url: string } = $props();
+	let { iiif_url } = $props();
 
 	const generateViewer = (node: HTMLElement, manifest: string) => {
 		let observer: ResizeObserver;
@@ -93,8 +93,4 @@
 	// wait = false;
 </script>
 
-<div
-	id={'viewer-' + uuid}
-	class="h-screen w-full"
-	use:generateViewer={`${iiif_url}/info.json`}
-></div>
+<div id={'viewer-' + uuid} class="h-full w-full" use:generateViewer={`${iiif_url}/info.json`}></div>

@@ -13,7 +13,7 @@
 
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
-	let pagenum: number = $derived(Number(page.url.searchParams?.get('page')) || 1);
+	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
 		// get mode from URL
@@ -34,10 +34,7 @@
 	<Sequences fullMeta={data.fullMeta} docId={data.docId} currentSeq={data.currentSeq} />
 
 	<!-- Metadata -->
-	<DocHeader docMeta={data.docMeta} ceteiData={data.ceteiData} />
-
-	<!-- Thumbnail Gallery -->
-	<Gallery fullMeta={data.fullMeta} docId={data.docId} docMeta={data.docMeta} {pagenum} />
+	<DocHeader docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} {currentPage} />
 
 	<!-- DFLF Toggle -->
 	<button
@@ -45,11 +42,12 @@
 			dflf = dflf == 'DF' ? 'LF' : 'DF';
 			page.url.searchParams.set('mode', dflf);
 			goto(`${page.url.pathname}?${page.url.searchParams.toString()}`, {
-				replaceState: true
+				replaceState: true,
+				noScroll: true
 			});
 		}}
 		class={[
-			'top-30 left-20 z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
+			'z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
 			dflf == 'DF'
 				? 'bg-surface-300-700 text-surface-950-50'
 				: 'bg-surface-700-300 text-surface-100-900'
@@ -57,12 +55,17 @@
 		>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}
 	</button>
 
+	<!-- Thumbnail Gallery -->
+	{#if dflf === 'DF'}
+		<Gallery fullMeta={data.fullMeta} docId={data.docId} docMeta={data.docMeta} {currentPage} />
+	{/if}
+
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf === 'LF'}
 			<LF docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} />
 		{:else if dflf === 'DF'}
-			<DF docMeta={data.docMeta} ceteiData={data.ceteiData} />
+			<DF docMeta={data.docMeta} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
 </div>

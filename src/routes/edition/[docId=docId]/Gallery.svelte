@@ -15,7 +15,7 @@
 		page: number;
 	};
 
-	let { fullMeta, docId, docMeta, pagenum } = $props();
+	let { fullMeta, docId, docMeta, currentPage } = $props();
 
 	// Textzeugen
 	const tzgIds = $derived(docMeta?.metadata.textzeugen_nonedited || []);
@@ -32,8 +32,8 @@
 	}
 
 	// Scroll Gallery
-	function scrollGalleryToPage(pagenum: number) {
-		const btn = buttonRefs[pagenum - 1];
+	function scrollGalleryToPage(currentPage: number) {
+		const btn = buttonRefs[currentPage - 1];
 		if (btn && containerRef) {
 			const btnLeft = btn.offsetLeft;
 			const btnWidth = btn.offsetWidth;
@@ -45,28 +45,36 @@
 		}
 	}
 
-	function handleSelectPage(pagenum: number) {
+	function handleSelectPage(currentPage: number) {
 		const url = new URL(page.url);
-		url.searchParams.set('page', String(pagenum));
-		goto(url);
+		url.searchParams.set('page', String(currentPage));
+		goto(url, { noScroll: true });
 	}
 
 	$effect(() => {
-		scrollGalleryToPage(pagenum);
+		scrollGalleryToPage(currentPage);
 	});
 </script>
 
 <div class="w-full">
 	<div
-		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 transition-all duration-200"
+		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 border-surface-500 p-5 transition-all duration-200"
 	>
-		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10 py-5">
+		{#if tzgIds.length}
+			<button
+				class="self-start rounded-full text-left underline"
+				onclick={() => {
+					showTextzeugen = !showTextzeugen;
+				}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
+			>
+		{/if}
+		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10">
 			{#each collectGalleryItems(docId) as item, index (item.page)}
 				<button
 					bind:this={buttonRefs[index]}
 					class={[
 						`flex flex-col items-center justify-center rounded-xl p-2 hover:bg-yellow-100`,
-						item.pagenum_running === pagenum && 'bg-yellow-100'
+						Number(item.pagenum_running) === currentPage && 'bg-yellow-100'
 					]}
 					onclick={() => handleSelectPage(item.pagenum_running)}
 				>
@@ -74,22 +82,14 @@
 					<span class="italic">Seite {item.page}</span>
 				</button>
 			{/each}
-		</div>
-		{#if tzgIds.length && !showTextzeugen}
-			<button
-				class="m-5 self-start rounded-full underline"
-				onclick={() => {
-					showTextzeugen = true;
-				}}>Nichtedierte Textzeugen einblenden</button
-			>
-		{/if}
-		{#if showTextzeugen}
-			<div class="bg-surface-800 px-10 py-5 text-surface-200">
+			{#if showTextzeugen}
 				{#each tzgIds as tzgId}
 					{@const tzgType = findEdTypeByDocId(tzgId)}
 					{@const items = collectGalleryItems(tzgId)}
-					<h6 class="h6">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
-					<div class="flex w-full gap-5 overflow-x-auto rounded-xl px-10 py-5">
+					<div
+						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-100-900 px-10"
+					>
+						<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
 						{#each items as item (item.page)}
 							<a
 								class="ml-2 rounded-xl p-1"
@@ -107,15 +107,7 @@
 						{/each}
 					</div>
 				{/each}
-				{#if showTextzeugen}
-					<button
-						class="center m-5 w-full self-start rounded-full underline"
-						onclick={() => {
-							showTextzeugen = false;
-						}}>Nichtedierte Textzeugen ausblenden</button
-					>
-				{/if}
-			</div>
-		{/if}
+			{/if}
+		</div>
 	</div>
 </div>

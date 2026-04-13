@@ -15,7 +15,7 @@
 <div
 	data-dom="containerMaintext"
 	data-textflow="paged"
-	class="overflow-y-auto p-10"
+	class="relative mx-auto w-200 overflow-y-auto pl-5"
 	{@attach setupCustomElements}
 >
 	{@html serializedWithoutNotes}

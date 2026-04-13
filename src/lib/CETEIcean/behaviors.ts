@@ -1,6 +1,12 @@
 export const behaviors = (dom) => {
 	return {
 		tei: {
+			// pb: [`<span
+			// 		data-type="pagebreak"
+			// 		data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"
+			// 		data-page="1"
+			// 		data-n="10"
+			// />`,""],
 			note: function (elt) {
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;

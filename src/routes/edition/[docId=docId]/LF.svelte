@@ -12,7 +12,7 @@
 
 <div
 	data-fassung="LF"
-	class="grid h-full grid-cols-1 gap-5 overflow-hidden md:grid-cols-[auto_500px]"
+	class="grid h-full grid-cols-1 gap-25 overflow-hidden md:grid-cols-[auto_500px]"
 >
 	<TextFluid {ceteiData} />
 

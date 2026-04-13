@@ -1,13 +1,16 @@
 [type='place'],
 [type='person'] {
 	text-decoration: underline;
-	text-decoration-thickness: 3px;
+	text-decoration-thickness: 1px;
+	background-color: gainsboro;
+	border-radius: 10px;
+	padding: 0px 2px;
 }
 [type='place'] {
-	text-decoration-color: red;
+	text-decoration-color: black;
 }
 [type='person'] {
-	text-decoration-color: blue;
+	text-decoration-color: black;
 }
 
 /* -------------------------------- */
@@ -26,6 +29,20 @@
 /* active */
 .tei-seg.active {
 	background-color: var(--yellow-active);
+}
+
+/* -------------------------------- */
+/* Head */
+tei-head {
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------------------------- */
+/* Linebreaks and Hyphens */
+
+tei-lb {
+	@apply hidden;
 }
 
 /* -------------------------------- */
@@ -54,21 +71,24 @@
 /* -------------------------------- */
 /* Hide notes */
 tei-note > sup {
-	/* display: none; */
-	background-color: #9ad3af;
+	border-color: #bbbebc;
+	border-width: 2px;
+	margin-right: 5px;
 	border-radius: 100%;
-	padding: 5px;
+	padding: 2px 7px;
 }
-
+tei-note > sup:hover {
+	background-color: #fef08a;
+}
 .tei-annotation {
 	cursor: pointer;
-	background-color: #fef08a;
-	transition-property: all;
-	transition-duration: 200ms;
 }
 
+.tei-annotation:hover {
+	background-color: #fef08a;
+}
 .tei-annotation.active {
-	background-color: #f6c21a;
+	background-color: #fef08a;
 }
 
 /* -------------------------------- */
@@ -89,17 +109,13 @@ tei-note > sup {
 /* -------------------------------- */
 /* Choice */
 [type='choice'] {
-	border-radius: 1rem; /* rounded-xl */
-	border-width: 2px;
-	border-style: solid;
+	color: default;
 }
 [type='sic'] {
-	text-decoration-line: line-through;
-	text-decoration-color: #ef4444; /* red-500 */
-	text-decoration-thickness: 3px;
+	color: default;
 }
 [type='corr'] {
-	color: #16a34a; /* green-500 */
+	color: default;
 }
 
 /* -------------------------------- */
