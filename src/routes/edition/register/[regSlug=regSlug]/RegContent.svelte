@@ -56,7 +56,7 @@
 	{#if attKey === 'gndNumber'}
 		<a
 			class="inline-block underline"
-			href="https://d-nb.info/gnd/${value}"
+			href={`https://d-nb.info/gnd/${value}`}
 			target="_blank"
 			rel="noopener noreferrer">{value}</a
 		>
@@ -87,7 +87,7 @@
 		{#each docIds as docId}
 			{@render LinkedItems(docId)}
 		{:else}
-			<p class="px-4 text-surface-700">Keine verlinkten Dokumente gefunden.</p>{/each}
+			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>{/each}
 	</div>
 {/snippet}
 
@@ -96,7 +96,7 @@
 	{@const itemType = findEdTypeByDocId(itemId)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
-		href={resolve(`/edition/${itemId}`)}
+		href={resolve(`/edition/${itemId}?mode=DF`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
 		target="blank"
 		rel="noopener noreferrer"

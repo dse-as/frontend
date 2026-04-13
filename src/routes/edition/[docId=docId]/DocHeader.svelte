@@ -16,13 +16,13 @@
 		return match ? match[1] : '';
 	});
 
-	let stateMetadata = $state(undefined);
-	let isExpandedMetadata = $state(false);
+	let stateMetadata = $state('eckdaten');
+	let isExpandedMetadata = $state(true);
 </script>
 
 <!-- Snippet for Metadata Table -->
 {#snippet MetadataTable()}
-	<div class="rounded-xl border-surface-500 p-5">
+	<div class="rounded-xl border-surface-500 p-5 pt-0">
 		<h5 class="mb-4 h5"><strong>Metadaten</strong></h5>
 
 		{#snippet metadataButton(state: string, text: string)}
@@ -155,12 +155,14 @@
 						isExpandedBox1 ? 'h-auto' : 'max-h-40 overflow-hidden'
 					]}
 				>
+					<!-- Überblickskommentar -->
 					<div>
-						<h5 class="mb-4 h5"><strong>Kommentar</strong></h5>
+						<h5 class="mb-4 h5"><strong>Überblickskommentar</strong></h5>
 						<div data-dom="global_comment">
 							{@html globalComment}
 						</div>
 					</div>
+					<!-- Metadata Tables -->
 					{@render MetadataTable()}
 				</div>
 

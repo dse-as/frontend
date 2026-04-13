@@ -77,7 +77,7 @@
 		id={item.key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && item.key === regItem && 'bg-surface-100-900 font-bold'
+			!isMultiColumn && item.key === regItem && 'bg-surface-300-700 font-bold'
 		]}
 		href={item.key}
 	>

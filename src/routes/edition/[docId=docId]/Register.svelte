@@ -50,7 +50,7 @@
 			<Accordion.Item value={regType} class="gap-0">
 				<h1 class="h4">
 					<Accordion.ItemTrigger
-						class="flex items-center justify-between border-t-2 border-surface-200-800 hover:bg-transparent"
+						class="flex items-center justify-between border-t-2 border-surface-300-700 hover:bg-transparent"
 					>
 						<span>
 							{dictReg[regType].label_plural}
@@ -69,7 +69,7 @@
 				<Accordion.ItemContent class="m-0 p-0">
 					{#each regEntries[regType] as entry (entry)}
 						<div
-							class="group flex flex-wrap items-center justify-start gap-5 rounded-2xl py-3 pl-10 hover:bg-surface-100-900"
+							class="group flex flex-wrap items-center justify-start gap-5 rounded-2xl py-3 pl-10 hover:bg-surface-300-700"
 						>
 							<h2 class="h6">{reg[regType][entry].name}</h2>
 							<a

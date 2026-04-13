@@ -195,8 +195,8 @@
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
 		class={[
 			'w-70 rounded-xl p-1',
-			docId !== itemId && 'hover:bg-surface-100-900',
-			!isCurrentSeqList && ' hover:bg-surface-100-900',
+			docId !== itemId && 'hover:bg-surface-300-700',
+			!isCurrentSeqList && ' hover:bg-surface-300-700',
 			isCurrentSeqList && docId === itemId && 'pointer-events-none'
 		]}
 		onclick={() => {
@@ -278,7 +278,7 @@
 {#if !isSelectedValidSeq}
 	<div bind:this={elSeqMiniPanel} class="z-90003">
 		<button
-			class="z-90003 rounded-full border bg-surface-50-950 px-4 py-2 font-bold hover:bg-surface-100-900"
+			class="z-90003 rounded-full border bg-surface-50-950 px-4 py-2 font-bold hover:bg-surface-300-700"
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
@@ -317,7 +317,7 @@
 		<div class="flex w-full justify-center gap-6">
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-100-900',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
@@ -328,7 +328,7 @@
 				</div>
 			</a>
 			<button
-				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-100-900"
+				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-300-700"
 				aria-label="expand box"
 				onclick={() => {
 					if (!isOpenSeqPanel) openSeqPanel();
@@ -367,7 +367,7 @@
 
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-100-900',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
@@ -389,7 +389,7 @@
 		bind:this={elSeqLargePanel}
 		class={[
 			'absolute z-90002 flex h-max w-8/10 flex-col rounded-xl border-2 transition-all duration-200',
-			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-500 pt-25'
+			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-50-950 pt-25'
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
 		onmouseenter={() => {
@@ -466,7 +466,7 @@
 			{:else}
 				<!-- Select sequences (currently none selected) -->
 				<div class="mb-5 flex flex-wrap justify-center gap-x-4 gap-y-2">
-					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-100-900')}
+					{@render otherSeqSelectors('px-4 py-2 mx-2 border rounded-full hover:bg-surface-300-700')}
 				</div>
 			{/if}
 		{:else if hasOtherSequences}

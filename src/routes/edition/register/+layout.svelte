@@ -25,7 +25,7 @@
 		{#each regIdsForButtons as regId (regId)}
 			<a
 				class={[
-					'my-btn-round hover:bg-surface-200-800!',
+					'my-btn-round hover:bg-surface-300-700!',
 					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
 					data.regType === regId && 'my-btn-active'
 				]}

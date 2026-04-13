@@ -23,7 +23,7 @@
 			cursor: pointer;
 		}
 		:global(li:hover) {
-			@apply bg-surface-100-900;
+			@apply bg-surface-300-700;
 		}
 	}
 	.notes {

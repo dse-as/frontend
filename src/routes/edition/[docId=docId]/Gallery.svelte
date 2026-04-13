@@ -87,7 +87,7 @@
 					{@const tzgType = findEdTypeByDocId(tzgId)}
 					{@const items = collectGalleryItems(tzgId)}
 					<div
-						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-100-900 px-10"
+						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
 					>
 						<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
 						{#each items as item (item.page)}

@@ -29,7 +29,7 @@
 	checked={isDark}
 	onCheckedChange={() => handleToggleLightswitch()}
 >
-	<Switch.Control class="bg-surface-200 data-[state=checked]:bg-secondary-300">
+	<Switch.Control class="bg-surface-300-700 data-[state=checked]:bg-secondary-300">
 		<Switch.Thumb>
 			<Switch.Context>
 				{#snippet children(switch_)}

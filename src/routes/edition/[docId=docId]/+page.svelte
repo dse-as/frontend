@@ -56,7 +56,7 @@
 			'z-1000 cursor-pointer rounded-full p-2 px-5 font-bold',
 			dflf == 'DF'
 				? 'bg-surface-300-700 text-surface-950-50'
-				: 'bg-surface-700-300 text-surface-100-900'
+				: 'bg-surface-700-300 text-surface-300-700'
 		]}
 		>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}
 	</button>
