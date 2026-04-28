@@ -6,24 +6,27 @@
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams.js';
 
 	let { data } = $props();
-	let seqItems = $derived(data.seqAll.travels as Record<string, any>);
+	let seqId = $derived(page.params.seqId);
+	let seqItems = $derived(data.seqAll[seqId] as Record<string, any>);
+
+	const dictSeqTitles = { series: 'Serien', textstufen: 'Textstufen', travels: 'Reisen' };
 
 	let containerRef: HTMLElement | undefined = $state();
 </script>
 
-<h1 class="h1">Reisen</h1>
+<h1 class="h1">{dictSeqTitles[seqId]}</h1>
 
-{#each Object.keys(seqItems) as seqId}
+{#each Object.keys(seqItems) as seqItemId}
 	<div class="mt-5 rounded-xl p-5">
-		<h4 class="mb-5 h4">{seqItems[seqId].preamble}</h4>
+		<h4 class="mb-5 h4">{seqItems[seqItemId].preamble}</h4>
 
 		<div bind:this={containerRef} class="flex min-h-30 w-full gap-2 overflow-x-auto px-10">
-			{#each seqItems[seqId].docs as docId, index (docId)}
+			{#each seqItems[seqItemId].docs as docId, index (docId)}
 				{@const itemType = findEdTypeByDocId(docId)}
 				{@const itemMeta = data.fullMeta[itemType][docId]}
 				<a
 					href={resolve(
-						`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`
+						`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
 					)}
 					class={['w-90 rounded-xl p-1']}
 					onclick={() => {
