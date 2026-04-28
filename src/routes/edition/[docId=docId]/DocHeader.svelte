@@ -180,7 +180,7 @@
 				<!-- Button to Open/Close -->
 				<div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;">
 					<button
-						class="z-10 h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
+						class="h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
 						aria-label="expand box"
 						onclick={() => {
 							isExpandedBox1 = !isExpandedBox1;

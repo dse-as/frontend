@@ -21,7 +21,7 @@
 </script>
 
 <!-- Menu -->
-<AppBar class="flex h-12 flex-row items-center justify-between border-b-2 bg-surface-500 px-2 py-0">
+<AppBar class="flex h-12 flex-row items-center justify-between border-b-2 bg-surface-200 px-2 py-0">
 	<!-- Lead for Home Button -->
 	<AppBar.Lead class="flex items-center">
 		<a class="flex items-center py-2 font-bold" href={resolve('/')}> DSE-AS </a>

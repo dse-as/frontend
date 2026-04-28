@@ -71,6 +71,27 @@
 	});
 </script>
 
+<!-- Snippet for Alphabet Shortcuts -->
+{#snippet alphabet()}
+	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
+		<!-- Hide the alphabet for regTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
+		<div class="flex w-max justify-center gap-2">
+			{#each autoCatLabels as letter (letter)}
+				<button
+					onclick={() => {
+						goto(`#${letter}`, { replaceState: true, noScroll: true });
+						setTimeout(() => {
+							window.scrollTo({ top: 0, behavior: 'auto' });
+						}, 10);
+					}}
+					// class="center flex h-7 w-5 items-center justify-center rounded-full border px-7 text-sm hover:font-bold"
+					class="center flex w-8 items-center justify-center hover:font-bold"
+					><p>{letter}</p></button
+				>
+			{/each}
+		</div>
+	{/if}
+{/snippet}
 <!-- Snippet for Register Items -->
 {#snippet regListItem(item)}
 	<a
@@ -170,9 +191,12 @@
 <div class="overflow-y-auto">
 	<!-- Controls (when outside scroll container) -->
 	{#if hasControls && isMultiColumn}
-		<div class="my-10 flex w-full flex-wrap justify-start gap-x-10 gap-y-2">
-			{@render groupControls()}
-			{@render sortControls()}
+		<div class="my-10 flex w-full flex-col flex-wrap items-start justify-start gap-x-10 gap-y-6">
+			<div class="flex gap-5">
+				{@render groupControls()}
+				{@render sortControls()}
+			</div>
+			{@render alphabet()}
 		</div>
 	{/if}
 
@@ -243,23 +267,4 @@
 			{/each}
 		{/if}
 	</div>
-
-	<!-- Alphabet Shortcuts -->
-	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
-		<!-- Hide the alphabet for regTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
-		<div class="mt-10 flex w-full justify-center gap-2">
-			{#each autoCatLabels as letter (letter)}
-				<button
-					onclick={() => {
-						goto(`#${letter}`, { replaceState: true, noScroll: true });
-						setTimeout(() => {
-							window.scrollTo({ top: 0, behavior: 'auto' });
-						}, 10);
-					}}
-					class="center flex h-10 w-10 items-center justify-center underline hover:font-bold"
-					><p>{letter}</p></button
-				>
-			{/each}
-		</div>
-	{/if}
 </div>
