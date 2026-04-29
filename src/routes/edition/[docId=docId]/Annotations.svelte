@@ -37,7 +37,13 @@
 			@apply bg-green-300;
 		}
 		:global(a) {
-			@apply mr-5 underline;
+			/* @apply mr-5 underline; */
+			border-color: var(--color-surface-700);
+			border-width: 1.2px;
+			margin-right: 5px;
+			border-radius: 100%;
+			padding: 1px 7px;
+			font-size: 0.9rem;
 		}
 	}
 </style>

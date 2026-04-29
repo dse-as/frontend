@@ -41,7 +41,7 @@ export const behaviors = (dom) => {
 				link.setAttribute('href', '#' + id);
 				link.dataset.noteId = this.noteIndex;
 				link.innerHTML = this.noteIndex;
-				let content = dom.createElement('sup');
+				let content = dom.createElement('span');
 				content.appendChild(link);
 				let notes = this.dom.querySelector('ol.notes');
 				if (!notes) {

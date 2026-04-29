@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { handleMarkClick } from '$lib/functions/interactive_edendum/handleMarkClick';
-	import { handleMarkendClick } from '$lib/functions/interactive_edendum/handleMarkendClick';
-	import { selectedNote } from '$lib/globals/state/ui.svelte';
-	import { unselectMarks } from '$lib/functions/interactive_edendum/unselectMarks';
-	import { unselectNotes } from '$lib/functions/interactive_edendum/unselectNotes';
+	import { selectedTextNode } from '$lib/globals/state/ui.svelte';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import CETEI from 'CETEIcean';
 	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
+	import {
+		clearAllHighlights,
+		handleFootnoteClick,
+		handleRsClick
+	} from '$lib/functions/interactive_edendum/handleInteractiveText';
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
@@ -74,7 +75,7 @@
 			handleMarkClick(ev);
 		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
 			handleMarkendClick(ev);
-		} else if (selectedNote.id) {
+		} else if (selectedTextNode.id) {
 			unselectMarks();
 			unselectNotes();
 		}
@@ -152,10 +153,34 @@
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
+	function findClosestNoteDownwards(el, attribute) {
+		if (el.hasAttribute(attribute)) {
+			return el;
+		}
+		return el.querySelector(`[${attribute}]`);
+	}
 </script>
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	data-textflow="fluid"
+	onclick={(ev: Event) => {
+		console.log(ev.target);
+		const el = ev.target as HTMLElement;
+		if (!el) return;
+		if (el.tagName === 'TEI-RS') {
+			handleRsClick(el.getAttribute('key'));
+		} else if (el.hasAttribute('data-note-id') || el.querySelector('[data-note-id]')) {
+			const noteId = findClosestNoteDownwards(el, 'data-note-id').id;
+			handleFootnoteClick(noteId);
+		} else if (el.hasAttribute('data-note-target') || el.querySelector('[data-note-target]')) {
+			const noteId = findClosestNoteDownwards(el, 'data-note-target').id; //! FIX THIS
+			handleFootnoteClick(noteId);
+		} else {
+			clearAllHighlights();
+		}
+	}}
 	class="mx-auto mt-10 grid max-w-300 grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
 	bind:this={containerMaintext}
 >

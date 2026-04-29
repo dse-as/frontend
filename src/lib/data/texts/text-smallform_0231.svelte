@@ -61,7 +61,7 @@
 		data-type="milestone"
 		data-unit="textregion"
 	></span><span data-type="hyphen"></span><br data-break="no" />gassen, wo sich die
-	<span data-type="entity" data-entitytype="org" data-key="org_0199">S.A.</span>-Männer und
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0199">S.A.</span>-Männer und
 	<span data-type="markstart" data-noteid="note-smallform_0231-002" data-notetype="annotation"
 	></span>
 	Sturmbann<span data-type="hyphen"></span><br data-break="no" />führer
@@ -102,8 +102,8 @@
 	<span data-type="markend" data-notenum="3" data-noteid="note-smallform_0231-003">3</span>Aber
 	einen Aus<span data-type="hyphen"></span><br data-break="no" />flug machte sie nicht. Der Mann war
 	Unterführer <br />in der
-	<span data-type="entity" data-entitytype="org" data-key="org_0199">S. A.</span> und hatte,
-	natürlich, Festtags-Dienst.
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0199">S. A.</span> und
+	hatte, natürlich, Festtags-Dienst.
 	<br />
 	<span data-type="markstart" data-noteid="note-smallform_0231-004" data-notetype="annotation"
 	></span>
@@ -117,7 +117,9 @@
 		>dann kennt man sie gar nicht. Sie <br />sehen ja alle ganz gleich aus, in ihren Hitler-Uni<span
 			data-type="hyphen"
 		></span><br data-break="no" />formen. Nur der Horst, der Aelteste, der ist bei der
-		<br />Marine-<span data-type="entity" data-entitytype="org" data-key="org_0199">S.A.</span>
+		<br />Marine-<span data-type="entity" data-entitytype="org" data-key="organisation_0199"
+			>S.A.</span
+		>
 		und tragt Matrosenanzug. Das ist
 		<span data-type="milestone" data-unit="textregion"></span>
 		<br />schmuck.</span
@@ -126,12 +128,13 @@
 	<br />sie gar nicht, was aus ihm werden soll. Er war so <br />tüchtig in der Schule – aber das
 	nützt ja heutzutage <br />nichts mehr. Er hätte dann eine Lehrlingsstelle <br />im Heringshafen
 	haben können. Aber zuerst mußte <br />er natürlich in irgendeine Truppe der
-	<span data-type="entity" data-entitytype="org" data-key="org_0002">Partei</span> ein<span
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0002">Partei</span> ein<span
 		data-type="hyphen"
 	></span><br data-break="no" />treten, sonst kommen die Jungen zu nichts. Und <br />jetzt ist er
-	bei der Marine-<span data-type="entity" data-entitytype="org" data-key="org_0199">S.A.</span>, das
-	ist sehr ehren<span data-type="hyphen"></span><br data-break="no" />voll, aber die Stelle hat er
-	ausgeschlagen – er <br />hat dafür keine Zeit übrig, wegen der vielen Uebun<span
+	bei der Marine-<span data-type="entity" data-entitytype="org" data-key="organisation_0199"
+		>S.A.</span
+	>, das ist sehr ehren<span data-type="hyphen"></span><br data-break="no" />voll, aber die Stelle
+	hat er ausgeschlagen – er <br />hat dafür keine Zeit übrig, wegen der vielen Uebun<span
 		data-type="hyphen"
 	></span><br data-break="no" />gen.
 	<span data-type="quote">Nun frage ich Sie</span>, sagt Frau Boedeke trübe, <br /><span
@@ -141,13 +144,13 @@
 	<br />nicht auf politische Gespräche einlassen will, und <br />Marine-<span
 		data-type="entity"
 		data-entitytype="org"
-		data-key="org_0199">S.A.</span
+		data-key="organisation_0199">S.A.</span
 	>
 	zur politischen Erziehung gehört. – <br />Ja, die Anna, sie ist erst 12 Jahre alt, ein liebes,
 	<br />stilles Kind. Früher sind wir Sonntags zusammen <br />an den Strand gegangen, in der alten
 	Zeit. Aber <br />jetzt ist sie ein
-	<span data-type="entity" data-entitytype="org" data-key="org_0260">B.D.M.</span>-Mädchen, und muß
-	viel üben
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0260">B.D.M.</span>-Mädchen,
+	und muß viel üben
 	<br />und auch marschieren und so etwas, damit sie eine <br />richtige "Deutsche Frau" wird. –
 	<span data-type="quote">Da haben Sie <br />es ein bißchen einsam, Frau Boedeke?</span> Sie sieht
 	<br />mich mißtrauisch an. <span data-type="quote">Wir üben keine Kritik</span> sagt <br />sie
@@ -161,17 +164,19 @@
 	<span data-type="quote"
 		>Ich bin ja nun auch sehr beschäftigt. Mein <br />Mann sagt immer, es sei eine Schande, daß ich
 		nicht <br />in der
-		<span data-type="entity" data-entitytype="org" data-key="org_0261">N.S.-Frauenschaft</span> bin,
-		wo wir Frauen po<span data-type="hyphen"></span><br data-break="no" />litisch erzogen werden.
-		Aber woher soll ich die Zeit <br />nehmen? – Früher hatten wir ein Mädchen, jetzt <br />seit der
-		Guldenabwertung muß ich alles selber
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0261"
+			>N.S.-Frauenschaft</span
+		>
+		bin, wo wir Frauen po<span data-type="hyphen"></span><br data-break="no" />litisch erzogen
+		werden. Aber woher soll ich die Zeit <br />nehmen? – Früher hatten wir ein Mädchen, jetzt
+		<br />seit der Guldenabwertung muß ich alles selber
 		<br />machen.</span
 	>
 	–
 	<span data-type="markstart" data-noteid="note-smallform_0231-005" data-notetype="annotation"
 	></span>
 	Die Guldenabwertung erfolgte, nach <br />einem großartigen Maifest der
-	<span data-type="entity" data-entitytype="org" data-key="org_0002"
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0002"
 		>nationalsozialistischen <br />Partei</span
 	>, am 2. Mai 1933.
 	<span data-type="quote"
@@ -209,8 +214,8 @@
 	></span>
 	Jetzt <br />hatten sie zusammen eine kleine Musikalienhandlung.
 	<br />Die neue, zeitgemäße Musik, die Marschalbums und <br />Lieder der
-	<span data-type="entity" data-entitytype="org" data-key="org_0198">Hitler-Jugend</span> durften
-	sie allerdings nicht <br />halten, weil sie Juden waren. Und weil nun also <br />das
+	<span data-type="entity" data-entitytype="org" data-key="organisation_0198">Hitler-Jugend</span>
+	durften sie allerdings nicht <br />halten, weil sie Juden waren. Und weil nun also <br />das
 	<span data-type="entity" data-entitytype="bibl" data-key="UM3L78NJ">Horst-Wessel-Lied</span>
 	nicht in ihrem Schaufenster
 	<br />lag, wurden sie natürlich von der Partei und allen <br />Gutgesinnten boykottiert.

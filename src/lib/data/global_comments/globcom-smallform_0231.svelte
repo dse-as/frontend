@@ -24,7 +24,9 @@
 		<span data-type="entity" data-entitytype="letter" data-key="letter_0250"
 			>Brief an Klaus Mann vom 05.05.1937</span
 		>. Das dortige 'Lob' des
-		<span data-type="entity" data-entitytype="org" data-key="org_0002">Nationalsozialisten</span>
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0002"
+			>Nationalsozialisten</span
+		>
 		findet sich auch im vorliegenden Text; die Leserschaft dürfte es angesichts der bekannten antifaschistischen
 		Haltung der Autorin als Kritik verstanden haben. Ob auch der Text direkt aus
 		<span data-type="entity" data-entitytype="place" data-key="place_0017">Danzig</span> an die
@@ -35,18 +37,26 @@
 	</p>
 	<p>
 		Publikationskontext: Die fünfteiligen Serie "Baltisches Tagebuch" im
-		<span data-type="entity" data-entitytype="org" data-key="org_0007">Luzerner Tagblatt</span>
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0007"
+			>Luzerner Tagblatt</span
+		>
 		korrespondiert mit der gleichnamigen, in der
-		<span data-type="entity" data-entitytype="org" data-key="org_0001">National-Zeitung</span>
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0001"
+			>National-Zeitung</span
+		>
 		erschienenen dreiteiligen Serie (die jeweiligen Artikel zu
 		<span data-type="entity" data-entitytype="place" data-key="place_0101">Finnland</span>
 		sind sogar weitgehend identisch, vgl. in der
-		<span data-type="entity" data-entitytype="org" data-key="org_0001">National-Zeitung</span>:
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0001"
+			>National-Zeitung</span
+		>:
 		<span data-type="entity" data-entitytype="smallform" data-key="smallform_0225"
 			>Baltisches Tagebuch: Suomi - Land zwischen Ost und West</span
 		>
 		, im
-		<span data-type="entity" data-entitytype="org" data-key="org_0007">Luzerner Tagblatt</span>:
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0007"
+			>Luzerner Tagblatt</span
+		>:
 		<span data-type="entity" data-entitytype="smallform" data-key="smallform_0232"
 			>Baltisches Tagebuch V: Suomi - Land zwischen Ost und West</span
 		>). Beide Feuilleton-Serien haben Vorstufen im längeren Typoskript
@@ -60,11 +70,14 @@
 			>Baltisches Tagebuch. Jenseits des Korridors</span
 		>
 		in der
-		<span data-type="entity" data-entitytype="org" data-key="org_0001">National-Zeitung,</span>
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0001"
+			>National-Zeitung,</span
+		>
 		kreisen doch beide um das Verhältnis der Bevölkerung ehemalig preussischer Gebiete zum
-		<span data-type="entity" data-entitytype="org" data-key="org_0002">Nationalsozialismus</span>.
-		Während in letzterem die ländliche Bevölkerung im Vordergrund steht, portraitiert ersteres die
-		städtische Bevölkerung.
+		<span data-type="entity" data-entitytype="org" data-key="organisation_0002"
+			>Nationalsozialismus</span
+		>. Während in letzterem die ländliche Bevölkerung im Vordergrund steht, portraitiert ersteres
+		die städtische Bevölkerung.
 	</p>
 	<p>
 		Historischer Kontext: Die

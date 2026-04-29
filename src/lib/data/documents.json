@@ -7178,7 +7178,7 @@
 					"people": ["person_0005", "person_0012"],
 					"places": ["place_0055", "place_0056", "place_0244", "place_0241"],
 					"events": ["event_0004"],
-					"orgs": ["org_0038", "org_0268"],
+					"orgs": ["organisation_0038", "organisation_0268"],
 					"smallforms": [],
 					"longforms": [],
 					"letters": [],
@@ -18019,7 +18019,7 @@
 						"place_0857"
 					],
 					"events": [],
-					"orgs": ["org_0002", "org_0199", "org_0260", "org_0261", "org_0198"],
+					"orgs": ["organisation_0002", "organisation_0199", "organisation_0260", "organisation_0261", "organisation_0198"],
 					"smallforms": [],
 					"longforms": [],
 					"letters": [],

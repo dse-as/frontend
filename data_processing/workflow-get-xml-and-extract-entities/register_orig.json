@@ -280,7 +280,7 @@
 				"dateBirth": "1908",
 				"dateDeath": "1970",
 				"type": "Redakteur:in",
-				"orgId": "org_0014, org_0015",
+				"orgId": "organisation_0014, organisation_0015",
 				"note": "Bislang gibt nur eine Wikipedia-Seite über die \"Neue Front\" (eine elitäre Frontisten-Bewegung, die 1930 aus dem Freisinn hervorging) einen Hinweis darauf, dass Fueter Redaktor des Zürcher Student war (es gibt kein Redaktions-Impressum): https://de.wikipedia.org/wiki/Neue_Front Die Information muss noch überprüft werden, ev. war Feuter auch kein Redaktor sondern Teil der Studentenschaft (die mithalf, Klaus und Erika Mann 1930 nach Zürich zu laden). Auch seine Mitgliedschaft bei der Neuen Front muss genauer abgeklärt werden."
 			},
 			"person_0025": {
@@ -340,7 +340,7 @@
 				"dateBirth": "1913",
 				"dateDeath": "1966",
 				"type": "Freund:in, Fotograf:in",
-				"orgId": "org_0043",
+				"orgId": "organisation_0043",
 				"note": ""
 			},
 			"person_0030": {
@@ -400,7 +400,7 @@
 				"dateBirth": "1904",
 				"dateDeath": "1995",
 				"type": "Bekannte:r, Musiker:in",
-				"orgId": "org_0042",
+				"orgId": "organisation_0042",
 				"note": ""
 			},
 			"person_0036": {
@@ -964,7 +964,7 @@
 				"dateBirth": "1902",
 				"dateDeath": "1997",
 				"type": "Freund:in, Mitarbeiter:in Medium",
-				"orgId": "org_0001",
+				"orgId": "organisation_0001",
 				"note": ""
 			},
 			"person_0090": {
@@ -1036,7 +1036,7 @@
 				"dateBirth": "1882",
 				"dateDeath": "1972",
 				"type": "Bekannte:r, Redakteur:in",
-				"orgId": "org_0013",
+				"orgId": "organisation_0013",
 				"note": ""
 			},
 			"person_0096": {
@@ -1084,7 +1084,7 @@
 				"dateBirth": "1908",
 				"dateDeath": "1979",
 				"type": "Bekannte:r, Redakteur:in",
-				"orgId": "org_0003",
+				"orgId": "organisation_0003",
 				"note": ""
 			},
 			"person_0101": {
@@ -1096,7 +1096,7 @@
 				"dateBirth": "1908",
 				"dateDeath": "1938",
 				"type": "Bekannte:r, Bergsteiger:in",
-				"orgId": "org_0008",
+				"orgId": "organisation_0008",
 				"note": "Laut smallform_0285, Schwarzenbachs erster Publikation zu Saladin, stellte dessen Bruder Peter im Mai 1937 den Kontakt zu \"Gog\" her. Laut <rs type=\"smallform\" key=\"smallform_0226\">Bei Studenten aus vier Ländern\"</rs> beherrschte er fliessend Deutsch. Offenbar hat er laut smallform_285 die Expedition mit Saldin selbst nicht, jedoch eine andere, eine deutsche Expedition begleitet (http://www.alpklubspb.ru/persona/harlampiev.htm). Über die Todesursachen 1938 ist nichts Genaueres bekannt (ev. hier weitere Informationen auf russisch: https://www.youtube.com/live/XafkoYx0Y_g)."
 			},
 			"person_0102": {
@@ -1108,7 +1108,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0010",
+				"orgId": "organisation_0010",
 				"note": "Jan Alamae war ein estnischer Student der Theologie, den Schwarzenbach 1937 an der Universität Tartu angetroffen und fotografiert. [Da keine weiteren Informationen vorliegen, kann kein GND Eintrag erstellt werden]."
 			},
 			"person_0103": {
@@ -1336,7 +1336,7 @@
 				"dateBirth": "1883",
 				"dateDeath": "1972",
 				"type": "Bekannte:r",
-				"orgId": "org_0014",
+				"orgId": "organisation_0014",
 				"note": "Germanistik-Professor von Schwarzenbach und Stiefvater von Eduard Fueter junior."
 			},
 			"person_0122": {
@@ -1600,7 +1600,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0033",
+				"orgId": "organisation_0033",
 				"note": "Über Vren Högger, die eine Replik auf Schwarzenbachs Wandervogel-Artikel \"Zur Mädchenfrage\" (smallform_0002) verfasst hat, sind keine weiteren Informationen bekannt. Aufgrund des Inhalts ihrer Replik lässt sich auf eine persönlich Bekanntschaft mit Schwarzenbach im Rahmen der Wandervogel-Bewegung schliessen."
 			},
 			"person_0144": {
@@ -1804,7 +1804,7 @@
 				"dateBirth": "1889",
 				"dateDeath": "1945",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0002",
+				"orgId": "organisation_0002",
 				"note": ""
 			},
 			"person_0161": {
@@ -2275,7 +2275,7 @@
 				"dateBirth": "1875",
 				"dateDeath": "1964",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0059",
+				"orgId": "organisation_0059",
 				"note": ""
 			},
 			"person_0200": {
@@ -2335,7 +2335,7 @@
 				"dateBirth": "1879",
 				"dateDeath": "1945",
 				"type": "Historische Person (ohne persönliche Bekanntschaft), Autor:in",
-				"orgId": "org_0065",
+				"orgId": "organisation_0065",
 				"note": ""
 			},
 			"person_0205": {
@@ -2395,7 +2395,7 @@
 				"dateBirth": "1894",
 				"dateDeath": "1990",
 				"type": "Fotograf:in",
-				"orgId": "org_0020",
+				"orgId": "organisation_0020",
 				"note": ""
 			},
 			"person_0210": {
@@ -2407,7 +2407,7 @@
 				"dateBirth": "1901",
 				"dateDeath": "1953",
 				"type": "Fotograf:in",
-				"orgId": "org_0020",
+				"orgId": "organisation_0020",
 				"note": ""
 			},
 			"person_0211": {
@@ -2431,7 +2431,7 @@
 				"dateBirth": "1872",
 				"dateDeath": "1947",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0072",
+				"orgId": "organisation_0072",
 				"note": ""
 			},
 			"person_0213": {
@@ -2443,7 +2443,7 @@
 				"dateBirth": "1899",
 				"dateDeath": "1983",
 				"type": "Redakteur:in",
-				"orgId": "org_0015",
+				"orgId": "organisation_0015",
 				"note": ""
 			},
 			"person_0214": {
@@ -2455,7 +2455,7 @@
 				"dateBirth": "1901",
 				"dateDeath": "1962",
 				"type": "Redakteur:in",
-				"orgId": "org_0015",
+				"orgId": "organisation_0015",
 				"note": ""
 			},
 			"person_0215": {
@@ -2479,7 +2479,7 @@
 				"dateBirth": "1855",
 				"dateDeath": "1944",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0059",
+				"orgId": "organisation_0059",
 				"note": ""
 			},
 			"person_0217": {
@@ -2491,7 +2491,7 @@
 				"dateBirth": "1864",
 				"dateDeath": "1944",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0059",
+				"orgId": "organisation_0059",
 				"note": "kein GND-Eintrag"
 			},
 			"person_0218": {
@@ -2551,7 +2551,7 @@
 				"dateBirth": "1903",
 				"dateDeath": "1975",
 				"type": "Fotograf:in",
-				"orgId": "org_0043",
+				"orgId": "organisation_0043",
 				"note": ""
 			},
 			"person_0223": {
@@ -2563,7 +2563,7 @@
 				"dateBirth": "1898",
 				"dateDeath": "1969",
 				"type": "Fotograf:in",
-				"orgId": "org_0043",
+				"orgId": "organisation_0043",
 				"note": ""
 			},
 			"person_0224": {
@@ -2575,7 +2575,7 @@
 				"dateBirth": "1905",
 				"dateDeath": "1990",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": ""
 			},
 			"person_0225": {
@@ -4363,7 +4363,7 @@
 				"dateBirth": "1907/1910",
 				"dateDeath": "1997",
 				"type": "Bekannte:r, Künstler:in",
-				"orgId": "org_0042",
+				"orgId": "organisation_0042",
 				"note": ""
 			},
 			"person_0374": {
@@ -4567,7 +4567,7 @@
 				"dateBirth": "1886",
 				"dateDeath": "1967",
 				"type": "Verleger:in, Autor:in",
-				"orgId": "org_0167",
+				"orgId": "organisation_0167",
 				"note": ""
 			},
 			"person_0391": {
@@ -4579,7 +4579,7 @@
 				"dateBirth": "1911",
 				"dateDeath": "1924",
 				"type": "Familienangehörige:r",
-				"orgId": "org_0070",
+				"orgId": "organisation_0070",
 				"note": ""
 			},
 			"person_0392": {
@@ -5995,7 +5995,7 @@
 				"dateBirth": "1901",
 				"dateDeath": "1987",
 				"type": "Redakteur:in",
-				"orgId": "org_0209",
+				"orgId": "organisation_0209",
 				"note": ""
 			},
 			"person_0510": {
@@ -6535,7 +6535,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0272 und smallform_0246"
 			},
 			"person_0555": {
@@ -6547,7 +6547,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0272 und smallform_0246"
 			},
 			"person_0556": {
@@ -6559,7 +6559,7 @@
 				"dateBirth": "1910",
 				"dateDeath": "1988",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0245 und smallform_0246"
 			},
 			"person_0557": {
@@ -6571,7 +6571,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0558": {
@@ -6583,7 +6583,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0559": {
@@ -6595,7 +6595,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0560": {
@@ -6607,7 +6607,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0561": {
@@ -6619,7 +6619,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0562": {
@@ -6631,7 +6631,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0563": {
@@ -6643,7 +6643,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0089",
+				"orgId": "organisation_0089",
 				"note": "smallform_0246"
 			},
 			"person_0564": {
@@ -6703,7 +6703,7 @@
 				"dateBirth": "1849",
 				"dateDeath": "1909",
 				"type": "Verleger:in",
-				"orgId": "org_0231",
+				"orgId": "organisation_0231",
 				"note": ""
 			},
 			"person_0569": {
@@ -7711,7 +7711,7 @@
 				"dateBirth": "1897",
 				"dateDeath": "1995",
 				"type": "Bekannte:r",
-				"orgId": "org_0276",
+				"orgId": "organisation_0276",
 				"note": ""
 			},
 			"person_0655": {
@@ -7747,7 +7747,7 @@
 				"dateBirth": "1894",
 				"dateDeath": "1957",
 				"type": "Bekannte:r, Redakteur:in",
-				"orgId": "org_0074",
+				"orgId": "organisation_0074",
 				"note": ""
 			},
 			"person_0658": {
@@ -7795,7 +7795,7 @@
 				"dateBirth": "1868",
 				"dateDeath": "1925",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0280",
+				"orgId": "organisation_0280",
 				"note": "Kein GND-Eintrag, vgl. https://tr.wikipedia.org/wiki/Abd%C3%BClhalim_%C3%87elebi"
 			},
 			"person_0662": {
@@ -7927,7 +7927,7 @@
 				"dateBirth": "1899",
 				"dateDeath": "1953",
 				"type": "Bekannte:r",
-				"orgId": "org_0282",
+				"orgId": "organisation_0282",
 				"note": ""
 			},
 			"person_0673": {
@@ -7999,7 +7999,7 @@
 				"dateBirth": "1878",
 				"dateDeath": "1975",
 				"type": "Historische Person (ohne persönliche Bekanntschaft)",
-				"orgId": "org_0245",
+				"orgId": "organisation_0245",
 				"note": ""
 			},
 			"person_0679": {
@@ -8047,7 +8047,7 @@
 				"dateBirth": "1897",
 				"dateDeath": "1978",
 				"type": "Redakteur:in",
-				"orgId": "org_0286",
+				"orgId": "organisation_0286",
 				"note": ""
 			},
 			"person_0683": {
@@ -8323,7 +8323,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0232, org_0087",
+				"orgId": "organisation_0232, organisation_0087",
 				"note": "kein GND-Eintrag; siehe Rooney S. 173."
 			},
 			"person_0706": {
@@ -8671,7 +8671,7 @@
 				"dateBirth": "1896",
 				"dateDeath": "1980",
 				"type": "Redakteur:in",
-				"orgId": "org_0320",
+				"orgId": "organisation_0320",
 				"note": ""
 			},
 			"person_0735": {
@@ -9463,7 +9463,7 @@
 				"dateBirth": "1892",
 				"dateDeath": "1968",
 				"type": "Bekannte:r",
-				"orgId": "org_0051",
+				"orgId": "organisation_0051",
 				"note": ""
 			},
 			"person_0801": {
@@ -9679,7 +9679,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "",
-				"orgId": "org_0217",
+				"orgId": "organisation_0217",
 				"note": "kein GND-Eintrag"
 			},
 			"person_0819": {
@@ -10651,7 +10651,7 @@
 				"dateBirth": "",
 				"dateDeath": "",
 				"type": "Bekannte:r",
-				"orgId": "org_0013",
+				"orgId": "organisation_0013",
 				"note": ""
 			},
 			"person_0900": {
@@ -10759,7 +10759,7 @@
 				"dateBirth": "1895",
 				"dateDeath": "1956",
 				"type": "Bekannte:r",
-				"orgId": "org_0388",
+				"orgId": "organisation_0388",
 				"note": ""
 			},
 			"person_0909": {
@@ -10783,7 +10783,7 @@
 				"dateBirth": "1905",
 				"dateDeath": "",
 				"type": "Bekannte:r, Redakteur:in",
-				"orgId": "org_0013",
+				"orgId": "organisation_0013",
 				"note": ""
 			},
 			"person_0911": {
@@ -11107,7 +11107,7 @@
 				"dateBirth": "#ERROR!",
 				"dateDeath": "",
 				"type": "Bekannte:r, Mitarbeiter:in Medium",
-				"orgId": "org_0407",
+				"orgId": "organisation_0407",
 				"note": ""
 			},
 			"person_0938": {
@@ -21770,644 +21770,644 @@
 			}
 		},
 		"orgs": {
-			"org_0001": {
+			"organisation_0001": {
 				"name": "National-Zeitung (Basel)",
 				"nameVariants": [],
 				"gndNumber": "1086762878",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0002": {
+			"organisation_0002": {
 				"name": "NSDAP",
 				"nameVariants": [],
 				"gndNumber": "1012979-0",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0003": {
+			"organisation_0003": {
 				"name": "ABC (Zürich)",
 				"nameVariants": [],
 				"gndNumber": "1361275030",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0004": {
+			"organisation_0004": {
 				"name": "Königliche Technische Hochschule Danzig",
 				"nameVariants": [],
 				"gndNumber": "1074664191",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0005": {
+			"organisation_0005": {
 				"name": "Deutscher Orden",
 				"nameVariants": [],
 				"gndNumber": "1017688-3",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0006": {
+			"organisation_0006": {
 				"name": "Hanse",
 				"nameVariants": [],
 				"gndNumber": "2038963-2",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0007": {
+			"organisation_0007": {
 				"name": "Luzerner Tagblatt",
 				"nameVariants": [],
 				"gndNumber": "1289263922",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0008": {
+			"organisation_0008": {
 				"name": "Konservatorium Moskau",
 				"nameVariants": [],
 				"gndNumber": "1025259-9",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0009": {
+			"organisation_0009": {
 				"name": "Universität Upsala",
 				"nameVariants": [],
 				"gndNumber": "1010726-5",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0010": {
+			"organisation_0010": {
 				"name": "Universität Tartu",
 				"nameVariants": ["Universität Dorpat"],
 				"gndNumber": "501114-0",
 				"type": "Hochschule",
 				"note": "Zur Universität in Tartu gibt es zwei GND-Einträge, dieser scheint für die richtige Epoche zu stimmen."
 			},
-			"org_0011": {
+			"organisation_0011": {
 				"name": "Universität Lund",
 				"nameVariants": [],
 				"gndNumber": "4204018-8",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0012": {
+			"organisation_0012": {
 				"name": "Universität Kaunas",
 				"nameVariants": [],
 				"gndNumber": "505490-4",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0013": {
+			"organisation_0013": {
 				"name": "NZZ",
 				"nameVariants": [],
 				"gndNumber": "4041739-6",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0014": {
+			"organisation_0014": {
 				"name": "Universität Zürich",
 				"nameVariants": [],
 				"gndNumber": "36190-2",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0015": {
+			"organisation_0015": {
 				"name": "Zürcher Student",
 				"nameVariants": [],
 				"gndNumber": "1314974238",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0016": {
+			"organisation_0016": {
 				"name": "Studentenschaft ETH",
 				"nameVariants": [],
 				"gndNumber": "1086096428",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0017": {
+			"organisation_0017": {
 				"name": "Universität Istanbul",
 				"nameVariants": [],
 				"gndNumber": "36056-9",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0018": {
+			"organisation_0018": {
 				"name": "Public Work Administration",
 				"nameVariants": ["P. W. A."],
 				"gndNumber": "5563258-0",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0019": {
+			"organisation_0019": {
 				"name": "Landwirtschaftliche Hochschule Ankara",
 				"nameVariants": ["Ankara Yüksek Ziraat Enstitüsü"],
 				"gndNumber": "82376-4",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0020": {
+			"organisation_0020": {
 				"name": "Zürcher Illustrierte",
 				"nameVariants": ["ZI"],
 				"gndNumber": "1086211154",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0021": {
+			"organisation_0021": {
 				"name": "Democratic Party (USA)",
 				"nameVariants": [],
 				"gndNumber": "110671-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0022": {
+			"organisation_0022": {
 				"name": "Republican Party (USA)",
 				"nameVariants": [],
 				"gndNumber": "4102625-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0023": {
+			"organisation_0023": {
 				"name": "USA. Government",
 				"nameVariants": [],
 				"gndNumber": "2027858-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0024": {
+			"organisation_0024": {
 				"name": "Université de Genève",
 				"nameVariants": ["Universität Genf"],
 				"gndNumber": "1010450-1",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0025": {
+			"organisation_0025": {
 				"name": "Universität Konstantinopel",
 				"nameVariants": ["Universität des Theodosius", "İstanbul Darülfünunu"],
 				"gndNumber": "82364-8",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0026": {
+			"organisation_0026": {
 				"name": "Türkei (Staat)",
 				"nameVariants": [],
 				"gndNumber": "4061163-2",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0027": {
+			"organisation_0027": {
 				"name": "Einstein Sternwarte",
 				"nameVariants": ["Einstein Schulsternwarte"],
 				"gndNumber": "5100850-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0028": {
+			"organisation_0028": {
 				"name": "Civilian Conservation Corps",
 				"nameVariants": ["USA. Civilian Conservation Corps", "C.C.C"],
 				"gndNumber": "4530742-8",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0029": {
+			"organisation_0029": {
 				"name": "Kongress",
 				"nameVariants": ["USA. Congress", "Congress"],
 				"gndNumber": "35622-0",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0030": {
+			"organisation_0030": {
 				"name": "Senat",
 				"nameVariants": ["USA. Congress. Senate"],
 				"gndNumber": "1020979-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0031": {
+			"organisation_0031": {
 				"name": "Repräsentantenhaus",
 				"nameVariants": ["USA. Congress. House of Representatives"],
 				"gndNumber": "35623-2",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0032": {
+			"organisation_0032": {
 				"name": "Works Progress Administration",
 				"nameVariants": ["W. P. A.", "WPA"],
 				"gndNumber": "116650-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0033": {
+			"organisation_0033": {
 				"name": "Wandervogel Schweiz",
 				"nameVariants": ["Wandervogel, Schweizerischer Bund für abstinente Jugendwanderungen"],
 				"gndNumber": "1087525977",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0034": {
+			"organisation_0034": {
 				"name": "Wandervogel Monatsschrift der Schweizer Wandervögel",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "Nicht in GND, müsste noch als Publikation aufgenommen werden"
 			},
-			"org_0035": {
+			"organisation_0035": {
 				"name": "Conzett und Huber",
 				"nameVariants": [],
 				"gndNumber": "1086611071",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0036": {
+			"organisation_0036": {
 				"name": "Hotel Schweizerhof, Luzern",
 				"nameVariants": [],
 				"gndNumber": "1086191579",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0037": {
+			"organisation_0037": {
 				"name": "Union Party (USA)",
 				"nameVariants": [],
 				"gndNumber": "1364640368",
 				"type": "Politische org",
 				"note": "https://en.wikipedia.org/wiki/Union_Party_(United_States)"
 			},
-			"org_0038": {
+			"organisation_0038": {
 				"name": "Hôtel Jacob, Paris",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0039": {
+			"organisation_0039": {
 				"name": "Imperial Bank of Persia",
 				"nameVariants": ["Anglo Persian Bank"],
 				"gndNumber": "5011924-2",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0040": {
+			"organisation_0040": {
 				"name": "Bank-ı Osmanlî-i Ṣâhâne",
 				"nameVariants": ["Ottomanische Bank"],
 				"gndNumber": "5331166-8",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0041": {
+			"organisation_0041": {
 				"name": "Wandervogel, Deutscher Bund",
 				"nameVariants": [],
 				"gndNumber": "2026229-2",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0042": {
+			"organisation_0042": {
 				"name": "Pfeffermühle",
 				"nameVariants": ["Kabarett Pfeffermühle"],
 				"gndNumber": "2117724-7",
 				"type": "Theater",
 				"note": ""
 			},
-			"org_0043": {
+			"organisation_0043": {
 				"name": "Farm Security Administration",
 				"nameVariants": ["FSA"],
 				"gndNumber": "2105906-8",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0044": {
+			"organisation_0044": {
 				"name": "Argentinisches Tageblatt",
 				"nameVariants": [],
 				"gndNumber": "4367755-1",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0045": {
+			"organisation_0045": {
 				"name": "Supreme Court",
 				"nameVariants": ["Oberster Gerichtshof"],
 				"gndNumber": "35650-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0046": {
+			"organisation_0046": {
 				"name": "Afro-American",
 				"nameVariants": ["The Washington Afro-American"],
 				"gndNumber": "4539979-7",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0047": {
+			"organisation_0047": {
 				"name": "Athen. Volksversammlung",
 				"nameVariants": [],
 				"gndNumber": "4219061-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0048": {
+			"organisation_0048": {
 				"name": "Socialist Labor Party",
 				"nameVariants": ["Sozialistische Partei Amerikas"],
 				"gndNumber": "502526-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0049": {
+			"organisation_0049": {
 				"name": "Communist Party USA (CPUSA)",
 				"nameVariants": ["Kommunistische Partei Amerikas"],
 				"gndNumber": "42276-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0050": {
+			"organisation_0050": {
 				"name": "Universität Princeton",
 				"nameVariants": [],
 				"gndNumber": "30381-1",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0051": {
+			"organisation_0051": {
 				"name": "Universität Yale",
 				"nameVariants": [],
 				"gndNumber": "36828-3",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0052": {
+			"organisation_0052": {
 				"name": "Universität Harvard",
 				"nameVariants": [],
 				"gndNumber": "2012974-9",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0053": {
+			"organisation_0053": {
 				"name": "Universität Göttingen",
 				"nameVariants": [],
 				"gndNumber": "2024315-7",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0054": {
+			"organisation_0054": {
 				"name": "Universität Hamburg",
 				"nameVariants": ["Hamburgische Universität"],
 				"gndNumber": "1090505426",
 				"type": "Hochschule",
 				"note": "Achtung: Zeitraum 1919-1935; Vorgänger der Hansischen Universität (1935-1945) und der Universität Hamburg (ab 1945)"
 			},
-			"org_0055": {
+			"organisation_0055": {
 				"name": "Hochalpines Töchterinstitut Fetan",
 				"nameVariants": [],
 				"gndNumber": "16002443-2",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0056": {
+			"organisation_0056": {
 				"name": "Privatschule Goetz-Azzolini, Zürich",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Schule",
 				"note": "Kein GNDEintrag, da zu wenig bekannt. Vermutlich geleitet von Hans Goetz-Azzolini, der wie seine Frau Margherita Geotz-Azzolini 1926 verstarb (siehe https://www.vsg-sspes.ch/fileadmin/user_upload/publikationen/Jahresberichte_1869-1945/JH_1928_56.pdf). Schwarzenbach besuchte die Privatschule von ca. 1923-1925."
 			},
-			"org_0057": {
+			"organisation_0057": {
 				"name": "Kloster Odilienberg",
 				"nameVariants": [],
 				"gndNumber": "4043116-2",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0058": {
+			"organisation_0058": {
 				"name": "Freie Schulgemeinde Wickersdorf",
 				"nameVariants": [],
 				"gndNumber": "212409-9",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0059": {
+			"organisation_0059": {
 				"name": "Institute for Advanced Studies (Princeton)",
 				"nameVariants": [],
 				"gndNumber": "1085746186",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0060": {
+			"organisation_0060": {
 				"name": "Reclam Verlag Leipzig",
 				"nameVariants": [],
 				"gndNumber": "2128673-5",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0061": {
+			"organisation_0061": {
 				"name": "Georg Müller Verlag München",
 				"nameVariants": [],
 				"gndNumber": "5059107-1",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0062": {
+			"organisation_0062": {
 				"name": "Williams Verlag Berlin",
 				"nameVariants": [],
 				"gndNumber": "5272764-6",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0063": {
+			"organisation_0063": {
 				"name": "Albert Langen Verlag München",
 				"nameVariants": [],
 				"gndNumber": "124814-5",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0064": {
+			"organisation_0064": {
 				"name": "Amalthea Verlag Wien",
 				"nameVariants": [],
 				"gndNumber": "1213349-8",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0065": {
+			"organisation_0065": {
 				"name": "Blaues Kreuz Schweiz",
 				"nameVariants": [],
 				"gndNumber": "1060573288",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0066": {
+			"organisation_0066": {
 				"name": "Heinrich Majer Verlag Basel",
 				"nameVariants": [],
 				"gndNumber": "1086233492",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0067": {
+			"organisation_0067": {
 				"name": "Deutsches Kaiserreich (1871-1918)",
 				"nameVariants": [],
 				"gndNumber": "7509421-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0068": {
+			"organisation_0068": {
 				"name": "Sowjetunion (Staat)",
 				"nameVariants": [],
 				"gndNumber": "4077548-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0069": {
+			"organisation_0069": {
 				"name": "Heilige Allianz (Bündnis 1815)",
 				"nameVariants": [],
 				"gndNumber": "4159380-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0070": {
+			"organisation_0070": {
 				"name": "Nationale Front (Schweiz)",
 				"nameVariants": [],
 				"gndNumber": "4041287-8",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0071": {
+			"organisation_0071": {
 				"name": "Neue Front (Schweiz)",
 				"nameVariants": [],
 				"gndNumber": "7530146-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0072": {
+			"organisation_0072": {
 				"name": "Kloster Einsiedeln",
 				"nameVariants": [],
 				"gndNumber": "2089329-2",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0073": {
+			"organisation_0073": {
 				"name": "ETHZ",
 				"nameVariants": ["Eidgenössische Technische Hochschule Zürich"],
 				"gndNumber": "2023928-2",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0074": {
+			"organisation_0074": {
 				"name": "Die Weltwoche",
 				"nameVariants": [],
 				"gndNumber": "4065475-8",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0075": {
+			"organisation_0075": {
 				"name": "Resettlement Administration (USA)",
 				"nameVariants": ["Behörde für Umsiedlung"],
 				"gndNumber": "121504-8",
 				"type": "Politische org",
 				"note": "Vorgänger der Farm Security Administration"
 			},
-			"org_0076": {
+			"organisation_0076": {
 				"name": "United Mine Workers of America",
 				"nameVariants": ["UMWA", "Vereinigte Bergarbeiter Amerikas"],
 				"gndNumber": "45058-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0077": {
+			"organisation_0077": {
 				"name": "Universität Pittsburgh",
 				"nameVariants": [],
 				"gndNumber": "1010790-3",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0078": {
+			"organisation_0078": {
 				"name": "Mellon Institute of Industrial Research",
 				"nameVariants": [],
 				"gndNumber": "5010868-2",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0079": {
+			"organisation_0079": {
 				"name": "Carnegie Institute of Technology",
 				"nameVariants": [],
 				"gndNumber": "36724-2",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0080": {
+			"organisation_0080": {
 				"name": "Carnegie Mellon Universität",
 				"nameVariants": [],
 				"gndNumber": "36725-4",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0081": {
+			"organisation_0081": {
 				"name": "Jones and Laughlin",
 				"nameVariants": ["Jones & Laughlin Steel Corporation"],
 				"gndNumber": "16068861-9",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0082": {
+			"organisation_0082": {
 				"name": "United States Steel Corporation",
 				"nameVariants": ["U.S.-Steel"],
 				"gndNumber": "4611389-7",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0083": {
+			"organisation_0083": {
 				"name": "Republic Steel",
 				"nameVariants": ["Republic Steel Corporation (Cleveland, Ohio)"],
 				"gndNumber": "275780-1",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0084": {
+			"organisation_0084": {
 				"name": "Bethlehem Steel Corporation",
 				"nameVariants": [],
 				"gndNumber": "7540974-4",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0085": {
+			"organisation_0085": {
 				"name": "General Motors Corporation",
 				"nameVariants": [],
 				"gndNumber": "1021287-5",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0086": {
+			"organisation_0086": {
 				"name": "Steel Workers Organizing Committee",
 				"nameVariants": [],
 				"gndNumber": "5059578-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0087": {
+			"organisation_0087": {
 				"name": "Committee for Industrial Organization",
 				"nameVariants": ["CIO"],
 				"gndNumber": "5056909-0",
 				"type": "Politische org",
 				"note": "ab 1938: Congress of Industrial Organization"
 			},
-			"org_0088": {
+			"organisation_0088": {
 				"name": "United Automobile Workers",
 				"nameVariants": ["International Union, United Automobile Workers of America"],
 				"gndNumber": "5053597-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0089": {
+			"organisation_0089": {
 				"name": "Highlander Folk School",
 				"nameVariants": ["Hochländer-Schule"],
 				"gndNumber": "4257909-0",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0090": {
+			"organisation_0090": {
 				"name": "Kommunistische Partei Russlands",
 				"nameVariants": ["Bolschewiki"],
 				"gndNumber": "2052143-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0091": {
+			"organisation_0091": {
 				"name": "Piper Verlag, München",
 				"nameVariants": [],
 				"gndNumber": "25993-7",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0092": {
+			"organisation_0092": {
 				"name": "Das Buch von der Schweiz. Nord und West",
 				"nameVariants": [
 					"Schmid, Hans Rudolf, Hans Tomamichel, und Annemarie Schwarzenbach. Das Buch von der Schweiz: Nord und West. Was nicht im Baedeker steht 16. München: Piper & Co, 1933."
@@ -22416,7 +22416,7 @@
 				"type": "Sammelband",
 				"note": "Ist aus technischen Gründen als org geführt, muss später auch mit Bibliographie verknüpft sein."
 			},
-			"org_0093": {
+			"organisation_0093": {
 				"name": "Das Buch von der Schweiz. Ost und Süd",
 				"nameVariants": [
 					"Schwarzenbach, Annemarie, Hans Tomamichel, Eduard Korrodi, und Hans Rudolf Schmid. Das Buch von der Schweiz: Ost und Süd. Was nicht im Baedeker steht 15. München: Piper & Co, 1932."
@@ -22425,259 +22425,259 @@
 				"type": "Sammelband",
 				"note": "Ist aus technischen Gründen als org geführt, muss später auch mit Bibliographie verknüpft sein."
 			},
-			"org_0094": {
+			"organisation_0094": {
 				"name": "Rascher und Cie. Verlag, Zürich und Leipzig",
 				"nameVariants": [],
 				"gndNumber": "2001535-5",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0095": {
+			"organisation_0095": {
 				"name": "Klausenrennen",
 				"nameVariants": ["Internationales Klausenrennen"],
 				"gndNumber": "4721257-3",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0096": {
+			"organisation_0096": {
 				"name": "Berninarennen",
 				"nameVariants": ["Berninabergrennen (1929-1930)"],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "Kein GND-Eintrag, muss bei der GND-Redaktion der ZB angefragt werden (ist ev. nicht dieselbe wie für die Namen). Hintergrundinfo: https://www.bernina-granturismo.com/ueber-bgt/"
 			},
-			"org_0097": {
+			"organisation_0097": {
 				"name": "Springkonkurrenz Genf",
 				"nameVariants": ["Concours hippique international de Genève"],
 				"gndNumber": "7848097-8",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0098": {
+			"organisation_0098": {
 				"name": "Springkonkurrenz Luzern",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "Kein GND-Eintrag, muss bei der GND-Redaktion der ZB angefragt werden"
 			},
-			"org_0099": {
+			"organisation_0099": {
 				"name": "Musée de Cluny",
 				"nameVariants": ["Musée National du Moyen Age"],
 				"gndNumber": "10151716-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0100": {
+			"organisation_0100": {
 				"name": "Alte Eidgenossenschaft",
 				"nameVariants": ["Schweiz (1513-1798)"],
 				"gndNumber": "1085175626",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0101": {
+			"organisation_0101": {
 				"name": "Berliner illustrierte Zeitung",
 				"nameVariants": [],
 				"gndNumber": "4144686-0",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0102": {
+			"organisation_0102": {
 				"name": "Die Sammlung",
 				"nameVariants": [],
 				"gndNumber": "1230160388",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0103": {
+			"organisation_0103": {
 				"name": "La nouvelle revue française",
 				"nameVariants": [],
 				"gndNumber": "4166302-0",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0104": {
+			"organisation_0104": {
 				"name": "Rätisches Museum",
 				"nameVariants": [],
 				"gndNumber": "1031261-4",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0105": {
+			"organisation_0105": {
 				"name": "Fridericianum Davos",
 				"nameVariants": [],
 				"gndNumber": "65613-6",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0106": {
+			"organisation_0106": {
 				"name": "Kulm (Hotel St. Moritz)",
 				"nameVariants": [],
 				"gndNumber": "1086486684",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0107": {
+			"organisation_0107": {
 				"name": "Tschuggen (Hotel Arosa)",
 				"nameVariants": [],
 				"gndNumber": "7740251-0",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0108": {
+			"organisation_0108": {
 				"name": "Prätschli (Hotel Arosa)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Noch nicht in GND"
 			},
-			"org_0109": {
+			"organisation_0109": {
 				"name": "Obersee (Hotel Arosa)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Noch nicht in GND"
 			},
-			"org_0110": {
+			"organisation_0110": {
 				"name": "Carlton (Hotel St. Moritz)",
 				"nameVariants": [],
 				"gndNumber": "1086486668",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0111": {
+			"organisation_0111": {
 				"name": "Sonne (Hotel Fex)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Noch nicht in GND"
 			},
-			"org_0112": {
+			"organisation_0112": {
 				"name": "Palace (Hotel St. Moritz)",
 				"nameVariants": ["Badrutt's Palace Hotel St. Moritz"],
 				"gndNumber": "16072800-9",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0113": {
+			"organisation_0113": {
 				"name": "Suvrettahaus (Hotel St. Moritz)",
 				"nameVariants": [],
 				"gndNumber": "10064232-9",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0114": {
+			"organisation_0114": {
 				"name": "Segantinimuseum",
 				"nameVariants": [],
 				"gndNumber": "2092141-X",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0115": {
+			"organisation_0115": {
 				"name": "Museum Engiadinais",
 				"nameVariants": [],
 				"gndNumber": "16093287-7",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0116": {
+			"organisation_0116": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0117": {
+			"organisation_0117": {
 				"name": "Bellavista (Hotel Fetan)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Noch nicht in GND"
 			},
-			"org_0118": {
+			"organisation_0118": {
 				"name": "Querido Verlag",
 				"nameVariants": [],
 				"gndNumber": "4102594-5",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0119": {
+			"organisation_0119": {
 				"name": "Unterraetien (mittelalterliche Grafschaft)",
 				"nameVariants": ["Niederraetien"],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0120": {
+			"organisation_0120": {
 				"name": "SBB",
 				"nameVariants": [],
 				"gndNumber": "2032050-4",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0121": {
+			"organisation_0121": {
 				"name": "Kulm (Hotel Arosa)",
 				"nameVariants": [],
 				"gndNumber": "1086027493",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0122": {
+			"organisation_0122": {
 				"name": "Kursaal (Arosa)",
 				"nameVariants": [],
 				"gndNumber": "1086647297",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0123": {
+			"organisation_0123": {
 				"name": "Grand Hotel des Bains Kempinski (St. Moritz)",
 				"nameVariants": [],
 				"gndNumber": "1086510992",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0124": {
+			"organisation_0124": {
 				"name": "Simplicissimus, Künstler-Kneipe (München)",
 				"nameVariants": [],
 				"gndNumber": "1233499-6",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0125": {
+			"organisation_0125": {
 				"name": "Ufa Film & TV-Produktion",
 				"nameVariants": [],
 				"gndNumber": "10185986-7",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0126": {
+			"organisation_0126": {
 				"name": "American Legion",
 				"nameVariants": [],
 				"gndNumber": "125298-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0127": {
+			"organisation_0127": {
 				"name": "Ku Klux Klan",
 				"nameVariants": [],
 				"gndNumber": "4101512-5",
 				"type": "",
 				"note": ""
 			},
-			"org_0128": {
+			"organisation_0128": {
 				"name": "Goodyear Tire and Rubber Company",
 				"nameVariants": [],
 				"gndNumber": "4248395-5",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0129": {
+			"organisation_0129": {
 				"name": "Firestone Tire & Rubber Company",
 				"nameVariants": [],
 				"gndNumber": "274047-3",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0130": {
+			"organisation_0130": {
 				"name": "USA. Department of Agriculture",
 				"nameVariants": [
 					"United States Departement of Agriculture ",
@@ -22688,2170 +22688,2170 @@
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0131": {
+			"organisation_0131": {
 				"name": "Mass und Wert",
 				"nameVariants": [],
 				"gndNumber": "4433782-6",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0132": {
+			"organisation_0132": {
 				"name": "Weltwoche",
 				"nameVariants": [],
 				"gndNumber": "4065475-8",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0133": {
+			"organisation_0133": {
 				"name": "Southern Tenant Farmers Union",
 				"nameVariants": [],
 				"gndNumber": "5054818-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0134": {
+			"organisation_0134": {
 				"name": "Deutsches Archäologisches Institut Istanbul",
 				"nameVariants": [],
 				"gndNumber": "5033510-8",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0135": {
+			"organisation_0135": {
 				"name": "Hotel Bellvue Palace Istanbul",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0136": {
+			"organisation_0136": {
 				"name": "Hotel Zürser Hof",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0137": {
+			"organisation_0137": {
 				"name": "Universität Chicago",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0138": {
+			"organisation_0138": {
 				"name": "National Cotton Council",
 				"nameVariants": [],
 				"gndNumber": "5142274-8",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0139": {
+			"organisation_0139": {
 				"name": "Hote Maude Bagdad",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0140": {
+			"organisation_0140": {
 				"name": "Hotel Metropole (Beirut)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0141": {
+			"organisation_0141": {
 				"name": "Carnegie Museum of Arts and Natural History",
 				"nameVariants": [],
 				"gndNumber": "18192-4",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0142": {
+			"organisation_0142": {
 				"name": "Schweizer Radio-Zeitung",
 				"nameVariants": [],
 				"gndNumber": "1086208595",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0143": {
+			"organisation_0143": {
 				"name": "American Federation of Labour",
 				"nameVariants": [],
 				"gndNumber": "16112855-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0144": {
+			"organisation_0144": {
 				"name": "Vegetabilische Gesellschaft des Monte Verità",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0145": {
+			"organisation_0145": {
 				"name": "Deutsche Botschaft Teheran",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0146": {
+			"organisation_0146": {
 				"name": "Bellerive au Lac (Hotel, Zürich)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0147": {
+			"organisation_0147": {
 				"name": "De Trois Rois (Hotel, Basel)",
 				"nameVariants": [],
 				"gndNumber": "5087055-5",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0148": {
+			"organisation_0148": {
 				"name": "Les Rives de Prangins",
 				"nameVariants": ["Hôpital psychiatrique de Prangins", "Prangins"],
 				"gndNumber": "1372675868",
 				"type": "",
 				"note": ""
 			},
-			"org_0149": {
+			"organisation_0149": {
 				"name": "Clinique Bellevue (Yverdons-Les-Bains)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Klinik",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0150": {
+			"organisation_0150": {
 				"name": "Oprecht Verlag Zürich",
 				"nameVariants": [],
 				"gndNumber": "5028786-2",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0151": {
+			"organisation_0151": {
 				"name": "Front Populaire",
 				"nameVariants": [],
 				"gndNumber": "4544651-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0152": {
+			"organisation_0152": {
 				"name": "Hallwag-Verlag Bern",
 				"nameVariants": [],
 				"gndNumber": "11665-8",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0153": {
+			"organisation_0153": {
 				"name": "Hotel Astoria (Bad Gastein)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0154": {
+			"organisation_0154": {
 				"name": "Drei Mohren (Hotel, Lermoos)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0155": {
+			"organisation_0155": {
 				"name": "Hotel Metropole (Moskau)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0156": {
+			"organisation_0156": {
 				"name": "The Bedford",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0157": {
+			"organisation_0157": {
 				"name": "Amerikanische Botschaft Teheran",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0158": {
+			"organisation_0158": {
 				"name": "Gestapo",
 				"nameVariants": ["Geheime Staatspolizei"],
 				"gndNumber": "2029665-4",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0159": {
+			"organisation_0159": {
 				"name": "Deutsche Botschaft Bern",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0160": {
+			"organisation_0160": {
 				"name": "Mrs. William Boyce Thompson Foundation",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0161": {
+			"organisation_0161": {
 				"name": "Museum of Fine Arts Boston",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0162": {
+			"organisation_0162": {
 				"name": "University Museum of Philadelphia",
 				"nameVariants": ["University of Pennsylvania Museum of Archaeology and Anthropology"],
 				"gndNumber": "1221563-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0163": {
+			"organisation_0163": {
 				"name": "Hôtel Latitude 43 (Saint-Tropez)",
 				"nameVariants": [],
 				"gndNumber": "4650720-6",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0164": {
+			"organisation_0164": {
 				"name": "Central (Hotel, Rotterdam)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0165": {
+			"organisation_0165": {
 				"name": "Rowohlt Verlag Hamburg",
 				"nameVariants": [],
 				"gndNumber": "2020049-3",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0166": {
+			"organisation_0166": {
 				"name": "Balilla (faschistische Jugendorg Italiens)",
 				"nameVariants": [],
 				"gndNumber": "10106608-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0167": {
+			"organisation_0167": {
 				"name": "Schweizerischer Frauenkalender",
 				"nameVariants": [],
 				"gndNumber": "1086198808",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0168": {
+			"organisation_0168": {
 				"name": "Züricher Post",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "Noch keine GND-Nummer, muss ggfls als Werk beantragt werden (abklärung begonnen am 1. Sept. 25)."
 			},
-			"org_0169": {
+			"organisation_0169": {
 				"name": "Krankenhaus Neumünster Zürich",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0170": {
+			"organisation_0170": {
 				"name": "Völkerbund",
 				"nameVariants": [],
 				"gndNumber": "36500-2",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0171": {
+			"organisation_0171": {
 				"name": "Entente",
 				"nameVariants": ["Tripleentente, Allierte im 1. WK"],
 				"gndNumber": "4186191-7",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0172": {
+			"organisation_0172": {
 				"name": "Osmanisches Reich",
 				"nameVariants": [],
 				"gndNumber": "4075720-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0173": {
+			"organisation_0173": {
 				"name": "Fremdenlegion (Frankreich)",
 				"nameVariants": ["Légion étrangère"],
 				"gndNumber": "1091212-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0174": {
+			"organisation_0174": {
 				"name": "Römisches Reich",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0175": {
+			"organisation_0175": {
 				"name": "Augustinerorden",
 				"nameVariants": [],
 				"gndNumber": "120991297X",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0176": {
+			"organisation_0176": {
 				"name": "Hospiz Grosser St. Bernhard",
 				"nameVariants": [],
 				"gndNumber": "4376290-6",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0177": {
+			"organisation_0177": {
 				"name": "Paris‐Dinard (Hotel)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "kein GND Eintrag"
 			},
-			"org_0178": {
+			"organisation_0178": {
 				"name": "Roches Fleuries (Hotel, Le Lavandou",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0179": {
+			"organisation_0179": {
 				"name": "Transmare Verlag",
 				"nameVariants": [],
 				"gndNumber": "1048371913",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0180": {
+			"organisation_0180": {
 				"name": "Grand Hôtel Couronne et Poste (Brig)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe http://800jahrebrig.ch/index.php?page=meilensteine&id=grand-hotel-couronne-et-poste"
 			},
-			"org_0181": {
+			"organisation_0181": {
 				"name": "Schloßhotel Bellevue (Sierre)",
 				"nameVariants": ["Hôtel Château Bellevue (Sierre)"],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0182": {
+			"organisation_0182": {
 				"name": "Hôtel Trois Couronnes (Martigny-Bourg)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://www.les3couronnes.ch/"
 			},
-			"org_0183": {
+			"organisation_0183": {
 				"name": "Hotel Kluser et Montblanc (Martigny)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, keine Internet-Infos"
 			},
-			"org_0184": {
+			"organisation_0184": {
 				"name": "British Sanatorium (Montana)",
 				"nameVariants": ["Montana Hall"],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://de.wikipedia.org/wiki/Luftkurort_Crans-Montana"
 			},
-			"org_0185": {
+			"organisation_0185": {
 				"name": "Forest Hotel (Montana-Vermala)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://hls-dhs-dss.ch/de/articles/030874/2014-02-25/"
 			},
-			"org_0186": {
+			"organisation_0186": {
 				"name": "Hôtel du Golf et des Sports (Crans-Mortana)",
 				"nameVariants": [],
 				"gndNumber": "1086486196",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0187": {
+			"organisation_0187": {
 				"name": "Gornergratbahn",
 				"nameVariants": [],
 				"gndNumber": "275447-2",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0188": {
+			"organisation_0188": {
 				"name": "Hôtel Suisse et Majestic (Montreux)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://de.wikipedia.org/wiki/H%C3%B4tel_Suisse_et_Majestic"
 			},
-			"org_0189": {
+			"organisation_0189": {
 				"name": "Hotel Regina (Montreux)",
 				"nameVariants": ["ehem. Grand Hotel Caux / Caux Palace"],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://en.wikipedia.org/wiki/Caux_Palace_Hotel"
 			},
-			"org_0190": {
+			"organisation_0190": {
 				"name": "Hôtel Montreux-Palace (Montreux)",
 				"nameVariants": [],
 				"gndNumber": "1085978036",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0191": {
+			"organisation_0191": {
 				"name": "Hotel Le Bristol (Montreux)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://bristol-montreux.ch/de"
 			},
-			"org_0192": {
+			"organisation_0192": {
 				"name": "Hôtel du Grand Lac Excelsior (Montreux)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, siehe https://de.wikipedia.org/wiki/H%C3%B4tel_Excelsior"
 			},
-			"org_0193": {
+			"organisation_0193": {
 				"name": "Walter-School (Morges)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Schule",
 				"note": "Kein GND, keine weiteren Infos auffindbar"
 			},
-			"org_0194": {
+			"organisation_0194": {
 				"name": "La Lignière (Kuranstalt in Gland)",
 				"nameVariants": [],
 				"gndNumber": "7515430-4",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0195": {
+			"organisation_0195": {
 				"name": "Hotel Beau Rivage (Nyon)",
 				"nameVariants": [],
 				"gndNumber": "1098215621",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0196": {
+			"organisation_0196": {
 				"name": "Hôtel de Nyon (Nyon)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, keine weiteren Infos auffindbar"
 			},
-			"org_0197": {
+			"organisation_0197": {
 				"name": "Hôtel du Lion d'Or (Trélex)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND, keine weiteren Infos auffindbar"
 			},
-			"org_0198": {
+			"organisation_0198": {
 				"name": "Hitlerjugend",
 				"nameVariants": [],
 				"gndNumber": "31334-8",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0199": {
+			"organisation_0199": {
 				"name": "SA (Sturmabteilung der NSDAP)",
 				"nameVariants": [],
 				"gndNumber": "63215-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0200": {
+			"organisation_0200": {
 				"name": "Bureau International du Travail",
 				"nameVariants": [],
 				"gndNumber": "36358-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0201": {
+			"organisation_0201": {
 				"name": "Salon international de l'Automobile de Genève",
 				"nameVariants": [],
 				"gndNumber": "109234229X",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0202": {
+			"organisation_0202": {
 				"name": "Société Nautique de Genève",
 				"nameVariants": [],
 				"gndNumber": "4819082-2",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0203": {
+			"organisation_0203": {
 				"name": "Collège de St. Antoine (Genf)",
 				"nameVariants": ["Collège Calvin"],
 				"gndNumber": "65115-1",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0204": {
+			"organisation_0204": {
 				"name": "Institut Jean-Jacques Rousseau",
 				"nameVariants": [],
 				"gndNumber": "1007432-6",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0205": {
+			"organisation_0205": {
 				"name": "Institut für höhere internationale Studien (GENF)",
 				"nameVariants": ["IHEID"],
 				"gndNumber": "10367259-X",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0206": {
+			"organisation_0206": {
 				"name": "Universität Neuenburg",
 				"nameVariants": [],
 				"gndNumber": "1010467-7",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0207": {
+			"organisation_0207": {
 				"name": "Royal Society (London)",
 				"nameVariants": [],
 				"gndNumber": "39272-8",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0208": {
+			"organisation_0208": {
 				"name": "École d'horlogerie de Neuchâtel",
 				"nameVariants": [],
 				"gndNumber": "1085909190",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0209": {
+			"organisation_0209": {
 				"name": "Die neue Weltbühne",
 				"nameVariants": ["Weltbühne"],
 				"gndNumber": "1217294430",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0210": {
+			"organisation_0210": {
 				"name": "Vichy-Regime",
 				"nameVariants": [],
 				"gndNumber": "4188214-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0211": {
+			"organisation_0211": {
 				"name": "Belgische Exilregierung",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0212": {
+			"organisation_0212": {
 				"name": "Französische Exilregierung",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0213": {
+			"organisation_0213": {
 				"name": "France libre",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0214": {
+			"organisation_0214": {
 				"name": "Forces françaises libres",
 				"nameVariants": [],
 				"gndNumber": "2124685-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0215": {
+			"organisation_0215": {
 				"name": "Radio Brazzaville",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0216": {
+			"organisation_0216": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0217": {
+			"organisation_0217": {
 				"name": "White Swan (Hotel)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0218": {
+			"organisation_0218": {
 				"name": "New School for Social Research",
 				"nameVariants": ["New School"],
 				"gndNumber": "41565-0",
 				"type": "Hochschule",
 				"note": "Die Pfeffermühle gastierte dort vom 22. bis zum 24. Januar 1937."
 			},
-			"org_0219": {
+			"organisation_0219": {
 				"name": "Isabella Mine",
 				"nameVariants": ["Isabella-Grube"],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "siehe smallform_0201 und letter_0296"
 			},
-			"org_0220": {
+			"organisation_0220": {
 				"name": "Lenos-Verlag",
 				"nameVariants": [],
 				"gndNumber": "1027094872",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0221": {
+			"organisation_0221": {
 				"name": "Brenner Jahrbuch",
 				"nameVariants": ["Der Brenner (Zeitschrift)"],
 				"gndNumber": "4149123-3",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0222": {
+			"organisation_0222": {
 				"name": "Brenner Verlag",
 				"nameVariants": [],
 				"gndNumber": "10195672-1",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0223": {
+			"organisation_0223": {
 				"name": "Kurt Wolff Verlag",
 				"nameVariants": [],
 				"gndNumber": "35739-X",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0224": {
+			"organisation_0224": {
 				"name": "Deutsche Metallarbeiter-Verband",
 				"nameVariants": [],
 				"gndNumber": "37124-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0225": {
+			"organisation_0225": {
 				"name": "American Civil Liberties Union",
 				"nameVariants": [],
 				"gndNumber": "1045547-4",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0226": {
+			"organisation_0226": {
 				"name": "Sozialistische Arbeiterpartei (Königsberg)",
 				"nameVariants": ["Sozialdemokratische Partei des Memelgebietes"],
 				"gndNumber": "1194190693",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0227": {
+			"organisation_0227": {
 				"name": "Workers Defense League",
 				"nameVariants": ["Liga für die Verteidigung der Arbeiter"],
 				"gndNumber": "1379994950",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0228": {
+			"organisation_0228": {
 				"name": "Committee for Protection of Foreign Born",
 				"nameVariants": ["American Committee for the Protection of Foreign Born"],
 				"gndNumber": "44741-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0229": {
+			"organisation_0229": {
 				"name": "Hotel Fürstenhof (Rheinsberg)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0230": {
+			"organisation_0230": {
 				"name": "Oesterheld & Co.",
 				"nameVariants": [],
 				"gndNumber": "5325430-2",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0231": {
+			"organisation_0231": {
 				"name": "Collier's Weekly",
 				"nameVariants": [],
 				"gndNumber": "1380613272",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0232": {
+			"organisation_0232": {
 				"name": "Textile Workers Organizing Committee",
 				"nameVariants": ["orgskomitee der Textilarbeiter", "TWOC"],
 				"gndNumber": "1380620120",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0233": {
+			"organisation_0233": {
 				"name": "Coca‐Cola‐Werke",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0234": {
+			"organisation_0234": {
 				"name": "Arbeits-Schiedsgericht Washington",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0235": {
+			"organisation_0235": {
 				"name": "Münchner Kammerspiele",
 				"nameVariants": [],
 				"gndNumber": "2068173-2",
 				"type": "Theater",
 				"note": ""
 			},
-			"org_0236": {
+			"organisation_0236": {
 				"name": "National Labor Relations Board",
 				"nameVariants": [],
 				"gndNumber": "4677805-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0237": {
+			"organisation_0237": {
 				"name": "Mansfield Mill",
 				"nameVariants": ["Mansfield-Fabrik"],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0238": {
+			"organisation_0238": {
 				"name": "Civil Liberties Committee",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0239": {
+			"organisation_0239": {
 				"name": "Jennings",
 				"nameVariants": ["Jennings-Baumwollfabriken"],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0240": {
+			"organisation_0240": {
 				"name": "Universität Virginia",
 				"nameVariants": [],
 				"gndNumber": "36636-5",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0241": {
+			"organisation_0241": {
 				"name": "Ford Fabrik Memphis",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "nur übergeordnete GND-Einträge: Ford Motor Company"
 			},
-			"org_0242": {
+			"organisation_0242": {
 				"name": "Union Army",
 				"nameVariants": ["Unionsarmee"],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0243": {
+			"organisation_0243": {
 				"name": "Ruallah (Beduinenstamm)",
 				"nameVariants": ["Ruwallah, Rwala"],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "Kein GND-Eintrag, Wiki: https://en.wikipedia.org/wiki/Ruwallah"
 			},
-			"org_0244": {
+			"organisation_0244": {
 				"name": "Anezi (Beduinenstamm)",
 				"nameVariants": ["Anizah, Anazah"],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "Kein GND-Eintrag, Wiki: https://en.wikipedia.org/wiki/Anizah"
 			},
-			"org_0245": {
+			"organisation_0245": {
 				"name": "Tennessee Valley Authority",
 				"nameVariants": ["TVA"],
 				"gndNumber": "6299-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0246": {
+			"organisation_0246": {
 				"name": "Andrew Johnson (Hotel Knoxville)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "kein GND-Eintrag; siehe hier [sogar Verweis auf Aufenthalt von AS im Wikipedia-Eintrag!: https://en.wikipedia.org/wiki/Andrew_Johnson_Building"
 			},
-			"org_0247": {
+			"organisation_0247": {
 				"name": "Hauptkadettenanstalt Groß-Lichterfelde",
 				"nameVariants": [],
 				"gndNumber": "108632403X",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0248": {
+			"organisation_0248": {
 				"name": "Thurgauer Zeitung",
 				"nameVariants": [],
 				"gndNumber": "1353261409",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0249": {
+			"organisation_0249": {
 				"name": "Confederacy",
 				"nameVariants": ["Konföderierten Staaten (USA)", "Sonderbund der Sklavenstaaten"],
 				"gndNumber": "33978-7",
 				"type": "Politische org",
 				"note": "von AS im Sinne einer org verwendet und nicht als Ort"
 			},
-			"org_0250": {
+			"organisation_0250": {
 				"name": "Southern Hotel (Montgomery)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0251": {
+			"organisation_0251": {
 				"name": "Reichswehr",
 				"nameVariants": [],
 				"gndNumber": "5031652-7",
 				"type": "Politische org",
 				"note": "Deutsche Armee von 1921 bis 1935 - von Schwarzenbach manchmal fälschlich für Wehrmacht verwendet"
 			},
-			"org_0252": {
+			"organisation_0252": {
 				"name": "SS (Schutzstaffel der NSDAP)",
 				"nameVariants": [],
 				"gndNumber": "10162246-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0253": {
+			"organisation_0253": {
 				"name": "Der Stürmer (Zeitung)",
 				"nameVariants": [],
 				"gndNumber": "4149147-6",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0254": {
+			"organisation_0254": {
 				"name": "Wörgler Nachrichten. Gemeinde-Anzeiger für Wörgl und Umgebung",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "Keine GND vorhanden, jedoch Digitalisate von 1932-1934, vgl. Wörgler Nachrichten. Gemeinde-Anzeiger für Wörgl und Umgebung."
 			},
-			"org_0255": {
+			"organisation_0255": {
 				"name": "Abtei St. Georgenberg",
 				"nameVariants": [],
 				"gndNumber": "2069910-4",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0256": {
+			"organisation_0256": {
 				"name": "Österreich-Ungarn (Monarchie)",
 				"nameVariants": [],
 				"gndNumber": "4075613-0",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0257": {
+			"organisation_0257": {
 				"name": "Wehrmacht",
 				"nameVariants": [],
 				"gndNumber": "26159-2",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0258": {
+			"organisation_0258": {
 				"name": "Sozialdemokratische Arbeiterpartei Österreichs",
 				"nameVariants": ["Sozialdemokratische Partei Österreichs"],
 				"gndNumber": "5060450-8",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0259": {
+			"organisation_0259": {
 				"name": "Vaterländische Front (Österreich)",
 				"nameVariants": [],
 				"gndNumber": "5272350-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0260": {
+			"organisation_0260": {
 				"name": "Bund Deutscher Mädel (Mädchenorg Hitlerjugend)",
 				"nameVariants": [],
 				"gndNumber": "31336-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0261": {
+			"organisation_0261": {
 				"name": "NS-Frauenschaft",
 				"nameVariants": [],
 				"gndNumber": "112157-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0262": {
+			"organisation_0262": {
 				"name": "OTRACO (Office d'Exploitation des Transports Coloniaux)",
 				"nameVariants": [],
 				"gndNumber": "1022579037",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0263": {
+			"organisation_0263": {
 				"name": "Prinzregententheater München",
 				"nameVariants": [],
 				"gndNumber": "4035971-2",
 				"type": "Theater",
 				"note": ""
 			},
-			"org_0264": {
+			"organisation_0264": {
 				"name": "Tobis-Tonbild-Syndikat-AG",
 				"nameVariants": [],
 				"gndNumber": "5169081-0",
 				"type": "",
 				"note": ""
 			},
-			"org_0265": {
+			"organisation_0265": {
 				"name": "Club Monbijou des Westens",
 				"nameVariants": ["Mali und Igel"],
 				"gndNumber": "",
 				"type": "Bar/Klub/Lokal",
 				"note": ""
 			},
-			"org_0266": {
+			"organisation_0266": {
 				"name": "Harris County Penitentiary",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0267": {
+			"organisation_0267": {
 				"name": "National Association for the Advancement of Colored Peopl",
 				"nameVariants": ["NAACP"],
 				"gndNumber": "1047543-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0268": {
+			"organisation_0268": {
 				"name": "Pine Mountain Valley Community",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0269": {
+			"organisation_0269": {
 				"name": "National Recovery Administration",
 				"nameVariants": ["NRA"],
 				"gndNumber": "128438-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0270": {
+			"organisation_0270": {
 				"name": "Agricultural Adjustment Administration",
 				"nameVariants": ["AAA"],
 				"gndNumber": "254652-8",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0271": {
+			"organisation_0271": {
 				"name": "Washington Civic Theatre",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Theater",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0272": {
+			"organisation_0272": {
 				"name": "Washington-Hoover-Airport",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0273": {
+			"organisation_0273": {
 				"name": "Sozialdemokratische Partei Deutschlands",
 				"nameVariants": [],
 				"gndNumber": "2022139-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0274": {
+			"organisation_0274": {
 				"name": "Reichsstelle zur Förderung des deutschen Schrifttums",
 				"nameVariants": [],
 				"gndNumber": "25151-3",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0275": {
+			"organisation_0275": {
 				"name": "Börsenblatt für den deutschen Buchhandels",
 				"nameVariants": [],
 				"gndNumber": "4146193-9",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0276": {
+			"organisation_0276": {
 				"name": "S. Fischer Verlag",
 				"nameVariants": [],
 				"gndNumber": "43325-1",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0277": {
+			"organisation_0277": {
 				"name": "Hotel Baron (Syrien)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0278": {
+			"organisation_0278": {
 				"name": "Taurus-Express",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "Kein GND, vgl. https://de.wikipedia.org/wiki/Taurus-Express"
 			},
-			"org_0279": {
+			"organisation_0279": {
 				"name": "Odenwaldschule",
 				"nameVariants": [],
 				"gndNumber": "500428-7",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0280": {
+			"organisation_0280": {
 				"name": "Mevlevi-Orden (Sufi-Orden)",
 				"nameVariants": [],
 				"gndNumber": "16093181-2",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0281": {
+			"organisation_0281": {
 				"name": "Deutsches Hospiz der Borromäerinnen (Jerusalem)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0282": {
+			"organisation_0282": {
 				"name": "Hebräische Universität Jerusalem",
 				"nameVariants": [],
 				"gndNumber": "2023678-5",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0283": {
+			"organisation_0283": {
 				"name": "American National Red Cross",
 				"nameVariants": [],
 				"gndNumber": "6045-8",
 				"type": "",
 				"note": ""
 			},
-			"org_0284": {
+			"organisation_0284": {
 				"name": "Heilsarmee",
 				"nameVariants": [],
 				"gndNumber": "81561-5",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0285": {
+			"organisation_0285": {
 				"name": "Die Tat",
 				"nameVariants": [],
 				"gndNumber": "1091588848",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0286": {
+			"organisation_0286": {
 				"name": "Annabelle",
 				"nameVariants": [],
 				"gndNumber": "4142530-3",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0287": {
+			"organisation_0287": {
 				"name": "Wesleyan Female College",
 				"nameVariants": [],
 				"gndNumber": "253898-2",
 				"type": "Schule",
 				"note": ""
 			},
-			"org_0288": {
+			"organisation_0288": {
 				"name": "Neue Schweizer Rundschau",
 				"nameVariants": [],
 				"gndNumber": "1087376432",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0289": {
+			"organisation_0289": {
 				"name": "Philographischer Verlag Basel",
 				"nameVariants": [],
 				"gndNumber": "1191143686",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0290": {
+			"organisation_0290": {
 				"name": "Siemens",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0291": {
+			"organisation_0291": {
 				"name": "Orell-Füssli Verlag Zürich",
 				"nameVariants": [],
 				"gndNumber": "1043876359",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0292": {
+			"organisation_0292": {
 				"name": "Schweizer Frauenblatt",
 				"nameVariants": [],
 				"gndNumber": "1086229371",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0293": {
+			"organisation_0293": {
 				"name": "Universität Syracuse",
 				"nameVariants": [],
 				"gndNumber": "4306-0",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0294": {
+			"organisation_0294": {
 				"name": "International News",
 				"nameVariants": ["International News Service (INS)"],
 				"gndNumber": "1087166691",
 				"type": "",
 				"note": ""
 			},
-			"org_0295": {
+			"organisation_0295": {
 				"name": "Französisches Rotes Kreuz",
 				"nameVariants": ["Croix Rouge Francaise"],
 				"gndNumber": "1087591694",
 				"type": "",
 				"note": ""
 			},
-			"org_0296": {
+			"organisation_0296": {
 				"name": "Philadelphia Public Ledger",
 				"nameVariants": ["Public Ledger Company"],
 				"gndNumber": "1283696576",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0297": {
+			"organisation_0297": {
 				"name": "Columbia Broadcasting Company",
 				"nameVariants": ["Columbia Broadcasting System"],
 				"gndNumber": "1020961-X",
 				"type": "",
 				"note": ""
 			},
-			"org_0298": {
+			"organisation_0298": {
 				"name": "New York Herald Tribune",
 				"nameVariants": ["Herald Tribune"],
 				"gndNumber": "4410051-6",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0299": {
+			"organisation_0299": {
 				"name": "Schwedische Zündhölzer AG",
 				"nameVariants": [],
 				"gndNumber": "4419918-1",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0300": {
+			"organisation_0300": {
 				"name": "Schwarzenbach-Huber Seidenfabrik",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein eigener GND-Eintrag: übergordnet: 1086471555"
 			},
-			"org_0301": {
+			"organisation_0301": {
 				"name": "Smithfield Courts",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0302": {
+			"organisation_0302": {
 				"name": "Schule für Humanistische Studien (Princeton)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0303": {
+			"organisation_0303": {
 				"name": "Life",
 				"nameVariants": [],
 				"gndNumber": "4125429-6",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0304": {
+			"organisation_0304": {
 				"name": "The Saturday Evening Post",
 				"nameVariants": [],
 				"gndNumber": "1371760462",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0305": {
+			"organisation_0305": {
 				"name": "Black Star",
 				"nameVariants": ["Black Star Picture Agency"],
 				"gndNumber": "4475036-5",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0306": {
+			"organisation_0306": {
 				"name": "Frick Coal Company",
 				"nameVariants": ["H. C. Frick & Company"],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0307": {
+			"organisation_0307": {
 				"name": "Isabella Connellsville Coke Company",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0308": {
+			"organisation_0308": {
 				"name": "Fulton House",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "kein GND-Eintrag; smallform_0205"
 			},
-			"org_0309": {
+			"organisation_0309": {
 				"name": "Pennsylvania Museum of Art Philadelphia",
 				"nameVariants": [],
 				"gndNumber": "235279-5",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0310": {
+			"organisation_0310": {
 				"name": "Harper's magazine",
 				"nameVariants": ["The Harper's Monthly"],
 				"gndNumber": "4159162-8",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0311": {
+			"organisation_0311": {
 				"name": "Chesa Dr. Ruppaner",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Klinik",
 				"note": "Kein GND-Eintrag"
 			},
-			"org_0312": {
+			"organisation_0312": {
 				"name": "Französische Botschaft Teheran",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "Kein GND-Eintrag"
 			},
-			"org_0313": {
+			"organisation_0313": {
 				"name": "Knize (Herrenausstatter)",
 				"nameVariants": [],
 				"gndNumber": "1318727510",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0314": {
+			"organisation_0314": {
 				"name": "Hôtel St. George (Beirut)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Kein GND-Eintrag, aber ausführliches Wiki: https://en.wikipedia.org/wiki/St._Georges_Hotel,_Beirut"
 			},
-			"org_0315": {
+			"organisation_0315": {
 				"name": "USA. National Labor Relations Board",
 				"nameVariants": [],
 				"gndNumber": "115630-5",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0316": {
+			"organisation_0316": {
 				"name": "Quäker",
 				"nameVariants": ["Friend's Association"],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0317": {
+			"organisation_0317": {
 				"name": "Eugen-Rentsch-Verlag",
 				"nameVariants": [],
 				"gndNumber": "2009572-7",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0318": {
+			"organisation_0318": {
 				"name": "Allert de Lange Verlag",
 				"nameVariants": [],
 				"gndNumber": "2077551-9",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0319": {
+			"organisation_0319": {
 				"name": "Atlantis Verlag",
 				"nameVariants": [],
 				"gndNumber": "4003389-2",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0320": {
+			"organisation_0320": {
 				"name": "Schweizer Rundschau",
 				"nameVariants": [],
 				"gndNumber": "7655880-0",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0321": {
+			"organisation_0321": {
 				"name": "Cabaret Cornichon",
 				"nameVariants": [],
 				"gndNumber": "2104013-8",
 				"type": "Theater",
 				"note": ""
 			},
-			"org_0322": {
+			"organisation_0322": {
 				"name": "Kantonalbank Zürich",
 				"nameVariants": [],
 				"gndNumber": "2093763-5",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0323": {
+			"organisation_0323": {
 				"name": "ASIA",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "kein GND-Eintrag; https://en.wikipedia.org/wiki/Asia_(magazine)"
 			},
-			"org_0324": {
+			"organisation_0324": {
 				"name": "Woman's National Democratic Club",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "kein GND-Eintrag; https://en.wikipedia.org/wiki/Woman%27s_National_Democratic_Club"
 			},
-			"org_0325": {
+			"organisation_0325": {
 				"name": "Hotel Rom (Riga)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0326": {
+			"organisation_0326": {
 				"name": "Hotel Aristide Briand (Petschory)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0327": {
+			"organisation_0327": {
 				"name": "Internationale Literatur - Deutsche Blätter",
 				"nameVariants": [],
 				"gndNumber": "1230161139",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0328": {
+			"organisation_0328": {
 				"name": "Hotel Metropol (Moskau)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "Noch kein GND- Eintrag: https://de.wikipedia.org/wiki/Hotel_Metropol_(Moskau)"
 			},
-			"org_0329": {
+			"organisation_0329": {
 				"name": "Hotel Savoy (Moskau)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "https://en.wikipedia.org/wiki/Savoy_Hotel,_MoscowNoch kein GND- Eintrag: Noch kein GND- Eintrag: https://de.wikipedia.org/wiki/Hotel_Metropol_(Moskau)"
 			},
-			"org_0330": {
+			"organisation_0330": {
 				"name": "Inturist (sowjetische Reiseagentur)",
 				"nameVariants": [],
 				"gndNumber": "3012681-2",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0331": {
+			"organisation_0331": {
 				"name": "Das Wort",
 				"nameVariants": [],
 				"gndNumber": "4136955-5",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0332": {
+			"organisation_0332": {
 				"name": "Savoy Hotel Baur En Ville (Zürich)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0333": {
+			"organisation_0333": {
 				"name": "Tempo",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0334": {
+			"organisation_0334": {
 				"name": "Uhu",
 				"nameVariants": [],
 				"gndNumber": "4577216-2",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0335": {
+			"organisation_0335": {
 				"name": "Wega Buchhandung und Papeterie (St. Moritz)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "Kein GND vgl. https://www.engadin.ch/de/guide/einkaufen/alle-einkaufsmoeglichkeiten/schuler-wega-buecher-ag"
 			},
-			"org_0336": {
+			"organisation_0336": {
 				"name": "Akademia/Academia Foto-Agentur Berlin",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "Eine angeblich von Lily Abegg herausgegebene Zeitschrift, erschien zw. 1930 u. 1933, ist in Wiki und Frankfurter Lexikon erwähnt, jedoch ohne weitere Belege und in keinen Katalogen verzeichnet. Im HSL auch nicht erwähnt beim Abegg-Eintrag. Rooney schreibt von einer Foto Agentur, die Abegg betrieben habe, ebenso Fleischmann. EZ: Es ist definitiv eine Agentur, auf Wikipedia nur sonderbar beschrieben. Marianne Breslauer schreibt darüber in ihrer Autobiographie, S. 132."
 			},
-			"org_0337": {
+			"organisation_0337": {
 				"name": "Picard Verlag (Paris)",
 				"nameVariants": ["P. & A. Picard"],
 				"gndNumber": "1026530873",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0338": {
+			"organisation_0338": {
 				"name": "United States Lines",
 				"nameVariants": [],
 				"gndNumber": "1118649176",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0339": {
+			"organisation_0339": {
 				"name": "Manhattan (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0340": {
+			"organisation_0340": {
 				"name": "Sanatorium Bellevue (Kreuzlingen)",
 				"nameVariants": [],
 				"gndNumber": "2129690-X",
 				"type": "Klinik",
 				"note": ""
 			},
-			"org_0341": {
+			"organisation_0341": {
 				"name": "Geographical Magazine",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "Keine GND, siehe auch https://geographical.co.uk/"
 			},
-			"org_0342": {
+			"organisation_0342": {
 				"name": "Lloyd Triestino. Società di navigazione a vapore",
 				"nameVariants": [],
 				"gndNumber": "275392-3",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0343": {
+			"organisation_0343": {
 				"name": "Morgarten Verlag (Zürich)",
 				"nameVariants": [],
 				"gndNumber": "1342437179",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0344": {
+			"organisation_0344": {
 				"name": "Modern Age",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Verlag",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0345": {
+			"organisation_0345": {
 				"name": "Decision. A Review of Free Culture",
 				"nameVariants": [],
 				"gndNumber": "7733705-0",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0346": {
+			"organisation_0346": {
 				"name": "Paris (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0347": {
+			"organisation_0347": {
 				"name": "Hotel St. Peter (Zürich)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0348": {
+			"organisation_0348": {
 				"name": "French Legation (Washington D.C.)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "kein GND-Eintrag (nicht ganz klar, ob damit die Botschaft gemeint ist) siehe Brief an Breslauer letter_0080"
 			},
-			"org_0349": {
+			"organisation_0349": {
 				"name": "Ameisenverein Sektion Zürich",
 				"nameVariants": [],
 				"gndNumber": "1169756301",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0350": {
+			"organisation_0350": {
 				"name": "Konservatorium Zürich",
 				"nameVariants": [],
 				"gndNumber": "7708650-8",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0351": {
+			"organisation_0351": {
 				"name": "Hotel Reichsadler (Bayreuth)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0352": {
+			"organisation_0352": {
 				"name": "Sammlung Oskar Reinhart \"Am Römerholz",
 				"nameVariants": [],
 				"gndNumber": "2073889-4",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0353": {
+			"organisation_0353": {
 				"name": "Grasshopper",
 				"nameVariants": [],
 				"gndNumber": "10192128-7",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0354": {
+			"organisation_0354": {
 				"name": "Studentenschaft der Universität Zürich",
 				"nameVariants": [],
 				"gndNumber": "1087338697",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0355": {
+			"organisation_0355": {
 				"name": "China-Institut Universität Frankfurt",
 				"nameVariants": [],
 				"gndNumber": "115416-3",
 				"type": "Hochschule",
 				"note": ""
 			},
-			"org_0356": {
+			"organisation_0356": {
 				"name": "Kunstmuseum Winterthur",
 				"nameVariants": [],
 				"gndNumber": "2016815-9",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0357": {
+			"organisation_0357": {
 				"name": "Gasthof Bucherer (Walchensee)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0358": {
+			"organisation_0358": {
 				"name": "Schweizer Illustrierte",
 				"nameVariants": [],
 				"gndNumber": "4620115-4",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0359": {
+			"organisation_0359": {
 				"name": "Reitturnier CHIO Aachen",
 				"nameVariants": [],
 				"gndNumber": "4817227-3",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0360": {
+			"organisation_0360": {
 				"name": "Paramount Pictures",
 				"nameVariants": [],
 				"gndNumber": "4515801-0",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0361": {
+			"organisation_0361": {
 				"name": "Praesens-Film",
 				"nameVariants": [],
 				"gndNumber": "16342469-X",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0362": {
+			"organisation_0362": {
 				"name": "Robt. Schwarzenbach und Co AG",
 				"nameVariants": [],
 				"gndNumber": "1086471555",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0363": {
+			"organisation_0363": {
 				"name": "Hotel Andria (Pamplona)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0364": {
+			"organisation_0364": {
 				"name": "Volkshaus Zürich",
 				"nameVariants": [],
 				"gndNumber": "1087406501",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0365": {
+			"organisation_0365": {
 				"name": "Schweizerische Offiziersgesellschaft",
 				"nameVariants": [],
 				"gndNumber": "75028-1",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0366": {
+			"organisation_0366": {
 				"name": "Hotel du Passage (Den Haag)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0367": {
+			"organisation_0367": {
 				"name": "Hotel Central (Rotterdam)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0368": {
+			"organisation_0368": {
 				"name": "Institut Pasteur",
 				"nameVariants": [],
 				"gndNumber": "36271-2",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0369": {
+			"organisation_0369": {
 				"name": "Suisse-Italie (Reisebüro)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "Kein GND"
 			},
-			"org_0370": {
+			"organisation_0370": {
 				"name": "Hotel du Parc (Montana)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0371": {
+			"organisation_0371": {
 				"name": "Olympische Spiele, Berlin 1936",
 				"nameVariants": [],
 				"gndNumber": "2001155-6",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0372": {
+			"organisation_0372": {
 				"name": "Hotel Roma (Riga)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0373": {
+			"organisation_0373": {
 				"name": "Hotel Cecil (Delhi)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0374": {
+			"organisation_0374": {
 				"name": "Hotel Beau Rivage (Genf)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0375": {
+			"organisation_0375": {
 				"name": "Ariane (sog. Damenlokal, Berlin)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Bar/Klub/Lokal",
 				"note": ""
 			},
-			"org_0376": {
+			"organisation_0376": {
 				"name": "BBC",
 				"nameVariants": [],
 				"gndNumber": "1002250-8",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0377": {
+			"organisation_0377": {
 				"name": "Nation",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "kein GND-Eintrag: https://en.wikipedia.org/wiki/The_Nation"
 			},
-			"org_0378": {
+			"organisation_0378": {
 				"name": "Washington Post",
 				"nameVariants": [],
 				"gndNumber": "1191765857",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0379": {
+			"organisation_0379": {
 				"name": "KZ Oranienburg",
 				"nameVariants": [],
 				"gndNumber": "4226477-7",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0380": {
+			"organisation_0380": {
 				"name": "Bellevue Krankenhaus (New York)",
 				"nameVariants": [],
 				"gndNumber": "84033-6",
 				"type": "Klinik",
 				"note": ""
 			},
-			"org_0381": {
+			"organisation_0381": {
 				"name": "Légation de Suisse (Lissabon)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Politische org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0382": {
+			"organisation_0382": {
 				"name": "Emergency Rescue Committee",
 				"nameVariants": [],
 				"gndNumber": "10133005-4",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0383": {
+			"organisation_0383": {
 				"name": "White Plains (New York)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Klinik",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0384": {
+			"organisation_0384": {
 				"name": "S. S. Siboney (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0385": {
+			"organisation_0385": {
 				"name": "Internationales Komitee vom Roten Kreuz",
 				"nameVariants": ["IKRK", "CICR"],
 				"gndNumber": "43195-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0386": {
+			"organisation_0386": {
 				"name": "Blythewood Sanitarium (Greenwich Conn.)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Klinik",
 				"note": ""
 			},
-			"org_0387": {
+			"organisation_0387": {
 				"name": "Pensao Boa Ventura (Estoril-Lissabon)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0388": {
+			"organisation_0388": {
 				"name": "Secretariado de Propaganda Nacional",
 				"nameVariants": ["Secretariado Nacional de Informação"],
 				"gndNumber": "16160543-6",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0389": {
+			"organisation_0389": {
 				"name": "Schweizerische Verkehrszentrale",
 				"nameVariants": ["Office national suisse du tourisme"],
 				"gndNumber": "75324-5",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0390": {
+			"organisation_0390": {
 				"name": "Schweizerische Botschaft in Portugal (Lissabon)",
 				"nameVariants": [],
 				"gndNumber": "1387649736",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0391": {
+			"organisation_0391": {
 				"name": "Französisches Konsulat in Tetouan (Spanisch-Marokko)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0392": {
+			"organisation_0392": {
 				"name": "Protektorat Spanisch-Marokko",
 				"nameVariants": [],
 				"gndNumber": "1086332113",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0393": {
+			"organisation_0393": {
 				"name": "Esquire",
 				"nameVariants": [],
 				"gndNumber": "4337452-9",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0394": {
+			"organisation_0394": {
 				"name": "Der eiserne Besen",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Periodikum",
 				"note": "kein GND-Eintrag; aus HLS Artikel zu Hans Vonwyl: hat antisemitisches Kampfblatt redigiert"
 			},
-			"org_0395": {
+			"organisation_0395": {
 				"name": "Hotel Splendide (Lugano)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0396": {
+			"organisation_0396": {
 				"name": "Hotel Dolder Grand (Zürich)",
 				"nameVariants": [],
 				"gndNumber": "7661064-0",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0397": {
+			"organisation_0397": {
 				"name": "Lufthansa",
 				"nameVariants": ["Deutsche Lufthansa (Berlin)"],
 				"gndNumber": "17976-0",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0398": {
+			"organisation_0398": {
 				"name": "Frankfurter Zeitung",
 				"nameVariants": [],
 				"gndNumber": "4129625-4",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0399": {
+			"organisation_0399": {
 				"name": "Museum Rietberg",
 				"nameVariants": [],
 				"gndNumber": "2019229-0",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0400": {
+			"organisation_0400": {
 				"name": "Staatsarchiv des Kantons Graubünden",
 				"nameVariants": [],
 				"gndNumber": "17983-8",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0401": {
+			"organisation_0401": {
 				"name": "Museum für Völkerkunde München",
 				"nameVariants": [],
 				"gndNumber": "1115679333",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0402": {
+			"organisation_0402": {
 				"name": "Museum Fünf Kontinente",
 				"nameVariants": [],
 				"gndNumber": "1058613936",
 				"type": "Öffentliche Einrichtung",
 				"note": ""
 			},
-			"org_0403": {
+			"organisation_0403": {
 				"name": "Gebrüder Volkart AG",
 				"nameVariants": [],
 				"gndNumber": "1036478416",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0404": {
+			"organisation_0404": {
 				"name": "American Export Lines",
 				"nameVariants": [],
 				"gndNumber": "1166185826",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0405": {
+			"organisation_0405": {
 				"name": "S. S. Exochorda",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0406": {
+			"organisation_0406": {
 				"name": "DU",
 				"nameVariants": [],
 				"gndNumber": "4467812-5",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0407": {
+			"organisation_0407": {
 				"name": "Sportinformation Si AG (Nachrichtenagentur)",
 				"nameVariants": [],
 				"gndNumber": "1087202434",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0408": {
+			"organisation_0408": {
 				"name": "Betsy Ann (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0409": {
+			"organisation_0409": {
 				"name": "Greene Line",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0410": {
+			"organisation_0410": {
 				"name": "Christ Greene (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0411": {
+			"organisation_0411": {
 				"name": "Ganz & Co. (Fotohaus Zürich",
 				"nameVariants": [],
 				"gndNumber": "1214198295",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0412": {
+			"organisation_0412": {
 				"name": "Alliierte",
 				"nameVariants": [],
 				"gndNumber": "4001297-9",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0413": {
+			"organisation_0413": {
 				"name": "Vesper Country Club",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0414": {
+			"organisation_0414": {
 				"name": "USA. Federal Bureau of Investigation",
 				"nameVariants": ["FBI"],
 				"gndNumber": "35632-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0415": {
+			"organisation_0415": {
 				"name": "New Yorker Gesellschaft der Tierfreunde",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Öffentliche Einrichtung",
 				"note": "kein GND-Eintrag"
 			},
-			"org_0416": {
+			"organisation_0416": {
 				"name": "Schweizer Konsulat (New York)",
 				"nameVariants": [],
 				"gndNumber": "1086221052",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0417": {
+			"organisation_0417": {
 				"name": "Kommunistische Partei (Schweiz)",
 				"nameVariants": [],
 				"gndNumber": "5073865-3",
 				"type": "Politische org",
 				"note": ""
 			},
-			"org_0418": {
+			"organisation_0418": {
 				"name": "Kellnerclub (Transvestitenbar in Berlin)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Bar/Klub/Lokal",
 				"note": ""
 			},
-			"org_0419": {
+			"organisation_0419": {
 				"name": "Houghton Mifflin",
 				"nameVariants": [],
 				"gndNumber": "5514375-1",
 				"type": "Verlag",
 				"note": ""
 			},
-			"org_0420": {
+			"organisation_0420": {
 				"name": "Woolworth",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Wirtschaftliche org",
 				"note": "kein GND-Eintrag (Einträge erst ab 1988; unklar, ob Nachfolgeorg)"
 			},
-			"org_0421": {
+			"organisation_0421": {
 				"name": "Schweizer illustrierte Radio-Zeitung",
 				"nameVariants": [],
 				"gndNumber": "1389422747",
 				"type": "Periodikum",
 				"note": ""
 			},
-			"org_0422": {
+			"organisation_0422": {
 				"name": "Spital Samedan",
 				"nameVariants": ["Kreis-Spital Samedan"],
 				"gndNumber": "1164704095",
 				"type": "Klinik",
 				"note": ""
 			},
-			"org_0423": {
+			"organisation_0423": {
 				"name": "Radio Zürich",
 				"nameVariants": ["Radio-Genossenschaft in Zürich"],
 				"gndNumber": "1085958124",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0424": {
+			"organisation_0424": {
 				"name": "Ullstein Verlag (Berlin)",
 				"nameVariants": [],
 				"gndNumber": "5180171-1",
 				"type": "Wirtschaftliche org",
 				"note": ""
 			},
-			"org_0425": {
+			"organisation_0425": {
 				"name": "Loyola Jesuitenkolleg",
 				"nameVariants": [],
 				"gndNumber": "4341416-3",
 				"type": "Religiöse org",
 				"note": ""
 			},
-			"org_0426": {
+			"organisation_0426": {
 				"name": "Hotel Provence (Le Lavandou)",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": ""
 			},
-			"org_0427": {
+			"organisation_0427": {
 				"name": "Academia",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0428": {
+			"organisation_0428": {
 				"name": "Hotel Ritz Tower (New York)",
 				"nameVariants": ["Ritztower-Hotel"],
 				"gndNumber": "",
 				"type": "Hotel",
 				"note": "kein GND-Eintrag; https://de.wikipedia.org/wiki/Ritz_Tower"
 			},
-			"org_0429": {
+			"organisation_0429": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0430": {
+			"organisation_0430": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0431": {
+			"organisation_0431": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0432": {
+			"organisation_0432": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0433": {
+			"organisation_0433": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0434": {
+			"organisation_0434": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0435": {
+			"organisation_0435": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0436": {
+			"organisation_0436": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0437": {
+			"organisation_0437": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0438": {
+			"organisation_0438": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0439": {
+			"organisation_0439": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
 				"type": "",
 				"note": ""
 			},
-			"org_0440": {
+			"organisation_0440": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
