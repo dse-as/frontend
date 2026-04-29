@@ -16,11 +16,9 @@
 
 	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
-	let setupComplete = $state(false);
-
 	// ---------------------------------------------
 	// Thumbnails
-	type TItem = {
+	type TThumb = {
 		id: number;
 		el: HTMLElement;
 		facs: string;
@@ -29,18 +27,17 @@
 		top: number;
 	};
 
-	let items = $state([] as TItem[]);
+	let thumbs = $state([] as TThumb[]);
 
-	$inspect(items);
+	$inspect(thumbs);
 	let resizeObserver: ResizeObserver;
 	let mutationObserver: MutationObserver;
 
 	function collectPagebreaks(el: HTMLElement) {
 		const nodes = el.querySelectorAll('tei-pb');
-		console.log('NODES', nodes);
 
 		if (nodes.length) {
-			const newItems = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
+			const newThumbs = Array.from(nodes as NodeListOf<HTMLElement>).map((el, i) => ({
 				id: i,
 				el: el,
 				facs: el.getAttribute('facs')?.replace('/info.json', '') || '',
@@ -49,24 +46,24 @@
 				top: 0
 			}));
 
-			// 🔑 prevent unnecessary state updates (breaks feedback loop)
+			// prevent unnecessary state updates (breaks feedback loop)
 			const same =
-				newItems.length === items.length && newItems.every((n, i) => n.el === items[i]?.el);
+				newThumbs.length === thumbs.length && newThumbs.every((n, i) => n.el === thumbs[i]?.el);
 
 			if (!same) {
-				items = newItems;
+				thumbs = newThumbs;
 				updatePagebreakPositions();
 			}
 		}
 	}
 
 	function updatePagebreakPositions() {
-		items = items.map((item) => {
-			const rect = item.el.getBoundingClientRect();
+		thumbs = thumbs.map((thumb) => {
+			const rect = thumb.el.getBoundingClientRect();
 			const containerRect = containerMaintext.getBoundingClientRect();
 
 			return {
-				...item,
+				...thumb,
 				top: rect.top - containerRect.top + containerMaintext.scrollTop
 			};
 		});
@@ -109,7 +106,6 @@
 			mutationObserver.observe(el, {
 				childList: true,
 				subtree: true
-				// ❌ removed characterData to reduce noise
 			});
 
 			// fallback for viewport changes
@@ -120,7 +116,7 @@
 				document.fonts.addEventListener('loadingdone', updatePagebreakPositions);
 			}
 
-			// ✅ cleanup (prevents stacking + hidden loops)
+			// cleanup
 			return () => {
 				resizeObserver?.disconnect();
 				mutationObserver?.disconnect();
@@ -167,16 +163,16 @@
 >
 	<!-- THUMBS COLUMN -->
 	<aside class="h-full">
-		{#each items as item, i (item.id)}
+		{#each thumbs as thumb, i (thumb.id)}
 			<!-- spacer -->
-			<div style={`height: ${i === 0 ? '5' : item.top - items[i - 1].top}px`} />
+			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`} />
 
 			<button
 				class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
-				onclick={() => openDFpage(item.page)}
+				onclick={() => openDFpage(thumb.page)}
 			>
-				<IIIF_Thumb url={item.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
-				<span class="italic">Seite {item.page}</span>
+				<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
+				<span class="italic">Seite {thumb.page}</span>
 			</button>
 		{/each}
 	</aside>
