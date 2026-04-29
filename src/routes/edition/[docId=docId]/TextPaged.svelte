@@ -13,21 +13,9 @@
 </script>
 
 <div
-	data-dom="containerMaintext"
-	data-textflow="paged"
+	data-textflow="diplomatic"
 	class="relative mx-auto w-200 overflow-y-auto pl-5"
 	{@attach setupCustomElements}
 >
 	{@html serializedWithoutNotes}
 </div>
-
-<style lang="postcss">
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-
-	:global([data-textflow='paged']) {
-		:global(p) {
-			@apply my-4;
-		}
-	}
-</style>

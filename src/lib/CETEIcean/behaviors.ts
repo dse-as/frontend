@@ -7,6 +7,28 @@ export const behaviors = (dom) => {
 			// 		data-page="1"
 			// 		data-n="10"
 			// />`,""],
+			lb: function (el: HTMLElement) {
+				if (el.getAttribute('break') === 'no') {
+					// Remove the trailing whitespace of the previous text node
+					let prev = el.previousSibling;
+
+					if (prev && prev.nodeType === 3) {
+						// Node.TEXT_NODE is equivalent to 3
+						const whitespace = prev.nodeValue.replace(/\s+$/, '');
+						prev.nodeValue = whitespace; // Set the previous text node to the trimmed value
+
+						// Create the span element
+						const hyphenSpan = dom.createElement('span');
+						hyphenSpan.setAttribute('data-type', 'hyphen');
+						hyphenSpan.textContent = '-'; // Set the hyphen content
+
+						// Insert the span after the previous node
+						prev.parentNode.insertBefore(hyphenSpan, el);
+					}
+					return dom.createTextNode(''); // Replace the current behavior with an empty text node
+				}
+			},
+
 			note: function (elt) {
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;

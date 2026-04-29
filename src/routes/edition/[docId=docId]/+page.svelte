@@ -80,27 +80,6 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	:global([data-fassung='DF']) {
-		:global(span[data-type='hyphen'])::after {
-			content: '-';
-		}
-	}
-
-	:global([data-fassung='LF']) {
-		:global(
-			br,
-			span[data-type='hyphen']
-			/* delete,
-			choice orig,
-			choice sic,
-			subst delete,
-			pagenum,
-			substMargin delete */
-		) {
-			@apply hidden;
-		}
-	}
-
 	:global(.note) {
 		:global(span[data-type='quote']::before) {
 			content: '«';

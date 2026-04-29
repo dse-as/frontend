@@ -38,8 +38,15 @@ tei-head {
 /* -------------------------------- */
 /* Linebreaks and Hyphens */
 
-tei-lb {
-	@apply hidden;
+[data-textflow='fluid'] {
+	tei-lb {
+		display: none;
+	}
+	span[data-type='hyphen'] {
+		display: none;
+	}
+}
+[data-textflow='diplomatic'] {
 }
 
 /* -------------------------------- */

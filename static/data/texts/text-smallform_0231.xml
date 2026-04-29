@@ -1,469 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://cdn.jsdelivr.net/gh/dse-as/oxygen-framework@latest/schema/tei_dseas.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://cdn.jsdelivr.net/gh/dse-as/oxygen-framework@latest/schema/dseas.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="smallform_0231" type="dseas-smallform" xml:base="https://annemarie-schwarzenbach.ch/smallform_0231#">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="smallform_0231" type="dseas-smallform" xml:base="https://annemarie-schwarzenbach.ch/smallform_0231#"> 
+   <teiHeader> 
+      <fileDesc> 
+         <titleStmt> 
             <title>Baltisches Tagebuch IV. Kleine Begegnungen in Danzig</title>
-         </titleStmt>
-         <publicationStmt>
+          </titleStmt>
+          <publicationStmt> 
             <p/>
-         </publicationStmt>
-         <notesStmt>
+          </publicationStmt>
+          <notesStmt> 
             <note type="global_comment">
-               <p>Enstehungskontext: Schwarzenbach reiste im Frühling 1937 über das <rs type="place" key="place_0093" xml:id="r39">Baltikum</rs>,                  <rs type="place" key="place_0017" xml:id="r40">Danzig</rs> und Ostpreussen nach <rs type="place" key="place_0052" xml:id="r41">Moskau</rs> (                  <rs type="travel" key="travel_00015" xml:id="r42">Moskaureise 1937</rs>), von wo sie die Hinterlassenschaft des
-                  Schweizer Bergsteigers <rs type="person" key="person_0073" xml:id="r46">Lorenz Saladins</rs> über <rs type="place" key="place_0101" xml:id="r43">Finnland</rs> und <rs type="place" key="place_0096" xml:id="r44">Schweden</rs> in die <rs type="place" key="place_0110" xml:id="r45">Schweiz</rs> brachte, insbesondere die Fotografien seiner letzten, tödlich geendeten Expedition.
+               <p>Enstehungskontext: Schwarzenbach reiste im Frühling 1937 über das <rs type="place" key="place_0093" xml:id="r39">Baltikum</rs>, <rs
+                     type="place" key="place_0017" xml:id="r40">Danzig</rs> und Ostpreussen nach <rs type="place" key="place_0052" xml:id="r41"
+                     >Moskau</rs> (<rs type="travel" key="travel_00015" xml:id="r42">Moskaureise 1937</rs>), von wo sie die Hinterlassenschaft des
+                  Schweizer Bergsteigers <rs type="person" key="person_0073" xml:id="r46">Lorenz Saladins</rs> über <rs type="place" key="place_0101"
+                     xml:id="r43">Finnland</rs> und <rs type="place" key="place_0096" xml:id="r44">Schweden</rs> in die <rs type="place"
+                     key="place_0110" xml:id="r45">Schweiz</rs> brachte, insbesondere die Fotografien seiner letzten, tödlich geendeten Expedition.
                   Von ihrem hier geschilderten Besuch in <rs type="place" key="place_0017" xml:id="r47">Danzig</rs> Anfang Mai machte Schwarzenbach
                   viele Fotografien (siehe Stellenkommentare). Zudem berichtete sie <rs type="person" key="person_0053" xml:id="r67">Klaus Mann</rs>
-                  in einem – wohl auch aufgrund der anzunehmenden Brief-Zensur – hochironischen Ton über ihren Aufenthalt, vgl. <rs type="letter" key="letter_0250" xml:id="r48">Brief an Klaus Mann vom 05.05.1937</rs>. Das dortige 'Lob' des <rs type="org" key="organisation_0002" xml:id="r50">Nationalsozialisten</rs> findet sich auch im vorliegenden Text; die Leserschaft dürfte es
-                  angesichts der bekannten antifaschistischen Haltung der Autorin als Kritik verstanden haben. Ob auch der Text direkt aus <rs type="place" key="place_0017" xml:id="r51">Danzig</rs> an die Redaktion geschickt wurde, d.h. wie der genannte Brief der Zensur
-                  entgehen musste, ist nicht bekannt, liegt aber aufgrund der fünf Monate zwischen dem <rs type="place" key="place_0017" xml:id="r49">Danzig</rs>-Aufenthalt und der Publikation nicht nahe.</p>
+                  in einem – wohl auch aufgrund der anzunehmenden Brief-Zensur – hochironischen Ton über ihren Aufenthalt, vgl. <rs type="letter"
+                     key="letter_0250" xml:id="r48">Brief an Klaus Mann vom 05.05.1937</rs>. Das dortige 'Lob' des <rs type="org"
+                     key="organisation_0002" xml:id="r50">Nationalsozialisten</rs> findet sich auch im vorliegenden Text; die Leserschaft dürfte es
+                  angesichts der bekannten antifaschistischen Haltung der Autorin als Kritik verstanden haben. Ob auch der Text direkt aus <rs
+                     type="place" key="place_0017" xml:id="r51">Danzig</rs> an die Redaktion geschickt wurde, d.h. wie der genannte Brief der Zensur
+                  entgehen musste, ist nicht bekannt, liegt aber aufgrund der fünf Monate zwischen dem <rs type="place" key="place_0017" xml:id="r49"
+                     >Danzig</rs>-Aufenthalt und der Publikation nicht nahe.</p> 
                <p>Publikationskontext: Die fünfteiligen Serie "Baltisches Tagebuch" im <rs type="org" key="organisation_0007" xml:id="r52">Luzerner
-                     Tagblatt</rs> korrespondiert mit der gleichnamigen, in der <rs type="org" key="organisation_0001" xml:id="r53">National-Zeitung</rs> erschienenen dreiteiligen Serie (die jeweiligen Artikel zu <rs type="place" key="place_0101" xml:id="r59">Finnland</rs> sind sogar weitgehend identisch, vgl. in der <rs type="org" key="organisation_0001" xml:id="r55">National-Zeitung</rs>:                  <rs type="smallform" key="smallform_0225" xml:id="r54">Baltisches Tagebuch: Suomi - Land zwischen Ost und
-                     West</rs> , im <rs type="org" key="organisation_0007" xml:id="r56">Luzerner Tagblatt</rs>:                  <rs type="smallform" key="smallform_0232" xml:id="r57">Baltisches Tagebuch V: Suomi - Land zwischen Ost und West</rs>). Beide Feuilleton-Serien haben
+                     Tagblatt</rs> korrespondiert mit der gleichnamigen, in der <rs type="org" key="organisation_0001" xml:id="r53"
+                     >National-Zeitung</rs> erschienenen dreiteiligen Serie (die jeweiligen Artikel zu <rs type="place" key="place_0101" xml:id="r59"
+                     >Finnland</rs> sind sogar weitgehend identisch, vgl. in der <rs type="org" key="organisation_0001" xml:id="r55"
+                     >National-Zeitung</rs>: <rs type="smallform" key="smallform_0225" xml:id="r54">Baltisches Tagebuch: Suomi - Land zwischen Ost und
+                     West</rs> , im <rs type="org" key="organisation_0007" xml:id="r56">Luzerner Tagblatt</rs>: <rs type="smallform"
+                     key="smallform_0232" xml:id="r57">Baltisches Tagebuch V: Suomi - Land zwischen Ost und West</rs>). Beide Feuilleton-Serien haben
                   Vorstufen im längeren Typoskript <rs type="smallform" key="smallform_0215" xml:id="r58">Baltisches Tagebuch</rs> und weiterer
                   Typoskripte. </p>
-               <p>Der vorliegende Text steht in direktem thematischen Zusammenahng mit <rs type="smallform" key="smallform_0223" xml:id="r60">Baltisches Tagebuch. Jenseits des Korridors</rs> in der <rs type="org" key="organisation_0001" xml:id="r61">National-Zeitung,</rs> kreisen doch beide um das Verhältnis der Bevölkerung ehemalig preussischer Gebiete zum <rs type="org" key="organisation_0002" xml:id="r62">Nationalsozialismus</rs>. Während in letzterem die ländliche Bevölkerung im Vordergrund
+               <p>Der vorliegende Text steht in direktem thematischen Zusammenhang mit <rs type="smallform" key="smallform_0223" xml:id="r60"
+                     >Baltisches Tagebuch. Jenseits des Korridors</rs> in der <rs type="org" key="organisation_0001" xml:id="r61"
+                     >National-Zeitung,</rs> kreisen doch beide um das Verhältnis der Bevölkerung ehemalig preussischer Gebiete zum <rs type="org"
+                     key="organisation_0002" xml:id="r62">Nationalsozialismus</rs>. Während in letzterem die ländliche Bevölkerung im Vordergrund
                   steht, portraitiert ersteres die städtische Bevölkerung.</p>
                <p>Historischer Kontext: Die <rs type="place" key="place_0017" xml:id="r63">Freie Stadt Danzig</rs> gehörte zwar 1937 noch nicht
                   offiziell dem <rs type="place" key="place_0107" xml:id="r64">Dritten Reich</rs> an, wurde jedoch seit den Danziger Wahlen 1933
                   nationalsozialistisch regiert. Mit dem Anschluss an <rs type="place" key="place_0107" xml:id="r65">Deutschland</rs> und dessen
                   Angriff auf die polnisch verwaltete <rs type="place" key="place_0858" xml:id="r68">Westerplatte</rs> im Danziger Hafen 1939 begann
                   hier der deutsche Angriff auf <rs type="place" key="place_0108" xml:id="r66">Polen</rs> und damit der 2. Weltkrieg.</p>
-            </note>
-         </notesStmt>
-         <sourceDesc>
-            <bibl corresp="smallform_0231">
+             </note>
+          </notesStmt>
+          <sourceDesc> 
+            <bibl corresp="smallform_0231"> 
                <persName key="person_0082" type="author">Schwarzenbach, Annemarie (1908-1942)</persName>
-               <bibl type="Feuilleton">
+                <bibl type="Feuilleton">
                   <title key="organisation_0007" level="j">Luzerner Tagblatt</title>
                   <date when="1937-09-04"/>
                   <biblScope>Nr. 208, S. 9–10</biblScope>
                </bibl>
-            </bibl>
-            <listBibl type="related">
-               <listBibl type="online">
+             </bibl>
+             <listBibl type="related"> 
+               <listBibl type="online"> 
                   <bibl/>
-               </listBibl>
-            </listBibl>
-         </sourceDesc>
-      </fileDesc>
-      <profileDesc>
-         <langUsage>
+                </listBibl>
+             </listBibl>
+          </sourceDesc>
+       </fileDesc>
+       <profileDesc> 
+         <langUsage> 
             <language ident="de"/>
-         </langUsage>
-         <textClass>
-            <keywords ana="keywords">
-               <list>
+          </langUsage>
+          <textClass> 
+            <keywords ana="keywords"> 
+               <list> 
                   <item sameAs="4076374-2"/>
                   <item sameAs="4016494-9"/>
                   <item sameAs="4149920-7"/>
                   <item sameAs="4049275-8"/>
                   <item sameAs="4060491-3"/>
                   <item sameAs="4002333-3"/>
-               </list>
-            </keywords>
-            <keywords ana="travels">
-               <list>
+                </list>
+             </keywords>
+             <keywords ana="travels"> 
+               <list> 
                   <item sameAs="travel_00015"/>
-               </list>
-            </keywords>
-         </textClass>
-      </profileDesc>
-   </teiHeader>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smallform_0231_facs.xml">
+                </list>
+             </keywords>
+          </textClass>
+       </profileDesc>
+    </teiHeader>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smallform_0231_facs.xml"> 
       <xi:fallback/>
-      <!--Inclusion path will be adjusted later.-->
-   </xi:include>
-   <text>
-      <body>
+       <!--Inclusion path will be adjusted later.-->
+    </xi:include>
+    <text> 
+      <body> 
          <div type="smallform">
             <pb xml:id="p001" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json" n="9"/>
-            <milestone unit="textregion" xml:id="p001_r_2"></milestone>
-            <head>
-               <lb xml:id="p001_r_2_tl_1"/>
-Baltisches Tagebuch.
-               <lb xml:id="p001_l"/>
-IV.
-               <lb xml:id="p001_r_2_tl_2"/>
-Kleine Begegnungen in <rs type="place" key="place_0017" xml:id="r2">Danzig</rs>.
-            </head>
+            <milestone unit="textregion" xml:id="p001_r_2"/>            <head>
+               <lb xml:id="p001_r_2_tl_1"/>Baltisches Tagebuch.
+               <lb xml:id="p001_l"/>IV.
+               <lb xml:id="p001_r_2_tl_2"/>Kleine Begegnungen in <rs type="place" key="place_0017" xml:id="r2">Danzig</rs>.</head>
             <p>
-               <lb xml:id="p001_r_2_tl_3"/>
-Ich wollte einen friedlichen Sonntag in der alten
-               <lb xml:id="p001_r_2_tl_4"/>
-               <rs type="place" key="place_0017" xml:id="r1">Hansastadt</rs> verbringen. Ich lehnte mich, am frühen
-               <lb xml:id="p001_r_2_tl_5"/>
-Morgen, aus dem Fenster meines kleinen Hotel
-               <lb xml:id="p001_r_2_tl_6" break="no"/>
-zimmers und sah unter mir das nun schon gewohnte
-               <lb xml:id="p001_r_2_tl_7"/>
-Bild einer belebten Straße, geschmückt mit vielen
-               <lb xml:id="p001_r_2_tl_8"/>
-Hakenkreuzfahnen, die von den Balkonen roter Back
-               <lb xml:id="p001_r_2_tl_9" break="no"/>
-steinhäuser wehten, sah die dunklen Türme der Kir
-               <lb xml:id="p001_r_2_tl_10" break="no"/>
-chen, die alten Dächer über schmalbrüstigen Häuser
-               <lb xml:id="p001_r_2_tl_11" break="no"/>
-fronten, und den langsamen Fluß, der sich dann
-               <lb xml:id="p001_r_2_tl_12"/>
-draußen zur Hafenbucht weitet –, und ich hörte
-               <lb xml:id="p001_r_2_tl_13"/>
-den feiertaglichen Klang der Glocken, die in <rs type="place" key="place_0017" xml:id="r3">Danzig</rs>
-               <lb xml:id="p001_r_2_tl_14"/>
-zwei- und dreistimmige Fugen in schönem Metall
-               <lb xml:id="p001_r_2_tl_15" break="no"/>
-Klang zu spielen wissen. Der Abglanz einer durch
-               <lb xml:id="p001_r_2_tl_16"/>
-graue Wolken gebrochenen Frühlingssonne lag über
-               <lb xml:id="p001_r_2_tl_17"/>
-der Stadt und versilberte heiter den blauen Dunst
-               <lb xml:id="p001_r_2_tl_18"/>
-über den Wasserwegen.</p>
+               <lb xml:id="p001_r_2_tl_3"/>Ich wollte einen friedlichen Sonntag in der alten
+               <lb xml:id="p001_r_2_tl_4"/><rs type="place" key="place_0017" xml:id="r1">Hansastadt</rs> verbringen. Ich lehnte mich, am frühen
+               <lb xml:id="p001_r_2_tl_5"/>Morgen, aus dem Fenster meines kleinen Hotel
+               <lb xml:id="p001_r_2_tl_6" break="no"/>zimmers und sah unter mir das nun schon gewohnte
+               <lb xml:id="p001_r_2_tl_7"/>Bild einer belebten Straße, geschmückt mit vielen
+               <lb xml:id="p001_r_2_tl_8"/>Hakenkreuzfahnen, die von den Balkonen roter Back
+               <lb xml:id="p001_r_2_tl_9" break="no"/>steinhäuser wehten, sah die dunklen Türme der Kir
+               <lb xml:id="p001_r_2_tl_10" break="no"/>chen, die alten Dächer über schmalbrüstigen Häuser
+               <lb xml:id="p001_r_2_tl_11" break="no"/>fronten, und den langsamen Fluß, der sich dann
+               <lb xml:id="p001_r_2_tl_12"/>draußen zur Hafenbucht weitet –, und ich hörte
+               <lb xml:id="p001_r_2_tl_13"/>den feiertaglichen Klang der Glocken, die in <rs type="place" key="place_0017" xml:id="r3">Danzig</rs>
+               <lb xml:id="p001_r_2_tl_14"/>zwei- und dreistimmige Fugen in schönem Metall
+               <lb xml:id="p001_r_2_tl_15" break="no"/>Klang zu spielen wissen. Der Abglanz einer durch
+               <lb xml:id="p001_r_2_tl_16"/>graue Wolken gebrochenen Frühlingssonne lag über
+               <lb xml:id="p001_r_2_tl_17"/>der Stadt und versilberte heiter den blauen Dunst
+               <lb xml:id="p001_r_2_tl_18"/>über den Wasserwegen.</p>
             <p>
-               <lb xml:id="p001_r_2_tl_19"/>
-Ich will Ferien haben, beschloß ich,
-               <anchor xml:id="a1"/>
-"Ferien vom
-               <lb xml:id="p001_r_2_tl_20"/>
-Ich"
-               <note type="annotation" xml:id="n1" targetEnd="a1">Schwarzenbach spielt an auf den Roman <rs type="bibl" key="VKTJ5RJ7" xml:id="r23">Ferien vom Ich</rs> (1915) von <rs type="person" key="person_0618" xml:id="r24">Paul Keller</rs> bzw. seine erste <rs type="bibl" key="6FW9GPED" xml:id="r25">Verfilmung</rs> (1934); der Stoff handelt von einer fiktionalen Therapiemethode, in der
+               <lb xml:id="p001_r_2_tl_19"/>Ich will Ferien haben, beschloß ich,
+               <anchor xml:id="a1"/>"Ferien vom
+               <lb xml:id="p001_r_2_tl_20"/>Ich"
+               <note type="annotation" xml:id="n1" targetEnd="a1">Schwarzenbach spielt an auf den Roman <rs type="bibl" key="VKTJ5RJ7" xml:id="r23"
+                     >Ferien vom Ich</rs> (1915) von <rs type="person" key="person_0618" xml:id="r24">Paul Keller</rs> bzw. seine erste <rs
+                     type="bibl" key="6FW9GPED" xml:id="r25">Verfilmung</rs> (1934); der Stoff handelt von einer fiktionalen Therapiemethode, in der
                   Patient:innen für eine gewisse Zeit an einem ländlichen Rückzugsort die eigene Identität aufgegeben. Er nimmt moderne Formen
                   therapeutischer Auszeit-Formate vorweg. Im vorliegenden Text hat die Identitätsaufgabe einen politischen Hintersinn: Das berichtende
                   Ich enthält sich seiner 'politischen Identität' – an der Oberfläche zu Ferienzwecken, implizit als ironische Haltung, dass sein
                   eigentliches Ich die beschriebene Realität keineswegs unkritisch sieht. Im Folgenden entkommt es denn auch nicht der
                Politik.</note>–, einen ganzen Tag lang weder von Politik
-               <lb xml:id="p001_r_2_tl_21"/>
-sprechen noch an der Schreibmaschine sitzen, sondern
-               <lb xml:id="p001_r_2_tl_22"/>
-vor den Toren der Stadt, im Buchenwald von
-               <lb xml:id="p001_r_2_tl_23"/>
-               <rs type="place" key="place_0855" xml:id="r26">Oliva</rs> und an der Meeresküste von <rs type="place" key="place_0856" xml:id="r27">Zoppot</rs> einen
-               <lb xml:id="p001_l_1"/>
-Sonntags-Spaziergang machen. – Aber mit
-               <lb xml:id="p001_r_2_tl_26"/>
-wem? – Ich stelle mir vor, daß die Danziger Bür
-               <lb xml:id="p001_r_2_tl_27" break="no"/>
-gerinnen ebenso denken wie ich, daß sie ihren Kin
-               <lb xml:id="p001_r_2_tl_28" break="no"/>
-dern die Sonntagskleidchen anziehen, viele Butter
-               <lb xml:id="p001_r_2_tl_29" break="no"/>
-brote streichen, und einen schönen Ausflug mit ihnen
-               <lb xml:id="p001_r_2_tl_30"/>
-ans Grüne machen. Ich werde mir jemanden
-               <lb xml:id="p001_r_2_tl_32"/>
-suchen.</p>
+               <lb xml:id="p001_r_2_tl_21"/>sprechen noch an der Schreibmaschine sitzen, sondern
+               <lb xml:id="p001_r_2_tl_22"/>vor den Toren der Stadt, im Buchenwald von
+               <lb xml:id="p001_r_2_tl_23"/><rs type="place" key="place_0855" xml:id="r26">Oliva</rs> und an der Meeresküste von <rs type="place"
+                  key="place_0856" xml:id="r27">Zoppot</rs> einen
+               <lb xml:id="p001_l_1"/>Sonntags-Spaziergang machen. – Aber mit
+               <lb xml:id="p001_r_2_tl_26"/>wem? – Ich stelle mir vor, daß die Danziger Bür
+               <lb xml:id="p001_r_2_tl_27" break="no"/>gerinnen ebenso denken wie ich, daß sie ihren Kin
+               <lb xml:id="p001_r_2_tl_28" break="no"/>dern die Sonntagskleidchen anziehen, viele Butter
+               <lb xml:id="p001_r_2_tl_29" break="no"/>brote streichen, und einen schönen Ausflug mit ihnen
+               <lb xml:id="p001_r_2_tl_30"/>ans Grüne machen. Ich werde mir jemanden
+               <lb xml:id="p001_r_2_tl_32"/>suchen.</p>
             <p>
-               <lb xml:id="p001_r_2_tl_31"/>
-Ich zog mich also an, verließ das Hotel, und ging
-               <lb xml:id="p001_r_2_tl_33"/>
-zuerst einmal in das "Café zum Alten Tor". Man
-               <lb xml:id="p001_r_2_tl_34"/>
-muß in <rs type="place" key="place_0017" xml:id="r4">Danzig</rs> wissen, in welches Kaffeehaus man
-               <lb xml:id="p001_r_2_tl_35"/>
-geht. Da gibt es kleine Cafés in den engen Seiten <milestone unit="textregion" xml:id="p001_r_3"></milestone>
-               <lb xml:id="p001_r_3_tl_1" break="no"/>
-gassen, wo sich die <rs type="org" key="organisation_0199" xml:id="r5">S.A.</rs>-Männer und
-               <anchor xml:id="a2"/>
-Sturmbann
-               <lb xml:id="p001_r_3_tl_2" break="no"/>
-führer
+               <lb xml:id="p001_r_2_tl_31"/>Ich zog mich also an, verließ das Hotel, und ging
+               <lb xml:id="p001_r_2_tl_33"/>zuerst einmal in das "Café zum Alten Tor". Man
+               <lb xml:id="p001_r_2_tl_34"/>muß in <rs type="place" key="place_0017" xml:id="r4">Danzig</rs> wissen, in welches Kaffeehaus man
+               <lb xml:id="p001_r_2_tl_35"/>geht. Da gibt es kleine Cafés in den engen Seiten <milestone unit="textregion" xml:id="p001_r_3"/>
+               <lb xml:id="p001_r_3_tl_1" break="no"/>gassen, wo sich die <rs type="org" key="organisation_0199" xml:id="r5">S.A.</rs>-Männer und
+               <anchor xml:id="a2"/>Sturmbann
+               <lb xml:id="p001_r_3_tl_2" break="no"/>führer
                <note type="annotation" xml:id="n2" targetEnd="a2">Der Sturmbann war eine Organisationseinheit (in seiner Grösse einem Bataillon
-                  vergleichbar) von paramilitärischen Organsisationen des <rs type="org" key="organisation_0002" xml:id="r6">NSDAP</rs> wie der <rs type="org" key="organisation_0199" xml:id="r7">SA</rs> und <rs type="org" key="organisation_0252" xml:id="r8">SS</rs>.
-               </note>
+                  vergleichbar) von paramilitärischen Organsisationen des <rs type="org" key="organisation_0002" xml:id="r6">NSDAP</rs> wie der <rs
+                     type="org" key="organisation_0199" xml:id="r7">SA</rs> und <rs type="org" key="organisation_0252" xml:id="r8">SS</rs>.</note>
                treffen. Da <choice>
-               <sic>deht</sic>
-               <corr>geht</corr>
-            </choice> es natürlich rauh und männ
-            <lb xml:id="p001_r_3_tl_3" break="no"/>
-lich zu. In der Nähe des Bahnhofs sitzen, in einem
-            <lb xml:id="p001_r_3_tl_4"/>
-rauchigen alten Raum, die "Verdächtigen": jüdische
-            <lb xml:id="p001_r_3_tl_5"/>
-Kaufleute, die früher einmal den Handel der
-            <lb xml:id="p001_r_3_tl_6"/>
-städtischen Firmen mit den Bauern vermittelten,
-            <lb xml:id="p001_r_3_tl_7"/>
-oder angesehene Holzhändler waren, junge, blasse,
-            <lb xml:id="p001_r_3_tl_8"/>
-dunkelhaarige Studenten, die auf unerlaubten Um
-            <lb xml:id="p001_r_3_tl_9" break="no"/>
-wegen ausländische Zeitungen erhalten und ältere
-            <lb xml:id="p001_r_3_tl_10"/>
-Herren, die in der üblen "Systemzeit" städtische
-            <lb xml:id="p001_r_3_tl_11"/>
-Verwaltungsämter inne hatten. Aber da gerate ich
-            <lb xml:id="p001_r_3_tl_12"/>
-schon wieder in die "Politik". – Und dann gibt es,
-            <lb xml:id="p001_r_3_tl_13"/>
-am Marktplatz, das Café, wo die ehrbaren Danziger
-            <lb xml:id="p001_r_3_tl_14"/>
-Bürgersfrauen Kuchen essen und sich mit ihren
-            <lb xml:id="p001_r_3_tl_15"/>
-Freundinnen über die lieben Nachbarn unterhalten.
-            <lb xml:id="p001_r_3_tl_16"/>
-Dort also ging ich hin – es war inzwischen fast
-            <lb xml:id="p001_r_3_tl_17"/>
-halb 11 Uhr geworden – und saß gleich darauf
-            <lb xml:id="p001_r_3_tl_18"/>
-neben einer einsamen Dame, die höflich zur Seite
-            <lb xml:id="p001_r_3_tl_19"/>
-rückte, um mir auf der steifen, schmalen Polsterbank
-            <lb xml:id="p001_r_3_tl_20"/>
-Platz zu machen. <quote>Ein schöner Tag heute</quote>, sagte
-            <lb xml:id="p001_r_3_tl_21"/>
-ich – und sie antwortete zu meiner Ueberraschung:
-            <lb xml:id="p001_l_2"/>
-            <quote>Sie sind wohl nicht von hier?</quote> –            <quote>Nein</quote> –
-            <lb xml:id="p001_r_3_tl_24"/>
-            <quote>... aber auch keine Jüdin?</quote> – Als ich sie darüber
-            <lb xml:id="p001_r_3_tl_25"/>
-beruhigen konnte, daß nicht alle Ausländer Juden
-            <lb xml:id="p001_r_3_tl_26"/>
-seien, gerieten wir in ein gemütliches Gespräch.
-            <lb xml:id="p001_r_3_tl_27"/>
-Ob sie keinen Ausflug machen wolle, an einem so
-            <lb xml:id="p001_r_3_tl_28"/>
-schönen Tag? Mit den Kindern? Sie habe doch
-            <lb xml:id="p001_r_3_tl_29"/>
-sicher Kinder? –
-            <anchor xml:id="a7"/>
-Sie hieß Frau <rs type="person" key="person_0619" xml:id="r28">Amalie Boedeke</rs>,
-            <lb xml:id="p001_r_3_tl_30"/>
-war mit einem Kaufmann Branche Heringshandel
-            <lb xml:id="p001_r_3_tl_31"/>
-verheiratet und hatte drei Kinder.
-            <note type="annotation" xml:id="n7" targetEnd="a7">Es könnte sich dabei um dieselbe Person handeln, die Schwarzenbach in ihrem <rs type="letter" key="letter_0250" xml:id="r69">Brief an Klaus Mann vom 5. Mai 1937</rs> als eine <quote>ebenso schüchterne[] aber
+                  <sic>deht</sic>
+                  <corr>geht</corr>
+               </choice> es natürlich rauh und männ
+               <lb xml:id="p001_r_3_tl_3" break="no"/>lich zu. In der Nähe des Bahnhofs sitzen, in einem
+               <lb xml:id="p001_r_3_tl_4"/>rauchigen alten Raum, die "Verdächtigen": jüdische
+               <lb xml:id="p001_r_3_tl_5"/>Kaufleute, die früher einmal den Handel der
+               <lb xml:id="p001_r_3_tl_6"/>städtischen Firmen mit den Bauern vermittelten,
+               <lb xml:id="p001_r_3_tl_7"/>oder angesehene Holzhändler waren, junge, blasse,
+               <lb xml:id="p001_r_3_tl_8"/>dunkelhaarige Studenten, die auf unerlaubten Um
+               <lb xml:id="p001_r_3_tl_9" break="no"/>wegen ausländische Zeitungen erhalten und ältere
+               <lb xml:id="p001_r_3_tl_10"/>Herren, die in der üblen "Systemzeit" städtische
+               <lb xml:id="p001_r_3_tl_11"/>Verwaltungsämter inne hatten. Aber da gerate ich
+               <lb xml:id="p001_r_3_tl_12"/>schon wieder in die "Politik". – Und dann gibt es,
+               <lb xml:id="p001_r_3_tl_13"/>am Marktplatz, das Café, wo die ehrbaren Danziger
+               <lb xml:id="p001_r_3_tl_14"/>Bürgersfrauen Kuchen essen und sich mit ihren
+               <lb xml:id="p001_r_3_tl_15"/>Freundinnen über die lieben Nachbarn unterhalten.
+               <lb xml:id="p001_r_3_tl_16"/>Dort also ging ich hin – es war inzwischen fast
+               <lb xml:id="p001_r_3_tl_17"/>halb 11 Uhr geworden – und saß gleich darauf
+               <lb xml:id="p001_r_3_tl_18"/>neben einer einsamen Dame, die höflich zur Seite
+               <lb xml:id="p001_r_3_tl_19"/>rückte, um mir auf der steifen, schmalen Polsterbank
+               <lb xml:id="p001_r_3_tl_20"/>Platz zu machen. <quote>Ein schöner Tag heute</quote>, sagte
+               <lb xml:id="p001_r_3_tl_21"/>ich – und sie antwortete zu meiner Ueberraschung:
+               <lb xml:id="p001_l_2"/><quote>Sie sind wohl nicht von hier?</quote> – <quote>Nein</quote> –
+               <lb xml:id="p001_r_3_tl_24"/><quote>... aber auch keine Jüdin?</quote> – Als ich sie darüber
+               <lb xml:id="p001_r_3_tl_25"/>beruhigen konnte, daß nicht alle Ausländer Juden
+               <lb xml:id="p001_r_3_tl_26"/>seien, gerieten wir in ein gemütliches Gespräch.
+               <lb xml:id="p001_r_3_tl_27"/>Ob sie keinen Ausflug machen wolle, an einem so
+               <lb xml:id="p001_r_3_tl_28"/>schönen Tag? Mit den Kindern? Sie habe doch
+               <lb xml:id="p001_r_3_tl_29"/>sicher Kinder? –
+               <anchor xml:id="a7"/>Sie hieß Frau <rs type="person" key="person_0619" xml:id="r28">Amalie Boedeke</rs>,
+               <lb xml:id="p001_r_3_tl_30"/>war mit einem Kaufmann Branche Heringshandel
+               <lb xml:id="p001_r_3_tl_31"/>verheiratet und hatte drei Kinder.
+               <note type="annotation" xml:id="n7" targetEnd="a7">Es könnte sich dabei um dieselbe Person handeln, die Schwarzenbach in ihrem <rs
+                     type="letter" key="letter_0250" xml:id="r69">Brief an Klaus Mann vom 5. Mai 1937</rs> als eine <quote>ebenso schüchterne[] aber
                      sehr brave[]
-               <lb xml:id="p001_tr_1_tl_18"/>
-kleinen Dame aus eingesessenen Kreisen</quote> beschreibt. </note>Aber einen Aus
-         <lb xml:id="p001_r_3_tl_32" break="no"/>
-flug machte sie nicht. Der Mann war Unterführer
-         <lb xml:id="p001_r_3_tl_33"/>
-in der <rs type="org" key="organisation_0199" xml:id="r9">S. A.</rs> und hatte, natürlich,
+                     <lb xml:id="p001_tr_1_tl_18"/>kleinen Dame aus eingesessenen Kreisen</quote> beschreibt. </note>Aber einen Aus
+               <lb xml:id="p001_r_3_tl_32" break="no"/>flug machte sie nicht. Der Mann war Unterführer
+               <lb xml:id="p001_r_3_tl_33"/>in der <rs type="org" key="organisation_0199" xml:id="r9">S. A.</rs> und hatte, natürlich,
                Festtags-Dienst.
-         <lb xml:id="p001_r_3_tl_34"/>
-         <anchor xml:id="a3"/>
-Die Kinder hatten auch alle Dienst
-         <note type="annotation" xml:id="n3" targetEnd="a3">vgl. diverse Fotografien Schwarzenbachs von Kindern in Uniform auf den Strassen <rs type="place" key="place_0017" xml:id="r30">Danzigs</rs>, z.B. A-5-13/037.</note>.         <quote>Und wenn
-            <lb xml:id="p001_r_3_tl_35"/>
-man sie dann mal auf der Straße antrifft</quote> sagte
-         <lb xml:id="p001_r_3_tl_36"/>
-Frau <rs type="person" key="person_0619" xml:id="r29">Boedeke</rs>,         <quote>dann kennt man sie gar nicht.
+               <lb xml:id="p001_r_3_tl_34"/>
+               <anchor xml:id="a3"/>Die Kinder hatten auch alle Dienst
+               <note type="annotation" xml:id="n3" targetEnd="a3">vgl. diverse Fotografien Schwarzenbachs von Kindern in Uniform auf den Strassen <rs
+                     type="place" key="place_0017" xml:id="r30">Danzigs</rs>, z.B. A-5-13/037.</note>. <quote>Und wenn
+                  <lb xml:id="p001_r_3_tl_35"/>man sie dann mal auf der Straße antrifft</quote> sagte
+               <lb xml:id="p001_r_3_tl_36"/>Frau <rs type="person" key="person_0619" xml:id="r29">Boedeke</rs>, <quote>dann kennt man sie gar nicht.
                   Sie
-            <lb xml:id="p001_r_3_tl_37"/>
-sehen ja alle ganz gleich aus, in ihren Hitler-Uni
-            <lb xml:id="p001_r_3_tl_38" break="no"/>
-formen. Nur der Horst, der Aelteste, der ist bei der
-            <lb xml:id="p001_r_3_tl_39"/>
-Marine-<rs type="org" key="organisation_0199" xml:id="r10">S.A.</rs> und tragt Matrosenanzug. Das ist
-            <milestone unit="textregion" xml:id="p001_r_4"/>
-            <lb xml:id="p001_r_4_tl_1"/>
-schmuck.</quote> – Horst ist siebzehn Jahre alt, und man
-         <lb xml:id="p001_r_4_tl_2"/>
-merkt, daß die Mutter stolz auf ihn ist. Nur weiß
-         <lb xml:id="p001_r_4_tl_3"/>
-sie gar nicht, was aus ihm werden soll. Er war so
-         <lb xml:id="p001_r_4_tl_4"/>
-tüchtig in der Schule – aber das nützt ja heutzutage
-         <lb xml:id="p001_r_4_tl_5"/>
-nichts mehr. Er hätte dann eine Lehrlingsstelle
-         <lb xml:id="p001_r_4_tl_6"/>
-im Heringshafen haben können. Aber zuerst mußte
-         <lb xml:id="p001_r_4_tl_7"/>
-er natürlich in irgendeine Truppe der <rs type="org" key="organisation_0002" xml:id="r11">Partei</rs> ein
-         <lb xml:id="p001_r_4_tl_8" break="no"/>
-treten, sonst kommen die Jungen zu nichts. Und
-         <lb xml:id="p001_r_4_tl_9"/>
-jetzt ist er bei der Marine-<rs type="org" key="organisation_0199" xml:id="r12">S.A.</rs>, das ist sehr
+                  <lb xml:id="p001_r_3_tl_37"/>sehen ja alle ganz gleich aus, in ihren Hitler-Uni
+                  <lb xml:id="p001_r_3_tl_38" break="no"/>formen. Nur der Horst, der Aelteste, der ist bei der
+                  <lb xml:id="p001_r_3_tl_39"/>Marine-<rs type="org" key="organisation_0199" xml:id="r10">S.A.</rs> und trägt Matrosenanzug. Das ist
+                     <milestone unit="textregion" xml:id="p001_r_4"/>
+                  <lb xml:id="p001_r_4_tl_1"/>schmuck.</quote> – Horst ist siebzehn Jahre alt, und man
+               <lb xml:id="p001_r_4_tl_2"/>merkt, daß die Mutter stolz auf ihn ist. Nur weiß
+               <lb xml:id="p001_r_4_tl_3"/>sie gar nicht, was aus ihm werden soll. Er war so
+               <lb xml:id="p001_r_4_tl_4"/>tüchtig in der Schule – aber das nützt ja heutzutage
+               <lb xml:id="p001_r_4_tl_5"/>nichts mehr. Er hätte dann eine Lehrlingsstelle
+               <lb xml:id="p001_r_4_tl_6"/>im Heringshafen haben können. Aber zuerst mußte
+               <lb xml:id="p001_r_4_tl_7"/>er natürlich in irgendeine Truppe der <rs type="org" key="organisation_0002" xml:id="r11">Partei</rs> ein
+               <lb xml:id="p001_r_4_tl_8" break="no"/>treten, sonst kommen die Jungen zu nichts. Und
+               <lb xml:id="p001_r_4_tl_9"/>jetzt ist er bei der Marine-<rs type="org" key="organisation_0199" xml:id="r12">S.A.</rs>, das ist sehr
                ehren
-         <lb xml:id="p001_r_4_tl_10" break="no"/>
-voll, aber die Stelle hat er ausgeschlagen – er
-         <lb xml:id="p001_r_4_tl_11"/>
-hat dafür keine Zeit übrig, wegen der vielen Uebun
-         <lb xml:id="p001_r_4_tl_12" break="no"/>
-gen. <quote>Nun frage ich Sie</quote>, sagt Frau Boedeke trübe,
-         <lb xml:id="p001_r_4_tl_13"/>
-         <quote>was soll aus dem Horst werden?</quote> –         <quote>Und Ihr
-            <lb xml:id="p001_r_4_tl_14"/>
-Töchterchen?</quote>, frage ich, – weil ich mich ja heute
-         <lb xml:id="p001_r_4_tl_15"/>
-nicht auf politische Gespräche einlassen will, und
-         <lb xml:id="p001_r_4_tl_16"/>
-Marine-<rs type="org" key="organisation_0199" xml:id="r13">S.A.</rs> zur politischen Erziehung gehört. –
-         <lb xml:id="p001_r_4_tl_17"/>
-Ja, die Anna, sie ist erst 12 Jahre alt, ein liebes,
-         <lb xml:id="p001_r_4_tl_18"/>
-stilles Kind. Früher sind wir Sonntags zusammen
-         <lb xml:id="p001_r_4_tl_19"/>
-an den Strand gegangen, in der alten Zeit. Aber
-         <lb xml:id="p001_r_4_tl_20"/>
-jetzt ist sie ein <rs type="org" key="organisation_0260" xml:id="r31">B.D.M.</rs>-Mädchen, und muß viel
+               <lb xml:id="p001_r_4_tl_10" break="no"/>voll, aber die Stelle hat er ausgeschlagen – er
+               <lb xml:id="p001_r_4_tl_11"/>hat dafür keine Zeit übrig, wegen der vielen Uebun
+               <lb xml:id="p001_r_4_tl_12" break="no"/>gen. <quote>Nun frage ich Sie</quote>, sagt Frau Boedeke trübe,
+               <lb xml:id="p001_r_4_tl_13"/><quote>was soll aus dem Horst werden?</quote> – <quote>Und Ihr
+                  <lb xml:id="p001_r_4_tl_14"/>Töchterchen?</quote>, frage ich, – weil ich mich ja heute
+               <lb xml:id="p001_r_4_tl_15"/>nicht auf politische Gespräche einlassen will, und
+               <lb xml:id="p001_r_4_tl_16"/>Marine-<rs type="org" key="organisation_0199" xml:id="r13">S.A.</rs> zur politischen Erziehung gehört. –
+               <lb xml:id="p001_r_4_tl_17"/>Ja, die Anna, sie ist erst 12 Jahre alt, ein liebes,
+               <lb xml:id="p001_r_4_tl_18"/>stilles Kind. Früher sind wir Sonntags zusammen
+               <lb xml:id="p001_r_4_tl_19"/>an den Strand gegangen, in der alten Zeit. Aber
+               <lb xml:id="p001_r_4_tl_20"/>jetzt ist sie ein <rs type="org" key="organisation_0260" xml:id="r31">B.D.M.</rs>-Mädchen, und muß viel
                üben
-         <lb xml:id="p001_r_4_tl_21"/>
-und auch marschieren und so etwas, damit sie eine
-         <lb xml:id="p001_r_4_tl_22"/>
-richtige "Deutsche Frau" wird. – <quote>Da haben Sie
-         <lb xml:id="p001_r_4_tl_23"/>
-es ein bißchen einsam, Frau Boedeke?</quote> Sie sieht
-      <lb xml:id="p001_r_4_tl_24"/>
-mich mißtrauisch an. <quote>Wir üben keine Kritik</quote> sagt
-      <lb xml:id="p001_r_4_tl_25"/>
-sie streng, – <quote>das duldet mein Mann nicht. Und
-      <lb xml:id="p001_r_4_tl_26"/>
-die Jugend gehört eben unserem <rs type="person" key="person_0160" xml:id="r14">Führer</rs>.
-   </quote> –
+               <lb xml:id="p001_r_4_tl_21"/>und auch marschieren und so etwas, damit sie eine
+               <lb xml:id="p001_r_4_tl_22"/>richtige "Deutsche Frau" wird. – <quote>Da haben Sie
+                  <lb xml:id="p001_r_4_tl_23"/>es ein bißchen einsam, Frau Boedeke?</quote> Sie sieht
+               <lb xml:id="p001_r_4_tl_24"/>mich mißtrauisch an. <quote>Wir üben keine Kritik</quote> sagt
+               <lb xml:id="p001_r_4_tl_25"/>sie streng, – <quote>das duldet mein Mann nicht. Und
+                  <lb xml:id="p001_r_4_tl_26"/>die Jugend gehört eben unserem <rs type="person" key="person_0160" xml:id="r14">Führer</rs>.</quote> –
                Sie
-   <lb xml:id="p001_r_4_tl_27"/>
-verzehrt, ein bißchen hastig, ihren Sahnekuchen, dann
-   <lb xml:id="p001_r_4_tl_28"/>
-fährt sie wieder im alten, leicht klagenden Ton
-   <lb xml:id="p001_r_4_tl_29"/>
-fort: <quote>Ich bin ja nun auch sehr beschäftigt. Mein
-   <lb xml:id="p001_r_4_tl_30"/>
-Mann sagt immer, es sei eine Schande, daß ich nicht
-   <lb xml:id="p001_r_4_tl_31"/>
-in der <rs type="org" key="organisation_0261" xml:id="r32">N.S.-Frauenschaft</rs> bin, wo wir Frauen po
-   <lb xml:id="p001_r_4_tl_32" break="no"/>
-litisch erzogen werden. Aber woher soll ich die Zeit
-   <lb xml:id="p001_r_4_tl_33"/>
-nehmen? – Früher hatten wir ein Mädchen, jetzt
-   <lb xml:id="p001_r_4_tl_34"/>
-seit der Guldenabwertung muß ich alles selber
-   <lb xml:id="p001_r_4_tl_35"/>
-machen.</quote> –
-<anchor xml:id="a4"/>
-Die Guldenabwertung erfolgte, nach
-<lb xml:id="p001_r_4_tl_36"/>
-einem großartigen Maifest der <rs type="org" key="organisation_0002" xml:id="r15">nationalsozialistischen
-<lb xml:id="p001_r_4_tl_37"/>
-Partei</rs>, am 2. Mai 1933. <quote>Die Juden und die Polen
-<lb xml:id="p001_r_4_tl_38"/>
-hatten das ausgemacht, um uns zu schaden</quote>, sagt <milestone unit="textregion" xml:id="p001_r_1"/>
-<lb xml:id="p001_r_1_tl_1"/>
-Frau <rs type="person" key="person_0619" xml:id="r33">Boedeke</rs> und richtet einen triumphierenden
-<lb xml:id="p001_r_1_tl_2"/>
-Blick auf mich
-<note type="annotation" xml:id="n4" targetEnd="a4">Schwarzenbach gibt hier die nationalsozialistische Propaganda bezüglich der
-                  Abwertung des Danziger Guldens korrekt wieder, die Zeitangabe liegt jedoch um zwei Jahre daneben (wobei hier auch Druckfehler
-                  möglich ist): Die Guldenabwertung fand erst am 1. Mai 1935 statt, vgl. <rs type="bibl" key="5JXX7VPC" xml:id="r34">Markert
-                  1935</rs>, S. 752.</note>.
-</p>
-<p>
-<lb xml:id="p001_r_1_tl_3"/>
-Es ist offenbar schwer, in <rs type="place" key="place_0017" xml:id="r16">Danzig</rs> "Ferien von der
-<lb xml:id="p001_r_1_tl_4"/>
-Politik" zu machen. Oder irre ich mich? Ist das
-<lb xml:id="p001_r_1_tl_5"/>
-alles längst nicht mehr "Politik", ist das das täg
-<lb xml:id="p001_r_1_tl_6" break="no"/>
-liche Leben, das tägliche Brot, der Alltag der Bür
-<lb xml:id="p001_r_1_tl_7" break="no"/>
-ger dieser einst stolzen und freien <rs type="place" key="place_0017" xml:id="r17">Hansestadt</rs>? Sind
-<lb xml:id="p001_r_1_tl_8"/>
-sie alle "politisch erzogen", die Siebzehnjährigen
-<lb xml:id="p001_r_1_tl_9"/>
-und die Schulmädchen und die Hausfrauen, die kein
-<lb xml:id="p001_r_1_tl_10"/>
-Winkelchen ihrer Seele davor bewahren können,
-<lb xml:id="p001_r_1_tl_11"/>
-nicht einmal für einen Spaziergang am Feiertag?</p>
-<p>
-<lb xml:id="p001_r_1_tl_12"/>
-Ich habe dann schließlich jemanden gefunden, der
-<lb xml:id="p001_r_1_tl_13"/>
-mit mir ins Grüne und aus dem Fahnenwald hin
-<lb xml:id="p001_r_1_tl_14" break="no"/>
-aus an den weiten, friedlichen Strand hinaus fuhr.
-<lb xml:id="p001_r_1_tl_15"/>
-Eine kleine Jüdin – ich traf sie im Café der
-<lb xml:id="p001_r_1_tl_16"/>
-"Verdächtigen", wo sie mit ihrem Bruder, einem
-<lb xml:id="p001_r_1_tl_17"/>
-vergrübelten Studenten, saß. Der Student hatte
-<lb xml:id="p001_r_1_tl_18"/>
-einmal hochfliegende Pläne, er wollte Musikkritiker
-<lb xml:id="p001_r_1_tl_19"/>
-werden, in <rs type="place" key="place_0010" xml:id="r18">Berlin</rs> oder <rs type="place" key="place_0059" xml:id="r19">Paris</rs> oder <rs type="place" key="place_0857" xml:id="r35">Dresden</rs>.
-<anchor xml:id="a6"/>
-Jetzt
-<lb xml:id="p001_r_1_tl_20"/>
-hatten sie zusammen eine kleine Musikalienhandlung.
-<lb xml:id="p001_r_1_tl_21"/>
-Die neue, zeitgemäße Musik, die Marschalbums und
-<lb xml:id="p001_r_1_tl_22"/>
-Lieder der <rs type="org" key="organisation_0198" xml:id="r20">Hitler-Jugend</rs> durften sie allerdings
+               <lb xml:id="p001_r_4_tl_27"/>verzehrt, ein bißchen hastig, ihren Sahnekuchen, dann
+               <lb xml:id="p001_r_4_tl_28"/>fährt sie wieder im alten, leicht klagenden Ton
+               <lb xml:id="p001_r_4_tl_29"/>fort: <quote>Ich bin ja nun auch sehr beschäftigt. Mein
+                  <lb xml:id="p001_r_4_tl_30"/>Mann sagt immer, es sei eine Schande, daß ich nicht
+                  <lb xml:id="p001_r_4_tl_31"/>in der <rs type="org" key="organisation_0261" xml:id="r32">N.S.-Frauenschaft</rs> bin, wo wir Frauen po
+                  <lb xml:id="p001_r_4_tl_32" break="no"/>litisch erzogen werden. Aber woher soll ich die Zeit
+                  <lb xml:id="p001_r_4_tl_33"/>nehmen? – Früher hatten wir ein Mädchen, jetzt
+                  <lb xml:id="p001_r_4_tl_34"/>seit der Guldenabwertung muß ich alles selber
+                  <lb xml:id="p001_r_4_tl_35"/>machen.</quote> –
+               <anchor xml:id="a4"/>Die Guldenabwertung erfolgte, nach
+               <lb xml:id="p001_r_4_tl_36"/>einem großartigen Maifest der <rs type="org" key="organisation_0002" xml:id="r15">nationalsozialistischen
+                  <lb xml:id="p001_r_4_tl_37"/>Partei</rs>, am 2. Mai 1933. <quote>Die Juden und die Polen
+                  <lb xml:id="p001_r_4_tl_38"/>hatten das ausgemacht, um uns zu schaden</quote>, sagt <milestone unit="textregion" xml:id="p001_r_1"/>
+               <lb xml:id="p001_r_1_tl_1"/>Frau <rs type="person" key="person_0619" xml:id="r33">Boedeke</rs> und richtet einen triumphierenden
+               <lb xml:id="p001_r_1_tl_2"/>Blick auf mich
+               <note type="annotation" xml:id="n4" targetEnd="a4">Schwarzenbach gibt hier die nationalsozialistische Propaganda bezüglich der
+                  Abwertung des Danziger Guldens korrekt wieder, die Zeitangabe weicht jedoch um zwei Jahre ab (ev. aufgrund eines Druckfehlers): Die
+                  Guldenabwertung fand erst am 1. Mai 1935 statt, vgl. <rs type="bibl" key="5JXX7VPC" xml:id="r34">Markert 1935</rs>, S.
+               752.</note>.</p>
+            <p>
+               <lb xml:id="p001_r_1_tl_3"/>Es ist offenbar schwer, in <rs type="place" key="place_0017" xml:id="r16">Danzig</rs> "Ferien von der
+               <lb xml:id="p001_r_1_tl_4"/>Politik" zu machen. Oder irre ich mich? Ist das
+               <lb xml:id="p001_r_1_tl_5"/>alles längst nicht mehr "Politik", ist das das täg
+               <lb xml:id="p001_r_1_tl_6" break="no"/>liche Leben, das tägliche Brot, der Alltag der Bür
+               <lb xml:id="p001_r_1_tl_7" break="no"/>ger dieser einst stolzen und freien <rs type="place" key="place_0017" xml:id="r17"
+                  >Hansestadt</rs>? Sind
+               <lb xml:id="p001_r_1_tl_8"/>sie alle "politisch erzogen", die Siebzehnjährigen
+               <lb xml:id="p001_r_1_tl_9"/>und die Schulmädchen und die Hausfrauen, die kein
+               <lb xml:id="p001_r_1_tl_10"/>Winkelchen ihrer Seele davor bewahren können,
+               <lb xml:id="p001_r_1_tl_11"/>nicht einmal für einen Spaziergang am Feiertag?</p>
+            <p>
+               <lb xml:id="p001_r_1_tl_12"/>Ich habe dann schließlich jemanden gefunden, der
+               <lb xml:id="p001_r_1_tl_13"/>mit mir ins Grüne und aus dem Fahnenwald hin
+               <lb xml:id="p001_r_1_tl_14" break="no"/>aus an den weiten, friedlichen Strand hinaus fuhr.
+               <lb xml:id="p001_r_1_tl_15"/>Eine kleine Jüdin – ich traf sie im Café der
+               <lb xml:id="p001_r_1_tl_16"/>"Verdächtigen", wo sie mit ihrem Bruder, einem
+               <lb xml:id="p001_r_1_tl_17"/>vergrübelten Studenten, saß. Der Student hatte
+               <lb xml:id="p001_r_1_tl_18"/>einmal hochfliegende Pläne, er wollte Musikkritiker
+               <lb xml:id="p001_r_1_tl_19"/>werden, in <rs type="place" key="place_0010" xml:id="r18">Berlin</rs> oder <rs type="place"
+                  key="place_0059" xml:id="r19">Paris</rs> oder <rs type="place" key="place_0857" xml:id="r35">Dresden</rs>.
+               <anchor xml:id="a6"/>Jetzt
+               <lb xml:id="p001_r_1_tl_20"/>hatten sie zusammen eine kleine Musikalienhandlung.
+               <lb xml:id="p001_r_1_tl_21"/>Die neue, zeitgemäße Musik, die Marschalbums und
+               <lb xml:id="p001_r_1_tl_22"/>Lieder der <rs type="org" key="organisation_0198" xml:id="r20">Hitler-Jugend</rs> durften sie allerdings
                nicht
-<lb xml:id="p001_r_1_tl_23"/>
-halten, weil sie Juden waren. Und weil nun also
-<lb xml:id="p001_r_1_tl_24"/>
-das <rs type="bibl" key="UM3L78NJ" xml:id="r36">Horst-Wessel-Lied</rs> nicht in ihrem Schaufenster
-<lb xml:id="p001_r_1_tl_25"/>
-lag, wurden sie natürlich von der Partei und allen
-<lb xml:id="p001_r_1_tl_26"/>
-Gutgesinnten boykottiert.
-<note type="annotation" xml:id="n6" targetEnd="a6">Wie die Legende einer Fotografie von Schwarzenbach belegt, waren nicht-arische
+               <lb xml:id="p001_r_1_tl_23"/>halten, weil sie Juden waren. Und weil nun also
+               <lb xml:id="p001_r_1_tl_24"/>das <rs type="bibl" key="UM3L78NJ" xml:id="r36">Horst-Wessel-Lied</rs> nicht in ihrem Schaufenster
+               <lb xml:id="p001_r_1_tl_25"/>lag, wurden sie natürlich von der Partei und allen
+               <lb xml:id="p001_r_1_tl_26"/>Gutgesinnten boykottiert.
+               <note type="annotation" xml:id="n6" targetEnd="a6">Wie die Legende einer Fotografie von Schwarzenbach belegt, waren nicht-arische
                   Geschäfte in und um <rs type="place" key="place_0017" xml:id="r22">Danzig</rs> auch durch das Fehlen eines im Schaufenster
                   ausgelegten 'Arier-Ausweises' erkennbar, vgl. A-5-13/030.</note>– Trotzdem hat das kleine
-<lb xml:id="p001_r_1_tl_27"/>
-Fräulein Jakobsohn kein Wort über Politik ge
-<lb xml:id="p001_r_1_tl_28" break="no"/>
-redet, als wir am Nachmittag zusammen zur
-<anchor xml:id="a5"/>
-alten
-<lb xml:id="p001_r_1_tl_29"/>
-Schloßkirche von <rs type="place" key="place_0855" xml:id="r37">Oliva</rs>
-<note type="annotation" xml:id="n5" targetEnd="a5">Vgl. A-5-13/065, A-5-13/067.</note> hinausgingen. Einen Aus
-<lb xml:id="p001_r_1_tl_30" break="no"/>
-länder zu treffen, erklärte sie mir, sei genau wie eine
-<lb xml:id="p001_r_1_tl_31"/>
-Reise zu machen. Eine richtige Ferienreise sei das.
-<lb xml:id="p001_r_1_tl_32"/>
-In einem kleinen, russischen Restaurant in <rs type="place" key="place_0856" xml:id="r38">Zoppot</rs>
-<lb xml:id="p001_r_1_tl_33"/>
-aßen wir nachher russische Kotelettes, zu denen ich
-<lb xml:id="p001_r_1_tl_34"/>
-mein Lieblingsgericht, Preiselbeeren, haben wollte,
-<lb xml:id="p001_r_1_tl_35"/>
-die es aber nicht gab. Wir tranken auch Wodka,
-<lb xml:id="p001_r_1_tl_36"/>
-und Fräulein Jakobsohn wurde davon heiter und
-<lb xml:id="p001_r_1_tl_37"/>
-gesprächig. – <quote>Vielleicht erreiche ich es <hi rendition="#g">doch</hi> noch!</quote>
-<pb xml:id="p002" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif/info.json" n="10"/>
-<milestone unit="textregion" xml:id="p002_r"/>
-<lb xml:id="p002_r_tl_1"/>
-sagte sie, und nickte mir mit einem glücklichen Lä
-<lb xml:id="p002_r_tl_2" break="no"/>
-cheln zu. – <quote>Was wollen Sie denn erreichen?</quote> –
-<lb xml:id="p002_r_tl_3"/>
-<quote>Daß mein Bruder einen Paß bekommt und ins
-<lb xml:id="p002_r_tl_4"/>
-Ausland gehen kann</quote>
-<choice>
-<sic/>
-<corr>,</corr>
-</choice> sagte sie, <quote>er geht mir sonst
-<lb xml:id="p002_r_tl_5"/>
-hier zugrunde, und er hat so große Gaben!</quote>
-</p>
-<p>
-<lb xml:id="p002_r_tl_6"/>
-Ich fragte nicht, was aus ihr dann werden würde.
-<lb xml:id="p002_r_tl_7"/>
-Wir machten uns auf den Heimweg. – Am nächsten
-<lb xml:id="p002_r_tl_8"/>
-Tag, vor meiner Abreise aus <rs type="place" key="place_0017" xml:id="r21">Danzig</rs>, wurde beim
-<lb xml:id="p002_r_tl_9"/>
-Hotelportier für mich ein Paketchen abgegeben, es
-<lb xml:id="p002_r_tl_10"/>
-enthielt ein Glas eingemachter Preiselbeeren! –</p>
-
-<lb xml:id="p002_r_tl_11"/>
-<byline>
-<hi rendition="#g"> Annemarie Clark</hi>.
-</byline>
+               <lb xml:id="p001_r_1_tl_27"/>Fräulein Jakobsohn kein Wort über Politik ge
+               <lb xml:id="p001_r_1_tl_28" break="no"/>redet, als wir am Nachmittag zusammen zur
+               <anchor xml:id="a5"/>alten
+               <lb xml:id="p001_r_1_tl_29"/>Schloßkirche von <rs type="place" key="place_0855" xml:id="r37">Oliva</rs>
+               <note type="annotation" xml:id="n5" targetEnd="a5">Vgl. A-5-13/065, A-5-13/067.</note> hinausgingen. Einen Aus
+               <lb xml:id="p001_r_1_tl_30" break="no"/>länder zu treffen, erklärte sie mir, sei genau wie eine
+               <lb xml:id="p001_r_1_tl_31"/>Reise zu machen. Eine richtige Ferienreise sei das.
+               <lb xml:id="p001_r_1_tl_32"/>In einem kleinen, russischen Restaurant in <rs type="place" key="place_0856" xml:id="r38">Zoppot</rs>
+               <lb xml:id="p001_r_1_tl_33"/>aßen wir nachher russische Kotelettes, zu denen ich
+               <lb xml:id="p001_r_1_tl_34"/>mein Lieblingsgericht, Preiselbeeren, haben wollte,
+               <lb xml:id="p001_r_1_tl_35"/>die es aber nicht gab. Wir tranken auch Wodka,
+               <lb xml:id="p001_r_1_tl_36"/>und Fräulein Jakobsohn wurde davon heiter und
+               <lb xml:id="p001_r_1_tl_37"/>gesprächig. – <quote>Vielleicht erreiche ich es <hi rendition="#g">doch</hi> noch!</quote>
+               <pb xml:id="p002" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_002.tif/info.json" n="10"/>
+               <milestone unit="textregion" xml:id="p002_r"/>
+               <lb xml:id="p002_r_tl_1"/>sagte sie, und nickte mir mit einem glücklichen Lä
+               <lb xml:id="p002_r_tl_2" break="no"/>cheln zu. – <quote>Was wollen Sie denn erreichen?</quote> –
+               <lb xml:id="p002_r_tl_3"/><quote>Daß mein Bruder einen Paß bekommt und ins
+                  <lb xml:id="p002_r_tl_4"/>Ausland gehen kann</quote><choice>
+                  <sic/>
+                  <corr>,</corr>
+               </choice>sagte sie, <quote>er geht mir sonst
+                  <lb xml:id="p002_r_tl_5"/>hier zugrunde, und er hat so große Gaben!</quote></p>
+            <p>
+               <lb xml:id="p002_r_tl_6"/>Ich fragte nicht, was aus ihr dann werden würde.
+               <lb xml:id="p002_r_tl_7"/>Wir machten uns auf den Heimweg. – Am nächsten
+               <lb xml:id="p002_r_tl_8"/>Tag, vor meiner Abreise aus <rs type="place" key="place_0017" xml:id="r21">Danzig</rs>, wurde beim
+               <lb xml:id="p002_r_tl_9"/>Hotelportier für mich ein Paketchen abgegeben, es
+               <lb xml:id="p002_r_tl_10"/>enthielt ein Glas eingemachter Preiselbeeren! –</p>
+            
+            <lb xml:id="p002_r_tl_11"/><byline><hi rendition="#g"> Annemarie Clark</hi>.</byline>
 </div>
-</body>
-</text>
-</TEI>
+       </body>
+    </text>
+ </TEI>

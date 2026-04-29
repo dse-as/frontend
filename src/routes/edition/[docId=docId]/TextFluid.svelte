@@ -192,18 +192,3 @@
 		{@html serializedWithoutNotes}
 	</main>
 </div>
-
-<style lang="postcss">
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-
-	:global([data-textflow='fluid']) {
-		:global(p) {
-			@apply my-4;
-		}
-		:global(tei-pb)::after {
-			/* content: 'PAGEBREAK ' attr(data-page); */
-			@apply bg-red-500 p-2 font-bold;
-		}
-	}
-</style>
