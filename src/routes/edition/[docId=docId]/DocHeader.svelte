@@ -2,6 +2,7 @@
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
+	import { tick } from 'svelte';
 	let isExpandedBox1 = $state(false);
 
 	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
@@ -21,9 +22,10 @@
 
 	let buttonIsSticky = $state(false);
 
-	const toggleExpandableBox = () => {
+	const toggleExpandableBox = async () => {
 		isExpandedBox1 = !isExpandedBox1;
-		setTimeout(updateSticky, 50);
+		await tick();
+		updateSticky();
 	};
 
 	function updateSticky() {
@@ -179,10 +181,7 @@
 		{/if}
 		<!-- Global Comment -->
 		{#if globalComment}
-			<div
-				id="expandableBox"
-				class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}
-			>
+			<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
 				<div
 					class={[
 						'grid grid-cols-2 gap-20',
@@ -213,8 +212,8 @@
 				<!-- <div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;"> -->
 				<div
 					class={[
-						buttonIsSticky ? 'fixed bottom-10 left-1/2' : 'absolute -bottom-10 left-1/2',
-						'-translate-x-1/2'
+						buttonIsSticky ? 'fixed bottom-5' : 'absolute -bottom-10',
+						'left-1/2 -translate-x-1/2'
 					]}
 				>
 					<button
