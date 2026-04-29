@@ -28,8 +28,6 @@
 	};
 
 	let thumbs = $state([] as TThumb[]);
-
-	$inspect(thumbs);
 	let resizeObserver: ResizeObserver;
 	let mutationObserver: MutationObserver;
 
