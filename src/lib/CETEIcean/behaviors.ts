@@ -29,7 +29,7 @@ export const behaviors = (dom) => {
 				}
 			},
 
-			note: function (elt) {
+			note: function (el) {
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;
 				} else {
@@ -52,7 +52,7 @@ export const behaviors = (dom) => {
 				let note = dom.createElement('li');
 				note.id = id;
 				note.innerHTML =
-					`<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + elt.innerHTML;
+					`<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + el.innerHTML;
 				notes.appendChild(note);
 				return content;
 			}
