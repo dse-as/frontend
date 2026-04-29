@@ -2,6 +2,7 @@
 	import register from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
+	import { tick } from 'svelte';
 	let isExpandedBox1 = $state(false);
 
 	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
@@ -18,6 +19,38 @@
 
 	let stateMetadata = $state('eckdaten');
 	let isExpandedMetadata = $state(true);
+
+	let buttonIsSticky = $state(false);
+
+	const toggleExpandableBox = async () => {
+		isExpandedBox1 = !isExpandedBox1;
+		await tick();
+		updateSticky();
+	};
+
+	function updateSticky() {
+		const parentElement = document.getElementById('expandableBox');
+		if (!parentElement) return;
+
+		const rect = parentElement.getBoundingClientRect();
+
+		// If bottom is below viewport → stick to viewport
+		buttonIsSticky = rect.bottom >= window.innerHeight;
+	}
+
+	$effect(() => {
+		// Run once on mount
+		updateSticky();
+
+		// Listen to scroll + resize (important!)
+		window.addEventListener('scroll', updateSticky);
+		window.addEventListener('resize', updateSticky);
+
+		return () => {
+			window.removeEventListener('scroll', updateSticky);
+			window.removeEventListener('resize', updateSticky);
+		};
+	});
 </script>
 
 <!-- Snippet for Metadata Table -->
@@ -148,7 +181,7 @@
 		{/if}
 		<!-- Global Comment -->
 		{#if globalComment}
-			<div class={['relative mt-5 mb-20 pt-5', isExpandedBox1 ? 'pb-20' : 'pb-0']}>
+			<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
 				<div
 					class={[
 						'grid grid-cols-2 gap-20',
@@ -171,20 +204,22 @@
 					<button
 						class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent"
 						aria-label="expand box"
-						onclick={() => {
-							isExpandedBox1 = !isExpandedBox1;
-						}}
+						onclick={toggleExpandableBox}
 					></button>
 				{/if}
 
 				<!-- Button to Open/Close -->
-				<div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;">
+				<!-- <div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;"> -->
+				<div
+					class={[
+						buttonIsSticky ? 'fixed bottom-5' : 'absolute -bottom-10',
+						'left-1/2 -translate-x-1/2'
+					]}
+				>
 					<button
 						class="h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
 						aria-label="expand box"
-						onclick={() => {
-							isExpandedBox1 = !isExpandedBox1;
-						}}
+						onclick={toggleExpandableBox}
 					>
 						<i class={['fa-solid', isExpandedBox1 ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
 					</button>
