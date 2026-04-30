@@ -52,20 +52,20 @@
 		<Accordion.Item value={regType} class="gap-0" data-regType={regType}>
 			<h1 class="h4">
 				<Accordion.ItemTrigger
-					class="flex items-center justify-between border-t-2 border-surface-300-700 hover:bg-transparent"
+					class="flex items-center justify-start gap-5 rounded-none border-t-2 border-surface-300-700 hover:bg-transparent"
 				>
-					<span>
+					<Accordion.ItemIndicator class="group">
+						<span class="hidden group-data-[state=open]:block"
+							><i class="fa-regular fa-chevron-down text-lg"></i></span
+						>
+						<span class="block group-data-[state=open]:hidden"
+							><i class="fa-regular fa-chevron-right text-lg"></i></span
+						>
+					</Accordion.ItemIndicator>
+					<span class="">
 						{dictReg[regType].label_plural}
 						<span class="font-normal">({regEntries[regType]?.length})</span>
 					</span>
-					<Accordion.ItemIndicator class="group">
-						<span class="hidden group-data-[state=open]:block"
-							><i class="fa-solid fa-chevron-down"></i></span
-						>
-						<span class="block group-data-[state=open]:hidden"
-							><i class="fa-solid fa-chevron-up"></i></span
-						>
-					</Accordion.ItemIndicator>
 				</Accordion.ItemTrigger>
 			</h1>
 			<Accordion.ItemContent class="m-0 p-0">
@@ -75,7 +75,7 @@
 					<div
 						data-regKey={regKey}
 						class={[
-							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-1 pl-10  hover:bg-surface-300-700',
+							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-1 pl-17  hover:bg-surface-300-700',
 							selectedTextNode.id === regKey && 'bg-mist-300 hover:bg-mist-300!'
 						]}
 						onclick={() => {
