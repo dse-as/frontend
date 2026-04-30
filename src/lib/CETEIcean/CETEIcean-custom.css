@@ -12,7 +12,8 @@
 	}
 	tei-rs.highlighted,
 	tei-rs.highlighted:hover {
-		background-color: var(--color-mist-400);
+		background-color: var(--color-mist-600);
+		color: var(--color-mist-100);
 	}
 	tei-rs:hover {
 		background-color: var(--color-mist-300);
@@ -52,13 +53,12 @@ tei-head {
 /* Linebreaks and Hyphens */
 
 [data-textflow='fluid'] {
-	tei-lb {
-		display: none;
-	}
+	tei-lb,
 	span[data-type='hyphen'] {
 		display: none;
 	}
 }
+
 [data-textflow='diplomatic'] {
 }
 
