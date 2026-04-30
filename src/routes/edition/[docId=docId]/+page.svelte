@@ -128,20 +128,20 @@
 
 			/* Notes */
 			:global([data-type='mark'][data-marktype='single-annotation']:hover),
-			:global([data-type='mark'][data-marktype='single-annotation'].highlighted) {
+			:global([data-type='mark'][data-marktype='single-annotation'].active) {
 				@apply cursor-pointer bg-primary-50-950 text-surface-950;
 				content: '[';
 			}
-			:global([data-type='mark'][data-marktype='single-annotation'].highlighted) {
+			:global([data-type='mark'][data-marktype='single-annotation'].active) {
 				@apply bg-primary-100-900;
 			}
 			:global([data-type='markend']) {
 				@apply rounded-full bg-primary-50-950 px-1 align-super text-sm;
 			}
-			:global([data-type='markend'].highlighted) {
+			:global([data-type='markend'].active) {
 				@apply bg-primary-100-900;
 			}
-			:global([data-type='markend']:not(.highlighted):hover) {
+			:global([data-type='markend']:not(.active):hover) {
 				@apply cursor-pointer bg-primary-400-600;
 			}
 			:global([data-type='markend'])::before {

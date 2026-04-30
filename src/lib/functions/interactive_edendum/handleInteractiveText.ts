@@ -4,27 +4,26 @@ import type { TEntityTypes, TRegKeys } from '$lib/types/register/TRegister';
 import { findRegTypeByRegKey } from '../ease_of_use/findRegTypeByRegKey';
 
 function selectRsNodesInText(key: string) {
-	unselectAllHighlightsInText(); // Remove old highlights
+	resetAllHighlightsInText(); // Remove old highlights
 	const nodes = document.querySelectorAll(`tei-text tei-rs[key=${key}]`);
 	nodes.forEach((el) => {
-		el.classList.add('highlighted');
+		el.classList.add('active');
 	});
 }
-function selectNoteRefInText(noteId: string) {
-	unselectAllHighlightsInText(); // Remove old highlights
-	const nodes = document.querySelectorAll(`tei-text tei-note[id=${noteId}], span[data-type=mark][data-noteids*=${noteId}], span[data-type=markend][data-noteid=${noteId}]`);
-	nodes.forEach((el) => {
-		el.classList.add('highlighted');
+function activateNoteRef(key: string) {
+	resetAllHighlightsInText(); // Remove old highlights
+	const footnotesInText = document.querySelectorAll(`tei-text .footnote[data-noteid=${key}]`);
+	const marksInText = document.querySelectorAll(`tei-text .note-mark[data-noteid=${key}]`);
+	const annotationsInSidebar = document.querySelectorAll(`[data-dom=containerAnnotations] li[data-noteid=${key}]`);
+	[...footnotesInText, ...marksInText, ...annotationsInSidebar].forEach((el) => {
+		el.classList.add('active');
 	});
 }
-export function clearAllHighlights() {
-	selectedTextNode.id = '';
-	unselectAllHighlightsInText();
-}
-function unselectAllHighlightsInText() {
-	const nodes = document.querySelectorAll(`tei-text .highlighted`);
+
+function resetAllHighlightsInText() {
+	const nodes = document.querySelectorAll(`tei-text .active, [data-dom=containerAnnotations] .active`);
 	nodes.forEach((el) => {
-		el.classList.remove('highlighted');
+		el.classList.remove('active');
 	});
 }
 function openRegisterSidebar(key: TRegKeys) {
@@ -34,13 +33,12 @@ function openRegisterSidebar(key: TRegKeys) {
 		openRegisters.list = [...openRegisters.list, regType];
 	}
 }
-function openNoteSidebar(key: TRegKeys) {
+function openNoteSidebar() {
 	activeRegisterTab.value = 'notes';
 }
 
 function scroll(elContainer: HTMLElement | null, elItem: HTMLElement | null) {
 	if (!elContainer || !elItem) return;
-    console.log(elItem)
 	const containerRect = elContainer.getBoundingClientRect();
 	const refRect = elItem.getBoundingClientRect();
 	const targetTop = refRect.top - containerRect.top + elContainer.scrollTop;
@@ -66,11 +64,16 @@ function scrollText(elItem: HTMLElement) {
 	scroll(elContainer as HTMLElement, elItem);
 }
 
+export function clearAllHighlights() {
+	selectedTextNode.id = '';
+	resetAllHighlightsInText();
+}
+
 export function handleRegisterClick(key) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectRsNodesInText(key);
-	const elSpan = document.querySelectorAll(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`)[0];
+	const elSpan = document.querySelector(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`);
 	scrollText(elSpan as HTMLElement);
 }
 
@@ -83,12 +86,19 @@ export function handleRsClick(key) {
 	scrollRegister(elSpan as HTMLElement);
 }
 
-export function handleFootnoteClick(noteId) {
-    console.log(noteId)
-    if (!noteId) return;
-	selectedTextNode.id = noteId;
-    selectNoteRefInText(noteId);
-    const elSpan = document.querySelector(`[data-dom=containerAnnotations] #${noteId}`);
-    console.log(elSpan)
+export function handleAnnotationClick(key) {
+	if (!key) return;
+	selectedTextNode.id = key;
+    activateNoteRef(key);
+	const elSpan = document.querySelector(`[data-textflow=fluid] tei-text span.note-mark[data-note-target=${key}]`);
+	scrollText(elSpan as HTMLElement);
+}
+
+export function handleFootnoteClick(key) {
+    if (!key) return;
+	selectedTextNode.id = key;
+	openNoteSidebar();
+    activateNoteRef(key);
+    const elSpan = document.querySelector(`[data-dom=containerAnnotations] #${key}`);
 	scrollNotes(elSpan);
 }

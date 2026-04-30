@@ -1,0 +1,335 @@
+/* --------------------------------
+To restrict CSS to view-modes use:
+
+- data-textflow='fluid'
+- data-textflow='paged'
+- data-fassung='DF'
+- data-fassung='LF'
+
+-------------------------------- */
+
+:root {
+	/* Fonts */
+	--font-text: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+	--font-head: 'EB Garamond', 'Georgia', serif;
+	--font-mono: 'Fira Code', 'Consolas', 'Courier New', monospace;
+
+	/* Colors */
+	--color-bg: #fdfcf9;
+	--color-fg: #1a1a1a;
+	--color-muted: #666;
+	--color-rule: #ccc;
+	--color-link: #8b0000;
+	--color-link-hover: #b22222;
+	--color-note-bg: #f5f3ee;
+
+	/* Editorial colours */
+	--color-add: #2d8a2d;
+	--color-del: #b91c1c;
+	--color-hw: #1d6fa4;
+	--color-tw-add: #2d8a2d;
+	--color-tw-del: #b91c1c;
+	--color-subst-bg: #fffbe6;
+	--color-supplied-bg: #eeeeee;
+	--color-unclear-border: #92400e;
+
+	/* Choice colours */
+	--color-sic: #ffdddd;
+	--color-corr: #e8ffdd;
+	--color-orig: #e0d4f0;
+	--color-reg: #d0eaff;
+	--color-abbr: #fee090;
+	--color-expan: #e0f3f8;
+
+	/* Note colours */
+	--color-note-annotation-bg: #fef9c3;
+	--color-note-annotation-border: #eab308;
+	--color-note-endnote-bg: #e0f2fe;
+	--color-note-endnote-border: #0ea5e9;
+	--color-note-footnote-bg: #ede9fe;
+	--color-note-footnote-border: #7c3aed;
+	--color-note-figure-bg: #dcfce7;
+	--color-note-figure-border: #16a34a;
+
+	--color-note-hover: var(--color-fuchsia-100);
+	--color-note-active: var(--color-fuchsia-200);
+
+	/* Entity colours */
+	--color-rs-person: #7c3aed;
+	--color-rs-place: #0891b2;
+	--color-rs-org: #b45309;
+	--color-rs-work: #15803d;
+}
+
+/* -------------------------------- */
+/* (1) LAYOUT AND BASIC FORMATTING */
+/* -------------------------------- */
+
+/* Milestones */
+tei-milestone {
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* Divisions */
+tei-div {
+	display: block;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Titles */
+tei-head {
+	font-family: var(--font-head);
+	font-weight: normal;
+	font-size: 140%;
+	margin-bottom: 1em;
+	display: block;
+	line-height: auto;
+}
+
+/* Paragraphs */
+tei-p {
+	font-family: var(--font-text);
+	font-size: 120%;
+	line-height: 1.7;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: justify;
+	hyphens: auto;
+}
+
+/* -------------------------------- */
+/* Linebreaks and Hyphens */
+tei-p tei-lb:after {
+	content: '\a';
+	white-space: pre;
+}
+
+[data-textflow='fluid'] {
+	tei-lb,
+	span[data-type='hyphen'] {
+		display: none;
+	}
+}
+
+/* -------------------------------- */
+/* Highlighting */
+
+tei-hi[rendition~='#b'] {
+	font-weight: bold;
+}
+
+tei-hi[rendition~='#i'] {
+	font-style: italic;
+}
+
+tei-hi[rendition~='#u'] {
+	text-decoration: underline;
+}
+
+tei-hi[rendition~='#sub'] {
+	vertical-align: sub;
+	font-size: 0.8em;
+}
+
+tei-hi[rendition~='#sup'] {
+	vertical-align: super;
+	font-size: 0.8em;
+}
+
+tei-hi[rendition~='#g'] {
+	letter-spacing: 0.15em;
+}
+
+tei-hi[rendition~='#c'] {
+	display: block;
+	text-align: center;
+}
+
+/* -------------------------------- */
+/* Quotes */
+[data-fassung='LF'] {
+	tei-quote::before {
+		content: '«';
+	}
+	tei-quote::after {
+		content: '»';
+	}
+}
+
+/* -------------------------------- */
+/* (2) AUTHORIAL REVISIONS AND CORRECTIONS */
+/* -------------------------------- */
+
+/* Additions */
+tei-add[place='above'] {
+	vertical-align: super;
+}
+tei-add[place='inline']:before {
+	content: '«';
+}
+tei-add[place='inline']:after {
+	content: '»';
+}
+tei-add[place='below'] {
+	vertical-align: sub;
+}
+
+/* -------------------------------- */
+/* (3) EDITORIAL DECISIONS */
+/* -------------------------------- */
+
+/* -------------------------------- */
+/* Gaps */
+tei-gap[data-tei-reason='lost']:before {
+	content: '[';
+}
+tei-gap[data-tei-reason='lost']:after {
+	content: attr(data-content) ']';
+}
+tei-gap[data-tei-reason='illegible']:after {
+	content: attr(data-content);
+}
+
+/* -------------------------------- */
+/* Choice */
+
+tei-choice {
+	border-bottom: 4px dotted var(--color-muted);
+}
+
+/* ── LF: show regularised readings, hide diplomatic originals */
+[data-fassung='DF'] tei-choice > tei-sic,
+[data-fassung='DF'] tei-choice > tei-orig,
+[data-fassung='DF'] tei-choice > tei-abbr {
+	display: none;
+}
+
+/* ── DF: show striked diplomatic originals, frame regularised */
+body.mode-df tei-choice > tei-corr,
+body.mode-df tei-choice > tei-reg,
+body.mode-df tei-choice > tei-expan {
+	/* display: none; */
+	border: 2px black solid;
+}
+
+body.mode-df tei-choice > tei-sic {
+	background: var(--color-sic);
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+body.mode-df tei-choice > tei-orig {
+	background: var(--color-orig);
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+body.mode-df tei-choice > tei-abbr {
+	background: var(--color-abbr);
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+/* Choice:  */
+[data-fassung='DF'] tei-choice > tei-sic {
+	display: none;
+}
+
+[data-fassung='DF'] tei-choice > tei-orig {
+	display: none;
+}
+
+[data-fassung='DF'] tei-choice > tei-abbr {
+	display: none;
+}
+
+/* -------------------------------- */
+/* (4) EDITORIAL COMMENTARY */
+/* -------------------------------- */
+
+/* Note Statements */
+tei-notesstmt {
+	display: none;
+}
+
+/* -------------------------------- */
+/* Commented Spans */
+
+span.note-mark {
+	cursor: pointer;
+}
+
+span.note-mark:hover {
+	background-color: var(--color-note-active);
+}
+span.note-mark.active {
+	background-color: var(--color-note-active);
+}
+.footnote.active {
+	background-color: var(--color-note-active);
+}
+
+/* -------------------------------- */
+/* Footnotes */
+
+/* hide notes in DF */
+[data-fassung='DF'] {
+	tei-note {
+		display: none;
+	}
+}
+
+/* style footnotes */
+tei-text .footnote {
+	border-color: var(--color-surface-700);
+	border-width: 1.2px;
+	margin-right: 5px;
+	border-radius: 100%;
+	padding: 2px 7px;
+	font-size: 1.1rem;
+}
+
+tei-text .footnote:hover {
+	cursor: pointer;
+	background-color: var(--color-stone-300);
+	a:hover {
+		/* //! a-tag should be removed */
+		color: var(--color-stone-800);
+	}
+}
+
+/* -------------------------------- */
+/* (5) EDITORIAL REFERENCES */
+/* -------------------------------- */
+
+/* -------------------------------- */
+/* Named Entities */
+[data-textflow='fluid'] {
+	tei-rs {
+		cursor: pointer;
+		background-color: var(--color-mist-200);
+		padding: 0px 3px;
+		text-underline-offset: 3px;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		text-decoration-thickness: 2px;
+	}
+	tei-rs.active,
+	tei-rs.active:hover {
+		background-color: var(--color-mist-600);
+		color: var(--color-mist-100);
+	}
+	tei-rs:hover {
+		background-color: var(--color-mist-300);
+	}
+	[type='place'] {
+		text-decoration-color: black;
+	}
+	[type='person'] {
+		text-decoration-color: black;
+	}
+}

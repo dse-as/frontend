@@ -10,4 +10,4 @@ export let openRegisters: { list: TEntityTypes[] } = $state({ list: [] });
 
 // Sidebar Toggle
 type TActiveRegisterTab = 'register' | 'notes';
-export let activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'register' });
+export let activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'notes' });

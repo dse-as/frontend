@@ -153,12 +153,6 @@
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
-	function findClosestNoteDownwards(el, attribute) {
-		if (el.hasAttribute(attribute)) {
-			return el;
-		}
-		return el.querySelector(`[${attribute}]`);
-	}
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -166,17 +160,19 @@
 <div
 	data-textflow="fluid"
 	onclick={(ev: Event) => {
-		console.log(ev.target);
 		const el = ev.target as HTMLElement;
+
 		if (!el) return;
-		if (el.tagName === 'TEI-RS') {
+		if (el.tagName === 'TEI-DIV' || el.tagName === 'TEI-P') {
+			clearAllHighlights();
+		} else if (el.tagName === 'TEI-RS') {
 			handleRsClick(el.getAttribute('key'));
-		} else if (el.hasAttribute('data-note-id') || el.querySelector('[data-note-id]')) {
-			const noteId = findClosestNoteDownwards(el, 'data-note-id').id;
-			handleFootnoteClick(noteId);
-		} else if (el.hasAttribute('data-note-target') || el.querySelector('[data-note-target]')) {
-			const noteId = findClosestNoteDownwards(el, 'data-note-target').id; //! FIX THIS
-			handleFootnoteClick(noteId);
+		} else if (el.classList.contains('footnote') || el.querySelector('.footnote')) {
+			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
+			handleFootnoteClick(key);
+		} else if (el.classList.contains('note-mark') || el.querySelector('.note-mark')) {
+			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
+			handleFootnoteClick(key);
 		} else {
 			clearAllHighlights();
 		}

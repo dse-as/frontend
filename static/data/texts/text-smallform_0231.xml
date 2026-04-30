@@ -94,9 +94,9 @@
          <div type="smallform">
             <pb xml:id="p001" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif/info.json" n="9"/>
             <milestone unit="textregion" xml:id="p001_r_2"/>            <head>
-               <lb xml:id="p001_r_2_tl_1"/>Baltisches Tagebuch.
-               <lb xml:id="p001_l"/>IV.
-               <lb xml:id="p001_r_2_tl_2"/>Kleine Begegnungen in <rs type="place" key="place_0017" xml:id="r2">Danzig</rs>.</head>
+               <lb xml:id="p001_r_2_tl_1"/><hi rendition="#c">Baltisches Tagebuch.</hi>
+               <lb xml:id="p001_l"/><hi rendition="#c">IV.</hi>
+               <lb xml:id="p001_r_2_tl_2"/><hi rendition="#c">Kleine Begegnungen in <rs type="place" key="place_0017" xml:id="r2">Danzig</rs>.</hi></head>
             <p>
                <lb xml:id="p001_r_2_tl_3"/>Ich wollte einen friedlichen Sonntag in der alten
                <lb xml:id="p001_r_2_tl_4"/><rs type="place" key="place_0017" xml:id="r1">Hansastadt</rs> verbringen. Ich lehnte mich, am frühen

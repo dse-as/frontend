@@ -1,3 +1,6 @@
+const NOTE_ID_PREFIX = 'note_';
+
+
 export const behaviors = (dom) => {
 	return {
 		tei: {
@@ -24,31 +27,33 @@ export const behaviors = (dom) => {
 			},
 
 			note: function (el) {
+				// Create running index
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;
 				} else {
 					this.noteIndex++;
 				}
-				let id = 'note' + this.noteIndex;
-				let link = dom.createElement('a');
-				link.setAttribute('id', `src_${id}`);
-				link.setAttribute('href', '#' + id);
-				link.dataset.noteId = this.noteIndex;
-				link.innerHTML = this.noteIndex;
-				let content = dom.createElement('span');
-				content.appendChild(link);
-				let notes = this.dom.querySelector('ol.notes');
-				if (!notes) {
-					notes = dom.createElement('ol');
-					notes.setAttribute('class', 'notes');
-					this.dom.appendChild(notes);
+				let id = `${NOTE_ID_PREFIX}${this.noteIndex}`;
+
+				// Create footnote
+				let footnote = dom.createElement('span');
+				footnote.classList.add('footnote');
+				footnote.setAttribute('data-noteid', `${id}`);
+				footnote.dataset.noteId = this.noteIndex;
+				footnote.innerHTML = this.noteIndex;
+
+				// Create notes-list
+				let noteList = this.dom.querySelector('ol.notes');
+				if (!noteList) {
+					noteList = dom.createElement('ol');
+					noteList.setAttribute('class', 'notes');
+					this.dom.appendChild(noteList);
 				}
 				let note = dom.createElement('li');
-				note.id = id;
-				note.innerHTML =
-					`<a href="#src_${id}" class="note_index">${this.noteIndex}</a>` + el.innerHTML;
-				notes.appendChild(note);
-				return content;
+				note.setAttribute('data-noteid', `${id}`);
+				note.innerHTML = `<div class='data-noteidx'>${this.noteIndex}</div><div>${el.innerHTML}</div>`;
+				noteList.appendChild(note);
+				return footnote;
 			}
 		}
 	};
@@ -57,7 +62,7 @@ export const behaviors = (dom) => {
 /** Run after processPage() to wrap nodes between anchors and their matching notes */
 export function wrapAnnotations(container: HTMLElement) {
 	const notes = container.querySelectorAll('tei-note[targetend]');
-	notes.forEach((note) => {
+	notes.forEach((note, runningId) => {
 		const targetId = note.getAttribute('targetend');
 		if (!targetId) return;
 		const anchor = container.querySelector(`tei-anchor[id="${targetId}"]`);
@@ -71,8 +76,11 @@ export function wrapAnnotations(container: HTMLElement) {
 			current = current.nextSibling;
 		}
 		if (!nodes.length) return;
+
+		// Create mark (the wrapper around annotated text)
 		const wrapper = container.ownerDocument.createElement('span');
-		wrapper.classList.add('tei-annotation');
+		wrapper.classList.add('note-mark');
+		wrapper.setAttribute('data-noteid', `${NOTE_ID_PREFIX}${runningId+1}`);
 		wrapper.dataset.noteTarget = targetId;
 
 		nodes[0].parentNode!.insertBefore(wrapper, nodes[0]);
