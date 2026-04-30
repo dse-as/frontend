@@ -15,7 +15,7 @@
 		{ name: 'Register', path: resolve('/edition/register') },
 		{ name: 'Netzwerke', path: resolve('/networks') },
 		{ name: 'Themen', path: resolve('/topics') },
-		{ name: '(Reihungen)', path: resolve('/sequences') },
+		{ name: '(Sequenzen)', path: resolve('/sequences') },
 		{ name: 'Suche', path: resolve('/search') }
 	];
 </script>

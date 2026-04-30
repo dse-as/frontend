@@ -283,7 +283,7 @@
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
 				activeType = Object.keys(seqMatching)[0] as TSeqType;
-			}}>Reihung wählen...</button
+			}}>Sequenz wählen...</button
 		>
 	</div>
 {:else}
@@ -301,7 +301,7 @@
 		<div class="flex w-full justify-center gap-6">
 			<div class="mb-3 flex w-max flex-col items-center">
 				<h6 class="h6">
-					Reihung: <a
+					Sequenz: <a
 						class="hover:underline"
 						href={resolve(
 							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}`
@@ -461,7 +461,7 @@
 				<!-- No sequences -->
 				<div class="my-6 flex w-full flex-col items-center justify-center gap-10 font-bold">
 					<i class="fa-solid fa-link-slash fa-xl"></i>
-					<p>Für dieses Dokument wurden keine Reihungen verlinkt.</p>
+					<p>Für dieses Dokument wurden keine Sequenzen verlinkt.</p>
 				</div>
 			{:else}
 				<!-- Select sequences (currently none selected) -->
@@ -472,7 +472,7 @@
 		{:else if hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
 			<div class={['my-5 ml-10 flex min-h-10 flex-wrap items-end justify-start py-2']}>
-				<p class="mr-2 h-max font-bold">Weitere Reihungen zu diesem Dokument:</p>
+				<p class="mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
 				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50-950')}
 			</div>
 		{:else}
@@ -525,7 +525,7 @@
 													closeSeqPanel(0);
 												}
 											}}
-											>Reihung auswählen
+											>Sequenz auswählen
 										</a>
 										{#if seqAllTyped[activeType!][seqId].url_slug}
 											<a
