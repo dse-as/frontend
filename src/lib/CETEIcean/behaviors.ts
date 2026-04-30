@@ -1,12 +1,6 @@
 export const behaviors = (dom) => {
 	return {
 		tei: {
-			// pb: [`<span
-			// 		data-type="pagebreak"
-			// 		data-facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0231_001.tif"
-			// 		data-page="1"
-			// 		data-n="10"
-			// />`,""],
 			lb: function (el: HTMLElement) {
 				if (el.getAttribute('break') === 'no') {
 					// Remove the trailing whitespace of the previous text node
