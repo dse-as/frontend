@@ -87,6 +87,11 @@ tei-head {
 
 /* -------------------------------- */
 /* Hide notes */
+[data-fassung='DF'] {
+	tei-note {
+		display: none;
+	}
+}
 tei-note > span {
 	border-color: var(--color-surface-700);
 	border-width: 1.2px;
