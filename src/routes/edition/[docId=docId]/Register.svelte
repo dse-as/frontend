@@ -75,16 +75,16 @@
 					<div
 						data-regKey={regKey}
 						class={[
-							'group flex cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-3 pl-10  hover:bg-surface-300-700',
+							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-1 pl-10  hover:bg-surface-300-700',
 							selectedTextNode.id === regKey && 'bg-mist-300 hover:bg-mist-300!'
 						]}
 						onclick={() => {
 							handleRegisterClick(regKey);
 						}}
 					>
-						<h2 class="h6">{reg[regType][regKey].name}</h2>
+						<p class="text-lg">{reg[regType][regKey].name}</p>
 						<a
-							class="text-surface-950-500 hidden underline group-hover:block"
+							class="text-surface-950-500 hidden rounded-full px-2 py-2 underline group-hover:block hover:bg-surface-100-900"
 							href={resolve(`/edition/register/${regKey}`)}
 							target="_blank"
 							aria-label="In Register öffnen"
