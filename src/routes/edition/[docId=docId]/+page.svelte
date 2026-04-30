@@ -7,23 +7,25 @@
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import Sequences from './Sequences.svelte';
+	import { ToggleGroup } from '@skeletonlabs/skeleton-svelte';
+
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF = $derived((page.url.searchParams?.get('mode') as TDFLF) || 'LF');
+	let dflf: TDFLF[] = $derived([page.url.searchParams?.get('mode') as TDFLF] || ['LF']);
 	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
 		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
-			dflf = 'DF';
+			dflf = ['DF'];
 		} else {
 			// fallback (default)
 			const url = new URL(page.url);
 			url.searchParams.set('mode', 'LF');
-			dflf = 'LF';
+			dflf = ['LF'];
 			goto(url, { replaceState: true });
 		}
 	});
@@ -43,31 +45,30 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<button
-		onclick={() => {
-			dflf = dflf == 'DF' ? 'LF' : 'DF';
-			page.url.searchParams.set('mode', dflf);
-			goto(`${page.url.pathname}?${page.url.searchParams.toString()}`, {
-				replaceState: true,
-				noScroll: true
-			});
+	<ToggleGroup
+		value={dflf}
+		onValueChange={(details) => {
+			dflf = details.value;
 		}}
-		class={[
-			'z-1000 cursor-pointer rounded-full border border-surface-950-50 bg-surface-50-950 p-2 px-5 font-bold text-surface-950-50'
-		]}
-		>{dflf == 'DF' ? 'Zur Lesefassung' : 'Zur diplomatischen Fassung'}
-	</button>
+	>
+		<ToggleGroup.Item value="LF" class="h-10 w-60 rounded-l-full border border-surface-950-50">
+			<p>Lesefassung</p>
+		</ToggleGroup.Item>
+		<ToggleGroup.Item value="DF" class="h-10 w-60 rounded-r-full border border-surface-950-50">
+			<p>Diplomatische Fassung</p>
+		</ToggleGroup.Item>
+	</ToggleGroup>
 
 	<!-- Thumbnail Gallery -->
-	{#if dflf === 'DF'}
+	{#if dflf[0] === 'DF'}
 		<Gallery fullMeta={data.fullMeta} docId={data.docId} docMeta={data.docMeta} {currentPage} />
 	{/if}
 
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
-		{#if dflf === 'LF'}
+		{#if dflf[0] === 'LF'}
 			<LF docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} />
-		{:else if dflf === 'DF'}
+		{:else if dflf[0] === 'DF'}
 			<DF docMeta={data.docMeta} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
