@@ -90,7 +90,7 @@ export function handleAnnotationClick(key) {
 	if (!key) return;
 	selectedTextNode.id = key;
     activateNoteRef(key);
-	const elSpan = document.querySelector(`[data-textflow=fluid] tei-text span.note-mark[data-note-target=${key}]`);
+	const elSpan = document.querySelector(`[data-textflow=fluid] tei-text span.note-mark[data-noteid=${key}]`);
 	scrollText(elSpan as HTMLElement);
 }
 
@@ -99,6 +99,6 @@ export function handleFootnoteClick(key) {
 	selectedTextNode.id = key;
 	openNoteSidebar();
     activateNoteRef(key);
-    const elSpan = document.querySelector(`[data-dom=containerAnnotations] #${key}`);
-	scrollNotes(elSpan);
+    const elSpan = document.querySelector(`[data-dom=containerAnnotations] li[data-noteid=${key}]`);
+	scrollNotes(elSpan as HTMLElement);
 }
