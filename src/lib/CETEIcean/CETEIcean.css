@@ -19,9 +19,13 @@ To restrict CSS to view-modes use:
 	--color-fg: #1a1a1a;
 	--color-muted: #666;
 	--color-rule: #ccc;
+	--color-punctuation: #9622b3;
 	--color-link: #8b0000;
 	--color-link-hover: #b22222;
 	--color-note-bg: #f5f3ee;
+
+	/* Editorial colours */
+	--color-foreign: #dfdfdf;
 
 	/* Editorial colours */
 	--color-add: #2d8a2d;
@@ -34,12 +38,12 @@ To restrict CSS to view-modes use:
 	--color-unclear-border: #92400e;
 
 	/* Choice colours */
-	--color-sic: #ffdddd;
-	--color-corr: #e8ffdd;
-	--color-orig: #e0d4f0;
-	--color-reg: #d0eaff;
-	--color-abbr: #fee090;
-	--color-expan: #e0f3f8;
+	--color-sic: #d68282;
+	--color-corr: #9fcf8c;
+	--color-orig: #9e80c2;
+	--color-reg: #88b5e6;
+	--color-abbr: #d9a46a;
+	--color-expan: #8ccdd6;
 
 	/* Note colours */
 	--color-note-annotation-bg: #fef9c3;
@@ -51,8 +55,8 @@ To restrict CSS to view-modes use:
 	--color-note-figure-bg: #dcfce7;
 	--color-note-figure-border: #16a34a;
 
-	--color-note-hover: var(--color-fuchsia-100);
-	--color-note-active: var(--color-fuchsia-200);
+	--color-note-active: #e3e3de;
+	--color-footnote-circle: #666;
 
 	/* Entity colours */
 	--color-rs-person: #7c3aed;
@@ -102,6 +106,24 @@ tei-p {
 }
 
 /* -------------------------------- */
+/* Page Breaks */
+[data-fassung='DF'] {
+	tei-pb {
+		display: block;
+		text-align: center;
+		color: var(--color-muted);
+		font-size: 0.8em;
+		margin: 1em 0 0.5em;
+		border-top: 1px solid var(--color-rule);
+		padding-top: 0.4em;
+	}
+
+	tei-pb::before {
+		content: '[ p.\00a0' attr(n) ' ]';
+	}
+}
+
+/* -------------------------------- */
 /* Linebreaks and Hyphens */
 tei-p tei-lb:after {
 	content: '\a';
@@ -112,6 +134,76 @@ tei-p tei-lb:after {
 	tei-lb,
 	span[data-type='hyphen'] {
 		display: none;
+	}
+}
+
+/* -------------------------------- */
+/* Forme work */
+[data-fassung='LF'] {
+	tei-fw {
+		display: none;
+	}
+}
+
+[data-fassung='DF'] {
+	tei-fw {
+		display: block;
+		color: var(--color-muted);
+		font-size: 0.85em;
+		font-style: italic;
+		margin: 0.5em 0;
+
+		&[place='topleft'],
+		&[place='bottomleft'] {
+			text-align: left;
+		}
+		&[place='topcenter'],
+		&[place='bottomcenter'] {
+			text-align: center;
+		}
+		&[place='topright'],
+		&[place='bottomright'] {
+			text-align: right;
+		}
+	}
+}
+
+/* -------------------------------- */
+/* Medium (handShift) */
+
+[data-fassung='LF'] {
+	tei-handshift {
+		display: none;
+	}
+}
+[data-fassung='DF'] {
+	tei-handshift {
+		display: inline;
+		color: var(--color-muted);
+		font-size: 0.8em;
+	}
+
+	tei-handshift::before {
+		content: '✍ ';
+	}
+}
+
+/* -------------------------------- */
+/* Foreign */
+
+[data-fassung='DF'] {
+	tei-foreign {
+		font-style: italic;
+		background: var(--color-foreign);
+		padding: 0 3px;
+		border-radius: 2px;
+	}
+
+	tei-foreign[xml\:lang]::after {
+		content: ' [' attr(xml\:lang) ']';
+		color: var(--color-muted);
+		font-size: 0.8em;
+		font-style: normal;
 	}
 }
 
@@ -149,33 +241,135 @@ tei-hi[rendition~='#c'] {
 	text-align: center;
 }
 
+tei-hi[rendition~='#r'] {
+	display: block;
+	text-align: right;
+}
+
+/* -------------------------------- */
+/* Punctuation */
+[data-fassung='DF'] {
+	tei-pc {
+		color: var(--color-punctuation);
+	}
+}
+
+/* -------------------------------- */
+/* Space */
+[data-fassung='DF'] {
+	tei-space::before {
+		content: '□';
+		color: var(--color-muted);
+	}
+}
+
 /* -------------------------------- */
 /* Quotes */
-[data-fassung='LF'] {
-	tei-quote::before {
-		content: '«';
-	}
-	tei-quote::after {
-		content: '»';
-	}
+tei-quote::before {
+	content: '«';
+}
+tei-quote::after {
+	content: '»';
+}
+[data-fassung='DF'] tei-quote::before,
+[data-fassung='DF'] tei-quote::after {
+	color: var(--color-punctuation);
 }
 
 /* -------------------------------- */
 /* (2) AUTHORIAL REVISIONS AND CORRECTIONS */
 /* -------------------------------- */
 
-/* Additions */
-tei-add[place='above'] {
-	vertical-align: super;
+/* Substitutions, Additions and Deletions */
+
+[data-fassung='DF'] {
+	// inline
+	tei-add[place='inline']:before {
+		content: '⌜';
+	}
+	tei-add[place='inline']:after {
+		content: '⌟';
+	}
+
+	// margin
+	tei-add[place='margin']:before {
+		content: '‹';
+	}
+	tei-add[place='margin']:after {
+		content: '›';
+	}
+	// above
+	tei-add[place='above'] {
+		vertical-align: super;
+	}
+	tei-add[place='above']:before {
+		content: '⌜';
+	}
+	tei-add[place='above']:after {
+		content: '⌝';
+	}
+	// below
+	tei-add[place='below'] {
+		vertical-align: sub;
+	}
+	tei-add[place='below']:before {
+		content: '⌞';
+	}
+	tei-add[place='below']:after {
+		content: '⌟';
+	}
+	// substitution
+	tei-del {
+		text-decoration: line-through;
+	}
+	tei-add[place='over']:before {
+		content: '{';
+	}
+	tei-add[place='over']:after {
+		content: '}';
+	}
 }
-tei-add[place='inline']:before {
-	content: '«';
+
+[data-fassung='LF'] {
+	tei-subst {
+		display: inline;
+	}
+
+	tei-del,
+	tei-subst > tei-del {
+		display: none;
+	}
+
+	tei-add,
+	tei-subst > tei-add {
+		display: inline;
+		color: inherit;
+	}
 }
-tei-add[place='inline']:after {
-	content: '»';
+
+/* -------------------------------- */
+/* Metamarks */
+[data-fassung='LF'] {
+	tei-metamark {
+		display: none;
+	}
 }
-tei-add[place='below'] {
-	vertical-align: sub;
+
+[data-fassung='DF'] {
+	tei-metamark {
+		display: inline;
+		color: var(--color-muted);
+		font-size: 0.85em;
+		font-style: italic;
+	}
+
+	tei-metamark::before {
+		content: '⟨';
+	}
+
+	tei-metamark::after {
+		content: '⟩';
+	}
 }
 
 /* -------------------------------- */
@@ -183,68 +377,115 @@ tei-add[place='below'] {
 /* -------------------------------- */
 
 /* -------------------------------- */
+/* Editorial Supplements */
+
+[data-fassung='LF'] {
+	tei-supplied {
+		color: var(--color-muted);
+	}
+
+	tei-supplied::before {
+		content: '[';
+		color: var(--color-muted);
+	}
+
+	tei-supplied::after {
+		content: ']';
+		color: var(--color-muted);
+	}
+}
+
+/* -------------------------------- */
 /* Gaps */
-tei-gap[data-tei-reason='lost']:before {
-	content: '[';
+
+tei-gap {
+	color: var(--color-muted);
+	font-style: italic;
 }
-tei-gap[data-tei-reason='lost']:after {
-	content: attr(data-content) ']';
+
+tei-gap::before {
+	content: '[…]';
 }
-tei-gap[data-tei-reason='illegible']:after {
-	content: attr(data-content);
+
+tei-gap[reason]::before {
+	content: '[' attr(reason) ']';
+}
+
+/* -------------------------------- */
+/* Unclear */
+
+[data-fassung='LF'] {
+	tei-unclear {
+		color: var(--color-muted);
+	}
+}
+[data-fassung='DF'] {
+	tei-unclear {
+		border-bottom: 2px dotted var(--color-unclear-border);
+	}
+
+	tei-unclear::after {
+		content: ' [?]';
+		color: var(--color-muted);
+		font-size: 0.8em;
+	}
 }
 
 /* -------------------------------- */
 /* Choice */
 
-tei-choice {
-	border-bottom: 4px dotted var(--color-muted);
-}
-
 /* ── LF: show regularised readings, hide diplomatic originals */
-[data-fassung='DF'] tei-choice > tei-sic,
-[data-fassung='DF'] tei-choice > tei-orig,
-[data-fassung='DF'] tei-choice > tei-abbr {
-	display: none;
+[data-fassung='LF'] {
+	tei-choice > tei-sic,
+	tei-choice > tei-orig,
+	tei-choice > tei-abbr {
+		display: none;
+	}
 }
 
 /* ── DF: show striked diplomatic originals, frame regularised */
-body.mode-df tei-choice > tei-corr,
-body.mode-df tei-choice > tei-reg,
-body.mode-df tei-choice > tei-expan {
-	/* display: none; */
-	border: 2px black solid;
-}
 
-body.mode-df tei-choice > tei-sic {
-	background: var(--color-sic);
-	padding: 0 2px;
-	border-radius: 2px;
-}
+// TODO
+[data-fassung='DF'] {
+	tei-choice {
+	}
 
-body.mode-df tei-choice > tei-orig {
-	background: var(--color-orig);
-	padding: 0 2px;
-	border-radius: 2px;
-}
+	tei-choice > tei-sic,
+	tei-choice > tei-orig,
+	tei-choice > tei-abbr {
+		&::after {
+			content: '→';
+			color: var(--color-muted);
+			margin-left: 0.15em;
+			font-size: 0.85em;
+		}
+	}
 
-body.mode-df tei-choice > tei-abbr {
-	background: var(--color-abbr);
-	padding: 0 2px;
-	border-radius: 2px;
-}
+	tei-choice > tei-corr,
+	tei-choice > tei-reg,
+	tei-choice > tei-expan {
+		border-bottom: 4px dotted var(--color-corr);
+	}
 
-/* Choice:  */
-[data-fassung='DF'] tei-choice > tei-sic {
-	display: none;
-}
-
-[data-fassung='DF'] tei-choice > tei-orig {
-	display: none;
-}
-
-[data-fassung='DF'] tei-choice > tei-abbr {
-	display: none;
+	// Colors
+	tei-choice > tei-corr {
+		border-bottom: 4px dotted var(--color-corr);
+	}
+	tei-choice > tei-reg {
+		border-bottom: 4px dotted var(--color-reg);
+	}
+	tei-choice > tei-expan {
+		border-bottom: 4px dotted var(--color-expan);
+	}
+	tei-choice > tei-sic {
+		border-bottom: 4px dotted var(--color-sic);
+	}
+	tei-choice > tei-orig {
+		border-bottom: 4px dotted var(--color-orig);
+	}
+	tei-choice > tei-abbr {
+		border-bottom: 4px dotted var(--color-abbr);
+	}
 }
 
 /* -------------------------------- */
@@ -263,73 +504,74 @@ span.note-mark {
 	cursor: pointer;
 }
 
-span.note-mark:hover {
-	background-color: var(--color-note-active);
-}
+span.note-mark:hover,
 span.note-mark.active {
 	background-color: var(--color-note-active);
-}
-.footnote.active {
-	background-color: var(--color-note-active);
+	border-bottom: 3px solid var(--color-muted);
 }
 
 /* -------------------------------- */
 /* Footnotes */
 
-/* hide notes in DF */
+[data-fassung='LF'] {
+	tei-text span.footnote {
+		cursor: pointer;
+		border: 1px solid var(--color-footnote-circle);
+		margin-right: 5px;
+		padding: 2px 7px;
+		border-radius: 100%;
+		font-size: 1.1rem;
+	}
+
+	span.footnote:hover,
+	span.footnote.active {
+		background-color: var(--color-note-active);
+	}
+}
+
 [data-fassung='DF'] {
 	tei-note {
 		display: none;
 	}
 }
-
-/* style footnotes */
-tei-text .footnote {
-	border-color: var(--color-surface-700);
-	border-width: 1.2px;
-	margin-right: 5px;
-	border-radius: 100%;
-	padding: 2px 7px;
-	font-size: 1.1rem;
-}
-
-tei-text .footnote:hover {
-	cursor: pointer;
-	background-color: var(--color-stone-300);
-	a:hover {
-		/* //! a-tag should be removed */
-		color: var(--color-stone-800);
-	}
+/* -------------------------------- */
+/* Anchors */
+tei-anchor {
+	display: none;
 }
 
 /* -------------------------------- */
-/* (5) EDITORIAL REFERENCES */
+/* (5) EDITORIAL REFERENCING */
 /* -------------------------------- */
 
 /* -------------------------------- */
-/* Named Entities */
+/* Referencing Strings */
+
 [data-textflow='fluid'] {
 	tei-rs {
 		cursor: pointer;
-		background-color: var(--color-mist-200);
-		padding: 0px 3px;
-		text-underline-offset: 3px;
-		text-decoration: underline;
-		text-decoration-skip-ink: none;
-		text-decoration-thickness: 2px;
 	}
+
+	/* Types */
+	tei-rs {
+		&[type='person'] {
+			border-bottom: 3px solid var(--color-rs-person);
+		}
+		&[type='place'] {
+			border-bottom: 3px solid var(--color-rs-place);
+		}
+		&[type='org'] {
+			border-bottom: 3px solid var(--color-rs-org);
+		}
+		&[type='work'] {
+			border-bottom: 3px solid var(--color-rs-work);
+		}
+	}
+
+	/* Hover and Active */
+	tei-rs:hover,
 	tei-rs.active,
 	tei-rs.active:hover {
-		background-color: var(--color-mist-600);
-		color: var(--color-mist-100);
-	}
-	tei-rs:hover {
 		background-color: var(--color-mist-300);
-	}
-	[type='place'] {
-		text-decoration-color: black;
-	}
-	[type='person'] {
-		text-decoration-color: black;
 	}
 }
