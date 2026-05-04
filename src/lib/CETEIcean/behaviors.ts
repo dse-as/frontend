@@ -7,7 +7,7 @@ export const behaviors = (dom) => {
 			lb: function (el: HTMLElement) {
 				if (el.getAttribute('break') === 'no') {
 					// Remove the trailing whitespace of the previous text node
-					let prev = el.previousSibling;
+					const prev = el.previousSibling;
 
 					if (prev && prev.nodeType === 3) // Node.TEXT_NODE is equivalent to 3
 					{
@@ -36,7 +36,7 @@ export const behaviors = (dom) => {
 					this.noteIndex++;
 				}
 				// Create noteId
-				let noteId = `${NOTE_ID_PREFIX}${this.noteIndex}`;
+				const noteId = `${NOTE_ID_PREFIX}${this.noteIndex}`;
 
 				// Create notes-list and append to dom
 				let noteList = this.dom.querySelector('ol.notes');
@@ -45,13 +45,13 @@ export const behaviors = (dom) => {
 					noteList.setAttribute('class', 'notes');
 					this.dom.appendChild(noteList);
 				}
-				let note = dom.createElement('li');
+				const note = dom.createElement('li');
 				note.setAttribute('data-noteid', `${noteId}`);
 				note.innerHTML = `<div class='data-noteidx'>${this.noteIndex}</div><div>${el.innerHTML}</div>`;
 				noteList.appendChild(note);
 
 				// Create footnote-span
-				let footnote = dom.createElement('span');
+				const footnote = dom.createElement('span');
 				footnote.classList.add('footnote');
 				footnote.setAttribute('data-noteid', `${noteId}`);
 				footnote.dataset.noteId = this.noteIndex;
@@ -95,6 +95,6 @@ export function wrapAnnotations(container: HTMLElement) {
 
 // Remove footnotes list from main text
 // --> Run on client text components
-export function removeNotesFromMaintext(ceteiSerialized: String) {
+export function removeNotesFromMaintext(ceteiSerialized: string) {
 	return ceteiSerialized.replace(/<ol class="notes">.*?<\/ol>/s, '');
 }

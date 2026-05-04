@@ -10,7 +10,7 @@ export const load: LayoutServerLoad = ({ params, url }) => {
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
 
 	// What registerPage are we looking at?
-	let regView = !regSlug
+	const regView = !regSlug
 		? //edition/register
 			'regView1'
 		: regSlug && Object.keys(reg).includes(regSlug)
@@ -19,7 +19,7 @@ export const load: LayoutServerLoad = ({ params, url }) => {
 			: // e.g. /edition/register/[person_0001]
 				'regView3';
 
-	let regType: string | null | undefined =
+	const regType: string | null | undefined =
 		regView === 'regView2' ? regSlug : findKeyBySlug(reg, regSlug);
 
 	return { reg, regSlug, regType, allfirstOrderKeys, regView };

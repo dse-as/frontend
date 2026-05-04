@@ -22,7 +22,7 @@
 		</div>
 	{:else}
 		<img
-			class={`flex h-max w-max items-center justify-center bg-surface-50 object-cover`}
+			class="flex h-max w-max items-center justify-center bg-surface-50 object-cover"
 			style={`max-width:${maxWidth}px; max-height:${maxHeight}px;`}
 			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
 			alt="iiif"
@@ -35,7 +35,7 @@
 {/if}
 
 <img
-	class={`hidden`}
+	class="hidden"
 	src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
 	alt="hidden (just for loading)"
 	onload={() => {

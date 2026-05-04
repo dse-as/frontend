@@ -20,7 +20,7 @@ export function slugify(string, include = { slash: false }) {
 	}
 
 	// Replace special characters
-	let modifiedString = string
+	const modifiedString = string
 		.split('')
 		.map((char) => {
 			return specialChars[char] || char; // Use the mapped value or the original character

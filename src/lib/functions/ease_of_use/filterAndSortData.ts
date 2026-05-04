@@ -44,7 +44,7 @@ export function filterAndSortData(
 
 	// Filter and sort item
 	return Object.entries(item)
-		.map(([key, entry]) => ({ key, ...(entry as Object) })) // Include the key in each value
+		.map(([key, entry]) => ({ key, ...(entry as object) })) // Include the key in each value
 		.filter((entry) =>
 			filteringOptions.filtersIn?.length
 				? filteringOptions.filtersIn.includes(entry[filteringOptions.filterKey])
