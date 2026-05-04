@@ -30,16 +30,15 @@ export function filterAndSortData(
 
 			return aName.localeCompare(bName); // Compare normally if both are defined
 
-    // // Handle undefined or empty values
-    // if (!aName || aName.trim() === '' || /[^\w\s]/.test(aName)) {
-    //     return 1; // Push `a` to the end
-    // }
-    // if (!bName || bName.trim() === '' || /[^\w\s]/.test(bName)) {
-    //     return -1; // Push `b` to the end
-    // }
+			// // Handle undefined or empty values
+			// if (!aName || aName.trim() === '' || /[^\w\s]/.test(aName)) {
+			//     return 1; // Push `a` to the end
+			// }
+			// if (!bName || bName.trim() === '' || /[^\w\s]/.test(bName)) {
+			//     return -1; // Push `b` to the end
+			// }
 
-    // return aName.localeCompare(bName); // Compare normally if both are valid
-
+			// return aName.localeCompare(bName); // Compare normally if both are valid
 		};
 	}
 

@@ -12,7 +12,7 @@ export const behaviors = (dom) => {
 					if (prev && prev.nodeType === 3) // Node.TEXT_NODE is equivalent to 3
 					{
 						// Trim trailing whitespace
-						prev.nodeValue = prev.nodeValue ? prev.nodeValue.replace(/\s+$/, ''): null;
+						prev.nodeValue = prev.nodeValue ? prev.nodeValue.replace(/\s+$/, '') : null;
 
 						// Insert the hyphen for hyphenation
 						const hyphenSpan = dom.createElement('span');
@@ -20,9 +20,9 @@ export const behaviors = (dom) => {
 						hyphenSpan.textContent = '-';
 						prev.parentNode.insertBefore(hyphenSpan, el);
 					}
-					
+
 					// Replace the current behavior with an empty text node
-					return dom.createTextNode(''); 
+					return dom.createTextNode('');
 				}
 			},
 
