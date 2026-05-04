@@ -72,12 +72,17 @@
 	// Click handlers
 	function handleDocumentClick(ev: MouseEvent) {
 		if ((ev.target as HTMLElement).closest('[data-type="mark"]')) {
-			handleMarkClick(ev);
+			const key = (ev.target as HTMLElement)
+				.closest('[data-noteid]')
+				?.getAttribute('data-noteid');
+			if (key) handleFootnoteClick(key);
 		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
-			handleMarkendClick(ev);
+			const key = (ev.target as HTMLElement)
+				.closest('[data-noteid]')
+				?.getAttribute('data-noteid');
+			if (key) handleFootnoteClick(key);
 		} else if (selectedTextNode.id) {
-			unselectMarks();
-			unselectNotes();
+			clearAllHighlights();
 		}
 	}
 
@@ -93,7 +98,7 @@
 			resizeObserver.observe(el);
 
 			// reacts to DOM/text changes
-			let mutationTimeout: number;
+			let mutationTimeout: ReturnType<typeof setTimeout>;
 
 			mutationObserver = new MutationObserver(() => {
 				clearTimeout(mutationTimeout);
@@ -166,13 +171,14 @@
 		if (el.tagName === 'TEI-DIV' || el.tagName === 'TEI-P') {
 			clearAllHighlights();
 		} else if (el.tagName === 'TEI-RS') {
-			handleRsClick(el.getAttribute('key'));
+			const key = el.getAttribute('key');
+			if (key) handleRsClick(key as any);
 		} else if (el.classList.contains('footnote') || el.querySelector('.footnote')) {
 			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key);
+			if (key) handleFootnoteClick(key);
 		} else if (el.classList.contains('note-mark') || el.querySelector('.note-mark')) {
 			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key);
+			if (key) handleFootnoteClick(key);
 		} else {
 			clearAllHighlights();
 		}

@@ -18,7 +18,7 @@ export const behaviors = (dom) => {
 						const hyphenSpan = dom.createElement('span');
 						hyphenSpan.setAttribute('data-type', 'hyphen');
 						hyphenSpan.textContent = '-';
-						prev.parentNode.insertBefore(hyphenSpan, el);
+						prev.parentNode?.insertBefore(hyphenSpan, el);
 					}
 
 					// Replace the current behavior with an empty text node
@@ -28,7 +28,7 @@ export const behaviors = (dom) => {
 
 			// Insert Footnotes and extract note content
 			// --> wrapping of commented text happens in a client-side function (see below).
-			note: function (el) {
+			note: function (this: any, el: HTMLElement) {
 				// Create running index
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;

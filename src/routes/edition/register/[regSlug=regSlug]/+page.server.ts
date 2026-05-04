@@ -23,6 +23,9 @@ export const entries: EntryGenerator = () => {
 export const load: PageServerLoad = async ({ parent, params, url }) => {
 	const { regType, regSlug } = await parent();
 
-	const regAttributes = reg?.[regType]?.[regSlug];
+	const regAttributes =
+		regType && regSlug
+			? (reg as Record<string, Record<string, any>>)?.[regType]?.[regSlug]
+			: undefined;
 	return { regAttributes };
 };

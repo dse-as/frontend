@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
@@ -11,7 +11,7 @@
 	<h4 class="h4">Alle Dokumente</h4>
 	<ul>
 		{#each data.topicData?.docs as docId}
-			{@const docType = findEdTypeByDocId(docId)}
+			{@const docType = findEdTypeByDocId(docId as any)}
 			<li class="mt-2">
 				<a href={resolve(`/edition/${docId}`)}
 					>{data.fullMeta[docType]?.[docId].metadata.title_full}</a

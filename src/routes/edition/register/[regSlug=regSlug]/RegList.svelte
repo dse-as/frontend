@@ -10,8 +10,21 @@
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
 
+	type TRegEntry = Record<string, any> & { key?: string; name?: string; date?: { from?: string } };
+	type TRegListProps = {
+		isMultiColumn: boolean;
+		regType: string;
+		regItem?: string | null;
+		cheatPageHeightInRegSingleColView?: string;
+	};
+
 	// Props
-	let { isMultiColumn, regType, regItem = null, cheatPageHeightInRegSingleColView = '' } = $props();
+	let {
+		isMultiColumn,
+		regType,
+		regItem = null,
+		cheatPageHeightInRegSingleColView = ''
+	}: TRegListProps = $props();
 
 	// States for sorting and grouping
 	let hasGroupControls = $derived(['events', 'orgs', 'people', 'places'].includes(regType));
@@ -27,8 +40,8 @@
 	let allTypeKeys = $derived(
 		[
 			...new Set(
-				Object.values(reg[regType]).map((el) => {
-					return el.type;
+				Object.values((reg as any)[regType]).map((el) => {
+					return (el as TRegEntry).type;
 				})
 			)
 		].sort()
@@ -39,13 +52,14 @@
 	let sortVariableKeyForAlphabet = $derived(
 		regType === 'people' ? 'lastname' : regType === 'events' ? sortBy : 'name'
 	);
-	let currentAutoCatLabel: string | null = null;
+	let currentAutoCatLabel = $state<string | null>(null);
 	let autoCatLabels = $derived(
 		[
 			...new Set(
-				Object.values(reg[regType]).map((el) => {
+				Object.values((reg as any)[regType]).map((el) => {
+					const entry = el as TRegEntry;
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
-					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
+					return normalizeChars(entry[sortVariableKeyForAlphabet]?.[0]?.toUpperCase());
 				})
 			)
 		].sort()
@@ -54,11 +68,11 @@
 	// Scroll to the specific item
 	let regListScrollContainer: HTMLElement | undefined = $state();
 
-	function scrollToItem(itemKey) {
+	function scrollToItem(itemKey: string) {
 		const targetElement = document.getElementById(itemKey);
 		const offsetSortControls =
 			hasGroupControls && hasSortControls ? 92 : hasGroupControls || hasSortControls ? 60 : 0;
-		if (targetElement) {
+		if (targetElement && regListScrollContainer) {
 			regListScrollContainer.scrollTo({
 				top: targetElement.offsetTop - regListScrollContainer.offsetTop - offsetSortControls,
 				behavior: 'smooth'
@@ -93,7 +107,7 @@
 	{/if}
 {/snippet}
 <!-- Snippet for Register Items -->
-{#snippet regListItem(item)}
+{#snippet regListItem(item: TRegEntry)}
 	<a
 		id={item.key}
 		class={[
@@ -109,7 +123,7 @@
 {/snippet}
 
 <!-- Snippet for Group Titles (i.e. autoCatLabels or Category Names) -->
-{#snippet groupTitle(value)}
+{#snippet groupTitle(value: string)}
 	<button
 		onclick={async () => {
 			if (isMultiColumn) {
@@ -146,7 +160,7 @@
 	{#if hasSortControls}
 		<div class={['flex flex-wrap items-center gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<p>Sortierung:</p>
-			{#snippet sortButton(name, sortKey)}
+			{#snippet sortButton(name: string, sortKey: string)}
 				<button
 					class={[
 						uiRegSortBy.id === sortKey
@@ -247,18 +261,18 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label || typeKey || '?')}
-				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
+				{@render groupTitle((dictReg as any)[regType]?.type_labels?.[typeKey]?.label || typeKey || '?')}
+				{#each filterAndSortData((reg as any)[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] }) as item ((item as TRegEntry).key)}
 					{@render regListItem(item)}
 				{/each}
 			{/each}
 		{:else if regType}
 			<!-- All other types -->
-			{#each filterAndSortData(reg[regType], sortBy) as item (item.key)}
+			{#each filterAndSortData((reg as any)[regType], sortBy) as item ((item as TRegEntry).key)}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
-						? item.date.from.slice(0, 4)
-						: normalizeChars(item[sortBy][0]?.toUpperCase())}
+						? (item as TRegEntry).date?.from?.slice(0, 4)
+						: normalizeChars((item as TRegEntry)[sortBy]?.[0]?.toUpperCase())}
 				{#if autoCatLabel && autoCatLabel !== currentAutoCatLabel}
 					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=auto)` -->
 					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}

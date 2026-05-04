@@ -42,14 +42,14 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={data.regSlug} regItem={null} />
+		<RegList isMultiColumn={true} regType={data.regSlug || ''} regItem={null} />
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<RegList
 			isMultiColumn={false}
-			regType={data.regType}
+			regType={data.regType || ''}
 			regItem={data.regSlug}
 			{cheatPageHeightInRegSingleColView}
 		/>

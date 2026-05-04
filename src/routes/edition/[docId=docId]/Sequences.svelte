@@ -189,7 +189,7 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
-	{@const itemType = findEdTypeByDocId(itemId)}
+	{@const itemType = findEdTypeByDocId(itemId as any)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
 		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
@@ -304,7 +304,7 @@
 					Sequenz: <a
 						class="hover:underline"
 						href={resolve(
-							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}`
+							`${dictSeqTyped[currentSeq.type]?.url_overview || '/sequences'}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"

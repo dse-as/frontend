@@ -10,18 +10,31 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
-	let { fullMeta, ovType, ovAttrs, cheatPageHeightInRegSingleColView = '' } = $props();
+	type TOverviewContentProps = {
+		fullMeta: Record<string, Record<string, any>>;
+		ovType: string;
+		ovAttrs: Record<string, any>;
+		cheatPageHeightInRegSingleColView?: string;
+	};
+
+	let {
+		fullMeta,
+		ovType,
+		ovAttrs,
+		cheatPageHeightInRegSingleColView = ''
+	}: TOverviewContentProps = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
-	function getScrollPosition(ev) {
+	function getScrollPosition(ev: Event) {
 		const maxScroll = 300; // in pixel
-		opacityMetadataTable = Math.max(0, Math.min(1 - ev.target.scrollTop / maxScroll, 1)) * 100;
+		const target = ev.currentTarget as HTMLElement;
+		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
 </script>
 
 <!-- Snippet: Metadata Table -->
-{#snippet MetadataTable(attKeys)}
+{#snippet MetadataTable(attKeys: Array<string | false | null | undefined>)}
 	<!-- {#snippet MetadataTable(attKeys: keyof TRegister['register'][TEntityTypes][TRegKeys])} -->
 	<table
 		class="my-10 min-w-full border-gray-300 bg-white"
@@ -50,7 +63,7 @@
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
-{#snippet MetadataValue(attKey, value)}
+{#snippet MetadataValue(attKey: string, value: any)}
 	{#if attKey === 'gndNumber'}
 		<a
 			class="inline-block underline"
@@ -80,7 +93,7 @@
 {/snippet}
 
 <!-- Snippet for LinkedItemsList -->
-{#snippet LinkedItemsContainer(docIds)}
+{#snippet LinkedItemsContainer(docIds: string[])}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
 		{#each docIds as docId}
 			{@render LinkedItems(docId)}
@@ -90,8 +103,8 @@
 {/snippet}
 
 <!-- Snippet for LinkedItems (inside LinkedItemsList) -->
-{#snippet LinkedItems(itemId)}
-	{@const itemType = findEdTypeByDocId(itemId)}
+{#snippet LinkedItems(itemId: string)}
+	{@const itemType = findEdTypeByDocId(itemId as any)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
 		href={resolve(`/edition/${itemId}`)}

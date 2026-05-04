@@ -8,6 +8,15 @@
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
 	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
 
+	type TOvEntry = Record<string, any> & { key?: string; name?: string; date?: { from?: string } };
+	type TOverviewListProps = {
+		isMultiColumn: boolean;
+		ovMeta: Record<string, TOvEntry>;
+		ovType: string;
+		ovItem?: string | null;
+		cheatPageHeightInRegSingleColView?: string;
+	};
+
 	// Props
 	let {
 		isMultiColumn,
@@ -15,7 +24,7 @@
 		ovType,
 		ovItem = null,
 		cheatPageHeightInRegSingleColView = ''
-	} = $props();
+	}: TOverviewListProps = $props();
 
 	// States for sorting and grouping
 	let hasGroupControls = $derived(
@@ -33,7 +42,7 @@
 	let allTypeKeys = $derived(
 		[
 			...new Set(
-				Object.values(ovMeta).map((el) => {
+				Object.values(ovMeta).map((el: TOvEntry) => {
 					return el.type;
 				})
 			)
@@ -45,13 +54,13 @@
 	let sortVariableKeyForAlphabet = $derived(
 		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
 	);
-	let currentAutoCatLabel: string | null = null;
+	let currentAutoCatLabel = $state<string | null>(null);
 	let autoCatLabels = $derived(
 		[
 			...new Set(
-				Object.values(ovMeta).map((el) => {
+				Object.values(ovMeta).map((el: TOvEntry) => {
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
-					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
+					return normalizeChars(el[sortVariableKeyForAlphabet]?.[0]?.toUpperCase());
 				})
 			)
 		].sort()
@@ -60,11 +69,11 @@
 	// Scroll to the specific item
 	let regListScrollContainer: HTMLElement | undefined = $state();
 
-	function scrollToItem(itemKey) {
+	function scrollToItem(itemKey: string) {
 		const targetElement = document.getElementById(itemKey);
 		const offsetSortControls =
 			hasGroupControls && hasSortControls ? 92 : hasGroupControls || hasSortControls ? 60 : 0;
-		if (targetElement) {
+		if (targetElement && regListScrollContainer) {
 			regListScrollContainer.scrollTo({
 				top: targetElement.offsetTop - regListScrollContainer.offsetTop - offsetSortControls,
 				behavior: 'smooth'
@@ -78,7 +87,7 @@
 </script>
 
 <!-- Snippet for Register Items -->
-{#snippet regListItem(item)}
+{#snippet regListItem(item: TOvEntry)}
 	<a
 		id={item.key}
 		class={[
@@ -94,7 +103,7 @@
 {/snippet}
 
 <!-- Snippet for Group Titles (i.e. autoCatLabels or Category Names) -->
-{#snippet groupTitle(value)}
+{#snippet groupTitle(value: string)}
 	<button
 		onclick={async () => {
 			if (isMultiColumn) {
@@ -131,7 +140,7 @@
 	{#if hasSortControls}
 		<div class={['flex flex-wrap items-center gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<p>Sortierung:</p>
-			{#snippet sortButton(name, sortKey)}
+			{#snippet sortButton(name: string, sortKey: string)}
 				<button
 					class={[
 						uiRegSortBy.id === sortKey
@@ -229,18 +238,18 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(dictDocPicker[ovType].type_labels[typeKey]?.label || typeKey || '?')}
-				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
+				{@render groupTitle((dictDocPicker as any)[ovType]?.type_labels?.[typeKey]?.label || typeKey || '?')}
+				{#each filterAndSortData(ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] }) as item}
 					{@render regListItem(item)}
 				{/each}
 			{/each}
 		{:else if ovType}
 			<!-- All other types -->
-			{#each filterAndSortData(ovMeta, sortBy) as item (item.key)}
+			{#each filterAndSortData(ovMeta, sortBy) as item ((item as TOvEntry).key)}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
-						? item.date.from.slice(0, 4)
-						: normalizeChars(item[sortBy][0]?.toUpperCase())}
+						? (item as TOvEntry).date?.from?.slice(0, 4)
+						: normalizeChars((item as TOvEntry)[sortBy]?.[0]?.toUpperCase())}
 				{#if autoCatLabel && autoCatLabel !== currentAutoCatLabel}
 					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=auto)` -->
 					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}

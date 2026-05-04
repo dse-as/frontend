@@ -17,7 +17,7 @@
 		return match ? match[1] : '';
 	});
 
-	let stateMetadata = $state('eckdaten');
+	let stateMetadata = $state<string | null>('eckdaten');
 	let isExpandedMetadata = $state(true);
 
 	let buttonIsSticky = $state(false);
@@ -72,7 +72,7 @@
 				}}>{text}</button
 			>
 		{/snippet}
-		{#snippet metadataEntry(label, content)}
+		{#snippet metadataEntry(label: string, content: string)}
 			<tr>
 				<td class="w-80 px-4 py-2 font-bold">{label}:</td>
 				<td class="px-4 py-2 text-left">{@html content}</td>
@@ -117,7 +117,7 @@
 						<div data-dom="global_entities" class="flex flex-wrap gap-4">
 							{#each Object.keys(dictReg) as regType}
 								{@const regKeys = docMeta.metadata.keywords[regType]}
-								{#each regKeys ? Object.values(regKeys) : [] as regKey}
+								{#each regKeys ? (Object.values(regKeys) as string[]) : [] as regKey}
 									<a
 										class="whitespace-nowrap text-surface-950"
 										data-type="entity"
@@ -126,7 +126,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										{reg[regType][regKey]?.name}
+										{(reg as any)[regType]?.[regKey]?.name}
 									</a>
 								{/each}
 							{/each}

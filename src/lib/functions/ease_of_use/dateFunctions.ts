@@ -2,7 +2,7 @@ export function formatDateToGerman(isoDate: string) {
 	const date = new Date(isoDate);
 
 	// Check if the date is valid
-	if (isNaN(date)) {
+	if (isNaN(date.getTime())) {
 		return 'Invalid date format';
 	}
 
@@ -15,11 +15,15 @@ export function formatDateToGerman(isoDate: string) {
 		return year.toString();
 	} else if (parts.length === 2) {
 		// YYYY-MM
-		const options = { month: 'long', year: 'numeric' };
+		const options: Intl.DateTimeFormatOptions = { month: 'long', year: 'numeric' };
 		return new Intl.DateTimeFormat('de-DE', options).format(date);
 	} else {
 		// YYYY-MM-DD
-		const options = { day: 'numeric', month: 'long', year: 'numeric' };
+		const options: Intl.DateTimeFormatOptions = {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric'
+		};
 		return new Intl.DateTimeFormat('de-DE', options).format(date);
 	}
 }

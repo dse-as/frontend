@@ -93,7 +93,7 @@ export type TRegister = {
 		bibls: {
 			[key in TBiblsKeys]: {
 				name: string;
-				type: TLettersTypes;
+				type: TBiblsTypes;
 				authorId: TPeopleKeys; //! string to account for uncertainties
 				pubDate: string;
 				gndNumber?: string; // optional

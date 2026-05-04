@@ -1,12 +1,18 @@
+type TFilterAndSortOptions = {
+	filterKey?: string;
+	filtersIn?: unknown[];
+	filtersOut?: unknown[];
+};
+
 export function filterAndSortData(
-	item,
-	sortBy,
-	filteringOptions = { filterKey: '', filtersIn: [], filtersOut: [] }
+	item: Record<string, any>,
+	sortBy: string,
+	filteringOptions: TFilterAndSortOptions = { filterKey: '', filtersIn: [], filtersOut: [] }
 ) {
-	let sortFunction;
+	let sortFunction: (a: Record<string, any>, b: Record<string, any>) => number;
 	if (sortBy === 'date') {
 		sortFunction = (a, b) => {
-			const compare = (x, y) => {
+			const compare = (x?: string, y?: string) => {
 				if (!x && !y) return 0; // treat as equal
 				if (!x) return 1; // Push `x` to the end
 				if (!y) return -1; // Push `y` to the end
@@ -47,12 +53,12 @@ export function filterAndSortData(
 		.map(([key, entry]) => ({ key, ...(entry as object) })) // Include the key in each value
 		.filter((entry) =>
 			filteringOptions.filtersIn?.length
-				? filteringOptions.filtersIn.includes(entry[filteringOptions.filterKey])
+				? filteringOptions.filtersIn.includes(entry[filteringOptions.filterKey || ''])
 				: true
 		)
 		.filter((entry) =>
 			filteringOptions.filtersOut?.length
-				? !filteringOptions.filtersOut.includes(entry[filteringOptions.filterKey])
+				? !filteringOptions.filtersOut.includes(entry[filteringOptions.filterKey || ''])
 				: true
 		)
 		.sort((a, b) => sortFunction(a, b));

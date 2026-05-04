@@ -14,7 +14,9 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF[] = $derived([page.url.searchParams?.get('mode') as TDFLF] || ['LF']);
+	let dflf: TDFLF[] = $derived.by(() =>
+		page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+	);
 	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
@@ -48,7 +50,7 @@
 	<ToggleGroup
 		value={dflf}
 		onValueChange={(details) => {
-			dflf = details.value;
+			dflf = details.value as TDFLF[];
 		}}
 	>
 		<ToggleGroup.Item value="LF" class="h-10 w-60 rounded-l-full border border-surface-950-50">
