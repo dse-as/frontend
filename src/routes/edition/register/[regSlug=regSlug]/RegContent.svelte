@@ -10,18 +10,40 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
-	let { fullMeta, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
+	type TRegContentProps = {
+		fullMeta: Record<string, Record<string, any>>;
+		regType: string;
+		regAttributes: Record<string, any>;
+		cheatPageHeightInRegSingleColView?: string;
+	};
+
+	const regData = reg as {
+		orgs: Record<string, { name?: string }>;
+		people: Record<string, { name?: string }>;
+	} & Record<string, unknown>;
+	const dictRegData = dictReg as Record<
+		string,
+		{ attributes?: Record<string, { label?: string }> }
+	>;
+
+	let {
+		fullMeta,
+		regType,
+		regAttributes,
+		cheatPageHeightInRegSingleColView = ''
+	}: TRegContentProps = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
-	function getScrollPosition(ev) {
+	function getScrollPosition(ev: Event) {
 		const maxScroll = 300; // in pixel
-		opacityMetadataTable = Math.max(0, Math.min(1 - ev.target.scrollTop / maxScroll, 1)) * 100;
+		const target = ev.currentTarget as HTMLElement;
+		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
 </script>
 
 <!-- Snippet: Metadata Table -->
-{#snippet MetadataTable(attKeys)}
+{#snippet MetadataTable(attKeys: Array<string | false | null | undefined>)}
 	<!-- {#snippet MetadataTable(attKeys: keyof TRegister['register'][TEntityTypes][TRegKeys])} -->
 	<table
 		class="my-10 min-w-full border-gray-300 bg-white"
@@ -40,7 +62,9 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictReg[regType].attributes[attKey]?.label}:</td>
+						<td class="w-80 px-4 py-2 font-bold"
+							>{dictRegData[regType]?.attributes?.[attKey]?.label}:</td
+						>
 						<td class="px-4 py-2 text-left"
 							>{@render MetadataValue(attKey, regAttributes[attKey])}</td
 						>
@@ -52,7 +76,7 @@
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
-{#snippet MetadataValue(attKey, value)}
+{#snippet MetadataValue(attKey: string, value: any)}
 	{#if attKey === 'gndNumber'}
 		<a
 			class="inline-block underline"
@@ -70,11 +94,11 @@
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.orgs[value]?.name}`}
+			{`${regData.orgs?.[value as string]?.name}`}
 		</a>
 	{:else if attKey === 'authorId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.people[value]?.name}`}
+			{`${regData.people?.[value as string]?.name}`}
 		</a>
 	{:else}
 		<span>{value}</span>
@@ -82,7 +106,7 @@
 {/snippet}
 
 <!-- Snippet for LinkedItemsList -->
-{#snippet LinkedItemsContainer(docIds)}
+{#snippet LinkedItemsContainer(docIds: string[])}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
 		{#each docIds as docId}
 			{@render LinkedItems(docId)}
@@ -92,8 +116,8 @@
 {/snippet}
 
 <!-- Snippet for LinkedItems (inside LinkedItemsList) -->
-{#snippet LinkedItems(itemId)}
-	{@const itemType = findEdTypeByDocId(itemId)}
+{#snippet LinkedItems(itemId: string)}
+	{@const itemType = findEdTypeByDocId(itemId as any)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
 		href={resolve(`/edition/${itemId}?mode=DF`)}

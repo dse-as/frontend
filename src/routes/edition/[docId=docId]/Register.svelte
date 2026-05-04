@@ -26,7 +26,7 @@
 
 	// Collect all regKeys in the register that are linked to the document
 	let regEntries = $derived.by(() => {
-		const regEntries = {};
+		const regEntries: Record<string, string[]> = {};
 
 		Object.keys(reg).forEach((regType) => {
 			regEntries[regType] = [];
@@ -79,7 +79,7 @@
 							selectedTextNode.id === regKey && 'bg-mist-300 hover:bg-mist-300!'
 						]}
 						onclick={() => {
-							handleRegisterClick(regKey);
+							handleRegisterClick(regKey as any);
 						}}
 					>
 						<p class="text-lg">{reg[regType][regKey].name}</p>

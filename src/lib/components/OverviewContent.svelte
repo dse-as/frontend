@@ -17,6 +17,15 @@
 		cheatPageHeightInRegSingleColView?: string;
 	};
 
+	const regData = reg as {
+		orgs: Record<string, { name?: string }>;
+		people: Record<string, { name?: string }>;
+	} & Record<string, unknown>;
+	const dictRegData = dictReg as Record<
+		string,
+		{ attributes?: Record<string, { label?: string }> }
+	>;
+
 	let {
 		fullMeta,
 		ovType,
@@ -53,7 +62,9 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictReg[ovType].attributes[attKey]?.label}:</td>
+						<td class="w-80 px-4 py-2 font-bold"
+							>{dictRegData[ovType]?.attributes?.[attKey]?.label}:</td
+						>
 						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, ovAttrs[attKey])}</td>
 					</tr>
 				</tbody>
@@ -81,11 +92,11 @@
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.orgs[value]?.name}`}
+			{`${regData.orgs?.[value as string]?.name}`}
 		</a>
 	{:else if attKey === 'authorId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.people[value]?.name}`}
+			{`${regData.people?.[value as string]?.name}`}
 		</a>
 	{:else}
 		<span>{value}</span>

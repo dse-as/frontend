@@ -3,6 +3,7 @@
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 
 	let { data } = $props();
+	const fullMetaRecord = $derived(data.fullMeta as Record<string, Record<string, any>>);
 </script>
 
 <h1 class="h1">{data.topicData?.preamble}</h1>
@@ -12,10 +13,9 @@
 	<ul>
 		{#each data.topicData?.docs as docId}
 			{@const docType = findEdTypeByDocId(docId as any)}
+			{@const docMeta = docType ? fullMetaRecord[docType]?.[docId] : undefined}
 			<li class="mt-2">
-				<a href={resolve(`/edition/${docId}`)}
-					>{data.fullMeta[docType]?.[docId].metadata.title_full}</a
-				>
+				<a href={resolve(`/edition/${docId}`)}>{docMeta?.metadata?.title_full || docId}</a>
 			</li>
 		{/each}
 	</ul>

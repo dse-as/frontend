@@ -3,15 +3,17 @@ import type { EntryGenerator } from './$types';
 import { register as reg } from '$lib/data/register.json';
 export const prerender = true;
 
+const regRecord = reg as Record<string, Record<string, unknown>>;
+
 export const entries: EntryGenerator = () => {
 	// Extracting first-order keys
-	const firstOrderKeyObjects = Object.keys(reg).map((firstKey) => {
+	const firstOrderKeyObjects = Object.keys(regRecord).map((firstKey) => {
 		return { regSlug: firstKey };
 	});
 
 	// Extracting second-order keys
-	const secondOrderKeyObjects = Object.keys(reg).flatMap((firstKey) => {
-		return Object.keys(reg[firstKey]).map((secondKey) => {
+	const secondOrderKeyObjects = Object.keys(regRecord).flatMap((firstKey) => {
+		return Object.keys(regRecord[firstKey] || {}).map((secondKey) => {
 			return { regSlug: secondKey };
 		});
 	});

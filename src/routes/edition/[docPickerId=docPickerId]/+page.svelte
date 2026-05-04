@@ -37,6 +37,7 @@
 	// Ideally the height would be relative (e.g. h-full).
 	// However, this will make overflow its flex content (i.e. the list and linked items).
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
+	const fullMetaRecord = $derived(data.fullMeta as Record<string, Record<string, any>>);
 	const edType = $derived(data.edType || '');
 	const edSlug = $derived(data.edSlug || '');
 </script>
@@ -46,7 +47,7 @@
 	<div class="absolute top-45 left-0 w-full px-10">
 		<OverviewList
 			isMultiColumn={true}
-			ovMeta={data.fullMeta[edType]}
+			ovMeta={fullMetaRecord[edType]}
 			ovType={edSlug}
 			ovItem={null}
 		/>
@@ -56,14 +57,14 @@
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<OverviewList
 			isMultiColumn={false}
-			ovMeta={data.fullMeta[edType]}
+			ovMeta={fullMetaRecord[edType]}
 			ovType={edType}
 			ovItem={edSlug}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<OverviewContent
 			ovType={edType}
-			ovAttrs={data.fullMeta[edType]?.[edSlug]}
+			ovAttrs={fullMetaRecord[edType]?.[edSlug]}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
 		/>

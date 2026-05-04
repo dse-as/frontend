@@ -50,15 +50,19 @@ export function filterAndSortData(
 
 	// Filter and sort item
 	return Object.entries(item)
-		.map(([key, entry]) => ({ key, ...(entry as object) })) // Include the key in each value
+		.map(([key, entry]) => ({ key, ...(entry as object) }) as Record<string, unknown>) // Include the key in each value
 		.filter((entry) =>
 			filteringOptions.filtersIn?.length
-				? filteringOptions.filtersIn.includes(entry[filteringOptions.filterKey || ''])
+				? filteringOptions.filtersIn.includes(
+						(entry as Record<string, unknown>)[filteringOptions.filterKey || '']
+					)
 				: true
 		)
 		.filter((entry) =>
 			filteringOptions.filtersOut?.length
-				? !filteringOptions.filtersOut.includes(entry[filteringOptions.filterKey || ''])
+				? !filteringOptions.filtersOut.includes(
+						(entry as Record<string, unknown>)[filteringOptions.filterKey || '']
+					)
 				: true
 		)
 		.sort((a, b) => sortFunction(a, b));

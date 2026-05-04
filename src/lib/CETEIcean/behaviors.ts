@@ -1,6 +1,6 @@
 const NOTE_ID_PREFIX = 'note_';
 
-export const behaviors = (dom) => {
+export const behaviors = (dom: Document) => {
 	return {
 		tei: {
 			// Handle Line Breaks and Hyphenation

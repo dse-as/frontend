@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 
-	let corrData = $derived(seqAll.correspondence);
+	type TCorrEntry = {
+		url_slug?: string | null;
+		name: string;
+		preamble?: string;
+		personId?: string;
+		docs: string[];
+	};
+
+	let corrData = $derived(seqAll.correspondence as Record<string, TCorrEntry>);
 	const specialCorrs = ['corr_spec_0001'];
 </script>
 

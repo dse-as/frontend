@@ -54,7 +54,7 @@
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<RegContent
-			regType={data.regType}
+			regType={data.regType || ''}
 			regAttributes={data.regAttributes}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
