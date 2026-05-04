@@ -72,14 +72,10 @@
 	// Click handlers
 	function handleDocumentClick(ev: MouseEvent) {
 		if ((ev.target as HTMLElement).closest('[data-type="mark"]')) {
-			const key = (ev.target as HTMLElement)
-				.closest('[data-noteid]')
-				?.getAttribute('data-noteid');
+			const key = (ev.target as HTMLElement).closest('[data-noteid]')?.getAttribute('data-noteid');
 			if (key) handleFootnoteClick(key);
 		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
-			const key = (ev.target as HTMLElement)
-				.closest('[data-noteid]')
-				?.getAttribute('data-noteid');
+			const key = (ev.target as HTMLElement).closest('[data-noteid]')?.getAttribute('data-noteid');
 			if (key) handleFootnoteClick(key);
 		} else if (selectedTextNode.id) {
 			clearAllHighlights();

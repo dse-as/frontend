@@ -54,9 +54,7 @@
 				: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 	]}
 >
-	{data.regView === 'regView1'
-		? 'Register'
-		: (dictReg as any)[data.regType || '']?.register_name}
+	{data.regView === 'regView1' ? 'Register' : (dictReg as any)[data.regType || '']?.register_name}
 </h1>
 
 <!-- Navigation -->

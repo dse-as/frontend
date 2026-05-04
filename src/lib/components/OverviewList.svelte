@@ -238,8 +238,10 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle((dictDocPicker as any)[ovType]?.type_labels?.[typeKey]?.label || typeKey || '?')}
-				{#each filterAndSortData(ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] }) as item}
+				{@render groupTitle(
+					(dictDocPicker as any)[ovType]?.type_labels?.[typeKey]?.label || typeKey || '?'
+				)}
+				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item}
 					{@render regListItem(item)}
 				{/each}
 			{/each}

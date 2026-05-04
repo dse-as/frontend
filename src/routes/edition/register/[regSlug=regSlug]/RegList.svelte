@@ -261,8 +261,10 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle((dictReg as any)[regType]?.type_labels?.[typeKey]?.label || typeKey || '?')}
-				{#each filterAndSortData((reg as any)[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] }) as item ((item as TRegEntry).key)}
+				{@render groupTitle(
+					(dictReg as any)[regType]?.type_labels?.[typeKey]?.label || typeKey || '?'
+				)}
+				{#each filterAndSortData( (reg as any)[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item ((item as TRegEntry).key)}
 					{@render regListItem(item)}
 				{/each}
 			{/each}
