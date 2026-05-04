@@ -18,9 +18,9 @@
 <div class="min-h-screen px-10 pt-10 pb-20">{@render children()}</div>
 
 <footer
-	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-500"
+	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-800"
 >
-	<p class="mb-5">Diese Webseite befindet sich in einer Beta-Version</p>
+	<p class="mb-5">Diese Webseite befindet sich in einer Alpha-Version.</p>
 	<p>
 		<a
 			class=" underline"

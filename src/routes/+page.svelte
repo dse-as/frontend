@@ -7,6 +7,6 @@
 		Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte,
 		Intermedialität, Netzwerke
 	</h1>
-	<h2 class="mt-35 -rotate-3 text-6xl font-bold text-red-500">Beta-Version</h2>
+	<h2 class="mt-35 -rotate-3 text-6xl font-bold text-red-500">Alpha-Version</h2>
 	<p class="mt-5 -rotate-3 text-4xl font-bold text-red-500">Work in Progress!</p>
 </div>
