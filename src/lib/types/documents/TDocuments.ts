@@ -1,29 +1,22 @@
-import { type TEventsKeys } from '../register/TEventsKeys';
-import { type TOrgsKeys } from '../register/TOrgsKeys';
-import { type TPeopleKeys } from '../register/TPeopleKeys';
-import { type TPlacesKeys } from '../register/TPlacesKeys';
+// Keys
+import { type TLettersKeys } from './TLettersKeys';
 import { type TSmallformsKeys } from './TSmallformsKeys';
 import { type TLongformsKeys } from './TLongformsKeys';
-import { type TLettersKeys } from './TLettersKeys';
+
+// Types
+import { type TLettersTypes } from './TLettersTypes';
+import { type TSmallformsTypes } from './TSmallformsTypes';
+import { type TLongformsTypes } from './TLongformTypes';
+
+// From Register
+import { type TPeopleKeys } from '../register/TPeopleKeys';
+import { type TPlacesKeys } from '../register/TPlacesKeys';
+import { type TEventsKeys } from '../register/TEventsKeys';
+import { type TOrgsKeys } from '../register/TOrgsKeys';
 import { type TBiblsKeys } from '../register/TBiblsKeys';
 import { type TKeywordsKeys } from '../register/TKeywordsKeys';
 
-export type TdocType =
-	| 'Typoskript'
-	| 'Manuskript'
-	| 'Feuilleton'
-	| 'Rezension'
-	| 'Beilage'
-	| 'Fotoreportage'
-	| 'Fotografie'
-	| 'Zeitschriftenartikel'
-	| 'Zeitungsartikel'
-	| 'Sammelband-Beitrag'
-	| 'Serie';
-
-export type TDocTypes = 'letters' | 'smallforms' | 'longforms';
-export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys;
-
+// --- Document -------------------------------------------------------
 export type TDocuments = {
 	meta: {
 		generated_by: string;
@@ -31,28 +24,50 @@ export type TDocuments = {
 		generated_on: string;
 		description: string;
 	};
-	letters: {
-		[key in TLettersKeys]: {
-			slug: string; //! discuss whether this is identical to key
-			docType: TdocType;
-			metadata: {
-				authors: string[];
-				pubDate: string;
-				summary: string;
-				title_full: string;
-				title_short: string;
-				label: string;
-				editor_workflow: 'ez_ttf_of';
-				year: string;
-				pubPosthumOnly: boolean;
-				pubPlace: string;
-				signature: string;
-				pubDetails: string;
-				textstufen_edited: string;
-				textzeugen_nonedited: string;
-				series: string;
-				comment: string;
-				keywords: {
+	documents: {
+		letters: {
+			[key in TLettersKeys]: {
+				slug?: string; //! discuss whether this is identical to key
+				name: string;
+				date: { from: string; to: string };
+				type: TLettersTypes;
+				metadata: {
+					authors: string[];
+					pubDate: string;
+					summary: string;
+					title_full: string;
+					title_short: string;
+					label: string;
+					editor_workflow: 'ez_ttf_of';
+					year: string;
+					pubPosthumOnly: boolean;
+					pubPlace: string;
+					signature: string;
+					pubDetails: string;
+					textstufen_edited: string;
+					textzeugen_nonedited: string;
+					series: string;
+					comment: string;
+					keywords: {
+						people?: TPeopleKeys[];
+						places?: TPlacesKeys[];
+						events?: TEventsKeys[];
+						orgs?: TOrgsKeys[];
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
+						bibls?: TBiblsKeys[];
+						keywords?: TKeywordsKeys[];
+					};
+					maximum: 'keine';
+					travel: '';
+					archiveCollation: '';
+					pubSecondary: '';
+					urlOnlineResource: '';
+					note: '';
+				};
+				entities: {
+					//! unsure if I should drop this, since fully redundant with register.json
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -63,56 +78,58 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
-				maximum: 'keine';
-				travel: '';
-				archiveCollation: '';
-				pubSecondary: '';
-				urlOnlineResource: '';
-				note: '';
-			};
-			entities: {
-				//! unsure if I should drop this, since fully redundant with register.json
-				people?: TPeopleKeys[];
-				places?: TPlacesKeys[];
-				events?: TEventsKeys[];
-				orgs?: TOrgsKeys[];
-				smallforms?: TSmallformsKeys[];
-				longforms?: TLongformsKeys[];
-				letters?: TLettersKeys[];
-				bibls?: TBiblsKeys[];
-				keywords?: TKeywordsKeys[];
-			};
-			manuscript: {
-				url_iiifs: string[];
-			};
-			numPages: number | null;
-			edition: {
-				fullyEdited: boolean;
+				manuscript: {
+					url_iiifs: string[];
+				};
+				numPages: number | null;
+				edition: {
+					fullyEdited: boolean;
+				};
 			};
 		};
-	};
-	smallforms: {
-		[key in TSmallformsKeys]: {
-			slug: string; //! discuss whether this is identical to key
-			docType: TdocType;
-			metadata: {
-				authors: string[];
-				pubDate: string;
-				summary: string;
-				title_full: string;
-				title_short: string;
-				label: string;
-				editor_workflow: 'ez_ttf_of';
-				year: string;
-				pubPosthumOnly: boolean;
-				pubPlace: string;
-				signature: string;
-				pubDetails: string;
-				textstufen_edited: string;
-				textzeugen_nonedited: string;
-				series: string;
-				comment: string;
-				keywords: {
+		smallforms: {
+			[key in TSmallformsKeys]: {
+				slug?: string; //! discuss whether this is identical to key
+				name: string;
+				date: { from: string; to: string };
+				type: TSmallformsTypes;
+				metadata: {
+					authors: string[];
+					pubDate: string;
+					summary: string;
+					title_full: string;
+					title_short: string;
+					label: string;
+					editor_workflow: 'ez_ttf_of';
+					year: string;
+					pubPosthumOnly: boolean;
+					pubPlace: string;
+					signature: string;
+					pubDetails: string;
+					textstufen_edited: string;
+					textzeugen_nonedited: string;
+					series: string;
+					comment: string;
+					keywords: {
+						people?: TPeopleKeys[];
+						places?: TPlacesKeys[];
+						events?: TEventsKeys[];
+						orgs?: TOrgsKeys[];
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
+						bibls?: TBiblsKeys[];
+						keywords?: TKeywordsKeys[];
+					};
+					maximum: string; //! what is this?
+					travel: string; //! what is this?
+					archiveCollation: string;
+					pubSecondary: string;
+					urlOnlineResource: string;
+					note: string;
+				};
+				entities: {
+					//! unsure if I should drop this, since fully redundant with register.json
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -123,56 +140,58 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
-				maximum: string; //! what is this?
-				travel: string; //! what is this?
-				archiveCollation: string;
-				pubSecondary: string;
-				urlOnlineResource: string;
-				note: string;
-			};
-			entities: {
-				//! unsure if I should drop this, since fully redundant with register.json
-				people?: TPeopleKeys[];
-				places?: TPlacesKeys[];
-				events?: TEventsKeys[];
-				orgs?: TOrgsKeys[];
-				smallforms?: TSmallformsKeys[];
-				longforms?: TLongformsKeys[];
-				letters?: TLettersKeys[];
-				bibls?: TBiblsKeys[];
-				keywords?: TKeywordsKeys[];
-			};
-			manuscript: {
-				iiif_urls: string[];
-			};
-			numPages: number | null;
-			edition: {
-				fullyEdited: boolean;
+				manuscript: {
+					iiif_urls: string[];
+				};
+				numPages: number | null;
+				edition: {
+					fullyEdited: boolean;
+				};
 			};
 		};
-	};
-	longforms: {
-		[key in TLongformsKeys]: {
-			slug: string; //! discuss whether this is identical to key
-			docType: TdocType;
-			metadata: {
-				authors: string[];
-				pubDate: string;
-				summary: string;
-				title_full: string;
-				title_short: string;
-				label: string;
-				editor_workflow: 'ez_ttf_of';
-				year: string;
-				pubPosthumOnly: boolean;
-				pubPlace: string;
-				signature: string;
-				pubDetails: string;
-				textstufen_edited: string;
-				textzeugen_nonedited: string;
-				series: string;
-				comment: string;
-				keywords: {
+		longforms: {
+			[key in TLongformsKeys]: {
+				slug?: string; //! discuss whether this is identical to key
+				name: string;
+				date: { from: string; to: string };
+				type: TLongformsTypes;
+				metadata: {
+					authors: string[];
+					pubDate: string;
+					summary: string;
+					title_full: string;
+					title_short: string;
+					label: string;
+					editor_workflow: 'ez_ttf_of';
+					year: string;
+					pubPosthumOnly: boolean;
+					pubPlace: string;
+					signature: string;
+					pubDetails: string;
+					textstufen_edited: string;
+					textzeugen_nonedited: string;
+					series: string;
+					comment: string;
+					keywords: {
+						people?: TPeopleKeys[];
+						places?: TPlacesKeys[];
+						events?: TEventsKeys[];
+						orgs?: TOrgsKeys[];
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
+						bibls?: TBiblsKeys[];
+						keywords?: TKeywordsKeys[];
+					};
+					maximum: 'keine';
+					travel: '';
+					archiveCollation: '';
+					pubSecondary: '';
+					urlOnlineResource: '';
+					note: '';
+				};
+				entities: {
+					//! unsure if I should drop this, since fully redundant with register.json
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -183,32 +202,31 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
-				maximum: 'keine';
-				travel: '';
-				archiveCollation: '';
-				pubSecondary: '';
-				urlOnlineResource: '';
-				note: '';
-			};
-			entities: {
-				//! unsure if I should drop this, since fully redundant with register.json
-				people?: TPeopleKeys[];
-				places?: TPlacesKeys[];
-				events?: TEventsKeys[];
-				orgs?: TOrgsKeys[];
-				smallforms?: TSmallformsKeys[];
-				longforms?: TLongformsKeys[];
-				letters?: TLettersKeys[];
-				bibls?: TBiblsKeys[];
-				keywords?: TKeywordsKeys[];
-			};
-			manuscript: {
-				url_iiifs: string[];
-			};
-			numPages: number | null;
-			edition: {
-				fullyEdited: boolean;
+				manuscript: {
+					url_iiifs: string[];
+				};
+				numPages: number | null;
+				edition: {
+					fullyEdited: boolean;
+				};
 			};
 		};
 	};
 };
+
+// --- Sets -------------------------------------------------------
+export type TDocTypes = keyof TDocuments['documents'];
+export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys;
+
+export type TDocAttrsLetters = keyof TDocuments['documents']['letters'][TLettersKeys];
+export type TDocAttrsSmallforms = keyof TDocuments['documents']['smallforms'][TSmallformsKeys];
+export type TDocAttrsLongforms = keyof TDocuments['documents']['longforms'][TLongformsKeys];
+export type TDocAttrs = TDocAttrsLetters | TDocAttrsSmallforms | TDocAttrsLongforms;
+
+export type TDocMetadataLetters =
+	keyof TDocuments['documents']['letters'][TLettersKeys]['metadata'];
+export type TDocMetadataSmallforms =
+	keyof TDocuments['documents']['smallforms'][TSmallformsKeys]['metadata'];
+export type TDocMetadataLongforms =
+	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
+export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;

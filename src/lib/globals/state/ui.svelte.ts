@@ -5,8 +5,8 @@ export const uiRegSortBy = $state({ id: 'name' });
 export const uiRegGroupByCat = $state({ value: false });
 
 // Register in Sidebar
-import { type TEntityTypes } from '$lib/types/register/TRegister';
-export const openRegisters: { list: TEntityTypes[] } = $state({ list: [] });
+import { type TRegTypes } from '$lib/types/register/TRegister';
+export const openRegisters: { list: TRegTypes[] } = $state({ list: [] });
 
 // Sidebar Toggle
 type TActiveRegisterTab = 'register' | 'notes';

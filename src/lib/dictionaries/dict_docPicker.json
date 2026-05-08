@@ -7,17 +7,18 @@
 			"label_plural": "Kleine Formen",
 			"attributes": {},
 			"type_labels": {
-				"Typoskript": { "label": "Typoskript", "slug": null },
-				"Manuskript": { "label": "Manuskript", "slug": null },
-				"Feuilleton": { "label": "Feuilleton", "slug": null },
-				"Rezension": { "label": "Rezension", "slug": null },
-				"Beilage": { "label": "Beilage", "slug": null },
-				"Fotoreportage": { "label": "Fotoreportage", "slug": null },
-				"Fotografie": { "label": "Fotografie", "slug": null },
-				"Zeitschriftenartikel": { "label": "Zeitschriftenartikel", "slug": null },
-				"Zeitungsartikel": { "label": "Zeitungsartikel", "slug": null },
-				"Sammelband-Beitrag": { "label": "Sammelband-Beitrag", "slug": null },
-				"Serie'": { "label": "Serie", "slug": null }
+				"Typoskript": { "label_singular": "Typoskript", "label_plural":"Typoskripte" , "slug": null },
+				"Manuskript": { "label_singular": "Manuskript", "label_plural":"Manuskripte" , "slug": null },
+				"Feuilleton": { "label_singular": "Feuilleton", "label_plural":"Feuilletons" , "slug": null },
+				"Rezension": { "label_singular": "Rezension", "label_plural":"Rezensionen" , "slug": null },
+				"Beilage": { "label_singular": "Beilage", "label_plural":"Beilagen" , "slug": null },
+				"Fotoreportage": { "label_singular": "Fotoreportage", "label_plural":"Fotoreportagen" , "slug": null },
+				"Fotografie": { "label_singular": "Fotografie", "label_plural":"Fotografien" , "slug": null },
+				"Zeitschriftenartikel": { "label_singular": "Zeitschriftenartikel", "label_plural":"Zeitschriftenartikel" , "slug": null },
+				"Zeitungsartikel": { "label_singular": "Zeitungsartikel", "label_plural":"Zeitungsartikel" , "slug": null },
+				"Sammelband-Beitrag": { "label_singular": "Sammelband-Beitrag", "label_plural":"Sammelband-Beiträge" , "slug": null },
+				"Sonderbeilage": { "label_singular": "Sonderbeilage", "label_plural":"Sonderbeilagen" , "slug": null },
+				"Serie'": { "label_singular": "Serie", "label_plural":"Serien" , "slug": null }
 			}
 		},
 		"longforms": {
@@ -26,7 +27,7 @@
 			"label_plural": "Lange Formen",
 			"attributes": {},
 			"type_labels": {
-				"longform'": { "label": "Lange Form", "slug": null }
+				"longform'": { "label_singular": "Lange Form", "label_plural":"Lange Formen" , "slug": null }
 			}
 		},
 		"letters": {
@@ -35,7 +36,7 @@
 			"label_plural": "Briefe",
 			"attributes": {},
 			"type_labels": {
-				"Brief'": { "label": "Brief", "slug": null }
+				"Brief'": { "label_singular": "Brief", "label_plural":"Briefe" , "slug": null }
 			}
 		}
 	}

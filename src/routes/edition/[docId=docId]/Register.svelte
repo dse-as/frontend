@@ -2,7 +2,7 @@
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import register from '$lib/data/register.json';
-	import { type TEntityTypes } from '$lib/types/register/TRegister';
+	import { type TRegTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
 	import { openRegisters, selectedTextNode } from '$lib/globals/state/ui.svelte';
 	import { handleRegisterClick } from '$lib/functions/interactive_edendum/handleInteractiveText';
@@ -16,9 +16,9 @@
 	let { docId, docMeta } = $props();
 
 	const regTypes = Object.keys(reg);
-	const nonEmptyRegTypes = regTypes.reduce<TEntityTypes[]>((acc, regType) => {
+	const nonEmptyRegTypes = regTypes.reduce<TRegTypes[]>((acc, regType) => {
 		if (docMeta?.entities[regType]?.length > 0) {
-			acc.push(regType as TEntityTypes);
+			acc.push(regType as TRegTypes);
 		}
 		return acc;
 	}, []);
@@ -46,7 +46,7 @@
 	multiple
 	class="h-full gap-0 overflow-y-auto"
 	value={openRegisters.list}
-	onValueChange={(details) => (openRegisters.list = details.value as TEntityTypes[])}
+	onValueChange={(details) => (openRegisters.list = details.value as TRegTypes[])}
 >
 	{#each regTypes as regType (regType)}
 		<Accordion.Item value={regType} class="gap-0" data-regType={regType}>

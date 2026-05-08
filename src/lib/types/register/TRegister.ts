@@ -1,40 +1,25 @@
+// Keys
 import { type TPlacesKeys } from './TPlacesKeys';
 import { type TPeopleKeys } from './TPeopleKeys';
 import { type TEventsKeys } from './TEventsKeys';
 import { type TKeywordsKeys } from './TKeywordsKeys';
 import { type TOrgsKeys } from './TOrgsKeys';
-import type { TBiblsKeys } from './TBiblsKeys';
-import type { TSmallformsKeys } from '../documents/TSmallformsKeys';
-import type { TLettersKeys } from '../documents/TLettersKeys';
-import type { TLongformsKeys } from '../documents/TLongformsKeys';
+import { type TBiblsKeys } from './TBiblsKeys';
 
-export type TPeopleTypes = string; //! restrict to subet later
-export type TPlacesTypes = string; //! restrict to subet later
-export type TEventsTypes = string; //! restrict to subet later
-export type TOrgsTypes = string; //! restrict to subet later
-export type TBiblsTypes = string; //! restrict to subet later
-export type TKeywordsTypes = string; //! restrict to subet later
-// Entities
-export type TEntityTypes = 'people' | 'places' | 'events' | 'orgs' | 'bibls' | 'keywords';
+// Types
+import { type TPeopleTypes } from './TPeopleTypes';
+import { type TPlacesTypes } from './TPlacesTypes';
+import { type TEventsTypes } from './TEventsTypes';
+import { type TOrgsTypes } from './TOrgsTypes';
+import { type TBiblsTypes } from './TBiblsTypes';
+import { type TKeywordsTypes } from './TKeywordsTypes';
 
-export type TEntityNames =
-	| 'Personen'
-	| 'Orte'
-	| 'Events'
-	| 'Organisationen'
-	| 'Bibliografie'
-	| 'Stichworte';
+// From Documents
+import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
+import { type TLettersKeys } from '../documents/TLettersKeys';
+import { type TLongformsKeys } from '../documents/TLongformsKeys';
 
-// All Register Keys
-export type TRegKeys =
-	| TPeopleKeys
-	| TPlacesKeys
-	| TEventsKeys
-	| TKeywordsKeys
-	| TOrgsKeys
-	| TBiblsKeys;
-
-// Register
+// --- Register -------------------------------------------------------
 export type TRegister = {
 	meta: {
 		generated_by: string;
@@ -93,8 +78,8 @@ export type TRegister = {
 		bibls: {
 			[key in TBiblsKeys]: {
 				name: string;
-				type: TLettersTypes;
-				authorId: TPeopleKeys; //! string to account for uncertainties
+				type: TBiblsTypes;
+				authorId: TPeopleKeys;
 				pubDate: string;
 				gndNumber?: string; // optional
 				note?: string; // optional
@@ -112,3 +97,66 @@ export type TRegister = {
 		};
 	};
 };
+
+// --- Register Dictionary -------------------------------------------------------
+type RegEntity<Attrs extends string | number | symbol, Types extends string | number | symbol> = {
+	register_name: string;
+	key_singular: string;
+	label_plural: string;
+	attributes: {
+		[K in Attrs]: { label: string };
+	};
+	type_labels: {
+		[K in Types]: {
+			label_singular: string;
+			label_plural: string;
+			slug?: string | null;
+		};
+	};
+};
+
+export type TRegDict = {
+	meta: {
+		generated_by: string;
+		task: string;
+		generated_on: string;
+		description: string;
+	};
+	dict_register: {
+		people: RegEntity<TRegAttrsPeople, TPeopleTypes>;
+		places: RegEntity<TRegAttrsPlaces, TPlacesTypes>;
+		events: RegEntity<TRegAttrsEvents, TEventsTypes>;
+		orgs: RegEntity<TRegAttrsOrgs, TOrgsTypes>;
+		bibls: RegEntity<TRegAttrsBibls, TBiblsTypes>;
+		keywords: RegEntity<TRegAttrsKeywords, TKeywordsTypes>;
+	};
+};
+
+// --- Sets -------------------------------------------------------
+// Type Sets
+export type TRegTypes = keyof TRegister['register'];
+
+// Key Sets
+export type TRegKeys =
+	| TPeopleKeys
+	| TPlacesKeys
+	| TEventsKeys
+	| TKeywordsKeys
+	| TOrgsKeys
+	| TBiblsKeys;
+
+// Attribute Sets
+export type TRegAttrsPeople = keyof TRegister['register']['people'][TPeopleKeys];
+export type TRegAttrsPlaces = keyof TRegister['register']['places'][TPlacesKeys];
+export type TRegAttrsEvents = keyof TRegister['register']['events'][TEventsKeys];
+export type TRegAttrsOrgs = keyof TRegister['register']['orgs'][TOrgsKeys];
+export type TRegAttrsBibls = keyof TRegister['register']['bibls'][TBiblsKeys];
+export type TRegAttrsKeywords = keyof TRegister['register']['keywords'][TKeywordsKeys];
+
+export type TRegAttrs =
+	| TRegAttrsPeople
+	| TRegAttrsPlaces
+	| TRegAttrsEvents
+	| TRegAttrsOrgs
+	| TRegAttrsBibls
+	| TRegAttrsKeywords;
