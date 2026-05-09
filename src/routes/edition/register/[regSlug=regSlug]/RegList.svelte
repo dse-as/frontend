@@ -24,15 +24,7 @@
 	let defaultSortBy = $derived(regType === 'people' ? 'lastname' : 'name');
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
 
-	let allTypeKeys = $derived(
-		[
-			...new Set(
-				Object.values(reg[regType]).map((el) => {
-					return el.type;
-				})
-			)
-		].sort()
-	);
+	let allTypeKeys = $derived(Object.keys(dictReg[regType].type_labels));
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
@@ -84,9 +76,27 @@
 							window.scrollTo({ top: 0, behavior: 'auto' });
 						}, 10);
 					}}
-					// class="center flex h-7 w-5 items-center justify-center rounded-full border px-7 text-sm hover:font-bold"
 					class="center flex w-8 items-center justify-center hover:font-bold"
 					><p>{letter}</p></button
+				>
+			{/each}
+		</div>
+	{:else if isMultiColumn && hasGroupControls && uiRegGroupByCat.value}
+		<div class="flex w-full justify-start gap-2 overflow-x-auto pb-5">
+			{#each allTypeKeys as group (group)}
+				{@const groupLabel = dictReg[regType].type_labels[group]?.label_plural}
+				<button
+					onclick={() => {
+						goto(`#${slugify(groupLabel, { slash: true })}`, {
+							replaceState: true,
+							noScroll: true
+						});
+						setTimeout(() => {
+							window.scrollTo({ top: 0, behavior: 'auto' });
+						}, 10);
+					}}
+					class="center flex h-10 items-center justify-center rounded-full border px-4 whitespace-nowrap hover:bg-surface-300-700"
+					><p>{groupLabel}</p></button
 				>
 			{/each}
 		</div>
@@ -247,7 +257,7 @@
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
 			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label || typeKey || '?')}
+				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label_plural || '?')}
 				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
 					{@render regListItem(item)}
 				{/each}

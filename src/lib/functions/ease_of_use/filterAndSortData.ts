@@ -1,7 +1,7 @@
 export function filterAndSortData(
-	item,
+	data,
 	sortBy,
-	filteringOptions = { filterKey: '', filtersIn: [], filtersOut: [] }
+	filterOptions = { filterKey: '', filtersIn: [], filtersOut: [] }
 ) {
 	let sortFunction;
 	if (sortBy === 'date') {
@@ -42,17 +42,17 @@ export function filterAndSortData(
 		};
 	}
 
-	// Filter and sort item
-	return Object.entries(item)
+	// Filter and sort data
+	return Object.entries(data)
 		.map(([key, entry]) => ({ key, ...(entry as object) })) // Include the key in each value
 		.filter((entry) =>
-			filteringOptions.filtersIn?.length
-				? filteringOptions.filtersIn.includes(entry[filteringOptions.filterKey])
+			filterOptions.filtersIn?.length
+				? filterOptions.filtersIn.some(filter => entry[filterOptions.filterKey].trim().split(/,\s+/).includes(filter))
 				: true
 		)
 		.filter((entry) =>
-			filteringOptions.filtersOut?.length
-				? !filteringOptions.filtersOut.includes(entry[filteringOptions.filterKey])
+			filterOptions.filtersOut?.length
+				? !filterOptions.filtersOut.some(filter => entry[filterOptions.filterKey].trim().split(/,\s+/).includes(filter))
 				: true
 		)
 		.sort((a, b) => sortFunction(a, b));

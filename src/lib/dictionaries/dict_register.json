@@ -24,21 +24,65 @@
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
 			"type_labels": {
-				"Gottheit": {
-					"label_singular": "Gottheit",
-					"label_plural": "Gottheiten"
+				"Archäolog:in": {
+					"label_singular": "Archäolog:in",
+					"label_plural": "Archäolog:innen"
+				},
+				"Autor:in": {
+					"label_singular": "Autor:in",
+					"label_plural": "Autor:innen"
+				},
+				"Bekannte:r": {
+					"label_singular": "Bekannte:r",
+					"label_plural": "Bekannte"
 				},
 				"Bergsteiger:in": {
 					"label_singular": "Bergsteiger:in",
 					"label_plural": "Bergsteiger:innen"
 				},
-				"Archäolog:in": {
-					"label_singular": "Archäolog:in",
-					"label_plural": "Archäolog:innen"
+				"Biblische Figur": {
+					"label_singular": "Biblische Figur",
+					"label_plural": "Biblische Figuren"
+				},
+				"Familienangehörige:r": {
+					"label_singular": "Familienangehörige:r",
+					"label_plural": "Familienangehörige"
+				},
+				"Fotograf:in": {
+					"label_singular": "Fotograf:in",
+					"label_plural": "Fotograf:innen"
+				},
+				"Freund:in": {
+					"label_singular": "Freund:in",
+					"label_plural": "Freund:innen"
+				},
+				"Gottheit": {
+					"label_singular": "Gottheit",
+					"label_plural": "Gottheiten"
+				},
+				"Historische Person (ohne persönliche Bekanntschaft)": {
+					"label_singular": "Historische Person (ohne persönliche Bekanntschaft)",
+					"label_plural": "Historische Personen (ohne persönliche Bekanntschaft)"
+				},
+				"Künstler:in": {
+					"label_singular": "Künstler:in",
+					"label_plural": "Künstler:innen"
+				},
+				"Mitarbeiter:in Medium": {
+					"label_singular": "Mitarbeiter:in Medium",
+					"label_plural": "Mitarbeiter:innen Medium"
 				},
 				"Musiker:in": {
 					"label_singular": "Musiker:in",
 					"label_plural": "Musiker:innen"
+				},
+				"rassistische Bezeichnung": {
+					"label_singular": "rassistische Bezeichnung",
+					"label_plural": "rassistische Bezeichnungen"
+				},
+				"Redakteur:in": {
+					"label_singular": "Redakteur:in",
+					"label_plural": "Redakteur:innen"
 				},
 				"Regisseur:in": {
 					"label_singular": "Regisseur:in",
@@ -48,61 +92,17 @@
 					"label_singular": "Sagengestalt",
 					"label_plural": "Sagengestalten"
 				},
-				"Verleger:in": {
-					"label_singular": "Verleger:in",
-					"label_plural": "Verleger:innen"
-				},
-				"rassistische Bezeichnung": {
-					"label_singular": "rassistische Bezeichnung",
-					"label_plural": "rassistische Bezeichnungen"
-				},
-				"Biblische Figur": {
-					"label_singular": "Biblische Figur",
-					"label_plural": "Biblische Figuren"
-				},
-				"Scharzenbach-Forscher:in": {
-					"label_singular": "Scharzenbach-Forscher:in",
-					"label_plural": "Scharzenbach-Forscher:innen"
-				},
-				"Fotograf:in": {
-					"label_singular": "Fotograf:in",
-					"label_plural": "Fotograf:innen"
-				},
-				"Künstler:in": {
-					"label_singular": "Künstler:in",
-					"label_plural": "Künstler:innen"
-				},
 				"Schauspieler:in": {
 					"label_singular": "Schauspieler:in",
 					"label_plural": "Schauspieler:innen"
 				},
-				"Autor:in": {
-					"label_singular": "Autor:in",
-					"label_plural": "Autor:innen"
+				"Schwarzenbach-Forscher:in": {
+					"label_singular": "Schwarzenbach-Forscher:in",
+					"label_plural": "Schwarzenbach-Forscher:innen"
 				},
-				"Mitarbeiter:in Medium": {
-					"label_singular": "Mitarbeiter:in Medium",
-					"label_plural": "Mitarbeiter:innen Medium"
-				},
-				"Historische Person (ohne persönliche Bekanntschaft)": {
-					"label_singular": "Historische Person (ohne persönliche Bekanntschaft)",
-					"label_plural": "Historische Personen (ohne persönliche Bekanntschaft)"
-				},
-				"Bekannte:r": {
-					"label_singular": "Bekannte:r",
-					"label_plural": "Bekannte"
-				},
-				"Redakteur:in": {
-					"label_singular": "Redakteur:in",
-					"label_plural": "Redakteur:innen"
-				},
-				"Freund:in": {
-					"label_singular": "Freund:in",
-					"label_plural": "Freund:innen"
-				},
-				"Familienangehörige:r": {
-					"label_singular": "Familienangehörige:r",
-					"label_plural": "Familienangehörige"
+				"Verleger:in": {
+					"label_singular": "Verleger:in",
+					"label_plural": "Verleger:innen"
 				}
 			}
 		},
@@ -168,7 +168,7 @@
 				},
 				"Park": {
 					"label_singular": "Park",
-					"label_plural": "Pärke"
+					"label_plural": "Parks"
 				},
 				"Pass": {
 					"label_singular": "Pass",
@@ -180,7 +180,7 @@
 				},
 				"Ruine/Ausgrabung": {
 					"label_singular": "Ruine/Ausgrabung",
-					"label_plural": "Ruinen/Ausgrabunge"
+					"label_plural": "Ruinen/Ausgrabungen"
 				},
 				"Siedlung": {
 					"label_singular": "Siedlung",
