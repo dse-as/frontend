@@ -4,9 +4,9 @@ import { type TSmallformsKeys } from './TSmallformsKeys';
 import { type TLongformsKeys } from './TLongformsKeys';
 
 // Types
-import { type TLettersTypes } from './TLettersTypes';
-import { type TSmallformsTypes } from './TSmallformsTypes';
-import { type TLongformsTypes } from './TLongformTypes';
+import { type TLettersGroups } from './TLettersGroups';
+import { type TSmallformsGroups } from './TSmallformsGroups';
+import { type TLongformsGroups } from './TLongformGroups';
 
 // From Register
 import { type TPeopleKeys } from '../register/TPeopleKeys';
@@ -30,7 +30,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLettersTypes;
+				type: TLettersGroups;
 				metadata: {
 					authors: string[];
 					pubDate: string;
@@ -92,7 +92,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TSmallformsTypes;
+				type: TSmallformsGroups;
 				metadata: {
 					authors: string[];
 					pubDate: string;
@@ -154,7 +154,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLongformsTypes;
+				type: TLongformsGroups;
 				metadata: {
 					authors: string[];
 					pubDate: string;

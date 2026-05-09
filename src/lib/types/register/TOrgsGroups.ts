@@ -1,4 +1,4 @@
-export type TOrgsTypes =
+export type TOrgsGroups =
 	| 'Bar/Klub/Lokal'
 	| 'Hochschule'
 	| 'Hotel'

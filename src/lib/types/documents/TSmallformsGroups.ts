@@ -1,4 +1,4 @@
-export type TSmallformsTypes =
+export type TSmallformsGroups =
     | 'Typoskript'
     | 'Manuskript'
     | 'Feuilleton'

@@ -7,12 +7,12 @@ import { type TOrgsKeys } from './TOrgsKeys';
 import { type TBiblsKeys } from './TBiblsKeys';
 
 // Types
-import { type TPeopleTypes } from './TPeopleTypes';
-import { type TPlacesTypes } from './TPlacesTypes';
-import { type TEventsTypes } from './TEventsTypes';
-import { type TOrgsTypes } from './TOrgsTypes';
-import { type TBiblsTypes } from './TBiblsTypes';
-import { type TKeywordsTypes } from './TKeywordsTypes';
+import { type TPeopleGroups } from './TPeopleGroups';
+import { type TPlacesGroups } from './TPlacesGroups';
+import { type TEventsGroups } from './TEventsGroups';
+import { type TOrgsGroups } from './TOrgsGroups';
+import { type TBiblsGroups } from './TBiblsGroups';
+import { type TKeywordsGroups } from './TKeywordsGroups';
 
 // From Documents
 import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
@@ -37,7 +37,7 @@ export type TRegister = {
 				gndNumber?: string; // optional
 				dateBirth: string;
 				dateDeath: string;
-				type: TPeopleTypes;
+				type: TPeopleGroups;
 				orgId: TOrgsKeys;
 				note: string;
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
@@ -49,7 +49,7 @@ export type TRegister = {
 				nameVariants: string[];
 				geoNamesID: number;
 				geoNamesLink: string;
-				type: TPlacesTypes;
+				type: TPlacesGroups;
 				coords: [number, number];
 				country: string;
 				note: string;
@@ -59,7 +59,7 @@ export type TRegister = {
 		events: {
 			[key in TEventsKeys]: {
 				name: string;
-				type: TEventsTypes;
+				type: TEventsGroups;
 				date?: { from: string; to: string };
 				note: string;
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
@@ -70,7 +70,7 @@ export type TRegister = {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
-				type: TOrgsTypes;
+				type: TOrgsGroups;
 				note: string;
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
@@ -78,7 +78,7 @@ export type TRegister = {
 		bibls: {
 			[key in TBiblsKeys]: {
 				name: string;
-				type: TBiblsTypes;
+				type: TBiblsGroups;
 				authorId: TPeopleKeys;
 				pubDate: string;
 				gndNumber?: string; // optional
@@ -89,7 +89,7 @@ export type TRegister = {
 		keywords: {
 			[key in TKeywordsKeys]: {
 				name: string;
-				type: TKeywordsTypes;
+				type: TKeywordsGroups;
 				gndNumber?: string; // optional
 				note?: string; // optional
 				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
@@ -123,12 +123,12 @@ export type TRegDict = {
 		description: string;
 	};
 	dict_register: {
-		people: RegEntity<TRegAttrsPeople, TPeopleTypes>;
-		places: RegEntity<TRegAttrsPlaces, TPlacesTypes>;
-		events: RegEntity<TRegAttrsEvents, TEventsTypes>;
-		orgs: RegEntity<TRegAttrsOrgs, TOrgsTypes>;
-		bibls: RegEntity<TRegAttrsBibls, TBiblsTypes>;
-		keywords: RegEntity<TRegAttrsKeywords, TKeywordsTypes>;
+		people: RegEntity<TRegAttrsPeople, TPeopleGroups>;
+		places: RegEntity<TRegAttrsPlaces, TPlacesGroups>;
+		events: RegEntity<TRegAttrsEvents, TEventsGroups>;
+		orgs: RegEntity<TRegAttrsOrgs, TOrgsGroups>;
+		bibls: RegEntity<TRegAttrsBibls, TBiblsGroups>;
+		keywords: RegEntity<TRegAttrsKeywords, TKeywordsGroups>;
 	};
 };
 

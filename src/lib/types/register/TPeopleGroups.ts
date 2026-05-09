@@ -1,4 +1,4 @@
-export type TPeopleTypes =
+export type TPeopleGroups =
 	| 'Gottheit'
 	| 'Bergsteiger:in'
 	| 'Archäolog:in'

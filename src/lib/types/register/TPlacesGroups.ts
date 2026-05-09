@@ -1,4 +1,4 @@
-export type TPlacesTypes =
+export type TPlacesGroups =
 	| 'Berg'
 	| 'Bundesstaat oder Kanton'
 	| 'Gebirge'
