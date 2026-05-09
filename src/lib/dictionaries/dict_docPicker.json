@@ -6,7 +6,7 @@
 			"key_singular": "smallform",
 			"label_plural": "Kleine Formen",
 			"attributes": {},
-			"type_labels": {
+			"groups": {
 				"Typoskript": { "label_singular": "Typoskript", "label_plural":"Typoskripte" , "slug": null },
 				"Manuskript": { "label_singular": "Manuskript", "label_plural":"Manuskripte" , "slug": null },
 				"Feuilleton": { "label_singular": "Feuilleton", "label_plural":"Feuilletons" , "slug": null },
@@ -26,7 +26,7 @@
 			"key_singular": "longform",
 			"label_plural": "Lange Formen",
 			"attributes": {},
-			"type_labels": {
+			"groups": {
 				"longform'": { "label_singular": "Lange Form", "label_plural":"Lange Formen" , "slug": null }
 			}
 		},
@@ -35,7 +35,7 @@
 			"key_singular": "letter",
 			"label_plural": "Briefe",
 			"attributes": {},
-			"type_labels": {
+			"groups": {
 				"Brief'": { "label_singular": "Brief", "label_plural":"Briefe" , "slug": null }
 			}
 		}

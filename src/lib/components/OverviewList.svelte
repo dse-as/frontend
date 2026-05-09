@@ -30,7 +30,7 @@
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for ovTypes without sorting options.
 	$inspect(sortBy);
 
-	let allTypeKeys = $derived(
+	let allGroupKeys = $derived(
 		[
 			...new Set(
 				Object.values(ovMeta).map((el) => {
@@ -228,10 +228,8 @@
 
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
-			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(
-					dictDocPicker[ovType].type_labels[typeKey]?.label_plural || typeKey || '?'
-				)}
+			{#each allGroupKeys as typeKey (typeKey)}
+				{@render groupTitle(dictDocPicker[ovType].groups[typeKey]?.label_plural || typeKey || '?')}
 				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
 					{@render regListItem(item)}
 				{/each}

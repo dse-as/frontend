@@ -106,7 +106,7 @@ type RegEntity<Attrs extends string | number | symbol, Types extends string | nu
 	attributes: {
 		[K in Attrs]: { label: string };
 	};
-	type_labels: {
+	groups: {
 		[K in Types]: {
 			label_singular: string;
 			label_plural: string;

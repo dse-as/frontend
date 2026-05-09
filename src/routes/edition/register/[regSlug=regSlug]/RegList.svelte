@@ -24,7 +24,7 @@
 	let defaultSortBy = $derived(regType === 'people' ? 'lastname' : 'name');
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
 
-	let allTypeKeys = $derived(Object.keys(dictReg[regType].type_labels));
+	let allGroupKeys = $derived(Object.keys(dictReg[regType].groups));
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
@@ -83,8 +83,8 @@
 		</div>
 	{:else if isMultiColumn && hasGroupControls && uiRegGroupByCat.value}
 		<div class="flex w-full justify-start gap-2 overflow-x-auto pb-5">
-			{#each allTypeKeys as group (group)}
-				{@const groupLabel = dictReg[regType].type_labels[group]?.label_plural}
+			{#each allGroupKeys as groupKey (groupKey)}
+				{@const groupLabel = dictReg[regType].groups[groupKey]?.label_plural}
 				<button
 					onclick={() => {
 						goto(`#${slugify(groupLabel, { slash: true })}`, {
@@ -256,9 +256,9 @@
 
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
-			{#each allTypeKeys as typeKey (typeKey)}
-				{@render groupTitle(dictReg[regType].type_labels[typeKey]?.label_plural || '?')}
-				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
+			{#each allGroupKeys as groupKey (groupKey)}
+				{@render groupTitle(dictReg[regType].groups[groupKey]?.label_plural || '?')}
+				{#each filterAndSortData( reg[regType], sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as item (item.key)}
 					{@render regListItem(item)}
 				{/each}
 			{/each}

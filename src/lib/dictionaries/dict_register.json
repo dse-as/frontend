@@ -23,7 +23,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {
+			"groups": {
 				"Archäolog:in": {
 					"label_singular": "Archäolog:in",
 					"label_plural": "Archäolog:innen"
@@ -121,7 +121,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {
+			"groups": {
 				"Berg": {
 					"label_singular": "Berg",
 					"label_plural": "Berge"
@@ -211,7 +211,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {
+			"groups": {
 				"event": {
 					"label_singular": "Event",
 					"label_plural": "Events"
@@ -234,7 +234,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {
+			"groups": {
 				"Bar/Klub/Lokal": {
 					"label_singular": "Bar/Klub/Lokal",
 					"label_plural": "Bars/Klubs/Lokale"
@@ -302,7 +302,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {}
+			"groups": {}
 		},
 		"keywords": {
 			"register_name": "Schlagwortregister",
@@ -315,7 +315,7 @@
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
-			"type_labels": {}
+			"groups": {}
 		}
 	}
 }
