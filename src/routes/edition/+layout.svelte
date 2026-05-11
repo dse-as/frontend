@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-
 	let { data, children } = $props();
 
 	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
@@ -64,3 +63,10 @@
 {:else}
 	{@render children()}
 {/if}
+
+<div class="mt-30 text-center">
+	<h2 class=" mb-5 h2">Shortcuts</h2>
+	<p class="text-xl">
+		&rarr; <a class="underline" href={resolve('/edition/smallform_0231')}>Smallform 0231</a>
+	</p>
+</div>
