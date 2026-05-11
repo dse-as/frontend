@@ -10,14 +10,14 @@
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
 	import Shortcuts from '$lib/components/Shortcuts.svelte';
-	import type { TRegKeys, TRegTypes } from '$lib/types/register/TRegister';
+	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 
 	// Props
 	type K = TRegTypes;
 	interface Props<T extends K = K> {
 		isMultiColumn: boolean;
 		regType: T | null;
-		regItem?: TRegKeys | null;
+		regItem?: TRegKeysFlat | null;
 		cheatPageHeightInRegSingleColView?: string;
 	}
 	let {
@@ -60,7 +60,7 @@
 	// Scroll to the specific item
 	let regListScrollContainer: HTMLElement | undefined = $state();
 
-	function scrollToItem(itemKey: TRegKeys) {
+	function scrollToItem(itemKey: TRegKeysFlat) {
 		const targetElement = document.getElementById(itemKey);
 		const offsetSortControls =
 			hasGroupControls && hasSortControls ? 92 : hasGroupControls || hasSortControls ? 60 : 0;

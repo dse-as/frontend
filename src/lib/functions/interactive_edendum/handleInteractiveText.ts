@@ -1,6 +1,6 @@
 import { activeRegisterTab, selectedTextNode } from '$lib/globals/state/ui.svelte';
 import { openRegisters } from '$lib/globals/state/ui.svelte';
-import type { TRegKeys } from '$lib/types/register/TRegister';
+import type { TRegKeysFlat } from '$lib/types/register/TRegister';
 import { findRegTypeByRegKey } from '../ease_of_use/findRegTypeByRegKey';
 
 // -------------------------------------------------
@@ -34,7 +34,7 @@ function resetAllActiveNodesInText() {
 }
 
 // Referencing Strings (tei-rs)
-function selectAllRsNodesInText(key: TRegKeys) {
+function selectAllRsNodesInText(key: TRegKeysFlat) {
 	resetAllActiveNodesInText(); // Remove old highlights
 	const nodes = document.querySelectorAll(`tei-text tei-rs[key=${key}]`);
 	nodes.forEach((el) => {
@@ -65,7 +65,7 @@ function scrollText(elItem: HTMLElement) {
 // Handle Text
 // -------------------------------------------------
 
-function openRegisterSidebar(key: TRegKeys) {
+function openRegisterSidebar(key: TRegKeysFlat) {
 	activeRegisterTab.value = 'register';
 	const regType = findRegTypeByRegKey(key);
 	if (regType && !openRegisters.list.includes(regType)) {
@@ -90,7 +90,7 @@ export function clearAllHighlights() {
 	resetAllActiveNodesInText();
 }
 
-export function handleRegisterClick(key: TRegKeys) {
+export function handleRegisterClick(key: TRegKeysFlat) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectAllRsNodesInText(key);
@@ -98,7 +98,7 @@ export function handleRegisterClick(key: TRegKeys) {
 	scrollText(elSpan as HTMLElement);
 }
 
-export function handleRsClick(key: TRegKeys) {
+export function handleRsClick(key: TRegKeysFlat) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectAllRsNodesInText(key);

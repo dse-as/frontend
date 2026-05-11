@@ -139,13 +139,22 @@ export type TRegDict = {
 export type TRegTypes = keyof TRegister['register'];
 
 // Key Set
-export type TRegKeys =
+export type TRegKeysFlat =
 	| TPeopleKeys
 	| TPlacesKeys
 	| TEventsKeys
 	| TKeywordsKeys
 	| TOrgsKeys
 	| TBiblsKeys;
+
+export type TRegKeys = {
+	people: TPeopleKeys;
+	places: TPlacesKeys;
+	events: TEventsKeys;
+	orgs: TKeywordsKeys;
+	bibls: TOrgsKeys;
+	keywords: TBiblsKeys;
+};
 
 // Attribute Sets
 export type TRegAttrsPeople = keyof TRegister['register']['people'][TPeopleKeys];
@@ -164,6 +173,14 @@ export type TRegAttrs =
 	| TRegAttrsKeywords;
 
 // Group Set
+export type TRegGroupsFlat =
+	| TPeopleGroups
+	| TPlacesGroups
+	| TEventsGroups
+	| TOrgsGroups
+	| TBiblsGroups
+	| TKeywordsGroups;
+	
 export type TRegGroups = {
 	people: TPeopleGroups;
 	places: TPlacesGroups;
