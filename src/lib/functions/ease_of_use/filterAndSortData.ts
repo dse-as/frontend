@@ -1,12 +1,18 @@
+type TFilterAndSortOptions = {
+	filterKey?: string;
+	filtersIn?: string[];
+	filtersOut?: string[];
+};
+
 export function filterAndSortData(
-	data,
-	sortBy,
-	filterOptions = { filterKey: '', filtersIn: [], filtersOut: [] }
+	data: Record<string, any>,
+	sortBy: string,
+	{ filterKey = '', filtersIn = [], filtersOut = [] }: TFilterAndSortOptions = {}
 ) {
-	let sortFunction;
+	let sortFunction: (a: Record<string, any>, b: Record<string, any>) => number;
 	if (sortBy === 'date') {
 		sortFunction = (a, b) => {
-			const compare = (x, y) => {
+			const compare = (x?: string, y?: string) => {
 				if (!x && !y) return 0; // treat as equal
 				if (!x) return 1; // Push `x` to the end
 				if (!y) return -1; // Push `y` to the end
@@ -29,30 +35,20 @@ export function filterAndSortData(
 			if (!bName) return -1; // Push `b` to the end
 
 			return aName.localeCompare(bName); // Compare normally if both are defined
-
-			// // Handle undefined or empty values
-			// if (!aName || aName.trim() === '' || /[^\w\s]/.test(aName)) {
-			//     return 1; // Push `a` to the end
-			// }
-			// if (!bName || bName.trim() === '' || /[^\w\s]/.test(bName)) {
-			//     return -1; // Push `b` to the end
-			// }
-
-			// return aName.localeCompare(bName); // Compare normally if both are valid
 		};
 	}
 
 	// Filter and sort data
 	return Object.entries(data)
-		.map(([key, entry]) => ({ key, ...(entry as object) })) // Include the key in each value
+		.map(([key, entry]) => ({ key, ...(entry as object) }) as Record<string, string>) // Include the key in each value
 		.filter((entry) =>
-			filterOptions.filtersIn?.length
-				? filterOptions.filtersIn.some(filter => entry[filterOptions.filterKey].trim().split(/,\s+/).includes(filter))
+			filtersIn?.length
+				? filtersIn.some((filter) => entry[filterKey].trim().split(/,\s+/).includes(filter))
 				: true
 		)
 		.filter((entry) =>
-			filterOptions.filtersOut?.length
-				? !filterOptions.filtersOut.some(filter => entry[filterOptions.filterKey].trim().split(/,\s+/).includes(filter))
+			filtersOut?.length
+				? !filtersOut.some((filter) => entry[filterKey].trim().split(/,\s+/).includes(filter))
 				: true
 		)
 		.sort((a, b) => sortFunction(a, b));

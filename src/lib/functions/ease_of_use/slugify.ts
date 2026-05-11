@@ -1,5 +1,6 @@
-export function slugify(string, include = { slash: false }) {
-	const specialChars = {
+type TSlugifyOptions = {slash?: boolean}
+export function slugify(input:string, { slash = false }:TSlugifyOptions) {
+	const specialChars:Record<string,string> = {
 		':': '_',
 		ä: 'ae',
 		ö: 'oe',
@@ -15,12 +16,12 @@ export function slugify(string, include = { slash: false }) {
 	};
 
 	// Custom replacements
-	if (include.slash) {
-		string = string.replace(/[\/]+/g, '_'); // Replace slashes with underscores
+	if (slash) {
+		input = input.replace(/[\/]+/g, '_'); // Replace slashes with underscores
 	}
 
 	// Replace special characters
-	const modifiedString = string
+	const modifiedString = input
 		.split('')
 		.map((char) => {
 			return specialChars[char] || char; // Use the mapped value or the original character
