@@ -106,13 +106,15 @@ type RegEntity<Attrs extends string | number | symbol, Types extends string | nu
 	attributes: {
 		[K in Attrs]: { label: string };
 	};
-	groups: {
-		[K in Types]: {
-			label_singular: string;
-			label_plural: string;
-			slug?: string | null;
-		};
-	};
+	groups:
+		| {
+				[K in Types]: {
+					label_singular: string;
+					label_plural: string;
+					slug?: string | null;
+				};
+		  }
+		| {};
 };
 
 export type TRegDict = {
@@ -133,10 +135,10 @@ export type TRegDict = {
 };
 
 // --- Sets -------------------------------------------------------
-// Type Sets
+// Type Set
 export type TRegTypes = keyof TRegister['register'];
 
-// Key Sets
+// Key Set
 export type TRegKeys =
 	| TPeopleKeys
 	| TPlacesKeys
@@ -160,3 +162,13 @@ export type TRegAttrs =
 	| TRegAttrsOrgs
 	| TRegAttrsBibls
 	| TRegAttrsKeywords;
+
+// Group Set
+export type TRegGroups = {
+	people: TPeopleGroups;
+	places: TPlacesGroups;
+	events: TEventsGroups;
+	orgs: TOrgsGroups;
+	bibls: TBiblsGroups;
+	keywords: TKeywordsGroups;
+};

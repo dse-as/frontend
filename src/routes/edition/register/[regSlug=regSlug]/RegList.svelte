@@ -9,9 +9,23 @@
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
+	import Shortcuts from '$lib/components/Shortcuts.svelte';
+	import type { TRegKeys, TRegTypes } from '$lib/types/register/TRegister';
 
 	// Props
-	let { isMultiColumn, regType, regItem = null, cheatPageHeightInRegSingleColView = '' } = $props();
+	type K = TRegTypes;
+	interface Props<T extends K = K> {
+		isMultiColumn: boolean;
+		regType: T | null;
+		regItem?: TRegKeys | null;
+		cheatPageHeightInRegSingleColView?: string;
+	}
+	let {
+		isMultiColumn,
+		regType,
+		regItem = null,
+		cheatPageHeightInRegSingleColView = ''
+	}: Props = $props();
 
 	// States for sorting and grouping
 	let hasGroupControls = $derived(['events', 'orgs', 'people', 'places'].includes(regType));
@@ -24,7 +38,7 @@
 	let defaultSortBy = $derived(regType === 'people' ? 'lastname' : 'name');
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
 
-	let allGroupKeys = $derived(Object.keys(dictReg[regType].groups));
+	let allGroupKeys = $derived(Object.keys(dictReg[regType].groups)); //! FIX: order inside object may break!
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
@@ -46,12 +60,12 @@
 	// Scroll to the specific item
 	let regListScrollContainer: HTMLElement | undefined = $state();
 
-	function scrollToItem(itemKey) {
+	function scrollToItem(itemKey: TRegKeys) {
 		const targetElement = document.getElementById(itemKey);
 		const offsetSortControls =
 			hasGroupControls && hasSortControls ? 92 : hasGroupControls || hasSortControls ? 60 : 0;
 		if (targetElement) {
-			regListScrollContainer.scrollTo({
+			regListScrollContainer?.scrollTo({
 				top: targetElement.offsetTop - regListScrollContainer.offsetTop - offsetSortControls,
 				behavior: 'smooth'
 			});
@@ -63,45 +77,6 @@
 	});
 </script>
 
-<!-- Snippet for Alphabet Shortcuts -->
-{#snippet alphabet()}
-	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
-		<!-- Hide the alphabet for regTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
-		<div class="flex w-max justify-center gap-2">
-			{#each autoCatLabels as letter (letter)}
-				<button
-					onclick={() => {
-						goto(`#${letter}`, { replaceState: true, noScroll: true });
-						setTimeout(() => {
-							window.scrollTo({ top: 0, behavior: 'auto' });
-						}, 10);
-					}}
-					class="center flex w-8 items-center justify-center hover:font-bold"
-					><p>{letter}</p></button
-				>
-			{/each}
-		</div>
-	{:else if isMultiColumn && hasGroupControls && uiRegGroupByCat.value}
-		<div class="flex w-full justify-start gap-2 overflow-x-auto pb-5">
-			{#each allGroupKeys as groupKey (groupKey)}
-				{@const groupLabel = dictReg[regType].groups[groupKey]?.label_plural}
-				<button
-					onclick={() => {
-						goto(`#${slugify(groupLabel, { slash: true })}`, {
-							replaceState: true,
-							noScroll: true
-						});
-						setTimeout(() => {
-							window.scrollTo({ top: 0, behavior: 'auto' });
-						}, 10);
-					}}
-					class="center flex h-10 items-center justify-center rounded-full border px-4 whitespace-nowrap hover:bg-surface-300-700"
-					><p>{groupLabel}</p></button
-				>
-			{/each}
-		</div>
-	{/if}
-{/snippet}
 <!-- Snippet for Register Items -->
 {#snippet regListItem(item)}
 	<a
@@ -206,7 +181,7 @@
 				{@render groupControls()}
 				{@render sortControls()}
 			</div>
-			{@render alphabet()}
+			<Shortcuts {isMultiColumn} {hasGroupControls} {autoCatLabels} {allGroupKeys} {regType} />
 		</div>
 	{/if}
 

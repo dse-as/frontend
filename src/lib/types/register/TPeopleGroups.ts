@@ -8,7 +8,7 @@ export type TPeopleGroups =
 	| 'Verleger:in'
 	| 'rassistische Bezeichnung'
 	| 'Biblische Figur'
-	| 'Scharzenbach-Forscher:in'
+	| 'Schwarzenbach-Forscher:in'
 	| 'Fotograf:in'
 	| 'Künstler:in'
 	| 'Schauspieler:in'

@@ -7,6 +7,7 @@
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
 	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
 	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
+	import Shortcuts from './Shortcuts.svelte';
 
 	// Props
 	let {
@@ -18,10 +19,8 @@
 	} = $props();
 
 	// States for sorting and grouping
-	let hasGroupControls = $derived(
-		['letters', 'smallforms', 'longforms', 'events', 'orgs', 'people', 'places'].includes(ovType)
-	);
-	let hasSortControls = $derived(['letters', 'smallforms', 'longforms', 'events'].includes(ovType));
+	let hasGroupControls = $derived([''].includes(ovType));
+	let hasSortControls = $derived(['letters', 'smallforms', 'longforms'].includes(ovType));
 	let hasControls = $derived(hasGroupControls || hasSortControls);
 
 	// Defaults
@@ -30,15 +29,7 @@
 	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for ovTypes without sorting options.
 	$inspect(sortBy);
 
-	let allGroupKeys = $derived(
-		[
-			...new Set(
-				Object.values(ovMeta).map((el) => {
-					return el.type;
-				})
-			)
-		].sort()
-	);
+	let allGroupKeys = $derived(Object.keys(dictDocPicker[ovType].groups)); //! FIX: order inside object may break!
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
@@ -46,7 +37,7 @@
 		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
 	);
 	let currentAutoCatLabel: string | null = null;
-	let autoCatLabels = $derived(
+	let autoCatLabels: string[] = $derived(
 		[
 			...new Set(
 				Object.values(ovMeta).map((el) => {
@@ -176,9 +167,12 @@
 <div class="overflow-y-auto">
 	<!-- Controls (when outside scroll container) -->
 	{#if hasControls && isMultiColumn}
-		<div class="my-10 flex w-full flex-wrap justify-start gap-x-10 gap-y-2">
-			{@render groupControls()}
-			{@render sortControls()}
+		<div class="my-10 flex w-full flex-col flex-wrap items-start justify-start gap-x-10 gap-y-6">
+			<div class="flex gap-5">
+				{@render groupControls()}
+				{@render sortControls()}
+			</div>
+			<Shortcuts {isMultiColumn} {hasGroupControls} {autoCatLabels} {allGroupKeys} regType="null" />
 		</div>
 	{/if}
 
@@ -228,9 +222,11 @@
 
 		{#if hasGroupControls && uiRegGroupByCat.value}
 			<!-- grouped by categories -->
-			{#each allGroupKeys as typeKey (typeKey)}
-				{@render groupTitle(dictDocPicker[ovType].groups[typeKey]?.label_plural || typeKey || '?')}
-				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [typeKey] } ) as item (item.key)}
+			{#each allGroupKeys as groupKey (groupKey)}
+				{@render groupTitle(
+					dictDocPicker[ovType].groups[groupKey]?.label_plural || groupKey || '?'
+				)}
+				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as item (item.key)}
 					{@render regListItem(item)}
 				{/each}
 			{/each}
@@ -249,23 +245,4 @@
 			{/each}
 		{/if}
 	</div>
-
-	<!-- Alphabet Shortcuts -->
-	{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
-		<!-- Hide the alphabet for ovTypes with manual sorting, since e.g. sorting for dates or categories would needs a different logic of shortcuts -->
-		<div class="mt-10 flex w-full justify-center gap-2">
-			{#each autoCatLabels as letter (letter)}
-				<button
-					onclick={() => {
-						goto(`#${letter}`, { replaceState: true, noScroll: true });
-						setTimeout(() => {
-							window.scrollTo({ top: 0, behavior: 'auto' });
-						}, 10);
-					}}
-					class="center flex h-10 w-10 items-center justify-center underline hover:font-bold"
-					><p>{letter}</p></button
-				>
-			{/each}
-		</div>
-	{/if}
 </div>
