@@ -7,13 +7,13 @@
 	import { type TRegGroups, type TRegTypes } from '$lib/types/register/TRegister';
 
 	type K = TRegTypes;
-	interface Props<T extends K = K> {
+	type Props<T extends K = K> = {
 		isMultiColumn: boolean;
 		hasGroupControls: boolean;
 		autoCatLabels: string[];
 		allGroupKeys: TRegGroups[T][];
 		regType: T | null;
-	}
+	};
 	let { isMultiColumn, hasGroupControls, autoCatLabels, allGroupKeys, regType }: Props = $props();
 </script>
 
