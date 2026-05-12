@@ -4,14 +4,14 @@
 	import { tick } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
-	import { type TRegGroups, type TRegTypes } from '$lib/types/register/TRegister';
+	import { type TRegGroupsMap, type TRegTypes } from '$lib/types/register/TRegister';
 
 	type K = TRegTypes;
 	type Props<T extends K = K> = {
 		isMultiColumn: boolean;
 		hasGroupControls: boolean;
 		autoCatLabels: string[];
-		allGroupKeys: TRegGroups[T][];
+		allGroupKeys: TRegGroupsMap[T][];
 		regType: T | null;
 	};
 	let { isMultiColumn, hasGroupControls, autoCatLabels, allGroupKeys, regType }: Props = $props();

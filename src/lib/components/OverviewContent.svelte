@@ -22,7 +22,7 @@
 
 <!-- Snippet: Metadata Table -->
 {#snippet MetadataTable(attKeys)}
-	<!-- {#snippet MetadataTable(attKeys: keyof TRegister['register'][TEntityTypes][TRegKeys])} -->
+	<!-- {#snippet MetadataTable(attKeys: keyof TRegister['register'][TEntityTypes][TRegKeysMap])} -->
 	<table
 		class="my-10 min-w-full border-gray-300 bg-white"
 		style={`opacity:${opacityMetadataTable}%`}

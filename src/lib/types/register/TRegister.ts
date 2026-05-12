@@ -147,7 +147,7 @@ export type TRegKeysFlat =
 	| TOrgsKeys
 	| TBiblsKeys;
 
-export type TRegKeys = {
+export type TRegKeysMap = {
 	people: TPeopleKeys;
 	places: TPlacesKeys;
 	events: TEventsKeys;
@@ -181,7 +181,7 @@ export type TRegGroupsFlat =
 	| TBiblsGroups
 	| TKeywordsGroups;
 	
-export type TRegGroups = {
+export type TRegGroupsMap = {
 	people: TPeopleGroups;
 	places: TPlacesGroups;
 	events: TEventsGroups;

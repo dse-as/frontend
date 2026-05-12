@@ -217,6 +217,11 @@ export type TDocuments = {
 // --- Sets -------------------------------------------------------
 export type TDocTypes = keyof TDocuments['documents'];
 export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys;
+export type TDocKeysMap = {
+	letters: TLettersKeys;
+	smallforms: TSmallformsKeys;
+	longforms: TLongformsKeys;
+};
 
 export type TDocAttrsLetters = keyof TDocuments['documents']['letters'][TLettersKeys];
 export type TDocAttrsSmallforms = keyof TDocuments['documents']['smallforms'][TSmallformsKeys];
