@@ -54,19 +54,17 @@
 	>
 		{data.edView === 'edView1' ? 'Dokumente' : dictDocPicker[data.edType]?.name}
 	</h1>
-
 	<!-- Navigation  -->
 	{#if data.edView === 'edView1'}
 		{@render nav()}
+		<div class="mt-20 text-center">
+			<h2 class=" mb-5 h2">Shortcuts</h2>
+			<p class="text-xl">
+				&rarr; <a class="underline" href={resolve('/edition/smallform_0231')}>Smallform 0231</a>
+			</p>
+		</div>
 	{/if}
 	{@render children()}
 {:else}
 	{@render children()}
 {/if}
-
-<div class="mt-30 text-center">
-	<h2 class=" mb-5 h2">Shortcuts</h2>
-	<p class="text-xl">
-		&rarr; <a class="underline" href={resolve('/edition/smallform_0231')}>Smallform 0231</a>
-	</p>
-</div>
