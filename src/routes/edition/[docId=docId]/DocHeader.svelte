@@ -3,7 +3,6 @@
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	import { tick } from 'svelte';
-	let isExpandedBox1 = $state(false);
 
 	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
 
@@ -17,13 +16,13 @@
 		return match ? match[1] : '';
 	});
 
-	let stateMetadata = $state('eckdaten');
-	let isExpandedMetadata = $state(true);
+	let stateMetadata = $state<string | null>('eckdaten');
+	let isExpanded = $state(false);
 
 	let buttonIsSticky = $state(false);
 
 	const toggleExpandableBox = async () => {
-		isExpandedBox1 = !isExpandedBox1;
+		isExpanded = !isExpanded;
 		await tick();
 		updateSticky();
 	};
@@ -62,12 +61,8 @@
 			<button
 				class={['my-btn-round', stateMetadata === state && 'my-btn-active']}
 				onclick={() => {
-					if (stateMetadata === state) {
-						stateMetadata = null;
-						isExpandedMetadata = false;
-					} else {
+					if (stateMetadata !== state) {
 						stateMetadata = state;
-						isExpandedMetadata = true;
 					}
 				}}>{text}</button
 			>
@@ -86,88 +81,82 @@
 			{@render metadataButton('download', 'Download-Links')}
 			<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 		</div>
-		{#if isExpandedMetadata}
-			<div class={['mt-5 mb-20 px-5 pt-5']}>
-				{#if stateMetadata === 'eckdaten'}
-					<table>
-						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry('Voller Titel', docMeta.metadata.title_full)}
-							{@render metadataEntry('Publikationsdatum', docMeta.metadata.pubDate)}
-							{@render metadataEntry('Publikationsort', docMeta.metadata.pubPlace)}
-							{@render metadataEntry(
-								'Publikation einzig post-hum',
-								docMeta.metadata.pubPosthumOnly
-							)}
-							{@render metadataEntry('Publikationsdetails', docMeta.metadata.pubDetails)}
-						</tbody>
-					</table>
-				{:else if stateMetadata === 'sources'}
-					<table>
-						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry('Signatur', docMeta.metadata.signature)}
-						</tbody>
-					</table>
-				{:else if stateMetadata === 'keywords'}
-					<!-- Global Entities -->
-					{#if Object.keys(dictReg).some((regType) => {
-						const keywords = docMeta.metadata.keywords[regType];
-						return keywords && keywords.length > 0;
-					})}
-						<h5 class="mb-4 h5"><strong>Schlagwörter</strong></h5>
-						<div data-dom="global_entities" class="flex flex-wrap gap-4">
-							{#each Object.keys(dictReg) as regType}
-								{@const regKeys = docMeta.metadata.keywords[regType]}
-								{#each regKeys ? Object.values(regKeys) : [] as regKey}
-									<a
-										class="whitespace-nowrap text-surface-950"
-										data-type="entity"
-										data-entitytype={dictReg[regType].key_singular}
-										href={resolve(`/edition/register/${regKey}`)}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{reg[regType][regKey]?.name}
-									</a>
-								{/each}
+		<div class={['mt-5 mb-20 px-5 pt-5']}>
+			{#if stateMetadata === 'eckdaten'}
+				<table>
+					<tbody class="flex flex-col gap-2">
+						{@render metadataEntry('Voller Titel', docMeta.metadata.title_full)}
+						{@render metadataEntry('Publikationsdatum', docMeta.metadata.pubDate)}
+						{@render metadataEntry('Publikationsort', docMeta.metadata.pubPlace)}
+						{@render metadataEntry('Publikation einzig post-hum', docMeta.metadata.pubPosthumOnly)}
+						{@render metadataEntry('Publikationsdetails', docMeta.metadata.pubDetails)}
+					</tbody>
+				</table>
+			{:else if stateMetadata === 'sources'}
+				<table>
+					<tbody class="flex flex-col gap-2">
+						{@render metadataEntry('Signatur', docMeta.metadata.signature)}
+					</tbody>
+				</table>
+			{:else if stateMetadata === 'keywords'}
+				<!-- Global Entities -->
+				{#if Object.keys(dictReg).some((regType) => {
+					const keywords = docMeta.metadata.keywords[regType];
+					return keywords && keywords.length > 0;
+				})}
+					<div data-dom="global_entities" class="flex flex-wrap gap-4">
+						{#each Object.keys(dictReg) as regType}
+							{@const regKeys = docMeta.metadata.keywords[regType]}
+							{#each regKeys ? Object.values(regKeys) : [] as regKey}
+								<a
+									class="whitespace-nowrap text-surface-950"
+									data-type="entity"
+									data-entitytype={dictReg[regType].key_singular}
+									href={resolve(`/edition/register/${regKey}`)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{reg[regType][regKey]?.name}
+								</a>
 							{/each}
-						</div>
-					{/if}
-				{:else if stateMetadata === 'citation'}
-					<table>
-						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry(
-								'Dieses Dokument',
-								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full}`
-							)}
-							{@render metadataEntry(
-								'Aktuell sichtbare Seite',
-								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full},  Seite ${currentPage}`
-							)}
-						</tbody>
-					</table>
-				{:else if stateMetadata === 'download'}
-					<table>
-						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry(
-								'XML',
-								`<a href="https://dav.annemarie-schwarzenbach.ch/data/sources/tei/smallforms/02/${docId}.xml" target="_blank" rel="noopener noreferrer">XML-Dokument</a>`
-							)}
-						</tbody>
-					</table>
-				{:else if stateMetadata === 'all'}
-					<div class={[isExpandedMetadata ? 'h-auto' : 'max-h-13 overflow-hidden']}>
-						<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
-						<div data-dom="metadata_table" class="">
-							{#each Object.entries(docMeta.metadata) as entry}
-								{#if entry[0] !== 'keywords'}
-									<p><strong>{entry[0]}:</strong> {entry[1]}</p>
-								{/if}
-							{/each}
-						</div>
+						{/each}
 					</div>
 				{/if}
-			</div>
-		{/if}
+			{:else if stateMetadata === 'citation'}
+				<table>
+					<tbody class="flex flex-col gap-2">
+						{@render metadataEntry(
+							'Dieses Dokument',
+							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full}`
+						)}
+						{@render metadataEntry(
+							'Aktuell sichtbare Seite',
+							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full},  Seite ${currentPage}`
+						)}
+					</tbody>
+				</table>
+			{:else if stateMetadata === 'download'}
+				<table>
+					<tbody class="flex flex-col gap-2">
+						{@render metadataEntry(
+							'XML',
+							`<a href="https://dav.annemarie-schwarzenbach.ch/data/sources/tei/smallforms/02/${docId}.xml" target="_blank" rel="noopener noreferrer">XML-Dokument</a>`
+						)}
+					</tbody>
+				</table>
+			{:else if stateMetadata === 'all'}
+				<div class="h-auto">
+					<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
+					<div data-dom="metadata_table" class="">
+						{#each Object.entries(docMeta.metadata) as entry}
+							{#if entry[0] !== 'keywords'}
+								<p><strong>{entry[0]}:</strong> {entry[1]}</p>
+							{/if}
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</div>
 	</div>
 {/snippet}
 
@@ -183,10 +172,7 @@
 		{#if globalComment}
 			<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
 				<div
-					class={[
-						'grid grid-cols-2 gap-20',
-						isExpandedBox1 ? 'h-auto' : 'max-h-40 overflow-hidden'
-					]}
+					class={['grid grid-cols-2 gap-20', isExpanded ? 'h-auto' : 'max-h-40 overflow-hidden']}
 				>
 					<!-- Überblickskommentar -->
 					<div>
@@ -200,7 +186,7 @@
 				</div>
 
 				<!-- Gradient -->
-				{#if !isExpandedBox1}
+				{#if !isExpanded}
 					<button
 						class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent"
 						aria-label="expand box"
@@ -221,14 +207,12 @@
 						aria-label="expand box"
 						onclick={toggleExpandableBox}
 					>
-						<i class={['fa-solid', isExpandedBox1 ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
+						<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
 					</button>
 				</div>
 			</div>
 		{/if}
 	</div>
-{:else}
-	<h1 class="text-red-500">metadata is not defined</h1>
 {/if}
 
 <style lang="postcss">
