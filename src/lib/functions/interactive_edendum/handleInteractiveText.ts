@@ -107,8 +107,8 @@ export function handleRsClick(key: TRegKeysFlat) {
 	scrollRegister(elSpan as HTMLElement);
 }
 
-export function handleAnnotationClick(noteId: string) {
-	if (!noteId) return;
+export function handleAnnotationClick(noteId: string | undefined | null) {
+	if (!noteId || (typeof noteId) !== "string") return;
 	selectedTextNode.id = noteId;
 	activateNoteInText(noteId);
 	const elSpan = document.querySelector(

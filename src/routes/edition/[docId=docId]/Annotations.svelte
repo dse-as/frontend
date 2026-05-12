@@ -18,7 +18,8 @@
 	<ol
 		class="notes"
 		onclick={(ev: Event) => {
-			const key = ev.target.closest('li')?.getAttribute('data-noteid');
+			const target = ev.target as HTMLElement | null;
+			const key = target?.closest('li')?.getAttribute('data-noteid');
 			handleAnnotationClick(key);
 		}}
 	>
