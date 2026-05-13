@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 

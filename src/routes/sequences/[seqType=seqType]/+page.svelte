@@ -23,9 +23,9 @@
 
 		<div bind:this={containerRef} class="flex min-h-30 w-full gap-2 overflow-x-auto px-10">
 			{#each seqItems[seqItemId].docs as docId, index (docId)}
-				{@const itemType = findEdTypeByDocId(docId)}
-				{#if itemType}
-					{@const itemMeta = data.fullMeta[itemType][docId]}
+				{@const docType = findEdTypeByDocId(docId)}
+				{#if docType}
+					{@const itemMeta = data.fullMeta[docType][docId]}
 					<a
 						href={resolve(
 							`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
