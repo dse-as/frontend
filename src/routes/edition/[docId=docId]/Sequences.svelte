@@ -68,9 +68,6 @@
 	// UI-State
 	let isSelectedValidSeq = $derived(currentSeq.type ? true : false);
 	let isOpenSeqPanel = $state(false);
-	let hasLeftTriggerAfterOpening = $state(false);
-	let isHoveredSeqNavPanel = $state(false);
-	let isHoveredSeqLargePanel = $state(false);
 	let isHoveredAlltypes = $state(false);
 	let timeoutIdCloseSeqPanel: ReturnType<typeof setTimeout> | undefined = $state();
 	let timeoutIdResetActiveType: ReturnType<typeof setTimeout> | undefined = $state();
@@ -91,7 +88,6 @@
 	let elSeqLargePanel: HTMLElement | undefined = $state(undefined);
 
 	// UI-Choices
-	let keepPanelOpen = $state(false);
 	let activeType: TSeqType | null = $state(null);
 
 	// Functions
@@ -113,8 +109,6 @@
 		timeoutIdCloseSeqPanel = setTimeout(() => {
 			resetActiveType(0);
 			isOpenSeqPanel = false;
-			keepPanelOpen = false;
-			hasLeftTriggerAfterOpening = false; // reset
 		}, delay);
 	}
 
@@ -201,7 +195,7 @@
 			isCurrentSeqList && docId === itemId && 'pointer-events-none'
 		]}
 		onclick={() => {
-			if (!keepPanelOpen) closeSeqPanel(0);
+			closeSeqPanel(0);
 			invalidateAll();
 		}}
 	>
@@ -265,11 +259,8 @@
 	onclick={() => {
 		closeSeqPanel(0);
 	}}
-	onmouseover={() => {
-		if (!keepPanelOpen) closeSeqPanel(500);
-	}}
 	onfocus={() => {
-		if (!keepPanelOpen) closeSeqPanel(500);
+		closeSeqPanel(0);
 	}}
 	aria-label="Panel schliessen"
 	class="fixed top-0 z-100 h-full w-full bg-surface-50-950/80"
@@ -288,17 +279,7 @@
 		>
 	</div>
 {:else}
-	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div
-		bind:this={elSeqMiniPanel}
-		class="relative z-90003 mb-25"
-		onmouseenter={() => {
-			isHoveredSeqNavPanel = true;
-		}}
-		onmouseleave={() => {
-			isHoveredSeqNavPanel = false;
-		}}
-	>
+	<div bind:this={elSeqMiniPanel} class="relative z-90003 mb-25">
 		<div class="flex w-full justify-center gap-6">
 			<div class="mb-3 flex w-max flex-col items-center">
 				<h6 class="h6">
@@ -333,31 +314,11 @@
 				aria-label="expand box"
 				onclick={() => {
 					if (!isOpenSeqPanel) openSeqPanel();
-					else if (!hasLeftTriggerAfterOpening) {
-						keepPanelOpen = true;
-						hasLeftTriggerAfterOpening = true;
-					} else closeSeqPanel(0);
-				}}
-				onmouseenter={() => {
-					openSeqPanel();
-				}}
-				onmouseleave={() => {
-					if (isOpenSeqPanel) {
-						hasLeftTriggerAfterOpening = true;
-					}
+					else closeSeqPanel(0);
 				}}
 			>
 				<div style="position: relative; display: inline-block;">
-					<i
-						class={[
-							'fa-solid',
-							!isOpenSeqPanel
-								? 'fa-chevron-down'
-								: !hasLeftTriggerAfterOpening
-									? 'fa-lock'
-									: 'fa-chevron-up'
-						]}
-					></i>
+					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
 					{#if hasOtherSequences && !isOpenSeqPanel}
 						<i
 							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800-200 pt-2 text-surface-50-950"
@@ -398,28 +359,6 @@
 			clearTimeout(timeoutIdCloseSeqPanel);
 		}}
 	>
-		<!-- Slider to Keep panel open -->
-		<Switch
-			class="absolute top-6 right-6 z-90009"
-			checked={keepPanelOpen}
-			onCheckedChange={(details) => (keepPanelOpen = details.checked)}
-		>
-			<Switch.Control>
-				<Switch.Thumb>
-					<Switch.Context>
-						{#snippet children(switch_)}
-							{#if switch_().checked}
-								<i class="fa-solid fa-lock"></i>
-							{:else}
-								<i class="fa-solid fa-lock-open"></i>
-							{/if}
-						{/snippet}
-					</Switch.Context>
-				</Switch.Thumb>
-			</Switch.Control>
-			<Switch.HiddenInput />
-		</Switch>
-
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
 			<div class="flex w-full gap-2 overflow-x-auto px-6 py-1">
@@ -447,7 +386,6 @@
 						}}
 						onclick={() => {
 							activeType = seqType as TSeqType;
-							keepPanelOpen = true;
 						}}
 					>
 						{dictSeqTyped[seqType].label_plural}
@@ -522,9 +460,7 @@
 											class="h-full underline hover:text-primary-500"
 											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqId, page: null })}`}
 											onclick={() => {
-												if (!keepPanelOpen) {
-													closeSeqPanel(0);
-												}
+												closeSeqPanel(0);
 											}}
 											>Sequenz auswählen
 										</a>
