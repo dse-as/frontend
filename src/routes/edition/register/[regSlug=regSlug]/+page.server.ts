@@ -4,14 +4,14 @@ import { register as reg } from '$lib/data/register.json';
 export const prerender = true;
 
 export const entries: EntryGenerator = () => {
-	// Extracting first-order keys
+	// Extract first-order keys
 	const firstOrderKeyObjects = Object.keys(reg).map((firstKey) => {
 		return { regSlug: firstKey };
 	});
 
-	// Extracting second-order keys
+	// Extract second-order keys
 	const secondOrderKeyObjects = Object.keys(reg).flatMap((firstKey) => {
-		return Object.keys(reg[firstKey]).map((secondKey) => {
+		return Object.keys(reg[firstKey as keyof typeof reg] || {}).map((secondKey) => {
 			return { regSlug: secondKey };
 		});
 	});
@@ -20,9 +20,12 @@ export const entries: EntryGenerator = () => {
 	return [...firstOrderKeyObjects, ...secondOrderKeyObjects];
 };
 
-export const load: PageServerLoad = async ({ parent, params, url }) => {
+export const load: PageServerLoad = async ({ parent }) => {
 	const { regType, regSlug } = await parent();
 
-	const regAttributes = reg?.[regType]?.[regSlug];
+	const regAttributes =
+		regType && regSlug
+			? (reg as Record<string, Record<string, any>>)?.[regType]?.[regSlug]
+			: undefined;
 	return { regAttributes };
 };
