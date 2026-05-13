@@ -95,7 +95,6 @@ export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 	scrollText(elSpan as HTMLElement);
 }
 
-
 export function handleAnnotationClick(noteId: string | undefined | null) {
 	if (!noteId) return;
 	selectedTextNode.id = noteId;
@@ -106,7 +105,7 @@ export function handleAnnotationClick(noteId: string | undefined | null) {
 	scrollText(elSpan as HTMLElement);
 }
 
-export function handleRsClick(key: TRegKeysFlat) {
+export function handleRefStringClick(key: TRegKeysFlat | undefined | null) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectAllRsNodesInText(key);
@@ -114,7 +113,7 @@ export function handleRsClick(key: TRegKeysFlat) {
 	const elSpan = document.querySelector(`[data-dom=containerRegister] [data-regkey=${key}]`);
 	scrollRegister(elSpan as HTMLElement);
 }
-export function handleFootnoteClick(noteId: string) {
+export function handleFootnoteClick(noteId: string | undefined | null) {
 	if (!noteId) return;
 	selectedTextNode.id = noteId;
 	openNoteSidebar();

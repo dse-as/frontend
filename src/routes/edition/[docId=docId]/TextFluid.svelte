@@ -8,8 +8,9 @@
 	import {
 		clearAllHighlights,
 		handleFootnoteClick,
-		handleRsClick
+		handleRefStringClick
 	} from '$lib/functions/interactive_edendum/handleInteractiveText';
+	import { type TRegKeysFlat } from '$lib/types/register/TRegister';
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
@@ -69,18 +70,7 @@
 	}
 
 	// ---------------------------------------------
-	// Click handlers
-	function handleDocumentClick(ev: MouseEvent) {
-		if ((ev.target as HTMLElement).closest('[data-type="mark"]')) {
-			handleMarkClick(ev);
-		} else if ((ev.target as HTMLElement).closest('[data-type="markend"]')) {
-			handleMarkendClick(ev);
-		} else if (selectedTextNode.id) {
-			unselectMarks();
-			unselectNotes();
-		}
-	}
-
+	// Attachments
 	function setupFacsimile(el: HTMLElement) {
 		$effect(() => {
 			// initial collect
@@ -93,7 +83,7 @@
 			resizeObserver.observe(el);
 
 			// reacts to DOM/text changes
-			let mutationTimeout: number;
+			let mutationTimeout: ReturnType<typeof setTimeout>;
 
 			mutationObserver = new MutationObserver(() => {
 				clearTimeout(mutationTimeout);
@@ -128,16 +118,6 @@
 		});
 	}
 
-	function setupListeners(el: HTMLElement) {
-		$effect(() => {
-			el.addEventListener('click', handleDocumentClick);
-
-			return () => {
-				el.removeEventListener('click', handleDocumentClick);
-			};
-		});
-	}
-
 	function openDFpage(pagenum: number) {
 		const url = new URL(page.url);
 		url.searchParams.set('page', String(pagenum));
@@ -155,24 +135,24 @@
 	};
 </script>
 
+<!-- @Sebi: welche ARIA-role würdest du hier vergeben? button macht keinen Sinn (insb. da weitere buttons enthalten sind...) -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	data-textflow="fluid"
 	onclick={(ev: Event) => {
 		const el = ev.target as HTMLElement;
-
 		if (!el) return;
 		if (el.tagName === 'TEI-DIV' || el.tagName === 'TEI-P') {
 			clearAllHighlights();
 		} else if (el.tagName === 'TEI-RS') {
-			handleRsClick(el.getAttribute('key'));
+			handleRefStringClick(el.getAttribute('key') as TRegKeysFlat);
 		} else if (el.classList.contains('footnote') || el.querySelector('.footnote')) {
 			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key);
+			handleFootnoteClick(key as TRegKeysFlat);
 		} else if (el.classList.contains('note-mark') || el.querySelector('.note-mark')) {
 			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key);
+			handleFootnoteClick(key as TRegKeysFlat);
 		} else {
 			clearAllHighlights();
 		}
@@ -180,11 +160,11 @@
 	class="mx-auto mt-10 grid max-w-300 grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
 	bind:this={containerMaintext}
 >
-	<!-- THUMBS COLUMN -->
+	<!-- Thumbnail Column -->
 	<aside class="h-full">
 		{#each thumbs as thumb, i (thumb.id)}
 			<!-- spacer -->
-			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`} />
+			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`}></div>
 
 			<button
 				class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
@@ -196,12 +176,11 @@
 		{/each}
 	</aside>
 
-	<!-- TEXT COLUMN -->
+	<!-- Text Column -->
 	<main
 		bind:this={containerTEI}
 		class="max-w-none"
 		{@attach setupFacsimile}
-		{@attach setupListeners}
 		{@attach setupCustomElements}
 	>
 		{@html serializedWithoutNotes}
