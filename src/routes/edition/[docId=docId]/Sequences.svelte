@@ -1,6 +1,5 @@
 <script lang="ts">
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
@@ -11,6 +10,8 @@
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import { resolve } from '$app/paths';
 	import { type TDocKeys } from '$lib/types/documents/TDocuments';
+	import { tick } from 'svelte';
+	import { preventDefault } from 'svelte/legacy';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -100,9 +101,8 @@
 
 	function openSeqPanel() {
 		isOpenSeqPanel = true;
-		setTimeout(() => {
-			elSeqLargePanel?.focus();
-		}, 100);
+		tick();
+		elSeqLargePanel?.focus();
 	}
 
 	function closeSeqPanel(delay = 0) {
@@ -311,10 +311,12 @@
 			</a>
 			<button
 				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-300-700"
-				aria-label="expand box"
-				onclick={() => {
+				aria-label="Sequenzansicht öffnen"
+				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();
 					else closeSeqPanel(0);
+					const elButton = (ev.target as HTMLElement).closest('button') as HTMLElement;
+					elButton?.focus();
 				}}
 			>
 				<div style="position: relative; display: inline-block;">
@@ -355,7 +357,6 @@
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
 		onmouseenter={() => {
-			isHoveredSeqLargePanel = true;
 			clearTimeout(timeoutIdCloseSeqPanel);
 		}}
 	>
