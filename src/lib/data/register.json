@@ -22135,7 +22135,8 @@
 				"nameVariants": [],
 				"gndNumber": "1012979-0",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"organisation_0003": {
 				"name": "ABC (Zürich)",

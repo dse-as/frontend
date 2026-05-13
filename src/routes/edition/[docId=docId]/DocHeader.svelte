@@ -1,12 +1,12 @@
 <script lang="ts">
-	import register from '$lib/data/register.json';
+	import { register as reg } from '$lib/data/register.json';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	import { tick } from 'svelte';
+	import { type TRegTypes } from '$lib/types/register/TRegister';
 
 	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
 
-	const reg = register.register as Record<string, Record<string, any>>;
 	const dictReg = dict_register.dict_register as Record<
 		string,
 		{ key_singular: string; label_plural: string }
@@ -67,10 +67,10 @@
 				}}>{text}</button
 			>
 		{/snippet}
-		{#snippet metadataEntry(label, content)}
-			<tr>
-				<td class="w-80 px-4 py-2 font-bold">{label}:</td>
-				<td class="px-4 py-2 text-left">{@html content}</td>
+		{#snippet metadataEntry(label: string, content: string)}
+			<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+				<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
+				<td class="p-0 text-left @lg:py-2">{@html content}</td>
 			</tr>
 		{/snippet}
 		<div class="flex w-full flex-wrap justify-start gap-5">
@@ -79,9 +79,9 @@
 			{@render metadataButton('keywords', 'Schlagwörter')}
 			{@render metadataButton('citation', 'Zitierhinweise')}
 			{@render metadataButton('download', 'Download-Links')}
-			<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
+			{@render metadataButton('all', 'Alles (Temporär)')}
 		</div>
-		<div class={['mt-5 mb-20 px-5 pt-5']}>
+		<div class={['@container mt-5 mb-20 w-full pt-5']}>
 			{#if stateMetadata === 'eckdaten'}
 				<table>
 					<tbody class="flex flex-col gap-2">
@@ -116,7 +116,7 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									{reg[regType][regKey]?.name}
+									{reg[regType as TRegTypes][regKey]?.name}
 								</a>
 							{/each}
 						{/each}
@@ -146,11 +146,10 @@
 				</table>
 			{:else if stateMetadata === 'all'}
 				<div class="h-auto">
-					<h5 class="mb-7 h5"><strong>Metadaten</strong></h5>
 					<div data-dom="metadata_table" class="">
 						{#each Object.entries(docMeta.metadata) as entry}
 							{#if entry[0] !== 'keywords'}
-								<p><strong>{entry[0]}:</strong> {entry[1]}</p>
+								{@render metadataEntry(entry[0], entry[1])}
 							{/if}
 						{/each}
 					</div>
