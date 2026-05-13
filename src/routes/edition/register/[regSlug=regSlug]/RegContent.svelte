@@ -94,28 +94,30 @@
 <!-- Snippet for LinkedItems (inside LinkedItemsList) -->
 {#snippet LinkedItems(itemId)}
 	{@const itemType = findEdTypeByDocId(itemId)}
-	{@const itemMeta = fullMeta[itemType][itemId]}
-	<a
-		href={resolve(`/edition/${itemId}?mode=DF`)}
-		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
-		target="blank"
-		rel="noopener noreferrer"
-	>
-		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb
-					url={itemMeta?.manuscript?.iiif_urls[0]}
-					maxWidth="80"
-					maxHeight="80"
-					classes="rounded-xl"
-				/>
+	{#if itemType}
+		{@const itemMeta = fullMeta[itemType][itemId]}
+		<a
+			href={resolve(`/edition/${itemId}?mode=DF`)}
+			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+			target="blank"
+			rel="noopener noreferrer"
+		>
+			<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+				<div class="flex h-full w-full items-center justify-center">
+					<IIIF_Thumb
+						url={itemMeta?.manuscript?.iiif_urls[0]}
+						maxWidth="80"
+						maxHeight="80"
+						classes="rounded-xl"
+					/>
+				</div>
+				<div class="flex flex-col">
+					<span class="italic">{itemMeta?.metadata?.title_full}</span>
+					<span class="">{itemMeta?.metadata?.pubDate}</span>
+				</div>
 			</div>
-			<div class="flex flex-col">
-				<span class="italic">{itemMeta?.metadata?.title_full}</span>
-				<span class="">{itemMeta?.metadata?.pubDate}</span>
-			</div>
-		</div>
-	</a>
+		</a>
+	{/if}
 {/snippet}
 
 <!-- Container -->

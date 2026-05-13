@@ -23,32 +23,34 @@
 		<div bind:this={containerRef} class="flex min-h-30 w-full gap-2 overflow-x-auto px-10">
 			{#each seqItems[seqItemId].docs as docId, index (docId)}
 				{@const itemType = findEdTypeByDocId(docId)}
-				{@const itemMeta = data.fullMeta[itemType][docId]}
-				<a
-					href={resolve(
-						`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
-					)}
-					class={['w-90 rounded-xl p-1']}
-					onclick={() => {
-						if (!keepPanelOpen) closeSeqPanel(0);
-						invalidateAll();
-					}}
-				>
-					<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-						<div class="flex h-full w-full items-center justify-center">
-							<IIIF_Thumb
-								url={itemMeta?.manuscript?.iiif_urls[0]}
-								maxWidth="100"
-								maxHeight="100"
-								classes="rounded-xl"
-							/>
+				{#if itemType}
+					{@const itemMeta = data.fullMeta[itemType][docId]}
+					<a
+						href={resolve(
+							`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
+						)}
+						class={['w-90 rounded-xl p-1']}
+						onclick={() => {
+							if (!keepPanelOpen) closeSeqPanel(0);
+							invalidateAll();
+						}}
+					>
+						<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+							<div class="flex h-full w-full items-center justify-center">
+								<IIIF_Thumb
+									url={itemMeta?.manuscript?.iiif_urls[0]}
+									maxWidth="100"
+									maxHeight="100"
+									classes="rounded-xl"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<span class="italic">{itemMeta?.metadata?.title_full}</span>
+								<span class="">{itemMeta?.metadata?.pubDate}</span>
+							</div>
 						</div>
-						<div class="flex flex-col">
-							<span class="italic">{itemMeta?.metadata?.title_full}</span>
-							<span class="">{itemMeta?.metadata?.pubDate}</span>
-						</div>
-					</div>
-				</a>
+					</a>
+				{/if}
 			{/each}
 		</div>
 	</div>

@@ -85,27 +85,29 @@
 			{#if showTextzeugen}
 				{#each tzgIds as tzgId}
 					{@const tzgType = findEdTypeByDocId(tzgId)}
-					{@const items = collectGalleryItems(tzgId)}
-					<div
-						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
-					>
-						<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
-						{#each items as item (item.page)}
-							<a
-								class="ml-2 rounded-xl p-1"
-								href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
-								<span class="italic">Seite {item.page}</span>
-							</a>
-						{:else}
-							<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
-								>Keine Faksimile gefunden</a
-							>
-						{/each}
-					</div>
+					{#if tzgType}
+						{@const items = collectGalleryItems(tzgId)}
+						<div
+							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
+						>
+							<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
+							{#each items as item (item.page)}
+								<a
+									class="ml-2 rounded-xl p-1"
+									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+									<span class="italic">Seite {item.page}</span>
+								</a>
+							{:else}
+								<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
+									>Keine Faksimile gefunden</a
+								>
+							{/each}
+						</div>
+					{/if}
 				{/each}
 			{/if}
 		</div>
