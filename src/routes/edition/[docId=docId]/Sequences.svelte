@@ -10,6 +10,7 @@
 	import { invalidateAll } from '$app/navigation';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import { resolve } from '$app/paths';
+	import { type TDocKeys } from '$lib/types/documents/TDocuments';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -188,7 +189,7 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
+{#snippet seqItem(itemId: TDocKeys, seqId: string, isCurrentSeqList: boolean)}
 	{@const itemType = findEdTypeByDocId(itemId)}
 	{@const itemMeta = fullMeta[itemType][itemId]}
 	<a
@@ -222,8 +223,8 @@
 {/snippet}
 
 {#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: boolean)}
-	{@const itemsBeforeIds = seqMatching[seqType]?.[seqId]?.docsBefore || []}
-	{@const itemsAfterIds = seqMatching[seqType]?.[seqId]?.docsAfter || []}
+	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqId]?.docsBefore as TDocKeys[]) || []}
+	{@const itemsAfterIds = (seqMatching[seqType]?.[seqId]?.docsAfter as TDocKeys[]) || []}
 	<div class="flex min-h-[140px] grow overflow-x-auto pb-6">
 		<!-- Documents before -->
 		<div
@@ -304,7 +305,7 @@
 					Sequenz: <a
 						class="hover:underline"
 						href={resolve(
-							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}`
+							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
