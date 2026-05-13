@@ -172,7 +172,15 @@
 				{@render groupControls()}
 				{@render sortControls()}
 			</div>
-			<Shortcuts {isMultiColumn} {hasGroupControls} {autoCatLabels} {allGroupKeys} regType="null" />
+			{#if uiRegSortBy.id !== 'date'}
+				<Shortcuts
+					{isMultiColumn}
+					{hasGroupControls}
+					{autoCatLabels}
+					{allGroupKeys}
+					regType={null}
+				/>
+			{/if}
 		</div>
 	{/if}
 
