@@ -42,7 +42,7 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={data.regSlug} regItem={null} />
+		<RegList isMultiColumn={true} regType={data.regSlug || null} regItem={null} />
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->

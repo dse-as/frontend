@@ -3,9 +3,10 @@ export const prerender = true;
 import type { LayoutServerLoad } from './$types';
 import { register as reg } from '$lib/data/register.json';
 import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
+import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 
 export const load: LayoutServerLoad = ({ params, url }) => {
-	const regSlug: string | undefined = params.regSlug;
+	const regSlug = (params.regSlug as TRegTypes | TRegKeysFlat | undefined);
 	// const regType: string | null = findKeyBySlug(reg, regSlug);
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
 
