@@ -87,7 +87,7 @@ export function clearAllHighlights() {
 	resetAllActiveNodesInText();
 }
 
-export function handleRegisterClick(key: TRegKeysFlat) {
+export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectAllRsNodesInText(key);

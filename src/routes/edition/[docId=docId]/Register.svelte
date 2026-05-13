@@ -2,7 +2,7 @@
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import register from '$lib/data/register.json';
-	import { type TRegTypes } from '$lib/types/register/TRegister';
+	import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
 	import { openRegisters, selectedTextNode } from '$lib/globals/state/ui.svelte';
 	import { handleRegisterClick } from '$lib/functions/interactive_edendum/handleInteractiveText';
@@ -26,14 +26,14 @@
 
 	// Collect all regKeys in the register that are linked to the document
 	let regEntries = $derived.by(() => {
-		const regEntries = {};
+		const regEntries: Record<string, TRegKeysFlat[]> = {};
 
 		Object.keys(reg).forEach((regType) => {
 			regEntries[regType] = [];
 
 			Object.entries(reg[regType]).forEach(([key, regEntry]) => {
 				if (regEntry?.docs?.includes(docId)) {
-					regEntries[regType].push(key);
+					regEntries[regType].push(key as TRegKeysFlat);
 				}
 			});
 		});
@@ -70,9 +70,9 @@
 			</h1>
 			<Accordion.ItemContent class="m-0 p-0">
 				{#each regEntries[regType] as regKey (regKey)}
-					<!-- svelte-ignore a11y_click_events_have_key_events -->
-					<!-- svelte-ignore a11y_no_static_element_interactions -->
 					<div
+						role="button"
+						tabindex="0"
 						data-regKey={regKey}
 						class={[
 							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-1 pl-17  hover:bg-surface-300-700',
@@ -81,11 +81,14 @@
 						onclick={() => {
 							handleRegisterClick(regKey);
 						}}
+						onkeydown={() => {
+							handleRegisterClick(regKey);
+						}}
 					>
 						<p class="text-lg">{reg[regType][regKey].name}</p>
 						<a
 							class="text-surface-950-500 hidden rounded-full px-2 py-2 underline group-hover:block hover:bg-surface-100-900"
-							href={resolve(`/edition/register/${regKey}`)}
+							href={resolve(`/edition/register/${regKey as string}`)}
 							target="_blank"
 							aria-label="In Register öffnen"
 							rel="noopener noreferrer"><i class="fa-rectangle-list fa-regular"></i></a
