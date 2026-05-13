@@ -4,7 +4,7 @@
 
 	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
 
-	const docTypeIdsForButtons = ['smallforms', 'longforms', 'letters'];
+	const docTypeIdsForButtons = ['smallforms', 'longforms', 'letters'] as const;
 </script>
 
 <!-- Snippet for List -->
@@ -25,7 +25,7 @@
 					class={[
 						'my-btn-round hover:bg-surface-200-800!',
 						data.edView === 'edView1' ? 'border-2 text-2xl' : 'border text-sm',
-						data.regType === docTypeId && 'my-btn-active'
+						data.edType === docTypeId && 'my-btn-active'
 					]}
 					href={resolve(`/edition/${docTypeId}`)}
 				>
@@ -52,7 +52,7 @@
 					: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 		]}
 	>
-		{data.edView === 'edView1' ? 'Dokumente' : dictDocPicker[data.edType]?.name}
+		{data.edView === 'edView1' ? 'Dokumente' : data.edType ? dictDocPicker[data.edType]?.name : ''}
 	</h1>
 	<!-- Navigation  -->
 	{#if data.edView === 'edView1'}

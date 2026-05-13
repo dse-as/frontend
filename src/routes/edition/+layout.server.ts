@@ -3,14 +3,15 @@ export const prerender = true;
 import type { LayoutServerLoad } from './$types';
 import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
 import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
 export const load: LayoutServerLoad = async ({ parent, url }) => {
 	const { fullMeta } = await parent();
 
-	const edSlug: string | undefined = url.pathname.split('/').pop(); //! better use params.edSlug;
+	// Last segment of url
+	const edSlug = url.pathname.split('/').pop() || '';
 
 	// What registerPage are we looking at?
-	// let edView = !edSlug
 	const edView =
 		edSlug === 'edition'
 			? //edition
@@ -24,8 +25,8 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 						'edView3'
 					: null;
 
-	const edType: string | null | undefined =
-		edView === 'edView2' ? edSlug : findEdTypeByDocId(edSlug);
+	const edType: TDocTypes | null =
+		edView === 'edView2' ? (edSlug as TDocTypes) : edSlug ? findEdTypeByDocId(edSlug as TDocKeys) : null;
 
 	return { edSlug, edType, edView };
 };
