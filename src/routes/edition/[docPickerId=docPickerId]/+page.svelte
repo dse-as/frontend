@@ -5,6 +5,10 @@
 
 	let { data } = $props();
 
+	const fullMetaRecord = $derived(data.fullMeta as Record<string, Record<string, any>>);
+	const edType = $derived(data.edType || '');
+	const edSlug = $derived(data.edSlug || '');
+
 	function preventVerticalScroll() {
 		// Get the current horizontal position
 		const scrollX = window.scrollX;
@@ -44,8 +48,8 @@
 	<div class="absolute top-45 left-0 w-full px-10">
 		<OverviewList
 			isMultiColumn={true}
-			ovMeta={data.fullMeta[data.edType]}
-			ovType={data.edSlug}
+			ovMeta={fullMetaRecord[edType]}
+			ovType={edSlug}
 			ovItem={null}
 		/>
 	</div>
@@ -54,14 +58,14 @@
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<OverviewList
 			isMultiColumn={false}
-			ovMeta={data.fullMeta[data.edType]}
-			ovType={data.edType}
-			ovItem={data.edSlug}
+			ovMeta={fullMetaRecord[edType]}
+			ovType={edType}
+			ovItem={edSlug}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<OverviewContent
-			ovType={data.edType}
-			ovAttrs={data.fullMeta[data.edType]?.[data.edSlug]}
+			ovType={edType}
+			ovAttrs={fullMetaRecord[edType]?.[edSlug]}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
 		/>
