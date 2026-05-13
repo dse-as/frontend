@@ -3,7 +3,6 @@
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
-	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
@@ -11,7 +10,7 @@
 	import { resolve } from '$app/paths';
 	import { type TDocKeys } from '$lib/types/documents/TDocuments';
 	import { tick } from 'svelte';
-	import { preventDefault } from 'svelte/legacy';
+	import type { TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -32,7 +31,7 @@
 	let {
 		fullMeta,
 		docId,
-		currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' }
+		currentSeq = { type: 'travels' as TSeqTypes, id: 'travel_0015' }
 	} = $props();
 
 	// Types
@@ -40,7 +39,7 @@
 		docId: string;
 		fac: string;
 		details: {
-			type: TSeqType;
+			type: TSeqTypes;
 			title: string;
 			datestring: string;
 		};
@@ -58,10 +57,10 @@
 		findMatchingSequences(
 			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
 			docId,
-			[currentSeq.id]
+			[currentSeq.key]
 		)
 	);
-	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.id]);
+	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.key]);
 	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
 	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
 	let hasOtherSequences = $derived(Object.keys(seqOther).length ? true : false);
@@ -89,7 +88,7 @@
 	let elSeqLargePanel: HTMLElement | undefined = $state(undefined);
 
 	// UI-Choices
-	let activeType: TSeqType | null = $state(null);
+	let activeType: TSeqTypes | null = $state(null);
 
 	// Functions
 	function handleEscape(ev: KeyboardEvent) {
@@ -183,12 +182,12 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId: TDocKeys, seqId: string, isCurrentSeqList: boolean)}
+{#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
 	{@const itemType = findEdTypeByDocId(itemId)}
 	{#if itemType}
 		{@const itemMeta = fullMeta[itemType][itemId]}
 		<a
-			href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
+			href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 			class={[
 				'w-70 rounded-xl p-1',
 				docId !== itemId && 'hover:bg-surface-300-700',
@@ -218,9 +217,9 @@
 	{/if}
 {/snippet}
 
-{#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: boolean)}
-	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqId]?.docsBefore as TDocKeys[]) || []}
-	{@const itemsAfterIds = (seqMatching[seqType]?.[seqId]?.docsAfter as TDocKeys[]) || []}
+{#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
+	{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
 	<div class="flex min-h-[140px] grow overflow-x-auto pb-6">
 		<!-- Documents before -->
 		<div
@@ -230,7 +229,7 @@
 			]}
 		>
 			{#each itemsBeforeIds as itemId}
-				{@render seqItem(itemId, seqId, isCurrentSeqList)}
+				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
 		<!-- Current Document -->
@@ -238,7 +237,7 @@
 			class={['mx-2 flex grow-0 justify-center rounded-xl bg-transparent']}
 			{@attach centerCurrentItemInGallery}
 		>
-			{@render seqItem(docId, seqId, isCurrentSeqList)}
+			{@render seqItem(docId, seqKey, isCurrentSeqList)}
 		</div>
 		<!-- Documents after -->
 		<div
@@ -248,7 +247,7 @@
 			]}
 		>
 			{#each itemsAfterIds as itemId}
-				{@render seqItem(itemId, seqId, isCurrentSeqList)}
+				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
 	</div>
@@ -276,7 +275,7 @@
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
-				activeType = Object.keys(seqMatching)[0] as TSeqType;
+				activeType = Object.keys(seqMatching)[0] as TSeqTypes;
 			}}>Sequenz wählen...</button
 		>
 	</div>
@@ -288,11 +287,11 @@
 					Sequenz: <a
 						class="hover:underline"
 						href={resolve(
-							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}` as any
+							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{seqAllTyped[currentSeq.type]?.[currentSeq.id]?.preamble}
+						>{seqAllTyped[currentSeq.type]?.[currentSeq.key]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -304,7 +303,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
+				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !prevId && 'text-surface-500']}>
 					<i class="fa-solid fa-chevron-left"></i>
@@ -336,7 +335,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
+				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !nextId && 'text-surface-500']}>
 					<p>{dictSeqTyped[currentSeq.type]?.label_next}</p>
@@ -365,7 +364,7 @@
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
 			<div class="flex w-full gap-2 overflow-x-auto px-6 py-1">
-				{@render sequenceList(currentSeq.type, currentSeq.id, true)}
+				{@render sequenceList(currentSeq.type, currentSeq.key, true)}
 			</div>
 		{/if}
 
@@ -385,10 +384,10 @@
 					<button
 						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
-							activeType = seqType as TSeqType;
+							activeType = seqType as TSeqTypes;
 						}}
 						onclick={() => {
-							activeType = seqType as TSeqType;
+							activeType = seqType as TSeqTypes;
 						}}
 					>
 						{dictSeqTyped[seqType].label_plural}
@@ -447,7 +446,7 @@
 					]}
 				>
 					<!-- Groups with other Sequences-->
-					{#each Object.keys(seqOther[activeType!] ?? {}) as seqId}
+					{#each Object.keys(seqOther[activeType!] ?? {}) as seqKey}
 						<div
 							class="group flex w-full flex-col gap-5 py-5"
 							tabindex="0"
@@ -456,21 +455,21 @@
 						>
 							<!-- Title with shortcuts -->
 							<div class={['mx-1 flex min-h-18 w-full flex-col items-start px-4 py-1']}>
-								<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqId].preamble}</h6>
+								<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqKey].preamble}</h6>
 								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 									<div class="flex gap-4">
 										<a
 											class="h-full underline hover:text-primary-500"
-											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqId, page: null })}`}
+											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 											onclick={() => {
 												closeSeqPanel(0);
 											}}
 											>Sequenz auswählen
 										</a>
-										{#if seqAllTyped[activeType!][seqId].url_slug}
+										{#if seqAllTyped[activeType!][seqKey].url_slug}
 											<a
 												class="h-full underline hover:text-primary-500"
-												href={`${dictSeqTyped[activeType!]?.url_overview}/${seqAllTyped[activeType!][seqId].url_slug}`}
+												href={`${dictSeqTyped[activeType!]?.url_overview}/${seqAllTyped[activeType!][seqKey].url_slug}`}
 												target="_blank"
 												rel="noopener noreferrer"
 												>{dictSeqTyped[activeType!]?.label_overview}
@@ -481,7 +480,7 @@
 							</div>
 							<!-- sequenceList with thumbnails -->
 							<div class="flex w-full gap-2 overflow-x-auto py-1">
-								{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
+								{@render sequenceList(activeType, seqKey as TSeqKeys, seqKey === currentSeq.key)}
 							</div>
 						</div>
 					{/each}

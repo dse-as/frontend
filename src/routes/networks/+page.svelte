@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
+	import { type TSeqCorrespondenceKeys } from '$lib/types/TSequences';
 
 	let corrData = $derived(seqAll.correspondence);
 	const specialCorrs = ['corr_spec_0001'];
@@ -21,13 +22,14 @@
 		{#each Object.keys(corrData).filter((corrId) => {
 			return !specialCorrs.includes(corrId);
 		}) as corrId}
-			{@const firstDocId = corrData[corrId].docs[0]}
+			{@const firstDocId = corrData[corrId as TSeqCorrespondenceKeys].docs[0]}
 			<a
 				class={[
 					'my-btn-round',
 					!firstDocId && 'pointer-events-none border-surface-500 text-surface-500'
 				]}
-				href={resolve(`/edition/${firstDocId}?seq=${corrId}`)}>{corrData[corrId].name}</a
+				href={resolve(`/edition/${firstDocId}?seq=${corrId}`)}
+				>{corrData[corrId as TSeqCorrespondenceKeys].name}</a
 			>
 		{/each}
 	</div>

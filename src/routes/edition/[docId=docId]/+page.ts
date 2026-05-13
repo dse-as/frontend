@@ -3,21 +3,21 @@ import type { PageLoad } from './$types';
 import { doc_sequences } from '$lib/data/doc_sequences.json';
 
 export const load: PageLoad = ({ data, params, url }) => {
-	const currentSeqId = url.searchParams.get('seq');
+	const currentSeqKey = url.searchParams.get('seq');
 
-	function findTypeById(id: string | null): string | null {
+	function findTypeByKey(key: string | null): string | null {
 		for (const type in doc_sequences) {
-			if ((doc_sequences as Record<string, Record<string, unknown>>)[type][id!]) {
+			if ((doc_sequences as Record<string, Record<string, unknown>>)[type][key!]) {
 				return type;
 			}
 		}
 		return null;
 	}
 
-	const currentSeqType = findTypeById(currentSeqId);
+	const currentSeqType = findTypeByKey(currentSeqKey);
 
 	return {
-		currentSeq: { type: currentSeqType, id: currentSeqId },
+		currentSeq: { type: currentSeqType, key: currentSeqKey },
 		...data
 	};
 };
