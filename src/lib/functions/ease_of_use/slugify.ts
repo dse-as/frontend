@@ -1,6 +1,6 @@
-type TSlugifyOptions = {slash?: boolean}
-export function slugify(input:string, { slash = false }:TSlugifyOptions) {
-	const specialChars:Record<string,string> = {
+type TSlugifyOptions = { slash?: boolean };
+export function slugify(input: string, { slash = false }: TSlugifyOptions) {
+	const specialChars: Record<string, string> = {
 		':': '_',
 		ä: 'ae',
 		ö: 'oe',

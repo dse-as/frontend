@@ -180,7 +180,7 @@ export type TRegGroupsFlat =
 	| TOrgsGroups
 	| TBiblsGroups
 	| TKeywordsGroups;
-	
+
 export type TRegGroupsMap = {
 	people: TPeopleGroups;
 	places: TPlacesGroups;

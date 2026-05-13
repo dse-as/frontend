@@ -26,7 +26,11 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 					: null;
 
 	const edType: TDocTypes | null =
-		edView === 'edView2' ? (edSlug as TDocTypes) : edSlug ? findEdTypeByDocId(edSlug as TDocKeys) : null;
+		edView === 'edView2'
+			? (edSlug as TDocTypes)
+			: edSlug
+				? findEdTypeByDocId(edSlug as TDocKeys)
+				: null;
 
 	return { edSlug, edType, edView };
 };

@@ -15,7 +15,7 @@ export const load: LayoutServerLoad = async ({ parent, params }) => {
 };
 
 // ---------------------------------
-// Below is an alternative attempt to get the typing of `fullMeta[docType]?.[docId]` right. 
+// Below is an alternative attempt to get the typing of `fullMeta[docType]?.[docId]` right.
 // It returns without errors, however, the type of docMeta is `const docMeta: null`
 // ---------------------------------
 

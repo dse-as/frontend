@@ -6,7 +6,7 @@ import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
 import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 
 export const load: LayoutServerLoad = ({ params, url }) => {
-	const regSlug = (params.regSlug as TRegTypes | TRegKeysFlat | undefined);
+	const regSlug = params.regSlug as TRegTypes | TRegKeysFlat | undefined;
 	// const regType: string | null = findKeyBySlug(reg, regSlug);
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
 

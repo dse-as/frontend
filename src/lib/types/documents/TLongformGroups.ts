@@ -1,2 +1,1 @@
-export type TLongformsGroups =
-    | 'Longform'
+export type TLongformsGroups = 'Longform';
