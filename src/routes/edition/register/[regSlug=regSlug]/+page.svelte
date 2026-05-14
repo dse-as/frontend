@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import RegContent from './RegContent.svelte';
 	import RegList from './RegList.svelte';
 	import { onMount } from 'svelte';
@@ -42,7 +43,7 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={data.regSlug || null} regItem={null} />
+		<RegList isMultiColumn={true} regType={data.regSlug as TRegTypes | undefined} regItem={null} />
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
@@ -50,7 +51,7 @@
 		<RegList
 			isMultiColumn={false}
 			regType={data.regType}
-			regItem={data.regSlug}
+			regItem={data.regSlug as TRegKeysFlat | undefined}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<RegContent

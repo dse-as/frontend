@@ -16,7 +16,7 @@
 	type K = TRegTypes;
 	interface Props<T extends K = K> {
 		isMultiColumn: boolean;
-		regType: T | null;
+		regType: T | undefined;
 		regItem?: TRegKeysFlat | null;
 		cheatPageHeightInRegSingleColView?: string;
 	}
