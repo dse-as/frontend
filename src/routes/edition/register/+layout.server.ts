@@ -2,12 +2,12 @@ export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
 import { register as reg } from '$lib/data/register.json';
-import { findKeyBySlug } from '$lib/functions/ease_of_use/findKeyBySlug.js';
+import { findKeyBySecondaryKey } from '$lib/functions/ease_of_use/findKeyBySecondaryKey.js';
 import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 
 export const load: LayoutServerLoad = ({ params, url }) => {
 	const regSlug = params.regSlug as TRegTypes | TRegKeysFlat | undefined;
-	// const regType: string | null = findKeyBySlug(reg, regSlug);
+	// const regType: string | null = findKeyBySecondaryKey(reg, regSlug);
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
 
 	// What registerPage are we looking at?
@@ -20,8 +20,10 @@ export const load: LayoutServerLoad = ({ params, url }) => {
 			: // e.g. /edition/register/[person_0001]
 				'regView3';
 
-	const regType: string | null | undefined =
-		regView === 'regView2' ? regSlug : findKeyBySlug(reg, regSlug);
+	const regType: TRegTypes | null | undefined =
+		regView === 'regView2'
+			? (regSlug as TRegTypes)
+			: (findKeyBySecondaryKey(reg, regSlug) as TRegTypes);
 
 	return { reg, regSlug, regType, allfirstOrderKeys, regView };
 };

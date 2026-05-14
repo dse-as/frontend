@@ -1,4 +1,4 @@
-export function findKeyBySlug(
+export function findKeyBySecondaryKey(
 	dict: Record<string, Record<string, any>>,
 	secondary: string | undefined
 ): string | null {
