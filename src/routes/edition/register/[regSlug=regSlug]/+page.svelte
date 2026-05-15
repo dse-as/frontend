@@ -2,11 +2,13 @@
 	import RegContent from './RegContent.svelte';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
-	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
+	import type { TRegister, TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import { onMount } from 'svelte';
 	import OverviewList from '$lib/components/OverviewList.svelte';
 
 	let { data } = $props();
+
+	const fullMetaRecord = $derived(data.reg as TRegister['register']);
 
 	const regType = $derived(data.regType || null);
 	const regSlug = $derived(data.regSlug || null);
@@ -51,7 +53,7 @@
 		<OverviewList
 			ovVariant="register"
 			isMultiColumn={true}
-			ovMeta={data.reg[regType]}
+			ovMeta={fullMetaRecord[regType]}
 			ovDict={dictReg[regType]}
 			ovType={regSlug as TRegTypes}
 			ovItem={null}
@@ -63,7 +65,7 @@
 		<OverviewList
 			ovVariant="register"
 			isMultiColumn={false}
-			ovMeta={data.reg[regType]}
+			ovMeta={fullMetaRecord[regType]}
 			ovDict={dictReg[regType]}
 			ovType={regType}
 			ovItem={regSlug as TRegKeysFlat}

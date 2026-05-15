@@ -37,32 +37,32 @@ export type TRegister = {
 				gndNumber?: string; // optional
 				dateBirth: string;
 				dateDeath: string;
-				type: TPeopleGroups;
+				type: TPeopleGroups | null;
 				orgId: TOrgsKeys;
 				note: string;
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		places: {
 			[key in TPlacesKeys]: {
 				name: string;
 				nameVariants: string[];
-				geoNamesID: number;
+				geoNamesID: number | null;
 				geoNamesLink: string;
-				type: TPlacesGroups;
-				coords: [number, number];
+				type: TPlacesGroups | null;
+				coords: number[] | null;
 				country: string;
 				note: string;
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		events: {
 			[key in TEventsKeys]: {
 				name: string;
-				type: TEventsGroups;
+				type: TEventsGroups | null;
 				date?: { from: string; to: string };
 				note: string;
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		orgs: {
@@ -70,29 +70,29 @@ export type TRegister = {
 				name: string;
 				nameVariants: string[];
 				gndNumber?: string; // optional
-				type: TOrgsGroups;
+				type: TOrgsGroups | null;
 				note: string;
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		bibls: {
 			[key in TBiblsKeys]: {
 				name: string;
-				type: TBiblsGroups;
+				type: TBiblsGroups | null;
 				authorId: TPeopleKeys;
 				pubDate: string;
 				gndNumber?: string; // optional
 				note?: string; // optional
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		keywords: {
 			[key in TKeywordsKeys]: {
 				name: string;
-				type: TKeywordsGroups;
+				type: TKeywordsGroups | null;
 				gndNumber?: string; // optional
 				note?: string; // optional
-				docs: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
+				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 	};

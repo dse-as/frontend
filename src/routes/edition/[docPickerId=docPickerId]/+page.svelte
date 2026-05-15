@@ -3,12 +3,12 @@
 	import OverviewList from '$lib/components/OverviewList.svelte';
 	import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
 
-	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
+	import type { TDocTypes, TDocKeys, TDocuments } from '$lib/types/documents/TDocuments.js';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
-	const fullMetaRecord = $derived(data.fullMeta as Record<string, Record<string, any>>);
+	const fullMetaRecord = $derived(data.fullMeta as TDocuments['documents']);
 	const edType = $derived(data.edType || null);
 	const edSlug = $derived(data.edSlug || null);
 

@@ -30,22 +30,22 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLettersGroups;
+				type: TLettersGroups | '?' | "";
 				metadata: {
-					authors: string[];
+					authors?: string[];
+					summary?: string;
+					title_short?: string;
 					pubDate: string;
-					summary: string;
 					title_full: string;
-					title_short: string;
 					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
-					pubPosthumOnly: boolean;
+					pubPosthumOnly: boolean | string;
 					pubPlace: string;
 					signature: string;
-					pubDetails: string;
-					textstufen_edited: string;
-					textzeugen_nonedited: string;
+					pubDetails?: string;
+					textstufen_edited: string[];
+					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
 					keywords: {
@@ -59,12 +59,12 @@ export type TDocuments = {
 						bibls?: TBiblsKeys[];
 						keywords?: TKeywordsKeys[];
 					};
-					maximum: 'keine';
-					travel: '';
-					archiveCollation: '';
-					pubSecondary: '';
-					urlOnlineResource: '';
-					note: '';
+					maximum: string;
+					travel: string;
+					archiveCollation: string;
+					pubSecondary: string;
+					urlOnlineResource: string;
+					note: string;
 				};
 				entities: {
 					//! unsure if I should drop this, since fully redundant with register.json
@@ -79,7 +79,7 @@ export type TDocuments = {
 					keywords?: TKeywordsKeys[];
 				};
 				manuscript: {
-					url_iiifs: string[];
+					iiif_urls: string[];
 				};
 				numPages: number | null;
 				edition: {
@@ -92,22 +92,22 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TSmallformsGroups;
+				type: TSmallformsGroups | '?' | "";
 				metadata: {
-					authors: string[];
+					authors?: string[];
+					summary?: string;
 					pubDate: string;
-					summary: string;
 					title_full: string;
-					title_short: string;
+					title_short?: string;
 					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
-					pubPosthumOnly: boolean;
+					pubPosthumOnly: boolean | string;
 					pubPlace: string;
 					signature: string;
-					pubDetails: string;
-					textstufen_edited: string;
-					textzeugen_nonedited: string;
+					pubDetails?: string;
+					textstufen_edited: string[];
+					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
 					keywords: {
@@ -154,22 +154,22 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLongformsGroups;
+				type: TLongformsGroups | '?' | "";
 				metadata: {
-					authors: string[];
+					authors?: string[];
+					summary?: string;
 					pubDate: string;
-					summary: string;
 					title_full: string;
-					title_short: string;
+					title_short?: string;
 					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
-					pubPosthumOnly: boolean;
+					pubPosthumOnly: boolean | string;
 					pubPlace: string;
 					signature: string;
-					pubDetails: string;
-					textstufen_edited: string;
-					textzeugen_nonedited: string;
+					pubDetails?: string;
+					textstufen_edited: string[];
+					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
 					keywords: {
@@ -183,12 +183,12 @@ export type TDocuments = {
 						bibls?: TBiblsKeys[];
 						keywords?: TKeywordsKeys[];
 					};
-					maximum: 'keine';
-					travel: '';
-					archiveCollation: '';
-					pubSecondary: '';
-					urlOnlineResource: '';
-					note: '';
+					maximum: string;
+					travel: string;
+					archiveCollation: string;
+					pubSecondary: string;
+					urlOnlineResource: string;
+					note: string;
 				};
 				entities: {
 					//! unsure if I should drop this, since fully redundant with register.json
@@ -203,7 +203,7 @@ export type TDocuments = {
 					keywords?: TKeywordsKeys[];
 				};
 				manuscript: {
-					url_iiifs: string[];
+					iiif_urls: string[];
 				};
 				numPages: number | null;
 				edition: {
@@ -268,10 +268,10 @@ export type TDocMetadataLongforms =
 export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;
 
 // Group Set
-export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups;
+export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups  | '?' | "";;
 
 export type TDocGroupsMap = {
-	letters: TLettersGroups;
-	smallforms: TSmallformsGroups;
-	longforms: TLongformsGroups;
+	letters: TLettersGroups | '?' | "";
+	smallforms: TSmallformsGroups | '?' | "";
+	longforms: TLongformsGroups | '?' | "";
 };

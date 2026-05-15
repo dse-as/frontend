@@ -1,1 +1,1 @@
-export type TLettersGroups = 'Letter';
+export type TLettersGroups = 'Brief';
