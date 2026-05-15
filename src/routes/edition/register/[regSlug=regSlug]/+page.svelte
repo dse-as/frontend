@@ -71,11 +71,11 @@
 			ovItem={regSlug as TRegKeysFlat}
 			{cheatPageHeightInRegSingleColView}
 		/>
-		<RegContent
-			{regType}
+		<!-- <RegContent
+			ovType={regType}
+			ovMeta={data.fullMeta}
 			regAttributes={data.regAttributes}
-			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
-		/>
+		/> -->
 	</div>
 {/if}

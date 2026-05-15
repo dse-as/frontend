@@ -73,7 +73,7 @@
 	});
 
 	let allGroupKeys = $derived(
-		//! FIX: the order inside keyed object may break!
+		//! IMPROVE: the order inside the unordered object array may actually break.
 		ovVariant === 'documents'
 			? (Object.keys(ovDict.groups) as TDocGroupsMap[TDocTypes][])
 			: (Object.keys(ovDict.groups) as TRegGroupsMap[TRegTypes][])
@@ -81,7 +81,7 @@
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
-	let sortVariableKeyForAlphabet = $derived(
+	let sortVariableKeyForShortcuts = $derived(
 		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
 	);
 	let currentAutoCatLabel: string | null = null; //! FIX THIS HACK: setting this to state will break the hack below
@@ -90,7 +90,7 @@
 			...new Set(
 				Object.values(ovMeta).map((el) => {
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
-					return normalizeChars(el[sortVariableKeyForAlphabet][0]?.toUpperCase());
+					return normalizeChars(el[sortVariableKeyForShortcuts][0]?.toUpperCase());
 				})
 			)
 		].sort()

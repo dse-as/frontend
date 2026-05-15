@@ -9,19 +9,31 @@
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+	import type { TRegAttrs, TRegister, TRegTypes } from '$lib/types/register/TRegister';
 
-	let { fullMeta, regType, regAttributes, cheatPageHeightInRegSingleColView = '' } = $props();
+	let {
+		ovType,
+		ovMeta,
+		regAttributes,
+		cheatPageHeightInRegSingleColView = ''
+	}: {
+		ovType: TRegTypes;
+		ovMeta: TRegister['register'];
+		regAttributes: TRegAttrs;
+		cheatPageHeightInRegSingleColView: string;
+	} = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
-	function getScrollPosition(ev) {
+	function getScrollPosition(ev: Event) {
 		const maxScroll = 300; // in pixel
-		opacityMetadataTable = Math.max(0, Math.min(1 - ev.target.scrollTop / maxScroll, 1)) * 100;
+		const target = ev.target as HTMLElement;
+		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
 </script>
 
 <!-- Snippet: Metadata Table -->
-{#snippet MetadataTable(attKeys)}
+{#snippet MetadataTable(attKeys: TRegAttrs[])}
 	<!-- {#snippet MetadataTable(attKeys: keyof TRegister['register'][TEntityTypes][TRegKeysFlat])} -->
 	<table
 		class="my-10 min-w-full border-gray-300 bg-white"
@@ -40,7 +52,7 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictReg[regType].attributes[attKey]?.label}:</td>
+						<td class="w-80 px-4 py-2 font-bold">{dictReg[ovType].attributes[attKey]?.label}:</td>
 						<td class="px-4 py-2 text-left"
 							>{@render MetadataValue(attKey, regAttributes[attKey])}</td
 						>
@@ -85,17 +97,17 @@
 {#snippet LinkedItemsContainer(docIds)}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
 		{#each docIds as docId}
-			{@render LinkedItems(docId)}
+			{@render LinkedItem(docId)}
 		{:else}
 			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>{/each}
 	</div>
 {/snippet}
 
-<!-- Snippet for LinkedItems (inside LinkedItemsList) -->
-{#snippet LinkedItems(itemId)}
+<!-- Snippet for LinkedItem (inside LinkedItemsList) -->
+{#snippet LinkedItem(itemId)}
 	{@const itemType = findEdTypeByDocId(itemId)}
 	{#if itemType}
-		{@const itemMeta = fullMeta[itemType][itemId]}
+		{@const itemMeta = ovMeta[itemType][itemId]}
 		<a
 			href={resolve(`/edition/${itemId}?mode=DF`)}
 			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
@@ -127,7 +139,7 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if regType === 'people'}
+	{#if ovType === 'people'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{regAttributes.name}
 			{printBirthRange(regAttributes.dateBirth, regAttributes.dateDeath)}
@@ -141,7 +153,7 @@
 			'orgId',
 			'note'
 		])}
-	{:else if regType === 'places'}
+	{:else if ovType === 'places'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
@@ -152,7 +164,7 @@
 			regAttributes.country && 'country',
 			'note'
 		])}
-	{:else if regType === 'orgs'}
+	{:else if ovType === 'orgs'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
@@ -160,13 +172,13 @@
 			regAttributes.gndNumber && 'gndNumber',
 			'note'
 		])}
-	{:else if regType === 'keywords'}
+	{:else if ovType === 'keywords'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable(['type', regAttributes.gndNumber && 'gndNumber', 'note'])}
-	{:else if regType === 'events'}
+	{:else if ovType === 'events'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable(['date', 'note'])}
-	{:else if regType === 'bibls'}
+	{:else if ovType === 'bibls'}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
 		{@render MetadataTable([
 			'type',
@@ -178,7 +190,7 @@
 	{/if}
 
 	<!-- Linked documents -->
-	{#if regType === 'people'}
+	{#if ovType === 'people'}
 		<!-- //! These lists can later be toggled on/off depending on content -->
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
 			Korrespondenz mit Annemarie Schwarzenbach
