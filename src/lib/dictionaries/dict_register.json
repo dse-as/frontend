@@ -113,7 +113,8 @@
 			"attributes": {
 				"name": { "label": "Name" },
 				"nameVariants": { "label": "Namensvarianten" },
-				"geoNamesID": { "label": "GND-Nummer" },
+				"gndNumber": { "label": "GND-Nummer" },
+				"geoNamesID": { "label": "Geonames ID" },
 				"geoNamesLink": { "label": "Geonames Link" },
 				"type": { "label": "Ortskategorie" },
 				"coords": { "label": "Koordinaten" },

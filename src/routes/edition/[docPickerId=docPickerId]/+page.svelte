@@ -71,12 +71,12 @@
 				ovItem={edSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
-			<!-- <OverviewContent
+			<OverviewContent
 				ovMeta={data.fullMeta}
 				ovType={edType}
 				ovAttrs={fullMetaRecord[edType]?.[edSlug]}
 				{cheatPageHeightInRegSingleColView}
-			/> -->
+			/>
 		</div>
 	{/if}
 {/if}

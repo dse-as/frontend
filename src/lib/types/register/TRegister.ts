@@ -34,7 +34,7 @@ export type TRegister = {
 				firstname: string;
 				lastname: string;
 				nameVariants: string[];
-				gndNumber?: string; // optional
+				gndNumber?: string;
 				dateBirth: string;
 				dateDeath: string;
 				type: TPeopleGroups | null;
@@ -47,6 +47,7 @@ export type TRegister = {
 			[key in TPlacesKeys]: {
 				name: string;
 				nameVariants: string[];
+				gndNumber?: string;
 				geoNamesID: number | null;
 				geoNamesLink: string;
 				type: TPlacesGroups | null;
@@ -69,7 +70,7 @@ export type TRegister = {
 			[key in TOrgsKeys]: {
 				name: string;
 				nameVariants: string[];
-				gndNumber?: string; // optional
+				gndNumber?: string;
 				type: TOrgsGroups | null;
 				note: string;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
@@ -81,8 +82,8 @@ export type TRegister = {
 				type: TBiblsGroups | null;
 				authorId: TPeopleKeys;
 				pubDate: string;
-				gndNumber?: string; // optional
-				note?: string; // optional
+				gndNumber?: string;
+				note?: string;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
@@ -90,8 +91,8 @@ export type TRegister = {
 			[key in TKeywordsKeys]: {
 				name: string;
 				type: TKeywordsGroups | null;
-				gndNumber?: string; // optional
-				note?: string; // optional
+				gndNumber?: string;
+				note?: string;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
@@ -143,17 +144,17 @@ export type TRegKeysFlat =
 	| TPeopleKeys
 	| TPlacesKeys
 	| TEventsKeys
-	| TKeywordsKeys
 	| TOrgsKeys
-	| TBiblsKeys;
+	| TBiblsKeys
+	| TKeywordsKeys;
 
 export type TRegKeysMap = {
 	people: TPeopleKeys;
 	places: TPlacesKeys;
 	events: TEventsKeys;
-	orgs: TKeywordsKeys;
-	bibls: TOrgsKeys;
-	keywords: TBiblsKeys;
+	orgs: TOrgsKeys;
+	bibls: TBiblsKeys;
+	keywords: TKeywordsKeys;
 };
 
 // Attribute Sets
@@ -171,6 +172,15 @@ export type TRegAttrs =
 	| TRegAttrsOrgs
 	| TRegAttrsBibls
 	| TRegAttrsKeywords;
+
+export type TRegAttrsMap = {
+	people: TRegAttrsPeople;
+	places: TRegAttrsPlaces;
+	events: TRegAttrsEvents;
+	orgs: TRegAttrsOrgs;
+	bibls: TRegAttrsBibls;
+	keywords: TRegAttrsKeywords;
+};
 
 // Group Set
 export type TRegGroupsFlat =
