@@ -1,23 +1,41 @@
-<script lang="ts">
-	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
-	import { uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
+<script
+	lang="ts"
+	generics="
+		T extends 'documents' | 'register'
+	"
+>
+	import { uiOvGroupByCat } from '$lib/globals/state/ui.svelte';
 	import { tick } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
-	import { type TRegGroupsMap, type TRegTypes } from '$lib/types/register/TRegister';
+	import type { TRegDict, TRegGroupsMap, TRegTypes } from '$lib/types/register/TRegister';
+	import type { TDocDict, TDocGroupsMap, TDocTypes } from '$lib/types/documents/TDocuments';
 
-	type K = TRegTypes;
-	type Props<T extends K = K> = {
-		isMultiColumn: boolean;
+	type TProps = T extends 'documents'
+		? {
+				ovVariant: 'documents';
+				dict: TDocDict['dict_docs'][TDocTypes];
+				allGroupKeys: TDocGroupsMap[TDocTypes][];
+			}
+		: {
+				ovVariant: 'register';
+				dict: TRegDict['dict_register'][TRegTypes];
+				allGroupKeys: TRegGroupsMap[TRegTypes][];
+			};
+
+	let {
+		ovVariant,
+		dict,
+		allGroupKeys,
+		hasGroupControls,
+		autoCatLabels
+	}: TProps & {
 		hasGroupControls: boolean;
 		autoCatLabels: string[];
-		allGroupKeys: TRegGroupsMap[T][];
-		regType: T | null;
-	};
-	let { isMultiColumn, hasGroupControls, autoCatLabels, allGroupKeys, regType }: Props = $props();
+	} = $props();
 </script>
 
-{#if isMultiColumn && (!hasGroupControls || !uiRegGroupByCat.value)}
+{#if !hasGroupControls || !uiOvGroupByCat[ovVariant]}
 	<div class="flex w-max justify-center gap-2">
 		{#each autoCatLabels as letter (letter)}
 			<button
@@ -30,10 +48,11 @@
 			>
 		{/each}
 	</div>
-{:else if regType && isMultiColumn && hasGroupControls && uiRegGroupByCat.value}
+{:else if dict && hasGroupControls && uiOvGroupByCat[ovVariant]}
 	<div class="flex w-full justify-start gap-2 overflow-x-auto pb-5">
 		{#each allGroupKeys as groupKey (groupKey)}
-			{@const groupLabel = (dictReg[regType].groups as any)[groupKey]?.label_plural}
+			<!-- //! Fix this any type -->
+			{@const groupLabel = (dict.groups as any)[groupKey]?.label_plural}
 			<button
 				onclick={() => {
 					goto(`#${slugify(groupLabel, { slash: true })}`, {

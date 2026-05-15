@@ -1,43 +1,91 @@
-<script lang="ts">
+<script
+	lang="ts"
+	generics="
+		T extends 'documents' | 'register'
+	"
+>
 	import { goto } from '$app/navigation';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
-	import { uiRegSortBy, uiRegGroupByCat } from '$lib/globals/state/ui.svelte';
-	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
-	import Shortcuts from './Shortcuts.svelte';
+	import {
+		uiOvSortBy,
+		uiOvGroupByCat,
+		UI_TYPESWITHGROUPCONTROL,
+		UI_TYPESWITHSORTCONTROL
+	} from '$lib/globals/state/ui.svelte';
+	import Shortcuts from '$lib/components/Shortcuts.svelte';
+	import type {
+		TRegDict,
+		TRegGroupsMap,
+		TRegister,
+		TRegKeysFlat,
+		TRegTypes
+	} from '$lib/types/register/TRegister';
+	import type {
+		TDocDict,
+		TDocGroupsMap,
+		TDocKeys,
+		TDocTypes,
+		TDocuments
+	} from '$lib/types/documents/TDocuments';
 
-	// Props
+	type TProps = T extends 'documents'
+		? {
+				ovVariant: 'documents';
+				ovType: TDocTypes;
+				ovMeta: TDocuments['documents'][TDocTypes];
+				ovDict: TDocDict['dict_docs'][TDocTypes];
+				ovItem?: TDocKeys | null;
+			}
+		: {
+				ovVariant: 'register';
+				ovType: TRegTypes;
+				ovMeta: TRegister['register'][TRegTypes];
+				ovDict: TRegDict['dict_register'][TRegTypes];
+				ovItem?: TRegKeysFlat | null;
+			};
+
 	let {
-		isMultiColumn,
-		ovMeta,
+		ovVariant,
 		ovType,
+		ovMeta,
+		ovDict,
 		ovItem = null,
+		isMultiColumn,
 		cheatPageHeightInRegSingleColView = ''
+	}: TProps & {
+		isMultiColumn: boolean;
+		cheatPageHeightInRegSingleColView?: string;
 	} = $props();
 
-	// States for sorting and grouping
-	let hasGroupControls = $derived([''].includes(ovType));
-	let hasSortControls = $derived(['letters', 'smallforms', 'longforms'].includes(ovType));
-	let hasControls = $derived(hasGroupControls || hasSortControls);
+	// Booleans for sorting and grouping
+	let hasGroupControls = $derived(UI_TYPESWITHGROUPCONTROL[ovVariant].includes(ovType));
+	let hasSortControls = $derived(UI_TYPESWITHSORTCONTROL[ovVariant].includes(ovType));
 
 	// Defaults
-	const defaultSortBy = ovType === 'people' ? 'lastname' : 'name'; // won't work if not also set 'name' in ui.svelte.ts (//! Fix this)
-	uiRegSortBy.id = uiRegSortBy.id ? uiRegSortBy.id : defaultSortBy; // If empty set to default
-	let sortBy = $derived(hasSortControls ? uiRegSortBy.id : defaultSortBy); // The actual sortBy state, which includes a fallback for ovTypes without sorting options.
-	$inspect(sortBy);
+	let defaultSortBy = $derived(ovType === 'people' ? 'lastname' : 'name'); // must also set 'name' in ui.svelte.ts (//! Fix this)
+	let sortBy = $derived(hasSortControls ? uiOvSortBy[ovVariant] : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
+	$effect(() => {
+		uiOvSortBy[ovVariant] = uiOvSortBy[ovVariant] ? uiOvSortBy[ovVariant] : defaultSortBy; // If empty set to default
+	});
 
-	let allGroupKeys = $derived(Object.keys(dictDocPicker[ovType].groups)); //! FIX: order inside object may break!
+	let allGroupKeys = $derived(
+		//! FIX: the order inside keyed object may break!
+		ovVariant === 'documents'
+			? (Object.keys(ovDict.groups) as TDocGroupsMap[TDocTypes][])
+			: (Object.keys(ovDict.groups) as TRegGroupsMap[TRegTypes][])
+	);
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
 	let sortVariableKeyForAlphabet = $derived(
 		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
 	);
-	let currentAutoCatLabel: string | null = null;
-	let autoCatLabels: string[] = $derived(
+	let currentAutoCatLabel: string | null = null; //! FIX THIS HACK: setting this to state will break the hack below
+	let autoCatLabels = $derived(
 		[
 			...new Set(
 				Object.values(ovMeta).map((el) => {
@@ -49,15 +97,15 @@
 	);
 
 	// Scroll to the specific item
-	let regListScrollContainer: HTMLElement | undefined = $state();
+	let ovListScrollContainer: HTMLElement | undefined = $state();
 
-	function scrollToItem(itemKey) {
+	function scrollToItem(itemKey: TRegKeysFlat | TDocKeys) {
 		const targetElement = document.getElementById(itemKey);
 		const offsetSortControls =
 			hasGroupControls && hasSortControls ? 92 : hasGroupControls || hasSortControls ? 60 : 0;
 		if (targetElement) {
-			regListScrollContainer.scrollTo({
-				top: targetElement.offsetTop - regListScrollContainer.offsetTop - offsetSortControls,
+			ovListScrollContainer?.scrollTo({
+				top: targetElement.offsetTop - ovListScrollContainer.offsetTop - offsetSortControls,
 				behavior: 'smooth'
 			});
 		}
@@ -69,23 +117,23 @@
 </script>
 
 <!-- Snippet for Register Items -->
-{#snippet regListItem(item)}
+{#snippet regListItem(key: string, name: string)}
 	<a
-		id={item.key}
+		id={key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && item.key === ovItem && 'bg-surface-300-700 font-bold'
+			!isMultiColumn && key === ovItem && 'bg-surface-300-700 font-bold'
 		]}
-		href={item.key}
+		href={key}
 	>
 		<span class="overflow-hidden whitespace-normal">
-			{item.name ? `${item.name}` : '...'}
+			{name ? `${name}` : '...'}
 		</span>
 	</a>
 {/snippet}
 
 <!-- Snippet for Group Titles (i.e. autoCatLabels or Category Names) -->
-{#snippet groupTitle(value)}
+{#snippet groupTitle(value: string)}
 	<button
 		onclick={async () => {
 			if (isMultiColumn) {
@@ -122,15 +170,15 @@
 	{#if hasSortControls}
 		<div class={['flex flex-wrap items-center gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<p>Sortierung:</p>
-			{#snippet sortButton(name, sortKey)}
+			{#snippet sortButton(name: string, sortKey: string)}
 				<button
 					class={[
-						uiRegSortBy.id === sortKey
+						uiOvSortBy[ovVariant] === sortKey
 							? 'pointer-events-none font-bold text-surface-950-50'
 							: 'text-primary-500 underline'
 					]}
 					onclick={() => {
-						uiRegSortBy.id = sortKey;
+						uiOvSortBy[ovVariant] = sortKey;
 					}}>{name}</button
 				>
 			{/snippet}
@@ -148,8 +196,8 @@
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<Switch
-				checked={uiRegGroupByCat.value}
-				onCheckedChange={(details) => (uiRegGroupByCat.value = details.checked)}
+				checked={uiOvGroupByCat[ovVariant]}
+				onCheckedChange={(details) => (uiOvGroupByCat[ovVariant] = details.checked)}
 			>
 				<Switch.Control>
 					<Switch.Thumb />
@@ -166,19 +214,29 @@
 <!-- RegList Container (including other navigation) -->
 <div class="overflow-y-auto">
 	<!-- Controls (when outside scroll container) -->
-	{#if hasControls && isMultiColumn}
+	{#if isMultiColumn}
 		<div class="my-10 flex w-full flex-col flex-wrap items-start justify-start gap-x-10 gap-y-6">
 			<div class="flex gap-5">
 				{@render groupControls()}
 				{@render sortControls()}
 			</div>
-			{#if uiRegSortBy.id !== 'date'}
+
+			<!-- TypeScript requires to split this conditional component call -->
+			{#if ovVariant === 'documents'}
 				<Shortcuts
-					{isMultiColumn}
+					ovVariant="documents"
+					dict={ovDict as TDocDict['dict_docs'][TDocTypes]}
 					{hasGroupControls}
 					{autoCatLabels}
-					{allGroupKeys}
-					regType={null}
+					allGroupKeys={allGroupKeys as TDocGroupsMap[TDocTypes][]}
+				/>
+			{:else if ovVariant === 'register'}
+				<Shortcuts
+					ovVariant="register"
+					dict={ovDict as TRegDict['dict_register'][TRegTypes]}
+					{hasGroupControls}
+					{autoCatLabels}
+					allGroupKeys={allGroupKeys as TRegGroupsMap[TRegTypes][]}
 				/>
 			{/if}
 		</div>
@@ -186,14 +244,14 @@
 
 	<!-- Scroll Container -->
 	<div
-		bind:this={regListScrollContainer}
+		bind:this={ovListScrollContainer}
 		// redirect vertical scroll to horizontal scroll
 		onwheel={(ev) => {
-			if (isMultiColumn && regListScrollContainer) {
-				const atStart = regListScrollContainer.scrollLeft <= 0;
+			if (isMultiColumn && ovListScrollContainer) {
+				const atStart = ovListScrollContainer.scrollLeft <= 0;
 				const atEnd =
-					regListScrollContainer.scrollLeft >=
-					regListScrollContainer?.scrollWidth - regListScrollContainer?.clientWidth - 4;
+					ovListScrollContainer.scrollLeft >=
+					ovListScrollContainer?.scrollWidth - ovListScrollContainer?.clientWidth - 4;
 				if (
 					!(atStart && atEnd) &&
 					((atStart && (ev.deltaY > 0 || ev.deltaX > 0)) ||
@@ -201,8 +259,8 @@
 						(!atStart && !atEnd))
 				) {
 					ev.preventDefault(); // Prevent default vertical scroll behavior
-					regListScrollContainer.scrollLeft += ev.deltaY;
-					regListScrollContainer.scrollLeft += ev.deltaX;
+					ovListScrollContainer.scrollLeft += ev.deltaY;
+					ovListScrollContainer.scrollLeft += ev.deltaX;
 				}
 			}
 		}}
@@ -216,7 +274,7 @@
 		style={cheatPageHeightInRegSingleColView}
 	>
 		<!-- Controls (when inside scroll container) -->
-		{#if hasControls && !isMultiColumn}
+		{#if !isMultiColumn}
 			<div
 				class={[
 					// "sticky top-0",
@@ -228,19 +286,17 @@
 			</div>
 		{/if}
 
-		{#if hasGroupControls && uiRegGroupByCat.value}
-			<!-- grouped by categories -->
+		{#if hasGroupControls && uiOvGroupByCat[ovVariant]}
+			<!-- Grouped by categories -->
 			{#each allGroupKeys as groupKey (groupKey)}
-				{@render groupTitle(
-					dictDocPicker[ovType].groups[groupKey]?.label_plural || groupKey || '?'
-				)}
-				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as item (item.key)}
-					{@render regListItem(item)}
+				{@render groupTitle(ovDict.groups[groupKey]?.label_plural || '?')}
+				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as [key, item] (key)}
+					{@render regListItem(key, item.name)}
 				{/each}
 			{/each}
 		{:else if ovType}
 			<!-- All other types -->
-			{#each filterAndSortData(ovMeta, sortBy) as item (item.key)}
+			{#each filterAndSortData(ovMeta, sortBy) as [key, item] (key)}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
 						? item.date.from.slice(0, 4)
@@ -249,7 +305,7 @@
 					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=auto)` -->
 					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}
 				{/if}
-				{@render regListItem(item)}
+				{@render regListItem(key, item.name)}
 			{/each}
 		{/if}
 	</div>

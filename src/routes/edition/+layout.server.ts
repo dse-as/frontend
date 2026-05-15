@@ -1,7 +1,7 @@
 export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
-import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
+import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
 import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 

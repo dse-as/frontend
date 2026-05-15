@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	let { data, children } = $props();
 
-	import { dict_docPicker as dictDocPicker } from '$lib/dictionaries/dict_docPicker.json';
+	import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
 
 	const docTypeIdsForButtons = ['smallforms', 'longforms', 'letters'] as const;
 </script>

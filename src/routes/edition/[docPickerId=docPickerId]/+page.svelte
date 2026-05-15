@@ -1,13 +1,16 @@
 <script lang="ts">
 	import OverviewContent from '$lib/components/OverviewContent.svelte';
 	import OverviewList from '$lib/components/OverviewList.svelte';
+	import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
+
+	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
 	const fullMetaRecord = $derived(data.fullMeta as Record<string, Record<string, any>>);
-	const edType = $derived(data.edType || '');
-	const edSlug = $derived(data.edSlug || '');
+	const edType = $derived(data.edType || null);
+	const edSlug = $derived(data.edSlug || null);
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position
@@ -43,31 +46,37 @@
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
 </script>
 
-{#if data.edView === 'edView2'}
-	<!-- Overview with Multi-Column List -->
-	<div class="absolute top-45 left-0 w-full px-10">
-		<OverviewList
-			isMultiColumn={true}
-			ovMeta={fullMetaRecord[edType]}
-			ovType={edSlug}
-			ovItem={null}
-		/>
-	</div>
-{:else}
-	<!-- Detail View with Single-Column List and Content -->
-	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
-		<OverviewList
-			isMultiColumn={false}
-			ovMeta={fullMetaRecord[edType]}
-			ovType={edType}
-			ovItem={edSlug}
-			{cheatPageHeightInRegSingleColView}
-		/>
-		<OverviewContent
-			ovType={edType}
-			ovAttrs={fullMetaRecord[edType]?.[edSlug]}
-			fullMeta={data.fullMeta}
-			{cheatPageHeightInRegSingleColView}
-		/>
-	</div>
+{#if edType && edSlug}
+	{#if data.edView === 'edView2'}
+		<!-- Overview with Multi-Column List -->
+		<div class="absolute top-45 left-0 w-full px-10">
+			<OverviewList
+				ovVariant="documents"
+				isMultiColumn={true}
+				ovMeta={fullMetaRecord[edType]}
+				ovDict={dictDocPicker[edType]}
+				ovType={edSlug as TDocTypes}
+				ovItem={null}
+			/>
+		</div>
+	{:else}
+		<!-- Detail View with Single-Column List and Content -->
+		<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
+			<OverviewList
+				ovVariant="documents"
+				isMultiColumn={false}
+				ovMeta={fullMetaRecord[edType]}
+				ovDict={dictDocPicker[edType]}
+				ovType={edType}
+				ovItem={edSlug as TDocKeys}
+				{cheatPageHeightInRegSingleColView}
+			/>
+			<OverviewContent
+				ovType={edType}
+				ovAttrs={fullMetaRecord[edType]?.[edSlug]}
+				fullMeta={data.fullMeta}
+				{cheatPageHeightInRegSingleColView}
+			/>
+		</div>
+	{/if}
 {/if}

@@ -214,6 +214,37 @@ export type TDocuments = {
 	};
 };
 
+// --- Docs Dictionary -------------------------------------------------------
+type DictEntity<Attrs extends string | number | symbol, Types extends string | number | symbol> = {
+	name: string;
+	key_singular: string;
+	label_plural: string;
+	attributes: {};
+	groups:
+		| {
+				[K in Types]: {
+					label_singular: string;
+					label_plural: string;
+					slug?: string | null;
+				};
+		  }
+		| {};
+};
+
+export type TDocDict = {
+	meta: {
+		generated_by: string;
+		task: string;
+		generated_on: string;
+		description: string;
+	};
+	dict_docs: {
+		letters: DictEntity<TDocAttrsLetters, TLettersGroups>;
+		smallforms: DictEntity<TDocAttrsSmallforms, TSmallformsGroups>;
+		longforms: DictEntity<TDocAttrsLongforms, TLongformsGroups>;
+	};
+};
+
 // --- Sets -------------------------------------------------------
 export type TDocTypes = keyof TDocuments['documents'];
 export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys;
@@ -235,3 +266,12 @@ export type TDocMetadataSmallforms =
 export type TDocMetadataLongforms =
 	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
 export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;
+
+// Group Set
+export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups;
+
+export type TDocGroupsMap = {
+	letters: TLettersGroups;
+	smallforms: TSmallformsGroups;
+	longforms: TLongformsGroups;
+};

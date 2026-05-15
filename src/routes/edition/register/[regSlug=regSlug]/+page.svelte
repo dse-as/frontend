@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import RegContent from './RegContent.svelte';
-	import RegList from './RegList.svelte';
+	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
+
+	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import { onMount } from 'svelte';
+	import OverviewList from '$lib/components/OverviewList.svelte';
 
 	let { data } = $props();
+
+	const regType = $derived(data.regType || null);
+	const regSlug = $derived(data.regSlug || null);
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position
@@ -43,19 +48,29 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
-		<RegList isMultiColumn={true} regType={data.regSlug as TRegTypes | undefined} regItem={null} />
+		<OverviewList
+			ovVariant="register"
+			isMultiColumn={true}
+			ovMeta={data.reg[regType]}
+			ovDict={dictReg[regType]}
+			ovType={regSlug as TRegTypes}
+			ovItem={null}
+		/>
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
-		<RegList
+		<OverviewList
+			ovVariant="register"
 			isMultiColumn={false}
-			regType={data.regType}
-			regItem={data.regSlug as TRegKeysFlat | undefined}
+			ovMeta={data.reg[regType]}
+			ovDict={dictReg[regType]}
+			ovType={regType}
+			ovItem={regSlug as TRegKeysFlat}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<RegContent
-			regType={data.regType}
+			{regType}
 			regAttributes={data.regAttributes}
 			fullMeta={data.fullMeta}
 			{cheatPageHeightInRegSingleColView}
