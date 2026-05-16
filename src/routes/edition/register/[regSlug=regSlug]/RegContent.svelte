@@ -7,7 +7,11 @@
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { findEdTypeByDocId, resolveDoc } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+	import {
+		findEdTypeByDocId,
+		resolveDoc,
+		resolveDocMeta
+	} from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import type {
 		TRegAttrs,
 		TRegAttrsBibls,
@@ -55,19 +59,6 @@
 		const target = ev.target as HTMLElement;
 		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
-
-	// function getItemMeta<K extends TDocTypes>(type: K, docId: TDocKeysMap[K]) {
-	// 	return ovMeta[type][docId];
-	// }
-	function getItemMeta<K extends TDocTypes>(type: K, docId: keyof TDocuments['documents'][K]) {
-		return ovMeta[type][docId];
-	}
-	// function getItemMeta<K extends TDocTypes, D extends keyof TDocuments['documents'][K]>(
-	// 	type: K,
-	// 	docId: D
-	// ): TDocuments['documents'][K][D] {
-	// 	return ovMeta[type][docId];
-	// }
 </script>
 
 <!-- Snippet: Metadata Table -->
@@ -145,18 +136,9 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(docId: TDocKeys)}
-	<!-- {@const itemType = findEdTypeByDocId(docId)} -->
-	<!-- {#if itemType} -->
-	{@const resolved = resolveDoc(docId)}
+	{@const resolved = resolveDocMeta(ovMeta, docId)}
 	{#if resolved}
-		{@const itemMeta = getItemMeta(resolved.type, resolved.docId)}
-
-		<!-- {@const itemMeta = getItemMeta(itemType, docId)} -->
-		<!-- {@const itemMeta = getDocMeta(ovMeta, itemType, docId)} -->
-		<!-- {@const itemMeta = (
-			ovMeta[itemType] as Extract<TDocAttrsMap[TDocTypes], Record<TDocKeysMap[TDocTypes], any>>
-				)[docId]} -->
-		<!-- {@const itemMeta = (ovMeta[itemType] as TDocMetadataMap[TDocTypes])[docId]} -->
+		{@const itemMeta = resolved.itemMeta}
 		<a
 			href={resolve(`/edition/${docId as string}?mode=DF`)}
 			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"

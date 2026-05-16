@@ -21,6 +21,18 @@ export function findEdTypeByDocId<K extends TDocKeys>(
 	else return null;
 }
 
+function isLetterKey(docId: TDocKeys): docId is TLettersKeys {
+	return docId.includes('letter');
+}
+
+function isSmallformKey(docId: TDocKeys): docId is TSmallformsKeys {
+	return docId.includes('smallform');
+}
+
+function isLongformKey(docId: TDocKeys): docId is TLongformsKeys {
+	return docId.includes('longform');
+}
+
 type TResolvedDoc =
 	| {
 			type: 'letters';
@@ -34,18 +46,6 @@ type TResolvedDoc =
 			type: 'longforms';
 			docId: TLongformsKeys;
 	  };
-
-function isLetterKey(docId: TDocKeys): docId is TLettersKeys {
-	return docId.includes('letter');
-}
-
-function isSmallformKey(docId: TDocKeys): docId is TSmallformsKeys {
-	return docId.includes('smallform');
-}
-
-function isLongformKey(docId: TDocKeys): docId is TLongformsKeys {
-	return docId.includes('longform');
-}
 
 export function resolveDoc(docId: TDocKeys): TResolvedDoc | null {
 	if (isSmallformKey(docId)) {
@@ -66,6 +66,48 @@ export function resolveDoc(docId: TDocKeys): TResolvedDoc | null {
 		return {
 			type: 'letters',
 			docId
+		};
+	}
+
+	return null;
+}
+
+type TResolvedMeta =
+	| {
+			type: 'letters';
+			itemMeta: TDocuments['documents']['letters'][TLettersKeys];
+	  }
+	| {
+			type: 'smallforms';
+			itemMeta: TDocuments['documents']['smallforms'][TSmallformsKeys];
+	  }
+	| {
+			type: 'longforms';
+			itemMeta: TDocuments['documents']['longforms'][TLongformsKeys];
+	  };
+
+export function resolveDocMeta(
+	ovMeta: TDocuments['documents'],
+	docId: TDocKeys
+): TResolvedMeta | null {
+	if (isLetterKey(docId)) {
+		return {
+			type: 'letters',
+			itemMeta: ovMeta.letters[docId]
+		};
+	}
+
+	if (isSmallformKey(docId)) {
+		return {
+			type: 'smallforms',
+			itemMeta: ovMeta.smallforms[docId]
+		};
+	}
+
+	if (isLongformKey(docId)) {
+		return {
+			type: 'longforms',
+			itemMeta: ovMeta.longforms[docId]
 		};
 	}
 
