@@ -258,6 +258,11 @@ export type TDocAttrsLetters = keyof TDocuments['documents']['letters'][TLetters
 export type TDocAttrsSmallforms = keyof TDocuments['documents']['smallforms'][TSmallformsKeys];
 export type TDocAttrsLongforms = keyof TDocuments['documents']['longforms'][TLongformsKeys];
 export type TDocAttrs = TDocAttrsLetters | TDocAttrsSmallforms | TDocAttrsLongforms;
+export type TDocAttrsMap = {
+	letters: TDocAttrsLetters;
+	smallforms: TDocAttrsSmallforms;
+	longforms: TDocAttrsLongforms;
+}
 
 export type TDocMetadataLetters =
 	keyof TDocuments['documents']['letters'][TLettersKeys]['metadata'];
@@ -266,6 +271,11 @@ export type TDocMetadataSmallforms =
 export type TDocMetadataLongforms =
 	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
 export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;
+export type TDocMetadataMap = {
+	letters: TDocMetadataLetters ;
+	smallforms: TDocMetadataSmallforms ;
+	longforms: TDocMetadataLongforms;
+}
 
 // Group Set
 export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups  | '?' | "";;

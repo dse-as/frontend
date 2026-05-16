@@ -7,7 +7,7 @@
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+	import { findEdTypeByDocId, resolveDoc } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import type {
 		TRegAttrs,
 		TRegAttrsBibls,
@@ -23,15 +23,16 @@
 	} from '$lib/types/register/TRegister';
 	import { type TPeopleKeys } from '$lib/types/register/TPeopleKeys';
 	import { type TOrgsKeys } from '$lib/types/register/TOrgsKeys';
-	import { type TDocKeys, type TDocuments } from '$lib/types/documents/TDocuments';
-
-	type TProps = {
-		ovType: T;
-		ovMeta: TDocuments['documents'];
-		ovDict: TRegDict['dict_register'][T];
-		regAttributes: Record<TRegAttrsMap[T], any>;
-		cheatPageHeightInRegSingleColView: string;
-	};
+	import {
+		type TDocAttrs,
+		type TDocAttrsMap,
+		type TDocKeys,
+		type TDocKeysMap,
+		type TDocMetadata,
+		type TDocMetadataMap,
+		type TDocTypes,
+		type TDocuments
+	} from '$lib/types/documents/TDocuments';
 
 	let {
 		ovType,
@@ -39,7 +40,13 @@
 		ovDict,
 		regAttributes,
 		cheatPageHeightInRegSingleColView = ''
-	}: TProps = $props();
+	}: {
+		ovType: T;
+		ovMeta: TDocuments['documents'];
+		ovDict: TRegDict['dict_register'][T];
+		regAttributes: Record<TRegAttrsMap[T], any>;
+		cheatPageHeightInRegSingleColView: string;
+	} = $props();
 
 	// Function to face-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
@@ -48,6 +55,19 @@
 		const target = ev.target as HTMLElement;
 		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
+
+	// function getItemMeta<K extends TDocTypes>(type: K, docId: TDocKeysMap[K]) {
+	// 	return ovMeta[type][docId];
+	// }
+	function getItemMeta<K extends TDocTypes>(type: K, docId: keyof TDocuments['documents'][K]) {
+		return ovMeta[type][docId];
+	}
+	// function getItemMeta<K extends TDocTypes, D extends keyof TDocuments['documents'][K]>(
+	// 	type: K,
+	// 	docId: D
+	// ): TDocuments['documents'][K][D] {
+	// 	return ovMeta[type][docId];
+	// }
 </script>
 
 <!-- Snippet: Metadata Table -->
@@ -125,9 +145,18 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(docId: TDocKeys)}
-	{@const itemType = findEdTypeByDocId(docId)}
-	{#if itemType}
-		{@const itemMeta = ovMeta[itemType][docId]}
+	<!-- {@const itemType = findEdTypeByDocId(docId)} -->
+	<!-- {#if itemType} -->
+	{@const resolved = resolveDoc(docId)}
+	{#if resolved}
+		{@const itemMeta = getItemMeta(resolved.type, resolved.docId)}
+
+		<!-- {@const itemMeta = getItemMeta(itemType, docId)} -->
+		<!-- {@const itemMeta = getDocMeta(ovMeta, itemType, docId)} -->
+		<!-- {@const itemMeta = (
+			ovMeta[itemType] as Extract<TDocAttrsMap[TDocTypes], Record<TDocKeysMap[TDocTypes], any>>
+				)[docId]} -->
+		<!-- {@const itemMeta = (ovMeta[itemType] as TDocMetadataMap[TDocTypes])[docId]} -->
 		<a
 			href={resolve(`/edition/${docId as string}?mode=DF`)}
 			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
@@ -178,7 +207,7 @@
 		])}
 	{:else if ovType === 'places'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPlaces, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttributes.name}</h1>
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
 			regAttrsTyped.nameVariants.length && 'nameVariants',

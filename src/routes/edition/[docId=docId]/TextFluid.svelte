@@ -141,7 +141,7 @@
 <div
 	data-textflow="fluid"
 	onclick={(ev: Event) => {
-		const el = ev.target as HTMLElement;
+		const el = ev.target as HTMLElement | null;
 		if (!el) return;
 		if (el.tagName === 'TEI-DIV' || el.tagName === 'TEI-P') {
 			clearAllHighlights();

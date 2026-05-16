@@ -25,8 +25,8 @@
 		onkeydown={(ev: KeyboardEvent) => {
 			if (ev.key === 'Enter' || ev.key === ' ') {
 				ev.preventDefault();
-				const target = ev.currentTarget as HTMLElement;
-				const key = target.querySelector('li[data-noteid]')?.getAttribute('data-noteid');
+				const target = ev.currentTarget as HTMLElement | null;
+				const key = target?.querySelector('li[data-noteid]')?.getAttribute('data-noteid');
 				handleAnnotationClick(key);
 			}
 		}}

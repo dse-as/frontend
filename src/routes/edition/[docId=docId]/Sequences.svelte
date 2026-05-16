@@ -316,7 +316,8 @@
 				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();
 					else closeSeqPanel(0);
-					const elButton = (ev.target as HTMLElement).closest('button') as HTMLElement;
+					const target = ev.target as HTMLElement | null;
+					const elButton = target?.closest('button') as HTMLElement | null;
 					elButton?.focus();
 				}}
 			>

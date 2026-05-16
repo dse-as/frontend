@@ -6,19 +6,27 @@
 	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import type { TDocAttrs, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
 
-	let { ovMeta, ovType, ovAttrs, cheatPageHeightInRegSingleColView = '' } : {
+	let {
+		ovMeta,
+		ovType,
+		ovAttrs,
+		cheatPageHeightInRegSingleColView = ''
+	}: {
 		ovMeta: TDocuments['documents'];
 		ovType: TDocTypes;
 		ovAttrs: TDocAttrs;
-		cheatPageHeightInRegSingleColView: string
+		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
-	// Function to face-out MetadataTable on scroll
-	let opacityMetadataTable = $state(100); // start with full opacity
+	// Function to fade-out MetadataTable on scroll
+	const defaultOpacity = 100; // start with full opacity
+	let opacityMetadataTable = $state(defaultOpacity);
 	function getScrollPosition(ev: Event) {
 		const maxScroll = 300; // in pixel
-		const target = ev.target as HTMLElement;
-		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
+		const target = ev.target as HTMLElement | null;
+		opacityMetadataTable = target
+			? Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100
+			: defaultOpacity;
 	}
 </script>
 
@@ -41,7 +49,7 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictDocs[ovType].metadata.[attKey]?.label}:</td>
+						<td class="w-80 px-4 py-2 font-bold">{dictDocs[ovType].metadata[attKey]?.label}:</td>
 						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, ovAttrs[attKey])}</td>
 					</tr>
 				</tbody>
@@ -120,7 +128,9 @@
 
 	<!-- Linked documents -->
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Edierte Textstufen</h2>
-	<div class="min-h-[40vh]">{@render LinkedItemsContainer(ovAttrs.metadata?.textstufen_edited)}</div>
+	<div class="min-h-[40vh]">
+		{@render LinkedItemsContainer(ovAttrs.metadata?.textstufen_edited)}
+	</div>
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Sequenzen</h2>
 	<p>TODO</p>
 </div>
