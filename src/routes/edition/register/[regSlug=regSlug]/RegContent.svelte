@@ -59,6 +59,33 @@
 		const target = ev.target as HTMLElement;
 		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
+
+	// type TDocArgs = {
+	// 	[K in TDocTypes]: [type: K, docId: keyof TDocuments['documents'][K]];
+	// }[TDocTypes];
+
+	// function getItemMeta1(...[type, docId]: TDocArgs) {
+	// 	return ovMeta[type][docId];
+	// }
+
+	// type DistributedDocArgs<T extends TDocTypes> = T extends T
+	// 	? [T, keyof TDocuments['documents'][T]]
+	// 	: never;
+
+	// function getItemMeta<T extends TDocTypes>(...[type, docId]: DistributedDocArgs<T>) {
+	// 	return ovMeta[type][docId];
+	// }
+
+	// type TDocLookup<T extends TDocTypes> = T extends T
+	// 	? {
+	// 			type: T;
+	// 			docId: keyof TDocuments['documents'][T];
+	// 		}
+	// 	: never;
+
+	// function getItemMeta<T extends TDocTypes>(lookup: TDocLookup<T>) {
+	// 	return ovMeta[lookup.type][lookup.docId];
+	// }
 </script>
 
 <!-- Snippet: Metadata Table -->
@@ -136,9 +163,10 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(docId: TDocKeys)}
-	{@const resolved = resolveDocMeta(ovMeta, docId)}
-	{#if resolved}
-		{@const itemMeta = resolved.itemMeta}
+	{@const itemType = findEdTypeByDocId(docId)}
+	{#if itemType}
+		<!-- Pragmatic loose TypeScript -->
+		{@const itemMeta = ovMeta[itemType][docId as never] as Record<TDocAttrs, any>}
 		<a
 			href={resolve(`/edition/${docId as string}?mode=DF`)}
 			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
