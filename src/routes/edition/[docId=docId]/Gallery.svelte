@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
-	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;
@@ -84,30 +84,28 @@
 			{/each}
 			{#if showTextzeugen}
 				{#each tzgIds as tzgId}
-					{@const tzgType = findEdTypeByDocId(tzgId)}
-					{#if tzgType}
-						{@const items = collectGalleryItems(tzgId)}
-						<div
-							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
-						>
-							<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
-							{#each items as item (item.page)}
-								<a
-									class="ml-2 rounded-xl p-1"
-									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
-									<span class="italic">Seite {item.page}</span>
-								</a>
-							{:else}
-								<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
-									>Keine Faksimile gefunden</a
-								>
-							{/each}
-						</div>
-					{/if}
+					{@const { item: resDoc } = resolveDoc(fullMeta, tzgId) || { item: null }}
+					{@const items = collectGalleryItems(tzgId)}
+					<div
+						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
+					>
+						<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
+						{#each items as item (item.page)}
+							<a
+								class="ml-2 rounded-xl p-1"
+								href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+								<span class="italic">Seite {item.page}</span>
+							</a>
+						{:else}
+							<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
+								>Keine Faksimile gefunden</a
+							>
+						{/each}
+					</div>
 				{/each}
 			{/if}
 		</div>

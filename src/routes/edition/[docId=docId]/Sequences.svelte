@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
@@ -6,8 +7,7 @@
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
-	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
-	import { resolve } from '$app/paths';
+	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { type TDocKeys } from '$lib/types/documents/TDocuments';
 	import { tick } from 'svelte';
 	import type { TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
@@ -183,38 +183,35 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
-	{@const itemType = findEdTypeByDocId(itemId)}
-	{#if itemType}
-		{@const itemMeta = fullMeta[itemType][itemId]}
-		<a
-			href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
-			class={[
-				'w-70 rounded-xl p-1',
-				docId !== itemId && 'hover:bg-surface-300-700',
-				!isCurrentSeqList && ' hover:bg-surface-300-700',
-				isCurrentSeqList && docId === itemId && 'pointer-events-none'
-			]}
-			onclick={() => {
-				closeSeqPanel(0);
-				invalidateAll();
-			}}
-		>
-			<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-				<div class="flex h-full w-full items-center justify-center">
-					<IIIF_Thumb
-						url={itemMeta?.manuscript?.iiif_urls[0]}
-						maxWidth="80"
-						maxHeight="80"
-						classes="rounded-xl"
-					/>
-				</div>
-				<div class="flex flex-col">
-					<span class="italic">{itemMeta?.metadata?.title_full}</span>
-					<span class="">{itemMeta?.metadata?.pubDate}</span>
-				</div>
+	{@const { item: resDoc, docId: resId } = resolveDoc(fullMeta, itemId) || { item: null }}
+	<a
+		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
+		class={[
+			'w-70 rounded-xl p-1',
+			docId !== resId && 'hover:bg-surface-300-700',
+			!isCurrentSeqList && ' hover:bg-surface-300-700',
+			isCurrentSeqList && docId === resId && 'pointer-events-none'
+		]}
+		onclick={() => {
+			closeSeqPanel(0);
+			invalidateAll();
+		}}
+	>
+		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+			<div class="flex h-full w-full items-center justify-center">
+				<IIIF_Thumb
+					url={resDoc?.manuscript?.iiif_urls[0]}
+					maxWidth="80"
+					maxHeight="80"
+					classes="rounded-xl"
+				/>
 			</div>
-		</a>
-	{/if}
+			<div class="flex flex-col">
+				<span class="italic">{resDoc?.metadata?.title_full}</span>
+				<span class="">{resDoc?.metadata?.pubDate}</span>
+			</div>
+		</div>
+	</a>
 {/snippet}
 
 {#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}

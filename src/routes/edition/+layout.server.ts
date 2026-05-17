@@ -2,7 +2,7 @@ export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
 import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
-import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
 export const load: LayoutServerLoad = async ({ parent, url }) => {
@@ -29,7 +29,7 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 		edView === 'edView2'
 			? (edSlug as TDocTypes)
 			: edSlug
-				? findEdTypeByDocId(edSlug as TDocKeys)
+				? resolveDoc(null, edSlug as TDocKeys)?.docType || null
 				: null;
 
 	return { edSlug, edType, edView };

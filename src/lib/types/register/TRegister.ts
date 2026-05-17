@@ -15,9 +15,9 @@ import { type TBiblsGroups } from './TBiblsGroups';
 import { type TKeywordsGroups } from './TKeywordsGroups';
 
 // From Documents
-import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
-import { type TLettersKeys } from '../documents/TLettersKeys';
-import { type TLongformsKeys } from '../documents/TLongformsKeys';
+import { type TSmallformsKeys } from '../documents/TDocuments';
+import { type TLettersKeys } from '../documents/TDocuments';
+import { type TLongformsKeys } from '../documents/TDocuments';
 
 // --- Register -------------------------------------------------------
 export type TRegister = {

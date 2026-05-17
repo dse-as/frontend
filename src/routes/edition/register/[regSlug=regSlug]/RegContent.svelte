@@ -7,11 +7,6 @@
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import {
-		findEdTypeByDocId,
-		resolveDoc,
-		resolveDocMeta
-	} from '$lib/functions/ease_of_use/findEdTypeByDocId';
 	import type {
 		TRegAttrs,
 		TRegAttrsBibls,
@@ -22,21 +17,12 @@
 		TRegAttrsPeople,
 		TRegAttrsPlaces,
 		TRegDict,
-		TRegister,
 		TRegTypes
 	} from '$lib/types/register/TRegister';
 	import { type TPeopleKeys } from '$lib/types/register/TPeopleKeys';
 	import { type TOrgsKeys } from '$lib/types/register/TOrgsKeys';
-	import {
-		type TDocAttrs,
-		type TDocAttrsMap,
-		type TDocKeys,
-		type TDocKeysMap,
-		type TDocMetadata,
-		type TDocMetadataMap,
-		type TDocTypes,
-		type TDocuments
-	} from '$lib/types/documents/TDocuments';
+	import { type TDocKeys, type TDocuments } from '$lib/types/documents/TDocuments';
+	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 
 	let {
 		ovType,
@@ -59,33 +45,6 @@
 		const target = ev.target as HTMLElement;
 		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
-
-	// type TDocArgs = {
-	// 	[K in TDocTypes]: [type: K, docId: keyof TDocuments['documents'][K]];
-	// }[TDocTypes];
-
-	// function getItemMeta1(...[type, docId]: TDocArgs) {
-	// 	return ovMeta[type][docId];
-	// }
-
-	// type DistributedDocArgs<T extends TDocTypes> = T extends T
-	// 	? [T, keyof TDocuments['documents'][T]]
-	// 	: never;
-
-	// function getItemMeta<T extends TDocTypes>(...[type, docId]: DistributedDocArgs<T>) {
-	// 	return ovMeta[type][docId];
-	// }
-
-	// type TDocLookup<T extends TDocTypes> = T extends T
-	// 	? {
-	// 			type: T;
-	// 			docId: keyof TDocuments['documents'][T];
-	// 		}
-	// 	: never;
-
-	// function getItemMeta<T extends TDocTypes>(lookup: TDocLookup<T>) {
-	// 	return ovMeta[lookup.type][lookup.docId];
-	// }
 </script>
 
 <!-- Snippet: Metadata Table -->
@@ -163,32 +122,28 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(docId: TDocKeys)}
-	{@const itemType = findEdTypeByDocId(docId)}
-	{#if itemType}
-		<!-- Pragmatic loose TypeScript -->
-		{@const itemMeta = ovMeta[itemType][docId as never] as Record<TDocAttrs, any>}
-		<a
-			href={resolve(`/edition/${docId as string}?mode=DF`)}
-			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
-			target="blank"
-			rel="noopener noreferrer"
-		>
-			<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-				<div class="flex h-full w-full items-center justify-center">
-					<IIIF_Thumb
-						url={itemMeta?.manuscript?.iiif_urls[0]}
-						maxWidth="80"
-						maxHeight="80"
-						classes="rounded-xl"
-					/>
-				</div>
-				<div class="flex flex-col">
-					<span class="italic">{itemMeta?.metadata?.title_full}</span>
-					<span class="">{itemMeta?.metadata?.pubDate}</span>
-				</div>
+	{@const { item: resDoc } = resolveDoc(ovMeta, docId) || { item: null }}
+	<a
+		href={resolve(`/edition/${docId as string}?mode=DF`)}
+		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+		target="blank"
+		rel="noopener noreferrer"
+	>
+		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+			<div class="flex h-full w-full items-center justify-center">
+				<IIIF_Thumb
+					url={resDoc?.manuscript?.iiif_urls[0]}
+					maxWidth="80"
+					maxHeight="80"
+					classes="rounded-xl"
+				/>
 			</div>
-		</a>
-	{/if}
+			<div class="flex flex-col">
+				<span class="italic">{resDoc?.metadata?.title_full}</span>
+				<span class="">{resDoc?.metadata?.pubDate}</span>
+			</div>
+		</div>
+	</a>
 {/snippet}
 
 <!-- Container -->

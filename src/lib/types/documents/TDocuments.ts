@@ -1,7 +1,11 @@
+
+import { documents as docs } from '$lib/data/documents.json';
+
+// --- Types derived from JSON ----------------------------------------
 // Keys
-import { type TLettersKeys } from './TLettersKeys';
-import { type TSmallformsKeys } from './TSmallformsKeys';
-import { type TLongformsKeys } from './TLongformsKeys';
+export type TLettersKeys = keyof typeof docs['letters']
+export type TSmallformsKeys = keyof typeof docs['smallforms']
+export type TLongformsKeys = keyof typeof docs['longforms']
 
 // Types
 import { type TLettersGroups } from './TLettersGroups';
