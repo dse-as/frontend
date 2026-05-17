@@ -5,7 +5,7 @@
 	import { tick } from 'svelte';
 	import { type TRegTypes } from '$lib/types/register/TRegister';
 
-	let { docId, docType, docMeta, ceteiData, currentPage } = $props();
+	let { docId, docType, docItem, ceteiData, currentPage } = $props();
 
 	const dictReg = dict_register.dict_register as Record<
 		string,
@@ -81,32 +81,33 @@
 			{@render metadataButton('download', 'Download-Links')}
 			{@render metadataButton('all', 'Alles (Temporär)')}
 		</div>
+
 		<div class={['@container mt-5 mb-20 w-full pt-5']}>
 			{#if stateMetadata === 'eckdaten'}
 				<table>
 					<tbody class="flex flex-col gap-2">
-						{@render metadataEntry('Voller Titel', docMeta.metadata.title_full)}
-						{@render metadataEntry('Publikationsdatum', docMeta.metadata.pubDate)}
-						{@render metadataEntry('Publikationsort', docMeta.metadata.pubPlace)}
-						{@render metadataEntry('Publikation einzig post-hum', docMeta.metadata.pubPosthumOnly)}
-						{@render metadataEntry('Publikationsdetails', docMeta.metadata.pubDetails)}
+						{@render metadataEntry('Voller Titel', docItem.metadata.title_full)}
+						{@render metadataEntry('Publikationsdatum', docItem.metadata.pubDate)}
+						{@render metadataEntry('Publikationsort', docItem.metadata.pubPlace)}
+						{@render metadataEntry('Publikation einzig post-hum', docItem.metadata.pubPosthumOnly)}
+						{@render metadataEntry('Publikationsdetails', docItem.metadata.pubDetails)}
 					</tbody>
 				</table>
 			{:else if stateMetadata === 'sources'}
 				<table>
 					<tbody class="flex flex-col gap-2">
-						{@render metadataEntry('Signatur', docMeta.metadata.signature)}
+						{@render metadataEntry('Signatur', docItem.metadata.signature)}
 					</tbody>
 				</table>
 			{:else if stateMetadata === 'keywords'}
 				<!-- Global Entities -->
 				{#if Object.keys(dictReg).some((regType) => {
-					const keywords = docMeta.metadata.keywords[regType];
+					const keywords = docItem.metadata.keywords[regType];
 					return keywords && keywords.length > 0;
 				})}
 					<div data-dom="global_entities" class="flex flex-wrap gap-4">
 						{#each Object.keys(dictReg) as regType}
-							{@const regKeys = docMeta.metadata.keywords[regType]}
+							{@const regKeys = docItem.metadata.keywords[regType]}
 							{#each regKeys ? Object.values(regKeys) : [] as regKey}
 								<a
 									class="whitespace-nowrap text-surface-950"
@@ -127,11 +128,11 @@
 					<tbody class="flex flex-col gap-2">
 						{@render metadataEntry(
 							'Dieses Dokument',
-							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full}`
+							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docItem.metadata.title_full}`
 						)}
 						{@render metadataEntry(
 							'Aktuell sichtbare Seite',
-							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docMeta.metadata.title_full},  Seite ${currentPage}`
+							`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docItem.metadata.title_full},  Seite ${currentPage}`
 						)}
 					</tbody>
 				</table>
@@ -147,7 +148,7 @@
 			{:else if stateMetadata === 'all'}
 				<div class="h-auto">
 					<div data-dom="metadata_table" class="">
-						{#each Object.entries(docMeta.metadata) as entry}
+						{#each Object.entries(docItem.metadata) as entry}
 							{#if entry[0] !== 'keywords'}
 								{@render metadataEntry(entry[0], entry[1])}
 							{/if}
@@ -159,12 +160,12 @@
 	</div>
 {/snippet}
 
-{#if docMeta}
+{#if docItem}
 	<div class="w-full">
-		<h1 class="h1">{docMeta.metadata.title_full}</h1>
+		<h1 class="h1">{docItem.metadata.title_full}</h1>
 		{#if docType === 'smallforms'}
 			<h2 class="h2">
-				Publiziert in {docMeta.metadata.pubPlace} ({docMeta.metadata.year})
+				Publiziert in {docItem.metadata.pubPlace} ({docItem.metadata.year})
 			</h2>
 		{/if}
 		<!-- Global Comment -->

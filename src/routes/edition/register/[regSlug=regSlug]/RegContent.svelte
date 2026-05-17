@@ -26,13 +26,13 @@
 
 	let {
 		ovType,
-		ovMeta,
+		allDocs,
 		ovDict,
 		regAttributes,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		ovType: T;
-		ovMeta: TDocuments['documents'];
+		allDocs: TDocuments['documents'];
 		ovDict: TRegDict['dict_register'][T];
 		regAttributes: Record<TRegAttrsMap[T], any>;
 		cheatPageHeightInRegSingleColView: string;
@@ -122,7 +122,7 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(docId: TDocKeys)}
-	{@const { item: resDoc } = resolveDoc(ovMeta, docId) || { item: null }}
+	{@const { item: resDoc } = resolveDoc(allDocs, docId) || { item: null }}
 	<a
 		href={resolve(`/edition/${docId as string}?mode=DF`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"

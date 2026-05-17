@@ -4,17 +4,28 @@
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
-	import type { TDocAttrs, TDocKeys, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
+	import type {
+		TDocAttrs,
+		TDocKeys,
+		TDocMetadata,
+		TDocMetadataLetters,
+		TDocMetadataLongforms,
+		TDocMetadataSmallforms,
+		TDocTypes,
+		TDocuments
+	} from '$lib/types/documents/TDocuments';
 
 	let {
-		ovMeta,
-		ovType,
-		ovAttrs,
+		allDocs,
+		docType,
+		docAttrs,
+		docMetadata,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		ovMeta: TDocuments['documents'];
-		ovType: TDocTypes;
-		ovAttrs: TDocAttrs;
+		allDocs: TDocuments['documents'];
+		docType: TDocTypes;
+		docAttrs: TDocAttrs;
+		docMetadata: Record<TDocMetadata, any>;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -50,9 +61,10 @@
 				<tbody>
 					<tr>
 						<td class="w-80 px-4 py-2 font-bold"
-							>{dictDocs[ovType as TDocTypes].metadata[attKey]?.label}:</td
+							>{dictDocs[docType as TDocTypes].metadata[attKey]?.label}:</td
 						>
-						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, ovAttrs[attKey])}</td>
+						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, docMetadata[attKey])}</td
+						>
 					</tr>
 				</tbody>
 			{/if}
@@ -79,7 +91,7 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(itemId: TDocKeys)}
-	{@const { item: resDoc } = resolveDoc(ovMeta, itemId) || { item: null }}
+	{@const { item: resDoc } = resolveDoc(allDocs, data.docId) || { item: null }}
 	<a
 		href={resolve(`/edition/${itemId as string}`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
@@ -110,25 +122,30 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if ovType === 'letters'}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{ovAttrs.name}</h1>
-		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
-	{:else if ovType === 'smallforms'}
+	{#if docType === 'letters'}
+		{@const docMetadataTyped = docMetadata as Record<TDocMetadataLetters, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
-			{ovAttrs.name}
+			{docMetadataTyped?.label}
 		</h1>
-		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
-	{:else if ovType === 'longforms'}
+		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
+	{:else if docType === 'smallforms'}
+		{@const docMetadataTyped = docMetadata as Record<TDocMetadataSmallforms, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
-			{ovAttrs.name}
+			{docMetadataTyped?.label}
 		</h1>
-		{@render MetadataTable(['type', ovAttrs.year && 'year'])}
+		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
+	{:else if docType === 'longforms'}
+		{@const docMetadataTyped = docMetadata as Record<TDocMetadataLongforms, any>}
+		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+			{docMetadataTyped?.label}
+		</h1>
+		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{/if}
 
 	<!-- Linked documents -->
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
-		{@render LinkedItemsContainer(ovAttrs.metadata?.textstufen_edited)}
+		{@render LinkedItemsContainer(docMetadata?.textstufen_edited)}
 	</div>
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Sequenzen</h2>
 	<p>TODO</p>

@@ -8,7 +8,6 @@
 
 	let { data } = $props();
 
-	const fullMetaRecord = $derived(data.fullMeta as TDocuments['documents']);
 	const edType = $derived(data.edType || null);
 	const edSlug = $derived(data.edSlug || null);
 
@@ -53,7 +52,7 @@
 			<OverviewList
 				ovVariant="documents"
 				isMultiColumn={true}
-				ovMeta={fullMetaRecord[edType]}
+				ovMeta={data.allDocs[edType]}
 				ovDict={dictDocPicker[edType]}
 				ovType={edSlug as TDocTypes}
 				ovItem={null}
@@ -65,16 +64,17 @@
 			<OverviewList
 				ovVariant="documents"
 				isMultiColumn={false}
-				ovMeta={fullMetaRecord[edType]}
+				ovMeta={data.allDocs[edType]}
 				ovDict={dictDocPicker[edType]}
 				ovType={edType}
 				ovItem={edSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
 			<OverviewContent
-				ovMeta={data.fullMeta}
-				ovType={edType}
-				ovAttrs={fullMetaRecord[edType]?.[edSlug]}
+				allDocs={data.allDocs}
+				docType={edType}
+				docAttrs={data.allDocs[edType]?.[edSlug]}
+				docMetadata={data.allDocs[edType]?.[edSlug].metadata}
 				{cheatPageHeightInRegSingleColView}
 			/>
 		</div>

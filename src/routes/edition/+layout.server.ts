@@ -6,7 +6,7 @@ import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
 export const load: LayoutServerLoad = async ({ parent, url }) => {
-	const { fullMeta } = await parent();
+	const { allDocs } = await parent();
 
 	// Last segment of url
 	const edSlug = url.pathname.split('/').pop() || '';
@@ -19,7 +19,7 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 			: edSlug && Object.keys(dictDocPicker).includes(edSlug)
 				? // e.g. /edition/[smallforms]
 					'edView2'
-				: Object.values(fullMeta).some((inner) => Object.keys(inner).includes(edSlug)) &&
+				: Object.values(allDocs).some((inner) => Object.keys(inner).includes(edSlug)) &&
 					  url.pathname.includes('doc-overview') //! FIX change this, once the slugs are stable
 					? // e.g. /edition/doc-overview/[smallform_0001]
 						'edView3'

@@ -29,7 +29,7 @@
 	>;
 
 	let {
-		fullMeta,
+		allDocs,
 		docId,
 		currentSeq = { type: 'travels' as TSeqTypes, id: 'travel_0015' }
 	} = $props();
@@ -183,7 +183,7 @@
 
 <!-- Snippets -->
 {#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
-	{@const { item: resDoc, docId: resId } = resolveDoc(fullMeta, itemId) || { item: null }}
+	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[

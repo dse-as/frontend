@@ -15,17 +15,17 @@
 		page: number;
 	};
 
-	let { fullMeta, docId, docMeta, currentPage } = $props();
+	let { allDocs, docId, docItem, currentPage } = $props();
 
 	// Textzeugen
-	const tzgIds = $derived(docMeta?.metadata.textzeugen_nonedited || []);
+	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
 
 	function collectGalleryItems(docId: string) {
 		const items: TItem[] =
-			docMeta?.manuscript.iiif_urls.map((el: string, idx: number) => {
+			docItem?.manuscript.iiif_urls.map((el: string, idx: number) => {
 				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
 			}) || [];
 		return items;
@@ -84,7 +84,7 @@
 			{/each}
 			{#if showTextzeugen}
 				{#each tzgIds as tzgId}
-					{@const { item: resDoc } = resolveDoc(fullMeta, tzgId) || { item: null }}
+					{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 					{@const items = collectGalleryItems(tzgId)}
 					<div
 						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"

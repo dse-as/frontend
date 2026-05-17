@@ -11,7 +11,7 @@
 	<h4 class="h4">Alle Dokumente</h4>
 	<ul>
 		{#each data.topicData?.docs as docId}
-			{@const { item: resDoc } = resolveDoc(data.fullMeta, docId) || { item: null }}
+			{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 			<li class="mt-2">
 				<a href={resolve(`/edition/${docId as string}`)}>{resDoc?.metadata.title_full}</a>
 			</li>

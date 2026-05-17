@@ -8,7 +8,7 @@
 
 	let { data } = $props();
 
-	const fullMetaRecord = $derived(data.reg as TRegister['register']);
+	const allDocsRecord = $derived(data.reg as TRegister['register']);
 
 	const regType = $derived(data.regType || null);
 	const regSlug = $derived(data.regSlug || null);
@@ -53,7 +53,7 @@
 		<OverviewList
 			ovVariant="register"
 			isMultiColumn={true}
-			ovMeta={fullMetaRecord[regType]}
+			ovMeta={allDocsRecord[regType]}
 			ovDict={dictReg[regType]}
 			ovType={regSlug as TRegTypes}
 			ovItem={null}
@@ -65,7 +65,7 @@
 		<OverviewList
 			ovVariant="register"
 			isMultiColumn={false}
-			ovMeta={fullMetaRecord[regType]}
+			ovMeta={allDocsRecord[regType]}
 			ovDict={dictReg[regType]}
 			ovType={regType}
 			ovItem={regSlug as TRegKeysFlat}
@@ -73,7 +73,7 @@
 		/>
 		<RegContent
 			ovType={regType}
-			ovMeta={data.fullMeta}
+			allDocs={data.allDocs}
 			ovDict={dictReg[regType]}
 			regAttributes={data.regAttributes}
 			{cheatPageHeightInRegSingleColView}

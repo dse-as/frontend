@@ -23,7 +23,7 @@
 
 		<div bind:this={containerRef} class="flex min-h-30 w-full gap-2 overflow-x-auto px-10">
 			{#each seqItems[seqItemId].docs as docId, index (docId)}
-				{@const { item: resDoc } = resolveDoc(data.fullMeta, docId) || { item: null }}
+				{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 				<a
 					href={resolve(
 						`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`

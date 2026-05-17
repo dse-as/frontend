@@ -2,8 +2,8 @@
 	import IIIF_Viewer from './IIIF_Viewer.svelte';
 	import TextPaged from './TextPaged.svelte';
 
-	let { docMeta, ceteiData, currentPage } = $props();
-	let urls = $derived(docMeta?.manuscript?.iiif_urls ?? []);
+	let { docItem, ceteiData, currentPage } = $props();
+	let urls = $derived(docItem?.manuscript?.iiif_urls ?? []);
 	let url = $derived(urls[currentPage - 1]);
 	$inspect(url); //! FIX: when removed, the IIIF_Viewer stops updating... strange.
 </script>
