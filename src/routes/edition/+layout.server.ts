@@ -1,7 +1,7 @@
 export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
-import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
+import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
@@ -16,7 +16,7 @@ export const load: LayoutServerLoad = async ({ parent, url }) => {
 		docSlug === 'edition'
 			? //edition
 				'edView1'
-			: docSlug && Object.keys(dictDocPicker).includes(docSlug)
+			: docSlug && Object.keys(dictDoc).includes(docSlug)
 				? // e.g. /edition/[smallforms]
 					'edView2'
 				: Object.values(allDocs).some((inner) => Object.keys(inner).includes(docSlug)) &&

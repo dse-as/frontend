@@ -19,6 +19,7 @@
 	import Shortcuts from '$lib/components/Shortcuts.svelte';
 	import type {
 		TRegDict,
+		TRegGroupsFlat,
 		TRegGroupsMap,
 		TRegister,
 		TRegKeysFlat,
@@ -26,6 +27,7 @@
 	} from '$lib/types/register/TRegister';
 	import type {
 		TDocDict,
+		TDocGroupsFlat,
 		TDocGroupsMap,
 		TDocKeys,
 		TDocTypes,
@@ -289,10 +291,16 @@
 		{#if hasGroupControls && uiOvGroupByCat[ovVariant]}
 			<!-- Grouped by categories -->
 			{#each allGroupKeys as groupKey (groupKey)}
-				{@render groupTitle(ovDict.groups[groupKey]?.label_plural || '?')}
-				{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as [key, item] (key)}
-					{@render regListItem(key, item.name)}
-				{/each}
+				{#if groupKey && groupKey !== '?'}
+					{@render groupTitle(
+						//! FIX hardcoded types!
+						(ovDict.groups[groupKey as keyof typeof ovDict.groups] as Record<'label_plural', any>)
+							?.label_plural || '?'
+					)}
+					{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as [key, item] (key)}
+						{@render regListItem(key, item.name)}
+					{/each}
+				{/if}
 			{/each}
 		{:else if ovType}
 			<!-- All other types -->

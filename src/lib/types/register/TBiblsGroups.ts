@@ -1,1 +1,1 @@
-export type TBiblsGroups = string;
+export type TBiblsGroups = '';

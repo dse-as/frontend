@@ -20,7 +20,7 @@ export let activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'n
 
 // const
 export const UI_TYPESWITHGROUPCONTROL = {
-	documents: [''],
+	documents: ['letters', 'smallforms', 'longforms'],
 	register: ['events', 'orgs', 'people', 'places']
 };
 export const UI_TYPESWITHSORTCONTROL = {

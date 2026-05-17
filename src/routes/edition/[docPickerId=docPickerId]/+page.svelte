@@ -1,7 +1,7 @@
 <script lang="ts">
 	import OverviewContent from '$lib/components/OverviewContent.svelte';
 	import OverviewList from '$lib/components/OverviewList.svelte';
-	import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
+	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 
 	import type { TDocTypes, TDocKeys, TDocuments } from '$lib/types/documents/TDocuments.js';
 	import { onMount } from 'svelte';
@@ -53,7 +53,7 @@
 				ovVariant="documents"
 				isMultiColumn={true}
 				ovMeta={data.allDocs[docType]}
-				ovDict={dictDocPicker[docType]}
+				ovDict={dictDoc[docType]}
 				ovType={docSlug as TDocTypes}
 				ovItem={null}
 			/>
@@ -65,15 +65,16 @@
 				ovVariant="documents"
 				isMultiColumn={false}
 				ovMeta={data.allDocs[docType]}
-				ovDict={dictDocPicker[docType]}
+				ovDict={dictDoc[docType]}
 				ovType={docType}
 				ovItem={docSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
-			{#if data.docItem}
+			{#if data.docItem && data.docId}
 				<OverviewContent
 					allDocs={data.allDocs}
 					{docType}
+					docId={data.docId}
 					docItem={data.docItem}
 					{cheatPageHeightInRegSingleColView}
 				/>

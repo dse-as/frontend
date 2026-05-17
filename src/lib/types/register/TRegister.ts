@@ -100,16 +100,16 @@ export type TRegister = {
 };
 
 // --- Register Dictionary -------------------------------------------------------
-type RegEntity<Attrs extends string | number | symbol, Types extends string | number | symbol> = {
+type RegEntity<TA extends string | number | symbol, TG extends string | number | symbol> = {
 	register_name: string;
 	key_singular: string;
 	label_plural: string;
 	attributes: {
-		[K in Attrs]: { label: string };
+		[K in TA]: { label: string };
 	};
 	groups:
 		| {
-				[K in Types]: {
+				[K in TG]: {
 					label_singular: string;
 					label_plural: string;
 					slug?: string | null;

@@ -218,14 +218,16 @@ export type TDocuments = {
 };
 
 // --- Docs Dictionary -------------------------------------------------------
-type DictEntity<Attrs extends string | number | symbol, Types extends string | number | symbol> = {
+type DictEntity<TM extends string | number | symbol, TG extends string | number | symbol> = {
 	name: string;
 	key_singular: string;
 	label_plural: string;
-	attributes: {};
+	metadata: {
+		[K in TM]: { label: string };
+	};
 	groups:
 		| {
-				[K in Types]: {
+				[K in TG]: {
 					label_singular: string;
 					label_plural: string;
 					slug?: string | null;
@@ -242,9 +244,9 @@ export type TDocDict = {
 		description: string;
 	};
 	dict_docs: {
-		letters: DictEntity<TDocAttrsLetters, TLettersGroups>;
-		smallforms: DictEntity<TDocAttrsSmallforms, TSmallformsGroups>;
-		longforms: DictEntity<TDocAttrsLongforms, TLongformsGroups>;
+		letters: DictEntity<TDocMetadataKeysLetters, TLettersGroups>;
+		smallforms: DictEntity<TDocMetadataKeysSmallforms, TSmallformsGroups>;
+		longforms: DictEntity<TDocMetadataKeysLongforms, TLongformsGroups>;
 	};
 };
 
@@ -267,17 +269,20 @@ export type TDocAttrsMap = {
 	longforms: TDocAttrsLongforms;
 };
 
-export type TDocMetadataLetters =
+export type TDocMetadataKeysLetters =
 	keyof TDocuments['documents']['letters'][TLettersKeys]['metadata'];
-export type TDocMetadataSmallforms =
+export type TDocMetadataKeysSmallforms =
 	keyof TDocuments['documents']['smallforms'][TSmallformsKeys]['metadata'];
-export type TDocMetadataLongforms =
+export type TDocMetadataKeysLongforms =
 	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
-export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;
-export type TDocMetadataMap = {
-	letters: TDocMetadataLetters;
-	smallforms: TDocMetadataSmallforms;
-	longforms: TDocMetadataLongforms;
+export type TDocMetadataKeys =
+	| TDocMetadataKeysLetters
+	| TDocMetadataKeysSmallforms
+	| TDocMetadataKeysLongforms;
+export type TDocMetadataKeysMap = {
+	letters: TDocMetadataKeysLetters;
+	smallforms: TDocMetadataKeysSmallforms;
+	longforms: TDocMetadataKeysLongforms;
 };
 
 export type TDocItemsLetters = TDocuments['documents']['letters'][TLettersKeys];

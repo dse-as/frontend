@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	let { data, children } = $props();
 
-	import { dict_docs as dictDocPicker } from '$lib/dictionaries/dict_docs.json';
+	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 
 	const docTypeIdsForButtons = ['smallforms', 'longforms', 'letters'] as const;
 </script>
@@ -27,7 +27,7 @@
 					]}
 					href={resolve(`/edition/${docTypeId}`)}
 				>
-					{dictDocPicker[docTypeId]?.label_plural}
+					{dictDoc[docTypeId]?.label_plural}
 				</a>
 			{/each}
 		</nav>
@@ -50,11 +50,7 @@
 					: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 		]}
 	>
-		{data.edView === 'edView1'
-			? 'Dokumente'
-			: data.docType
-				? dictDocPicker[data.docType]?.name
-				: ''}
+		{data.edView === 'edView1' ? 'Dokumente' : data.docType ? dictDoc[data.docType]?.name : ''}
 	</h1>
 	<!-- Navigation  -->
 	{#if data.edView === 'edView1'}

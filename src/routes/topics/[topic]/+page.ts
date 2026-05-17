@@ -22,6 +22,8 @@ import type { TDocKeys } from '$lib/types/documents/TDocuments';
 
 export const load: PageLoad = ({ params }) => {
 	const slug = params.topic;
-	const topicData = Object.values(topics).find((item) => item.url_slug === slug) as TTopics['topics'][TTopicKeys];
+	const topicData = Object.values(topics).find(
+		(item) => item.url_slug === slug
+	) as TTopics['topics'][TTopicKeys];
 	return { slug, topicData };
 };
