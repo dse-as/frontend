@@ -25,13 +25,13 @@
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 
 	let {
-		ovType,
+		docType,
 		allDocs,
 		ovDict,
 		regAttributes,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		ovType: T;
+		docType: T;
 		allDocs: TDocuments['documents'];
 		ovDict: TRegDict['dict_register'][T];
 		regAttributes: Record<TRegAttrsMap[T], any>;
@@ -147,7 +147,7 @@
 {/snippet}
 
 <!-- Container -->
-<!-- Note: TypeScript fails to infer the correct type for 'regAttributes' relative to the 'ovType' condition, 
+<!-- Note: TypeScript fails to infer the correct type for 'regAttributes' relative to the 'docType' condition, 
      necessitating manual casting to 'regAttrsTyped' throughout this block. -->
 <div
 	onscroll={getScrollPosition}
@@ -155,7 +155,7 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if ovType === 'people'}
+	{#if docType === 'people'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPeople, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{regAttrsTyped.name}
@@ -170,7 +170,7 @@
 			'orgId',
 			'note'
 		])}
-	{:else if ovType === 'places'}
+	{:else if docType === 'places'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPlaces, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
@@ -183,7 +183,7 @@
 			regAttrsTyped.country && 'country',
 			'note'
 		])}
-	{:else if ovType === 'orgs'}
+	{:else if docType === 'orgs'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsOrgs, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
@@ -192,15 +192,15 @@
 			regAttrsTyped.gndNumber && 'gndNumber',
 			'note'
 		])}
-	{:else if ovType === 'keywords'}
+	{:else if docType === 'keywords'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsKeywords, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable(['type', regAttrsTyped.gndNumber && 'gndNumber', 'note'])}
-	{:else if ovType === 'events'}
+	{:else if docType === 'events'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsEvents, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([regAttrsTyped.date && 'date', 'note'])}
-	{:else if ovType === 'bibls'}
+	{:else if docType === 'bibls'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsBibls, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
@@ -213,7 +213,7 @@
 	{/if}
 
 	<!-- Linked documents -->
-	{#if ovType === 'people'}
+	{#if docType === 'people'}
 		<!-- //! These lists can later be toggled on/off depending on content -->
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
 			Korrespondenz mit Annemarie Schwarzenbach

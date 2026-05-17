@@ -72,7 +72,7 @@
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<RegContent
-			ovType={regType}
+			docType={regType}
 			allDocs={data.allDocs}
 			ovDict={dictReg[regType]}
 			regAttributes={data.regAttributes}

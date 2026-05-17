@@ -70,13 +70,14 @@
 				ovItem={docSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
-			<OverviewContent
-				allDocs={data.allDocs}
-				{docType}
-				docAttrs={data.allDocs[docType]?.[docSlug]}
-				docMetadata={data.allDocs[docType]?.[docSlug].metadata}
-				{cheatPageHeightInRegSingleColView}
-			/>
+			{#if data.docItem}
+				<OverviewContent
+					allDocs={data.allDocs}
+					{docType}
+					docItem={data.docItem}
+					{cheatPageHeightInRegSingleColView}
+				/>
+			{/if}
 		</div>
 	{/if}
 {/if}

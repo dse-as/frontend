@@ -6,6 +6,7 @@
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import type {
 		TDocAttrs,
+		TDocItems,
 		TDocKeys,
 		TDocMetadata,
 		TDocMetadataLetters,
@@ -18,14 +19,12 @@
 	let {
 		allDocs,
 		docType,
-		docAttrs,
-		docMetadata,
+		docItem,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		allDocs: TDocuments['documents'];
 		docType: TDocTypes;
-		docAttrs: TDocAttrs;
-		docMetadata: Record<TDocMetadata, any>;
+		docItem: TDocItems;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -63,7 +62,8 @@
 						<td class="w-80 px-4 py-2 font-bold"
 							>{dictDocs[docType as TDocTypes].metadata[attKey]?.label}:</td
 						>
-						<td class="px-4 py-2 text-left">{@render MetadataValue(attKey, docMetadata[attKey])}</td
+						<td class="px-4 py-2 text-left"
+							>{@render MetadataValue(attKey, docItem.metadata[attKey])}</td
 						>
 					</tr>
 				</tbody>
@@ -123,19 +123,19 @@
 >
 	<!-- MetadataTable (by Type) -->
 	{#if docType === 'letters'}
-		{@const docMetadataTyped = docMetadata as Record<TDocMetadataLetters, any>}
+		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataLetters, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{:else if docType === 'smallforms'}
-		{@const docMetadataTyped = docMetadata as Record<TDocMetadataSmallforms, any>}
+		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataSmallforms, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{:else if docType === 'longforms'}
-		{@const docMetadataTyped = docMetadata as Record<TDocMetadataLongforms, any>}
+		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataLongforms, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
@@ -145,7 +145,7 @@
 	<!-- Linked documents -->
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
-		{@render LinkedItemsContainer(docMetadata?.textstufen_edited)}
+		{@render LinkedItemsContainer(docItem.metadata?.textstufen_edited)}
 	</div>
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Sequenzen</h2>
 	<p>TODO</p>

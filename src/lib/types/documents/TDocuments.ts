@@ -1,11 +1,10 @@
-
 import { documents as docs } from '$lib/data/documents.json';
 
 // --- Types derived from JSON ----------------------------------------
 // Keys
-export type TLettersKeys = keyof typeof docs['letters']
-export type TSmallformsKeys = keyof typeof docs['smallforms']
-export type TLongformsKeys = keyof typeof docs['longforms']
+export type TLettersKeys = keyof (typeof docs)['letters'];
+export type TSmallformsKeys = keyof (typeof docs)['smallforms'];
+export type TLongformsKeys = keyof (typeof docs)['longforms'];
 
 // Types
 import { type TLettersGroups } from './TLettersGroups';
@@ -34,7 +33,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLettersGroups | '?' | "";
+				type: TLettersGroups | '?' | '';
 				metadata: {
 					authors?: string[];
 					summary?: string;
@@ -96,7 +95,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TSmallformsGroups | '?' | "";
+				type: TSmallformsGroups | '?' | '';
 				metadata: {
 					authors?: string[];
 					summary?: string;
@@ -158,7 +157,7 @@ export type TDocuments = {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
 				date: { from: string; to: string };
-				type: TLongformsGroups | '?' | "";
+				type: TLongformsGroups | '?' | '';
 				metadata: {
 					authors?: string[];
 					summary?: string;
@@ -266,7 +265,7 @@ export type TDocAttrsMap = {
 	letters: TDocAttrsLetters;
 	smallforms: TDocAttrsSmallforms;
 	longforms: TDocAttrsLongforms;
-}
+};
 
 export type TDocMetadataLetters =
 	keyof TDocuments['documents']['letters'][TLettersKeys]['metadata'];
@@ -276,16 +275,26 @@ export type TDocMetadataLongforms =
 	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
 export type TDocMetadata = TDocMetadataLetters | TDocMetadataSmallforms | TDocMetadataLongforms;
 export type TDocMetadataMap = {
-	letters: TDocMetadataLetters ;
-	smallforms: TDocMetadataSmallforms ;
+	letters: TDocMetadataLetters;
+	smallforms: TDocMetadataSmallforms;
 	longforms: TDocMetadataLongforms;
-}
+};
+
+export type TDocItemsLetters = TDocuments['documents']['letters'][TLettersKeys];
+export type TDocItemsSmallforms = TDocuments['documents']['smallforms'][TSmallformsKeys];
+export type TDocItemsLongforms = TDocuments['documents']['longforms'][TLongformsKeys];
+export type TDocItems = TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms;
+export type TDocItemsMap = {
+	letters: TDocItemsLetters;
+	smallforms: TDocItemsSmallforms;
+	longforms: TDocItemsLongforms;
+};
 
 // Group Set
-export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups  | '?' | "";;
+export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups | '?' | '';
 
 export type TDocGroupsMap = {
-	letters: TLettersGroups | '?' | "";
-	smallforms: TSmallformsGroups | '?' | "";
-	longforms: TLongformsGroups | '?' | "";
+	letters: TLettersGroups | '?' | '';
+	smallforms: TSmallformsGroups | '?' | '';
+	longforms: TLongformsGroups | '?' | '';
 };
