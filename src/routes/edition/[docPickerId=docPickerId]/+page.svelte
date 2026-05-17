@@ -8,8 +8,8 @@
 
 	let { data } = $props();
 
-	const edType = $derived(data.edType || null);
-	const edSlug = $derived(data.edSlug || null);
+	const docType = $derived(data.docType || null);
+	const docSlug = $derived(data.docSlug || null);
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position
@@ -45,16 +45,16 @@
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
 </script>
 
-{#if edType && edSlug}
+{#if docType && docSlug}
 	{#if data.edView === 'edView2'}
 		<!-- Overview with Multi-Column List -->
 		<div class="absolute top-45 left-0 w-full px-10">
 			<OverviewList
 				ovVariant="documents"
 				isMultiColumn={true}
-				ovMeta={data.allDocs[edType]}
-				ovDict={dictDocPicker[edType]}
-				ovType={edSlug as TDocTypes}
+				ovMeta={data.allDocs[docType]}
+				ovDict={dictDocPicker[docType]}
+				ovType={docSlug as TDocTypes}
 				ovItem={null}
 			/>
 		</div>
@@ -64,17 +64,17 @@
 			<OverviewList
 				ovVariant="documents"
 				isMultiColumn={false}
-				ovMeta={data.allDocs[edType]}
-				ovDict={dictDocPicker[edType]}
-				ovType={edType}
-				ovItem={edSlug as TDocKeys}
+				ovMeta={data.allDocs[docType]}
+				ovDict={dictDocPicker[docType]}
+				ovType={docType}
+				ovItem={docSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
 			<OverviewContent
 				allDocs={data.allDocs}
-				docType={edType}
-				docAttrs={data.allDocs[edType]?.[edSlug]}
-				docMetadata={data.allDocs[edType]?.[edSlug].metadata}
+				{docType}
+				docAttrs={data.allDocs[docType]?.[docSlug]}
+				docMetadata={data.allDocs[docType]?.[docSlug].metadata}
 				{cheatPageHeightInRegSingleColView}
 			/>
 		</div>
