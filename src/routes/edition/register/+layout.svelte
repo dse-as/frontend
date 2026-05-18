@@ -1,15 +1,11 @@
 <script lang="ts">
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
+	import { type TRegTypes } from '$lib/types/register/TRegister.js';
 
 	let { data, children } = $props();
 
-	const regIdsForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'];
-
-	// Locally used datasets
-	// - data.regView
-	// - data.regSlug
-	// - data.regType
+	const regIdsForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'] as const;
 </script>
 
 <!-- Snippet for Navigation -->
@@ -54,7 +50,7 @@
 				: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
 	]}
 >
-	{data.regView === 'regView1' ? 'Register' : dictReg[data.regType]?.register_name}
+	{data.regView === 'regView1' ? 'Register' : dictReg[data.regType as TRegTypes]?.register_name}
 </h1>
 
 <!-- Navigation -->

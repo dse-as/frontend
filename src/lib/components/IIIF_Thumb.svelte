@@ -8,14 +8,14 @@
 {#if url}
 	{#if isLoading}
 		<div
-			class="flex items-center justify-center rounded-xl border"
+			class={['flex items-center justify-center rounded-xl border', classes]}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
 			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
 		</div>
 	{:else if loadedWithError}
 		<div
-			class="flex items-center justify-center rounded-xl border"
+			class={['flex items-center justify-center rounded-xl border', classes]}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
 			<i class="fa-solid fa-xmark fa-2xl text-red-500"></i>
@@ -29,15 +29,16 @@
 		/>
 	{/if}
 {:else}
-	<div class="flex h-full w-full items-center justify-center rounded-xl border">
+	<div class={['flex h-full w-full items-center justify-center rounded-xl border', classes]}>
 		<i class="fa-solid fa-xmark fa-2xl"></i>
 	</div>
 {/if}
 
+<!-- //! HACK: Hidden image (just for loading) -->
 <img
 	class="hidden"
 	src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
-	alt="hidden (just for loading)"
+	alt=""
 	onload={() => {
 		isLoading = false;
 		loadedWithError = false;

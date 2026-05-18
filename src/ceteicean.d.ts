@@ -24,7 +24,7 @@ declare module 'CETEIcean' {
 	 * - `namespaces`: maps namespace URIs to prefixes
 	 * - `functions`: custom utility functions added to `this.utilities`
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+
 	interface BehaviorsObject extends Record<
 		string,
 		BehaviorSet | Record<string, string> | Record<string, (...args: any[]) => any> | undefined

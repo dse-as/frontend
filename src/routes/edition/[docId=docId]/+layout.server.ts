@@ -2,13 +2,11 @@ export const prerender = true;
 
 import type { LayoutServerLoad } from './$types';
 
-import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
-import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
+import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+import type { TDocKeys } from '$lib/types/documents/TDocuments';
 
 export const load: LayoutServerLoad = async ({ parent, params }) => {
-	const { fullMeta } = await parent();
-	const docId = params.docId as TDocKeys;
-	const docType = findEdTypeByDocId(docId) as TDocTypes;
-	const docMeta = fullMeta[docType]?.[docId];
-	return { docId, docType, docMeta };
+	const { allDocs } = await parent();
+	const resolvedDoc = resolveDoc(allDocs, params.docId as TDocKeys);
+	return { docId: resolvedDoc?.docId, docType: resolvedDoc?.docType, docItem: resolvedDoc?.item };
 };

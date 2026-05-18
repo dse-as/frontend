@@ -1,6 +1,6 @@
 import { activeRegisterTab, selectedTextNode } from '$lib/globals/state/ui.svelte';
 import { openRegisters } from '$lib/globals/state/ui.svelte';
-import type { TRegKeys } from '$lib/types/register/TRegister';
+import type { TRegKeysFlat } from '$lib/types/register/TRegister';
 import { findRegTypeByRegKey } from '../ease_of_use/findRegTypeByRegKey';
 
 // -------------------------------------------------
@@ -20,7 +20,7 @@ function scroll(elContainer: HTMLElement | null, elItem: HTMLElement | null) {
 }
 
 // -------------------------------------------------
-// Handle Text
+// Handle Clicks and Sidebar
 // -------------------------------------------------
 
 // Reset .active Nodes
@@ -34,7 +34,7 @@ function resetAllActiveNodesInText() {
 }
 
 // Referencing Strings (tei-rs)
-function selectAllRsNodesInText(key: TRegKeys) {
+function selectAllRsNodesInText(key: TRegKeysFlat) {
 	resetAllActiveNodesInText(); // Remove old highlights
 	const nodes = document.querySelectorAll(`tei-text tei-rs[key=${key}]`);
 	nodes.forEach((el) => {
@@ -55,17 +55,8 @@ function activateNoteInText(noteid: string) {
 	});
 }
 
-// Scroll Text
-function scrollText(elItem: HTMLElement) {
-	const elContainer = document.querySelector('[data-textflow=fluid]');
-	scroll(elContainer as HTMLElement, elItem);
-}
-
-// -------------------------------------------------
-// Handle Text
-// -------------------------------------------------
-
-function openRegisterSidebar(key: TRegKeys) {
+// Open Sidebar
+function openRegisterSidebar(key: TRegKeysFlat) {
 	activeRegisterTab.value = 'register';
 	const regType = findRegTypeByRegKey(key);
 	if (regType && !openRegisters.list.includes(regType)) {
@@ -76,6 +67,11 @@ function openNoteSidebar() {
 	activeRegisterTab.value = 'notes';
 }
 
+// Scroll Text and Sidebar
+function scrollText(elItem: HTMLElement) {
+	const elContainer = document.querySelector('[data-textflow=fluid]');
+	scroll(elContainer as HTMLElement, elItem);
+}
 function scrollRegister(elItem: HTMLElement) {
 	const elContainer = document.querySelector('[data-dom=containerRegister]');
 	scroll(elContainer as HTMLElement, elItem);
@@ -85,12 +81,13 @@ function scrollNotes(elItem: HTMLElement) {
 	scroll(elContainer as HTMLElement, elItem);
 }
 
+// Exports
 export function clearAllHighlights() {
 	selectedTextNode.id = '';
 	resetAllActiveNodesInText();
 }
 
-export function handleRegisterClick(key: TRegKeys) {
+export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 	if (!key) return;
 	selectedTextNode.id = key;
 	selectAllRsNodesInText(key);
@@ -98,16 +95,7 @@ export function handleRegisterClick(key: TRegKeys) {
 	scrollText(elSpan as HTMLElement);
 }
 
-export function handleRsClick(key: TRegKeys) {
-	if (!key) return;
-	selectedTextNode.id = key;
-	selectAllRsNodesInText(key);
-	openRegisterSidebar(key);
-	const elSpan = document.querySelector(`[data-dom=containerRegister] [data-regkey=${key}]`);
-	scrollRegister(elSpan as HTMLElement);
-}
-
-export function handleAnnotationClick(noteId: string) {
+export function handleAnnotationClick(noteId: string | undefined | null) {
 	if (!noteId) return;
 	selectedTextNode.id = noteId;
 	activateNoteInText(noteId);
@@ -117,7 +105,15 @@ export function handleAnnotationClick(noteId: string) {
 	scrollText(elSpan as HTMLElement);
 }
 
-export function handleFootnoteClick(noteId: string) {
+export function handleRefStringClick(key: TRegKeysFlat | undefined | null) {
+	if (!key) return;
+	selectedTextNode.id = key;
+	selectAllRsNodesInText(key);
+	openRegisterSidebar(key);
+	const elSpan = document.querySelector(`[data-dom=containerRegister] [data-regkey=${key}]`);
+	scrollRegister(elSpan as HTMLElement);
+}
+export function handleFootnoteClick(noteId: string | undefined | null) {
 	if (!noteId) return;
 	selectedTextNode.id = noteId;
 	openNoteSidebar();

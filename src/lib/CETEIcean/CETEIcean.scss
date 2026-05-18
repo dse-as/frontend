@@ -125,7 +125,7 @@ tei-p {
 
 /* -------------------------------- */
 /* Linebreaks and Hyphens */
-tei-p tei-lb:after {
+tei-lb:after {
 	content: '\a';
 	white-space: pre;
 }
@@ -447,9 +447,6 @@ tei-gap[reason]::before {
 
 // TODO
 [data-fassung='DF'] {
-	tei-choice {
-	}
-
 	tei-choice > tei-sic,
 	tei-choice > tei-orig,
 	tei-choice > tei-abbr {

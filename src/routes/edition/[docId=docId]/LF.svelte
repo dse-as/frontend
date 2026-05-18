@@ -7,7 +7,7 @@
 	import { Tabs } from '@skeletonlabs/skeleton-svelte';
 	type TActiveRegisterTab = 'notes' | 'register';
 
-	let { docId, docMeta, ceteiData } = $props();
+	let { docId, docItem, ceteiData } = $props();
 </script>
 
 <div
@@ -27,7 +27,7 @@
 			<Tabs.Indicator />
 		</Tabs.List>
 		<Tabs.Content value="register" class="h-full overflow-y-auto">
-			<Register {docId} {docMeta} />
+			<Register {docId} {docItem} />
 		</Tabs.Content>
 
 		<Tabs.Content value="notes" class="h-full overflow-hidden">

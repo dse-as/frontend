@@ -14,7 +14,9 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF[] = $derived([page.url.searchParams?.get('mode') as TDFLF] || ['LF']);
+	let dflf: TDFLF[] = $derived.by(() =>
+		page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+	);
 	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
 
 	onMount(() => {
@@ -33,13 +35,13 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences fullMeta={data.fullMeta} docId={data.docId} currentSeq={data.currentSeq} />
+	<Sequences allDocs={data.allDocs} docId={data.docId} currentSeq={data.currentSeq} />
 
 	<!-- Metadata -->
 	<DocHeader
 		docId={data.docId}
 		docType={data.docType}
-		docMeta={data.docMeta}
+		docItem={data.docItem}
 		ceteiData={data.ceteiData}
 		{currentPage}
 	/>
@@ -48,7 +50,7 @@
 	<ToggleGroup
 		value={dflf}
 		onValueChange={(details) => {
-			dflf = details.value;
+			dflf = details.value as TDFLF[];
 		}}
 	>
 		<ToggleGroup.Item value="LF" class="h-10 w-60 rounded-l-full border border-surface-950-50">
@@ -61,15 +63,15 @@
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf[0] === 'DF'}
-		<Gallery fullMeta={data.fullMeta} docId={data.docId} docMeta={data.docMeta} {currentPage} />
+		<Gallery allDocs={data.allDocs} docItem={data.docItem} {currentPage} />
 	{/if}
 
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf[0] === 'LF'}
-			<LF docId={data.docId} docMeta={data.docMeta} ceteiData={data.ceteiData} />
+			<LF docId={data.docId} docItem={data.docItem} ceteiData={data.ceteiData} />
 		{:else if dflf[0] === 'DF'}
-			<DF docMeta={data.docMeta} ceteiData={data.ceteiData} {currentPage} />
+			<DF docItem={data.docItem} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
 </div>

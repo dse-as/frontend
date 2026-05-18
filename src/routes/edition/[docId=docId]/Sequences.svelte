@@ -1,15 +1,17 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
-	import { type TSeqType, type TSeqId } from '$lib/types/TDoc_sequences';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
-	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
-	import { resolve } from '$app/paths';
+	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import { type TDocKeys } from '$lib/types/documents/TDocuments';
+	import { tick } from 'svelte';
+	import type { TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
+	import { SvelteMap } from 'svelte/reactivity';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -28,21 +30,10 @@
 	>;
 
 	let {
-		fullMeta,
+		allDocs,
 		docId,
-		currentSeq = { type: 'travels' as TSeqType, id: 'travel_0015' }
+		currentSeq = { type: 'travels' as TSeqTypes, id: 'travel_0015' }
 	} = $props();
-
-	// Types
-	type TItem = {
-		docId: string;
-		fac: string;
-		details: {
-			type: TSeqType;
-			title: string;
-			datestring: string;
-		};
-	};
 
 	// Sequences
 	let seqMatching = $derived(
@@ -56,10 +47,10 @@
 		findMatchingSequences(
 			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
 			docId,
-			[currentSeq.id]
+			[currentSeq.key]
 		)
 	);
-	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.id]);
+	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.key]);
 	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
 	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
 	let hasOtherSequences = $derived(Object.keys(seqOther).length ? true : false);
@@ -67,9 +58,6 @@
 	// UI-State
 	let isSelectedValidSeq = $derived(currentSeq.type ? true : false);
 	let isOpenSeqPanel = $state(false);
-	let hasLeftTriggerAfterOpening = $state(false);
-	let isHoveredSeqNavPanel = $state(false);
-	let isHoveredSeqLargePanel = $state(false);
 	let isHoveredAlltypes = $state(false);
 	let timeoutIdCloseSeqPanel: ReturnType<typeof setTimeout> | undefined = $state();
 	let timeoutIdResetActiveType: ReturnType<typeof setTimeout> | undefined = $state();
@@ -90,8 +78,7 @@
 	let elSeqLargePanel: HTMLElement | undefined = $state(undefined);
 
 	// UI-Choices
-	let keepPanelOpen = $state(false);
-	let activeType: TSeqType | null = $state(null);
+	let activeType: TSeqTypes | null = $state(null);
 
 	// Functions
 	function handleEscape(ev: KeyboardEvent) {
@@ -103,17 +90,14 @@
 
 	function openSeqPanel() {
 		isOpenSeqPanel = true;
-		setTimeout(() => {
-			elSeqLargePanel?.focus();
-		}, 100);
+		tick();
+		elSeqLargePanel?.focus();
 	}
 
 	function closeSeqPanel(delay = 0) {
 		timeoutIdCloseSeqPanel = setTimeout(() => {
 			resetActiveType(0);
 			isOpenSeqPanel = false;
-			keepPanelOpen = false;
-			hasLeftTriggerAfterOpening = false; // reset
 		}, delay);
 	}
 
@@ -126,7 +110,8 @@
 	}
 
 	function centerCurrentItemInGallery(el: HTMLElement) {
-		docId; // force rerun on change of docId
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		let _foreRerun = docId; // force rerun on change of docId
 
 		const container = el.parentElement;
 		if (!container) return;
@@ -143,7 +128,8 @@
 	}
 
 	function cycleBlocks(el: HTMLElement) {
-		activeType; // force rerun on change of activeType (since number of blocks depends on type)
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		let _foreRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
 
 		let currentIndex = 0;
 		let blocks: HTMLElement[] = Array.from(el.querySelectorAll('[data-type=selectable-block]'));
@@ -168,7 +154,7 @@
 			}
 		}
 		// Cycle through blocks using keyboard
-		const handlers = new Map<HTMLElement, (ev: KeyboardEvent) => void>();
+		const handlers = new SvelteMap<HTMLElement, (ev: KeyboardEvent) => void>();
 		blocks.forEach((block) => {
 			const handler = (ev: KeyboardEvent) => handleKeyDown(ev, block);
 			handlers.set(block, handler);
@@ -188,42 +174,41 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId: string, seqId: string, isCurrentSeqList: boolean)}
-	{@const itemType = findEdTypeByDocId(itemId)}
-	{@const itemMeta = fullMeta[itemType][itemId]}
+{#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
-		href={`${itemId}?${updateSearchParams(page.url.searchParams, { seq: seqId })}`}
+		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
 			'w-70 rounded-xl p-1',
-			docId !== itemId && 'hover:bg-surface-300-700',
+			docId !== resId && 'hover:bg-surface-300-700',
 			!isCurrentSeqList && ' hover:bg-surface-300-700',
-			isCurrentSeqList && docId === itemId && 'pointer-events-none'
+			isCurrentSeqList && docId === resId && 'pointer-events-none'
 		]}
 		onclick={() => {
-			if (!keepPanelOpen) closeSeqPanel(0);
+			closeSeqPanel(0);
 			invalidateAll();
 		}}
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="flex h-full w-full items-center justify-center">
 				<IIIF_Thumb
-					url={itemMeta?.manuscript?.iiif_urls[0]}
+					url={resDoc?.manuscript?.iiif_urls[0]}
 					maxWidth="80"
 					maxHeight="80"
 					classes="rounded-xl"
 				/>
 			</div>
 			<div class="flex flex-col">
-				<span class="italic">{itemMeta?.metadata?.title_full}</span>
-				<span class="">{itemMeta?.metadata?.pubDate}</span>
+				<span class="italic">{resDoc?.metadata?.title_full}</span>
+				<span class="">{resDoc?.metadata?.pubDate}</span>
 			</div>
 		</div>
 	</a>
 {/snippet}
 
-{#snippet sequenceList(seqType: TSeqType, seqId: TSeqId, isCurrentSeqList: boolean)}
-	{@const itemsBeforeIds = seqMatching[seqType]?.[seqId]?.docsBefore || []}
-	{@const itemsAfterIds = seqMatching[seqType]?.[seqId]?.docsAfter || []}
+{#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
+	{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
 	<div class="flex min-h-[140px] grow overflow-x-auto pb-6">
 		<!-- Documents before -->
 		<div
@@ -232,8 +217,8 @@
 				itemsBeforeIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
 			]}
 		>
-			{#each itemsBeforeIds as itemId}
-				{@render seqItem(itemId, seqId, isCurrentSeqList)}
+			{#each itemsBeforeIds as itemId (itemId)}
+				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
 		<!-- Current Document -->
@@ -241,7 +226,7 @@
 			class={['mx-2 flex grow-0 justify-center rounded-xl bg-transparent']}
 			{@attach centerCurrentItemInGallery}
 		>
-			{@render seqItem(docId, seqId, isCurrentSeqList)}
+			{@render seqItem(docId, seqKey, isCurrentSeqList)}
 		</div>
 		<!-- Documents after -->
 		<div
@@ -250,8 +235,8 @@
 				itemsAfterIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
 			]}
 		>
-			{#each itemsAfterIds as itemId}
-				{@render seqItem(itemId, seqId, isCurrentSeqList)}
+			{#each itemsAfterIds as itemId (itemId)}
+				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
 	</div>
@@ -264,11 +249,8 @@
 	onclick={() => {
 		closeSeqPanel(0);
 	}}
-	onmouseover={() => {
-		if (!keepPanelOpen) closeSeqPanel(500);
-	}}
 	onfocus={() => {
-		if (!keepPanelOpen) closeSeqPanel(500);
+		closeSeqPanel(0);
 	}}
 	aria-label="Panel schliessen"
 	class="fixed top-0 z-100 h-full w-full bg-surface-50-950/80"
@@ -282,33 +264,23 @@
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
-				activeType = Object.keys(seqMatching)[0] as TSeqType;
+				activeType = Object.keys(seqMatching)[0] as TSeqTypes;
 			}}>Sequenz wählen...</button
 		>
 	</div>
 {:else}
-	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div
-		bind:this={elSeqMiniPanel}
-		class="relative z-90003 mb-25"
-		onmouseenter={() => {
-			isHoveredSeqNavPanel = true;
-		}}
-		onmouseleave={() => {
-			isHoveredSeqNavPanel = false;
-		}}
-	>
+	<div bind:this={elSeqMiniPanel} class="relative z-90003 mb-25">
 		<div class="flex w-full justify-center gap-6">
 			<div class="mb-3 flex w-max flex-col items-center">
 				<h6 class="h6">
 					Sequenz: <a
 						class="hover:underline"
 						href={resolve(
-							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.id]?.url_slug : currentSeq.type}`
+							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{seqAllTyped[currentSeq.type]?.[currentSeq.id]?.preamble}
+						>{seqAllTyped[currentSeq.type]?.[currentSeq.key]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -320,7 +292,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
+				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !prevId && 'text-surface-500']}>
 					<i class="fa-solid fa-chevron-left"></i>
@@ -329,34 +301,17 @@
 			</a>
 			<button
 				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-300-700"
-				aria-label="expand box"
-				onclick={() => {
+				aria-label="Sequenzansicht öffnen"
+				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();
-					else if (!hasLeftTriggerAfterOpening) {
-						keepPanelOpen = true;
-						hasLeftTriggerAfterOpening = true;
-					} else closeSeqPanel(0);
-				}}
-				onmouseenter={() => {
-					openSeqPanel();
-				}}
-				onmouseleave={() => {
-					if (isOpenSeqPanel) {
-						hasLeftTriggerAfterOpening = true;
-					}
+					else closeSeqPanel(0);
+					const target = ev.target as HTMLElement | null;
+					const elButton = target?.closest('button') as HTMLElement | null;
+					elButton?.focus();
 				}}
 			>
 				<div style="position: relative; display: inline-block;">
-					<i
-						class={[
-							'fa-solid',
-							!isOpenSeqPanel
-								? 'fa-chevron-down'
-								: !hasLeftTriggerAfterOpening
-									? 'fa-lock'
-									: 'fa-chevron-up'
-						]}
-					></i>
+					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
 					{#if hasOtherSequences && !isOpenSeqPanel}
 						<i
 							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800-200 pt-2 text-surface-50-950"
@@ -370,7 +325,7 @@
 					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
-				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.id, page: null })}`}
+				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !nextId && 'text-surface-500']}>
 					<p>{dictSeqTyped[currentSeq.type]?.label_next}</p>
@@ -393,36 +348,13 @@
 		]}
 		style={`top:${elSeqMiniPanelSize?.top}px;`}
 		onmouseenter={() => {
-			isHoveredSeqLargePanel = true;
 			clearTimeout(timeoutIdCloseSeqPanel);
 		}}
 	>
-		<!-- Slider to Keep panel open -->
-		<Switch
-			class="absolute top-6 right-6 z-90009"
-			checked={keepPanelOpen}
-			onCheckedChange={(details) => (keepPanelOpen = details.checked)}
-		>
-			<Switch.Control>
-				<Switch.Thumb>
-					<Switch.Context>
-						{#snippet children(switch_)}
-							{#if switch_().checked}
-								<i class="fa-solid fa-lock"></i>
-							{:else}
-								<i class="fa-solid fa-lock-open"></i>
-							{/if}
-						{/snippet}
-					</Switch.Context>
-				</Switch.Thumb>
-			</Switch.Control>
-			<Switch.HiddenInput />
-		</Switch>
-
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
 			<div class="flex w-full gap-2 overflow-x-auto px-6 py-1">
-				{@render sequenceList(currentSeq.type, currentSeq.id, true)}
+				{@render sequenceList(currentSeq.type, currentSeq.key, true)}
 			</div>
 		{/if}
 
@@ -438,15 +370,14 @@
 					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 			>
-				{#each Object.keys(seqOther) as seqType}
+				{#each Object.keys(seqOther) as seqType (seqType)}
 					<button
 						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
-							activeType = seqType as TSeqType;
+							activeType = seqType as TSeqTypes;
 						}}
 						onclick={() => {
-							activeType = seqType as TSeqType;
-							keepPanelOpen = true;
+							activeType = seqType as TSeqTypes;
 						}}
 					>
 						{dictSeqTyped[seqType].label_plural}
@@ -505,7 +436,7 @@
 					]}
 				>
 					<!-- Groups with other Sequences-->
-					{#each Object.keys(seqOther[activeType!] ?? {}) as seqId}
+					{#each Object.keys(seqOther[activeType!] ?? {}) as seqKey (seqKey)}
 						<div
 							class="group flex w-full flex-col gap-5 py-5"
 							tabindex="0"
@@ -514,23 +445,21 @@
 						>
 							<!-- Title with shortcuts -->
 							<div class={['mx-1 flex min-h-18 w-full flex-col items-start px-4 py-1']}>
-								<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqId].preamble}</h6>
+								<h6 class="mr-5 h6">{seqAllTyped[activeType!][seqKey].preamble}</h6>
 								<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 									<div class="flex gap-4">
 										<a
 											class="h-full underline hover:text-primary-500"
-											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqId, page: null })}`}
+											href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 											onclick={() => {
-												if (!keepPanelOpen) {
-													closeSeqPanel(0);
-												}
+												closeSeqPanel(0);
 											}}
 											>Sequenz auswählen
 										</a>
-										{#if seqAllTyped[activeType!][seqId].url_slug}
+										{#if seqAllTyped[activeType!][seqKey].url_slug}
 											<a
 												class="h-full underline hover:text-primary-500"
-												href={`${dictSeqTyped[activeType!]?.url_overview}/${seqAllTyped[activeType!][seqId].url_slug}`}
+												href={`${dictSeqTyped[activeType!]?.url_overview}/${seqAllTyped[activeType!][seqKey].url_slug}`}
 												target="_blank"
 												rel="noopener noreferrer"
 												>{dictSeqTyped[activeType!]?.label_overview}
@@ -541,7 +470,7 @@
 							</div>
 							<!-- sequenceList with thumbnails -->
 							<div class="flex w-full gap-2 overflow-x-auto py-1">
-								{@render sequenceList(activeType, seqId, seqId === currentSeq.id)}
+								{@render sequenceList(activeType, seqKey as TSeqKeys, seqKey === currentSeq.key)}
 							</div>
 						</div>
 					{/each}

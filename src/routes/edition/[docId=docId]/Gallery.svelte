@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
-	import { findEdTypeByDocId } from '$lib/functions/ease_of_use/findEdTypeByDocId';
+	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;
@@ -15,17 +15,16 @@
 		page: number;
 	};
 
-	let { fullMeta, docId, docMeta, currentPage } = $props();
+	let { allDocs, docItem, currentPage } = $props();
 
 	// Textzeugen
-	const tzgIds = $derived(docMeta?.metadata.textzeugen_nonedited || []);
+	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
-
-	function collectGalleryItems(docId: string) {
+	function collectGalleryItems() {
 		const items: TItem[] =
-			docMeta?.manuscript.iiif_urls.map((el: string, idx: number) => {
+			docItem?.manuscript.iiif_urls.map((el: string, idx: number) => {
 				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
 			}) || [];
 		return items;
@@ -69,7 +68,7 @@
 			>
 		{/if}
 		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10">
-			{#each collectGalleryItems(docId) as item, index (item.page)}
+			{#each collectGalleryItems() as item, index (item.page)}
 				<button
 					bind:this={buttonRefs[index]}
 					class={[
@@ -83,13 +82,13 @@
 				</button>
 			{/each}
 			{#if showTextzeugen}
-				{#each tzgIds as tzgId}
-					{@const tzgType = findEdTypeByDocId(tzgId)}
-					{@const items = collectGalleryItems(tzgId)}
+				{#each tzgIds as tzgId (tzgId)}
+					{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
+					{@const items = collectGalleryItems()}
 					<div
 						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
 					>
-						<h6 class="w-50 font-serif font-bold">{fullMeta[tzgType][tzgId]?.metadata.label}</h6>
+						<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
 						{#each items as item (item.page)}
 							<a
 								class="ml-2 rounded-xl p-1"

@@ -23,7 +23,7 @@ export type MatchResult = {
 export function findMatchingSequences(
 	docSequences: DocSequences,
 	docId: string,
-	filterSeqIds: string[]
+	filterSeqKeys: string[]
 ): MatchResult {
 	const result: MatchResult = {};
 
@@ -32,7 +32,7 @@ export function findMatchingSequences(
 		for (const sequenceId of Object.keys(group)) {
 			const sequence = group[sequenceId];
 			const idx = sequence.docs.indexOf(docId);
-			const isFiltered = filterSeqIds.some((id) => id === sequenceId);
+			const isFiltered = filterSeqKeys.some((id) => id === sequenceId);
 			if (idx !== -1 && !isFiltered) {
 				if (!result[groupId]) result[groupId] = {};
 				result[groupId][sequenceId] = {

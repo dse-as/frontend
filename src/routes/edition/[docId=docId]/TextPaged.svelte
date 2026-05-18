@@ -5,7 +5,7 @@
 	const c = new CETEI();
 	let { ceteiData } = $props();
 
-	const setupCustomElements = (el: HTMLElement) => {
+	const setupCustomElements = () => {
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};

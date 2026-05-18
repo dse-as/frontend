@@ -1,9 +1,15 @@
 <script lang="ts">
-	import OverviewContent from '$lib/components/OverviewContent.svelte';
-	import OverviewList from '$lib/components/OverviewList.svelte';
+	import DocSummarypage from './DocSummarypage.svelte';
+	import List from '$lib/components/List.svelte';
+	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
+
+	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
+
+	const docType = $derived(data.docType || null);
+	const docSlug = $derived(data.docSlug || null);
 
 	function preventVerticalScroll() {
 		// Get the current horizontal position
@@ -33,37 +39,46 @@
 		}
 	});
 
-	//! FIX: This is a workaround to pass the same *absolute* value to OverviewList and OverviewContent
+	//! FIX: This is a workaround to pass the same *absolute* value to List and DocSummarypage
 	// Ideally the height would be relative (e.g. h-full).
 	// However, this will make overflow its flex content (i.e. the list and linked items).
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
 </script>
 
-{#if data.edView === 'edView2'}
-	<!-- Overview with Multi-Column List -->
-	<div class="absolute top-45 left-0 w-full px-10">
-		<OverviewList
-			isMultiColumn={true}
-			ovMeta={data.fullMeta[data.edType]}
-			ovType={data.edSlug}
-			ovItem={null}
-		/>
-	</div>
-{:else}
-	<!-- Detail View with Single-Column List and Content -->
-	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
-		<OverviewList
-			isMultiColumn={false}
-			ovMeta={data.fullMeta[data.edType]}
-			ovType={data.edType}
-			ovItem={data.edSlug}
-			{cheatPageHeightInRegSingleColView}
-		/>
-		<OverviewContent
-			ovType={data.edType}
-			ovAttrs={data.fullMeta[data.edType]?.[data.edSlug]}
-			fullMeta={data.fullMeta}
-			{cheatPageHeightInRegSingleColView}
-		/>
-	</div>
+{#if docType && docSlug}
+	{#if data.edView === 'edView2'}
+		<!-- Overview with Multi-Column List -->
+		<div class="absolute top-45 left-0 w-full px-10">
+			<List
+				ovVariant="documents"
+				isMultiColumn={true}
+				ovMeta={data.allDocs[docType]}
+				ovDict={dictDoc[docType]}
+				ovType={docSlug as TDocTypes}
+				ovItem={null}
+			/>
+		</div>
+	{:else}
+		<!-- Detail View with Single-Column List and Content -->
+		<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
+			<List
+				ovVariant="documents"
+				isMultiColumn={false}
+				ovMeta={data.allDocs[docType]}
+				ovDict={dictDoc[docType]}
+				ovType={docType}
+				ovItem={docSlug as TDocKeys}
+				{cheatPageHeightInRegSingleColView}
+			/>
+			{#if data.docItem && data.docId}
+				<DocSummarypage
+					allDocs={data.allDocs}
+					{docType}
+					docId={data.docId}
+					docItem={data.docItem}
+					{cheatPageHeightInRegSingleColView}
+				/>
+			{/if}
+		</div>
+	{/if}
 {/if}

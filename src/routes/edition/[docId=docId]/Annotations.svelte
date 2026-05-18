@@ -13,18 +13,27 @@
 	data-dom="containerAnnotations"
 	class="mx-2 flex h-full flex-col overflow-y-auto pt-5 pb-20 hyphens-auto"
 >
-	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-	<!-- svelte-ignore a11y_click_events_have_key_events -->
-	<ol
+	<div
+		role="button"
+		tabindex="0"
 		class="notes"
 		onclick={(ev: Event) => {
-			const key = ev.target.closest('li')?.getAttribute('data-noteid');
+			const target = ev.target as HTMLElement | null;
+			const key = target?.closest('li')?.getAttribute('data-noteid');
 			handleAnnotationClick(key);
+		}}
+		onkeydown={(ev: KeyboardEvent) => {
+			if (ev.key === 'Enter' || ev.key === ' ') {
+				ev.preventDefault();
+				const target = ev.currentTarget as HTMLElement | null;
+				const key = target?.querySelector('li[data-noteid]')?.getAttribute('data-noteid');
+				handleAnnotationClick(key);
+			}
 		}}
 	>
 		<!-- list items are styled inside <style> -->
 		{@html notesHtml}
-	</ol>
+	</div>
 </div>
 
 <style lang="postcss">

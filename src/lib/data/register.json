@@ -15,7 +15,7 @@
 				"gndNumber": "119424401",
 				"dateBirth": "1911",
 				"dateDeath": "1977",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -39,7 +39,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -63,7 +63,7 @@
 				"gndNumber": "",
 				"dateBirth": "1894",
 				"dateDeath": "1947",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -135,7 +135,7 @@
 				"gndNumber": "1359619887",
 				"dateBirth": "1910",
 				"dateDeath": "1994",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -159,7 +159,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -171,7 +171,7 @@
 				"gndNumber": "11950474X",
 				"dateBirth": "1911",
 				"dateDeath": "1956",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -195,7 +195,7 @@
 				"gndNumber": "1045261742",
 				"dateBirth": "1882",
 				"dateDeath": "1958",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -207,7 +207,7 @@
 				"gndNumber": "124968420X",
 				"dateBirth": "1912",
 				"dateDeath": "1975",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -219,7 +219,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -243,7 +243,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -255,7 +255,7 @@
 				"gndNumber": "118534386",
 				"dateBirth": "1901",
 				"dateDeath": "1996",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -315,7 +315,7 @@
 				"gndNumber": "1156299225",
 				"dateBirth": "1858",
 				"dateDeath": "1942",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -327,7 +327,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -351,7 +351,7 @@
 				"gndNumber": "1179709764",
 				"dateBirth": "1893",
 				"dateDeath": "1964",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -363,7 +363,7 @@
 				"gndNumber": "118709216",
 				"dateBirth": "1903",
 				"dateDeath": "1945",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -375,7 +375,7 @@
 				"gndNumber": "118547119",
 				"dateBirth": "1869",
 				"dateDeath": "1946",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -411,7 +411,7 @@
 				"gndNumber": "",
 				"dateBirth": "1897",
 				"dateDeath": "1984",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -423,7 +423,7 @@
 				"gndNumber": "118556827",
 				"dateBirth": "1896",
 				"dateDeath": "1966",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -435,7 +435,7 @@
 				"gndNumber": "116210796",
 				"dateBirth": "1883",
 				"dateDeath": "1969",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -447,7 +447,7 @@
 				"gndNumber": "",
 				"dateBirth": "1902",
 				"dateDeath": "1982",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -459,7 +459,7 @@
 				"gndNumber": "116560053",
 				"dateBirth": "1886",
 				"dateDeath": "1976",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -471,7 +471,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -483,7 +483,7 @@
 				"gndNumber": "1328485145",
 				"dateBirth": "1888",
 				"dateDeath": "1969",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -507,7 +507,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -519,7 +519,7 @@
 				"gndNumber": "115514643",
 				"dateBirth": "1937",
 				"dateDeath": "2012",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -531,7 +531,7 @@
 				"gndNumber": "104368297X",
 				"dateBirth": "1925",
 				"dateDeath": "2012",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -543,7 +543,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -603,7 +603,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -639,7 +639,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "1977",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -663,7 +663,7 @@
 				"gndNumber": "118733427",
 				"dateBirth": "1885",
 				"dateDeath": "1950",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -675,7 +675,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -687,7 +687,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -699,7 +699,7 @@
 				"gndNumber": "121003019",
 				"dateBirth": "1950",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -711,7 +711,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -723,7 +723,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -735,7 +735,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "1908",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -747,7 +747,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -759,7 +759,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -771,7 +771,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -795,7 +795,7 @@
 				"gndNumber": "118605062",
 				"dateBirth": "1901",
 				"dateDeath": "1996",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -807,7 +807,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -819,7 +819,7 @@
 				"gndNumber": "1019536020",
 				"dateBirth": "1881",
 				"dateDeath": "1958",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -855,7 +855,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -879,7 +879,7 @@
 				"gndNumber": "118997718",
 				"dateBirth": "1908",
 				"dateDeath": "1942",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -939,7 +939,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -975,7 +975,7 @@
 				"gndNumber": "119206706",
 				"dateBirth": "1910",
 				"dateDeath": "1937",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -987,7 +987,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -999,7 +999,7 @@
 				"gndNumber": "118622374",
 				"dateBirth": "1908",
 				"dateDeath": "2000",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -1011,7 +1011,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -1023,7 +1023,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -1587,7 +1587,7 @@
 				"gndNumber": "118887955",
 				"dateBirth": "1882",
 				"dateDeath": "1934",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -1731,7 +1731,7 @@
 				"gndNumber": "118959948",
 				"dateBirth": "1900",
 				"dateDeath": "1974",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -1939,7 +1939,7 @@
 				"gndNumber": "1033479985",
 				"dateBirth": "1898",
 				"dateDeath": "1988",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2107,7 +2107,7 @@
 				"gndNumber": "119002019",
 				"dateBirth": "1880",
 				"dateDeath": "1969",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2143,7 +2143,7 @@
 				"gndNumber": "136520863",
 				"dateBirth": "1889",
 				"dateDeath": "1958",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2155,7 +2155,7 @@
 				"gndNumber": "118529579",
 				"dateBirth": "1879",
 				"dateDeath": "1955",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2167,7 +2167,7 @@
 				"gndNumber": "118816624",
 				"dateBirth": "1885",
 				"dateDeath": "1955",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2179,7 +2179,7 @@
 				"gndNumber": "117726516",
 				"dateBirth": "1880",
 				"dateDeath": "1960",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2191,7 +2191,7 @@
 				"gndNumber": "1100761039",
 				"dateBirth": "1888",
 				"dateDeath": "1971",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2203,7 +2203,7 @@
 				"gndNumber": "118770314",
 				"dateBirth": "1903",
 				"dateDeath": "1957",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2215,7 +2215,7 @@
 				"gndNumber": "120178451",
 				"dateBirth": "1892",
 				"dateDeath": "1977",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2227,7 +2227,7 @@
 				"gndNumber": "118882775",
 				"dateBirth": "1866",
 				"dateDeath": "1959",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2239,7 +2239,7 @@
 				"gndNumber": "118550225",
 				"dateBirth": "1879",
 				"dateDeath": "1948",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -2251,7 +2251,7 @@
 				"gndNumber": "118591568",
 				"dateBirth": "1892",
 				"dateDeath": "1968",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -3175,7 +3175,7 @@
 				"gndNumber": "121979652",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -3187,7 +3187,7 @@
 				"gndNumber": "118527576",
 				"dateBirth": "1155",
 				"dateDeath": "1227",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -3583,7 +3583,7 @@
 				"gndNumber": "1147222967",
 				"dateBirth": "",
 				"dateDeath": "v. 722",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -3607,7 +3607,7 @@
 				"gndNumber": "1017959986",
 				"dateBirth": "1852",
 				"dateDeath": "1942",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -3751,7 +3751,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -5179,7 +5179,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -5251,7 +5251,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -6763,7 +6763,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267"
 			},
@@ -6775,7 +6775,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267"
 			},
@@ -6787,7 +6787,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267"
 			},
@@ -6799,7 +6799,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267"
 			},
@@ -6811,7 +6811,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267"
 			},
@@ -6823,7 +6823,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "smallform_0267; auch Fotografien"
 			},
@@ -7676,7 +7676,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "kein GND-Eintrag; smallform_0303"
 			},
@@ -8108,7 +8108,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "kein GND-Eintrag; smallform_0432"
 			},
@@ -8132,7 +8132,7 @@
 				"gndNumber": "118778978",
 				"dateBirth": "1883",
 				"dateDeath": "1945",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8144,7 +8144,7 @@
 				"gndNumber": "118846698",
 				"dateBirth": "1894",
 				"dateDeath": "1961",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8228,7 +8228,7 @@
 				"gndNumber": "119547309",
 				"dateBirth": "1879",
 				"dateDeath": "1920",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8240,7 +8240,7 @@
 				"gndNumber": "118807498",
 				"dateBirth": "1892",
 				"dateDeath": "1944",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8252,7 +8252,7 @@
 				"gndNumber": "118869418",
 				"dateBirth": "1914",
 				"dateDeath": "1981",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8300,7 +8300,7 @@
 				"gndNumber": "1382957882",
 				"dateBirth": "1907",
 				"dateDeath": "1934",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8312,7 +8312,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "AS nennt ihn ihren 'Araberfreund', der ihr aus Batavia (Jakarta) 1934 täglich Briefe schreibe, vgl. letter_0275 - ev. der 'Kurdenprinz', der nach der ersten Persienreise um ihre Hand anghalten hat?"
 			},
@@ -8624,7 +8624,7 @@
 				"gndNumber": "11667198X",
 				"dateBirth": "1902",
 				"dateDeath": "1944",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8636,7 +8636,7 @@
 				"gndNumber": "1357139551",
 				"dateBirth": "1896",
 				"dateDeath": "1990",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8828,7 +8828,7 @@
 				"gndNumber": "11866834X",
 				"dateBirth": "1895",
 				"dateDeath": "1970",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8936,7 +8936,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8948,7 +8948,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -8972,7 +8972,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -9008,7 +9008,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -9668,7 +9668,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -9680,7 +9680,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "organisation_0217",
 				"note": "kein GND-Eintrag"
 			},
@@ -9692,7 +9692,7 @@
 				"gndNumber": "11858846X",
 				"dateBirth": "#ERROR!",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -9704,7 +9704,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "Unklare Person in letter_431, bei Alexis nachfragen"
 			},
@@ -9716,7 +9716,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "Unklare Person in letter_431, bei Alexis nachfragen. Ev. Dienstbotin."
 			},
@@ -9728,7 +9728,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "Unklare Person in letter_431, bei Alexis nachfragen"
 			},
@@ -9740,7 +9740,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "Unklare Person in letter_431, bei Alexis nachfragen"
 			},
@@ -9752,7 +9752,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "Unklare Person in letter_433, bei Alexis nachfragen. Ev. Dienst- oder Lehperson."
 			},
@@ -9764,7 +9764,7 @@
 				"gndNumber": "1329696867",
 				"dateBirth": "1886",
 				"dateDeath": "1934",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -9824,7 +9824,7 @@
 				"gndNumber": "116922982",
 				"dateBirth": "1888",
 				"dateDeath": "1953",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -10400,7 +10400,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -10748,7 +10748,7 @@
 				"gndNumber": "1388106876",
 				"dateBirth": "1877",
 				"dateDeath": "1959",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -10772,7 +10772,7 @@
 				"gndNumber": "https://d-nb.info/1112470247",
 				"dateBirth": "#ERROR!",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": ""
 			},
@@ -11180,7 +11180,7 @@
 				"gndNumber": "",
 				"dateBirth": "",
 				"dateDeath": "",
-				"type": "",
+				"type": null,
 				"orgId": "",
 				"note": "kein GND-Eintrag; Panda an der New Yorker Weltausstellung smallform_0419"
 			},
@@ -11331,20 +11331,20 @@
 			"place_0002": {
 				"name": "Aleppo",
 				"nameVariants": ["Alep"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0003": {
 				"name": "Ankara",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "TR",
 				"note": ""
 			},
@@ -11353,7 +11353,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2661698,
 				"geoNamesLink": "https://www.geonames.org/2661698",
-				"type": "",
+				"type": null,
 				"coords": [46.15451, 8.77327],
 				"country": "",
 				"note": ""
@@ -11363,7 +11363,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2782058,
 				"geoNamesLink": "https://www.geonames.org/2782058",
-				"type": "",
+				"type": null,
 				"coords": [47.11547, 13.13467],
 				"country": "",
 				"note": ""
@@ -11381,20 +11381,20 @@
 			"place_0007": {
 				"name": "Baku",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0008": {
 				"name": "Basel (Stadt)",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "CH",
 				"note": ""
 			},
@@ -11411,10 +11411,10 @@
 			"place_0010": {
 				"name": "Berlin",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "DE",
 				"note": "",
 				"docs": ["smallform_0231"]
@@ -11432,10 +11432,10 @@
 			"place_0012": {
 				"name": "Bocken bei Horgen",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11444,7 +11444,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2260535,
 				"geoNamesLink": "https://www.geonames.org/2260535/brazzaville.html",
-				"type": "",
+				"type": null,
 				"coords": [-4.26613, 15.28318],
 				"country": "",
 				"note": ""
@@ -11452,10 +11452,10 @@
 			"place_0014": {
 				"name": "Castignola",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11472,20 +11472,20 @@
 			"place_0016": {
 				"name": "Chur",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0017": {
 				"name": "Danzig",
 				"nameVariants": ["Gdansk"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "",
 				"docs": ["smallform_0231"]
@@ -11495,7 +11495,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2938913,
 				"geoNamesLink": "https://www.geonames.org/2938913",
-				"type": "",
+				"type": null,
 				"coords": [49.87167, 8.65027],
 				"country": "",
 				"note": ""
@@ -11505,7 +11505,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2268436,
 				"geoNamesLink": "https://www.geonames.org/2268436",
-				"type": "",
+				"type": null,
 				"coords": [38.70571, -9.39773],
 				"country": "",
 				"note": ""
@@ -11513,20 +11513,20 @@
 			"place_0020": {
 				"name": "Farmanieh",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0021": {
 				"name": "Fürstenau",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11535,7 +11535,7 @@
 				"nameVariants": ["Genève", "Genf"],
 				"geoNamesID": 2660646,
 				"geoNamesLink": "https://www.geonames.org/2660646",
-				"type": "",
+				"type": null,
 				"coords": [46.20222, 6.14569],
 				"country": "",
 				"note": ""
@@ -11545,7 +11545,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3176219,
 				"geoNamesLink": "https://www.geonames.org/3176219",
-				"type": "",
+				"type": null,
 				"coords": [44.40478, 8.94439],
 				"country": "",
 				"note": ""
@@ -11553,20 +11553,20 @@
 			"place_0024": {
 				"name": "Holzhausen",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0025": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11575,7 +11575,7 @@
 				"nameVariants": ["Stambul"],
 				"geoNamesID": 745044,
 				"geoNamesLink": "https://www.geonames.org/745044",
-				"type": "",
+				"type": null,
 				"coords": [41.01384, 28.94966],
 				"country": "",
 				"note": ""
@@ -11583,10 +11583,10 @@
 			"place_0027": {
 				"name": "Jäminkipohja",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11595,7 +11595,7 @@
 				"nameVariants": [],
 				"geoNamesID": 281184,
 				"geoNamesLink": "https://www.geonames.org/281184",
-				"type": "",
+				"type": null,
 				"coords": [31.76904, 35.21633],
 				"country": "",
 				"note": ""
@@ -11605,7 +11605,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1138958,
 				"geoNamesLink": "https://www.geonames.org/1138958/kabul.html",
-				"type": "",
+				"type": null,
 				"coords": [34.52813, 69.17233],
 				"country": "",
 				"note": ""
@@ -11615,7 +11615,7 @@
 				"nameVariants": [],
 				"geoNamesID": 7286195,
 				"geoNamesLink": "https://www.geonames.org/7286195",
-				"type": "",
+				"type": null,
 				"coords": [47.3218, 8.54337],
 				"country": "",
 				"note": ""
@@ -11625,7 +11625,7 @@
 				"nameVariants": ["Leopoldville"],
 				"geoNamesID": 2314302,
 				"geoNamesLink": "https://www.geonames.org/2314302",
-				"type": "",
+				"type": null,
 				"coords": [-4.32758, 15.31357],
 				"country": "",
 				"note": ""
@@ -11635,7 +11635,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2660108,
 				"geoNamesLink": "https://www.geonames.org/2660108",
-				"type": "",
+				"type": null,
 				"coords": [47.65051, 9.17504],
 				"country": "",
 				"note": ""
@@ -11655,8 +11655,8 @@
 				"nameVariants": [],
 				"geoNamesID": 2659994,
 				"geoNamesLink": "https://www.geonames.org/2659994",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11665,7 +11665,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3003713,
 				"geoNamesLink": "https://www.geonames.org/3003713",
-				"type": "",
+				"type": null,
 				"coords": [43.137, 6.366],
 				"country": "",
 				"note": ""
@@ -11673,20 +11673,20 @@
 			"place_0036": {
 				"name": "Lenzerheide",
 				"nameVariants": ["Lenzerheide-See"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0037": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11695,7 +11695,7 @@
 				"nameVariants": [],
 				"geoNamesID": 211734,
 				"geoNamesLink": "https://www.geonames.org/211734",
-				"type": "",
+				"type": null,
 				"coords": [2.15127, 21.51672],
 				"country": "",
 				"note": ""
@@ -11705,7 +11705,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2267057,
 				"geoNamesLink": "https://www.geonames.org/2267057",
-				"type": "",
+				"type": null,
 				"coords": [38.72509, -9.1498],
 				"country": "",
 				"note": ""
@@ -11713,20 +11713,20 @@
 			"place_0040": {
 				"name": "Lloyd Triestino",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0041": {
 				"name": "Locarno",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11745,7 +11745,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4942618,
 				"geoNamesLink": "https://www.geonames.org/4942618/lowell.html",
-				"type": "",
+				"type": null,
 				"coords": [42.63342, -71.31617],
 				"country": "",
 				"note": ""
@@ -11753,20 +11753,20 @@
 			"place_0044": {
 				"name": "Luanda",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0045": {
 				"name": "Lugano",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11775,8 +11775,8 @@
 				"nameVariants": [],
 				"geoNamesID": 2659811,
 				"geoNamesLink": "https://www.geonames.org/2659811",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11785,8 +11785,8 @@
 				"nameVariants": [],
 				"geoNamesID": 3117735,
 				"geoNamesLink": "https://www.geonames.org/3117735",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11795,7 +11795,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2659784,
 				"geoNamesLink": "https://www.geonames.org/2659784/malans.html",
-				"type": "",
+				"type": null,
 				"coords": [46.98096, 9.57527],
 				"country": "",
 				"note": ""
@@ -11803,10 +11803,10 @@
 			"place_0049": {
 				"name": "Mesched",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11833,20 +11833,20 @@
 			"place_0052": {
 				"name": "Moskau",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0053": {
 				"name": "München",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11863,20 +11863,20 @@
 			"place_0055": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0056": {
 				"name": "On the Boat from Portuguese Angola to Lisbon",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11885,7 +11885,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2241717,
 				"geoNamesLink": "https://www.geonames.org/2241717",
-				"type": "",
+				"type": null,
 				"coords": [-6.07746, 12.42563],
 				"country": "",
 				"note": ""
@@ -11893,20 +11893,20 @@
 			"place_0058": {
 				"name": "Pacific Palisades",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0059": {
 				"name": "Paris",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": "",
 				"docs": ["smallform_0231"]
@@ -11924,10 +11924,10 @@
 			"place_0061": {
 				"name": "Podangen",
 				"nameVariants": ["Podągi"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein GND-Eintrag; einziger Eintrag verweist auf Ortschaft in Litauen; Podągi liegt aber in Polen"
 			},
@@ -11944,30 +11944,30 @@
 			"place_0063": {
 				"name": "Prag",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0064": {
 				"name": "Prangins",
 				"nameVariants": ["Prangins bei Nyon"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0065": {
 				"name": "Puigcerda",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -11976,7 +11976,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2659081,
 				"geoNamesLink": "https://www.geonames.org/2659081/reichenau.html",
-				"type": "",
+				"type": null,
 				"coords": [46.82704, 9.4076],
 				"country": "",
 				"note": ""
@@ -11986,7 +11986,7 @@
 				"nameVariants": [],
 				"geoNamesID": 6551111,
 				"geoNamesLink": "https://www.geonames.org/6551111/rheinsberg.html",
-				"type": "",
+				"type": null,
 				"coords": [53.1, 12.8833],
 				"country": "",
 				"note": ""
@@ -12006,7 +12006,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2680459,
 				"geoNamesLink": "https://www.geonames.org/2680459",
-				"type": "",
+				"type": null,
 				"coords": [59.30217, 18.20252],
 				"country": "",
 				"note": ""
@@ -12014,10 +12014,10 @@
 			"place_0070": {
 				"name": "Salzburg",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12026,7 +12026,7 @@
 				"nameVariants": ["Samaden"],
 				"geoNamesID": 2658846,
 				"geoNamesLink": "https://www.geonames.org/2658846",
-				"type": "",
+				"type": null,
 				"coords": [46.53399, 9.87276],
 				"country": "",
 				"note": ""
@@ -12036,7 +12036,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2976258,
 				"geoNamesLink": "https://www.geonames.org/2976258",
-				"type": "",
+				"type": null,
 				"coords": [43.11985, 5.80155],
 				"country": "",
 				"note": ""
@@ -12044,20 +12044,20 @@
 			"place_0073": {
 				"name": "Schiethalde",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0074": {
 				"name": "Schloss Kolbsheim / Elsass",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12074,10 +12074,10 @@
 			"place_0076": {
 				"name": "Sofia",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12094,20 +12094,20 @@
 			"place_0078": {
 				"name": "Staad (Kanton Sankt Gallen)",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0079": {
 				"name": "Tegel",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12124,40 +12124,40 @@
 			"place_0081": {
 				"name": "Tetouan",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0082": {
 				"name": "Thaelwil",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0083": {
 				"name": "Thysville",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0084": {
 				"name": "Treviso",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12174,20 +12174,20 @@
 			"place_0087": {
 				"name": "Zollikon b. Zürich",
 				"nameVariants": ["Zollikon"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0088": {
 				"name": "Zürich",
 				"nameVariants": ["Zürich (Stadt)"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12196,7 +12196,7 @@
 				"nameVariants": ["Zürs-Arlberg"],
 				"geoNamesID": 2760447,
 				"geoNamesLink": "https://www.geonames.org/2760447",
-				"type": "",
+				"type": null,
 				"coords": [47.16667, 10.16667],
 				"country": "",
 				"note": ""
@@ -12206,7 +12206,7 @@
 				"nameVariants": ["Kleinasien, Asia Minor"],
 				"geoNamesID": 323835,
 				"geoNamesLink": "https://www.geonames.org/323835",
-				"type": "",
+				"type": null,
 				"coords": [39, 35],
 				"country": "TR",
 				"note": ""
@@ -12214,20 +12214,20 @@
 			"place_0091": {
 				"name": "Tartu",
 				"nameVariants": ["Dorpat"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0092": {
 				"name": "Petseri",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12236,7 +12236,7 @@
 				"nameVariants": [],
 				"geoNamesID": 12217934,
 				"geoNamesLink": "https://www.geonames.org/12217934",
-				"type": "",
+				"type": null,
 				"coords": [56.85514, 25.32515],
 				"country": "",
 				"note": "Unklar, ob wir länderübergreifende Regionen Referenzieren sollen"
@@ -12244,80 +12244,80 @@
 			"place_0094": {
 				"name": "Estland",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": "Unklar, ob wir Länder Referenzieren sollen"
 			},
 			"place_0095": {
 				"name": "Upsala",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0096": {
 				"name": "Schweden",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0097": {
 				"name": "Leningrad",
 				"nameVariants": ["St. Petersburg", "Piter"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0098": {
 				"name": "Russland",
 				"nameVariants": ["Sowjetunion"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0099": {
 				"name": "Gripsholm",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0100": {
 				"name": "Helsinki",
 				"nameVariants": ["Helsingfors"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0101": {
 				"name": "Finnland",
 				"nameVariants": ["Suomi", "Finnland-Suomi"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Land",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12344,10 +12344,10 @@
 			"place_0104": {
 				"name": "Litauen",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12356,7 +12356,7 @@
 				"nameVariants": ["Middle East", "Orient"],
 				"geoNamesID": 6269133,
 				"geoNamesLink": "https://www.geonames.org/6269133",
-				"type": "",
+				"type": null,
 				"coords": [33.13906, 35.85869],
 				"country": "",
 				"note": "Der englische Begriff 'Middle East' sowie die beiden deutschen Begriffe 'Naher Osten' und 'Orient' bezeichnen jeweils nicht genau dieselben Regionen, sind aber auch in sich selbst unscharf (so wird manchmal auch Nordafrika zum Orient gezählt). Der Registereintrag versteht sich als übergreifend und umfasst diese Begriffe und ihre jeweiligen Unschärfen."
@@ -12364,30 +12364,30 @@
 			"place_0106": {
 				"name": "Lettland",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0107": {
 				"name": "Deutschland",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0108": {
 				"name": "Polen",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12396,7 +12396,7 @@
 				"nameVariants": ["Wilna"],
 				"geoNamesID": 593116,
 				"geoNamesLink": "https://www.geonames.org/593116",
-				"type": "",
+				"type": null,
 				"coords": [54.68916, 25.2798],
 				"country": "",
 				"note": ""
@@ -12404,70 +12404,70 @@
 			"place_0110": {
 				"name": "Schweiz",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0111": {
 				"name": "Mykene",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0112": {
 				"name": "Knossos",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0113": {
 				"name": "Ur",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0114": {
 				"name": "Kisch",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0115": {
 				"name": "Tell Halaf",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0116": {
 				"name": "Rom",
 				"nameVariants": ["Roma"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12484,20 +12484,20 @@
 			"place_0118": {
 				"name": "Capri",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0119": {
 				"name": "Milano",
 				"nameVariants": ["Mailand"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12604,10 +12604,10 @@
 			"place_0130": {
 				"name": "Weimar",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12616,7 +12616,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2987968,
 				"geoNamesLink": "https://www.geonames.org/2987968",
-				"type": "",
+				"type": null,
 				"coords": [45, 0.5],
 				"country": "",
 				"note": ""
@@ -12626,7 +12626,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3010882,
 				"geoNamesLink": "https://www.geonames.org/3010882",
-				"type": "",
+				"type": null,
 				"coords": [45.58829, 2.7392],
 				"country": "",
 				"note": ""
@@ -12636,7 +12636,7 @@
 				"nameVariants": [],
 				"geoNamesID": 11071625,
 				"geoNamesLink": "https://www.geonames.org/11071625",
-				"type": "",
+				"type": null,
 				"coords": [45.482, 5.37437],
 				"country": "",
 				"note": ""
@@ -12646,7 +12646,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2973452,
 				"geoNamesLink": "https://www.geonames.org/2973452",
-				"type": "",
+				"type": null,
 				"coords": [43.0887, 5.899],
 				"country": "",
 				"note": ""
@@ -12656,7 +12656,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2970749,
 				"geoNamesLink": "https://www.geonames.org/2970749",
-				"type": "",
+				"type": null,
 				"coords": [43.4586, 6.29145],
 				"country": "",
 				"note": ""
@@ -12666,7 +12666,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3017382,
 				"geoNamesLink": "https://www.geonames.org/3017382",
-				"type": "",
+				"type": null,
 				"coords": [46, 2],
 				"country": "",
 				"note": ""
@@ -12676,7 +12676,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2782113,
 				"geoNamesLink": "https://www.geonames.org/2782113",
-				"type": "",
+				"type": null,
 				"coords": [47.33333, 13.33333],
 				"country": "",
 				"note": ""
@@ -12686,7 +12686,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2673730,
 				"geoNamesLink": "https://www.geonames.org/2673730",
-				"type": "",
+				"type": null,
 				"coords": [59.32938, 18.06871],
 				"country": "",
 				"note": ""
@@ -12716,7 +12716,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2658205,
 				"geoNamesLink": "https://www.geonames.org/2658205",
-				"type": "",
+				"type": null,
 				"coords": [46.22925, 7.45972],
 				"country": "",
 				"note": ""
@@ -12726,7 +12726,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2659422,
 				"geoNamesLink": "https://www.geonames.org/2659422",
-				"type": "",
+				"type": null,
 				"coords": [46.38318, 6.23955],
 				"country": "",
 				"note": ""
@@ -12736,7 +12736,7 @@
 				"nameVariants": ["Haydar Pascha", "Haydarpaşa"],
 				"geoNamesID": 745705,
 				"geoNamesLink": "https://www.geonames.org/745705",
-				"type": "",
+				"type": null,
 				"coords": [40.99596, 29.02459],
 				"country": "",
 				"note": ""
@@ -12746,7 +12746,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2773823,
 				"geoNamesLink": "https://www.geonames.org/2773823",
-				"type": "",
+				"type": null,
 				"coords": [47.17472, 16.35701],
 				"country": "",
 				"note": ""
@@ -12756,7 +12756,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3033391,
 				"geoNamesLink": "https://www.geonames.org/3033391",
-				"type": "",
+				"type": null,
 				"coords": [44.85157, 0.48171],
 				"country": "",
 				"note": ""
@@ -12766,7 +12766,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3021042,
 				"geoNamesLink": "https://www.geonames.org/3021042",
-				"type": "",
+				"type": null,
 				"coords": [45.12735, 0.73504],
 				"country": "",
 				"note": ""
@@ -12794,10 +12794,10 @@
 			"place_0149": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Region",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -12906,7 +12906,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2911298,
 				"geoNamesLink": "https://www.geonames.org/2911298",
-				"type": "",
+				"type": null,
 				"coords": [53.55073, 9.99302],
 				"country": "",
 				"note": ""
@@ -12936,7 +12936,7 @@
 				"nameVariants": [],
 				"geoNamesID": 6254930,
 				"geoNamesLink": "https://www.geonames.org/6254930",
-				"type": "",
+				"type": null,
 				"coords": [31.92157, 35.20329],
 				"country": "",
 				"note": ""
@@ -12946,7 +12946,7 @@
 				"nameVariants": [],
 				"geoNamesID": 6944296,
 				"geoNamesLink": "https://www.geonames.org/6944296",
-				"type": "",
+				"type": null,
 				"coords": [53.557, 9.964],
 				"country": "",
 				"note": ""
@@ -12966,7 +12966,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3114472,
 				"geoNamesLink": "https://www.geonames.org/3114472",
-				"type": "",
+				"type": null,
 				"coords": [42.81687, -1.64323],
 				"country": "",
 				"note": ""
@@ -13134,10 +13134,10 @@
 			"place_0184": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -13204,10 +13204,10 @@
 			"place_0191": {
 				"name": "Heute nicht mehr lokalisierbar.",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -13434,10 +13434,10 @@
 			"place_0215": {
 				"name": "Leipzig",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -13454,10 +13454,10 @@
 			"place_0217": {
 				"name": "Norwegen",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Land",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -13486,7 +13486,7 @@
 				"nameVariants": ["Hollandtunnel", "Hudson River Vehicular Tunnel", "Canal Street Tunnel"],
 				"geoNamesID": 5099182,
 				"geoNamesLink": "https://www.geonames.org/5099182",
-				"type": "",
+				"type": null,
 				"coords": [40.72955, -74.02208],
 				"country": "",
 				"note": ""
@@ -13934,10 +13934,10 @@
 			"place_0265": {
 				"name": "Riviera",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Region",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "Kein geonames Eintrag, aber auf GND: http://d-nb.info/gnd/4104123-9"
 			},
@@ -14734,10 +14734,10 @@
 			"place_0347": {
 				"name": "Rhäzüns (Burg)",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Gebäude",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -15544,10 +15544,10 @@
 			"place_0429": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -15726,7 +15726,7 @@
 				"nameVariants": [],
 				"geoNamesID": 6255146,
 				"geoNamesLink": "https://www.geonames.org/6255146",
-				"type": "",
+				"type": null,
 				"coords": [7.1881, 21.09375],
 				"country": "",
 				"note": ""
@@ -15976,7 +15976,7 @@
 				"nameVariants": ["Bermuda"],
 				"geoNamesID": 3573342,
 				"geoNamesLink": "https://www.geonames.org/3573342",
-				"type": "",
+				"type": null,
 				"coords": [32.30444, -64.75167],
 				"country": "",
 				"note": ""
@@ -16834,10 +16834,10 @@
 			"place_0560": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Region",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -16864,10 +16864,10 @@
 			"place_0563": {
 				"name": "Sudetenland",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Region",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag"
 			},
@@ -16884,10 +16884,10 @@
 			"place_0565": {
 				"name": "Camp de Rochilles",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Militärische Anlage",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -17274,10 +17274,10 @@
 			"place_0605": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -17604,10 +17604,10 @@
 			"place_0638": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18007,7 +18007,7 @@
 				"geoNamesID": 2658899,
 				"geoNamesLink": "https://www.geonames.org/2658899/saaservisp.html",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18564,10 +18564,10 @@
 			"place_0734": {
 				"name": "Mont Salève",
 				"nameVariants": [],
-				"geoNamesID": "search.html?q=Neuenburg",
+				"geoNamesID": null,
 				"geoNamesLink": "https://www.geonames.org/search.html?q=Neuenburg",
 				"type": "Berg",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18604,10 +18604,10 @@
 			"place_0738": {
 				"name": "Col de la Faucille",
 				"nameVariants": [],
-				"geoNamesID": "search.html?q=Gex",
+				"geoNamesID": null,
 				"geoNamesLink": "https://www.geonames.org/search.html?q=Gex",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18624,10 +18624,10 @@
 			"place_0740": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18714,10 +18714,10 @@
 			"place_0749": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18727,7 +18727,7 @@
 				"geoNamesID": 2661200,
 				"geoNamesLink": "https://www.geonames.org/2661200/chaumont.html",
 				"type": "Berg",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18927,7 +18927,7 @@
 				"geoNamesID": 1149361,
 				"geoNamesLink": "https://www.geonames.org/1149361",
 				"type": "Land",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -18936,7 +18936,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1273294,
 				"geoNamesLink": "https://www.geonames.org/1273294",
-				"type": "",
+				"type": null,
 				"coords": [28.65195, 77.23149],
 				"country": "",
 				"note": ""
@@ -19056,7 +19056,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2510911,
 				"geoNamesLink": "https://www.geonames.org/2510911",
-				"type": "",
+				"type": null,
 				"coords": [37.38283, -5.97317],
 				"country": "",
 				"note": ""
@@ -19204,10 +19204,10 @@
 			"place_0798": {
 				"name": "England",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -19274,20 +19274,20 @@
 			"place_0805": {
 				"name": "East Lumberton",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag"
 			},
 			"place_0806": {
 				"name": "North Lumberton",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag"
 			},
@@ -19306,7 +19306,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4614088,
 				"geoNamesLink": "https://www.geonames.org/4614088/cleveland.html",
-				"type": "",
+				"type": null,
 				"coords": [35.15952, -84.87661],
 				"country": "",
 				"note": ""
@@ -19456,7 +19456,7 @@
 				"nameVariants": [],
 				"geoNamesID": 212730,
 				"geoNamesLink": "https://www.geonames.org/212730",
-				"type": "",
+				"type": null,
 				"coords": [0.51528, 25.19099],
 				"country": "",
 				"note": ""
@@ -19466,7 +19466,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2960313,
 				"geoNamesLink": "https://www.geonames.org/2960313/grand-duchy-of-luxembourg.html",
-				"type": "",
+				"type": null,
 				"coords": [49.75, 6.16667],
 				"country": "",
 				"note": ""
@@ -19476,7 +19476,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2803138,
 				"geoNamesLink": "https://www.geonames.org/2803138",
-				"type": "",
+				"type": null,
 				"coords": [51.22047, 4.40026],
 				"country": "",
 				"note": ""
@@ -19486,7 +19486,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2800866,
 				"geoNamesLink": "https://www.geonames.org/2800866",
-				"type": "",
+				"type": null,
 				"coords": [50.85045, 4.34878],
 				"country": "",
 				"note": ""
@@ -19496,7 +19496,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2802361,
 				"geoNamesLink": "https://www.geonames.org/2802361",
-				"type": "",
+				"type": null,
 				"coords": [50.75, 4.5],
 				"country": "",
 				"note": ""
@@ -19506,7 +19506,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2313002,
 				"geoNamesLink": "https://www.geonames.org/2313002",
-				"type": "",
+				"type": null,
 				"coords": [-5.83861, 13.46306],
 				"country": "",
 				"note": ""
@@ -19516,7 +19516,7 @@
 				"nameVariants": [],
 				"geoNamesID": 205703,
 				"geoNamesLink": "https://www.geonames.org/205703/katanga-province.html",
-				"type": "",
+				"type": null,
 				"coords": [-9, 26],
 				"country": "",
 				"note": ""
@@ -19554,10 +19554,10 @@
 			"place_0833": {
 				"name": "Westfront Street",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -19636,7 +19636,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4076784,
 				"geoNamesLink": "https://www.geonames.org/4076784/montgomery.html",
-				"type": "",
+				"type": null,
 				"coords": [32.36681, -86.29997],
 				"country": "",
 				"note": ""
@@ -19646,7 +19646,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4829753,
 				"geoNamesLink": "https://www.geonames.org/4829753/alabama-state-capitol.html",
-				"type": "",
+				"type": null,
 				"coords": [32.37775, -86.30049],
 				"country": "",
 				"note": ""
@@ -19664,10 +19664,10 @@
 			"place_0844": {
 				"name": "Gonbad-e Kāvūs",
 				"nameVariants": [],
-				"geoNamesID": "http://www.geonames.org/132938/gonbad-e-kavus.html",
+				"geoNamesID": 132938,
 				"geoNamesLink": "http://www.geonames.org/132938/gonbad-e-kavus.html",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -19704,10 +19704,10 @@
 			"place_0848": {
 				"name": "Piedmont Mountains",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag; Gebirgszug in den USA"
 			},
@@ -19726,7 +19726,7 @@
 				"nameVariants": [],
 				"geoNamesID": 7872636,
 				"geoNamesLink": "https://www.geonames.org/7872636/stans.html",
-				"type": "",
+				"type": null,
 				"coords": [47.38388, 11.71084],
 				"country": "",
 				"note": ""
@@ -19736,7 +19736,7 @@
 				"nameVariants": ["Bad Reichenhall"],
 				"geoNamesID": 2953371,
 				"geoNamesLink": "https://www.geonames.org/2953371",
-				"type": "",
+				"type": null,
 				"coords": [47.72947, 12.87819],
 				"country": "",
 				"note": ""
@@ -19744,10 +19744,10 @@
 			"place_0852": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -19937,10 +19937,10 @@
 			"place_0871": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -19989,7 +19989,7 @@
 				"nameVariants": ["Reval"],
 				"geoNamesID": 588409,
 				"geoNamesLink": "https://www.geonames.org/588409/tallinn.html",
-				"type": "",
+				"type": null,
 				"coords": [59.43696, 24.75353],
 				"country": "",
 				"note": ""
@@ -20017,10 +20017,10 @@
 			"place_0879": {
 				"name": "Park Avenue",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -20097,10 +20097,10 @@
 			"place_0887": {
 				"name": "Französischer Bahnhof",
 				"nameVariants": ["Bahnhof Basel SNCF"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": "kein spezifischer geonames Eintrag"
 			},
@@ -20129,7 +20129,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2657970,
 				"geoNamesLink": "https://www.geonames.org/2657970",
-				"type": "",
+				"type": null,
 				"coords": [47.50564, 8.72413],
 				"country": "",
 				"note": ""
@@ -20139,7 +20139,7 @@
 				"nameVariants": [],
 				"geoNamesID": 7646414,
 				"geoNamesLink": "https://www.geonames.org/7646414",
-				"type": "",
+				"type": null,
 				"coords": [47.76471, 8.81902],
 				"country": "",
 				"note": ""
@@ -20149,7 +20149,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2831924,
 				"geoNamesLink": "https://www.geonames.org/2831924",
-				"type": "",
+				"type": null,
 				"coords": [47.75935, 8.8403],
 				"country": "",
 				"note": ""
@@ -20157,10 +20157,10 @@
 			"place_0893": {
 				"name": "Elburs-Berge",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Gebirge",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag"
 			},
@@ -20277,10 +20277,10 @@
 			"place_0905": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -20487,10 +20487,10 @@
 			"place_0926": {
 				"name": "Mellon-Bibliothek",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Gebäude",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames Eintrag; Pittsburgh"
 			},
@@ -20647,10 +20647,10 @@
 			"place_0942": {
 				"name": "Keizersgracht",
 				"nameVariants": ["Graacht"],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Siedlung",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein geonames-Eintrag"
 			},
@@ -20669,7 +20669,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2951825,
 				"geoNamesLink": "https://www.geonames.org/2951825",
-				"type": "",
+				"type": null,
 				"coords": [49.94782, 11.57893],
 				"country": "",
 				"note": ""
@@ -20679,7 +20679,7 @@
 				"nameVariants": [],
 				"geoNamesID": 596612,
 				"geoNamesLink": "https://www.geonames.org/596612",
-				"type": "",
+				"type": null,
 				"coords": [55.3086, 20.99651],
 				"country": "",
 				"note": ""
@@ -20729,7 +20729,7 @@
 				"nameVariants": ["Khulm"],
 				"geoNamesID": 1136575,
 				"geoNamesLink": "https://www.geonames.org/1136575/khulm.html",
-				"type": "",
+				"type": null,
 				"coords": [36.69736, 67.69826],
 				"country": "",
 				"note": ""
@@ -21009,7 +21009,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2783030,
 				"geoNamesLink": "https://www.geonames.org/2783030/achensee.html",
-				"type": "",
+				"type": null,
 				"coords": [47.46556, 11.70924],
 				"country": "",
 				"note": ""
@@ -21019,7 +21019,7 @@
 				"nameVariants": [],
 				"geoNamesID": 5263045,
 				"geoNamesLink": "https://www.geonames.org/5263045",
-				"type": "",
+				"type": null,
 				"coords": [43.0389, -87.90647],
 				"country": "",
 				"note": ""
@@ -21029,7 +21029,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2660516,
 				"geoNamesLink": "https://www.geonames.org/2660516/greifensee.html",
-				"type": "",
+				"type": null,
 				"coords": [47.34936, 8.67864],
 				"country": "",
 				"note": ""
@@ -21037,30 +21037,30 @@
 			"place_0981": {
 				"name": "Elsass",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0982": {
 				"name": "Freiburg im Breisgau",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_0983": {
 				"name": "St. Wolfgang",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21089,8 +21089,8 @@
 				"nameVariants": [],
 				"geoNamesID": 3247449,
 				"geoNamesLink": "https://www.geonames.org/3247449",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21099,7 +21099,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2657895,
 				"geoNamesLink": "https://www.geonames.org/2657895/kanton-zuerich.html",
-				"type": "",
+				"type": null,
 				"coords": [47.41667, 8.66667],
 				"country": "",
 				"note": ""
@@ -21139,7 +21139,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2711537,
 				"geoNamesLink": "https://www.geonames.org/2711537",
-				"type": "",
+				"type": null,
 				"coords": [57.70716, 11.96679],
 				"country": "",
 				"note": ""
@@ -21149,8 +21149,8 @@
 				"nameVariants": [],
 				"geoNamesID": 2923822,
 				"geoNamesLink": "https://www.geonames.org/2923822/fulda.html",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21159,7 +21159,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1138336,
 				"geoNamesLink": "https://www.geonames.org/1138336/kandahar.html",
-				"type": "",
+				"type": null,
 				"coords": [31.61332, 65.71013],
 				"country": "",
 				"note": ""
@@ -21169,7 +21169,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1172451,
 				"geoNamesLink": "https://www.geonames.org/1172451/lahore.html",
-				"type": "",
+				"type": null,
 				"coords": [31.558, 74.35071],
 				"country": "",
 				"note": ""
@@ -21177,10 +21177,10 @@
 			"place_0995": {
 				"name": "Südfrankreich",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21189,7 +21189,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1269743,
 				"geoNamesLink": "https://www.geonames.org/1269743/indore.html",
-				"type": "",
+				"type": null,
 				"coords": [22.71792, 75.8333],
 				"country": "",
 				"note": ""
@@ -21199,7 +21199,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4835395,
 				"geoNamesLink": "https://www.geonames.org/4835395/greenwich.html",
-				"type": "",
+				"type": null,
 				"coords": [41.02649, -73.62846],
 				"country": "",
 				"note": ""
@@ -21240,7 +21240,7 @@
 				"geoNamesID": 2657894,
 				"geoNamesLink": "https://www.geonames.org/2657894/zuerichberg.html",
 				"type": "Gebirge",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21257,20 +21257,20 @@
 			"place_1003": {
 				"name": "Valbella",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
 			"place_1004": {
 				"name": "Bukarest",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21279,7 +21279,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1253405,
 				"geoNamesLink": "https://www.geonames.org/1253405/varanasi.html",
-				"type": "",
+				"type": null,
 				"coords": [25.31668, 83.01041],
 				"country": "",
 				"note": ""
@@ -21289,7 +21289,7 @@
 				"nameVariants": [],
 				"geoNamesID": 1227604,
 				"geoNamesLink": "https://www.geonames.org/1227604/sri-lanka.html",
-				"type": "",
+				"type": null,
 				"coords": [7.60632, 80.71648],
 				"country": "",
 				"note": ""
@@ -21299,7 +21299,7 @@
 				"nameVariants": [],
 				"geoNamesID": 13580436,
 				"geoNamesLink": "https://www.geonames.org/13580436/toessertobel-villa.html",
-				"type": "",
+				"type": null,
 				"coords": [47.50875, 8.74011],
 				"country": "",
 				"note": ""
@@ -21319,7 +21319,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2657912,
 				"geoNamesLink": "https://www.geonames.org/2657912/zollikon.html",
-				"type": "",
+				"type": null,
 				"coords": [47.34019, 8.57407],
 				"country": "",
 				"note": ""
@@ -21337,10 +21337,10 @@
 			"place_1011": {
 				"name": "Westschweiz",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
 				"type": "Region",
-				"coords": [],
+				"coords": null,
 				"country": "",
 				"note": "kein GND-Eintrag"
 			},
@@ -21349,7 +21349,7 @@
 				"nameVariants": [],
 				"geoNamesID": 3523271,
 				"geoNamesLink": "https://www.geonames.org/3523271/gulf-of-mexico.html",
-				"type": "",
+				"type": null,
 				"coords": [25, -90],
 				"country": "",
 				"note": ""
@@ -21359,7 +21359,7 @@
 				"nameVariants": [],
 				"geoNamesID": 5609286,
 				"geoNamesLink": "https://www.geonames.org/5609286/sun-valley.html",
-				"type": "",
+				"type": null,
 				"coords": [43.69713, -114.35172],
 				"country": "",
 				"note": ""
@@ -21367,10 +21367,10 @@
 			"place_1014": {
 				"name": "Strassburg",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21379,7 +21379,7 @@
 				"nameVariants": [],
 				"geoNamesID": 2861650,
 				"geoNamesLink": "https://www.geonames.org/2861650",
-				"type": "",
+				"type": null,
 				"coords": [49.45421, 11.07752],
 				"country": "",
 				"note": ""
@@ -21389,8 +21389,8 @@
 				"nameVariants": [],
 				"geoNamesID": 3021670,
 				"geoNamesLink": "https://www.geonames.org/3021670",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21399,8 +21399,8 @@
 				"nameVariants": [],
 				"geoNamesID": 2969679,
 				"geoNamesLink": "https://www.geonames.org/2969679",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21417,10 +21417,10 @@
 			"place_1019": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21437,10 +21437,10 @@
 			"place_1021": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -21459,7 +21459,7 @@
 				"nameVariants": [],
 				"geoNamesID": 4933508,
 				"geoNamesLink": "https://www.geonames.org/4933508/cape-cod.html",
-				"type": "",
+				"type": null,
 				"coords": [41.6862, -70.24308],
 				"country": "",
 				"note": ""
@@ -21497,10 +21497,10 @@
 			"place_1027": {
 				"name": "",
 				"nameVariants": [],
-				"geoNamesID": "",
+				"geoNamesID": null,
 				"geoNamesLink": "",
-				"type": "",
-				"coords": [],
+				"type": null,
+				"coords": null,
 				"country": "",
 				"note": ""
 			},
@@ -22135,7 +22135,8 @@
 				"nameVariants": [],
 				"gndNumber": "1012979-0",
 				"type": "Politische org",
-				"note": ""
+				"note": "",
+				"docs": ["smallform_0231"]
 			},
 			"organisation_0003": {
 				"name": "ABC (Zürich)",
@@ -22936,7 +22937,7 @@
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0117": {
@@ -22957,7 +22958,7 @@
 				"name": "Unterraetien (mittelalterliche Grafschaft)",
 				"nameVariants": ["Niederraetien"],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0120": {
@@ -23013,7 +23014,7 @@
 				"name": "Ku Klux Klan",
 				"nameVariants": [],
 				"gndNumber": "4101512-5",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0128": {
@@ -23150,7 +23151,7 @@
 				"name": "Bellerive au Lac (Hotel, Zürich)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0147": {
@@ -23164,7 +23165,7 @@
 				"name": "Les Rives de Prangins",
 				"nameVariants": ["Hôpital psychiatrique de Prangins", "Prangins"],
 				"gndNumber": "1372675868",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0149": {
@@ -23642,7 +23643,7 @@
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0217": {
@@ -23789,21 +23790,21 @@
 				"name": "Mansfield Mill",
 				"nameVariants": ["Mansfield-Fabrik"],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0238": {
 				"name": "Civil Liberties Committee",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0239": {
 				"name": "Jennings",
 				"nameVariants": ["Jennings-Baumwollfabriken"],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0240": {
@@ -23980,7 +23981,7 @@
 				"name": "Tobis-Tonbild-Syndikat-AG",
 				"nameVariants": [],
 				"gndNumber": "5169081-0",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0265": {
@@ -24113,7 +24114,7 @@
 				"name": "American National Red Cross",
 				"nameVariants": [],
 				"gndNumber": "6045-8",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0284": {
@@ -24190,14 +24191,14 @@
 				"name": "International News",
 				"nameVariants": ["International News Service (INS)"],
 				"gndNumber": "1087166691",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0295": {
 				"name": "Französisches Rotes Kreuz",
 				"nameVariants": ["Croix Rouge Francaise"],
 				"gndNumber": "1087591694",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0296": {
@@ -24211,7 +24212,7 @@
 				"name": "Columbia Broadcasting Company",
 				"nameVariants": ["Columbia Broadcasting System"],
 				"gndNumber": "1020961-X",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0298": {
@@ -24344,7 +24345,7 @@
 				"name": "Quäker",
 				"nameVariants": ["Friend's Association"],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0317": {
@@ -24505,7 +24506,7 @@
 				"name": "Manhattan (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0340": {
@@ -24554,7 +24555,7 @@
 				"name": "Paris (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0347": {
@@ -24820,7 +24821,7 @@
 				"name": "S. S. Siboney (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0385": {
@@ -24967,7 +24968,7 @@
 				"name": "S. S. Exochorda",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0406": {
@@ -24988,7 +24989,7 @@
 				"name": "Betsy Ann (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0409": {
@@ -25002,7 +25003,7 @@
 				"name": "Christ Greene (Schiff)",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": "kein GND-Eintrag"
 			},
 			"organisation_0411": {
@@ -25121,7 +25122,7 @@
 				"name": "Academia",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0428": {
@@ -25135,84 +25136,84 @@
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0430": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0431": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0432": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0433": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0434": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0435": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0436": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0437": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0438": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0439": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			},
 			"organisation_0440": {
 				"name": "",
 				"nameVariants": [],
 				"gndNumber": "",
-				"type": "",
+				"type": null,
 				"note": ""
 			}
 		},
@@ -25246,25 +25247,25 @@
 		"keywords": {
 			"4000096-5": {
 				"name": "Aberglaube",
-				"type": "",
+				"type": null,
 				"gndNumber": "4000096-5",
 				"docs": ["smallform_0130", "smallform_0166"]
 			},
 			"4141014-2": {
 				"name": "Abenteuer",
-				"type": "",
+				"type": null,
 				"gndNumber": "4141014-2",
 				"docs": ["smallform_0015", "smallform_0090", "smallform_0463"]
 			},
 			"4137441-1": {
 				"name": "Abstinenz",
-				"type": "",
+				"type": null,
 				"gndNumber": "4137441-1",
 				"docs": ["smallform_0019"]
 			},
 			"4201448-7": {
 				"name": "American dream",
-				"type": "",
+				"type": null,
 				"gndNumber": "4201448-7",
 				"docs": [
 					"smallform_0243",
@@ -25276,7 +25277,7 @@
 			},
 			"7504355-5": {
 				"name": "Amerikanische Literatur",
-				"type": "",
+				"type": null,
 				"gndNumber": "7504355-5",
 				"docs": [
 					"smallform_0107",
@@ -25289,13 +25290,13 @@
 			},
 			"4002053-8": {
 				"name": "Angst (existenzielle Angst)",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002053-8",
 				"docs": ["letter_0233", "letter_0280"]
 			},
 			"4122803-0": {
 				"name": "Antifaschismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4122803-0",
 				"docs": [
 					"smallform_0469",
@@ -25314,7 +25315,7 @@
 			},
 			"4068754-5": {
 				"name": "Antike",
-				"type": "",
+				"type": null,
 				"gndNumber": "4068754-5",
 				"docs": [
 					"smallform_0096",
@@ -25327,7 +25328,7 @@
 			},
 			"4002333-3": {
 				"name": "Antisemitismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002333-3",
 				"docs": [
 					"smallform_0226",
@@ -25344,17 +25345,17 @@
 			},
 			"4142675-7": {
 				"name": "Antiklerikalismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4142675-7"
 			},
 			"4002567-6": {
 				"name": "Arbeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002567-6"
 			},
 			"4205756-5": {
 				"name": "Arbeiterwohnung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4205756-5",
 				"docs": [
 					"smallform_0178",
@@ -25366,18 +25367,18 @@
 			},
 			"4279705-6": {
 				"name": "Arbeitskräftemangel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4279705-6"
 			},
 			"4002716-8": {
 				"name": "Arbeitslager",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002716-8",
 				"docs": ["smallform_0242"]
 			},
 			"4002730-2": {
 				"name": "Arbeitslosigkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002730-2",
 				"docs": [
 					"smallform_0176",
@@ -25400,7 +25401,7 @@
 			},
 			"4002827-6": {
 				"name": "Archäologie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002827-6",
 				"docs": [
 					"smallform_0096",
@@ -25416,24 +25417,24 @@
 			},
 			"4002851-3": {
 				"name": "Architektur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002851-3",
 				"docs": ["smallform_0090", "smallform_0197", "smallform_0243"]
 			},
 			"7502947-9": {
 				"name": "Moderne Architektur",
-				"type": "",
+				"type": null,
 				"gndNumber": "7502947-9"
 			},
 			"4130286-2": {
 				"name": "Aristokratie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4130286-2",
 				"docs": ["smallform_0617"]
 			},
 			"4002963-3": {
 				"name": "Armut",
-				"type": "",
+				"type": null,
 				"gndNumber": "4002963-3",
 				"docs": [
 					"smallform_0123",
@@ -25466,24 +25467,24 @@
 			},
 			"4085933-2": {
 				"name": "Armenier",
-				"type": "",
+				"type": null,
 				"gndNumber": "4085933-2",
 				"docs": ["smallform_0157"]
 			},
 			"4112603-8": {
 				"name": "Artusroman",
-				"type": "",
+				"type": null,
 				"gndNumber": "4112603-8",
 				"docs": ["smallform_0003"]
 			},
 			"4143260-5": {
 				"name": "Asyl",
-				"type": "",
+				"type": null,
 				"gndNumber": "4143260-5"
 			},
 			"4000626-8": {
 				"name": "Ästhetik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4000626-8",
 				"docs": [
 					"smallform_0011",
@@ -25508,19 +25509,19 @@
 			},
 			"4143278-2": {
 				"name": "Asketik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4143278-2",
 				"docs": ["letter_0052"]
 			},
 			"4129464-6": {
 				"name": "Ausgrabung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4129464-6",
 				"docs": ["smallform_0150", "letter_0023", "letter_0024", "letter_0026", "letter_0029"]
 			},
 			"4076001-7": {
 				"name": "Auto",
-				"type": "",
+				"type": null,
 				"gndNumber": "4076001-7",
 				"docs": [
 					"smallform_0084",
@@ -25551,13 +25552,13 @@
 			},
 			"4003516-5": {
 				"name": "Aufforstung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4003516-5",
 				"docs": ["smallform_0191", "smallform_0281"]
 			},
 			"4003677-7": {
 				"name": "Ausbeutung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4003677-7",
 				"docs": [
 					"smallform_0186",
@@ -25571,13 +25572,13 @@
 			},
 			"4003846-4": {
 				"name": "Aussenpolitik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4003846-4",
 				"docs": ["smallform_0435", "smallform_0438", "smallform_0469", "letter_0121"]
 			},
 			"4004973-5": {
 				"name": "Baudenkmal",
-				"type": "",
+				"type": null,
 				"gndNumber": "4004973-5",
 				"docs": [
 					"smallform_0096",
@@ -25591,7 +25592,7 @@
 			},
 			"4216372-9": {
 				"name": "Beduinen",
-				"type": "",
+				"type": null,
 				"gndNumber": "4216372-9",
 				"docs": [
 					"smallform_0148",
@@ -25606,7 +25607,7 @@
 			},
 			"4144619-7": {
 				"name": "Berg",
-				"type": "",
+				"type": null,
 				"gndNumber": "4144619-7",
 				"docs": [
 					"smallform_0029",
@@ -25625,13 +25626,13 @@
 			},
 			"4005694-6": {
 				"name": "Bergsteigen",
-				"type": "",
+				"type": null,
 				"gndNumber": "4005694-6",
 				"docs": ["smallform_0614", "smallform_0615", "letter_0283"]
 			},
 			"4191412-0": {
 				"name": "Berühmte Persönlichkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4191412-0",
 				"docs": [
 					"smallform_0028",
@@ -25647,24 +25648,24 @@
 			},
 			"4786807-7": {
 				"name": "Beschleunigung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4786807-7",
 				"docs": ["smallform_0177"]
 			},
 			"4204578-2": {
 				"name": "Bestattungsritus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4204578-2",
 				"docs": ["smallform_0146", "smallform_0147"]
 			},
 			"4006077-9": {
 				"name": "Bestseller",
-				"type": "",
+				"type": null,
 				"gndNumber": "4006077-9"
 			},
 			"4006650-2": {
 				"name": "Bildung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4006650-2",
 				"docs": [
 					"smallform_0131",
@@ -25677,35 +25678,35 @@
 			},
 			"1149977590": {
 				"name": "Blackfacing",
-				"type": "",
+				"type": null,
 				"gndNumber": "1149977590"
 			},
 			"4334973-0": {
 				"name": "Blinder Passagier",
-				"type": "",
+				"type": null,
 				"gndNumber": "4334973-0",
 				"docs": ["smallform_0242"]
 			},
 			"4007502-3": {
 				"name": "Börse",
-				"type": "",
+				"type": null,
 				"gndNumber": "4007502-3"
 			},
 			"4008822-4": {
 				"name": "Bürokratie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4008822-4",
 				"docs": ["smallform_0242"]
 			},
 			"4069722-8": {
 				"name": "Bürgertum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4069722-8",
 				"docs": ["smallform_0019", "smallform_0027"]
 			},
 			"4010074-1": {
 				"name": "Christentum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4010074-1",
 				"docs": [
 					"smallform_0115",
@@ -25720,12 +25721,12 @@
 			},
 			"4132275-7": {
 				"name": "Degeneration",
-				"type": "",
+				"type": null,
 				"gndNumber": "4132275-7"
 			},
 			"4011413-2": {
 				"name": "Demokratie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4011413-2",
 				"docs": [
 					"smallform_0027",
@@ -25755,19 +25756,19 @@
 			},
 			"4011453-3": {
 				"name": "Denkmal",
-				"type": "",
+				"type": null,
 				"gndNumber": "4011453-3",
 				"docs": ["smallform_0188", "smallform_0280"]
 			},
 			"4011474-0": {
 				"name": "Depression",
-				"type": "",
+				"type": null,
 				"gndNumber": "4011474-0",
 				"docs": ["letter_0058", "letter_0086"]
 			},
 			"4149920-7": {
 				"name": "Diktatur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4149920-7",
 				"docs": [
 					"smallform_0027",
@@ -25783,24 +25784,24 @@
 			},
 			"1028576870": {
 				"name": "Distanz",
-				"type": "",
+				"type": null,
 				"gndNumber": "1028576870",
 				"docs": ["smallform_0087", "smallform_0090", "smallform_0421"]
 			},
 			"4012653-5": {
 				"name": "Dokumentarfilm",
-				"type": "",
+				"type": null,
 				"gndNumber": "4012653-5"
 			},
 			"4745694-2": {
 				"name": "Dollar",
-				"type": "",
+				"type": null,
 				"gndNumber": "4745694-2",
 				"docs": ["smallform_0212"]
 			},
 			"4198658-1": {
 				"name": "Drogenkonsum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4198658-1",
 				"docs": [
 					"smallform_0188",
@@ -25825,31 +25826,31 @@
 			},
 			"4122122-9": {
 				"name": "Drogenentzug",
-				"type": "",
+				"type": null,
 				"gndNumber": "4122122-9",
 				"docs": ["letter_0058", "letter_0085", "letter_0258", "letter_0424", "letter_0443"]
 			},
 			"4309343-7": {
 				"name": "Dschungel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4309343-7",
 				"docs": ["smallform_0130", "smallform_0529"]
 			},
 			"4150868-3": {
 				"name": "Dunkelheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4150868-3",
 				"docs": ["smallform_0244", "letter_0297"]
 			},
 			"4013630-9": {
 				"name": "Ehe",
-				"type": "",
+				"type": null,
 				"gndNumber": "4013630-9",
 				"docs": ["letter_0429"]
 			},
 			"4013960-8": {
 				"name": "Einwanderung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4013960-8",
 				"docs": [
 					"smallform_0205",
@@ -25861,19 +25862,19 @@
 			},
 			"4333082-4": {
 				"name": "Entfernung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4333082-4",
 				"docs": ["smallform_0084", "smallform_0414", "smallform_0480"]
 			},
 			"4014748-4": {
 				"name": "Engel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4014748-4",
 				"docs": ["smallform_0033", "smallform_0107"]
 			},
 			"4015332-0": {
 				"name": "Ernährung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4015332-0",
 				"docs": [
 					"smallform_0028",
@@ -25888,13 +25889,13 @@
 			},
 			"4079163-4": {
 				"name": "Erster Weltkrieg",
-				"type": "",
+				"type": null,
 				"gndNumber": "4079163-4",
 				"docs": ["smallform_0030", "smallform_0158", "smallform_0474", "letter_0403", "letter_0406"]
 			},
 			"4015959-0": {
 				"name": "Exil",
-				"type": "",
+				"type": null,
 				"gndNumber": "4015959-0",
 				"docs": [
 					"smallform_0173",
@@ -25925,36 +25926,36 @@
 			},
 			"4015972-3": {
 				"name": "Existenzphilosophie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4015972-3",
 				"docs": ["smallform_0321"]
 			},
 			"4727032-9": {
 				"name": "Existenzkampf",
-				"type": "",
+				"type": null,
 				"gndNumber": "4727032-9",
 				"docs": ["smallform_0191", "smallform_0201", "smallform_0284"]
 			},
 			"4015993-0": {
 				"name": "Exotismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4015993-0",
 				"docs": ["smallform_0130"]
 			},
 			"4153349-5": {
 				"name": "Expeditionsbergsteigen",
-				"type": "",
+				"type": null,
 				"gndNumber": "4153349-5"
 			},
 			"4016044-0": {
 				"name": "Expressionismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4016044-0",
 				"docs": ["smallform_0030"]
 			},
 			"4113480-1": {
 				"name": "Europa",
-				"type": "",
+				"type": null,
 				"gndNumber": "4113480-1",
 				"docs": [
 					"smallform_0173",
@@ -25980,25 +25981,25 @@
 			},
 			"4200132-8": {
 				"name": "Eurozentrismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4200132-8",
 				"docs": ["smallform_0052", "smallform_0055", "smallform_0421", "letter_0054"]
 			},
 			"4217343-7": {
 				"name": "Fabrikgebäude",
-				"type": "",
+				"type": null,
 				"gndNumber": "4217343-7",
 				"docs": ["smallform_0201", "smallform_0206"]
 			},
 			"4153665-4": {
 				"name": "Familienroman",
-				"type": "",
+				"type": null,
 				"gndNumber": "4153665-4",
 				"docs": ["smallform_0107"]
 			},
 			"4016494-9": {
 				"name": "Faschismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4016494-9",
 				"docs": [
 					"smallform_0123",
@@ -26029,17 +26030,17 @@
 			},
 			"4222126-2": {
 				"name": "Feminismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4222126-2"
 			},
 			"4154026-8": {
 				"name": "Fernhandel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4154026-8"
 			},
 			"4017102-4": {
 				"name": "Film",
-				"type": "",
+				"type": null,
 				"gndNumber": "4017102-4",
 				"docs": [
 					"smallform_0033",
@@ -26058,31 +26059,31 @@
 			},
 			"4017310-0": {
 				"name": "Fischerei",
-				"type": "",
+				"type": null,
 				"gndNumber": "4017310-0",
 				"docs": ["smallform_0130", "smallform_0169", "smallform_0421", "smallform_0423"]
 			},
 			"4017604-6": {
 				"name": "Flüchtling",
-				"type": "",
+				"type": null,
 				"gndNumber": "4017604-6",
 				"docs": ["smallform_0227", "smallform_0471", "smallform_0494", "letter_0351"]
 			},
 			"4154675-1": {
 				"name": "Flucht",
-				"type": "",
+				"type": null,
 				"gndNumber": "4154675-1",
 				"docs": ["smallform_0157", "smallform_0199", "smallform_0242", "letter_0086"]
 			},
 			"4017672-1": {
 				"name": "Flugzeug",
-				"type": "",
+				"type": null,
 				"gndNumber": "4017672-1",
 				"docs": ["smallform_0084"]
 			},
 			"4131972-2": {
 				"name": "Fluss",
-				"type": "",
+				"type": null,
 				"gndNumber": "4131972-2",
 				"docs": [
 					"smallform_0165",
@@ -26094,13 +26095,13 @@
 			},
 			"4017985-0": {
 				"name": "Fortschritt",
-				"type": "",
+				"type": null,
 				"gndNumber": "4017985-0",
 				"docs": ["smallform_0055", "smallform_0087", "smallform_0185"]
 			},
 			"4045895-7": {
 				"name": "Fotografie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4045895-7",
 				"docs": [
 					"smallform_0201",
@@ -26138,7 +26139,7 @@
 			},
 			"7507676-7": {
 				"name": "Frauenrolle (Soziale Rolle)",
-				"type": "",
+				"type": null,
 				"gndNumber": "7507676-7",
 				"docs": [
 					"smallform_0002",
@@ -26153,7 +26154,7 @@
 			},
 			"4018326-9": {
 				"name": "Freiheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018326-9",
 				"docs": [
 					"smallform_0027",
@@ -26169,7 +26170,7 @@
 			},
 			"4247924-1": {
 				"name": "Freizeitindustrie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4247924-1",
 				"docs": [
 					"smallform_0177",
@@ -26181,25 +26182,25 @@
 			},
 			"4253929-8": {
 				"name": "Fremdenlegion",
-				"type": "",
+				"type": null,
 				"gndNumber": "4253929-8",
 				"docs": ["smallform_0151"]
 			},
 			"4018421-3": {
 				"name": "Fremdheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018421-3",
 				"docs": ["smallform_0151", "smallform_0197", "smallform_0205", "smallform_0303"]
 			},
 			"4018424-9": {
 				"name": "Fremdsprache",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018424-9",
 				"docs": ["smallform_0197"]
 			},
 			"4018480-8": {
 				"name": "Freundschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018480-8",
 				"docs": [
 					"smallform_0001",
@@ -26224,29 +26225,29 @@
 			},
 			"4135563-5": {
 				"name": "Friede",
-				"type": "",
+				"type": null,
 				"gndNumber": "4135563-5",
 				"docs": ["smallform_0423"]
 			},
 			"4018537-0": {
 				"name": "Friedhof",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018537-0"
 			},
 			"4018944-2": {
 				"name": "Furcht",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018944-2",
 				"docs": ["smallform_0414"]
 			},
 			"4019286-6": {
 				"name": "Garten",
-				"type": "",
+				"type": null,
 				"gndNumber": "4019286-6"
 			},
 			"4137693-6": {
 				"name": "Gastfreundschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4137693-6",
 				"docs": [
 					"smallform_0207",
@@ -26258,30 +26259,30 @@
 			},
 			"4274032-0": {
 				"name": "Gefangenschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4274032-0",
 				"docs": ["smallform_0419", "smallform_0485"]
 			},
 			"4071628-4": {
 				"name": "Gefängnis",
-				"type": "",
+				"type": null,
 				"gndNumber": "4071628-4",
 				"docs": ["smallform_0272", "smallform_0274", "smallform_0284", "letter_0266"]
 			},
 			"4156282-3": {
 				"name": "Gegensatz",
-				"type": "",
+				"type": null,
 				"gndNumber": "4156282-3"
 			},
 			"1244179744": {
 				"name": "Geistige Landesverteidigung",
-				"type": "",
+				"type": null,
 				"gndNumber": "1244179744",
 				"docs": ["smallform_0276", "letter_0121", "letter_0355"]
 			},
 			"4156416-9": {
 				"name": "Geld",
-				"type": "",
+				"type": null,
 				"gndNumber": "4156416-9",
 				"docs": [
 					"smallform_0177",
@@ -26313,36 +26314,36 @@
 			},
 			"4020015-2": {
 				"name": "Gemeinschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4020015-2",
 				"docs": ["smallform_0001", "letter_0257"]
 			},
 			"4271334-1": {
 				"name": "Germanophobie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4271334-1",
 				"docs": ["smallform_0224"]
 			},
 			"4135260-9": {
 				"name": "Genussmittel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4135260-9"
 			},
 			"4020356-6": {
 				"name": "Gerichtverhandlung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4020356-6",
 				"docs": ["smallform_0246", "smallform_0272", "smallform_0274"]
 			},
 			"4341334-1": {
 				"name": "Getreidewirtschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4341334-1",
 				"docs": ["smallform_0191", "smallform_0281", "smallform_0470"]
 			},
 			"4020517-4": {
 				"name": "Geschichte",
-				"type": "",
+				"type": null,
 				"gndNumber": "4020517-4",
 				"docs": [
 					"smallform_0030",
@@ -26370,19 +26371,19 @@
 			},
 			"4157065-0": {
 				"name": "Gesellschaftsroman",
-				"type": "",
+				"type": null,
 				"gndNumber": "4157065-0",
 				"docs": ["smallform_0107"]
 			},
 			"4156741-9": {
 				"name": "Geopolitik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4156741-9",
 				"docs": ["smallform_0426", "smallform_0474"]
 			},
 			"4020872-2": {
 				"name": "Gewerkschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4020872-2",
 				"docs": [
 					"smallform_0206",
@@ -26401,24 +26402,24 @@
 			},
 			"4557997-0": {
 				"name": "Globalisierung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4557997-0",
 				"docs": ["smallform_0480"]
 			},
 			"4021569-6": {
 				"name": "Golfsport",
-				"type": "",
+				"type": null,
 				"gndNumber": "4021569-6",
 				"docs": ["smallform_0616", "smallform_0617"]
 			},
 			"4022149-0": {
 				"name": "Grossbetrieb",
-				"type": "",
+				"type": null,
 				"gndNumber": "4022149-0"
 			},
 			"4022233-0": {
 				"name": "Großstadt",
-				"type": "",
+				"type": null,
 				"gndNumber": "4022233-0",
 				"docs": [
 					"smallform_0154",
@@ -26434,97 +26435,97 @@
 			},
 			"4023222-0": {
 				"name": "Handel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4023222-0",
 				"docs": ["smallform_0130", "smallform_0463"]
 			},
 			"4023299-2": {
 				"name": "Handwerk",
-				"type": "",
+				"type": null,
 				"gndNumber": "4023299-2"
 			},
 			"4023979-2": {
 				"name": "Hegemonie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4023979-2"
 			},
 			"4122192-8": {
 				"name": "Heimat",
-				"type": "",
+				"type": null,
 				"gndNumber": "4122192-8",
 				"docs": ["smallform_0414", "smallform_0471", "letter_0241", "letter_0293", "letter_0430"]
 			},
 			"4231285-1": {
 				"name": "Heimatlosigkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4231285-1"
 			},
 			"4025292-9": {
 				"name": "Hochzeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4025292-9",
 				"docs": ["letter_0410", "letter_0432"]
 			},
 			"4383351-2": {
 				"name": "Hoffnung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4383351-2"
 			},
 			"4160405-2": {
 				"name": "Hoffnungslosigkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4160405-2",
 				"docs": ["smallform_0420"]
 			},
 			"4025798-8": {
 				"name": "Homosexualität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4025798-8",
 				"docs": ["smallform_0013"]
 			},
 			"4160816-1": {
 				"name": "Hungersnot",
-				"type": "",
+				"type": null,
 				"gndNumber": "4160816-1",
 				"docs": ["smallform_0178"]
 			},
 			"4026331-9": {
 				"name": "Hygiene",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026331-9",
 				"docs": ["smallform_0178"]
 			},
 			"4026496-8": {
 				"name": "Idylle",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026496-8",
 				"docs": ["smallform_0421", "smallform_0423"]
 			},
 			"4026651-5": {
 				"name": "Imperialismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026651-5"
 			},
 			"4026718-0": {
 				"name": "Indianer",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026718-0"
 			},
 			"4187207-1": {
 				"name": "Indigenes Volk",
-				"type": "",
+				"type": null,
 				"gndNumber": "4187207-1",
 				"docs": ["smallform_0187"]
 			},
 			"4131852-3": {
 				"name": "Individualismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4131852-3",
 				"docs": ["smallform_0175", "smallform_0176", "smallform_0177"]
 			},
 			"4026776-3": {
 				"name": "Industrialisierung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026776-3",
 				"docs": [
 					"smallform_0243",
@@ -26538,7 +26539,7 @@
 			},
 			"4026779-9": {
 				"name": "Industrie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026779-9",
 				"docs": [
 					"smallform_0201",
@@ -26557,19 +26558,19 @@
 			},
 			"4026944-9": {
 				"name": "Infrastruktur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4026944-9",
 				"docs": ["smallform_0087", "smallform_0177", "smallform_0188", "smallform_0282"]
 			},
 			"4128227-9": {
 				"name": "Insel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4128227-9",
 				"docs": ["smallform_0173", "smallform_0423"]
 			},
 			"4605581-2": {
 				"name": "Intermedialität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4605581-2",
 				"docs": [
 					"smallform_0033",
@@ -26605,30 +26606,30 @@
 			},
 			"4027316-7": {
 				"name": "Internat",
-				"type": "",
+				"type": null,
 				"gndNumber": "4027316-7",
 				"docs": ["smallform_0013", "smallform_0131"]
 			},
 			"4027743-4": {
 				"name": "Islam",
-				"type": "",
+				"type": null,
 				"gndNumber": "4027743-4",
 				"docs": ["smallform_0160", "smallform_0166", "smallform_0174"]
 			},
 			"4162512-2": {
 				"name": "Isolationismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4162512-2",
 				"docs": ["smallform_0417", "smallform_0435", "smallform_0438", "smallform_0484"]
 			},
 			"4027999-6": {
 				"name": "Jahreszeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4027999-6"
 			},
 			"4028779-8": {
 				"name": "Journalismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4028779-8",
 				"docs": [
 					"smallform_0302",
@@ -26674,18 +26675,18 @@
 			},
 			"4114087-4": {
 				"name": "Judentum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4114087-4"
 			},
 			"4201466-9": {
 				"name": "Justiz",
-				"type": "",
+				"type": null,
 				"gndNumber": "4201466-9",
 				"docs": ["smallform_0437"]
 			},
 			"4028859-6": {
 				"name": "Jugend",
-				"type": "",
+				"type": null,
 				"gndNumber": "4028859-6",
 				"docs": [
 					"smallform_0001",
@@ -26712,7 +26713,7 @@
 			},
 			"4028871-7": {
 				"name": "Jugendbewegung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4028871-7",
 				"docs": [
 					"smallform_0001",
@@ -26727,7 +26728,7 @@
 			},
 			"4029577-1": {
 				"name": "Kapitalismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4029577-1",
 				"docs": [
 					"smallform_0176",
@@ -26743,64 +26744,64 @@
 			},
 			"4418991-6": {
 				"name": "Kaugummi",
-				"type": "",
+				"type": null,
 				"gndNumber": "4418991-6"
 			},
 			"4030550-8": {
 				"name": "Kindheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4030550-8",
 				"docs": ["smallform_0015", "smallform_0016"]
 			},
 			"4128152-4": {
 				"name": "Kinderarbeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4128152-4",
 				"docs": ["smallform_0195", "smallform_0267", "smallform_0274", "smallform_0303"]
 			},
 			"4031011-5": {
 				"name": "Kleidung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4031011-5"
 			},
 			"4123525-3": {
 				"name": "Kleinbauer",
-				"type": "",
+				"type": null,
 				"gndNumber": "4123525-3",
 				"docs": ["smallform_0187", "smallform_0191"]
 			},
 			"4031110-7": {
 				"name": "Kleinstadt",
-				"type": "",
+				"type": null,
 				"gndNumber": "4031110-7",
 				"docs": ["smallform_0224", "smallform_0228", "smallform_0612", "smallform_0614"]
 			},
 			"4031170-3": {
 				"name": "Klima",
-				"type": "",
+				"type": null,
 				"gndNumber": "4031170-3"
 			},
 			"4164015-9": {
 				"name": "Klassenbewusstsein",
-				"type": "",
+				"type": null,
 				"gndNumber": "4164015-9",
 				"docs": ["smallform_0280"]
 			},
 			"4130866-9": {
 				"name": "Klassenkampf",
-				"type": "",
+				"type": null,
 				"gndNumber": "4130866-9",
 				"docs": ["smallform_0201", "smallform_0206", "smallform_0280"]
 			},
 			"4164683-6": {
 				"name": "Kollektivismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4164683-6",
 				"docs": ["smallform_0201"]
 			},
 			"4073624-6": {
 				"name": "Kolonialismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4073624-6",
 				"docs": [
 					"smallform_0151",
@@ -26813,7 +26814,7 @@
 			},
 			"4031892-8": {
 				"name": "Kommunismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4031892-8",
 				"docs": [
 					"smallform_0023",
@@ -26832,29 +26833,29 @@
 			},
 			"4031952-0": {
 				"name": "Komödie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4031952-0",
 				"docs": ["smallform_0484"]
 			},
 			"4032187-3": {
 				"name": "Konservatismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4032187-3",
 				"docs": ["smallform_0014", "smallform_0175"]
 			},
 			"4313630-8": {
 				"name": "Korrespondent",
-				"type": "",
+				"type": null,
 				"gndNumber": "4313630-8"
 			},
 			"4032524-6": {
 				"name": "Korruption",
-				"type": "",
+				"type": null,
 				"gndNumber": "4032524-6"
 			},
 			"4032844-2": {
 				"name": "Krankheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4032844-2",
 				"docs": [
 					"smallform_0130",
@@ -26883,7 +26884,7 @@
 			},
 			"4033114-3": {
 				"name": "Krieg",
-				"type": "",
+				"type": null,
 				"gndNumber": "4033114-3",
 				"docs": [
 					"smallform_0123",
@@ -26903,30 +26904,30 @@
 			},
 			"4165684-2": {
 				"name": "Kriegseintritt",
-				"type": "",
+				"type": null,
 				"gndNumber": "4165684-2",
 				"docs": ["smallform_0417"]
 			},
 			"4033131-3": {
 				"name": "Kriegsgefangenschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4033131-3"
 			},
 			"4033178-7": {
 				"name": "Kriminalität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4033178-7",
 				"docs": ["smallform_0437"]
 			},
 			"4125698-0": {
 				"name": "Kultur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4125698-0",
 				"docs": ["smallform_0087", "smallform_0188", "smallform_0283", "smallform_0436"]
 			},
 			"4114333-4": {
 				"name": "Kunst",
-				"type": "",
+				"type": null,
 				"gndNumber": "4114333-4",
 				"docs": [
 					"smallform_0027",
@@ -26939,7 +26940,7 @@
 			},
 			"4034402-2": {
 				"name": "Landwirtschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4034402-2",
 				"docs": [
 					"smallform_0052",
@@ -26978,7 +26979,7 @@
 			},
 			"4166649-5": {
 				"name": "Landschaftszerstörung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4166649-5",
 				"docs": [
 					"smallform_0186",
@@ -26990,19 +26991,19 @@
 			},
 			"4134319-0": {
 				"name": "Lebensstandard",
-				"type": "",
+				"type": null,
 				"gndNumber": "4134319-0",
 				"docs": ["smallform_0178", "smallform_0187"]
 			},
 			"4035296-1": {
 				"name": "Lektüre",
-				"type": "",
+				"type": null,
 				"gndNumber": "4035296-1",
 				"docs": ["letter_0290", "letter_0297"]
 			},
 			"4035646-2": {
 				"name": "Liebe",
-				"type": "",
+				"type": null,
 				"gndNumber": "4035646-2",
 				"docs": [
 					"smallform_0001",
@@ -27017,48 +27018,48 @@
 			},
 			"4202427-4": {
 				"name": "Licht",
-				"type": "",
+				"type": null,
 				"gndNumber": "4202427-4",
 				"docs": ["smallform_0084", "smallform_0244"]
 			},
 			"4167873-4": {
 				"name": "Literaturgeschichte (Disziplin)",
-				"type": "",
+				"type": null,
 				"gndNumber": "4167873-4",
 				"docs": ["smallform_0030", "letter_0423"]
 			},
 			"4168383-3": {
 				"name": "Lynchjustiz",
-				"type": "",
+				"type": null,
 				"gndNumber": "4168383-3",
 				"docs": ["smallform_0248", "smallform_0274", "smallform_0284", "smallform_0303"]
 			},
 			"4036774-5": {
 				"name": "Lyrik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4036774-5",
 				"docs": ["smallform_0030", "letter_0244", "letter_0247"]
 			},
 			"4198902-8": {
 				"name": "Maschine",
-				"type": "",
+				"type": null,
 				"gndNumber": "4198902-8"
 			},
 			"4038515-2": {
 				"name": "Melancholie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4038515-2",
 				"docs": ["smallform_0485"]
 			},
 			"4074725-6": {
 				"name": "Menschenrechte",
-				"type": "",
+				"type": null,
 				"gndNumber": "4074725-6",
 				"docs": ["smallform_0211"]
 			},
 			"4039305-7": {
 				"name": "Militär",
-				"type": "",
+				"type": null,
 				"gndNumber": "4039305-7",
 				"docs": [
 					"smallform_0030",
@@ -27072,47 +27073,47 @@
 			},
 			"4063255-6": {
 				"name": "Militärausgaben",
-				"type": "",
+				"type": null,
 				"gndNumber": "4063255-6",
 				"docs": ["smallform_0417"]
 			},
 			"4726796-3": {
 				"name": "Misstrauen",
-				"type": "",
+				"type": null,
 				"gndNumber": "4726796-3"
 			},
 			"4129108-6": {
 				"name": "Mittelalter",
-				"type": "",
+				"type": null,
 				"gndNumber": "4129108-6",
 				"docs": ["smallform_0003", "smallform_0166"]
 			},
 			"4039501-7": {
 				"name": "Minnesang",
-				"type": "",
+				"type": null,
 				"gndNumber": "4039501-7",
 				"docs": ["smallform_0003"]
 			},
 			"4170285-2": {
 				"name": "Mobilmachung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4170285-2",
 				"docs": ["letter_0121"]
 			},
 			"4039792-0": {
 				"name": "Mode",
-				"type": "",
+				"type": null,
 				"gndNumber": "4039792-0",
 				"docs": ["smallform_0028", "smallform_0616"]
 			},
 			"4170344-3": {
 				"name": "Möglichkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4170344-3"
 			},
 			"4120755-5": {
 				"name": "Modernisierung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4120755-5",
 				"docs": [
 					"smallform_0052",
@@ -27128,31 +27129,31 @@
 			},
 			"4137447-2": {
 				"name": "Monokultur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4137447-2",
 				"docs": ["smallform_0191", "smallform_0195", "smallform_0248"]
 			},
 			"4040222-8": {
 				"name": "Moral",
-				"type": "",
+				"type": null,
 				"gndNumber": "4040222-8",
 				"docs": ["smallform_0021", "smallform_0131", "letter_0443"]
 			},
 			"4214151-5": {
 				"name": "Multikulturelle Gesellschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4214151-5",
 				"docs": ["smallform_0187", "smallform_0212", "smallform_0283"]
 			},
 			"4040802-4": {
 				"name": "Musik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4040802-4",
 				"docs": ["letter_0238", "letter_0281", "letter_0415", "letter_0417", "letter_0423"]
 			},
 			"7502323-4": {
 				"name": "Mutter-Tochter-Beziehung",
-				"type": "",
+				"type": null,
 				"gndNumber": "7502323-4",
 				"docs": [
 					"smallform_0131",
@@ -27166,7 +27167,7 @@
 			},
 			"4041300-7": {
 				"name": "Nationalismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4041300-7",
 				"docs": [
 					"smallform_0164",
@@ -27187,7 +27188,7 @@
 			},
 			"4041316-0": {
 				"name": "Nationalsozialismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4041316-0",
 				"docs": [
 					"smallform_0209",
@@ -27224,25 +27225,25 @@
 			},
 			"4171217-1": {
 				"name": "Nationalität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4171217-1",
 				"docs": ["smallform_0225", "smallform_0232"]
 			},
 			"4041358-5": {
 				"name": "Natur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4041358-5",
 				"docs": ["smallform_0014", "smallform_0029", "smallform_0152"]
 			},
 			"4427668-0": {
 				"name": "Naturereignis",
-				"type": "",
+				"type": null,
 				"gndNumber": "4427668-0",
 				"docs": ["smallform_0165", "smallform_0175", "smallform_0281", "smallform_0283"]
 			},
 			"4171681-4": {
 				"name": "New Deal",
-				"type": "",
+				"type": null,
 				"gndNumber": "4171681-4",
 				"docs": [
 					"smallform_0175",
@@ -27266,7 +27267,7 @@
 			},
 			"4042452-2": {
 				"name": "Nomaden",
-				"type": "",
+				"type": null,
 				"gndNumber": "4042452-2",
 				"docs": [
 					"smallform_0151",
@@ -27279,12 +27280,12 @@
 			},
 			"4042870-9": {
 				"name": "Obdachlosigkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4042870-9"
 			},
 			"1139293370": {
 				"name": "Orientalismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "1139293370",
 				"docs": [
 					"smallform_0052",
@@ -27298,19 +27299,19 @@
 			},
 			"4043912-4": {
 				"name": "Orthodoxe Kirche (Ostkirche)",
-				"type": "",
+				"type": null,
 				"gndNumber": "4043912-4",
 				"docs": ["smallform_0147", "smallform_0228"]
 			},
 			"4043665-2": {
 				"name": "Optimismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4043665-2",
 				"docs": ["smallform_0186", "smallform_0284"]
 			},
 			"4214966-6": {
 				"name": "Pächter",
-				"type": "",
+				"type": null,
 				"gndNumber": "4214966-6",
 				"docs": [
 					"smallform_0178",
@@ -27326,31 +27327,31 @@
 			},
 			"4132835-8": {
 				"name": "Patriotismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4132835-8",
 				"docs": ["smallform_0283"]
 			},
 			"4045324-8": {
 				"name": "Pessimismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4045324-8",
 				"docs": ["smallform_0186", "smallform_0207", "smallform_0284"]
 			},
 			"4045673-0": {
 				"name": "Phantastik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4045673-0",
 				"docs": ["smallform_0017", "smallform_0022", "smallform_0033"]
 			},
 			"4655583-3": {
 				"name": "Pionier",
-				"type": "",
+				"type": null,
 				"gndNumber": "4655583-3",
 				"docs": ["smallform_0176", "smallform_0177", "smallform_0186", "smallform_0248"]
 			},
 			"4136213-5": {
 				"name": "Plantage",
-				"type": "",
+				"type": null,
 				"gndNumber": "4136213-5",
 				"docs": [
 					"smallform_0176",
@@ -27372,7 +27373,7 @@
 			},
 			"4046449-0": {
 				"name": "Poetik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4046449-0",
 				"docs": [
 					"smallform_0012",
@@ -27393,7 +27394,7 @@
 			},
 			"4047020-9": {
 				"name": "Präsidentenwahl",
-				"type": "",
+				"type": null,
 				"gndNumber": "4047020-9",
 				"docs": [
 					"smallform_0175",
@@ -27416,7 +27417,7 @@
 			},
 			"4047150-0": {
 				"name": "Presse",
-				"type": "",
+				"type": null,
 				"gndNumber": "4047150-0",
 				"docs": [
 					"smallform_0175",
@@ -27437,7 +27438,7 @@
 			},
 			"4076374-2": {
 				"name": "Propaganda",
-				"type": "",
+				"type": null,
 				"gndNumber": "4076374-2",
 				"docs": [
 					"smallform_0176",
@@ -27450,19 +27451,19 @@
 			},
 			"4047878-6": {
 				"name": "Puritanismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4047878-6",
 				"docs": ["smallform_0175", "smallform_0243"]
 			},
 			"4050963-1": {
 				"name": "Radio",
-				"type": "",
+				"type": null,
 				"gndNumber": "4050963-1",
 				"docs": ["letter_0064"]
 			},
 			"4048499-3": {
 				"name": "Rationalisierung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4048499-3",
 				"docs": [
 					"smallform_0199",
@@ -27474,7 +27475,7 @@
 			},
 			"4048531-6": {
 				"name": "Raubbau",
-				"type": "",
+				"type": null,
 				"gndNumber": "4048531-6",
 				"docs": [
 					"smallform_0176",
@@ -27486,13 +27487,13 @@
 			},
 			"4048680-1": {
 				"name": "Realismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4048680-1",
 				"docs": ["smallform_0017"]
 			},
 			"4076527-1": {
 				"name": "Rassismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4076527-1",
 				"docs": [
 					"smallform_0161",
@@ -27526,7 +27527,7 @@
 			},
 			"4177612-4": {
 				"name": "Reiseliteratur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4177612-4",
 				"docs": [
 					"smallform_0028",
@@ -27538,7 +27539,7 @@
 			},
 			"4049275-8": {
 				"name": "Reisen",
-				"type": "",
+				"type": null,
 				"gndNumber": "4049275-8",
 				"docs": [
 					"smallform_0028",
@@ -27595,7 +27596,7 @@
 			},
 			"4049319-2": {
 				"name": "Reiten",
-				"type": "",
+				"type": null,
 				"gndNumber": "4049319-2",
 				"docs": [
 					"smallform_0004",
@@ -27611,13 +27612,13 @@
 			},
 			"4049185-7": {
 				"name": "Reichtum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4049185-7",
 				"docs": ["smallform_0206", "smallform_0210", "smallform_0244", "smallform_0437"]
 			},
 			"4049396-9": {
 				"name": "Religion",
-				"type": "",
+				"type": null,
 				"gndNumber": "4049396-9",
 				"docs": [
 					"smallform_0021",
@@ -27634,25 +27635,25 @@
 			},
 			"4049680-6": {
 				"name": "Revolution",
-				"type": "",
+				"type": null,
 				"gndNumber": "4049680-6",
 				"docs": ["smallform_0027"]
 			},
 			"4178275-6": {
 				"name": "Röhm-Putsch",
-				"type": "",
+				"type": null,
 				"gndNumber": "4178275-6",
 				"docs": ["letter_0245", "letter_0272", "letter_0274"]
 			},
 			"4050491-8": {
 				"name": "Romantik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4050491-8",
 				"docs": ["smallform_0003", "smallform_0022", "smallform_0038"]
 			},
 			"4115806-4": {
 				"name": "Rüstungsindustrie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4115806-4",
 				"docs": [
 					"smallform_0417",
@@ -27664,24 +27665,24 @@
 			},
 			"4050894-8": {
 				"name": "Aufrüstung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4050894-8",
 				"docs": ["smallform_0417", "smallform_0426"]
 			},
 			"4051949-1": {
 				"name": "Schädling",
-				"type": "",
+				"type": null,
 				"gndNumber": "4051949-1"
 			},
 			"4116371-0": {
 				"name": "Schatten",
-				"type": "",
+				"type": null,
 				"gndNumber": "4116371-0",
 				"docs": ["smallform_0206", "smallform_0244"]
 			},
 			"4116383-7": {
 				"name": "Schifffahrt",
-				"type": "",
+				"type": null,
 				"gndNumber": "4116383-7",
 				"docs": [
 					"smallform_0421",
@@ -27694,7 +27695,7 @@
 			},
 			"4194681-9": {
 				"name": "Schiffsreise",
-				"type": "",
+				"type": null,
 				"gndNumber": "4194681-9",
 				"docs": [
 					"smallform_0242",
@@ -27712,13 +27713,13 @@
 			},
 			"4052455-3": {
 				"name": "Schiiten",
-				"type": "",
+				"type": null,
 				"gndNumber": "4052455-3",
 				"docs": ["smallform_0146"]
 			},
 			"4116418-0": {
 				"name": "Schreiben",
-				"type": "",
+				"type": null,
 				"gndNumber": "4116418-0",
 				"docs": [
 					"smallform_0302",
@@ -27736,42 +27737,42 @@
 			},
 			"4053474-1": {
 				"name": "Schule",
-				"type": "",
+				"type": null,
 				"gndNumber": "4053474-1",
 				"docs": ["letter_0411", "letter_0423"]
 			},
 			"4053461-3": {
 				"name": "Schulden",
-				"type": "",
+				"type": null,
 				"gndNumber": "4053461-3"
 			},
 			"4416843-3": {
 				"name": "Schweizer Einwanderer",
-				"type": "",
+				"type": null,
 				"gndNumber": "4416843-3",
 				"docs": ["smallform_0188", "smallform_0245", "smallform_0271", "smallform_0463"]
 			},
 			"4712413-1": {
 				"name": "Schweizer Einwanderin",
-				"type": "",
+				"type": null,
 				"gndNumber": "4712413-1",
 				"docs": ["smallform_0245", "smallform_0416"]
 			},
 			"4077343-7": {
 				"name": "Sekte",
-				"type": "",
+				"type": null,
 				"gndNumber": "4077343-7",
 				"docs": ["smallform_0160", "smallform_0248", "smallform_0303"]
 			},
 			"4054684-6": {
 				"name": "Sexualität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4054684-6",
 				"docs": ["smallform_0035"]
 			},
 			"4136055-2": {
 				"name": "Sezessionskrieg (1861-1865)",
-				"type": "",
+				"type": null,
 				"gndNumber": "4136055-2",
 				"docs": [
 					"smallform_0175",
@@ -27787,13 +27788,13 @@
 			},
 			"4332482-4": {
 				"name": "Siedler",
-				"type": "",
+				"type": null,
 				"gndNumber": "4332482-4",
 				"docs": ["smallform_0175"]
 			},
 			"4055245-7": {
 				"name": "Skisport",
-				"type": "",
+				"type": null,
 				"gndNumber": "4055245-7",
 				"docs": [
 					"smallform_0029",
@@ -27810,7 +27811,7 @@
 			},
 			"4055260-3": {
 				"name": "Sklaverei",
-				"type": "",
+				"type": null,
 				"gndNumber": "4055260-3",
 				"docs": [
 					"smallform_0175",
@@ -27825,7 +27826,7 @@
 			},
 			"4077571-9": {
 				"name": "soziale Klasse",
-				"type": "",
+				"type": null,
 				"gndNumber": "4077571-9",
 				"docs": [
 					"smallform_0178",
@@ -27839,42 +27840,42 @@
 			},
 			"4055695-5": {
 				"name": "Sozialdemokratie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4055695-5",
 				"docs": ["smallform_0226", "smallform_0270", "letter_0253", "letter_0288"]
 			},
 			"4697347-3": {
 				"name": "Spekulation",
-				"type": "",
+				"type": null,
 				"gndNumber": "4697347-3",
 				"docs": ["smallform_0265"]
 			},
 			"4056366-2": {
 				"name": "Sport",
-				"type": "",
+				"type": null,
 				"gndNumber": "4056366-2",
 				"docs": ["smallform_0197", "smallform_0207", "smallform_0613", "letter_0235", "letter_0422"]
 			},
 			"4454910-6": {
 				"name": "Sprachmischung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4454910-6"
 			},
 			"4056883-0": {
 				"name": "Stalinismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4056883-0",
 				"docs": ["letter_0245", "letter_0407"]
 			},
 			"4057020-4": {
 				"name": "Staudamm",
-				"type": "",
+				"type": null,
 				"gndNumber": "4057020-4",
 				"docs": ["smallform_0282"]
 			},
 			"4057883-5": {
 				"name": "Strasse",
-				"type": "",
+				"type": null,
 				"gndNumber": "4057883-5",
 				"docs": [
 					"smallform_0177",
@@ -27896,7 +27897,7 @@
 			},
 			"4058029-5": {
 				"name": "Streik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4058029-5",
 				"docs": [
 					"smallform_0201",
@@ -27910,25 +27911,25 @@
 			},
 			"4054423-0": {
 				"name": "Suizid",
-				"type": "",
+				"type": null,
 				"gndNumber": "4054423-0",
 				"docs": ["letter_0254", "letter_0278", "letter_0294"]
 			},
 			"4058665-0": {
 				"name": "Surrealismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4058665-0",
 				"docs": ["smallform_0033"]
 			},
 			"4184403-8": {
 				"name": "Tankstelle",
-				"type": "",
+				"type": null,
 				"gndNumber": "4184403-8",
 				"docs": ["smallform_0177", "smallform_0485"]
 			},
 			"4059205-4": {
 				"name": "Technik",
-				"type": "",
+				"type": null,
 				"gndNumber": "4059205-4",
 				"docs": [
 					"smallform_0170",
@@ -27941,7 +27942,7 @@
 			},
 			"4454574-5": {
 				"name": "Technisierung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4454574-5",
 				"docs": [
 					"smallform_0187",
@@ -27954,18 +27955,18 @@
 			},
 			"4060087-7": {
 				"name": "Tiere",
-				"type": "",
+				"type": null,
 				"gndNumber": "4060087-7"
 			},
 			"4060491-3": {
 				"name": "Totalitarismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4060491-3",
 				"docs": ["smallform_0223", "smallform_0426", "letter_0245", "letter_0420"]
 			},
 			"4018406-7": {
 				"name": "Tourismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4018406-7",
 				"docs": [
 					"smallform_0028",
@@ -27986,7 +27987,7 @@
 			},
 			"4323955-9": {
 				"name": "Traditionale Kultur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4323955-9",
 				"docs": [
 					"smallform_0147",
@@ -28002,30 +28003,30 @@
 			},
 			"4060747-1": {
 				"name": "Traum",
-				"type": "",
+				"type": null,
 				"gndNumber": "4060747-1",
 				"docs": ["smallform_0022"]
 			},
 			"4186270-3": {
 				"name": "Trockenheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4186270-3",
 				"docs": ["smallform_0176", "smallform_0191", "smallform_0244", "smallform_0470"]
 			},
 			"4247898-4": {
 				"name": "Überproduktion",
-				"type": "",
+				"type": null,
 				"gndNumber": "4247898-4"
 			},
 			"4186634-4": {
 				"name": "Überschwemmung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4186634-4",
 				"docs": ["smallform_0175"]
 			},
 			"4061614-9": {
 				"name": "Umsiedlung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4061614-9",
 				"docs": [
 					"smallform_0178",
@@ -28039,18 +28040,18 @@
 			},
 			"4384665-8": {
 				"name": "Unendlichkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4384665-8"
 			},
 			"4732816-2": {
 				"name": "Unfreiheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4732816-2",
 				"docs": ["smallform_0242"]
 			},
 			"4061778-6": {
 				"name": "Universität",
-				"type": "",
+				"type": null,
 				"gndNumber": "4061778-6",
 				"docs": [
 					"smallform_0055",
@@ -28063,29 +28064,29 @@
 			},
 			"4186999-0": {
 				"name": "Unterhaltungsindustrie",
-				"type": "",
+				"type": null,
 				"gndNumber": "4186999-0",
 				"docs": ["smallform_0034", "smallform_0038"]
 			},
 			"4062714-7": {
 				"name": "Verein",
-				"type": "",
+				"type": null,
 				"gndNumber": "4062714-7"
 			},
 			"4316381-6": {
 				"name": "Vergangenheit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4316381-6"
 			},
 			"4042696-8": {
 				"name": "Vergewaltigung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4042696-8",
 				"docs": ["smallform_0274"]
 			},
 			"4062901-6": {
 				"name": "Verkehr",
-				"type": "",
+				"type": null,
 				"gndNumber": "4062901-6",
 				"docs": [
 					"smallform_0146",
@@ -28101,56 +28102,56 @@
 			},
 			"4359141-3": {
 				"name": "Vernetzung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4359141-3",
 				"docs": ["smallform_0421", "smallform_0480", "smallform_0485"]
 			},
 			"4187981-8": {
 				"name": "Verschuldung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4187981-8"
 			},
 			"4063165-5": {
 				"name": "Verschwendung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4063165-5"
 			},
 			"4063234-9": {
 				"name": "Verstädterung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4063234-9",
 				"docs": ["smallform_0199"]
 			},
 			"4063254-4": {
 				"name": "Verteidigung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4063254-4",
 				"docs": ["smallform_0467"]
 			},
 			"4137001-6": {
 				"name": "Verzweiflung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4137001-6"
 			},
 			"4117585-2": {
 				"name": "Wandervogel",
-				"type": "",
+				"type": null,
 				"gndNumber": "4117585-2"
 			},
 			"4064292-6": {
 				"name": "Wahlkampf",
-				"type": "",
+				"type": null,
 				"gndNumber": "4064292-6"
 			},
 			"5324656-1": {
 				"name": "Weltausstellung New York",
-				"type": "",
+				"type": null,
 				"gndNumber": "5324656-1",
 				"docs": ["smallform_0416", "smallform_0419", "smallform_0471"]
 			},
 			"4079171-3": {
 				"name": "Weltwirtschaftskrise (1929-1932)",
-				"type": "",
+				"type": null,
 				"gndNumber": "4079171-3",
 				"docs": [
 					"smallform_0175",
@@ -28179,81 +28180,81 @@
 			},
 			"4065541-6": {
 				"name": "Werbung",
-				"type": "",
+				"type": null,
 				"gndNumber": "4065541-6",
 				"docs": ["smallform_0244"]
 			},
 			"4127225-0": {
 				"name": "Wildnis",
-				"type": "",
+				"type": null,
 				"gndNumber": "4127225-0",
 				"docs": ["smallform_0152"]
 			},
 			"4066334-6": {
 				"name": "Wintersport",
-				"type": "",
+				"type": null,
 				"gndNumber": "4066334-6",
 				"docs": ["smallform_0613", "smallform_0615"]
 			},
 			"4066380-2": {
 				"name": "Wirklichkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "4066380-2"
 			},
 			"4066466-1": {
 				"name": "Wirtschaftskrise",
-				"type": "",
+				"type": null,
 				"gndNumber": "4066466-1",
 				"docs": ["letter_0346"]
 			},
 			"4066562-8": {
 				"name": "Wissenschaft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4066562-8",
 				"docs": ["smallform_0052", "smallform_0055", "smallform_0197", "letter_0332", "letter_0344"]
 			},
 			"1138650579": {
 				"name": "Wohlstand",
-				"type": "",
+				"type": null,
 				"gndNumber": "1138650579"
 			},
 			"4251872-6": {
 				"name": "Wohltätigkeitsorg",
-				"type": "",
+				"type": null,
 				"gndNumber": "4251872-6"
 			},
 			"4067043-0": {
 				"name": "Wüste",
-				"type": "",
+				"type": null,
 				"gndNumber": "4067043-0"
 			},
 			"4067601-8": {
 				"name": "Zensur",
-				"type": "",
+				"type": null,
 				"gndNumber": "4067601-8",
 				"docs": ["letter_0083", "letter_0250"]
 			},
 			"4067864-7": {
 				"name": "Zionismus",
-				"type": "",
+				"type": null,
 				"gndNumber": "4067864-7",
 				"docs": ["letter_0281"]
 			},
 			"4067906-8": {
 				"name": "Zivilisation",
-				"type": "",
+				"type": null,
 				"gndNumber": "4067906-8",
 				"docs": ["smallform_0209"]
 			},
 			"7617561-3": {
 				"name": "Zwangsarbeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "7617561-3",
 				"docs": ["smallform_0284"]
 			},
 			"4079167-1": {
 				"name": "Zweiter Weltkrieg",
-				"type": "",
+				"type": null,
 				"gndNumber": "4079167-1",
 				"docs": [
 					"smallform_0413",
@@ -28289,12 +28290,12 @@
 			},
 			"1250270871": {
 				"name": "Zwischenkriegszeit",
-				"type": "",
+				"type": null,
 				"gndNumber": "1250270871"
 			},
 			"4068097-6": {
 				"name": "Zukunft",
-				"type": "",
+				"type": null,
 				"gndNumber": "4068097-6",
 				"docs": [
 					"smallform_0177",
@@ -28309,67 +28310,67 @@
 			},
 			"antebellum": {
 				"name": "Antebellum-Kultur",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"auslandschweizer": {
 				"name": "Auslandschweizer",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"bedeaux": {
 				"name": "Bedeaux-System",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"emigration": {
 				"name": "Emigration",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"endlosigkeit": {
 				"name": "Endlosigkeit",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"heimfahrt": {
 				"name": "Heimfahrt / Heimreise",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"heuchlerei": {
 				"name": "Heuchlerei",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"rüstungsprogramm": {
 				"name": "Rüstungsprogramm",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"schmelztiegel": {
 				"name": "Schmelztiegel (Motiv)",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"swissness": {
 				"name": "Swissness / Schweizerisches",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"vergangenheitskonstruktion": {
 				"name": "Vergangenheitskonstruktion",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"weisse": {
 				"name": "weisse Hegemonie",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			},
 			"weite": {
 				"name": "Weite",
-				"type": "",
+				"type": null,
 				"gndNumber": ""
 			}
 		}
