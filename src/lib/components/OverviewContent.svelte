@@ -56,7 +56,7 @@
 		</thead>
 
 		<!-- Body-->
-		{#each mKeys as mKey}
+		{#each mKeys as mKey (mKey)}
 			{#if mKey}
 				<tbody>
 					<tr>
@@ -72,7 +72,7 @@
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
-{#snippet MetadataValue(mKey: TDocMetadataKeys, value: any)}
+{#snippet MetadataValue(mKey: TDocMetadataKeys, value: unknown)}
 	{#if mKey}
 		<span>{String(value)}</span>
 	{/if}
@@ -81,7 +81,7 @@
 <!-- Snippet for LinkedItemsList -->
 {#snippet LinkedItemsContainer(docIds: TDocKeys[])}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
-		{#each docIds as docId}
+		{#each docIds as docId (docId)}
 			{@render LinkedItem(docId)}
 		{:else}
 			<p class="px-4 text-surface-700">Keine verlinkten Dokumente gefunden.</p>{/each}

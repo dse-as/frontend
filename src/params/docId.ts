@@ -1,10 +1,10 @@
 import type { ParamMatcher } from '@sveltejs/kit';
-import { documents as allDocs } from '$lib/data/documents.json';
+import { documents as fullMeta } from '$lib/data/documents.json';
 
 const keys_all = [
-	...Object.keys(allDocs.smallforms),
-	...Object.keys(allDocs.longforms),
-	...Object.keys(allDocs.letters)
+	...Object.keys(fullMeta.smallforms),
+	...Object.keys(fullMeta.longforms),
+	...Object.keys(fullMeta.letters)
 ];
 
 export const match = ((param: string): param is (typeof keys_all)[number] => {

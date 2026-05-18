@@ -5,7 +5,6 @@
 	let { docItem, ceteiData, currentPage } = $props();
 	let urls = $derived(docItem?.manuscript?.iiif_urls ?? []);
 	let url = $derived(urls[currentPage - 1]);
-	$inspect(url); //! FIX: when removed, the IIIF_Viewer stops updating... strange.
 </script>
 
 <div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden md:grid-cols-2">

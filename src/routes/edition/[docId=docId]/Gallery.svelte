@@ -15,15 +15,14 @@
 		page: number;
 	};
 
-	let { allDocs, docId, docItem, currentPage } = $props();
+	let { allDocs, docItem, currentPage } = $props();
 
 	// Textzeugen
 	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
 	let showTextzeugen = $state(false);
 
 	// Gallery Items
-
-	function collectGalleryItems(docId: string) {
+	function collectGalleryItems() {
 		const items: TItem[] =
 			docItem?.manuscript.iiif_urls.map((el: string, idx: number) => {
 				return { pagenum_running: idx + 1, fac: el, page: idx + 1 };
@@ -69,7 +68,7 @@
 			>
 		{/if}
 		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10">
-			{#each collectGalleryItems(docId) as item, index (item.page)}
+			{#each collectGalleryItems() as item, index (item.page)}
 				<button
 					bind:this={buttonRefs[index]}
 					class={[
@@ -83,9 +82,9 @@
 				</button>
 			{/each}
 			{#if showTextzeugen}
-				{#each tzgIds as tzgId}
+				{#each tzgIds as tzgId (tzgId)}
 					{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
-					{@const items = collectGalleryItems(tzgId)}
+					{@const items = collectGalleryItems()}
 					<div
 						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
 					>

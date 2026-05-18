@@ -3,7 +3,7 @@
 	import OverviewList from '$lib/components/OverviewList.svelte';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 
-	import type { TDocTypes, TDocKeys, TDocuments } from '$lib/types/documents/TDocuments.js';
+	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();

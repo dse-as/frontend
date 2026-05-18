@@ -59,7 +59,7 @@
 				crossOriginPolicy: 'Anonymous'
 			});
 
-			observer = new ResizeObserver((_entries) => {
+			observer = new ResizeObserver(() => {
 				setTimeout(() => {
 					viewer.viewport.goHome(false);
 				}, 50);

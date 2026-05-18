@@ -106,9 +106,9 @@
 					return keywords && keywords.length > 0;
 				})}
 					<div data-dom="global_entities" class="flex flex-wrap gap-4">
-						{#each Object.keys(dictReg) as regType}
+						{#each Object.keys(dictReg) as regType (regType)}
 							{@const regKeys = docItem.metadata.keywords[regType]}
-							{#each regKeys ? Object.values(regKeys) : [] as regKey}
+							{#each regKeys ? Object.values(regKeys) : [] as regKey (regKey)}
 								<a
 									class="whitespace-nowrap text-surface-950"
 									data-type="entity"
@@ -148,7 +148,7 @@
 			{:else if stateMetadata === 'all'}
 				<div class="h-auto">
 					<div data-dom="metadata_table" class="">
-						{#each Object.entries(docItem.metadata) as entry}
+						{#each Object.entries(docItem.metadata) as entry (entry)}
 							{#if entry[0] !== 'keywords'}
 								{@render metadataEntry(entry[0], entry[1])}
 							{/if}

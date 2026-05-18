@@ -6,6 +6,6 @@ export const entries: EntryGenerator = () => {
 	return [{ docPickerId: 'letters' }, { docPickerId: 'smallforms' }, { docPickerId: 'longforms' }];
 };
 
-export const load: PageServerLoad = ({}) => {
+export const load: PageServerLoad = () => {
 	return {};
 };

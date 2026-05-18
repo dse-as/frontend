@@ -11,6 +11,7 @@
 	import { type TDocKeys } from '$lib/types/documents/TDocuments';
 	import { tick } from 'svelte';
 	import type { TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
+	import { SvelteMap } from 'svelte/reactivity';
 
 	const seqAllTyped = seqAll as Record<
 		string,
@@ -33,17 +34,6 @@
 		docId,
 		currentSeq = { type: 'travels' as TSeqTypes, id: 'travel_0015' }
 	} = $props();
-
-	// Types
-	type TItem = {
-		docId: string;
-		fac: string;
-		details: {
-			type: TSeqTypes;
-			title: string;
-			datestring: string;
-		};
-	};
 
 	// Sequences
 	let seqMatching = $derived(
@@ -120,7 +110,8 @@
 	}
 
 	function centerCurrentItemInGallery(el: HTMLElement) {
-		docId; // force rerun on change of docId
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		let _foreRerun = docId; // force rerun on change of docId
 
 		const container = el.parentElement;
 		if (!container) return;
@@ -137,7 +128,8 @@
 	}
 
 	function cycleBlocks(el: HTMLElement) {
-		activeType; // force rerun on change of activeType (since number of blocks depends on type)
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		let _foreRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
 
 		let currentIndex = 0;
 		let blocks: HTMLElement[] = Array.from(el.querySelectorAll('[data-type=selectable-block]'));
@@ -162,7 +154,7 @@
 			}
 		}
 		// Cycle through blocks using keyboard
-		const handlers = new Map<HTMLElement, (ev: KeyboardEvent) => void>();
+		const handlers = new SvelteMap<HTMLElement, (ev: KeyboardEvent) => void>();
 		blocks.forEach((block) => {
 			const handler = (ev: KeyboardEvent) => handleKeyDown(ev, block);
 			handlers.set(block, handler);
@@ -225,7 +217,7 @@
 				itemsBeforeIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
 			]}
 		>
-			{#each itemsBeforeIds as itemId}
+			{#each itemsBeforeIds as itemId (itemId)}
 				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
@@ -243,7 +235,7 @@
 				itemsAfterIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
 			]}
 		>
-			{#each itemsAfterIds as itemId}
+			{#each itemsAfterIds as itemId (itemId)}
 				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
 			{/each}
 		</div>
@@ -378,7 +370,7 @@
 					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 			>
-				{#each Object.keys(seqOther) as seqType}
+				{#each Object.keys(seqOther) as seqType (seqType)}
 					<button
 						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
@@ -444,7 +436,7 @@
 					]}
 				>
 					<!-- Groups with other Sequences-->
-					{#each Object.keys(seqOther[activeType!] ?? {}) as seqKey}
+					{#each Object.keys(seqOther[activeType!] ?? {}) as seqKey (seqKey)}
 						<div
 							class="group flex w-full flex-col gap-5 py-5"
 							tabindex="0"

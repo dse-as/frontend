@@ -5,7 +5,7 @@ import { register as reg } from '$lib/data/register.json';
 import { findKeyBySecondaryKey } from '$lib/functions/ease_of_use/findKeyBySecondaryKey.js';
 import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 
-export const load: LayoutServerLoad = ({ params, url }) => {
+export const load: LayoutServerLoad = ({ params }) => {
 	const regSlug = params.regSlug as TRegTypes | TRegKeysFlat | undefined;
 	// const regType: string | null = findKeyBySecondaryKey(reg, regSlug);
 	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;

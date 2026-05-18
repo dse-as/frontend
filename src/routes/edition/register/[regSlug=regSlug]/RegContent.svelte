@@ -62,7 +62,7 @@
 		</thead>
 
 		<!-- Body-->
-		{#each attKeys as attKey}
+		{#each attKeys as attKey (attKey)}
 			{#if attKey}
 				<tbody>
 					<tr>
@@ -113,7 +113,7 @@
 <!-- Snippet for LinkedItemsList -->
 {#snippet LinkedItemsContainer(docIds: TDocKeys[])}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
-		{#each docIds as docId}
+		{#each docIds as docId (docId)}
 			{@render LinkedItem(docId)}
 		{:else}
 			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>{/each}

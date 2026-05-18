@@ -31,7 +31,7 @@
 	<AppBar.Headline class="">
 		<nav class="hidden lg:block">
 			<ul class="my-2 flex w-full flex-wrap items-start justify-start gap-x-8 gap-y-6">
-				{#each links as link}
+				{#each links as link (link)}
 					<li
 						class={[
 							'list-nav-item inline-block h-full text-surface-950 hover:text-primary-500',
@@ -91,7 +91,7 @@
 							<!-- Nav content full height -->
 							<nav class="mt-6">
 								<ul class="flex flex-col gap-1">
-									{#each links as link}
+									{#each links as link (link)}
 										<li class="m-2!">
 											<a
 												href={link.path}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { selectedTextNode } from '$lib/globals/state/ui.svelte';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
@@ -129,7 +128,7 @@
 	// Load text
 	const c = new CETEI();
 
-	const setupCustomElements = (el: HTMLElement) => {
+	const setupCustomElements = () => {
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};

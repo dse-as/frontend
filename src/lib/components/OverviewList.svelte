@@ -4,6 +4,7 @@
 		T extends 'documents' | 'register'
 	"
 >
+	import { resolve } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
@@ -19,7 +20,6 @@
 	import Shortcuts from '$lib/components/Shortcuts.svelte';
 	import type {
 		TRegDict,
-		TRegGroupsFlat,
 		TRegGroupsMap,
 		TRegister,
 		TRegKeysFlat,
@@ -27,7 +27,6 @@
 	} from '$lib/types/register/TRegister';
 	import type {
 		TDocDict,
-		TDocGroupsFlat,
 		TDocGroupsMap,
 		TDocKeys,
 		TDocTypes,
@@ -126,7 +125,7 @@
 			'align-left block w-90 border-b px-5 py-3 text-left',
 			!isMultiColumn && key === ovItem && 'bg-surface-300-700 font-bold'
 		]}
-		href={key}
+		href={resolve(ovVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
 	>
 		<span class="overflow-hidden whitespace-normal">
 			{name ? `${name}` : '...'}

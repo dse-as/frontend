@@ -21,7 +21,7 @@
 	<div class="mt-10 flex flex-wrap justify-center gap-2">
 		{#each Object.keys(corrData).filter((corrId) => {
 			return !specialCorrs.includes(corrId);
-		}) as corrId}
+		}) as corrId (corrId)}
 			{@const firstDocId = corrData[corrId as TSeqCorrespondenceKeys].docs[0]}
 			<a
 				class={[
