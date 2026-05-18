@@ -1,10 +1,10 @@
 <script lang="ts">
-	import RegContent from './RegContent.svelte';
+	import RegSummarypage from './RegSummarypage.svelte';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
 	import type { TRegister, TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import { onMount } from 'svelte';
-	import OverviewList from '$lib/components/OverviewList.svelte';
+	import List from '$lib/components/List.svelte';
 
 	let { data } = $props();
 
@@ -41,7 +41,7 @@
 		}
 	});
 
-	//! FIX: This is a workaround to pass the same *absolute* value to RegList and RegContent
+	//! FIX: This is a workaround to pass the same *absolute* value to RegList and RegSummarypage
 	// Ideally the height would be relative (e.g. h-full).
 	// However, this will make overflow its flex content (i.e. the list and linked items).
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
@@ -50,7 +50,7 @@
 {#if data.regView === 'regView2'}
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
-		<OverviewList
+		<List
 			ovVariant="register"
 			isMultiColumn={true}
 			ovMeta={allDocsRecord[regType]}
@@ -62,7 +62,7 @@
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
-		<OverviewList
+		<List
 			ovVariant="register"
 			isMultiColumn={false}
 			ovMeta={allDocsRecord[regType]}
@@ -71,7 +71,7 @@
 			ovItem={regSlug as TRegKeysFlat}
 			{cheatPageHeightInRegSingleColView}
 		/>
-		<RegContent
+		<RegSummarypage
 			docType={regType}
 			allDocs={data.allDocs}
 			ovDict={dictReg[regType]}

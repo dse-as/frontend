@@ -1,6 +1,6 @@
 <script lang="ts">
-	import OverviewContent from '$lib/components/OverviewContent.svelte';
-	import OverviewList from '$lib/components/OverviewList.svelte';
+	import DocSummarypage from './DocSummarypage.svelte';
+	import List from '$lib/components/List.svelte';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 
 	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
@@ -39,7 +39,7 @@
 		}
 	});
 
-	//! FIX: This is a workaround to pass the same *absolute* value to OverviewList and OverviewContent
+	//! FIX: This is a workaround to pass the same *absolute* value to List and DocSummarypage
 	// Ideally the height would be relative (e.g. h-full).
 	// However, this will make overflow its flex content (i.e. the list and linked items).
 	const cheatPageHeightInRegSingleColView = 'height:85vh;';
@@ -49,7 +49,7 @@
 	{#if data.edView === 'edView2'}
 		<!-- Overview with Multi-Column List -->
 		<div class="absolute top-45 left-0 w-full px-10">
-			<OverviewList
+			<List
 				ovVariant="documents"
 				isMultiColumn={true}
 				ovMeta={data.allDocs[docType]}
@@ -61,7 +61,7 @@
 	{:else}
 		<!-- Detail View with Single-Column List and Content -->
 		<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
-			<OverviewList
+			<List
 				ovVariant="documents"
 				isMultiColumn={false}
 				ovMeta={data.allDocs[docType]}
@@ -71,7 +71,7 @@
 				{cheatPageHeightInRegSingleColView}
 			/>
 			{#if data.docItem && data.docId}
-				<OverviewContent
+				<DocSummarypage
 					allDocs={data.allDocs}
 					{docType}
 					docId={data.docId}
