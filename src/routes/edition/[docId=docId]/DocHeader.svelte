@@ -117,7 +117,8 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									{reg[regType as TRegTypes][regKey]?.name}
+									<!-- //! FIX hardcoded type -->
+									{(reg[regType as TRegTypes][regKey as never] as Record<'name', any>)?.name}
 								</a>
 							{/each}
 						{/each}
@@ -149,8 +150,8 @@
 				<div class="h-auto">
 					<div data-dom="metadata_table" class="">
 						{#each Object.entries(docItem.metadata) as entry (entry)}
-							{#if entry[0] !== 'keywords'}
-								{@render metadataEntry(entry[0], entry[1])}
+							{#if entry[0] !== 'keywords' && entry[1]}
+								{@render metadataEntry(entry[0], String(entry[1]))}
 							{/if}
 						{/each}
 					</div>

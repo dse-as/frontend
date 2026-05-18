@@ -1,10 +1,15 @@
 const NOTE_ID_PREFIX = 'note_';
 
-export const behaviors = (dom) => {
+interface BehaviorContext {
+	dom: Document;
+	noteIndex?: number;
+}
+
+export const behaviors = (dom: Document) => {
 	return {
 		tei: {
 			// Handle Line Breaks and Hyphenation
-			lb: function (el: HTMLElement) {
+			lb(this: BehaviorContext, el: HTMLElement): Text | undefined {
 				if (el.getAttribute('break') === 'no') {
 					// Remove the trailing whitespace of the previous text node
 					const prev = el.previousSibling;
@@ -18,7 +23,7 @@ export const behaviors = (dom) => {
 						const hyphenSpan = dom.createElement('span');
 						hyphenSpan.setAttribute('data-type', 'hyphen');
 						hyphenSpan.textContent = '-';
-						prev.parentNode.insertBefore(hyphenSpan, el);
+						prev.parentNode?.insertBefore(hyphenSpan, el);
 					}
 
 					// Replace the current behavior with an empty text node
@@ -28,7 +33,7 @@ export const behaviors = (dom) => {
 
 			// Insert Footnotes and extract note content
 			// --> wrapping of commented text happens in a client-side function (see below).
-			note: function (el) {
+			note(this: BehaviorContext, el: HTMLElement): HTMLSpanElement {
 				// Create running index
 				if (!this.noteIndex) {
 					this['noteIndex'] = 1;
@@ -54,8 +59,8 @@ export const behaviors = (dom) => {
 				const footnote = dom.createElement('span');
 				footnote.classList.add('footnote');
 				footnote.setAttribute('data-noteid', `${noteId}`);
-				footnote.dataset.noteId = this.noteIndex;
-				footnote.innerHTML = this.noteIndex;
+				footnote.dataset.noteId = String(this.noteIndex);
+				footnote.innerHTML = String(this.noteIndex);
 
 				return footnote;
 			}

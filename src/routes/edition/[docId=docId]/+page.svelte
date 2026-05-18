@@ -63,7 +63,7 @@
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf[0] === 'DF'}
-		<Gallery allDocs={data.allDocs} docId={data.docId} docItem={data.docItem} {currentPage} />
+		<Gallery allDocs={data.allDocs} docItem={data.docItem} {currentPage} />
 	{/if}
 
 	<!-- Content -->
