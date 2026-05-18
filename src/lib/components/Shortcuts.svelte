@@ -13,18 +13,18 @@
 
 	type TProps = T extends 'documents'
 		? {
-				ovVariant: 'documents';
+				itemVariant: 'documents';
 				dict: TDocDict['dict_docs'][TDocTypes];
 				allGroupKeys: TDocGroupsMap[TDocTypes][];
 			}
 		: {
-				ovVariant: 'register';
+				itemVariant: 'register';
 				dict: TRegDict['dict_register'][TRegTypes];
 				allGroupKeys: TRegGroupsMap[TRegTypes][];
 			};
 
 	let {
-		ovVariant,
+		itemVariant,
 		dict,
 		allGroupKeys,
 		hasGroupControls,
@@ -35,7 +35,7 @@
 	} = $props();
 </script>
 
-{#if !hasGroupControls || !uiOvGroupByCat[ovVariant]}
+{#if !hasGroupControls || !uiOvGroupByCat[itemVariant]}
 	<div class="flex w-max justify-center gap-2">
 		{#each autoCatLabels as letter (letter)}
 			<button
@@ -48,7 +48,7 @@
 			>
 		{/each}
 	</div>
-{:else if dict && hasGroupControls && uiOvGroupByCat[ovVariant]}
+{:else if dict && hasGroupControls && uiOvGroupByCat[itemVariant]}
 	<div class="flex w-full justify-start gap-2 overflow-x-auto pb-5">
 		{#each allGroupKeys as groupKey (groupKey)}
 			<!-- //! Fix this any type -->

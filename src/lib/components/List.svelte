@@ -35,26 +35,26 @@
 
 	type TProps = T extends 'documents'
 		? {
-				ovVariant: 'documents';
-				ovType: TDocTypes;
-				ovMeta: TDocuments['documents'][TDocTypes];
-				ovDict: TDocDict['dict_docs'][TDocTypes];
-				ovItem?: TDocKeys | null;
+				itemVariant: 'documents';
+				itemType: TDocTypes;
+				itemData: TDocuments['documents'][TDocTypes];
+				itemDict: TDocDict['dict_docs'][TDocTypes];
+				itemKey?: TDocKeys | null;
 			}
 		: {
-				ovVariant: 'register';
-				ovType: TRegTypes;
-				ovMeta: TRegister['register'][TRegTypes];
-				ovDict: TRegDict['dict_register'][TRegTypes];
-				ovItem?: TRegKeysFlat | null;
+				itemVariant: 'register';
+				itemType: TRegTypes;
+				itemData: TRegister['register'][TRegTypes];
+				itemDict: TRegDict['dict_register'][TRegTypes];
+				itemKey?: TRegKeysFlat | null;
 			};
 
 	let {
-		ovVariant,
-		ovType,
-		ovMeta,
-		ovDict,
-		ovItem = null,
+		itemVariant,
+		itemType,
+		itemData,
+		itemDict,
+		itemKey = null,
 		isMultiColumn,
 		cheatPageHeightInRegSingleColView = ''
 	}: TProps & {
@@ -63,33 +63,33 @@
 	} = $props();
 
 	// Booleans for sorting and grouping
-	let hasGroupControls = $derived(UI_TYPESWITHGROUPCONTROL[ovVariant].includes(ovType));
-	let hasSortControls = $derived(UI_TYPESWITHSORTCONTROL[ovVariant].includes(ovType));
+	let hasGroupControls = $derived(UI_TYPESWITHGROUPCONTROL[itemVariant].includes(itemType));
+	let hasSortControls = $derived(UI_TYPESWITHSORTCONTROL[itemVariant].includes(itemType));
 
 	// Defaults
-	let defaultSortBy = $derived(ovType === 'people' ? 'lastname' : 'name'); // must also set 'name' in ui.svelte.ts (//! Fix this)
-	let sortBy = $derived(hasSortControls ? uiOvSortBy[ovVariant] : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
+	let defaultSortBy = $derived(itemType === 'people' ? 'lastname' : 'name'); // must also set 'name' in ui.svelte.ts (//! Fix this)
+	let sortBy = $derived(hasSortControls ? uiOvSortBy[itemVariant] : defaultSortBy); // The actual sortBy state, which includes a fallback for regTypes without sorting options.
 	$effect(() => {
-		uiOvSortBy[ovVariant] = uiOvSortBy[ovVariant] ? uiOvSortBy[ovVariant] : defaultSortBy; // If empty set to default
+		uiOvSortBy[itemVariant] = uiOvSortBy[itemVariant] ? uiOvSortBy[itemVariant] : defaultSortBy; // If empty set to default
 	});
 
 	let allGroupKeys = $derived(
 		//! IMPROVE: the order inside the unordered object array may actually break.
-		ovVariant === 'documents'
-			? (Object.keys(ovDict.groups) as TDocGroupsMap[TDocTypes][])
-			: (Object.keys(ovDict.groups) as TRegGroupsMap[TRegTypes][])
+		itemVariant === 'documents'
+			? (Object.keys(itemDict.groups) as TDocGroupsMap[TDocTypes][])
+			: (Object.keys(itemDict.groups) as TRegGroupsMap[TRegTypes][])
 	);
 
 	// Variables for autoCatLabels (Alphabet or Dates)
 	//! IMPROVE: this should be generalised as soon as more types receive sorting-options
 	let sortVariableKeyForShortcuts = $derived(
-		ovType === 'people' ? 'lastname' : ovType === 'events' ? sortBy : 'name'
+		itemType === 'people' ? 'lastname' : itemType === 'events' ? sortBy : 'name'
 	);
 	let currentAutoCatLabel: string | null = null; //! FIX THIS HACK: setting this to state will break the hack below
 	let autoCatLabels = $derived(
 		[
 			...new Set(
-				Object.values(ovMeta).map((el) => {
+				Object.values(itemData).map((el) => {
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
 					return normalizeChars(el[sortVariableKeyForShortcuts][0]?.toUpperCase());
 				})
@@ -113,7 +113,7 @@
 	}
 
 	$effect(() => {
-		if (ovItem) scrollToItem(ovItem);
+		if (itemKey) scrollToItem(itemKey);
 	});
 </script>
 
@@ -123,9 +123,9 @@
 		id={key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && key === ovItem && 'bg-surface-300-700 font-bold'
+			!isMultiColumn && key === itemKey && 'bg-surface-300-700 font-bold'
 		]}
-		href={resolve(ovVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
+		href={resolve(itemVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
 	>
 		<span class="overflow-hidden whitespace-normal">
 			{name ? `${name}` : '...'}
@@ -174,12 +174,12 @@
 			{#snippet sortButton(name: string, sortKey: string)}
 				<button
 					class={[
-						uiOvSortBy[ovVariant] === sortKey
+						uiOvSortBy[itemVariant] === sortKey
 							? 'pointer-events-none font-bold text-surface-950-50'
 							: 'text-primary-500 underline'
 					]}
 					onclick={() => {
-						uiOvSortBy[ovVariant] = sortKey;
+						uiOvSortBy[itemVariant] = sortKey;
 					}}>{name}</button
 				>
 			{/snippet}
@@ -197,8 +197,8 @@
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<Switch
-				checked={uiOvGroupByCat[ovVariant]}
-				onCheckedChange={(details) => (uiOvGroupByCat[ovVariant] = details.checked)}
+				checked={uiOvGroupByCat[itemVariant]}
+				onCheckedChange={(details) => (uiOvGroupByCat[itemVariant] = details.checked)}
 			>
 				<Switch.Control>
 					<Switch.Thumb />
@@ -223,18 +223,18 @@
 			</div>
 
 			<!-- TypeScript requires to split this conditional component call -->
-			{#if ovVariant === 'documents'}
+			{#if itemVariant === 'documents'}
 				<Shortcuts
-					ovVariant="documents"
-					dict={ovDict as TDocDict['dict_docs'][TDocTypes]}
+					itemVariant="documents"
+					dict={itemDict as TDocDict['dict_docs'][TDocTypes]}
 					{hasGroupControls}
 					{autoCatLabels}
 					allGroupKeys={allGroupKeys as TDocGroupsMap[TDocTypes][]}
 				/>
-			{:else if ovVariant === 'register'}
+			{:else if itemVariant === 'register'}
 				<Shortcuts
-					ovVariant="register"
-					dict={ovDict as TRegDict['dict_register'][TRegTypes]}
+					itemVariant="register"
+					dict={itemDict as TRegDict['dict_register'][TRegTypes]}
 					{hasGroupControls}
 					{autoCatLabels}
 					allGroupKeys={allGroupKeys as TRegGroupsMap[TRegTypes][]}
@@ -287,23 +287,27 @@
 			</div>
 		{/if}
 
-		{#if hasGroupControls && uiOvGroupByCat[ovVariant]}
+		{#if hasGroupControls && uiOvGroupByCat[itemVariant]}
 			<!-- Grouped by categories -->
 			{#each allGroupKeys as groupKey (groupKey)}
 				{#if groupKey && groupKey !== '?'}
 					{@render groupTitle(
 						//! FIX hardcoded types!
-						(ovDict.groups[groupKey as keyof typeof ovDict.groups] as Record<'label_plural', any>)
-							?.label_plural || '?'
+						(
+							itemDict.groups[groupKey as keyof typeof itemDict.groups] as Record<
+								'label_plural',
+								any
+							>
+						)?.label_plural || '?'
 					)}
-					{#each filterAndSortData( ovMeta, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as [key, item] (key)}
+					{#each filterAndSortData( itemData, sortBy, { filterKey: 'type', filtersIn: [groupKey] } ) as [key, item] (key)}
 						{@render regListItem(key, item.name)}
 					{/each}
 				{/if}
 			{/each}
-		{:else if ovType}
+		{:else if itemType}
 			<!-- All other types -->
-			{#each filterAndSortData(ovMeta, sortBy) as [key, item] (key)}
+			{#each filterAndSortData(itemData, sortBy) as [key, item] (key)}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
 						? item.date.from.slice(0, 4)

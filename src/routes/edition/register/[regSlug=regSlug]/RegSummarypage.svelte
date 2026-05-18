@@ -27,13 +27,13 @@
 	let {
 		docType,
 		allDocs,
-		ovDict,
+		regDict,
 		regAttributes,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		docType: T;
 		allDocs: TDocuments['documents'];
-		ovDict: TRegDict['dict_register'][T];
+		regDict: TRegDict['dict_register'][T];
 		regAttributes: Record<TRegAttrsMap[T], any>;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
@@ -67,7 +67,7 @@
 				<tbody>
 					<tr>
 						<td class="w-80 px-4 py-2 font-bold"
-							>{(ovDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
+							>{(regDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
 								?.label}:</td
 						>
 						<td class="px-4 py-2 text-left"

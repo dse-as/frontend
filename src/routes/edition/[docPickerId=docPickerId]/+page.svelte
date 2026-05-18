@@ -50,24 +50,24 @@
 		<!-- Overview with Multi-Column List -->
 		<div class="absolute top-45 left-0 w-full px-10">
 			<List
-				ovVariant="documents"
+				itemVariant="documents"
 				isMultiColumn={true}
-				ovMeta={data.allDocs[docType]}
-				ovDict={dictDoc[docType]}
-				ovType={docSlug as TDocTypes}
-				ovItem={null}
+				itemData={data.allDocs[docType]}
+				itemDict={dictDoc[docType]}
+				itemType={docSlug as TDocTypes}
+				itemKey={null}
 			/>
 		</div>
 	{:else}
 		<!-- Detail View with Single-Column List and Content -->
 		<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 			<List
-				ovVariant="documents"
+				itemVariant="documents"
 				isMultiColumn={false}
-				ovMeta={data.allDocs[docType]}
-				ovDict={dictDoc[docType]}
-				ovType={docType}
-				ovItem={docSlug as TDocKeys}
+				itemData={data.allDocs[docType]}
+				itemDict={dictDoc[docType]}
+				itemType={docType}
+				itemKey={docSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
 			{#if data.docItem && data.docId}

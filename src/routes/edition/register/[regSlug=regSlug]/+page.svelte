@@ -51,30 +51,30 @@
 	<!-- Overview with Multi-Column List -->
 	<div class="absolute top-45 left-0 w-full px-10">
 		<List
-			ovVariant="register"
+			itemVariant="register"
 			isMultiColumn={true}
-			ovMeta={allDocsRecord[regType]}
-			ovDict={dictReg[regType]}
-			ovType={regSlug as TRegTypes}
-			ovItem={null}
+			itemData={allDocsRecord[regType]}
+			itemDict={dictReg[regType]}
+			itemType={regSlug as TRegTypes}
+			itemKey={null}
 		/>
 	</div>
 {:else}
 	<!-- Detail View with Single-Column List and Content -->
 	<div class="relative mt-24 grid h-full w-full grid-cols-[auto_1fr] gap-4">
 		<List
-			ovVariant="register"
+			itemVariant="register"
 			isMultiColumn={false}
-			ovMeta={allDocsRecord[regType]}
-			ovDict={dictReg[regType]}
-			ovType={regType}
-			ovItem={regSlug as TRegKeysFlat}
+			itemData={allDocsRecord[regType]}
+			itemDict={dictReg[regType]}
+			itemType={regType}
+			itemKey={regSlug as TRegKeysFlat}
 			{cheatPageHeightInRegSingleColView}
 		/>
 		<RegSummarypage
 			docType={regType}
 			allDocs={data.allDocs}
-			ovDict={dictReg[regType]}
+			regDict={dictReg[regType]}
 			regAttributes={data.regAttributes}
 			{cheatPageHeightInRegSingleColView}
 		/>
