@@ -135,17 +135,8 @@
 
 <!-- Snippet for Group Titles (i.e. autoCatLabels or Category Names) -->
 {#snippet groupTitle(value: string)}
-	<button
-		onclick={async () => {
-			if (isMultiColumn) {
-				await goto(`#${slugify(value, { slash: true })}`, {
-					replaceState: true,
-					noScroll: true,
-					keepFocus: true
-				});
-				window.scrollTo({ top: 0, behavior: 'instant' });
-			}
-		}}
+	<a
+		href={`#${slugify(value, { slash: true })}`}
 		aria-label="store in URL"
 		id={slugify(value, { slash: true })}
 		class={[
@@ -163,7 +154,7 @@
 				{/if}
 			</p>
 		</div>
-	</button>
+	</a>
 {/snippet}
 
 <!-- Snippet for Sorting Controls -->

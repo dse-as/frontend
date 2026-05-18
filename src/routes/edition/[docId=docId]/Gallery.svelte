@@ -47,7 +47,7 @@
 	function handleSelectPage(currentPage: number) {
 		const url = new URL(page.url);
 		url.searchParams.set('page', String(currentPage));
-		goto(url, { noScroll: true });
+		goto(resolve(url.pathname), { noScroll: true });
 	}
 
 	$effect(() => {

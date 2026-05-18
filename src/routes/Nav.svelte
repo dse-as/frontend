@@ -40,7 +40,7 @@
 								: ''
 						]}
 					>
-						<a href={link.path}>{@html link.name}</a>
+						<a href={resolve(link.path)}>{@html link.name}</a>
 					</li>
 				{/each}
 			</ul>
