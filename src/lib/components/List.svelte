@@ -32,6 +32,7 @@
 		TDocTypes,
 		TDocuments
 	} from '$lib/types/documents/TDocuments';
+	import { invertScroll } from '$lib/functions/invertScroll';
 
 	type TProps = T extends 'documents'
 		? {
@@ -249,20 +250,7 @@
 		// redirect vertical scroll to horizontal scroll
 		onwheel={(ev) => {
 			if (isMultiColumn && ovListScrollContainer) {
-				const atStart = ovListScrollContainer.scrollLeft <= 0;
-				const atEnd =
-					ovListScrollContainer.scrollLeft >=
-					ovListScrollContainer?.scrollWidth - ovListScrollContainer?.clientWidth - 4;
-				if (
-					!(atStart && atEnd) &&
-					((atStart && (ev.deltaY > 0 || ev.deltaX > 0)) ||
-						(atEnd && (ev.deltaY < 0 || ev.deltaX < 0)) ||
-						(!atStart && !atEnd))
-				) {
-					ev.preventDefault(); // Prevent default vertical scroll behavior
-					ovListScrollContainer.scrollLeft += ev.deltaY;
-					ovListScrollContainer.scrollLeft += ev.deltaX;
-				}
+				invertScroll(ev);
 			}
 		}}
 		class={[

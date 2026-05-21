@@ -5,6 +5,7 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams.js';
 	import type { TSeqTypes } from '$lib/types/TSequences.js';
+	import { invertScroll } from '$lib/functions/invertScroll.js';
 
 	let { data } = $props();
 	let seqType = $derived(page.params.seqType as Exclude<TSeqTypes, 'correspondence'>); //! FIX type exclusion, once structure is stable.
@@ -21,7 +22,13 @@
 	<div class="mt-5 rounded-xl p-5">
 		<h4 class="mb-5 h4">{seqItems[seqItemId].preamble}</h4>
 
-		<div bind:this={containerRef} class="flex min-h-30 w-full gap-2 overflow-x-auto px-10">
+		<div
+			bind:this={containerRef}
+			class="flex min-h-30 w-full gap-2 overflow-x-auto px-10"
+			onwheel={(ev) => {
+				invertScroll(ev);
+			}}
+		>
 			{#each seqItems[seqItemId].docs as docId (docId)}
 				{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 				<a
