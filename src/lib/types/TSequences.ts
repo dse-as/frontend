@@ -26,3 +26,20 @@ export type TSeqKeys =
 	| TSeqTravelsKeys
 	| TSeqCorrespondenceKeys
 	| TSeqSeriesKeys;
+
+export type TDictSeq = Record<
+	string,
+	{
+		key_singular: string;
+		label_plural: string;
+		url_overview: string | null;
+		label_overview: string | null;
+		label_next: string;
+		label_prev: string;
+	}
+>;
+
+export type TSeqAll = Record<
+	string,
+	Record<string, { url_slug?: string | null; name?: string; preamble?: string; docs: string[] }>
+>;
