@@ -1,4 +1,4 @@
-export type DocSequences = {
+export type TDocSequences = {
 	[groupId: string]: {
 		[sequenceId: string]: {
 			name?: string;
@@ -9,7 +9,7 @@ export type DocSequences = {
 	};
 };
 
-export type MatchResult = {
+export type TMatchResult = {
 	[groupId: string]: {
 		[sequenceId: string]: {
 			name?: string;
@@ -21,14 +21,14 @@ export type MatchResult = {
 
 //  Finds all sequences across groups where the given docId appears.
 export function findMatchingSequences(
-	docSequences: DocSequences,
+	TDocSequences: TDocSequences,
 	docId: string,
 	filterSeqKeys: string[]
-): MatchResult {
-	const result: MatchResult = {};
+): TMatchResult {
+	const result: TMatchResult = {};
 
-	for (const groupId of Object.keys(docSequences)) {
-		const group = docSequences[groupId];
+	for (const groupId of Object.keys(TDocSequences)) {
+		const group = TDocSequences[groupId];
 		for (const sequenceId of Object.keys(group)) {
 			const sequence = group[sequenceId];
 			const idx = sequence.docs.indexOf(docId);
