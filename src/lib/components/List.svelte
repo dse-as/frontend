@@ -118,7 +118,7 @@
 </script>
 
 <!-- Snippet for Register Items -->
-{#snippet regListItem(key: string, name: string)}
+{#snippet regListItem(key: string, name: string | null)}
 	<a
 		id={key}
 		class={[
@@ -300,11 +300,11 @@
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
 						? item.date.from.slice(0, 4)
-						: normalizeChars(item[sortBy][0]?.toUpperCase())}
+						: normalizeChars(item[sortBy]?.[0]?.toUpperCase())}
 				{@const catLabelBefore =
 					hasSortControls && sortBy === 'date'
 						? itemBefore?.date.from.slice(0, 4)
-						: normalizeChars(itemBefore?.[sortBy][0]?.toUpperCase())}
+						: normalizeChars(itemBefore?.[sortBy]?.[0]?.toUpperCase())}
 				{#if autoCatLabel && autoCatLabel !== catLabelBefore}
 					{@render groupTitle(autoCatLabel)}
 				{/if}

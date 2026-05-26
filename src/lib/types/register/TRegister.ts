@@ -22,77 +22,77 @@ import { type TLongformsKeys } from '../documents/TDocuments';
 // --- Register -------------------------------------------------------
 export type TRegister = {
 	meta: {
-		generated_by: string;
-		task: string;
-		generated_on: string;
-		description: string;
+		generated_by: string | null;
+		task: string | null;
+		generated_on: string | null;
+		description: string | null;
 	};
 	register: {
 		people: {
 			[key in TPeopleKeys]: {
-				name: string;
-				firstname: string;
-				lastname: string;
+				name: string | null;
+				firstname: string | null;
+				lastname: string | null;
 				nameVariants: string[];
-				gndNumber?: string;
-				dateBirth: string;
-				dateDeath: string;
+				gndNumber?: string | null;
+				dateBirth: string | null;
+				dateDeath: string | null;
 				type: TPeopleGroups | null;
 				orgId: TOrgsKeys;
-				note: string;
+				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		places: {
 			[key in TPlacesKeys]: {
-				name: string;
+				name: string | null;
 				nameVariants: string[];
-				gndNumber?: string;
+				gndNumber?: string | null;
 				geoNamesID: number | null;
-				geoNamesLink: string;
+				geoNamesLink: string | null;
 				type: TPlacesGroups | null;
 				coords: number[] | null;
-				country: string;
-				note: string;
+				country: string | null;
+				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		events: {
 			[key in TEventsKeys]: {
-				name: string;
+				name: string | null;
 				type: TEventsGroups | null;
-				date?: { from: string; to: string };
-				note: string;
+				date?: { from: string | null; to: string };
+				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		orgs: {
 			[key in TOrgsKeys]: {
-				name: string;
+				name: string | null;
 				nameVariants: string[];
-				gndNumber?: string;
+				gndNumber?: string | null;
 				type: TOrgsGroups | null;
-				note: string;
+				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		bibls: {
 			[key in TBiblsKeys]: {
-				name: string;
+				name: string | null;
 				type: TBiblsGroups | null;
-				authorId: TPeopleKeys;
-				pubDate: string;
-				gndNumber?: string;
-				note?: string;
+				authorId: TPeopleKeys | null;
+				pubDate: string | null;
+				gndNumber?: string | null;
+				note?: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
 		keywords: {
 			[key in TKeywordsKeys]: {
-				name: string;
+				name: string | null;
 				type: TKeywordsGroups | null;
-				gndNumber?: string;
-				note?: string;
+				gndNumber?: string | null;
+				note?: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
 		};
@@ -101,17 +101,17 @@ export type TRegister = {
 
 // --- Register Dictionary -------------------------------------------------------
 type RegEntity<TA extends string | number | symbol, TG extends string | number | symbol> = {
-	register_name: string;
-	key_singular: string;
-	label_plural: string;
+	register_name: string | null;
+	key_singular: string | null;
+	label_plural: string | null;
 	attributes: {
 		[K in TA]: { label: string };
 	};
 	groups:
 		| {
 				[K in TG]: {
-					label_singular: string;
-					label_plural: string;
+					label_singular: string | null;
+					label_plural: string | null;
 					slug?: string | null;
 				};
 		  }
@@ -120,10 +120,10 @@ type RegEntity<TA extends string | number | symbol, TG extends string | number |
 
 export type TRegDict = {
 	meta: {
-		generated_by: string;
-		task: string;
-		generated_on: string;
-		description: string;
+		generated_by: string | null;
+		task: string | null;
+		generated_on: string | null;
+		description: string | null;
 	};
 	dict_register: {
 		people: RegEntity<TRegAttrsPeople, TPeopleGroups>;

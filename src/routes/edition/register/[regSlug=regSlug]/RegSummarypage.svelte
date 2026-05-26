@@ -47,7 +47,7 @@
 	}
 </script>
 
-<!-- Snippet: Metadata Table -->
+<!-- Snippet for Metadata Table -->
 {#snippet MetadataTable(attKeys: TRegAttrsMap[T][])}
 	<table
 		class="my-10 min-w-full border-gray-300 bg-white"
@@ -61,8 +61,7 @@
 			</tr>
 		</thead>
 
-		<!-- Body-->
-		{#each attKeys as attKey (attKey)}
+		{#each attKeys.filter(Boolean) as attKey (attKey)}
 			{#if attKey}
 				<tbody>
 					<tr>
@@ -70,9 +69,13 @@
 							>{(regDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
 								?.label}:</td
 						>
-						<td class="px-4 py-2 text-left"
-							>{@render MetadataValue(attKey, regAttributes[attKey])}</td
-						>
+						{#if regAttributes[attKey]}
+							<td class="px-4 py-2 text-left"
+								>{@render MetadataValue(attKey, regAttributes[attKey])}</td
+							>
+						{:else}
+							<td class="px-4 py-2 text-left text-gray-300">Keine Daten verfügbar</td>
+						{/if}
 					</tr>
 				</tbody>
 			{/if}
@@ -116,7 +119,8 @@
 		{#each docIds as docId (docId)}
 			{@render LinkedItem(docId)}
 		{:else}
-			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>{/each}
+			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>
+		{/each}
 	</div>
 {/snippet}
 
@@ -173,6 +177,7 @@
 	{:else if docType === 'places'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPlaces, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+
 		{@render MetadataTable([
 			'type',
 			regAttrsTyped.nameVariants.length && 'nameVariants',
