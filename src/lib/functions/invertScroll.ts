@@ -1,5 +1,3 @@
-import type { NavigatorScrollEvent, ScrollMouseTrackerEvent } from 'openseadragon';
-
 export function invertScroll(ev: WheelEvent) {
 	const container = ev.currentTarget as HTMLElement;
 	if (container) {
