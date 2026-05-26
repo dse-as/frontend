@@ -173,14 +173,12 @@
 		<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
 			<div class={['grid grid-cols-2 gap-20', isExpanded ? 'h-auto' : 'max-h-40 overflow-hidden']}>
 				<!-- Überblickskommentar -->
-				{#if globalComment}
-					<div>
-						<h5 class="mb-4 h5"><strong>Überblickskommentar</strong></h5>
-						<div data-dom="global_comment">
-							{@html globalComment}
-						</div>
+				<div>
+					<h5 class="mb-4 h5"><strong>Überblickskommentar</strong></h5>
+					<div data-dom="global_comment">
+						{@html globalComment}
 					</div>
-				{/if}
+				</div>
 				<!-- Metadata Tables -->
 				{@render MetadataTable()}
 			</div>
@@ -217,4 +215,37 @@
 <style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
+
+	[data-dom='global_entities'] {
+		:global([data-type='entity']) {
+			@apply rounded-xl px-2 font-bold;
+		}
+		:global([data-type='entity']::before) {
+			content: '↗';
+			padding-right: 4px;
+		}
+		:global([data-entitytype='person']) {
+			@apply bg-red-100;
+		}
+		:global([data-entitytype='place']) {
+			@apply bg-green-100;
+		}
+		:global([data-entitytype='event']) {
+			@apply bg-yellow-100;
+		}
+		:global([data-entitytype='org']) {
+			@apply bg-orange-100;
+		}
+		:global([data-entitytype='smallform']),
+		:global([data-entitytype='longform']),
+		:global([data-entitytype='letter']) {
+			@apply bg-blue-100;
+		}
+		:global([data-entitytype='bibls']) {
+			@apply bg-purple-100;
+		}
+		:global([data-entitytype='keyword']) {
+			@apply bg-gray-100;
+		}
+	}
 </style>
