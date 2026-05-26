@@ -170,92 +170,51 @@
 			</h2>
 		{/if}
 		<!-- Global Comment -->
-		{#if globalComment}
-			<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
-				<div
-					class={['grid grid-cols-2 gap-20', isExpanded ? 'h-auto' : 'max-h-40 overflow-hidden']}
-				>
-					<!-- Überblickskommentar -->
+		<div id="expandableBox" class={['relative mt-5 mb-20 pt-5 pb-0']}>
+			<div class={['grid grid-cols-2 gap-20', isExpanded ? 'h-auto' : 'max-h-40 overflow-hidden']}>
+				<!-- Überblickskommentar -->
+				{#if globalComment}
 					<div>
 						<h5 class="mb-4 h5"><strong>Überblickskommentar</strong></h5>
 						<div data-dom="global_comment">
 							{@html globalComment}
 						</div>
 					</div>
-					<!-- Metadata Tables -->
-					{@render MetadataTable()}
-				</div>
-
-				<!-- Gradient -->
-				{#if !isExpanded}
-					<button
-						class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent"
-						aria-label="expand box"
-						onclick={toggleExpandableBox}
-					></button>
 				{/if}
-
-				<!-- Button to Open/Close -->
-				<!-- <div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;"> -->
-				<div
-					class={[
-						buttonIsSticky ? 'fixed bottom-5' : 'absolute -bottom-10',
-						'left-1/2 -translate-x-1/2'
-					]}
-				>
-					<button
-						class="h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
-						aria-label="expand box"
-						onclick={toggleExpandableBox}
-					>
-						<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
-					</button>
-				</div>
+				<!-- Metadata Tables -->
+				{@render MetadataTable()}
 			</div>
-		{/if}
+
+			<!-- Gradient -->
+			{#if !isExpanded}
+				<button
+					class="absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent"
+					aria-label="expand box"
+					onclick={toggleExpandableBox}
+				></button>
+			{/if}
+
+			<!-- Button to Open/Close -->
+			<!-- <div class="absolute left-1/2 -translate-x-1/2 transform" style="bottom: -40px;"> -->
+			<div
+				class={[
+					buttonIsSticky ? 'fixed bottom-5' : 'absolute -bottom-10',
+					'left-1/2 -translate-x-1/2'
+				]}
+			>
+				<button
+					class="h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
+					aria-label="expand box"
+					onclick={toggleExpandableBox}
+				>
+					<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
+				</button>
+			</div>
+		</div>
 	</div>
 {/if}
 
 <style lang="postcss">
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
-
-	[data-dom='global_comment'] {
-		:global([data-type='entity']) {
-			@apply underline decoration-2;
-		}
-		:global(p) {
-			@apply my-4;
-		}
-	}
-
-	[data-dom='global_entities'] {
-		:global([data-type='entity']::before) {
-			@apply rounded-xl px-1 font-bold;
-			content: '↗';
-		}
-		:global([data-entitytype='person']) {
-			@apply rounded-xl bg-red-100 px-2 font-bold;
-		}
-		:global([data-entitytype='place']) {
-			@apply rounded-xl bg-green-100 px-2 font-bold;
-		}
-		:global([data-entitytype='event']) {
-			@apply rounded-xl bg-yellow-100 px-2 font-bold;
-		}
-		:global([data-entitytype='org']) {
-			@apply rounded-xl bg-orange-100 px-2 font-bold;
-		}
-		:global([data-entitytype='smallform']),
-		:global([data-entitytype='longform']),
-		:global([data-entitytype='letter']) {
-			@apply rounded-xl bg-blue-100 px-2 font-bold;
-		}
-		:global([data-entitytype='bibls']) {
-			@apply rounded-xl bg-purple-100 px-2 font-bold;
-		}
-		:global([data-entitytype='keyword']) {
-			@apply rounded-xl bg-gray-100 px-2 font-bold;
-		}
-	}
 </style>

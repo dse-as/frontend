@@ -5,6 +5,8 @@ To restrict CSS to view-modes use:
 - data-textflow='paged'
 - data-fassung='DF'
 - data-fassung='LF'
+- data-dom='global_comment'
+- data-dom='containerAnnotations'
 
 -------------------------------- */
 
@@ -103,6 +105,13 @@ tei-p {
 	margin-bottom: 1em;
 	text-align: justify;
 	hyphens: auto;
+}
+
+[data-dom='global_comment'] {
+	/* //! FIX: this is needed, as long as custom-elements are not propperly attached in the global_comment */
+	tei-p {
+		display: block;
+	}
 }
 
 /* -------------------------------- */
@@ -549,6 +558,13 @@ tei-anchor {
 		cursor: pointer;
 	}
 
+	/* Hover and Active */
+	tei-rs:hover,
+	tei-rs.active,
+	tei-rs.active:hover {
+		background-color: var(--color-mist-300);
+	}
+
 	/* Types */
 	tei-rs {
 		&[type='person'] {
@@ -564,8 +580,14 @@ tei-anchor {
 			border-bottom: 3px solid var(--color-rs-work);
 		}
 	}
+}
 
-	/* Hover and Active */
+[data-dom='global_comment'] {
+	tei-rs {
+		border-bottom: 1.5px solid gray;
+		cursor: pointer;
+	}
+
 	tei-rs:hover,
 	tei-rs.active,
 	tei-rs.active:hover {
