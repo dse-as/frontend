@@ -86,7 +86,6 @@
 	let sortVariableKeyForShortcuts = $derived(
 		itemType === 'people' ? 'lastname' : itemType === 'events' ? sortBy : 'name'
 	);
-	let currentAutoCatLabel: string | null = null; //! FIX THIS HACK: setting this to state will break the hack below
 	let autoCatLabels = $derived(
 		[
 			...new Set(
@@ -295,14 +294,19 @@
 			{/each}
 		{:else if itemType}
 			<!-- All other types -->
-			{#each filterAndSortData(itemData, sortBy) as [key, item] (key)}
+			{@const sortedData = filterAndSortData(itemData, sortBy)}
+			{#each sortedData as [key, item], i (key)}
+				{@const itemBefore = sortedData[i - 1]?.[1]}
 				{@const autoCatLabel =
 					hasSortControls && sortBy === 'date'
 						? item.date.from.slice(0, 4)
 						: normalizeChars(item[sortBy][0]?.toUpperCase())}
-				{#if autoCatLabel && autoCatLabel !== currentAutoCatLabel}
-					<!-- Trick: render Letter and at the same time update currentAutoCatLabel with `(current=auto)` -->
-					{@render groupTitle((currentAutoCatLabel = autoCatLabel))}
+				{@const catLabelBefore =
+					hasSortControls && sortBy === 'date'
+						? itemBefore?.date.from.slice(0, 4)
+						: normalizeChars(itemBefore?.[sortBy][0]?.toUpperCase())}
+				{#if autoCatLabel && autoCatLabel !== catLabelBefore}
+					{@render groupTitle(autoCatLabel)}
 				{/if}
 				{@render regListItem(key, item.name)}
 			{/each}
