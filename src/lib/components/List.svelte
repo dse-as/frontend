@@ -91,7 +91,7 @@
 			...new Set(
 				Object.values(itemData).map((el) => {
 					// Normalize autoCatLabels to group e.g. Ç with C and Ä with A
-					return normalizeChars(el[sortVariableKeyForShortcuts][0]?.toUpperCase());
+					return normalizeChars(el[sortVariableKeyForShortcuts]?.[0]?.toUpperCase());
 				})
 			)
 		].sort()
