@@ -1,7 +1,6 @@
 import type { PageServerLoad } from './$types';
 import type { EntryGenerator } from './$types';
 import { register as reg } from '$lib/data/register.json';
-export const prerender = true;
 
 export const entries: EntryGenerator = () => {
 	// Extract first-order keys

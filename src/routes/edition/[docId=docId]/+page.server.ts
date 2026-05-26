@@ -1,7 +1,5 @@
 import processTEI from './processTEI';
 import type { ProcessedTEI } from './processTEI';
-export const prerender = true;
-
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params, fetch }) => {

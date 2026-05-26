@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import type { LayoutServerLoad } from './$types';
 import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';

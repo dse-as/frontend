@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import type { LayoutServerLoad } from './$types';
 import { register as reg } from '$lib/data/register.json';
 import { findKeyBySecondaryKey } from '$lib/functions/ease_of_use/findKeyBySecondaryKey.js';
