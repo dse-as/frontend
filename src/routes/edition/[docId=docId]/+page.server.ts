@@ -1,6 +1,7 @@
 import processTEI from './processTEI';
 import type { ProcessedTEI } from './processTEI';
 import type { PageServerLoad } from './$types';
+import { asset } from '$app/paths';
 
 export const load: PageServerLoad = async ({ params, fetch }) => {
 	async function loadText(params: { docId: string }): Promise<ProcessedTEI> {
@@ -21,7 +22,7 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 
 		try {
 			// (1) Fetch xml data
-			const res = await fetch(`/data/texts/text-${params.docId}.xml`);
+			const res = await fetch(asset(`/data/texts/text-${params.docId}.xml`));
 			// Throw 404 if XML not found
 			if (!res.ok) {
 				if (res.status === 404) {

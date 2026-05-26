@@ -5,6 +5,7 @@
 	import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import Nav from './Nav.svelte';
+	import { asset } from '$app/paths';
 
 	let { children } = $props();
 </script>
@@ -41,20 +42,31 @@
 	</p>
 	<div class="mt-10 flex w-full justify-around gap-10">
 		<a href="https://data.snf.ch/grants/grant/10000500">
-			<img class="h-16 object-contain" src="/logos/logo-snf.png" alt="logo" />
+			<img class="h-16 object-contain" src={asset('/logos/logo-snf.png')} alt="logo" />
+			<img class="h-16 object-contain" src={asset('/')} alt="logo" />
 		</a>
 
 		<a href="https://www.ds.uzh.ch">
-			<img class="h-16 object-contain" src="/logos/logo-uzh.png" alt="logo" />
+			<img class="h-16 object-contain" src={asset('/logos/logo-uzh.png')} alt="logo" />
 		</a>
 		<a href="https://www.unige.ch/lettres/alman/">
-			<img class="h-16 object-contain" src="/logos/logo-unige.gif" alt="logo" />
+			<img class="h-16 object-contain" src={asset('/logos/logo-unige.gif')} alt="logo" />
 		</a>
 		<a href="https://dh.unibe.ch">
-			<img class="h-16 object-contain" width="100px;" src="/logos/logo-uzh.png" alt="logo" />
+			<img
+				class="h-16 object-contain"
+				width="100px;"
+				src={asset('/logos/logo-uzh.png')}
+				alt="logo"
+			/>
 		</a>
 		<a href="https://dsl.unibe.ch">
-			<img class="h-16 object-contain" width="100px;" src="/logos/logo-dsl.png" alt="logo" />
+			<img
+				class="h-16 object-contain"
+				width="100px;"
+				src={asset('/logos/logo-dsl.png')}
+				alt="logo"
+			/>
 		</a>
 	</div>
 </footer>
