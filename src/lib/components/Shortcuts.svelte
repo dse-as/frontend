@@ -4,7 +4,7 @@
 		T extends 'documents' | 'register'
 	"
 >
-	import { uiOvGroupByCat } from '$lib/globals/state/ui.svelte';
+	import { uiOvGroupByCat } from '$lib/globals/ui-states.svelte';
 	import { tick } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';

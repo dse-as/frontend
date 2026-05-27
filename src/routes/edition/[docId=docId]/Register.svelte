@@ -4,7 +4,7 @@
 	import register from '$lib/data/register.json';
 	import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
-	import { openRegisters, selectedTextNode } from '$lib/globals/state/ui.svelte';
+	import { openRegisters, selectedTextNode } from '$lib/globals/ui-states.svelte';
 	import { handleRegisterClick } from '$lib/functions/interactive_edendum/handleInteractiveText';
 
 	const dictReg = dict_register.dict_register as Record<

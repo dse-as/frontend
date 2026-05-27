@@ -17,13 +17,3 @@ export const openRegisters: { list: TRegTypes[] } = $state({ list: [] });
 // Sidebar Toggle
 type TActiveRegisterTab = 'register' | 'notes';
 export const activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'notes' });
-
-// const
-export const UI_TYPESWITHGROUPCONTROL = {
-	documents: ['letters', 'smallforms', 'longforms'],
-	register: ['events', 'orgs', 'people', 'places']
-};
-export const UI_TYPESWITHSORTCONTROL = {
-	documents: ['letters', 'smallforms', 'longforms'],
-	register: ['events']
-};

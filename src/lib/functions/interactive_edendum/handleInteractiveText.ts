@@ -1,5 +1,5 @@
-import { activeRegisterTab, selectedTextNode } from '$lib/globals/state/ui.svelte';
-import { openRegisters } from '$lib/globals/state/ui.svelte';
+import { activeRegisterTab, selectedTextNode } from '$lib/globals/ui-states.svelte';
+import { openRegisters } from '$lib/globals/ui-states.svelte';
 import type { TRegKeysFlat } from '$lib/types/register/TRegister';
 import { findRegTypeByRegKey } from '../ease_of_use/findRegTypeByRegKey';
 

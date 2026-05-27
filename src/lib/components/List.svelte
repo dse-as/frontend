@@ -11,12 +11,8 @@
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
 	import { slugify } from '$lib/functions/ease_of_use/slugify';
-	import {
-		uiOvSortBy,
-		uiOvGroupByCat,
-		UI_TYPESWITHGROUPCONTROL,
-		UI_TYPESWITHSORTCONTROL
-	} from '$lib/globals/state/ui.svelte';
+	import { uiOvSortBy, uiOvGroupByCat } from '$lib/globals/ui-states.svelte';
+	import { TYPESWITHGROUPCONTROL, TYPESWITHSORTCONTROL } from '$lib/globals/constants.svelte';
 	import Shortcuts from '$lib/components/Shortcuts.svelte';
 	import type {
 		TRegDict,
@@ -64,8 +60,8 @@
 	} = $props();
 
 	// Booleans for sorting and grouping
-	let hasGroupControls = $derived(UI_TYPESWITHGROUPCONTROL[itemVariant].includes(itemType));
-	let hasSortControls = $derived(UI_TYPESWITHSORTCONTROL[itemVariant].includes(itemType));
+	let hasGroupControls = $derived(TYPESWITHGROUPCONTROL[itemVariant].includes(itemType));
+	let hasSortControls = $derived(TYPESWITHSORTCONTROL[itemVariant].includes(itemType));
 
 	// Defaults
 	let defaultSortBy = $derived(itemType === 'people' ? 'lastname' : 'name'); // must also set 'name' in ui.svelte.ts (//! Fix this)

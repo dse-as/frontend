@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { activeRegisterTab } from '$lib/globals/state/ui.svelte';
+	import { activeRegisterTab } from '$lib/globals/ui-states.svelte';
 	import Annotations from './Annotations.svelte';
 	import Register from './Register.svelte';
 	import TextFluid from './TextFluid.svelte';
