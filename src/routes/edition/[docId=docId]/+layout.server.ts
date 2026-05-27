@@ -1,3 +1,4 @@
+export const prerender = false;
 import type { LayoutServerLoad } from './$types';
 
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';

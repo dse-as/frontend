@@ -1,7 +1,9 @@
+export const prerender = false;
 import processTEI from './processTEI';
 import type { ProcessedTEI } from './processTEI';
 import type { PageServerLoad } from './$types';
 import { asset } from '$app/paths';
+
 
 export const load: PageServerLoad = async ({ params, fetch }) => {
 	async function loadText(params: { docId: string }): Promise<ProcessedTEI> {
