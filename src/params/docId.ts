@@ -8,5 +8,8 @@ const keys_all = [
 ];
 
 export const match = ((param: string): param is (typeof keys_all)[number] => {
-	return keys_all.includes(param);
+	console.log('Matching docId param:', param);
+	const result = keys_all.includes(param);
+	console.log('Match result:', result);
+	return result;
 }) satisfies ParamMatcher;
