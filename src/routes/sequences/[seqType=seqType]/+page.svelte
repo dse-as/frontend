@@ -6,6 +6,7 @@
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams.js';
 	import type { TSeqTypes } from '$lib/types/TSequences.js';
 	import { invertScroll } from '$lib/functions/invertScroll.js';
+	import { building } from '$app/environment';
 
 	let { data } = $props();
 	let seqType = $derived(page.params.seqType as Exclude<TSeqTypes, 'correspondence'>); //! FIX type exclusion, once structure is stable.
@@ -33,7 +34,7 @@
 				{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 				<a
 					href={resolve(
-						`/edition/${docId}?${updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
+						`/edition/${docId}?${building ? `seq=${seqItemId}` : updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
 					)}
 					class={['w-90 rounded-xl p-1']}
 				>
