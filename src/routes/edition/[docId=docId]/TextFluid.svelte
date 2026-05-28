@@ -128,34 +128,34 @@
 	// Load text
 	const c = new CETEI();
 
-	const setupCustomElements = () => {
+	const setupCustomElements = (element: HTMLElement) => {
 		c.addBehaviors(behaviors(document));
 		c.processPage();
+
+		element.querySelectorAll('tei-rs').forEach((el) => {
+			el.setAttribute('tabindex', '0');
+			el.addEventListener('click', () => {
+				handleRefStringClick(el.getAttribute('key') as TRegKeysFlat);
+			});
+			el.addEventListener('focusout', () => {
+				clearAllHighlights();
+			});
+		});
+		element.querySelectorAll('.footnote, .note-mark').forEach((el) => {
+			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid') as TRegKeysFlat;
+			el.setAttribute('tabindex', '0');
+			el.addEventListener('click', () => {
+				handleFootnoteClick(key);
+			});
+			el.addEventListener('focusout', () => {
+				clearAllHighlights();
+			});
+		});
 	};
 </script>
 
-<!-- @Sebi: welche ARIA-role würdest du hier vergeben? button macht keinen Sinn (insb. da weitere buttons enthalten sind...) -->
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	data-textflow="fluid"
-	onclick={(ev: Event) => {
-		const el = ev.target as HTMLElement | null;
-		if (!el) return;
-		if (el.tagName === 'TEI-DIV' || el.tagName === 'TEI-P') {
-			clearAllHighlights();
-		} else if (el.tagName === 'TEI-RS') {
-			handleRefStringClick(el.getAttribute('key') as TRegKeysFlat);
-		} else if (el.classList.contains('footnote') || el.querySelector('.footnote')) {
-			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key as TRegKeysFlat);
-		} else if (el.classList.contains('note-mark') || el.querySelector('.note-mark')) {
-			const key = el.closest('[data-noteid]')?.getAttribute('data-noteid');
-			handleFootnoteClick(key as TRegKeysFlat);
-		} else {
-			clearAllHighlights();
-		}
-	}}
 	class="mx-auto mt-10 grid max-w-300 grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
 	bind:this={containerMaintext}
 >
