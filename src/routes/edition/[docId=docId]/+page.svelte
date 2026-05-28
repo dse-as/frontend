@@ -12,18 +12,20 @@
 	import { onMount } from 'svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
 
+	import { building } from '$app/environment';
+
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF[] = $derived.by(() =>
-		page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+		building ? ['LF'] : page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
 	);
 
 	// Current Page
-	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
+	let currentPage = $derived(building ? 1 : Number(page.url.searchParams?.get('page')) || 1);
 
 	// Current Sequence
-	const currentSeqKey = page.url.searchParams.get('seq');
+	const currentSeqKey = building ? null : page.url.searchParams.get('seq');
 	let currentSeq = { type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey };
 
 	onMount(() => {
