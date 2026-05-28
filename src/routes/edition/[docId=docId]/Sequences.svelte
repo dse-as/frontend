@@ -8,16 +8,18 @@
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
-	import { type TDocKeys } from '$lib/types/documents/TDocuments';
+	import { documents as allDocsRaw } from '$lib/data/documents.json';
+	import { type TDocKeys, type TDocuments } from '$lib/types/documents/TDocuments';
 	import { tick } from 'svelte';
 	import type { TDictSeq, TSeqAll, TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 	import { SvelteMap } from 'svelte/reactivity';
 	import { invertScroll } from '$lib/functions/invertScroll';
 
+	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAllTyped = seqAll as TSeqAll;
 	const dictSeqTyped = dictSeq as TDictSeq;
 
-	let { allDocs, docId, currentSeq } = $props();
+	let { docId, currentSeq } = $props();
 
 	// Sequences
 	let seqMatching = $derived(

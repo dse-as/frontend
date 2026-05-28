@@ -2,7 +2,7 @@
 	import RegSummarypage from './RegSummarypage.svelte';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 
-	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
+	import type { TRegister, TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister.js';
 	import { onMount } from 'svelte';
 	import List from '$lib/components/List.svelte';
 
@@ -51,7 +51,7 @@
 		<List
 			itemVariant="register"
 			isMultiColumn={true}
-			itemData={data.regTypeEntries as any}
+			itemData={data.regTypeEntries as TRegister['register'][TRegTypes]}
 			itemDict={dictReg[regType]}
 			itemType={regSlug as TRegTypes}
 			itemKey={null}
@@ -63,7 +63,7 @@
 		<List
 			itemVariant="register"
 			isMultiColumn={false}
-			itemData={data.regTypeEntries as any}
+			itemData={data.regTypeEntries as TRegister['register'][TRegTypes]}
 			itemDict={dictReg[regType]}
 			itemType={regType}
 			itemKey={regSlug as TRegKeysFlat}

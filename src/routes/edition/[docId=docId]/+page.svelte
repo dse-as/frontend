@@ -42,7 +42,7 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences allDocs={data.allDocs} docId={data.docId} {currentSeq} />
+	<Sequences docId={data.docId} {currentSeq} />
 
 	<!-- Metadata -->
 	<DocHeader
@@ -70,7 +70,7 @@
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf[0] === 'DF'}
-		<Gallery allDocs={data.allDocs} docItem={data.docItem} {currentPage} />
+		<Gallery docItem={data.docItem} {currentPage} />
 	{/if}
 
 	<!-- Content -->
