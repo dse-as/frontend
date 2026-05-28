@@ -23,5 +23,5 @@ export const load: LayoutServerLoad = ({ params }) => {
 			? (regSlug as TRegTypes)
 			: (findKeyBySecondaryKey(reg, regSlug) as TRegTypes);
 
-	return { reg, regSlug, regType, allfirstOrderKeys, regView };
+	return { regSlug, regType, allfirstOrderKeys, regView };
 };

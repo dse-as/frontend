@@ -1,9 +1,6 @@
 <script lang="ts" generics="T extends TRegTypes">
 	import { resolve } from '$app/paths';
 
-	//! IMPROVE: It would be nice to drop the import of reg and move everything to the server load function.
-	// To do so, each regAttribute has to be parsed for orgId and personId in the load function.
-	import { register as reg } from '$lib/data/register.json';
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
@@ -19,22 +16,29 @@
 		TRegDict,
 		TRegTypes
 	} from '$lib/types/register/TRegister';
-	import { type TPeopleKeys } from '$lib/types/register/TPeopleKeys';
-	import { type TOrgsKeys } from '$lib/types/register/TOrgsKeys';
-	import { type TDocKeys, type TDocuments } from '$lib/types/documents/TDocuments';
-	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+
+	type TLinkedDoc = {
+		docId: string;
+		iiif_url: string | null;
+		title_full: string | null;
+		pubDate: string | null;
+	};
 
 	let {
 		docType,
-		allDocs,
 		regDict,
 		regAttributes,
+		orgName = null,
+		authorName = null,
+		linkedDocs = [],
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		docType: T;
-		allDocs: TDocuments['documents'];
 		regDict: TRegDict['dict_register'][T];
 		regAttributes: Record<TRegAttrsMap[T], any>;
+		orgName: string | null;
+		authorName: string | null;
+		linkedDocs: TLinkedDoc[];
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -102,11 +106,11 @@
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.orgs[value as TOrgsKeys]?.name}`}
+			{orgName ?? value}
 		</a>
 	{:else if attKey === 'authorId' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{`${reg.people[value as TPeopleKeys]?.name}`}
+			{authorName ?? value}
 		</a>
 	{:else}
 		<span>{value}</span>
@@ -114,10 +118,10 @@
 {/snippet}
 
 <!-- Snippet for LinkedItemsList -->
-{#snippet LinkedItemsContainer(docIds: TDocKeys[])}
+{#snippet LinkedItemsContainer(docs: TLinkedDoc[])}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
-		{#each docIds as docId (docId)}
-			{@render LinkedItem(docId)}
+		{#each docs as doc (doc.docId)}
+			{@render LinkedItem(doc)}
 		{:else}
 			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>
 		{/each}
@@ -125,33 +129,27 @@
 {/snippet}
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
-{#snippet LinkedItem(docId: TDocKeys)}
-	{@const { item: resDoc } = resolveDoc(allDocs, docId) || { item: null }}
+{#snippet LinkedItem(doc: TLinkedDoc)}
 	<a
-		href={resolve(`/edition/${docId as string}?mode=DF`)}
+		href={resolve(`/edition/${doc.docId}?mode=DF`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
 		target="blank"
 		rel="noopener noreferrer"
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb
-					url={resDoc?.manuscript?.iiif_urls[0]}
-					maxWidth="80"
-					maxHeight="80"
-					classes="rounded-xl"
-				/>
+				<IIIF_Thumb url={doc.iiif_url} maxWidth="80" maxHeight="80" classes="rounded-xl" />
 			</div>
 			<div class="flex flex-col">
-				<span class="italic">{resDoc?.metadata?.title_full}</span>
-				<span class="">{resDoc?.metadata?.pubDate}</span>
+				<span class="italic">{doc.title_full}</span>
+				<span class="">{doc.pubDate}</span>
 			</div>
 		</div>
 	</a>
 {/snippet}
 
 <!-- Container -->
-<!-- Note: TypeScript fails to infer the correct type for 'regAttributes' relative to the 'docType' condition, 
+<!-- Note: TypeScript fails to infer the correct type for 'regAttributes' relative to the 'docType' condition,
      necessitating manual casting to 'regAttrsTyped' throughout this block. -->
 <div
 	onscroll={getScrollPosition}
@@ -225,13 +223,13 @@
 		</h2>
 		{@render LinkedItemsContainer([])}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
-		{@render LinkedItemsContainer((regAttributes as Record<TRegAttrsPeople, any>)?.docs)}
+		{@render LinkedItemsContainer(linkedDocs)}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{:else}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
 		<div class="min-h-[40vh]">
-			{@render LinkedItemsContainer((regAttributes as Record<TRegAttrs, any>)?.docs)}
+			{@render LinkedItemsContainer(linkedDocs)}
 		</div>
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
