@@ -116,6 +116,8 @@
 <!-- Snippet for Register Items -->
 {#snippet regListItem(key: string, name: string | null)}
 	<a
+		data-sveltekit-preload-data="tap"
+		data-sveltekit-preload-code="hover"
 		id={key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',

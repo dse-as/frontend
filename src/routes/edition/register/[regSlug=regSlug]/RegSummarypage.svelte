@@ -128,6 +128,8 @@
 {#snippet LinkedItem(docId: TDocKeys)}
 	{@const { item: resDoc } = resolveDoc(allDocs, docId) || { item: null }}
 	<a
+		data-sveltekit-preload-data="tap"
+		data-sveltekit-preload-code="hover"
 		href={resolve(`/edition/${docId as string}?mode=DF`)}
 		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
 		target="blank"

@@ -161,6 +161,8 @@
 {#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
 	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
+		data-sveltekit-preload-data="tap"
+		data-sveltekit-preload-code="hover"
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
 			'max-w-90 rounded-xl p-1',
@@ -387,6 +389,8 @@
 				<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 					<div class="flex gap-4">
 						<a
+							data-sveltekit-preload-data="tap"
+							data-sveltekit-preload-code="hover"
 							class="h-full underline hover:text-primary-500"
 							href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 							onclick={() => {
@@ -396,6 +400,8 @@
 						</a>
 						{#if seqAllTyped[type!]?.[seqKey]?.url_slug}
 							<a
+								data-sveltekit-preload-data="tap"
+								data-sveltekit-preload-code="hover"
 								class="h-full underline hover:text-primary-500"
 								href={`${dictSeqTyped[type!]?.url_overview}/${seqAllTyped[type!][seqKey].url_slug}`}
 								target="_blank"

@@ -33,6 +33,8 @@
 			{#each seqItems[seqItemId].docs as docId (docId)}
 				{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 				<a
+					data-sveltekit-preload-data="tap"
+					data-sveltekit-preload-code="tap"
 					href={resolve(
 						`/edition/${docId}?${building ? `seq=${seqItemId}` : updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
 					)}
