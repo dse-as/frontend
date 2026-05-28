@@ -25,8 +25,8 @@
 	let currentPage = $derived(building ? 1 : Number(page.url.searchParams?.get('page')) || 1);
 
 	// Current Sequence
-	const currentSeqKey = building ? null : page.url.searchParams.get('seq');
-	let currentSeq = { type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey };
+	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
+	let currentSeq = $derived({ type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey });
 
 	onMount(() => {
 		// get mode from URL
