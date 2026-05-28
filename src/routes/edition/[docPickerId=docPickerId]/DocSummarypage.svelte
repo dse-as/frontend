@@ -4,6 +4,7 @@
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import { documents as allDocsRaw } from '$lib/data/documents.json';
 	import type {
 		TDocItems,
 		TDocKeys,
@@ -15,14 +16,14 @@
 		TDocuments
 	} from '$lib/types/documents/TDocuments';
 
+	const allDocs = allDocsRaw as TDocuments['documents'];
+
 	let {
-		allDocs,
 		docType,
 		docId,
 		docItem,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		allDocs: TDocuments['documents'];
 		docType: TDocTypes;
 		docId: TDocKeys;
 		docItem: TDocItems;

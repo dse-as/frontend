@@ -1,4 +1,3 @@
-export const prerender = false;
 import processTEI from './processTEI';
 import type { ProcessedTEI } from './processTEI';
 import type { PageServerLoad } from './$types';

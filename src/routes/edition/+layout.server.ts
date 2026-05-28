@@ -1,11 +1,11 @@
 import type { LayoutServerLoad } from './$types';
 import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
+import { documents as allDocs } from '$lib/data/documents.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
-export const load: LayoutServerLoad = async ({ parent, url }) => {
-	const { allDocs } = await parent();
 
+export const load: LayoutServerLoad = async ({ url }) => {
 	// Last segment of url
 	const docSlug = url.pathname.split('/').pop() || '';
 

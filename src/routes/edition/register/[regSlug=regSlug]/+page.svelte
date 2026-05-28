@@ -8,8 +8,6 @@
 
 	let { data } = $props();
 
-	const allDocsRecord = $derived(data.reg as TRegister['register']);
-
 	const regType = $derived(data.regType || null);
 	const regSlug = $derived(data.regSlug || null);
 
@@ -53,7 +51,7 @@
 		<List
 			itemVariant="register"
 			isMultiColumn={true}
-			itemData={allDocsRecord[regType]}
+			itemData={data.regTypeEntries as TRegister['register'][TRegTypes]}
 			itemDict={dictReg[regType]}
 			itemType={regSlug as TRegTypes}
 			itemKey={null}
@@ -65,7 +63,7 @@
 		<List
 			itemVariant="register"
 			isMultiColumn={false}
-			itemData={allDocsRecord[regType]}
+			itemData={data.regTypeEntries as TRegister['register'][TRegTypes]}
 			itemDict={dictReg[regType]}
 			itemType={regType}
 			itemKey={regSlug as TRegKeysFlat}
@@ -73,9 +71,11 @@
 		/>
 		<RegSummarypage
 			docType={regType}
-			allDocs={data.allDocs}
 			regDict={dictReg[regType]}
 			regAttributes={data.regAttributes}
+			orgName={data.orgName}
+			authorName={data.authorName}
+			linkedDocs={data.linkedDocs}
 			{cheatPageHeightInRegSingleColView}
 		/>
 	</div>

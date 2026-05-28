@@ -10,14 +10,23 @@
 	import { ToggleGroup } from '@skeletonlabs/skeleton-svelte';
 
 	import { onMount } from 'svelte';
+	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
+
+	import { building } from '$app/environment';
 
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
 	let dflf: TDFLF[] = $derived.by(() =>
-		page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+		building ? ['LF'] : page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
 	);
-	let currentPage = $derived(Number(page.url.searchParams?.get('page')) || 1);
+
+	// Current Page
+	let currentPage = $derived(building ? 1 : Number(page.url.searchParams?.get('page')) || 1);
+
+	// Current Sequence
+	const currentSeqKey = building ? null : page.url.searchParams.get('seq');
+	let currentSeq = { type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey };
 
 	onMount(() => {
 		// get mode from URL
@@ -35,7 +44,7 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences allDocs={data.allDocs} docId={data.docId} currentSeq={data.currentSeq} />
+	<Sequences docId={data.docId} {currentSeq} />
 
 	<!-- Metadata -->
 	<DocHeader
@@ -63,7 +72,7 @@
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf[0] === 'DF'}
-		<Gallery allDocs={data.allDocs} docItem={data.docItem} {currentPage} />
+		<Gallery docItem={data.docItem} {currentPage} />
 	{/if}
 
 	<!-- Content -->

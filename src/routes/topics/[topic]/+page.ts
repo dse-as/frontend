@@ -18,6 +18,7 @@ export type TTopics = {
 	};
 };
 import { doc_topics as topics } from '$lib/data/doc_topics.json';
+import { documents as allDocs } from '$lib/data/documents.json';
 import type { TDocKeys } from '$lib/types/documents/TDocuments';
 
 export const load: PageLoad = ({ params }) => {
@@ -25,5 +26,5 @@ export const load: PageLoad = ({ params }) => {
 	const topicData = Object.values(topics).find(
 		(item) => item.url_slug === slug
 	) as TTopics['topics'][TTopicKeys];
-	return { slug, topicData };
+	return { slug, topicData, allDocs };
 };

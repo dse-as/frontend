@@ -5,6 +5,10 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import { documents as allDocsRaw } from '$lib/data/documents.json';
+	import type { TDocuments } from '$lib/types/documents/TDocuments';
+
+	const allDocs = allDocsRaw as TDocuments['documents'];
 
 	let buttonRefs: HTMLButtonElement[] = [];
 	let containerRef: HTMLDivElement;
@@ -15,7 +19,7 @@
 		page: number;
 	};
 
-	let { allDocs, docItem, currentPage } = $props();
+	let { docItem, currentPage } = $props();
 
 	// Textzeugen
 	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
