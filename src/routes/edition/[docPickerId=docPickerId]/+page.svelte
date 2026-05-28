@@ -26,19 +26,6 @@
 		window.addEventListener('hashchange', preventVerticalScroll);
 	});
 
-	$effect(() => {
-		// Prevent scroll on initial hash load
-		const hash = window.location.hash;
-		if (hash) {
-			const targetElement = document.getElementById(hash.substring(1));
-			if (targetElement) {
-				// Get horizontal scroll position and scroll back to top
-				const scrollX = targetElement.getBoundingClientRect().left + window.scrollX;
-				window.scrollTo(scrollX, 0);
-			}
-		}
-	});
-
 	//! FIX: This is a workaround to pass the same *absolute* value to List and DocSummarypage
 	// Ideally the height would be relative (e.g. h-full).
 	// However, this will make overflow its flex content (i.e. the list and linked items).
