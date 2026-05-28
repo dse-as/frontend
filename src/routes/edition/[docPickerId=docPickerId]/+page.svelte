@@ -2,8 +2,11 @@
 	import DocSummarypage from './DocSummarypage.svelte';
 	import List from '$lib/components/List.svelte';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
+	import { documents as allDocs } from '$lib/data/documents.json';
 
-	import type { TDocTypes, TDocKeys } from '$lib/types/documents/TDocuments.js';
+	import type { TDocTypes, TDocKeys, TDocuments } from '$lib/types/documents/TDocuments.js';
+
+	const allDocsTyped = allDocs as TDocuments['documents'];
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
@@ -52,7 +55,7 @@
 			<List
 				itemVariant="documents"
 				isMultiColumn={true}
-				itemData={data.allDocs[docType]}
+				itemData={allDocsTyped[docType]}
 				itemDict={dictDoc[docType]}
 				itemType={docSlug as TDocTypes}
 				itemKey={null}
@@ -64,7 +67,7 @@
 			<List
 				itemVariant="documents"
 				isMultiColumn={false}
-				itemData={data.allDocs[docType]}
+				itemData={allDocsTyped[docType]}
 				itemDict={dictDoc[docType]}
 				itemType={docType}
 				itemKey={docSlug as TDocKeys}
@@ -72,7 +75,6 @@
 			/>
 			{#if data.docItem && data.docId}
 				<DocSummarypage
-					allDocs={data.allDocs}
 					{docType}
 					docId={data.docId}
 					docItem={data.docItem}
