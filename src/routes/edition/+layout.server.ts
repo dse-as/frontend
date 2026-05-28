@@ -1,10 +1,9 @@
 import type { LayoutServerLoad } from './$types';
 import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
-import { documents as allDocsRaw } from '$lib/data/documents.json';
+import { documents as allDocs } from '$lib/data/documents.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
-import type { TDocKeys, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
+import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 
-const allDocs = allDocsRaw as TDocuments['documents'];
 
 export const load: LayoutServerLoad = async ({ url }) => {
 	// Last segment of url
