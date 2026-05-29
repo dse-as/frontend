@@ -17,6 +17,7 @@ export function slugify(input: string, { slash = false }: TSlugifyOptions) {
 
 	// Custom replacements
 	if (slash) {
+		// eslint-disable-next-line no-useless-escape
 		input = input.replace(/[\/]+/g, '_'); // Replace slashes with underscores
 	}
 
