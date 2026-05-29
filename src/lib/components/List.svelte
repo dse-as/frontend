@@ -194,7 +194,7 @@
 {#snippet groupControls()}
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
-			<Switch bind:checked={uiOvGroupByCat[itemVariant]} type={isMultiColumn ? 'small' : 'base'} />
+			<Switch bind:checked={uiOvGroupByCat[itemVariant]} height={24} />
 		</div>
 	{/if}
 {/snippet}
