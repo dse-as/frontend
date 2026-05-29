@@ -6,7 +6,7 @@
 >
 	import { resolve } from '$app/paths';
 	import { goto } from '$app/navigation';
-	import { Switch, Label } from 'bits-ui'
+	import Switch from './ui/Switch.svelte';
 
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
@@ -194,16 +194,7 @@
 {#snippet groupControls()}
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
-			<Switch.Root
-				id="switch_groups"
-				name="toggle groups"
-				bind:checked={uiOvGroupByCat[itemVariant]}
-			>
-				<Switch.Thumb />
-			</Switch.Root>
-			<Label.Root for="switch_groups" class={[isMultiColumn ? 'text-base' : 'text-xs']}>
-				Nach Kategorien gruppieren
-			</Label.Root>
+			<Switch bind:checked={uiOvGroupByCat[itemVariant]} type={isMultiColumn ? 'small' : 'base'} />
 		</div>
 	{/if}
 {/snippet}
