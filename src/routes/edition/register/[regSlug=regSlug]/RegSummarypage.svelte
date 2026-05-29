@@ -27,16 +27,16 @@
 		docType,
 		regDict,
 		regAttributes,
-		orgName = null,
-		authorName = null,
+		orgNames = null,
+		authorNames = null,
 		linkedDocs = [],
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		docType: T;
 		regDict: TRegDict['dict_register'][T];
 		regAttributes: Partial<Record<TRegAttrsMap[T], any>> | undefined | null;
-		orgName: string | null;
-		authorName: string | null;
+		orgNames: string[] | null;
+		authorNames: string[] | null;
 		linkedDocs: TLinkedDoc[];
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
@@ -99,18 +99,18 @@
 		<a class="inline-block underline" href={value} target="_blank" rel="noopener noreferrer"
 			>{value}</a
 		>
-	{:else if Array.isArray(value)}
-		{value.join(', ')}
 	{:else if attKey === 'date'}
 		{printDateRange(value.from, value.to)}
-	{:else if attKey === 'orgId' && value}
+	{:else if attKey === 'orgIds' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{orgName ?? value}
+			{orgNames?.join(', ') ?? value}
 		</a>
-	{:else if attKey === 'authorId' && value}
+	{:else if attKey === 'authorIds' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{authorName ?? value}
+			{authorNames?.join(', ') ?? value}
 		</a>
+	{:else if Array.isArray(value)}
+		{value.join(', ')}
 	{:else}
 		<span>{value}</span>
 	{/if}
@@ -209,7 +209,7 @@
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
-			'authorId',
+			'authorIds',
 			'pubDate',
 			regAttrsTyped.gndNumber && 'gndNumber',
 			'note'

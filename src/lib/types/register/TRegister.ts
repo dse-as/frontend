@@ -38,7 +38,7 @@ export type TRegister = {
 				dateBirth: string | null;
 				dateDeath: string | null;
 				type: TPeopleGroups | null;
-				orgId: TOrgsKeys | null;
+				orgIds: TOrgsKeys[] | null;
 				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
@@ -80,7 +80,7 @@ export type TRegister = {
 			[key in TBiblsKeys]: {
 				name: string | null;
 				type: TBiblsGroups | null;
-				authorId: TPeopleKeys | null;
+				authorIds: TPeopleKeys[] | null;
 				pubDate: string | null;
 				gndNumber?: string | null;
 				note?: string | null;

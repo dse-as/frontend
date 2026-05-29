@@ -94,19 +94,26 @@ export const load: PageServerLoad = async ({ parent }) => {
 			: undefined;
 
 	// Resolve cross-register references
-	let orgName: string | null = null;
-	let authorName: string | null = null;
+	let orgNames: string[] | null = null;
+	let authorNames: string[] | null = null;
 	let linkedDocs: ReturnType<typeof resolveLinkedDocs> = [];
 
 	if (regAttributes) {
-		if ('orgId' in regAttributes && regAttributes.orgId) {
-			orgName = reg.orgs?.[regAttributes.orgId]?.name ?? null;
+		if ('orgIds' in regAttributes && regAttributes.orgIds) {
+			orgNames =
+				regAttributes.orgIds.map((id) => {
+					return reg.orgs?.[id]?.name || '';
+				}) ?? null;
 		}
-		if ('authorId' in regAttributes && regAttributes.authorId) {
-			authorName = reg.people?.[regAttributes.authorId as TPeopleKeys]?.name ?? null;
+		if ('authorIds' in regAttributes && regAttributes.authorIds) {
+			authorNames =
+				(regAttributes.authorIds as TPeopleKeys[]).map((id) => {
+					return reg.people?.[id]?.name || '';
+				}) ?? null;
+			console.log(authorNames);
 		}
 		linkedDocs = resolveLinkedDocs(regAttributes.docs);
 	}
 
-	return { regTypeEntries, regAttributes, orgName, authorName, linkedDocs };
+	return { regTypeEntries, regAttributes, orgNames, authorNames, linkedDocs };
 };

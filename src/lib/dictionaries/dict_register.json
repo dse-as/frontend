@@ -19,7 +19,7 @@
 				"dateBirth": { "label": "Geburtsjahr" },
 				"dateDeath": { "label": "Todesjahr" },
 				"type": { "label": "Personenkategorie" },
-				"orgId": { "label": "Verknüpfte Organisation" },
+				"orgIds": { "label": "Verknüpfte Organisationen" },
 				"note": { "label": "Bemerkungen" },
 				"docs": { "label": "Verknüpfte Dokumente" }
 			},
@@ -297,7 +297,7 @@
 			"attributes": {
 				"name": { "label": "Name" },
 				"type": { "label": "Dokumentkategorie" },
-				"authorId": { "label": "Autor:in" },
+				"authorIds": { "label": "Autor:innen" },
 				"pubDate": { "label": "Veröffentlichungsdatum" },
 				"gndNumber": { "label": "GND-Nummer" },
 				"note": { "label": "Bemerkungen" },
