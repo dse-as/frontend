@@ -64,7 +64,7 @@ export function resolveReg(
 			regType: 'events',
 			item: object?.events[regId] || null
 		};
-	} else if (regId.includes('org_')) {
+	} else if (regId.includes('organisation_')) {
 		return {
 			regId: regId as TOrgsKeys,
 			regType: 'orgs',

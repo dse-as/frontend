@@ -170,7 +170,7 @@
 			regAttrsTyped.nameVariants.length && 'nameVariants', // only show when existing
 			'type',
 			'gndNumber',
-			'orgId',
+			'orgIds',
 			'note'
 		])}
 	{:else if docType === 'places'}
