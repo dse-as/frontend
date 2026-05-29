@@ -34,7 +34,7 @@
 	}: {
 		docType: T;
 		regDict: TRegDict['dict_register'][T];
-		regAttributes: Record<TRegAttrsMap[T], any>;
+		regAttributes: Partial<Record<TRegAttrsMap[T], any>> | undefined | null;
 		orgName: string | null;
 		authorName: string | null;
 		linkedDocs: TLinkedDoc[];
@@ -72,7 +72,7 @@
 							>{(regDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
 								?.label}:</td
 						>
-						{#if regAttributes[attKey]}
+						{#if regAttributes?.[attKey]}
 							<td class="px-4 py-2 text-left"
 								>{@render MetadataValue(attKey, regAttributes[attKey])}</td
 							>

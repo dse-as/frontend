@@ -38,7 +38,7 @@ export type TRegister = {
 				dateBirth: string | null;
 				dateDeath: string | null;
 				type: TPeopleGroups | null;
-				orgId: TOrgsKeys;
+				orgId: TOrgsKeys | null;
 				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
@@ -61,7 +61,7 @@ export type TRegister = {
 			[key in TEventsKeys]: {
 				name: string | null;
 				type: TEventsGroups | null;
-				date?: { from: string | null; to: string };
+				date?: { from: string | null; to: string | null };
 				note: string | null;
 				docs?: (TSmallformsKeys | TLettersKeys | TLongformsKeys)[];
 			};
