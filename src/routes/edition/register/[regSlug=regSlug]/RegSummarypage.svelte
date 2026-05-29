@@ -5,7 +5,6 @@
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import type {
-		TRegAttrs,
 		TRegAttrsBibls,
 		TRegAttrsEvents,
 		TRegAttrsKeywords,

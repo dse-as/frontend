@@ -233,7 +233,7 @@ type DictEntity<TM extends string | number | symbol, TG extends string | number 
 					slug?: string | null;
 				};
 		  }
-		| {};
+		| object;
 };
 
 export type TDocDict = {

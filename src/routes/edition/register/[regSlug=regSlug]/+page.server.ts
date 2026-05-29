@@ -33,7 +33,7 @@ export const entries: EntryGenerator = () => {
 };
 
 // Strip register entries to only the fields needed.
-function buildListEntries(regType: TRegTypes): TRegister['register'][TRegTypes] | Object {
+function buildListEntries(regType: TRegTypes): TRegister['register'][TRegTypes] | object {
 	const full = reg[regType];
 	if (!full) return {};
 
@@ -77,7 +77,7 @@ export const load: PageServerLoad = async ({ parent }) => {
 
 	// Stripped entries for List.svelte sidebar/multi-column view
 	const regTypeEntries = regType ? buildListEntries(regType) : {};
-	
+
 	// Full attributes for the single item being viewed
 	const regTypeIndex = [
 		//! FIX: should be generalised
