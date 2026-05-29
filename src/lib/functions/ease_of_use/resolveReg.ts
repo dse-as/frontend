@@ -46,31 +46,31 @@ export function resolveReg(
 	object: Record<TRegTypes, any> | null,
 	regId: TRegKeysFlat
 ): TResolvedRegister | null {
-	if (regId.includes('person')) {
+	if (regId.includes('person_')) {
 		return {
 			regId: regId as TPeopleKeys,
 			regType: 'people',
 			item: object?.people[regId] || null
 		};
-	} else if (regId.includes('place')) {
+	} else if (regId.includes('place_')) {
 		return {
 			regId: regId as TPlacesKeys,
 			regType: 'places',
 			item: object?.places[regId] || null
 		};
-	} else if (regId.includes('event') || regId.includes('travel')) {
+	} else if (regId.includes('event_') || regId.includes('travel')) {
 		return {
 			regId: regId as TEventsKeys,
 			regType: 'events',
 			item: object?.events[regId] || null
 		};
-	} else if (regId.includes('org')) {
+	} else if (regId.includes('org_')) {
 		return {
 			regId: regId as TOrgsKeys,
 			regType: 'orgs',
 			item: object?.orgs[regId] || null
 		};
-	} else if (/^[0-9\-]+$/.test(regId)) {
+	} else if (/^[0-9-]+$/.test(regId) || regId.includes('keyword_')) {
 		// String only contains numbers and "-"
 		return {
 			regId: regId as TKeywordsKeys,
