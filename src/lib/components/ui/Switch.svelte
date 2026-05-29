@@ -1,24 +1,43 @@
 <script lang="ts">
 	import { Label, Switch } from 'bits-ui';
+
 	let { checked = $bindable(), type = 'base' }: { checked: boolean | undefined; type: string } =
 		$props();
-	let clSwitchSize = $state('');
-	let clLabelSize = $state('');
-	let clThumbSize = $state('');
 
-	$effect(() => {
-		switch (type) {
+	function getClasses(currentType: string) {
+		switch (currentType) {
+			case 'compact':
+				return {
+					switch: 'h-[18px] min-h-[18px] w-[32px]',
+					thum: 'size-[14px] data-[state=checked]:translate-x-[14px]',
+					label: 'text-[10px]'
+				};
+
 			case 'small':
-				clSwitchSize = 'h-[25px] min-h-[25px] w-[40px]';
-				clThumbSize = 'size-[19px] data-[state=checked]:translate-x-[15px]';
-				clLabelSize = 'text-xs';
-				break;
+				return {
+					switch: 'h-[22px] min-h-[22px] w-[40px]',
+					thum: 'size-[18px] data-[state=checked]:translate-x-[18px]',
+					label: 'text-xs'
+				};
+
+			case 'large':
+				return {
+					switch: 'h-[30px] min-h-[30px] w-[56px]',
+					thum: 'size-[26px] data-[state=checked]:translate-x-[26px]',
+					label: 'text-lg'
+				};
+
+			case 'base':
 			default:
-				clSwitchSize = 'h-[26px] min-h-[26px] w-[40px]';
-				clThumbSize = 'size-[20px] data-[state=checked]:translate-x-3';
-				clLabelSize = 'text-base';
+				return {
+					switch: 'h-[24px] min-h-[24px] w-[44px]',
+					thum: 'size-[20px] data-[state=checked]:translate-x-[20px]',
+					label: 'text-base'
+				};
 		}
-	});
+	}
+
+	let { switch: clSwitchSize, thum: clThumbSize, label: clLabelSize } = $derived(getClasses(type));
 </script>
 
 <Switch.Root
@@ -27,7 +46,7 @@
 	bind:checked
 	class={[
 		clSwitchSize,
-		'peer inline-flex shrink-0 cursor-pointer items-center rounded-full px-[3px] transition-colors',
+		'inline-flex shrink-0 cursor-pointer items-center rounded-full px-[3px] transition-colors',
 		'focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-hidden',
 		'disabled:cursor-not-allowed disabled:opacity-50',
 		'data-[state=checked]:bg-foreground data-[state=unchecked]:bg-dark-10 data-[state=unchecked]:shadow-mini-inset dark:data-[state=checked]:bg-foreground'
