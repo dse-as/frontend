@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: An new bug report
-title: "[Bug] "
+title: "[Bug]"
 labels: ''
 assignees: vvvyyynet
 type: Bug
