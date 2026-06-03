@@ -7,7 +7,7 @@ import type { TLettersKeys } from '$lib/types/documents/TDocuments';
 import type { TLongformsKeys } from '$lib/types/documents/TDocuments';
 import type { TSmallformsKeys } from '$lib/types/documents/TDocuments';
 
-type TResolvedDoc =
+export type TResolvedDoc =
 	| {
 			docId: TLettersKeys;
 			docType: 'letters';
