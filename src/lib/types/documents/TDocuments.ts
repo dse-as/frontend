@@ -50,7 +50,6 @@ export type TDocuments = {
 					textstufen_edited: string[];
 					textzeugen_nonedited: string[];
 					series: string;
-					mainPlaces?: TPlacesKeys[];
 					comment: string;
 					keywords: {
 						people?: TPeopleKeys[];
@@ -110,7 +109,6 @@ export type TDocuments = {
 					textstufen_edited: string[];
 					textzeugen_nonedited: string[];
 					series: string;
-					mainPlaces?: TPlacesKeys[];
 					comment: string;
 					keywords: {
 						people?: TPeopleKeys[];
@@ -173,7 +171,6 @@ export type TDocuments = {
 					textstufen_edited: string[];
 					textzeugen_nonedited: string[];
 					series: string;
-					mainPlaces?: TPlacesKeys[];
 					comment: string;
 					keywords: {
 						people?: TPeopleKeys[];

@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { register as reg } from '$lib/data/register.json';
-	import dict_register from '$lib/dictionaries/dict_register.json';
 	import { resolve } from '$app/paths';
 	import { tick } from 'svelte';
 	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 	import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
-
+	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	let {
 		docId,
 		docType,
@@ -19,14 +17,10 @@
 		docType: TDocTypes | undefined;
 		docItem: TResolvedDoc['item'] | undefined;
 		ceteiData: any;
-		crossRef: Record<'mainPlaces', any>;
+		crossRef: Record<'mainPlaces' | 'keywords', any>;
 		currentPage: number;
 	} = $props();
 
-	const dictReg = dict_register.dict_register as Record<
-		TRegTypes,
-		{ key_singular: string; label_plural: string }
-	>;
 	let globalComment = $derived.by(() => {
 		const match = ceteiData.serialized.match(/<tei-notesstmt\b[^>]*>(.*?)<\/tei-notesstmt>/s);
 		return match ? match[1] : '';
@@ -97,7 +91,7 @@
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
 					<td class="p-0 text-left @lg:py-2">
-						<div data-dom="global_entities" class="flex flex-wrap gap-4">
+						<div class="flex flex-wrap gap-4">
 							{#each content ? content : [] as item (item)}
 								<a
 									class="whitespace-nowrap text-surface-950"
@@ -150,44 +144,16 @@
 					</table>
 				{:else if stateMetadata === 'keywords'}
 					<table>
-						<tbody class="flex flex-col gap-2">
-							{#if docItem.metadata.mainPlaces}
-								<!-- Main Places -->
-								{@render metadataEntryWithRegLink(
-									docItem.metadata.mainPlaces.length > 1 ? 'Hauptorte' : 'Hauptort',
-									crossRef.mainPlaces
-								)}
-							{/if}
-
-							<!-- Global Entities -->
-							{#if Object.keys(dictReg).some((regType) => {
-								const keywords = docItem.metadata.keywords[regType as TRegTypes];
-								return keywords && keywords.length > 0;
-							})}
-								<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-									<td class="w-80 p-0 font-bold @lg:py-2">Schlagworte:</td>
-									<td class="p-0 text-left @lg:py-2">
-										<div data-dom="global_entities" class="flex flex-wrap gap-4">
-											{#each Object.keys(dictReg) as regType (regType)}
-												{@const regKeys = docItem.metadata.keywords[regType as TRegTypes]}
-												{#each regKeys ? Object.values(regKeys) : [] as regKey (regKey)}
-													<a
-														class="whitespace-nowrap text-surface-950"
-														data-type="entity"
-														data-entitytype={dictReg[regType as TRegTypes].key_singular}
-														href={resolve(`/edition/register/${regKey as string}`)}
-														target="_blank"
-														rel="noopener noreferrer"
-													>
-														<!-- //! FIX hardcoded type -->
-														{(reg[regType as TRegTypes][regKey as never] as Record<'name', any>)
-															?.name}
-													</a>
-												{/each}
-											{/each}
-										</div>
-									</td>
-								</tr>
+						<tbody class="flex flex-col gap-2" data-dom="global_entities">
+							{#if docItem.metadata.keywords}
+								{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
+									{#if crossRef.keywords[type]?.length}
+										{@render metadataEntryWithRegLink(
+											dictReg[type].label_plural,
+											crossRef.keywords[type]
+										)}
+									{/if}
+								{/each}
 							{/if}
 						</tbody>
 					</table>
@@ -284,7 +250,7 @@
 	@reference "tailwindcss";
 	@reference "@skeletonlabs/skeleton";
 
-	[data-dom='global_entities'] {
+	:global([data-dom='global_entities']) {
 		:global([data-type='entity']) {
 			@apply rounded-xl px-2 font-bold;
 		}
@@ -292,27 +258,27 @@
 			content: '↗';
 			padding-right: 4px;
 		}
-		:global([data-entitytype='person']) {
+		:global([data-entitytype='people']) {
 			@apply bg-red-100;
 		}
-		:global([data-entitytype='place']) {
+		:global([data-entitytype='places']) {
 			@apply bg-green-100;
 		}
-		:global([data-entitytype='event']) {
+		:global([data-entitytype='events']) {
 			@apply bg-yellow-100;
 		}
-		:global([data-entitytype='org']) {
+		:global([data-entitytype='orgs']) {
 			@apply bg-orange-100;
 		}
-		:global([data-entitytype='smallform']),
-		:global([data-entitytype='longform']),
-		:global([data-entitytype='letter']) {
+		:global([data-entitytype='smallforms']),
+		:global([data-entitytype='longforms']),
+		:global([data-entitytype='letters']) {
 			@apply bg-blue-100;
 		}
 		:global([data-entitytype='bibls']) {
 			@apply bg-purple-100;
 		}
-		:global([data-entitytype='keyword']) {
+		:global([data-entitytype='keywords']) {
 			@apply bg-gray-100;
 		}
 	}

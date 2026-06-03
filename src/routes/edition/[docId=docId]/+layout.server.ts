@@ -4,20 +4,37 @@ import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys } from '$lib/types/documents/TDocuments';
 import type { TPlacesKeys } from '$lib/types/register/TPlacesKeys';
 import { register as reg } from '$lib/data/register.json';
+import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
+import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
 
 export const load: LayoutServerLoad = async ({ params }) => {
 	const resolvedDoc = resolveDoc(allDocs, params.docId as TDocKeys);
 
 	// Resolve cross-register references
-	let crossRef: { mainPlaces: { name: string; regType: "places", regKey: TPlacesKeys }[] | null } = { mainPlaces: null };
+	let crossRef: {
+		keywords: Partial<
+			Record<
+				TRegTypes,
+				{ name: string | null; regType: TRegTypes | null; regKey: TRegKeysFlat }[] | null
+			>
+		>;
+	} = { keywords: {} };
 
 	if (resolvedDoc?.item) {
-		if ('mainPlaces' in resolvedDoc.item.metadata && resolvedDoc.item.metadata) {
-			crossRef.mainPlaces = resolvedDoc.item.metadata.mainPlaces
-				? (resolvedDoc.item.metadata.mainPlaces.map((key) => {
-						return { name: reg.places?.[key]?.name || '', regType: "places", regKey: key };
-					}) ?? null)
-				: null;
+		// keywords
+		if ('keywords' in resolvedDoc.item.metadata && resolvedDoc.item.metadata) {
+			Object.keys(resolvedDoc.item.metadata.keywords).forEach((type) => {
+				crossRef.keywords[type as TRegTypes] =
+					resolvedDoc.item!.metadata.keywords[type as TRegTypes]?.map((key) => {
+						const resolved = resolveReg(reg, key as TRegKeysFlat);
+						const hasValidType = resolved?.regType;
+						return {
+							name: hasValidType ? resolved?.item?.name || '' : null,
+							regType: hasValidType ? resolved?.regType : null,
+							regKey: key
+						};
+					}) ?? null;
+			});
 		}
 	}
 
