@@ -52,6 +52,7 @@
 		docType={data.docType}
 		docItem={data.docItem}
 		ceteiData={data.ceteiData}
+		crossRef={data.crossRef}
 		{currentPage}
 	/>
 

@@ -12,12 +12,14 @@
 		docType,
 		docItem,
 		ceteiData,
+		crossRef,
 		currentPage
 	}: {
 		docId: TDocKeys | undefined;
 		docType: TDocTypes | undefined;
 		docItem: TResolvedDoc['item'] | undefined;
 		ceteiData: any;
+		crossRef: Record<'mainPlaces', any>;
 		currentPage: number;
 	} = $props();
 
@@ -88,10 +90,34 @@
 					<td class="p-0 text-left @lg:py-2">{@html content}</td>
 				</tr>
 			{/snippet}
+			{#snippet metadataEntryWithRegLink(
+				label: string,
+				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | undefined
+			)}
+				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left @lg:py-2">
+						<div data-dom="global_entities" class="flex flex-wrap gap-4">
+							{#each content ? content : [] as item (item)}
+								<a
+									class="whitespace-nowrap text-surface-950"
+									data-type="entity"
+									data-entitytype={item.regType}
+									href={resolve(`/edition/register/${item.regKey as string}`)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{item.name}
+								</a>
+							{/each}
+						</div>
+					</td>
+				</tr>
+			{/snippet}
 			<div class="flex w-full flex-wrap justify-start gap-5">
 				{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
 				{@render metadataButton('sources', 'Quellenangaben')}
-				{@render metadataButton('keywords', 'Schlagwörter')}
+				{@render metadataButton('keywords', 'Schlagworte')}
 				{@render metadataButton('citation', 'Zitierhinweise')}
 				{@render metadataButton('download', 'Download-Links')}
 				{@render metadataButton('all', 'Alles (Temporär)')}
@@ -119,34 +145,52 @@
 					<table>
 						<tbody class="flex flex-col gap-2">
 							{@render metadataEntry('Signatur', docItem.metadata.signature)}
-							{@render metadataEntry('Archivort', docItem.metadata.archiveCollation)}
+							{@render metadataEntry('Archivierungsort', docItem.metadata.archiveCollation)}
 						</tbody>
 					</table>
 				{:else if stateMetadata === 'keywords'}
-					<!-- Global Entities -->
-					{#if Object.keys(dictReg).some((regType) => {
-						const keywords = docItem.metadata.keywords[regType as TRegTypes];
-						return keywords && keywords.length > 0;
-					})}
-						<div data-dom="global_entities" class="flex flex-wrap gap-4">
-							{#each Object.keys(dictReg) as regType (regType)}
-								{@const regKeys = docItem.metadata.keywords[regType as TRegTypes]}
-								{#each regKeys ? Object.values(regKeys) : [] as regKey (regKey)}
-									<a
-										class="whitespace-nowrap text-surface-950"
-										data-type="entity"
-										data-entitytype={dictReg[regType as TRegTypes].key_singular}
-										href={resolve(`/edition/register/${regKey as string}`)}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<!-- //! FIX hardcoded type -->
-										{(reg[regType as TRegTypes][regKey as never] as Record<'name', any>)?.name}
-									</a>
-								{/each}
-							{/each}
-						</div>
-					{/if}
+					<table>
+						<tbody class="flex flex-col gap-2">
+							{#if docItem.metadata.mainPlaces}
+								<!-- Main Places -->
+								{@render metadataEntryWithRegLink(
+									docItem.metadata.mainPlaces.length > 1 ? 'Hauptorte' : 'Hauptort',
+									crossRef.mainPlaces
+								)}
+							{/if}
+
+							<!-- Global Entities -->
+							{#if Object.keys(dictReg).some((regType) => {
+								const keywords = docItem.metadata.keywords[regType as TRegTypes];
+								return keywords && keywords.length > 0;
+							})}
+								<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+									<td class="w-80 p-0 font-bold @lg:py-2">Schlagworte:</td>
+									<td class="p-0 text-left @lg:py-2">
+										<div data-dom="global_entities" class="flex flex-wrap gap-4">
+											{#each Object.keys(dictReg) as regType (regType)}
+												{@const regKeys = docItem.metadata.keywords[regType as TRegTypes]}
+												{#each regKeys ? Object.values(regKeys) : [] as regKey (regKey)}
+													<a
+														class="whitespace-nowrap text-surface-950"
+														data-type="entity"
+														data-entitytype={dictReg[regType as TRegTypes].key_singular}
+														href={resolve(`/edition/register/${regKey as string}`)}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														<!-- //! FIX hardcoded type -->
+														{(reg[regType as TRegTypes][regKey as never] as Record<'name', any>)
+															?.name}
+													</a>
+												{/each}
+											{/each}
+										</div>
+									</td>
+								</tr>
+							{/if}
+						</tbody>
+					</table>
 				{:else if stateMetadata === 'citation'}
 					<table>
 						<tbody class="flex flex-col gap-2">
