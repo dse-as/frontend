@@ -65,6 +65,8 @@ To restrict CSS to view-modes use:
 	--color-rs-place: #0891b2;
 	--color-rs-org: #b45309;
 	--color-rs-work: #15803d;
+	--color-rs-bibl: #807715;
+	--color-rs-keyword: #1a1580;
 }
 
 /* -------------------------------- */
@@ -578,6 +580,12 @@ tei-anchor {
 		}
 		&[type='work'] {
 			border-bottom: 3px solid var(--color-rs-work);
+		}
+		&[type='bibl'] {
+			border-bottom: 3px solid var(--color-rs-bibl);
+		}
+		&[type='keyword'] {
+			border-bottom: 3px solid var(--color-rs-keyword);
 		}
 	}
 }
