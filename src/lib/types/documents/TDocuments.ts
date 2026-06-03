@@ -56,9 +56,6 @@ export type TDocuments = {
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
 						orgs?: TOrgsKeys[];
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
 						bibls?: TBiblsKeys[];
 						keywords?: TKeywordsKeys[];
 					};
