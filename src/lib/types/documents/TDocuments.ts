@@ -64,6 +64,7 @@ export type TDocuments = {
 					};
 					maximum: string;
 					travel: string;
+					archive: string;
 					archiveCollation: string;
 					pubSecondary: string;
 					urlOnlineResource: string;
@@ -126,6 +127,7 @@ export type TDocuments = {
 					};
 					maximum: string; //! what is this?
 					travel: string; //! what is this?
+					archive: string;
 					archiveCollation: string;
 					pubSecondary: string;
 					urlOnlineResource: string;
@@ -188,6 +190,7 @@ export type TDocuments = {
 					};
 					maximum: string;
 					travel: string;
+					archive: string;
 					archiveCollation: string;
 					pubSecondary: string;
 					urlOnlineResource: string;

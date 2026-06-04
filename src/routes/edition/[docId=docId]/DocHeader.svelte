@@ -139,7 +139,8 @@
 					<table>
 						<tbody class="flex flex-col gap-2">
 							{@render metadataEntry('Signatur', docItem.metadata.signature)}
-							{@render metadataEntry('Archivierungsort', docItem.metadata.archiveCollation)}
+							{@render metadataEntry('Archivierungsort', docItem.metadata.archive)}
+							{@render metadataEntry('Archive Collation', docItem.metadata.archiveCollation)}
 						</tbody>
 					</table>
 				{:else if stateMetadata === 'globalEntities'}
