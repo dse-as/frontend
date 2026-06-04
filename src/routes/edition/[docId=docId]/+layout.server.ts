@@ -10,7 +10,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 	const resolvedDoc = resolveDoc(allDocs, params.docId as TDocKeys);
 
 	// Resolve cross-register references
-	let crossRef: {
+	const crossRef: {
 		globalEntities: Partial<
 			Record<
 				TRegTypes,

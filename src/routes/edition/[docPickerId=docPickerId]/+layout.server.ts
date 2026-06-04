@@ -8,7 +8,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 	const resolvedDoc = resolveDoc(allDocs, params.docPickerId as TDocKeys);
 
 	// Resolve cross-register references
-	let crossRef: {
+	const crossRef: {
 		linkedDocs: Partial<
 			Record<
 				TDocTypes,
