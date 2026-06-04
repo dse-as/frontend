@@ -44,7 +44,8 @@ export type TDocuments = {
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
-					pubPlace: string;
+					placeOfSending: string; //! discuss whether TPlacesKeys
+					placeOfRecepient: string; //! discuss whether TPlacesKeys
 					signature: string;
 					pubDetails?: string;
 					textstufen_edited: string[];

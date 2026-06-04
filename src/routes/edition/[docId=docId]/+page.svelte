@@ -44,13 +44,12 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences docId={data.docId} {currentSeq} />
+	<Sequences docId={data.resolvedDoc?.docId} {currentSeq} />
 
 	<!-- Metadata -->
 	<DocHeader
-		docId={data.docId}
-		docType={data.docType}
-		docItem={data.docItem}
+		docId={data.resolvedDoc?.docId}
+		resDoc={data.resolvedDoc}
 		ceteiData={data.ceteiData}
 		crossRef={data.crossRef}
 		{currentPage}
@@ -73,15 +72,19 @@
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf[0] === 'DF'}
-		<Gallery docItem={data.docItem} {currentPage} />
+		<Gallery docItem={data.resolvedDoc?.item} {currentPage} />
 	{/if}
 
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
 		{#if dflf[0] === 'LF'}
-			<LF docId={data.docId} docItem={data.docItem} ceteiData={data.ceteiData} />
+			<LF
+				docId={data.resolvedDoc?.docId}
+				docItem={data.resolvedDoc?.item}
+				ceteiData={data.ceteiData}
+			/>
 		{:else if dflf[0] === 'DF'}
-			<DF docItem={data.docItem} ceteiData={data.ceteiData} {currentPage} />
+			<DF docItem={data.resolvedDoc?.item} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
 </div>

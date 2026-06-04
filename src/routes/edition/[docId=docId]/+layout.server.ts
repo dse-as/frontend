@@ -38,9 +38,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 	}
 
 	return {
-		docId: resolvedDoc?.docId,
-		docType: resolvedDoc?.docType,
-		docItem: resolvedDoc?.item,
+		resolvedDoc: resolvedDoc,
 		crossRef
 	};
 };

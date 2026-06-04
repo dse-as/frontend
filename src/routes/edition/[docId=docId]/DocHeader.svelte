@@ -2,20 +2,18 @@
 	import { resolve } from '$app/paths';
 	import { tick } from 'svelte';
 	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
-	import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
+	import type { TDocKeys } from '$lib/types/documents/TDocuments';
 	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	let {
 		docId,
-		docType,
-		docItem,
+		resDoc,
 		ceteiData,
 		crossRef,
 		currentPage
 	}: {
 		docId: TDocKeys | undefined;
-		docType: TDocTypes | undefined;
-		docItem: TResolvedDoc['item'] | undefined;
+		resDoc: TResolvedDoc | null;
 		ceteiData: any;
 		crossRef: Record<'globalEntities', any>;
 		currentPage: number;
@@ -64,7 +62,7 @@
 
 <!-- Snippet for Metadata Table -->
 {#snippet MetadataTable()}
-	{#if docItem}
+	{#if resDoc?.item}
 		<div class="rounded-xl border-surface-500 p-5 pt-0">
 			<h5 class="mb-4 h5"><strong>Metadaten</strong></h5>
 
@@ -121,32 +119,50 @@
 				{#if stateMetadata === 'eckdaten'}
 					<table>
 						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry('Voller Titel', docItem.metadata.title_full)}
-							{@render metadataEntry('Publikationsdatum', docItem.metadata.pubDate)}
-							{@render metadataEntry('Publikationsort', docItem.metadata.pubPlace)}
-							{@render metadataEntry(
-								'Publikation einzig post-hum',
-								typeof docItem.metadata.pubPosthumOnly === 'boolean'
-									? docItem.metadata.pubPosthumOnly
-										? 'Ja'
-										: 'Nein'
-									: '?'
-							)}
-							{@render metadataEntry('Publikationsdetails', docItem.metadata.pubDetails)}
+							{@render metadataEntry('Voller Titel', resDoc.item.metadata.title_full)}
+							{@render metadataEntry('Publikationsdatum', resDoc.item.metadata.pubDate)}
+							{#if resDoc.docType === 'letters'}
+								{@render metadataEntry(
+									'Absendeort',
+									'placeOfSending' in resDoc.item.metadata
+										? resDoc.item.metadata.placeOfSending
+										: undefined
+								)}
+								{@render metadataEntry(
+									'Empfangsort',
+									'placeOfRecepient' in resDoc.item.metadata
+										? resDoc.item.metadata.placeOfRecepient
+										: undefined
+								)}
+							{:else}
+								{@render metadataEntry(
+									'Publikationsort',
+									'pubPlace' in resDoc.item.metadata ? resDoc.item.metadata.pubPlace : undefined
+								)}
+								{@render metadataEntry(
+									'Publikation einzig post-hum',
+									typeof resDoc.item.metadata.pubPosthumOnly === 'boolean'
+										? resDoc.item.metadata.pubPosthumOnly
+											? 'Ja'
+											: 'Nein'
+										: '?'
+								)}
+							{/if}
+							{@render metadataEntry('Publikationsdetails', resDoc.item.metadata.pubDetails)}
 						</tbody>
 					</table>
 				{:else if stateMetadata === 'sources'}
 					<table>
 						<tbody class="flex flex-col gap-2">
-							{@render metadataEntry('Signatur', docItem.metadata.signature)}
-							{@render metadataEntry('Archivierungsort', docItem.metadata.archive)}
-							{@render metadataEntry('Archive Collation', docItem.metadata.archiveCollation)}
+							{@render metadataEntry('Signatur', resDoc.item.metadata.signature)}
+							{@render metadataEntry('Archivierungsort', resDoc.item.metadata.archive)}
+							{@render metadataEntry('Archive Collation', resDoc.item.metadata.archiveCollation)}
 						</tbody>
 					</table>
 				{:else if stateMetadata === 'globalEntities'}
 					<table>
 						<tbody class="flex flex-col gap-2" data-dom="global_entities">
-							{#if docItem.metadata.globalEntities}
+							{#if resDoc.item.metadata.globalEntities}
 								{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
 									{#if crossRef.globalEntities[type]?.length}
 										{@render metadataEntryWithRegLink(
@@ -163,11 +179,11 @@
 						<tbody class="flex flex-col gap-2">
 							{@render metadataEntry(
 								'Dieses Dokument',
-								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docItem.metadata.title_full}`
+								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item.metadata.title_full}`
 							)}
 							{@render metadataEntry(
 								'Aktuell sichtbare Seite',
-								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${docItem.metadata.title_full},  Seite ${currentPage}`
+								`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item.metadata.title_full},  Seite ${currentPage}`
 							)}
 						</tbody>
 					</table>
@@ -183,7 +199,7 @@
 				{:else if stateMetadata === 'all'}
 					<div class="h-auto">
 						<div data-dom="metadata_table" class="">
-							{#each Object.entries(docItem.metadata) as entry (entry)}
+							{#each Object.entries(resDoc.item.metadata) as entry (entry)}
 								{#if entry[0] !== 'globalEntities' && entry[1]}
 									{@render metadataEntry(entry[0], String(entry[1]))}
 								{/if}
@@ -196,12 +212,12 @@
 	{/if}
 {/snippet}
 
-{#if docItem}
+{#if resDoc && resDoc.item}
 	<div class="w-full">
-		<h1 class="h1">{docItem.metadata.title_full}</h1>
-		{#if docType === 'smallforms'}
+		<h1 class="h1">{resDoc.item.metadata.title_full}</h1>
+		{#if resDoc.docType === 'smallforms'}
 			<h2 class="h2">
-				Publiziert in {docItem.metadata.pubPlace} ({docItem.metadata.year})
+				Publiziert in {resDoc.item.metadata.pubPlace} ({resDoc.item.metadata.year})
 			</h2>
 		{/if}
 		<!-- Global Comment -->
