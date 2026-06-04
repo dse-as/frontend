@@ -52,7 +52,7 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					globalEntities: {
+					globalEntities?: {
 						smallforms?: TSmallformsKeys[];
 						longforms?: TLongformsKeys[];
 						letters?: TLettersKeys[];
@@ -73,13 +73,13 @@ export type TDocuments = {
 				};
 				entities: {
 					//! unsure if I should drop this, since fully redundant with register.json
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
 					orgs?: TOrgsKeys[];
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
@@ -108,21 +108,21 @@ export type TDocuments = {
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
-					pubPlace: string;
+					pubPlace?: string;
 					signature: string;
 					pubDetails?: string;
 					textstufen_edited: string[];
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					globalEntities: {
+					globalEntities?: {
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
 						orgs?: TOrgsKeys[];
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
 						bibls?: TBiblsKeys[];
 						keywords?: TKeywordsKeys[];
 					};
@@ -136,13 +136,13 @@ export type TDocuments = {
 				};
 				entities: {
 					//! unsure if I should drop this, since fully redundant with register.json
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
 					orgs?: TOrgsKeys[];
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
@@ -171,21 +171,21 @@ export type TDocuments = {
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
-					pubPlace: string;
+					pubPlace?: string;
 					signature: string;
 					pubDetails?: string;
 					textstufen_edited: string[];
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					globalEntities: {
+					globalEntities?: {
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
 						orgs?: TOrgsKeys[];
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
 						bibls?: TBiblsKeys[];
 						keywords?: TKeywordsKeys[];
 					};
@@ -199,13 +199,13 @@ export type TDocuments = {
 				};
 				entities: {
 					//! unsure if I should drop this, since fully redundant with register.json
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
 					orgs?: TOrgsKeys[];
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
@@ -227,7 +227,7 @@ type DictEntity<TM extends string | number | symbol, TG extends string | number 
 	key_singular: string;
 	label_plural: string;
 	metadata: {
-		[K in TM]: { label: string };
+		[K in TM]?: { label: string };
 	};
 	groups:
 		| {

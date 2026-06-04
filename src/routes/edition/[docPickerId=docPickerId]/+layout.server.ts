@@ -17,7 +17,11 @@ export const load: LayoutServerLoad = async ({ params }) => {
 		>;
 	} = { linkedDocs: {} };
 
-	if (resolvedDoc?.item) {
+	if (
+		resolvedDoc?.item &&
+		'globalEntities' in resolvedDoc.item.metadata &&
+		resolvedDoc.item.metadata.globalEntities
+	) {
 		// linkedDocs
 		if (
 			('smallforms' in resolvedDoc.item.metadata.globalEntities &&
@@ -33,7 +37,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 				...(resolvedDoc.item?.metadata.globalEntities.letters || [])
 			]).forEach((type) => {
 				crossRef.linkedDocs[type as TDocTypes] =
-					resolvedDoc.item?.metadata.globalEntities[type as TDocTypes]?.map((key) => {
+					resolvedDoc.item?.metadata.globalEntities![type as TDocTypes]?.map((key) => {
 						const resolved = resolveDoc(allDocs, key as TDocKeys);
 						const hasValidType = resolved?.docType;
 						return {

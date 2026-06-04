@@ -21,10 +21,10 @@ export const load: LayoutServerLoad = async ({ params }) => {
 
 	if (resolvedDoc?.item) {
 		// globalEntities
-		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata) {
+		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata.globalEntities) {
 			Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
 				crossRef.globalEntities[type as TRegTypes] =
-					resolvedDoc.item!.metadata.globalEntities[type as TRegTypes]?.map((key) => {
+					resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map((key) => {
 						const resolved = resolveReg(reg, key as TRegKeysFlat);
 						const hasValidType = resolved?.regType;
 						return {
