@@ -2,7 +2,6 @@ import type { LayoutServerLoad } from './$types';
 import { documents as allDocs } from '$lib/data/documents.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys } from '$lib/types/documents/TDocuments';
-import type { TPlacesKeys } from '$lib/types/register/TPlacesKeys';
 import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
@@ -12,20 +11,20 @@ export const load: LayoutServerLoad = async ({ params }) => {
 
 	// Resolve cross-register references
 	let crossRef: {
-		keywords: Partial<
+		globalEntities: Partial<
 			Record<
 				TRegTypes,
 				{ name: string | null; regType: TRegTypes | null; regKey: TRegKeysFlat }[] | null
 			>
 		>;
-	} = { keywords: {} };
+	} = { globalEntities: {} };
 
 	if (resolvedDoc?.item) {
-		// keywords
-		if ('keywords' in resolvedDoc.item.metadata && resolvedDoc.item.metadata) {
-			Object.keys(resolvedDoc.item.metadata.keywords).forEach((type) => {
-				crossRef.keywords[type as TRegTypes] =
-					resolvedDoc.item!.metadata.keywords[type as TRegTypes]?.map((key) => {
+		// globalEntities
+		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata) {
+			Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
+				crossRef.globalEntities[type as TRegTypes] =
+					resolvedDoc.item!.metadata.globalEntities[type as TRegTypes]?.map((key) => {
 						const resolved = resolveReg(reg, key as TRegKeysFlat);
 						const hasValidType = resolved?.regType;
 						return {

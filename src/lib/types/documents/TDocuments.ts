@@ -51,7 +51,10 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					keywords: {
+					globalEntities: {
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
@@ -110,7 +113,7 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					keywords: {
+					globalEntities: {
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
@@ -172,7 +175,7 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					keywords: {
+					globalEntities: {
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];

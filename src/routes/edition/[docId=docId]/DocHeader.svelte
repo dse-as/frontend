@@ -17,7 +17,7 @@
 		docType: TDocTypes | undefined;
 		docItem: TResolvedDoc['item'] | undefined;
 		ceteiData: any;
-		crossRef: Record<'mainPlaces' | 'keywords', any>;
+		crossRef: Record<'globalEntities', any>;
 		currentPage: number;
 	} = $props();
 
@@ -111,7 +111,7 @@
 			<div class="flex w-full flex-wrap justify-start gap-5">
 				{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
 				{@render metadataButton('sources', 'Quellenangaben')}
-				{@render metadataButton('keywords', 'Schlagworte')}
+				{@render metadataButton('globalEntities', 'Schlagworte')}
 				{@render metadataButton('citation', 'Zitierhinweise')}
 				{@render metadataButton('download', 'Download-Links')}
 				{@render metadataButton('all', 'Alles (Temporär)')}
@@ -142,15 +142,15 @@
 							{@render metadataEntry('Archivierungsort', docItem.metadata.archiveCollation)}
 						</tbody>
 					</table>
-				{:else if stateMetadata === 'keywords'}
+				{:else if stateMetadata === 'globalEntities'}
 					<table>
 						<tbody class="flex flex-col gap-2" data-dom="global_entities">
-							{#if docItem.metadata.keywords}
+							{#if docItem.metadata.globalEntities}
 								{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
-									{#if crossRef.keywords[type]?.length}
+									{#if crossRef.globalEntities[type]?.length}
 										{@render metadataEntryWithRegLink(
 											dictReg[type].label_plural,
-											crossRef.keywords[type]
+											crossRef.globalEntities[type]
 										)}
 									{/if}
 								{/each}
@@ -183,7 +183,7 @@
 					<div class="h-auto">
 						<div data-dom="metadata_table" class="">
 							{#each Object.entries(docItem.metadata) as entry (entry)}
-								{#if entry[0] !== 'keywords' && entry[1]}
+								{#if entry[0] !== 'globalEntities' && entry[1]}
 									{@render metadataEntry(entry[0], String(entry[1]))}
 								{/if}
 							{/each}
