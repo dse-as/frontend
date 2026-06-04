@@ -1,8 +1,6 @@
 <script lang="ts" generics="T extends TRegTypes">
 	import { resolve } from '$app/paths';
-
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
-
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import type {
 		TRegAttrsBibls,
@@ -27,17 +25,17 @@
 		docType,
 		regDict,
 		regAttributes,
-		orgNames = null,
-		authorNames = null,
-		linkedDocs = [],
+		crossRef,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		docType: T;
 		regDict: TRegDict['dict_register'][T];
 		regAttributes: Partial<Record<TRegAttrsMap[T], any>> | undefined | null;
-		orgNames: string[] | null;
-		authorNames: string[] | null;
-		linkedDocs: TLinkedDoc[];
+		crossRef: {
+			orgNames: string[] | null;
+			authorNames: string[] | null;
+			linkedDocs: TLinkedDoc[];
+		};
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -103,11 +101,11 @@
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgIds' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{orgNames?.join(', ') ?? value}
+			{crossRef.orgNames?.join(', ') ?? value}
 		</a>
 	{:else if attKey === 'authorIds' && value}
 		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
-			{authorNames?.join(', ') ?? value}
+			{crossRef.authorNames?.join(', ') ?? value}
 		</a>
 	{:else if Array.isArray(value)}
 		{value.join(', ')}
@@ -117,7 +115,7 @@
 {/snippet}
 
 <!-- Snippet for LinkedItemsList -->
-{#snippet LinkedItemsContainer(docs: TLinkedDoc[])}
+{#snippet LinkedItemsContainer(docs: TLinkedDoc[] | undefined | null)}
 	<div class="flex w-full flex-wrap gap-5 pb-15">
 		{#each docs as doc (doc.docId)}
 			{@render LinkedItem(doc)}
@@ -224,13 +222,13 @@
 		</h2>
 		{@render LinkedItemsContainer([])}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
-		{@render LinkedItemsContainer(linkedDocs)}
+		{@render LinkedItemsContainer(crossRef.linkedDocs)}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{:else}
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
 		<div class="min-h-[40vh]">
-			{@render LinkedItemsContainer(linkedDocs)}
+			{@render LinkedItemsContainer(crossRef.linkedDocs)}
 		</div>
 		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}

@@ -73,9 +73,7 @@
 			docType={regType}
 			regDict={dictReg[regType]}
 			regAttributes={data.regAttributes}
-			orgNames={data.orgNames}
-			authorNames={data.authorNames}
-			linkedDocs={data.linkedDocs}
+			crossRef={data.crossRef}
 			{cheatPageHeightInRegSingleColView}
 		/>
 	</div>
