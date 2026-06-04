@@ -28,9 +28,9 @@ export const load: LayoutServerLoad = async ({ params }) => {
 				resolvedDoc.item?.metadata.globalEntities.letters)
 		) {
 			Object.keys([
-				...resolvedDoc.item?.metadata.globalEntities.smallforms || [],
-				...resolvedDoc.item?.metadata.globalEntities.longforms || [],
-				...resolvedDoc.item?.metadata.globalEntities.letters || []
+				...(resolvedDoc.item?.metadata.globalEntities.smallforms || []),
+				...(resolvedDoc.item?.metadata.globalEntities.longforms || []),
+				...(resolvedDoc.item?.metadata.globalEntities.letters || [])
 			]).forEach((type) => {
 				crossRef.linkedDocs[type as TDocTypes] =
 					resolvedDoc.item?.metadata.globalEntities[type as TDocTypes]?.map((key) => {
