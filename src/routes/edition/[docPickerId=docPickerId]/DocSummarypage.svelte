@@ -1,27 +1,23 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { resolveDoc, type TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
-	import { documents as allDocsRaw } from '$lib/data/documents.json';
+	import { type TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import type {
 		TDocKeys,
 		TDocMetadataKeys,
 		TDocMetadataKeysLetters,
 		TDocMetadataKeysLongforms,
-		TDocMetadataKeysSmallforms,
-		TDocTypes,
-		TDocuments
+		TDocMetadataKeysSmallforms
 	} from '$lib/types/documents/TDocuments';
-
-	const allDocs = allDocsRaw as TDocuments['documents'];
 
 	let {
 		resDoc,
+		crossRef,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
 		resDoc: TResolvedDoc | null;
+		crossRef: Record<'linkedDocs', any>;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -90,8 +86,7 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(itemId: TDocKeys)}
-	{#if resDoc?.docId}
-		{@const { item: resDocItem } = resolveDoc(allDocs, resDoc.docId) || { item: null }}
+	{#if crossRef?.linkedDocs}
 		<a
 			data-sveltekit-preload-data="tap"
 			data-sveltekit-preload-code="hover"
@@ -103,15 +98,15 @@
 			<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 				<div class="flex h-full w-full items-center justify-center">
 					<IIIF_Thumb
-						url={resDocItem?.manuscript?.iiif_urls[0]}
+						url={crossRef.linkedDocs[itemId]?.manuscript?.iiif_urls[0]}
 						maxWidth="80"
 						maxHeight="80"
 						classes="rounded-xl"
 					/>
 				</div>
 				<div class="flex flex-col">
-					<span class="italic">{resDocItem?.metadata?.title_full}</span>
-					<span class="">{resDocItem?.metadata?.pubDate}</span>
+					<span class="italic">{crossRef.linkedDocs[itemId]?.metadata?.title_full}</span>
+					<span class="">{crossRef.linkedDocs[itemId]?.metadata?.pubDate}</span>
 				</div>
 			</div>
 		</a>

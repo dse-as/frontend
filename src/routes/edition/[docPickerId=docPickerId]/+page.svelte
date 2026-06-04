@@ -60,8 +60,12 @@
 				itemKey={docSlug as TDocKeys}
 				{cheatPageHeightInRegSingleColView}
 			/>
-			{#if data.docItem && data.docId}
-				<DocSummarypage resDoc={data.resDoc} {cheatPageHeightInRegSingleColView} />
+			{#if data.resDoc}
+				<DocSummarypage
+					resDoc={data.resDoc}
+					crossRef={data.crossRef}
+					{cheatPageHeightInRegSingleColView}
+				/>
 			{/if}
 		</div>
 	{/if}
