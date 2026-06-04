@@ -5,8 +5,6 @@ import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister
 
 export const load: LayoutServerLoad = ({ params }) => {
 	const regSlug = params.regSlug as TRegTypes | TRegKeysFlat | undefined;
-	// const regType: string | null = findKeyBySecondaryKey(reg, regSlug);
-	const allfirstOrderKeys = Object.keys(reg) as Array<keyof typeof reg>;
 
 	// What registerPage are we looking at?
 	const regView = !regSlug
@@ -23,5 +21,5 @@ export const load: LayoutServerLoad = ({ params }) => {
 			? (regSlug as TRegTypes)
 			: (findKeyBySecondaryKey(reg, regSlug) as TRegTypes);
 
-	return { regSlug, regType, allfirstOrderKeys, regView };
+	return { regSlug, regType, regView };
 };
