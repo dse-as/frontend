@@ -6,5 +6,5 @@ import type { TDocKeys } from '$lib/types/documents/TDocuments';
 
 export const load: LayoutServerLoad = async ({ params }) => {
 	const resolvedDoc = resolveDoc(allDocs, params.docPickerId as TDocKeys);
-	return { docId: resolvedDoc?.docId, docType: resolvedDoc?.docType, docItem: resolvedDoc?.item };
+	return { resDoc: resolvedDoc};
 };

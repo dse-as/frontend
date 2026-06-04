@@ -3,10 +3,9 @@
 
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import { resolveDoc, type TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { documents as allDocsRaw } from '$lib/data/documents.json';
 	import type {
-		TDocItems,
 		TDocKeys,
 		TDocMetadataKeys,
 		TDocMetadataKeysLetters,
@@ -19,14 +18,10 @@
 	const allDocs = allDocsRaw as TDocuments['documents'];
 
 	let {
-		docType,
-		docId,
-		docItem,
+		resDoc,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		docType: TDocTypes;
-		docId: TDocKeys;
-		docItem: TDocItems;
+		resDoc: TResolvedDoc | null;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
 
@@ -59,14 +54,18 @@
 		<!-- Body-->
 		{#each mKeys as mKey (mKey)}
 			{#if mKey}
-				<tbody>
-					<tr>
-						<td class="w-80 px-4 py-2 font-bold">{dictDocs[docType].metadata[mKey]?.label}:</td>
-						<td class="px-4 py-2 text-left"
-							>{@render MetadataValue(mKey, docItem.metadata[mKey])}</td
-						>
-					</tr>
-				</tbody>
+				{#if resDoc && resDoc.docType}
+					<tbody>
+						<tr>
+							<td class="w-80 px-4 py-2 font-bold"
+								>{dictDocs[resDoc.docType].metadata[mKey]?.label}:</td
+							>
+							<td class="px-4 py-2 text-left"
+								>{@render MetadataValue(mKey, resDoc.item?.metadata[mKey])}</td
+							>
+						</tr>
+					</tbody>
+				{/if}
 			{/if}
 		{/each}
 	</table>
@@ -91,30 +90,32 @@
 
 <!-- Snippet for LinkedItem (inside LinkedItemsList) -->
 {#snippet LinkedItem(itemId: TDocKeys)}
-	{@const { item: resDoc } = resolveDoc(allDocs, docId) || { item: null }}
-	<a
-		data-sveltekit-preload-data="tap"
-		data-sveltekit-preload-code="hover"
-		href={resolve(`/edition/${itemId as string}`)}
-		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
-		target="blank"
-		rel="noopener noreferrer"
-	>
-		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-			<div class="flex h-full w-full items-center justify-center">
-				<IIIF_Thumb
-					url={resDoc?.manuscript?.iiif_urls[0]}
-					maxWidth="80"
-					maxHeight="80"
-					classes="rounded-xl"
-				/>
+	{#if resDoc?.docId}
+		{@const { item: resDocItem } = resolveDoc(allDocs, resDoc.docId) || { item: null }}
+		<a
+			data-sveltekit-preload-data="tap"
+			data-sveltekit-preload-code="hover"
+			href={resolve(`/edition/${itemId as string}`)}
+			class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+			target="blank"
+			rel="noopener noreferrer"
+		>
+			<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+				<div class="flex h-full w-full items-center justify-center">
+					<IIIF_Thumb
+						url={resDocItem?.manuscript?.iiif_urls[0]}
+						maxWidth="80"
+						maxHeight="80"
+						classes="rounded-xl"
+					/>
+				</div>
+				<div class="flex flex-col">
+					<span class="italic">{resDocItem?.metadata?.title_full}</span>
+					<span class="">{resDocItem?.metadata?.pubDate}</span>
+				</div>
 			</div>
-			<div class="flex flex-col">
-				<span class="italic">{resDoc?.metadata?.title_full}</span>
-				<span class="">{resDoc?.metadata?.pubDate}</span>
-			</div>
-		</div>
-	</a>
+		</a>
+	{/if}
 {/snippet}
 
 <!-- Container -->
@@ -124,20 +125,20 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if docType === 'letters'}
-		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysLetters, any>}
+	{#if resDoc?.docType === 'letters'}
+		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLetters, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
-	{:else if docType === 'smallforms'}
-		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysSmallforms, any>}
+	{:else if resDoc?.docType === 'smallforms'}
+		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysSmallforms, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
-	{:else if docType === 'longforms'}
-		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysLongforms, any>}
+	{:else if resDoc?.docType === 'longforms'}
+		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLongforms, any>}
 		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
 			{docMetadataTyped?.label}
 		</h1>
@@ -147,7 +148,7 @@
 	<!-- Linked documents -->
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
-		{@render LinkedItemsContainer(docItem.metadata?.textstufen_edited as TDocKeys[])}
+		{@render LinkedItemsContainer(resDoc?.item?.metadata?.textstufen_edited as TDocKeys[])}
 	</div>
 	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Sequenzen</h2>
 	<p>TODO</p>

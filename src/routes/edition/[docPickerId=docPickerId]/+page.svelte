@@ -61,12 +61,7 @@
 				{cheatPageHeightInRegSingleColView}
 			/>
 			{#if data.docItem && data.docId}
-				<DocSummarypage
-					{docType}
-					docId={data.docId}
-					docItem={data.docItem}
-					{cheatPageHeightInRegSingleColView}
-				/>
+				<DocSummarypage resDoc={data.resDoc} {cheatPageHeightInRegSingleColView} />
 			{/if}
 		</div>
 	{/if}
