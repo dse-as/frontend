@@ -6,7 +6,7 @@
 >
 	import { resolve } from '$app/paths';
 	import { goto } from '$app/navigation';
-	import Switch from './ui/Switch.svelte';
+	import Switch from '$lib/components/ui/Switch.svelte';
 
 	import { filterAndSortData } from '$lib/functions/ease_of_use/filterAndSortData';
 	import { normalizeChars } from '$lib/functions/ease_of_use/normalizeChars';
@@ -194,7 +194,9 @@
 {#snippet groupControls()}
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
-			<Switch bind:checked={uiOvGroupByCat[itemVariant]} height={24} />
+			<Switch bind:checked={uiOvGroupByCat[itemVariant]} height={24}
+				><span>Nach Kategorien gruppierenfoo</span></Switch
+			>
 		</div>
 	{/if}
 {/snippet}

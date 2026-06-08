@@ -1,9 +1,22 @@
 <script lang="ts">
-	import { Label, Switch } from 'bits-ui';
+	import { Label, Switch, useId } from 'bits-ui';
+	import type { Snippet } from 'svelte';
 
-	let { checked = $bindable(), height = 24 }: { checked: boolean | undefined; height: number } =
-		$props();
+	let {
+		checked = $bindable(),
+		height = 24,
+		onCheckedChange = () => {},
+		children = undefined,
+		icon = undefined
+	}: {
+		checked: boolean | undefined;
+		height?: number;
+		onCheckedChange?: (checked: boolean) => void;
+		children?: Snippet;
+		icon?: Snippet;
+	} = $props();
 
+	const id = useId(); // Generate a unique ID
 	function calculateDimensions(h: number) {
 		const safeH = typeof h === 'number' && !isNaN(h) ? h : 24;
 		const width = Math.round(safeH * 1.8);
@@ -33,8 +46,9 @@
 </script>
 
 <Switch.Root
-	id="switch_groups"
+	{id}
 	name="toggle groups"
+	{onCheckedChange}
 	bind:checked
 	style={switchStyle}
 	class={[
@@ -51,11 +65,17 @@
 			'data-[state=unchecked]:translate-x-0 data-[state=unchecked]:shadow-mini',
 			'dark:border dark:border-background/30 dark:bg-foreground dark:shadow-popover dark:data-[state=unchecked]:border'
 		]}
-	/>
+	>
+		{#if icon}
+			{@render icon()}
+		{/if}
+	</Switch.Thumb>
 </Switch.Root>
 
-<Label.Root for="switch_groups" style={labelStyle} class="font-medium">
-	Nach Kategorien gruppieren
+<Label.Root for={id} style={labelStyle} class="font-medium">
+	{#if children}
+		{@render children()}
+	{/if}
 </Label.Root>
 
 <style>

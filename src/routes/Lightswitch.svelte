@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import Switch from '$lib/components/ui/Switch.svelte';
 
 	let isDark = $state(false);
 	let darkModeState = $derived(isDark ? 'dark' : 'light');
@@ -23,24 +23,14 @@
 	});
 </script>
 
-<Switch
-	class="**:text-lg"
-	name="mode"
-	checked={isDark}
-	onCheckedChange={() => handleToggleLightswitch()}
->
-	<Switch.Control class="bg-surface-300-700 data-[state=checked]:bg-secondary-300">
-		<Switch.Thumb>
-			<Switch.Context>
-				{#snippet children(switch_)}
-					{#if switch_().checked}
-						<i class="fa-solid fa-sun"></i>
-					{:else}
-						<i class="fa-solid fa-moon"></i>
-					{/if}
-				{/snippet}
-			</Switch.Context>
-		</Switch.Thumb>
-	</Switch.Control>
-	<Switch.HiddenInput />
-</Switch>
+{#snippet icon()}
+	<div class="flex h-full w-full items-center justify-center">
+		{#if isDark}
+			<i class="fa-solid fa-sun"></i>
+		{:else}
+			<i class="fa-solid fa-moon"></i>
+		{/if}
+	</div>
+{/snippet}
+
+<Switch checked={isDark} onCheckedChange={() => handleToggleLightswitch()} {icon}></Switch>
