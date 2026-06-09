@@ -195,7 +195,7 @@
 	{#if hasGroupControls}
 		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<Switch bind:checked={uiOvGroupByCat[itemVariant]} height={24}
-				><span>Nach Kategorien gruppierenfoo</span></Switch
+				><span>Nach Kategorien gruppieren</span></Switch
 			>
 		</div>
 	{/if}
