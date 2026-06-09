@@ -10,7 +10,10 @@
 	let { docId, docItem, ceteiData } = $props();
 </script>
 
-<div data-fassung="LF" class="grid grid-cols-1 gap-25 overflow-hidden md:grid-cols-[auto_600px]">
+<div
+	data-fassung="LF"
+	class="grid h-full grid-cols-1 gap-25 overflow-hidden md:grid-cols-[auto_600px]"
+>
 	<TextFluid {ceteiData} />
 
 	<Tabs.Root bind:value={activeRegisterTab.value}>

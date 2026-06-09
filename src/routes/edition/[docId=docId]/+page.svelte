@@ -7,7 +7,7 @@
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import Sequences from './Sequences.svelte';
-	import { ToggleGroup } from '@skeletonlabs/skeleton-svelte';
+	import { ToggleGroup } from 'bits-ui';
 
 	import { onMount } from 'svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
@@ -17,8 +17,8 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF[] = $derived.by(() =>
-		building ? ['LF'] : page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+	let dflf: TDFLF = $derived.by(() =>
+		building ? 'LF' : page.url.searchParams?.get('mode') === 'DF' ? 'DF' : 'LF'
 	);
 
 	// Current Page
@@ -31,12 +31,12 @@
 	onMount(() => {
 		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
-			dflf = ['DF'];
+			dflf = 'DF';
 		} else {
 			// fallback (default)
 			const url = new URL(page.url);
 			url.searchParams.set('mode', 'LF');
-			dflf = ['LF'];
+			dflf = 'LF';
 			goto(url, { replaceState: true });
 		}
 	});
@@ -56,30 +56,35 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<ToggleGroup
-		value={dflf}
-		onValueChange={(details) => {
-			dflf = details.value as TDFLF[];
-		}}
+	<ToggleGroup.Root
+		type="single"
+		bind:value={dflf}
+		class="grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 text-base leading-[0.01em] font-semibold"
 	>
-		<ToggleGroup.Item value="LF" class="h-10 w-60 rounded-l-full border border-surface-950-50">
+		<ToggleGroup.Item
+			value="LF"
+			class="h-10 w-60 rounded-l-full data-[state=on]:bg-tabs-active data-[state=on]:text-tabs-active-foreground"
+		>
 			<p>Lesefassung</p>
 		</ToggleGroup.Item>
-		<ToggleGroup.Item value="DF" class="h-10 w-60 rounded-r-full border border-surface-950-50">
+		<ToggleGroup.Item
+			value="DF"
+			class="h-10 w-60 rounded-r-full data-[state=on]:bg-tabs-active data-[state=on]:text-tabs-active-foreground"
+		>
 			<p>Diplomatische Fassung</p>
 		</ToggleGroup.Item>
-	</ToggleGroup>
+	</ToggleGroup.Root>
 
 	<!-- Thumbnail Gallery -->
-	{#if dflf[0] === 'DF'}
+	{#if dflf === 'DF'}
 		<Gallery docItem={data.docItem} {currentPage} />
 	{/if}
 
 	<!-- Content -->
 	<div class="h-[90vh] w-full grow overflow-hidden">
-		{#if dflf[0] === 'LF'}
+		{#if dflf === 'LF'}
 			<LF docId={data.docId} docItem={data.docItem} ceteiData={data.ceteiData} />
-		{:else if dflf[0] === 'DF'}
+		{:else if dflf === 'DF'}
 			<DF docItem={data.docItem} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
