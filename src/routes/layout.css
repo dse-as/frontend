@@ -6,12 +6,26 @@
 @import '../../theme_dseas.css';
 @import '../../bitsui.css';
 
+:root {
+	--tabs-active-color: oklch(42.118% 0.01059 248.187);
+	--tabs-active-color-foreground: oklch(99.131% 0.00697 248.18);
+}
+
+/* .dark { */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--tabs-active-color: oklch(97.334% 0.1235 252.942);
+		--tabs-active-color-foreground: oklch(38.869% 0.0065 248.154);
+	}
+}
+
 @theme {
+	--color-tabs-active: var(--tabs-active-color);
+	--color-tabs-active-foreground: var(--tabs-active-color-foreground);
 	--color-avocado-100: oklch(0.99 0 0);
 	--color-avocado-200: oklch(0.98 0.04 113.22);
 	--color-avocado-300: oklch(0.94 0.11 115.03);
-	--color-avocado-400: oklch(0.92 0.19 114.08);
-	--color-avocado-500: oklch(0.84 0.18 117.33);
+	--color-avocado-400: --color-avocado-500: oklch(0.84 0.18 117.33);
 	--color-avocado-600: oklch(0.53 0.12 118.34);
 }
 
