@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Accordion } from '@skeletonlabs/skeleton-svelte';
+	import { Accordion } from 'bits-ui';
 	import dict_register from '$lib/dictionaries/dict_register.json';
 	import register from '$lib/data/register.json';
 	import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
@@ -41,42 +41,40 @@
 	});
 </script>
 
-<Accordion
+<Accordion.Root
+	type="multiple"
+	bind:value={openRegisters.list}
 	data-dom="containerRegister"
-	multiple
-	class="h-full gap-0 overflow-y-auto"
-	value={openRegisters.list}
-	onValueChange={(details) => (openRegisters.list = details.value as TRegTypes[])}
+	class="h-full overflow-y-auto"
 >
 	{#each regTypes as regType (regType)}
-		<Accordion.Item value={regType} class="gap-0" data-regType={regType}>
+		<Accordion.Item value={regType} data-regType={regType}>
 			<h1 class="h4">
-				<Accordion.ItemTrigger
-					class="flex items-center justify-start gap-5 rounded-none border-t-2 border-surface-300-700 hover:bg-transparent"
+				<Accordion.Trigger
+					class="group flex w-full gap-2 border-surface-300-700 py-3 hover:bg-transparent"
 				>
-					<Accordion.ItemIndicator class="group">
-						<span class="hidden group-data-[state=open]:block"
-							><i class="fa-regular fa-chevron-down text-lg"></i></span
-						>
-						<span class="block group-data-[state=open]:hidden"
-							><i class="fa-regular fa-chevron-right text-lg"></i></span
-						>
-					</Accordion.ItemIndicator>
+					<div>
+						<i
+							class="fa-regular fa-chevron-right text-lg transition-transform group-data-[state=open]:rotate-90"
+						></i>
+					</div>
 					<span class="">
 						{dictReg[regType].label_plural}
-						<span class="font-normal">({regEntries[regType]?.length})</span>
+						<span class="font-sans font-normal">({regEntries[regType]?.length})</span>
 					</span>
-				</Accordion.ItemTrigger>
+				</Accordion.Trigger>
 			</h1>
-			<Accordion.ItemContent class="m-0 p-0">
+			<Accordion.Content
+				class="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+			>
 				{#each regEntries[regType] as regKey (regKey)}
 					<div
 						role="button"
 						tabindex="0"
 						data-regKey={regKey}
 						class={[
-							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 rounded-2xl py-1 pl-17  hover:bg-surface-300-700',
-							selectedTextNode.id === regKey && 'bg-mist-300 hover:bg-mist-300!'
+							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-zinc-200',
+							selectedTextNode.id === regKey && 'bg-zinc-300 hover:bg-zinc-300'
 						]}
 						onclick={() => {
 							handleRegisterClick(regKey);
@@ -95,7 +93,7 @@
 						>
 					</div>
 				{/each}
-			</Accordion.ItemContent>
+			</Accordion.Content>
 		</Accordion.Item>
 	{/each}
-</Accordion>
+</Accordion.Root>
