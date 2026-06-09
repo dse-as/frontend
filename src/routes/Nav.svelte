@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppBar, Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
+	import { NavigationMenu, Dialog, Portal } from 'bits-ui';
 	import { page } from '$app/state';
 
 	import Lightswitch from './Lightswitch.svelte';
@@ -21,14 +21,16 @@
 </script>
 
 <!-- Menu -->
-<AppBar class="flex h-12 flex-row items-center justify-between border-b-2 bg-surface-200 px-2 py-0">
+<NavigationMenu.Root
+	class="flex min-h-12 flex-row items-center justify-between gap-5 border-b-2 bg-surface-200 px-2"
+>
 	<!-- Lead for Home Button -->
-	<AppBar.Lead class="flex items-center">
-		<a class="flex items-center py-2 font-bold" href={resolve('/')}> DSE-AS </a>
-	</AppBar.Lead>
+	<div class="flex items-center">
+		<a class="flex items-center py-2 font-bold whitespace-nowrap" href={resolve('/')}>DSE-AS</a>
+	</div>
 
 	<!-- Top Navigation Bar -->
-	<AppBar.Headline class="">
+	<div class="">
 		<nav class="hidden lg:block">
 			<ul class="my-2 flex w-full flex-wrap items-start justify-start gap-x-8 gap-y-6">
 				{#each links as link (link)}
@@ -45,12 +47,12 @@
 				{/each}
 			</ul>
 		</nav>
-	</AppBar.Headline>
+	</div>
 
 	<!-- Spacer -->
 	<div class="grow"></div>
 
-	<AppBar.Trail class="mr-4">
+	<div class="mr-4">
 		<!-- Lightswitch for Large Screen -->
 		<div class="hidden lg:block">
 			<Lightswitch />
@@ -58,58 +60,59 @@
 
 		<!-- Menu for Smartphone -->
 		<div class="lg:hidden">
-			<Dialog open={openStateMenu} onOpenChange={(e) => (openStateMenu = e.open)}>
+			<Dialog.Root open={openStateMenu} onOpenChange={(e) => (openStateMenu = e.open)}>
 				<!-- Trigger aligned right on small screens -->
 				<Dialog.Trigger
 					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-surface-50 hover:bg-white/10"
 				>
-					<i class="fa-solid fa-bars"></i>
+					<i class="fa-solid fa-bars text-surface-950-50"></i>
 				</Dialog.Trigger>
 
-				<Portal>
-					<Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50" />
-					<Dialog.Positioner class="fixed inset-0 z-50">
-						<Dialog.Content
-							class="relative h-full w-full overflow-auto bg-primary-400-600 p-3 text-surface-50"
-						>
-							<!-- Top bar with title and close in top-right -->
-							<div class="flex h-12 items-center justify-between">
-								<Dialog.Title class="text-lg font-semibold">Menu</Dialog.Title>
+				<Dialog.Portal>
+					<Dialog.Overlay
+						class="fixed inset-0 z-500000000 bg-black/80 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0"
+					/>
+					<Dialog.Content
+						class="fixed top-[50%] left-[50%] z-500000000 w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] rounded-card-lg border bg-background p-5 shadow-popover outline-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 sm:max-w-[490px] md:w-full"
+						// class="relative h-full w-full overflow-auto bg-primary-400-600 p-3 text-surface-50"
+					>
+						<!-- Top bar with title and close in top-right -->
+						<div class="flex min-h-12 items-center justify-between">
+							<Dialog.Title class="text-lg font-semibold">Menu</Dialog.Title>
 
-								<div class="flex h-full">
-									<Lightswitch />
-									<!-- Close button top-right -->
-									<Dialog.CloseTrigger
-										class="ml-4 inline-flex h-full items-center justify-center rounded p-2 text-surface-50 hover:bg-white/10"
-										aria-label="Close menu"
-									>
-										<i class="fa-solid fa-x"></i>
-									</Dialog.CloseTrigger>
-								</div>
+							<div class="flex h-full items-center">
+								<Lightswitch />
+								<!-- Close button top-right -->
+								<Dialog.Close
+									class="ml-4 inline-flex h-full items-center justify-center rounded p-2 text-surface-500 hover:bg-white/10"
+									aria-label="Close menu"
+								>
+									<i class="fa-solid fa-x"></i>
+								</Dialog.Close>
 							</div>
+						</div>
 
-							<!-- Nav content full height -->
-							<nav class="mt-6">
-								<ul class="flex flex-col gap-1">
-									{#each links as link (link)}
-										<li class="m-2!">
-											<a
-												href={link.path}
-												onclick={() => {
-													openStateMenu = false; // close Menu
-												}}
-												class="block px-2 py-1 text-lg"
-											>
-												{@html link.name}
-											</a>
-										</li>
-									{/each}
-								</ul>
-							</nav>
-						</Dialog.Content>
-					</Dialog.Positioner>
-				</Portal>
-			</Dialog>
+						<!-- Nav content full height -->
+						<nav class="mt-6">
+							<ul class="flex flex-col gap-1">
+								{#each links as link (link)}
+									<li class="m-2!">
+										<a
+											href={link.path}
+											onclick={() => {
+												openStateMenu = false; // close Menu
+											}}
+											class="block px-2 py-1 text-lg"
+										>
+											{@html link.name}
+										</a>
+									</li>
+								{/each}
+							</ul>
+						</nav>
+					</Dialog.Content>
+				</Dialog.Portal>
+			</Dialog.Root>
 		</div>
-	</AppBar.Trail>
-</AppBar>
+	</div>
+</NavigationMenu.Root>
