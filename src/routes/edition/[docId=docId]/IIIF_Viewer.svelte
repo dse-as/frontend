@@ -7,7 +7,13 @@
 	const uuid = crypto.randomUUID();
 	let viewer: any;
 
-	let { iiif_url } = $props();
+	let { url, currentPage } = $props();
+
+	const maxWidth = '100';
+	const maxHeight = '100';
+
+	let showSpinner = $state(true);
+	let isError = $state(false);
 
 	const generateViewer = (node: HTMLElement, manifest: string) => {
 		let observer: ResizeObserver;
@@ -90,7 +96,30 @@
 			}
 		};
 	};
-	// wait = false;
 </script>
 
-<div id={'viewer-' + uuid} class="h-full w-full" use:generateViewer={`${iiif_url}/info.json`}></div>
+{#if url}
+	{#if !showSpinner && !isError}
+		<div id={'viewer-' + uuid} class="h-full w-full" use:generateViewer={`${url}/info.json`}></div>
+	{/if}
+	{#if showSpinner}
+		<div
+			class={['flex h-full w-full flex-col items-center justify-center gap-10']}
+			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
+		>
+			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
+			<p>Seite {currentPage}</p>
+		</div>
+	{:else if isError}
+		<div
+			class={['flex items-center justify-center']}
+			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
+		>
+			<i class="fa-solid fa-xmark fa-2xl text-red-500"></i>
+		</div>
+	{/if}
+{:else}
+	<div class={['flex h-full w-full items-center justify-center']}>
+		<i class="fa-solid fa-xmark fa-2xl"></i>
+	</div>
+{/if}

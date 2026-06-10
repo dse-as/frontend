@@ -9,7 +9,9 @@
 
 <div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden md:grid-cols-2">
 	{#if urls.length}
-		<IIIF_Viewer iiif_url={url} />
+		<div class="flex h-full w-full items-center justify-center">
+			<IIIF_Viewer {url} {currentPage} />
+		</div>
 	{/if}
 	<TextPaged {ceteiData} />
 </div>

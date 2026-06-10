@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { goto } from '$app/navigation';
+	import { goto, replaceState } from '$app/navigation';
 
 	import LF from './LF.svelte';
 	import Gallery from './Gallery.svelte';
@@ -17,8 +17,10 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
+	let dflf_default = 'LF' as const;
+	// let dflf: TDFLF = $state(dflf_default);
 	let dflf: TDFLF = $derived.by(() =>
-		building ? 'LF' : page.url.searchParams?.get('mode') === 'DF' ? 'DF' : 'LF'
+		building ? dflf_default : page.url.searchParams?.get('mode') === 'DF' ? 'DF' : dflf_default
 	);
 
 	// Current Page
@@ -32,15 +34,26 @@
 		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
 			dflf = 'DF';
-		} else {
-			// fallback (default)
-			const url = new URL(page.url);
-			url.searchParams.set('mode', 'LF');
+		} else if (page.url.searchParams?.get('mode') === 'LF') {
 			dflf = 'LF';
-			goto(url, { replaceState: true });
+		} else {
+			dflf = dflf_default;
+			page.url.searchParams.set('mode', dflf_default);
+			goto(page.url, { replaceState: true });
 		}
 	});
+	// Sync 'dflf' state changes to the URL
+	$effect(() => {
+		if (building) return;
+		page.url.searchParams.set('mode', dflf);
+
+		// Use replaceState to avoid adding history entries for every tab switch
+		// replaceState('', page.state);
+	});
 </script>
+
+<!-- //! HACK: this forces currentPage to update on URL change -->
+{#if currentPage}{/if}
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
