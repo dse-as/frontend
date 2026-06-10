@@ -28,7 +28,7 @@
 		TDocTypes,
 		TDocuments
 	} from '$lib/types/documents/TDocuments';
-	import { invertScroll } from '$lib/functions/invertScroll';
+	import { invertScroll } from '$lib/functions/invertScroll.svelte';
 
 	type TProps = T extends 'documents'
 		? {

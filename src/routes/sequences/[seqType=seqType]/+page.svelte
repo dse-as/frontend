@@ -5,7 +5,7 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams.js';
 	import type { TSeqTypes } from '$lib/types/TSequences.js';
-	import { invertScroll } from '$lib/functions/invertScroll.js';
+	import { invertScroll } from '$lib/functions/invertScroll.svelte.js';
 	import { building } from '$app/environment';
 
 	let { data } = $props();

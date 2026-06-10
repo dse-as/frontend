@@ -13,7 +13,7 @@
 	import { tick } from 'svelte';
 	import type { TDictSeq, TSeqAll, TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 	import { SvelteMap } from 'svelte/reactivity';
-	import { invertScroll } from '$lib/functions/invertScroll';
+	import ThumbList from './ThumbList.svelte';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAllTyped = seqAll as TSeqAll;
@@ -95,24 +95,6 @@
 		}, delay);
 	}
 
-	function centerCurrentItemInGallery(el: HTMLElement) {
-		/* eslint-disable @typescript-eslint/no-unused-vars */
-		let _foreRerun = docId; // force rerun on change of docId
-
-		const container = el.parentElement;
-		if (!container) return;
-		// Scroll the container to the specified position
-		container.scroll({
-			behavior: 'instant',
-			left:
-				el.getBoundingClientRect().left -
-				container.getBoundingClientRect().left +
-				container.scrollLeft -
-				container.clientWidth / 2 +
-				el.clientWidth / 2
-		});
-	}
-
 	function cycleBlocks(el: HTMLElement) {
 		/* eslint-disable @typescript-eslint/no-unused-vars */
 		let _foreRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
@@ -160,17 +142,25 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+{#snippet seqItem(
+	itemId: TDocKeys,
+	seqKey: TSeqKeys,
+	isCurrentSeqList: boolean,
+	isFirst: boolean = false,
+	isLast: boolean = false
+)}
 	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
-			'max-w-90 rounded-xl p-1',
+			'max-w-90 p-1',
 			docId !== resId && 'hover:bg-surface-300-700',
 			!isCurrentSeqList && ' hover:bg-surface-300-700',
-			isCurrentSeqList && docId === resId && 'pointer-events-none'
+			isCurrentSeqList && docId === resId && 'pointer-events-none',
+			isFirst && 'rounded-l-2xl',
+			isLast && 'rounded-r-2xl'
 		]}
 		onclick={() => {
 			closeSeqPanel(0);
@@ -197,41 +187,39 @@
 {#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
 	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
 	{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
-	<div
-		class="flex h-[140px] overflow-x-auto overflow-y-hidden pb-6"
-		onwheel={(ev) => {
-			invertScroll(ev);
-		}}
-	>
-		<!-- Documents before -->
-		<div
-			class={[
-				'flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
-				itemsBeforeIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
-			]}
+	<div class="my-2 h-[180px]">
+		<ThumbList
+			rerun={docId}
+			classesCurrent="min-w-85"
+			isBeforeEmpty={itemsBeforeIds.length === 0}
+			isAfterEmpty={itemsAfterIds.length === 0}
 		>
-			{#each itemsBeforeIds as itemId (itemId)}
-				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
-			{/each}
-		</div>
-		<!-- Current Document -->
-		<div
-			class={['mx-2 flex min-w-85 grow justify-center rounded-xl bg-transparent']}
-			{@attach centerCurrentItemInGallery}
-		>
-			{@render seqItem(docId, seqKey, isCurrentSeqList)}
-		</div>
-		<!-- Documents after -->
-		<div
-			class={[
-				'flex min-w-1/2 shrink-0 justify-start gap-2 rounded-xl',
-				itemsAfterIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
-			]}
-		>
-			{#each itemsAfterIds as itemId (itemId)}
-				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
-			{/each}
-		</div>
+			{#snippet childrenBefore()}
+				{#each itemsBeforeIds as itemId, index (itemId)}
+					{@render seqItem(
+						itemId,
+						seqKey,
+						isCurrentSeqList,
+						index === 0,
+						index === itemsBeforeIds.length - 1
+					)}
+				{/each}
+			{/snippet}
+			{#snippet childrenCurrent()}
+				{@render seqItem(docId, seqKey, isCurrentSeqList, true, true)}
+			{/snippet}
+			{#snippet childrenAfter()}
+				{#each itemsAfterIds as itemId, index (itemId)}
+					{@render seqItem(
+						itemId,
+						seqKey,
+						isCurrentSeqList,
+						index === 0,
+						index === itemsAfterIds.length - 1
+					)}
+				{/each}
+			{/snippet}
+		</ThumbList>
 	</div>
 {/snippet}
 
@@ -353,7 +341,7 @@
 	>
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			{@render sequenceList(currentSeq.type, currentSeq.key, true)}
+			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
 		{/if}
 
 		<!-- Snippet: Other Sequences Selector -->
@@ -368,14 +356,14 @@
 					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 			>
-				{#each Object.keys(seqOther) as seqType (seqType)}
+				{#each Object.keys(seqOther) as TSeqTypes[] as seqType (seqType)}
 					<button
 						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
 						onmousemove={() => {
-							activeType = seqType as TSeqTypes;
+							activeType = seqType;
 						}}
 						onclick={() => {
-							activeType = seqType as TSeqTypes;
+							activeType = seqType;
 						}}
 					>
 						{dictSeqTyped[seqType].label_plural}
@@ -431,9 +419,10 @@
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}
 							<h3 class="h3">{dictSeqTyped[seqType]?.label_plural}</h3>
-							{#each Object.keys(seqOther[seqType!] ?? {}) as seqKey (seqKey)}
+							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 								{@render titleWithShortcuts(seqType, seqKey)}
-								{@render sequenceList(seqType, seqKey as TSeqKeys, seqKey === currentSeq.key)}
+
+								{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
 							{/each}
 						{/if}
 					{/each}
