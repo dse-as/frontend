@@ -110,7 +110,6 @@ export const load: PageServerLoad = async ({ parent }) => {
 				(regAttributes.authorIds as TPeopleKeys[]).map((id) => {
 					return reg.people?.[id]?.name || '';
 				}) ?? null;
-			console.log(authorNames);
 		}
 		linkedDocs = resolveLinkedDocs(regAttributes.docs);
 	}
