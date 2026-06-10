@@ -7,7 +7,7 @@
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import Sequences from './Sequences.svelte';
-	import { ToggleGroup } from 'bits-ui';
+	import { Tabs, ToggleGroup } from 'bits-ui';
 
 	import { onMount } from 'svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
@@ -56,24 +56,24 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<ToggleGroup.Root
-		type="single"
-		bind:value={dflf}
-		class="grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 text-base leading-[0.01em] font-semibold"
-	>
-		<ToggleGroup.Item
-			value="LF"
-			class="h-10 w-60 rounded-l-full data-[state=on]:bg-tabs-active data-[state=on]:text-tabs-active-foreground"
+	<Tabs.Root bind:value={dflf}>
+		<Tabs.List
+			class="grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 text-base leading-[0.01em] font-semibold"
 		>
-			<p>Lesefassung</p>
-		</ToggleGroup.Item>
-		<ToggleGroup.Item
-			value="DF"
-			class="h-10 w-60 rounded-r-full data-[state=on]:bg-tabs-active data-[state=on]:text-tabs-active-foreground"
-		>
-			<p>Diplomatische Fassung</p>
-		</ToggleGroup.Item>
-	</ToggleGroup.Root>
+			<Tabs.Trigger
+				value="LF"
+				class="h-10 w-60 rounded-l-full data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+			>
+				<p>Lesefassung</p>
+			</Tabs.Trigger>
+			<Tabs.Trigger
+				value="DF"
+				class="h-10 w-60 rounded-r-full data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+			>
+				<p>Diplomatische Fassung</p>
+			</Tabs.Trigger>
+		</Tabs.List>
+	</Tabs.Root>
 
 	<!-- Thumbnail Gallery -->
 	{#if dflf === 'DF'}
