@@ -56,21 +56,23 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<Tabs.Root bind:value={dflf}>
+	<Tabs.Root bind:value={dflf} class="sticky top-10 z-90000 xl:static">
 		<Tabs.List
-			class="grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 text-base leading-[0.01em] font-semibold"
+			class="mx-2 grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 bg-tabs-inactive text-base leading-[0.01em] font-semibold text-tabs-inactive-foreground"
 		>
 			<Tabs.Trigger
 				value="LF"
-				class="h-10 w-60 rounded-l-full data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+				class="h-10 max-w-60 rounded-l-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
 			>
-				<p>Lesefassung</p>
+				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">Lesefassung</p>
 			</Tabs.Trigger>
 			<Tabs.Trigger
 				value="DF"
-				class="h-10 w-60 rounded-r-full data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+				class="h-10 max-w-60 rounded-r-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
 			>
-				<p>Diplomatische Fassung</p>
+				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">
+					Diplomatische Fassung
+				</p>
 			</Tabs.Trigger>
 		</Tabs.List>
 	</Tabs.Root>
@@ -81,7 +83,7 @@
 	{/if}
 
 	<!-- Content -->
-	<div class="h-[90vh] w-full grow overflow-hidden">
+	<div class="w-full grow">
 		{#if dflf === 'LF'}
 			<LF docId={data.docId} docItem={data.docItem} ceteiData={data.ceteiData} />
 		{:else if dflf === 'DF'}

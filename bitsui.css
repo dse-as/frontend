@@ -20,8 +20,8 @@
 	--muted-foreground: hsla(0 0% 9% / 0.4);
 	--border: hsl(240 6% 10%);
 	--border-input: hsla(240 6% 10% / 0.17);
-	--border-input-hover: hsla(240 6% 10% / 0.4);
-	--border-card: hsla(240 6% 10% / 0.1);
+	--border-input-hover: hsla(240 6% 10% / 1);
+	--border-card: hsla(240 6% 10% / 0.6);
 	--dark: hsl(240 6% 10%);
 	--dark-10: hsla(240 6% 10% / 0.1);
 	--dark-40: hsla(240 6% 10% / 0.4);
