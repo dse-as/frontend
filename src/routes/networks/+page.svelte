@@ -17,7 +17,7 @@
 		>
 	</div>
 
-	<h2 class="mt-30 h2">Spezifische Korrespondenzen</h2>
+	<h2 class="h2 mt-30">Spezifische Korrespondenzen</h2>
 	<div class="mt-10 flex flex-wrap justify-center gap-2">
 		{#each Object.keys(corrData).filter((corrId) => {
 			return !specialCorrs.includes(corrId);
@@ -35,6 +35,6 @@
 		{/each}
 	</div>
 
-	<h2 class="mt-30 h2">Korrespondenzen auf Reisen o.ä. ...</h2>
+	<h2 class="h2 mt-30">Korrespondenzen auf Reisen o.ä. ...</h2>
 	<div class="mt-10 flex flex-wrap justify-center gap-2"><span>TODO...</span></div>
 </div>

@@ -1,8 +1,9 @@
-export const selectedTextNode: { id: string; el: HTMLElement | null; els:HTMLElement[] | null } = $state({
-	id: '',
-	el: null,
-	els: null
-});
+export const selectedTextNode: { id: string; el: HTMLElement | null; els: HTMLElement[] | null } =
+	$state({
+		id: '',
+		el: null,
+		els: null
+	});
 
 // sorting and grouping
 export const uiOvSortBy = $state({

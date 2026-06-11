@@ -98,17 +98,16 @@ function scrollNotes(elItem: HTMLElement) {
 	scrollContainer(elContainer as HTMLElement, elItem);
 }
 
-
 function resetRegister() {
 	const nodes = document.querySelectorAll('[data-dom=containerRegister] [data-active]');
 	nodes.forEach((el) => {
-		el.removeAttribute('data-active')
+		el.removeAttribute('data-active');
 	});
 }
 
-function activateRegister(regElement:HTMLElement) {
+function activateRegister(regElement: HTMLElement) {
 	resetRegister();
-	regElement.setAttribute('data-active','active');
+	regElement.setAttribute('data-active', 'active');
 }
 
 // Exports
@@ -118,9 +117,7 @@ export function clearAllHighlights() {
 	resetRegister();
 }
 
-export function handleRegisterClick(
-	key: TRegKeysFlat | undefined | null
-) {
+export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 	if (!key) return;
 	const regElement = document.querySelector(`[data-dom=containerRegister] [data-regkey=${key}]`);
 	activateRegister(regElement as HTMLElement);
@@ -191,7 +188,7 @@ export function handleRefStringClick(elSpan: HTMLElement | undefined | null) {
 	const nodeList = document.querySelectorAll(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`);
 	const elSpans = Array.from(nodeList).filter((el): el is HTMLElement => el instanceof HTMLElement);
 	selectedTextNode.els = elSpans;
-	
+
 	// render active
 	resetAllActiveNodesInText();
 	elSpan.classList.add('active');
