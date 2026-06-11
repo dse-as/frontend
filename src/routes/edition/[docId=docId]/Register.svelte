@@ -7,7 +7,7 @@
 	import { openRegisters, selectedTextNode } from '$lib/globals/ui-states.svelte';
 	import {
 		handleRegisterClick,
-		handleScrollToSibling
+		handleJumpToSibling
 	} from '$lib/functions/interactive_edendum/handleInteractiveText';
 
 	const dictReg = dict_register.dict_register as Record<
@@ -77,7 +77,7 @@
 						data-regKey={regKey}
 						class={[
 							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-(--color-note-active)',
-							selectedTextNode.id === regKey &&
+							selectedTextNode.key === regKey &&
 								'bg-(--color-note-active) hover:bg-(--color-note-active)'
 						]}
 						onclick={() => {
@@ -88,24 +88,26 @@
 						}}
 					>
 						<p class="text-lg">{reg[regType][regKey].name}</p>
-						<button
-							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100"
-							aria-label="select previous match"
-							onclick={(ev) => {
-								ev.stopPropagation();
-								handleScrollToSibling(regKey, 'prev');
-							}}><i class="fa-arrow-left-long fa-regular"></i></button
-						>
-						<button
-							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100"
-							aria-label="select next match"
-							onclick={(ev) => {
-								ev.stopPropagation();
-								handleScrollToSibling(regKey, 'next');
-							}}><i class="fa-arrow-right-long fa-regular"></i></button
-						>
+						{#if selectedTextNode.key === regKey}
+							<button
+								class="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface-100"
+								aria-label="select previous match"
+								onclick={(ev) => {
+									ev.stopPropagation();
+									handleJumpToSibling(regKey, 'prev');
+								}}><i class="fa-arrow-left-long fa-regular"></i></button
+							>
+							<button
+								class="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface-100"
+								aria-label="select next match"
+								onclick={(ev) => {
+									ev.stopPropagation();
+									handleJumpToSibling(regKey, 'next');
+								}}><i class="fa-arrow-right-long fa-regular"></i></button
+							>
+						{/if}
 						<a
-							class="text-surface-9500 hidden rounded-full px-2 py-2 underline group-hover:block group-[data-active]:block hover:bg-surface-100"
+							class="flex h-9 w-9 items-center justify-center rounded-full group-hover:flex group-[data-active]:flex hover:bg-surface-100"
 							href={resolve(`/edition/register/${regKey as string}`)}
 							target="_blank"
 							aria-label="In Register öffnen"

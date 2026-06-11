@@ -18,18 +18,40 @@ function scrollContainer(elContainer: HTMLElement | null, elItem: HTMLElement | 
 		behavior: 'smooth'
 	});
 }
-function scrollWindow(elItem: HTMLElement | null) {
+function scrollWindow(
+	elItem: HTMLElement | null,
+	elContainer: HTMLElement,
+	spacing: number = 0
+): void {
+	//  Smoothly scrolls the viewport so that a specific element (`elItem`) is visible,
+	//  while ensuring the document never scrolls past its natural boundaries.
+	//  This ensures that the sticky sidebar does not move, since standard scrolling would
+	//  overshoot the top/bottom of the content if the target element is near the beginning/end.
+
 	if (!elItem) return;
 
 	const refRect = elItem.getBoundingClientRect();
 
-	// Calculate the absolute scroll position needed
-	// We add window.scrollY to get the absolute position in the document
-	const targetTop = refRect.top + window.scrollY - 100;
+	// Calculate the bottom/top edge of the container relative to the viewport
+	const containerBottomRelative = elContainer?.getBoundingClientRect().bottom ?? 0;
+	const containerTopRelative = elContainer?.getBoundingClientRect().top ?? 0;
+
+	// Determine the minimum/maximum valid scroll position
+	const minValidScrollY = containerTopRelative;
+	const maxValidScrollY = containerBottomRelative - window.innerHeight;
+
+	// Calculate the desired scroll position within the min/max boundaries
+	const targetRelativeY = Math.max(
+		Math.min(refRect.top - spacing, maxValidScrollY),
+		minValidScrollY
+	);
+
+	// Convert to absolute document coordinates
+	const targetAbsoluteY = targetRelativeY + window.scrollY;
 
 	window.scrollTo({
-		left: window.scrollX, // Keep horizontal scroll as is
-		top: targetTop,
+		left: window.scrollX, // Preserve horizontal position
+		top: targetAbsoluteY,
 		behavior: 'smooth'
 	});
 }
@@ -87,7 +109,8 @@ function openNoteSidebar() {
 
 // Scroll Text and Sidebar
 function scrollText(elItem: HTMLElement) {
-	scrollWindow(elItem);
+	const elContainer = document.querySelector('[data-textflow=fluid]');
+	scrollWindow(elItem, elContainer as HTMLElement, 200);
 }
 function scrollRegister(elItem: HTMLElement) {
 	const elContainer = document.querySelector('[data-dom=containerRegister]');
@@ -110,9 +133,23 @@ function activateRegister(regElement: HTMLElement) {
 	regElement.setAttribute('data-active', 'active');
 }
 
+function findTextNodes(key: TRegKeysFlat | undefined | null): HTMLElement[] | undefined {
+	if (!key) return;
+	const candidates = document.querySelectorAll(
+		`[data-textflow=fluid] tei-text tei-rs[key="${key}"]`
+	);
+	const nodeList = Array.from(candidates).filter((el): el is HTMLElement => {
+		// Return true ONLY if there is NO cetei-original ancestor
+		return !el.closest('cetei-original') && el instanceof HTMLElement;
+	});
+	return nodeList;
+}
+
 // Exports
 export function clearAllHighlights() {
-	selectedTextNode.id = '';
+	// selectedTextNode.key = null; //! FIX this breaks buttons in Register when just CHANGING between keys
+	// selectedTextNode.el = null;
+	// selectedTextNode.els = null;
 	resetAllActiveNodesInText();
 	resetRegister();
 }
@@ -121,21 +158,23 @@ export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 	if (!key) return;
 	const regElement = document.querySelector(`[data-dom=containerRegister] [data-regkey=${key}]`);
 	activateRegister(regElement as HTMLElement);
-	selectedTextNode.id = key;
+	selectedTextNode.key = key;
 	selectAllRsNodesInText(key);
-	const nodeList = document.querySelectorAll(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`);
-	const elSpans = Array.from(nodeList).filter((el): el is HTMLElement => el instanceof HTMLElement);
-	selectedTextNode.el = elSpans[0];
+	const elSpans = findTextNodes(key);
+
+	selectedTextNode.el = elSpans?.[0];
 	selectedTextNode.els = elSpans;
 
 	// focus first element and scroll
-	elSpans[0].focus();
-	scrollText(elSpans[0] as HTMLElement);
+	if (elSpans) {
+		elSpans[0].focus();
+		scrollText(elSpans[0] as HTMLElement);
+	}
 }
 
-export function handleScrollToSibling(key: TRegKeysFlat, direction: 'next' | 'prev'): void {
-	const nodeList = document.querySelectorAll(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`);
-	const elSpans = Array.from(nodeList).filter((el): el is HTMLElement => el instanceof HTMLElement);
+export function handleJumpToSibling(key: TRegKeysFlat, direction: 'next' | 'prev'): void {
+
+	const elSpans = findTextNodes(key);
 	if (!elSpans || !selectedTextNode.el) return;
 
 	let currentIndex = -1;
@@ -172,7 +211,7 @@ export function handleScrollToSibling(key: TRegKeysFlat, direction: 'next' | 'pr
 
 export function handleAnnotationClick(noteId: string | undefined | null) {
 	if (!noteId) return;
-	selectedTextNode.id = noteId;
+	selectedTextNode.key = noteId;
 	activateNoteInText(noteId);
 	const elSpan = document.querySelector(
 		`[data-textflow=fluid] tei-text span.note-mark[data-noteid=${noteId}]`
@@ -183,10 +222,9 @@ export function handleAnnotationClick(noteId: string | undefined | null) {
 export function handleRefStringClick(elSpan: HTMLElement | undefined | null) {
 	const key = elSpan?.getAttribute('key') as TRegKeysFlat;
 	if (!elSpan || !key) return;
-	selectedTextNode.id = key;
+	selectedTextNode.key = key;
 	selectedTextNode.el = elSpan as HTMLElement;
-	const nodeList = document.querySelectorAll(`[data-textflow=fluid] tei-text tei-rs[key=${key}]`);
-	const elSpans = Array.from(nodeList).filter((el): el is HTMLElement => el instanceof HTMLElement);
+	const elSpans = findTextNodes(key);
 	selectedTextNode.els = elSpans;
 
 	// render active
@@ -200,7 +238,7 @@ export function handleRefStringClick(elSpan: HTMLElement | undefined | null) {
 }
 export function handleFootnoteClick(key: string | undefined | null) {
 	if (!key) return;
-	selectedTextNode.id = key;
+	selectedTextNode.key = key;
 	openNoteSidebar();
 	activateNoteInText(key);
 	const annotElement = document.querySelector(
