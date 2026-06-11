@@ -96,7 +96,7 @@
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
 		href={resolve(`/edition/${itemId as string}`)}
-		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+		class="min-h-27 w-70 rounded-xl bg-surface-50 p-1 hover:bg-surface-200"
 		target="blank"
 		rel="noopener noreferrer"
 	>
@@ -126,29 +126,29 @@
 	<!-- MetadataTable (by Type) -->
 	{#if docType === 'letters'}
 		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysLetters, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{:else if docType === 'smallforms'}
 		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysSmallforms, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{:else if docType === 'longforms'}
 		{@const docMetadataTyped = docItem.metadata as Record<TDocMetadataKeysLongforms, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
 			{docMetadataTyped?.label}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{/if}
 
 	<!-- Linked documents -->
-	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Edierte Textstufen</h2>
+	<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
 		{@render LinkedItemsContainer(docItem.metadata?.textstufen_edited as TDocKeys[])}
 	</div>
-	<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Sequenzen</h2>
+	<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Sequenzen</h2>
 	<p>TODO</p>
 </div>

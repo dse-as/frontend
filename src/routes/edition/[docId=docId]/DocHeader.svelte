@@ -152,7 +152,6 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
 
 	[data-dom='global_entities'] {
 		:global([data-type='entity']) {

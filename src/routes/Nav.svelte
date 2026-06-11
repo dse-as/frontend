@@ -38,7 +38,7 @@
 						class={[
 							'list-nav-item inline-block h-full text-surface-950 hover:text-primary-500',
 							link.path.split('/').pop() === `/${page.url.pathname.split('/').pop()}`
-								? 'text-primary-800-200'
+								? 'text-primary-800'
 								: ''
 						]}
 					>
@@ -65,7 +65,7 @@
 				<Dialog.Trigger
 					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-surface-50 hover:bg-white/10"
 				>
-					<i class="fa-solid fa-bars text-surface-950-50"></i>
+					<i class="fa-solid fa-bars text-surface-950"></i>
 				</Dialog.Trigger>
 
 				<Dialog.Portal>
@@ -74,7 +74,7 @@
 					/>
 					<Dialog.Content
 						class="fixed top-[50%] left-[50%] z-500000000 w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] rounded-card-lg border bg-background p-5 shadow-popover outline-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 sm:max-w-[490px] md:w-full"
-						// class="relative h-full w-full overflow-auto bg-primary-400-600 p-3 text-surface-50"
+						// class="relative h-full w-full overflow-auto bg-primary-400 p-3 text-surface-50"
 					>
 						<!-- Top bar with title and close in top-right -->
 						<div class="flex min-h-12 items-center justify-between">

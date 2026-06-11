@@ -91,7 +91,7 @@
 	<a
 		href={updatePageParam(item.pagenum_running)}
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-4 hover:bg-surface-300-700`,
+			`group flex flex-col items-center justify-center p-0 px-4 hover:bg-surface-300`,
 			isFirst && 'rounded-l-2xl',
 			isLast && 'rounded-r-2xl'
 		]}
@@ -138,7 +138,7 @@
 						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 						{@const items = collectGalleryItems()}
 						<div
-							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
+							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300 px-10"
 						>
 							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
 							{#each items as item (item.page)}

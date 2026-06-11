@@ -71,7 +71,7 @@
 	<!-- DFLF Toggle -->
 	<Tabs.Root bind:value={dflf} class="sticky top-10 z-90000 xl:static">
 		<Tabs.List
-			class="mx-2 grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 bg-tabs-inactive text-base leading-[0.01em] font-semibold text-tabs-inactive-foreground"
+			class="border-(--surface-800)-200 mx-2 grid grid-cols-2 rounded-full border-[1.5px] bg-tabs-inactive text-base leading-[0.01em] font-semibold text-tabs-inactive-foreground"
 		>
 			<Tabs.Trigger
 				value="LF"
@@ -107,7 +107,6 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
 
 	:global(.note) {
 		:global(span[data-type='quote']::before) {
@@ -117,7 +116,7 @@
 			content: '»';
 		}
 		:global(span[data-type='quote']) {
-			@apply bg-surface-100 italic;
+			@apply bg-(--surface-100) italic;
 		}
 	}
 
@@ -160,20 +159,20 @@
 			/* Notes */
 			:global([data-type='mark'][data-marktype='single-annotation']:hover),
 			:global([data-type='mark'][data-marktype='single-annotation'].active) {
-				@apply cursor-pointer bg-primary-50-950 text-surface-950;
+				@apply cursor-pointer bg-(--primary-50) text-(--surface-950);
 				content: '[';
 			}
 			:global([data-type='mark'][data-marktype='single-annotation'].active) {
-				@apply bg-primary-100-900;
+				@apply bg-(--primary-100);
 			}
 			:global([data-type='markend']) {
-				@apply rounded-full bg-primary-50-950 px-1 align-super text-sm;
+				@apply rounded-full bg-(--primary-50) px-1 align-super text-sm;
 			}
 			:global([data-type='markend'].active) {
-				@apply bg-primary-100-900;
+				@apply bg-(--primary-100);
 			}
 			:global([data-type='markend']:not(.active):hover) {
-				@apply cursor-pointer bg-primary-400-600;
+				@apply cursor-pointer bg-(--primary-400);
 			}
 			:global([data-type='markend'])::before {
 				content: attr(data-notenum);

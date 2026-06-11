@@ -21,7 +21,7 @@
 			{#each docTypeIdsForButtons as docTypeId (docTypeId)}
 				<a
 					class={[
-						'my-btn-round hover:bg-surface-200-800!',
+						'my-btn-round hover:bg-surface-200!',
 						data.edView === 'edView1' ? 'border-2 text-2xl' : 'border text-sm',
 						data.docType === docTypeId && 'my-btn-active'
 					]}
@@ -44,10 +44,10 @@
 		class={[
 			'absolute transition-all duration-400',
 			data.edView === 'edView1'
-				? 'top-35 left-0 w-full text-center h1'
+				? 'h1 top-35 left-0 w-full text-center'
 				: data.edView === 'edView2'
-					? 'top-35 left-0 w-1 pl-10  text-center h1 whitespace-nowrap'
-					: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
+					? 'h1 top-35 left-0 w-1  pl-10 text-center whitespace-nowrap'
+					: 'h4 top-38 left-0 w-1 pl-10 text-center whitespace-nowrap'
 		]}
 	>
 		{data.edView === 'edView1' ? 'Dokumente' : data.docType ? dictDoc[data.docType]?.name : ''}
@@ -56,7 +56,7 @@
 	{#if data.edView === 'edView1'}
 		{@render nav()}
 		<div class="mt-20 text-center">
-			<h2 class=" mb-5 h2">Shortcuts</h2>
+			<h2 class=" h2 mb-5">Shortcuts</h2>
 			<p class="text-xl">
 				&rarr; <a class="underline" href={resolve('/edition/smallform_0231')}>Smallform 0231</a>
 			</p>

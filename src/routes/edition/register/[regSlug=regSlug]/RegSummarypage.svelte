@@ -133,7 +133,7 @@
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
 		href={resolve(`/edition/${doc.docId}?mode=DF`)}
-		class="min-h-27 w-70 rounded-xl bg-surface-50-950 p-1 hover:bg-surface-200-800"
+		class="min-h-27 w-70 rounded-xl bg-surface-50 p-1 hover:bg-surface-200"
 		target="blank"
 		rel="noopener noreferrer"
 	>
@@ -160,7 +160,7 @@
 	<!-- MetadataTable (by Type) -->
 	{#if docType === 'people'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPeople, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
 			{regAttrsTyped.name}
 			{printBirthRange(regAttrsTyped.dateBirth, regAttrsTyped.dateDeath)}
 		</h1>
@@ -175,7 +175,7 @@
 		])}
 	{:else if docType === 'places'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPlaces, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
 
 		{@render MetadataTable([
 			'type',
@@ -189,7 +189,7 @@
 		])}
 	{:else if docType === 'orgs'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsOrgs, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
 			regAttrsTyped.nameVariants.length && 'nameVariants',
@@ -198,15 +198,15 @@
 		])}
 	{:else if docType === 'keywords'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsKeywords, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable(['type', regAttrsTyped.gndNumber && 'gndNumber', 'note'])}
 	{:else if docType === 'events'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsEvents, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([regAttrsTyped.date && 'date', 'note'])}
 	{:else if docType === 'bibls'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsBibls, any>}
-		<h1 class="sticky top-0 z-90 w-full bg-success-50-950 pb-10 h1">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
 			'authorIds',
@@ -219,20 +219,20 @@
 	<!-- Linked documents -->
 	{#if docType === 'people'}
 		<!-- //! These lists can later be toggled on/off depending on content -->
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">
 			Korrespondenz mit Annemarie Schwarzenbach
 		</h2>
 		{@render LinkedItemsContainer([])}
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Dokumente</h2>
 		{@render LinkedItemsContainer(linkedDocs)}
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{:else}
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Dokumente</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Dokumente</h2>
 		<div class="min-h-[40vh]">
 			{@render LinkedItemsContainer(linkedDocs)}
 		</div>
-		<h2 class="sticky top-15 z-91 h-20 w-full bg-surface-50-950 py-5 h4">Verknüpfte Kommentare</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{/if}
 </div>

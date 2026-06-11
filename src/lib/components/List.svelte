@@ -121,7 +121,7 @@
 		id={key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && key === itemKey && 'bg-surface-300-700 font-bold'
+			!isMultiColumn && key === itemKey && 'bg-surface-300 font-bold'
 		]}
 		href={resolve(itemVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
 	>
@@ -173,7 +173,7 @@
 				<button
 					class={[
 						uiOvSortBy[itemVariant] === sortKey
-							? 'pointer-events-none font-bold text-surface-950-50'
+							? 'pointer-events-none font-bold text-surface-950'
 							: 'text-primary-500 underline'
 					]}
 					onclick={() => {
@@ -255,7 +255,7 @@
 			<div
 				class={[
 					// "sticky top-0",
-					'flex w-full flex-col items-end justify-center gap-x-4 gap-y-2 bg-surface-50-950 pb-10'
+					'flex w-full flex-col items-end justify-center gap-x-4 gap-y-2 bg-surface-50 pb-10'
 				]}
 			>
 				{@render groupControls()}

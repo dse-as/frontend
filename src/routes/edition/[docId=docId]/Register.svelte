@@ -54,7 +54,7 @@
 		<Accordion.Item value={regType} data-regType={regType}>
 			<h1 class="h4">
 				<Accordion.Trigger
-					class="group flex w-full gap-2 border-surface-300-700 py-3 hover:bg-transparent"
+					class="group flex w-full gap-2 border-surface-300 py-3 hover:bg-transparent"
 				>
 					<div>
 						<i
@@ -89,7 +89,7 @@
 					>
 						<p class="text-lg">{reg[regType][regKey].name}</p>
 						<button
-							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100-900"
+							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100"
 							aria-label="select previous match"
 							onclick={(ev) => {
 								ev.stopPropagation();
@@ -97,7 +97,7 @@
 							}}><i class="fa-arrow-left-long fa-regular"></i></button
 						>
 						<button
-							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100-900"
+							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100"
 							aria-label="select next match"
 							onclick={(ev) => {
 								ev.stopPropagation();
@@ -105,7 +105,7 @@
 							}}><i class="fa-arrow-right-long fa-regular"></i></button
 						>
 						<a
-							class="text-surface-950-500 hidden rounded-full px-2 py-2 underline group-hover:block group-[data-active]:block hover:bg-surface-100-900"
+							class="text-surface-9500 hidden rounded-full px-2 py-2 underline group-hover:block group-[data-active]:block hover:bg-surface-100"
 							href={resolve(`/edition/register/${regKey as string}`)}
 							target="_blank"
 							aria-label="In Register öffnen"

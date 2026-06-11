@@ -54,11 +54,11 @@
 			]}
 		>
 			<div>
-				<h5 class="mb-6 h5 font-bold">{titleOverview}</h5>
+				<h5 class="h5 mb-6 font-bold">{titleOverview}</h5>
 				{@render overviewContent()}
 			</div>
 			<div>
-				<h5 class="mb-6 h5 font-bold">{titleMeta}</h5>
+				<h5 class="h5 mb-6 font-bold">{titleMeta}</h5>
 				{@render metadataContent()}
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 		<!-- Gradient -->
 		{#if !isExpanded}
 			<button
-				class="hiddend absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50-950 to-transparent xl:block"
+				class="hiddend absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50 to-transparent xl:block"
 				aria-label="expand box"
 				onclick={toggleExpandableBox}
 			></button>
@@ -81,7 +81,7 @@
 			]}
 		>
 			<button
-				class="h-12 w-12 rounded-full bg-surface-950-50 text-surface-50-950"
+				class="h-12 w-12 rounded-full bg-surface-950 text-surface-50"
 				aria-label="expand box"
 				onclick={toggleExpandableBox}
 			>

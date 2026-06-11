@@ -156,8 +156,8 @@
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
 			'max-w-90 p-1',
-			docId !== resId && 'hover:bg-surface-300-700',
-			!isCurrentSeqList && ' hover:bg-surface-300-700',
+			docId !== resId && 'hover:bg-surface-300',
+			!isCurrentSeqList && ' hover:bg-surface-300',
 			isCurrentSeqList && docId === resId && 'pointer-events-none',
 			isFirst && 'rounded-l-2xl',
 			isLast && 'rounded-r-2xl'
@@ -234,7 +234,7 @@
 		closeSeqPanel(0);
 	}}
 	aria-label="Panel schliessen"
-	class="fixed top-0 z-100 h-full w-full bg-surface-50-950/80"
+	class="fixed top-0 z-100 h-full w-full bg-surface-50/80"
 ></div>
 
 <!-- Sequence Navigation Elements -->
@@ -242,7 +242,7 @@
 	<!-- Button: "Sequenz wählen" -->
 	<div bind:this={elSeqNav} class="z-90003">
 		<button
-			class="z-90003 rounded-full border bg-surface-50-950 px-4 py-2 font-bold hover:bg-surface-300-700"
+			class="z-90003 rounded-full border bg-surface-50 px-4 py-2 font-bold hover:bg-surface-300"
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
@@ -274,7 +274,7 @@
 			<!-- Previous in Sequence-->
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
@@ -287,7 +287,7 @@
 
 			<!-- Button: Open Panel -->
 			<button
-				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-300-700"
+				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300 bg-surface-50 text-surface-700 hover:border hover:bg-surface-300"
 				aria-label="Sequenzansicht öffnen"
 				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();
@@ -301,7 +301,7 @@
 					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
 					{#if hasOtherSequences && !isOpenSeqPanel}
 						<i
-							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800-200 pt-2 text-surface-50-950"
+							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800 pt-2 text-surface-50"
 						></i>
 					{/if}
 				</div>
@@ -310,7 +310,7 @@
 			<!-- Next in Sequence -->
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
@@ -332,7 +332,7 @@
 		bind:this={elSeqPanel}
 		class={[
 			'absolute z-90002 flex h-max max-h-[80vh] w-8/10 flex-col rounded-xl border-2 px-10 pb-10 transition-all duration-200',
-			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-50-950 pt-25'
+			isSelectedValidSeq ? 'bg-surface-50 pt-40' : 'bg-surface-50 pt-25'
 		]}
 		style={`top:${elSeqNavSize?.top}px;`}
 		onmouseenter={() => {
@@ -358,7 +358,7 @@
 			>
 				{#each Object.keys(seqOther) as TSeqTypes[] as seqType (seqType)}
 					<button
-						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
+						class={[classes, activeType === seqType && 'bg-surface-50 font-bold']}
 						onmousemove={() => {
 							activeType = seqType;
 						}}
@@ -375,7 +375,7 @@
 		<!-- Snippet: Title with shortcuts -->
 		{#snippet titleWithShortcuts(type: string, seqKey: string)}
 			<div class={['flex min-h-18 w-full flex-col items-start py-1']}>
-				<h6 class="mr-5 h6">{seqAllTyped[type!]?.[seqKey]?.preamble || type}</h6>
+				<h6 class="h6 mr-5">{seqAllTyped[type!]?.[seqKey]?.preamble || type}</h6>
 				<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 					<div class="flex gap-4">
 						<a
@@ -435,7 +435,7 @@
 			<!-- Select sequences (other than the one currently sequence selected)-->
 			<div class="mt-4 flex min-h-10 flex-wrap items-end justify-start">
 				<p class=" mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
-				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50-950')}
+				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50')}
 			</div>
 
 			<!-- Other Sequences -->
@@ -444,7 +444,7 @@
 					role="dialog"
 					tabindex="0"
 					class={[
-						'relative rounded-b-xl bg-surface-50-950 text-surface-950',
+						'relative rounded-b-xl bg-surface-50 text-surface-950',
 						isSelectedValidSeq && 'mt-10 border-t-2'
 					]}
 					onmouseenter={() => {

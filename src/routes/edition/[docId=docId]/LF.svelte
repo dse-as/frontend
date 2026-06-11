@@ -19,7 +19,7 @@
 		<div class="sticky top-5 flex h-[calc(100vh-2.5rem)] flex-col gap-4 overflow-hidden pt-6 pb-24">
 			<Tabs.Root bind:value={activeRegisterTab.value} class="h-full">
 				<Tabs.List
-					class="mx-2 grid grid-cols-2 rounded-full border-[1.5px] border-surface-800-200 text-base leading-[0.01em] font-semibold"
+					class="mx-2 grid grid-cols-2 rounded-full border-[1.5px] border-surface-800 text-base leading-[0.01em] font-semibold"
 				>
 					<Tabs.Trigger
 						value="register"
