@@ -7,6 +7,7 @@
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { documents as allDocsRaw } from '$lib/data/documents.json';
 	import type { TDocuments } from '$lib/types/documents/TDocuments';
+	import ThumbList from './ThumbList.svelte';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 
@@ -51,66 +52,97 @@
 	function handleSelectPage(currentPage: number) {
 		const url = new URL(page.url);
 		url.searchParams.set('page', String(currentPage));
-		goto(url, { noScroll: true });
+		goto(url.toString(), { noScroll: true });
 	}
+
+	let updatePageParam = $derived((currentPage: number): string => {
+		const url = new URL(page.url);
+		url.searchParams.set('page', String(currentPage));
+		return url.pathname + url.search;
+	});
 
 	$effect(() => {
 		scrollGalleryToPage(currentPage);
 	});
+
+	let itemsBefore = $derived(collectGalleryItems().slice(0, currentPage - 1));
+	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
+	let itemsAfter = $derived(collectGalleryItems().slice(currentPage - 0));
 </script>
 
-<div class="w-full">
-	<div
-		class="flex w-full flex-col gap-5 overflow-x-auto rounded-xl border-2 border-surface-500 p-5 transition-all duration-200"
+{#snippet thumbItem(item: TItem, isFirst: boolean = false, isLast: boolean = false)}
+	<a
+		href={updatePageParam(item.pagenum_running)}
+		class={[
+			`group flex flex-col items-center justify-center p-0 px-4 hover:bg-surface-300`,
+			isFirst && 'rounded-l-2xl',
+			isLast && 'rounded-r-2xl'
+		]}
+		onclick={(e) => {
+			e.preventDefault();
+			handleSelectPage(item.pagenum_running);
+		}}
 	>
-		{#if tzgIds.length}
-			<button
-				class="self-start rounded-full text-left underline"
-				onclick={() => {
-					showTextzeugen = !showTextzeugen;
-				}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
-			>
-		{/if}
-		<div bind:this={containerRef} class="flex min-h-50 w-full gap-2 overflow-x-auto px-10">
-			{#each collectGalleryItems() as item, index (item.page)}
-				<button
-					bind:this={buttonRefs[index]}
-					class={[
-						`flex flex-col items-center justify-center rounded-xl p-2 hover:bg-yellow-100`,
-						Number(item.pagenum_running) === currentPage && 'bg-yellow-100'
-					]}
-					onclick={() => handleSelectPage(item.pagenum_running)}
-				>
-					<IIIF_Thumb url={item.fac} maxWidth="120" maxHeight="120" classes="rounded-xl" />
-					<span class="italic">Seite {item.page}</span>
-				</button>
-			{/each}
-			{#if showTextzeugen}
-				{#each tzgIds as tzgId (tzgId)}
-					{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
-					{@const items = collectGalleryItems()}
-					<div
-						class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300-700 px-10"
-					>
-						<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
-						{#each items as item (item.page)}
-							<a
-								class="ml-2 rounded-xl p-1"
-								href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
-								<span class="italic">Seite {item.page}</span>
-							</a>
-						{:else}
-							<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
-								>Keine Faksimile gefunden</a
-							>
-						{/each}
-					</div>
+		<IIIF_Thumb url={item.fac} maxWidth="120" maxHeight="120" classes="rounded-xl" />
+		<span class="text-sm">Seite {item.page}</span>
+	</a>
+{/snippet}
+
+<div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
+	{#if tzgIds.length}
+		<button
+			class="self-start rounded-full text-left underline"
+			onclick={() => {
+				showTextzeugen = !showTextzeugen;
+			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
+		>
+	{/if}
+	<div bind:this={containerRef} class="my-2 h-[180px]">
+		<ThumbList
+			rerun={currentPage}
+			classesCurrent="min-w-35"
+			isBeforeEmpty={itemsBefore.length === 0}
+			isAfterEmpty={itemsAfter.length === 0}
+		>
+			{#snippet childrenBefore()}
+				{#each itemsBefore as item, index (item.page)}
+					{@render thumbItem(item, index === 0, index === itemsBefore.length - 1)}
 				{/each}
-			{/if}
-		</div>
+			{/snippet}
+			{#snippet childrenCurrent()}
+				{@render thumbItem(itemsCurrent, true, true)}
+			{/snippet}
+			{#snippet childrenAfter()}
+				{#each itemsAfter as item, index (item.page)}
+					{@render thumbItem(item, index === 0, index === itemsAfter.length - 1)}
+				{/each}
+				{#if showTextzeugen}
+					{#each tzgIds as tzgId (tzgId)}
+						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
+						{@const items = collectGalleryItems()}
+						<div
+							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300 px-10"
+						>
+							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
+							{#each items as item (item.page)}
+								<a
+									class="ml-2 rounded-xl p-1"
+									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+									<span class="hidden text-sm group-hover:block">Seite {item.page}</span>
+								</a>
+							{:else}
+								<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
+									>Keine Faksimile gefunden</a
+								>
+							{/each}
+						</div>
+					{/each}
+				{/if}
+			{/snippet}
+		</ThumbList>
 	</div>
 </div>

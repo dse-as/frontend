@@ -7,7 +7,7 @@
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import Sequences from './Sequences.svelte';
-	import { ToggleGroup } from '@skeletonlabs/skeleton-svelte';
+	import { Tabs } from 'bits-ui';
 
 	import { onMount } from 'svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
@@ -17,8 +17,10 @@
 	let { data } = $props();
 
 	type TDFLF = 'DF' | 'LF';
-	let dflf: TDFLF[] = $derived.by(() =>
-		building ? ['LF'] : page.url.searchParams?.get('mode') === 'DF' ? ['DF'] : ['LF']
+	let dflf_default = 'LF' as const;
+	// let dflf: TDFLF = $state(dflf_default);
+	let dflf: TDFLF = $derived.by(() =>
+		building ? dflf_default : page.url.searchParams?.get('mode') === 'DF' ? 'DF' : dflf_default
 	);
 
 	// Current Page
@@ -31,14 +33,22 @@
 	onMount(() => {
 		// get mode from URL
 		if (page.url.searchParams?.get('mode') === 'DF') {
-			dflf = ['DF'];
+			dflf = 'DF';
+		} else if (page.url.searchParams?.get('mode') === 'LF') {
+			dflf = 'LF';
 		} else {
-			// fallback (default)
-			const url = new URL(page.url);
-			url.searchParams.set('mode', 'LF');
-			dflf = ['LF'];
-			goto(url, { replaceState: true });
+			dflf = dflf_default;
+			page.url.searchParams.set('mode', dflf_default);
+			goto(page.url, { replaceState: true });
 		}
+	});
+	// Sync 'dflf' state changes to the URL
+	$effect(() => {
+		if (building) return;
+		page.url.searchParams.set('mode', dflf);
+
+		// Use replaceState to avoid adding history entries for every tab switch
+		// replaceState('', page.state);
 	});
 </script>
 
@@ -56,34 +66,41 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<ToggleGroup
-		value={dflf}
-		onValueChange={(details) => {
-			dflf = details.value as TDFLF[];
-		}}
-	>
-		<ToggleGroup.Item value="LF" class="h-10 w-60 rounded-l-full border border-surface-950-50">
-			<p>Lesefassung</p>
-		</ToggleGroup.Item>
-		<ToggleGroup.Item value="DF" class="h-10 w-60 rounded-r-full border border-surface-950-50">
-			<p>Diplomatische Fassung</p>
-		</ToggleGroup.Item>
-	</ToggleGroup>
+	<Tabs.Root bind:value={dflf} class="sticky top-10 z-90000 xl:static">
+		<Tabs.List
+			class="border-(--surface-800)-200 mx-2 grid grid-cols-2 rounded-full border-[1.5px] bg-tabs-inactive text-base leading-[0.01em] font-semibold text-tabs-inactive-foreground"
+		>
+			<Tabs.Trigger
+				value="LF"
+				class="h-10 max-w-60 rounded-l-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+			>
+				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">Lesefassung</p>
+			</Tabs.Trigger>
+			<Tabs.Trigger
+				value="DF"
+				class="h-10 max-w-60 rounded-r-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
+			>
+				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">
+					Diplomatische Fassung
+				</p>
+			</Tabs.Trigger>
+		</Tabs.List>
+	</Tabs.Root>
 
 	<!-- Thumbnail Gallery -->
-	{#if dflf[0] === 'DF'}
+	{#if dflf === 'DF'}
 		<Gallery docItem={data.resolvedDoc?.item} {currentPage} />
 	{/if}
 
 	<!-- Content -->
-	<div class="h-[90vh] w-full grow overflow-hidden">
-		{#if dflf[0] === 'LF'}
+	<div class="w-full grow">
+		{#if dflf === 'LF'}
 			<LF
 				docId={data.resolvedDoc?.docId}
 				docItem={data.resolvedDoc?.item}
 				ceteiData={data.ceteiData}
 			/>
-		{:else if dflf[0] === 'DF'}
+		{:else if dflf === 'DF'}
 			<DF docItem={data.resolvedDoc?.item} ceteiData={data.ceteiData} {currentPage} />
 		{/if}
 	</div>
@@ -91,7 +108,6 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
 
 	:global(.note) {
 		:global(span[data-type='quote']::before) {
@@ -101,7 +117,7 @@
 			content: '»';
 		}
 		:global(span[data-type='quote']) {
-			@apply bg-surface-100 italic;
+			@apply bg-(--surface-100) italic;
 		}
 	}
 
@@ -144,20 +160,20 @@
 			/* Notes */
 			:global([data-type='mark'][data-marktype='single-annotation']:hover),
 			:global([data-type='mark'][data-marktype='single-annotation'].active) {
-				@apply cursor-pointer bg-primary-50-950 text-surface-950;
+				@apply cursor-pointer bg-(--primary-50) text-(--surface-950);
 				content: '[';
 			}
 			:global([data-type='mark'][data-marktype='single-annotation'].active) {
-				@apply bg-primary-100-900;
+				@apply bg-(--primary-100);
 			}
 			:global([data-type='markend']) {
-				@apply rounded-full bg-primary-50-950 px-1 align-super text-sm;
+				@apply rounded-full bg-(--primary-50) px-1 align-super text-sm;
 			}
 			:global([data-type='markend'].active) {
-				@apply bg-primary-100-900;
+				@apply bg-(--primary-100);
 			}
 			:global([data-type='markend']:not(.active):hover) {
-				@apply cursor-pointer bg-primary-400-600;
+				@apply cursor-pointer bg-(--primary-400);
 			}
 			:global([data-type='markend'])::before {
 				content: attr(data-notenum);

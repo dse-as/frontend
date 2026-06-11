@@ -9,7 +9,6 @@ import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
 
-
 export const load: PageServerLoad = async ({ params, fetch }) => {
 	// CETEI Data
 	async function loadText(params: { docId: string }): Promise<ProcessedTEI> {

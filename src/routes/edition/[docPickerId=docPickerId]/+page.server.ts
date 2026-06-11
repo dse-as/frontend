@@ -9,7 +9,7 @@ export const entries: EntryGenerator = () => {
 	return [{ docPickerId: 'letters' }, { docPickerId: 'smallforms' }, { docPickerId: 'longforms' }];
 };
 
-export const load: PageServerLoad = ({params}) => {
+export const load: PageServerLoad = ({ params }) => {
 	const resolvedDoc = resolveDoc(allDocs, params.docPickerId as TDocKeys);
 
 	// Resolve cross-register references

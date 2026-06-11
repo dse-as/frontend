@@ -13,7 +13,7 @@
 	import { tick } from 'svelte';
 	import type { TDictSeq, TSeqAll, TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 	import { SvelteMap } from 'svelte/reactivity';
-	import { invertScroll } from '$lib/functions/invertScroll';
+	import ThumbList from './ThumbList.svelte';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAllTyped = seqAll as TSeqAll;
@@ -95,24 +95,6 @@
 		}, delay);
 	}
 
-	function centerCurrentItemInGallery(el: HTMLElement) {
-		/* eslint-disable @typescript-eslint/no-unused-vars */
-		let _foreRerun = docId; // force rerun on change of docId
-
-		const container = el.parentElement;
-		if (!container) return;
-		// Scroll the container to the specified position
-		container.scroll({
-			behavior: 'instant',
-			left:
-				el.getBoundingClientRect().left -
-				container.getBoundingClientRect().left +
-				container.scrollLeft -
-				container.clientWidth / 2 +
-				el.clientWidth / 2
-		});
-	}
-
 	function cycleBlocks(el: HTMLElement) {
 		/* eslint-disable @typescript-eslint/no-unused-vars */
 		let _foreRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
@@ -160,17 +142,25 @@
 <svelte:document onkeydown={handleEscape} />
 
 <!-- Snippets -->
-{#snippet seqItem(itemId: TDocKeys, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+{#snippet seqItem(
+	itemId: TDocKeys,
+	seqKey: TSeqKeys,
+	isCurrentSeqList: boolean,
+	isFirst: boolean = false,
+	isLast: boolean = false
+)}
 	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
-			'max-w-90 rounded-xl p-1',
-			docId !== resId && 'hover:bg-surface-300-700',
-			!isCurrentSeqList && ' hover:bg-surface-300-700',
-			isCurrentSeqList && docId === resId && 'pointer-events-none'
+			'max-w-90 p-1',
+			docId !== resId && 'hover:bg-surface-300',
+			!isCurrentSeqList && ' hover:bg-surface-300',
+			isCurrentSeqList && docId === resId && 'pointer-events-none',
+			isFirst && 'rounded-l-2xl',
+			isLast && 'rounded-r-2xl'
 		]}
 		onclick={() => {
 			closeSeqPanel(0);
@@ -197,41 +187,39 @@
 {#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
 	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
 	{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
-	<div
-		class="flex h-[140px] overflow-x-auto overflow-y-hidden pb-6"
-		onwheel={(ev) => {
-			invertScroll(ev);
-		}}
-	>
-		<!-- Documents before -->
-		<div
-			class={[
-				'flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
-				itemsBeforeIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
-			]}
+	<div class="my-2 h-[180px]">
+		<ThumbList
+			rerun={docId}
+			classesCurrent="min-w-85"
+			isBeforeEmpty={itemsBeforeIds.length === 0}
+			isAfterEmpty={itemsAfterIds.length === 0}
 		>
-			{#each itemsBeforeIds as itemId (itemId)}
-				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
-			{/each}
-		</div>
-		<!-- Current Document -->
-		<div
-			class={['mx-2 flex min-w-85 grow justify-center rounded-xl bg-transparent']}
-			{@attach centerCurrentItemInGallery}
-		>
-			{@render seqItem(docId, seqKey, isCurrentSeqList)}
-		</div>
-		<!-- Documents after -->
-		<div
-			class={[
-				'flex min-w-1/2 shrink-0 justify-start gap-2 rounded-xl',
-				itemsAfterIds.length === 0 ? 'bg-transparent' : 'bg-surface-200-800'
-			]}
-		>
-			{#each itemsAfterIds as itemId (itemId)}
-				{@render seqItem(itemId, seqKey, isCurrentSeqList)}
-			{/each}
-		</div>
+			{#snippet childrenBefore()}
+				{#each itemsBeforeIds as itemId, index (itemId)}
+					{@render seqItem(
+						itemId,
+						seqKey,
+						isCurrentSeqList,
+						index === 0,
+						index === itemsBeforeIds.length - 1
+					)}
+				{/each}
+			{/snippet}
+			{#snippet childrenCurrent()}
+				{@render seqItem(docId, seqKey, isCurrentSeqList, true, true)}
+			{/snippet}
+			{#snippet childrenAfter()}
+				{#each itemsAfterIds as itemId, index (itemId)}
+					{@render seqItem(
+						itemId,
+						seqKey,
+						isCurrentSeqList,
+						index === 0,
+						index === itemsAfterIds.length - 1
+					)}
+				{/each}
+			{/snippet}
+		</ThumbList>
 	</div>
 {/snippet}
 
@@ -246,7 +234,7 @@
 		closeSeqPanel(0);
 	}}
 	aria-label="Panel schliessen"
-	class="fixed top-0 z-100 h-full w-full bg-surface-50-950/80"
+	class="fixed top-0 z-100 h-full w-full bg-surface-50/80"
 ></div>
 
 <!-- Sequence Navigation Elements -->
@@ -254,7 +242,7 @@
 	<!-- Button: "Sequenz wählen" -->
 	<div bind:this={elSeqNav} class="z-90003">
 		<button
-			class="z-90003 rounded-full border bg-surface-50-950 px-4 py-2 font-bold hover:bg-surface-300-700"
+			class="z-90003 rounded-full border bg-surface-50 px-4 py-2 font-bold hover:bg-surface-300"
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
@@ -286,7 +274,7 @@
 			<!-- Previous in Sequence-->
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300',
 					!prevId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
@@ -299,7 +287,7 @@
 
 			<!-- Button: Open Panel -->
 			<button
-				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300-700 bg-surface-50-950 text-surface-700-300 hover:border hover:bg-surface-300-700"
+				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-surface-300 bg-surface-50 text-surface-700 hover:border hover:bg-surface-300"
 				aria-label="Sequenzansicht öffnen"
 				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();
@@ -313,7 +301,7 @@
 					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
 					{#if hasOtherSequences && !isOpenSeqPanel}
 						<i
-							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800-200 pt-2 text-surface-50-950"
+							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-surface-800 pt-2 text-surface-50"
 						></i>
 					{/if}
 				</div>
@@ -322,7 +310,7 @@
 			<!-- Next in Sequence -->
 			<a
 				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300-700',
+					'flex items-center rounded-full border px-4 select-none hover:bg-surface-300',
 					!nextId && 'pointer-events-none border-surface-500'
 				]}
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
@@ -344,7 +332,7 @@
 		bind:this={elSeqPanel}
 		class={[
 			'absolute z-90002 flex h-max max-h-[80vh] w-8/10 flex-col rounded-xl border-2 px-10 pb-10 transition-all duration-200',
-			isSelectedValidSeq ? 'bg-surface-50-950 pt-40' : 'bg-surface-50-950 pt-25'
+			isSelectedValidSeq ? 'bg-surface-50 pt-40' : 'bg-surface-50 pt-25'
 		]}
 		style={`top:${elSeqNavSize?.top}px;`}
 		onmouseenter={() => {
@@ -353,7 +341,7 @@
 	>
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			{@render sequenceList(currentSeq.type, currentSeq.key, true)}
+			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
 		{/if}
 
 		<!-- Snippet: Other Sequences Selector -->
@@ -368,14 +356,14 @@
 					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
 				}}
 			>
-				{#each Object.keys(seqOther) as seqType (seqType)}
+				{#each Object.keys(seqOther) as TSeqTypes[] as seqType (seqType)}
 					<button
-						class={[classes, activeType === seqType && 'bg-surface-50-950 font-bold']}
+						class={[classes, activeType === seqType && 'bg-surface-50 font-bold']}
 						onmousemove={() => {
-							activeType = seqType as TSeqTypes;
+							activeType = seqType;
 						}}
 						onclick={() => {
-							activeType = seqType as TSeqTypes;
+							activeType = seqType;
 						}}
 					>
 						{dictSeqTyped[seqType].label_plural}
@@ -387,7 +375,7 @@
 		<!-- Snippet: Title with shortcuts -->
 		{#snippet titleWithShortcuts(type: string, seqKey: string)}
 			<div class={['flex min-h-18 w-full flex-col items-start py-1']}>
-				<h6 class="mr-5 h6">{seqAllTyped[type!]?.[seqKey]?.preamble || type}</h6>
+				<h6 class="h6 mr-5">{seqAllTyped[type!]?.[seqKey]?.preamble || type}</h6>
 				<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 					<div class="flex gap-4">
 						<a
@@ -431,9 +419,10 @@
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}
 							<h3 class="h3">{dictSeqTyped[seqType]?.label_plural}</h3>
-							{#each Object.keys(seqOther[seqType!] ?? {}) as seqKey (seqKey)}
+							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 								{@render titleWithShortcuts(seqType, seqKey)}
-								{@render sequenceList(seqType, seqKey as TSeqKeys, seqKey === currentSeq.key)}
+
+								{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
 							{/each}
 						{/if}
 					{/each}
@@ -446,7 +435,7 @@
 			<!-- Select sequences (other than the one currently sequence selected)-->
 			<div class="mt-4 flex min-h-10 flex-wrap items-end justify-start">
 				<p class=" mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
-				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50-950')}
+				{@render otherSeqSelectors('px-4 h-max underline hover:bg-surface-50')}
 			</div>
 
 			<!-- Other Sequences -->
@@ -455,7 +444,7 @@
 					role="dialog"
 					tabindex="0"
 					class={[
-						'relative rounded-b-xl bg-surface-50-950 text-surface-950',
+						'relative rounded-b-xl bg-surface-50 text-surface-950',
 						isSelectedValidSeq && 'mt-10 border-t-2'
 					]}
 					onmouseenter={() => {

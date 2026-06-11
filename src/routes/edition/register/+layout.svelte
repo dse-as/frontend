@@ -21,7 +21,7 @@
 		{#each regIdsForButtons as regId (regId)}
 			<a
 				class={[
-					'my-btn-round hover:bg-surface-300-700!',
+					'my-btn-round hover:bg-surface-300!',
 					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
 					data.regType === regId && 'my-btn-active'
 				]}
@@ -44,10 +44,10 @@
 	class={[
 		'absolute transition-all duration-400',
 		data.regView === 'regView1'
-			? 'top-35 left-0 w-full text-center h1'
+			? 'h1 top-35 left-0 w-full text-center'
 			: data.regView === 'regView2'
-				? 'top-35 left-0 w-1 pl-10  text-center h1 whitespace-nowrap'
-				: 'top-38 left-0 w-1 pl-10 text-center h4 whitespace-nowrap'
+				? 'h1 top-35 left-0 w-1  pl-10 text-center whitespace-nowrap'
+				: 'h4 top-38 left-0 w-1 pl-10 text-center whitespace-nowrap'
 	]}
 >
 	{data.regView === 'regView1' ? 'Register' : dictReg[data.regType as TRegTypes]?.register_name}

@@ -13,7 +13,7 @@
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
-	let { ceteiData } = $props();
+	let { ceteiData, classes } = $props();
 
 	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
@@ -134,8 +134,9 @@
 
 		element.querySelectorAll('tei-rs').forEach((el) => {
 			el.setAttribute('tabindex', '0');
-			el.addEventListener('click', () => {
-				handleRefStringClick(el.getAttribute('key') as TRegKeysFlat);
+			el.addEventListener('click', (ev) => {
+				ev.stopPropagation();
+				handleRefStringClick(el as HTMLElement);
 			});
 			el.addEventListener('focusout', () => {
 				clearAllHighlights();
@@ -154,34 +155,32 @@
 	};
 </script>
 
-<div
-	data-textflow="fluid"
-	class="mx-auto mt-10 grid max-w-300 grid-cols-[200px_1fr] gap-10 overflow-y-auto p-10 pt-0 pl-0"
-	bind:this={containerMaintext}
->
-	<!-- Thumbnail Column -->
-	<aside class="h-full">
-		{#each thumbs as thumb, i (thumb.id)}
-			<!-- spacer -->
-			<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`}></div>
+<div data-textflow="fluid" class={classes} bind:this={containerMaintext}>
+	<div class="w-full gap-10 p-10 pt-0 xl:grid xl:grid-cols-[150px_1fr] xl:pl-0">
+		<!-- Thumbnail Column -->
+		<aside class="hidden h-full xl:block">
+			{#each thumbs as thumb, i (thumb.id)}
+				<!-- spacer -->
+				<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`}></div>
 
-			<button
-				class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
-				onclick={() => openDFpage(thumb.page)}
-			>
-				<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
-				<span class="italic">Seite {thumb.page}</span>
-			</button>
-		{/each}
-	</aside>
+				<button
+					class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
+					onclick={() => openDFpage(thumb.page)}
+				>
+					<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
+					<span class="text-sm">Seite {thumb.page}</span>
+				</button>
+			{/each}
+		</aside>
 
-	<!-- Text Column -->
-	<main
-		bind:this={containerTEI}
-		class="max-w-none"
-		{@attach setupFacsimile}
-		{@attach setupCustomElements}
-	>
-		{@html serializedWithoutNotes}
-	</main>
+		<!-- Text Column -->
+		<main
+			bind:this={containerTEI}
+			class="max-w-none"
+			{@attach setupFacsimile}
+			{@attach setupCustomElements}
+		>
+			{@html serializedWithoutNotes}
+		</main>
+	</div>
 </div>

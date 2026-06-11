@@ -16,7 +16,7 @@
 	<Nav />
 </div>
 
-<div class="min-h-screen px-10 pt-10 pb-20">{@render children()}</div>
+<div class="min-h-screen pt-10 pb-20">{@render children()}</div>
 
 <footer
 	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-800"
@@ -70,13 +70,3 @@
 		</a>
 	</div>
 </footer>
-
-<style lang="postcss">
-	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
-
-	:global(*:focus) {
-		@apply ring-2 ring-secondary-200;
-		outline: none; /* Overwrite default focus-marker */
-	}
-</style>

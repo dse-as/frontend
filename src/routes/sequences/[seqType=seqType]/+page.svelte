@@ -5,7 +5,7 @@
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams.js';
 	import type { TSeqTypes } from '$lib/types/TSequences.js';
-	import { invertScroll } from '$lib/functions/invertScroll.js';
+	import { invertScroll } from '$lib/functions/invertScroll.svelte.js';
 	import { building } from '$app/environment';
 
 	let { data } = $props();
@@ -21,7 +21,7 @@
 
 {#each Object.keys(seqItems) as seqItemId (seqItemId)}
 	<div class="mt-5 rounded-xl p-5">
-		<h4 class="mb-5 h4">{seqItems[seqItemId].preamble}</h4>
+		<h4 class="h4 mb-5">{seqItems[seqItemId].preamble}</h4>
 
 		<div
 			bind:this={containerRef}

@@ -38,7 +38,6 @@
 
 <style lang="postcss">
 	@reference "tailwindcss";
-	@reference "@skeletonlabs/skeleton";
 
 	[data-dom='containerAnnotations'] {
 		:global(li) {
