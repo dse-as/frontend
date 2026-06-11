@@ -5,7 +5,6 @@
 	import TextFluid from './TextFluid.svelte';
 
 	import { Tabs } from 'bits-ui';
-	type TActiveRegisterTab = 'notes' | 'register';
 
 	let { docId, docItem, ceteiData } = $props();
 </script>

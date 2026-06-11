@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { goto, replaceState } from '$app/navigation';
+	import { goto } from '$app/navigation';
 
 	import LF from './LF.svelte';
 	import Gallery from './Gallery.svelte';

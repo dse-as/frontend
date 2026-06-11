@@ -80,10 +80,10 @@
 							selectedTextNode.id === regKey &&
 								'bg-(--color-note-active) hover:bg-(--color-note-active)'
 						]}
-						onclick={(ev) => {
+						onclick={() => {
 							handleRegisterClick(regKey);
 						}}
-						onkeydown={(ev) => {
+						onkeydown={() => {
 							handleRegisterClick(regKey);
 						}}
 					>

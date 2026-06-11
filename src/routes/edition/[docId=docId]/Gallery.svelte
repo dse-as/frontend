@@ -65,23 +65,6 @@
 		scrollGalleryToPage(currentPage);
 	});
 
-	function centerCurrentItemInGallery(el: HTMLElement) {
-		/* eslint-disable @typescript-eslint/no-unused-vars */
-		// let _foreRerun = docId; // force rerun on change of docId
-
-		const container = el.parentElement;
-		if (!container) return;
-		// Scroll the container to the specified position
-		container.scroll({
-			behavior: 'instant',
-			left:
-				el.getBoundingClientRect().left -
-				container.getBoundingClientRect().left +
-				container.scrollLeft -
-				container.clientWidth / 2 +
-				el.clientWidth / 2
-		});
-	}
 	let itemsBefore = $derived(collectGalleryItems().slice(0, currentPage - 1));
 	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
 	let itemsAfter = $derived(collectGalleryItems().slice(currentPage - 0));

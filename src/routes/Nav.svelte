@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { NavigationMenu, Dialog, Portal } from 'bits-ui';
+	import { NavigationMenu, Dialog } from 'bits-ui';
 	import { page } from '$app/state';
 
 	import Lightswitch from './Lightswitch.svelte';
@@ -60,7 +60,7 @@
 
 		<!-- Menu for Smartphone -->
 		<div class="lg:hidden">
-			<Dialog.Root open={openStateMenu} onOpenChange={(e) => (openStateMenu = e.open)}>
+			<Dialog.Root bind:open={openStateMenu}>
 				<!-- Trigger aligned right on small screens -->
 				<Dialog.Trigger
 					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-surface-50 hover:bg-white/10"

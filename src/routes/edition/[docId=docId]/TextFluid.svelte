@@ -26,7 +26,6 @@
 		n: string;
 		page: number;
 		top: number;
-		f;
 	};
 
 	let thumbs = $state([] as TThumb[]);
@@ -137,7 +136,7 @@
 			el.setAttribute('tabindex', '0');
 			el.addEventListener('click', (ev) => {
 				ev.stopPropagation();
-				handleRefStringClick(el);
+				handleRefStringClick(el as HTMLElement);
 			});
 			el.addEventListener('focusout', () => {
 				clearAllHighlights();
