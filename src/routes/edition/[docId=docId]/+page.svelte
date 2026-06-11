@@ -7,7 +7,7 @@
 	import DF from './DF.svelte';
 	import DocHeader from './DocHeader.svelte';
 	import Sequences from './Sequences.svelte';
-	import { Tabs, ToggleGroup } from 'bits-ui';
+	import { Tabs } from 'bits-ui';
 
 	import { onMount } from 'svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
@@ -51,9 +51,6 @@
 		// replaceState('', page.state);
 	});
 </script>
-
-<!-- //! HACK: this forces currentPage to update on URL change -->
-{#if currentPage}{/if}
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
