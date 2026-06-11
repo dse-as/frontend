@@ -135,8 +135,9 @@
 
 		element.querySelectorAll('tei-rs').forEach((el) => {
 			el.setAttribute('tabindex', '0');
-			el.addEventListener('click', () => {
-				handleRefStringClick(el.getAttribute('key') as TRegKeysFlat);
+			el.addEventListener('click', (ev) => {
+				ev.stopPropagation();
+				handleRefStringClick(el);
 			});
 			el.addEventListener('focusout', () => {
 				clearAllHighlights();

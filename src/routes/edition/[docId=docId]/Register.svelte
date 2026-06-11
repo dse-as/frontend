@@ -5,7 +5,10 @@
 	import { type TRegKeysFlat, type TRegTypes } from '$lib/types/register/TRegister';
 	import { resolve } from '$app/paths';
 	import { openRegisters, selectedTextNode } from '$lib/globals/ui-states.svelte';
-	import { handleRegisterClick } from '$lib/functions/interactive_edendum/handleInteractiveText';
+	import {
+		handleRegisterClick,
+		handleScrollToSibling
+	} from '$lib/functions/interactive_edendum/handleInteractiveText';
 
 	const dictReg = dict_register.dict_register as Record<
 		string,
@@ -73,19 +76,36 @@
 						tabindex="0"
 						data-regKey={regKey}
 						class={[
-							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-zinc-200',
-							selectedTextNode.id === regKey && 'bg-zinc-300 hover:bg-zinc-300'
+							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-(--color-note-active)',
+							selectedTextNode.id === regKey &&
+								'bg-(--color-note-active) hover:bg-(--color-note-active)'
 						]}
-						onclick={() => {
+						onclick={(ev) => {
 							handleRegisterClick(regKey);
 						}}
-						onkeydown={() => {
+						onkeydown={(ev) => {
 							handleRegisterClick(regKey);
 						}}
 					>
 						<p class="text-lg">{reg[regType][regKey].name}</p>
+						<button
+							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100-900"
+							aria-label="select previous match"
+							onclick={(ev) => {
+								ev.stopPropagation();
+								handleScrollToSibling(regKey, 'prev');
+							}}><i class="fa-arrow-left-long fa-regular"></i></button
+						>
+						<button
+							class="hidden rounded-full px-2 py-2 underline group-data-active:block hover:bg-surface-100-900"
+							aria-label="select next match"
+							onclick={(ev) => {
+								ev.stopPropagation();
+								handleScrollToSibling(regKey, 'next');
+							}}><i class="fa-arrow-right-long fa-regular"></i></button
+						>
 						<a
-							class="text-surface-950-500 hidden rounded-full px-2 py-2 underline group-hover:block hover:bg-surface-100-900"
+							class="text-surface-950-500 hidden rounded-full px-2 py-2 underline group-hover:block group-[data-active]:block hover:bg-surface-100-900"
 							href={resolve(`/edition/register/${regKey as string}`)}
 							target="_blank"
 							aria-label="In Register öffnen"
