@@ -37,11 +37,10 @@
 }
 
 /* .dark { */
-@media (prefers-color-scheme: dark) {
-	:root {
-		/* Entity Colors */
-		--rs-doc: var(--color-sky-300);
-		--rs-person: var(--color-red-300);
+.dark {
+	/* Entity Colors */
+	--rs-doc: var(--color-sky-300);
+	--rs-person: var(--color-red-300);
 		--rs-place: var(--color-fuchsia-300);
 		--rs-event: var(--color-emerald-300);
 		--rs-org: var(--color-indigo-300);
@@ -70,10 +69,9 @@
 		--tabs-hover-foreground: black;
 		--tabs-active: oklch(42.118% 0.01059 248.187);
 		--tabs-active-foreground: oklch(99.131% 0.00697 248.18);
-		--tabs-inactive: white;
-		--tabs-inactive-foreground: black;
-		--primaryy: yellow;
-	}
+	--tabs-inactive: white;
+	--tabs-inactive-foreground: black;
+	--primaryy: yellow;
 }
 
 /* Fixed Colors (Skeleton-Style) */

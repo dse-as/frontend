@@ -6,9 +6,12 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import Nav from './Nav.svelte';
 	import { asset } from '$app/paths';
+	import { ModeWatcher } from 'mode-watcher';
 
 	let { children } = $props();
 </script>
+
+<ModeWatcher defaultMode="dark" />
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 

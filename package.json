@@ -43,6 +43,7 @@
 		"CETEIcean": "^1.9.5",
 		"bits-ui": "^2.18.1",
 		"jsdom": "^29.0.2",
+		"mode-watcher": "^1.1.0",
 		"openseadragon": "^6.0.2",
 		"tailwindcss-animate": "^1.0.7"
 	}
