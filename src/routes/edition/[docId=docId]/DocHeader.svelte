@@ -31,7 +31,7 @@
 
 {#snippet metadataButton(state: string, text: string)}
 	<button
-		class={['preset-btn-round', stateMetadata === state && 'preset-btn-round--active']}
+		class={['preset-btn-round --lg', stateMetadata === state && '--active']}
 		onclick={() => {
 			if (stateMetadata !== state) {
 				stateMetadata = state;
@@ -99,7 +99,7 @@
 			<!-- (2) Metadata Table -->
 			{#snippet metadataContent()}
 				<div data-dom="metadata">
-					<div class="flex w-full flex-wrap justify-start gap-5">
+					<div class="preset-btn-list --spacing-normal">
 						{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
 						{@render metadataButton('sources', 'Quellenangaben')}
 						{@render metadataButton('globalEntities', 'Schlagwörter')}

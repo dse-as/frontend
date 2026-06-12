@@ -36,7 +36,7 @@
 				{#each links as link (link)}
 					<li
 						class={[
-							'list-nav-item inline-block h-full hover:text-accent-foreground',
+							'list-nav-item inline-block h-full hover:text-accent',
 							link.path.split('/').pop() === `/${page.url.pathname.split('/').pop()}`
 								? 'text-accent-foreground'
 								: ''

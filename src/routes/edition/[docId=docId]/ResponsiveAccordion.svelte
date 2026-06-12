@@ -49,7 +49,7 @@
 	<div id="expandableBox" class="relative mt-5 mb-20 hidden pt-5 pb-0 xl:block">
 		<div
 			class={[
-				'grid transition-all duration-400 ease-in-out',
+				'grid overflow-hidden transition-all duration-400 ease-in-out',
 				isExpanded ? 'max-h-[80vh]' : 'max-h-[120px]'
 			]}
 		>

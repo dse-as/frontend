@@ -11,7 +11,7 @@
 	<h1 class="h1">Korrespondenz</h1>
 	<div class="mt-10 flex flex-wrap justify-center gap-4">
 		<a
-			class="preset-btn-round text-2xl"
+			class="preset-btn-round --2xl"
 			href={resolve(`/edition/${corrData['corr_spec_0001'].docs[0]}?seq=corr_spec_0001`)}
 			>Gesamtkorrespondenz</a
 		>
@@ -24,11 +24,11 @@
 		}) as corrId (corrId)}
 			{@const firstDocId = corrData[corrId as TSeqCorrespondenceKeys].docs[0]}
 			{#if firstDocId}
-				<a class="preset-btn-round" href={resolve(`/edition/${firstDocId}?seq=${corrId}`)}
+				<a class="preset-btn-round --lg" href={resolve(`/edition/${firstDocId}?seq=${corrId}`)}
 					>{corrData[corrId as TSeqCorrespondenceKeys].name}</a
 				>
 			{:else}
-				<span class="preset-btn-round cursor-default! border-surface-500 text-surface-500"
+				<span class="preset-btn-round --lg cursor-default! border-surface-500 text-surface-500"
 					>{corrData[corrId as TSeqCorrespondenceKeys].name}</span
 				>
 			{/if}

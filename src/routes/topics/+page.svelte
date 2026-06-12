@@ -7,10 +7,16 @@
 
 	<nav class="mt-10">
 		<ul class="flex flex-wrap justify-center gap-4">
-			<li class="preset-btn-round text-2xl"><a href={resolve('/topics/family')}>Familie</a></li>
-			<li class="preset-btn-round text-2xl"><a href={resolve('/topics/gender')}>Gender</a></li>
-			<li class="preset-btn-round text-2xl">
-				<a href={resolve('/topics/intermediality')}>Intermedialität</a>
+			<li>
+				<a class="preset-btn-round --2xl" href={resolve('/topics/family')}>Familie</a>
+			</li>
+			<li>
+				<a class="preset-btn-round --2xl" href={resolve('/topics/gender')}>Gender</a>
+			</li>
+			<li>
+				<a class="preset-btn-round --2xl" href={resolve('/topics/intermediality')}
+					>Intermedialität</a
+				>
 			</li>
 		</ul>
 	</nav>

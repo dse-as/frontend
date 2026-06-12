@@ -37,6 +37,11 @@
 			'calt' 1;
 	}
 
+	a,
+	button {
+		@apply cursor-pointer;
+	}
+
 	/* Focus */
 	*:focus {
 		@apply ring-2 ring-(--color-secondary-500);
@@ -50,8 +55,8 @@
 	}
 
 	/* Links */
-	a {
-		@apply hover:text-primary-500;
+	.a {
+		@apply text-primary-500 underline;
 	}
 
 	/* Headings (as skeleton-style classes) */

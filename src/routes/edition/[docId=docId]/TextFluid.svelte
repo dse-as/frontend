@@ -164,10 +164,10 @@
 				<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`}></div>
 
 				<button
-					class="sticky top-0 float-right ml-2 w-max translate-y-10 bg-white"
+					class="sticky top-0 float-right ml-2 w-max translate-y-10 rounded bg-background p-2"
 					onclick={() => openDFpage(thumb.page)}
 				>
-					<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="rounded-xl" />
+					<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="" />
 					<span class="text-sm">Seite {thumb.page}</span>
 				</button>
 			{/each}

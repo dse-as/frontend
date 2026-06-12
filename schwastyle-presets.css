@@ -1,8 +1,77 @@
 @layer base {
+	/* Rounded Buttons */
 	.preset-btn-round {
-		@apply w-max cursor-pointer rounded-full border bg-surface-50 px-4 py-1 text-center hover:bg-surface-300 hover:text-surface-950;
+		@apply flex w-max cursor-pointer items-center justify-center rounded-full border-border-button bg-background px-4 py-1 text-contrast select-none;
+		@apply hover:border-border-button-hover hover:bg-dark-04 hover:text-contrast;
+		@apply active:ring-2;
+		@apply focus:ring-2;
+
+		&:not(.--sm),
+		&:not(.--lg),
+		&:not(.--xl),
+		&:not(.--2xl) {
+			@apply border;
+		}
+		&.--2xl {
+			@apply border-2 text-2xl dark:border-3;
+		}
+		&.--xl {
+			@apply text-[1.3rem] dark:border-2;
+		}
+		&.--lg {
+			@apply border text-lg;
+		}
+		&.--sm {
+			@apply border text-sm;
+		}
+
+		&.--muted {
+			@apply pointer-events-none border-muted text-muted-foreground;
+		}
+		&.--active {
+			@apply bg-primary-100 text-primary-contrast-dark;
+		}
 	}
-	.preset-btn-round--active {
-		@apply bg-primary-500/15! text-primary-950! hover:bg-primary-500/15! hover:text-primary-950!;
+
+	.preset-btn-list {
+		@apply flex w-full flex-wrap justify-start;
+
+		&.--spacing-sm {
+			@apply gap-2;
+		}
+		&.--spacing-normal {
+			@apply gap-3;
+		}
+		&.--spacing-lg {
+			@apply gap-5;
+		}
+	}
+
+	/* Tabs */
+	.preset-tabs-list {
+		@apply mx-2 grid grid-cols-2 rounded-full select-none;
+		@apply text-base leading-[0.01em] font-semibold;
+		@apply border-[1.5px] border-surface-800;
+		@apply bg-background text-foreground;
+		&.--sm {
+			@apply h-9 **:px-6;
+		}
+		&.--lg {
+			@apply h-10 **:px-6;
+		}
+	}
+	.preset-tabs-trigger {
+		@apply overflow-hidden leading-normal text-ellipsis whitespace-nowrap;
+		@apply hover:bg-dark-04 hover:text-contrast;
+		@apply data-[state=active]:pointer-events-none data-[state=active]:bg-foreground data-[state=active]:text-background;
+		&.--left {
+			@apply rounded-l-full;
+		}
+		&.--center {
+			@apply rounded-none;
+		}
+		&.--right {
+			@apply rounded-r-full;
+		}
 	}
 }
