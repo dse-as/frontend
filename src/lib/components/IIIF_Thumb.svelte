@@ -8,17 +8,17 @@
 {#if url}
 	{#if showSpinner}
 		<div
-			class={['flex items-center justify-center rounded-xl border', classes]}
+			class={['flex items-center justify-center', classes]}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
-			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
+			<i class="fa-solid fa-spinner fa-spin fa-2xl text-dark-40"></i>
 		</div>
 	{/if}
 	{#if !isError}
 		<img
 			class={[
 				showSpinner ? 'hidden' : 'flex',
-				'h-max w-max items-center justify-center bg-surface-50 object-cover'
+				'flex h-max w-max items-center justify-center object-cover'
 			]}
 			style={`max-width:${maxWidth}px; max-height:${maxHeight}px;`}
 			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
@@ -33,14 +33,14 @@
 		/>
 	{:else}
 		<div
-			class={['flex items-center justify-center rounded-xl border', classes]}
+			class={['flex items-center justify-center', classes]}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
-			<i class="fa-solid fa-xmark fa-2xl text-red-500"></i>
+			<i class="fa-solid fa-xmark fa-2xl text-warning"></i>
 		</div>
 	{/if}
 {:else}
-	<div class={['flex h-full w-full items-center justify-center rounded-xl border', classes]}>
+	<div class={['flex h-full w-full items-center justify-center', classes]}>
 		<i class="fa-solid fa-xmark fa-2xl"></i>
 	</div>
 {/if}

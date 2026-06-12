@@ -242,7 +242,7 @@
 	<!-- Button: "Sequenz wählen" -->
 	<div bind:this={elSeqNav} class="z-90003">
 		<button
-			class="z-90003 rounded-full border bg-background px-4 py-2 font-bold hover:bg-hover"
+			class="preset-btn-round --xl z-90003"
 			onclick={() => {
 				if (!isOpenSeqPanel) openSeqPanel();
 				else closeSeqPanel(0);
@@ -255,8 +255,9 @@
 		<!-- Current Sequence Title -->
 		<div class="flex w-full justify-center gap-6">
 			<div class="mb-3 flex w-max flex-col items-center">
-				<h6 class="h6">
-					Sequenz: <a
+				<h6 class="h5">
+					<span class="">Sequenz:</span>
+					<a
 						class="hover:underline"
 						href={resolve(
 							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
@@ -273,10 +274,7 @@
 		<div class="flex w-full justify-center gap-6">
 			<!-- Previous in Sequence-->
 			<a
-				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-hover',
-					!prevId && 'pointer-events-none border-border-card'
-				]}
+				class={['preset-btn-round', !prevId && '--muted']}
 				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !prevId && 'text-avocado-500']}>
@@ -297,8 +295,9 @@
 					elButton?.focus();
 				}}
 			>
-				<div style="position: relative; display: inline-block;">
+				<div class="relative inline-block">
 					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
+					<!-- Show Plus-Indicator if document is part of multiple sequences -->
 					{#if hasOtherSequences && !isOpenSeqPanel}
 						<i
 							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-foreground pt-2 text-background"
@@ -309,10 +308,7 @@
 
 			<!-- Next in Sequence -->
 			<a
-				class={[
-					'flex items-center rounded-full border px-4 select-none hover:bg-hover',
-					!nextId && 'pointer-events-none border-border-card'
-				]}
+				class={['preset-btn-round', !nextId && '--muted']}
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
 				<div class={['flex flex-row items-center gap-2', !nextId && 'text-avodaco']}>

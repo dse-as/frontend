@@ -66,23 +66,11 @@
 	/>
 
 	<!-- DFLF Toggle -->
-	<Tabs.Root bind:value={dflf} class="sticky top-10 z-90000 xl:static">
-		<Tabs.List
-			class="border-(--surface-800)-200 mx-2 grid grid-cols-2 rounded-full border-[1.5px] bg-tabs-inactive text-base leading-[0.01em] font-semibold text-tabs-inactive-foreground"
-		>
-			<Tabs.Trigger
-				value="LF"
-				class="h-10 max-w-60 rounded-l-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
-			>
-				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">Lesefassung</p>
-			</Tabs.Trigger>
-			<Tabs.Trigger
-				value="DF"
-				class="h-10 max-w-60 rounded-r-full px-4 hover:bg-tabs-hover hover:text-tabs-hover-foreground data-[state=active]:bg-tabs-active data-[state=active]:text-tabs-active-foreground"
-			>
-				<p class="overflow-hidden leading-normal text-ellipsis whitespace-nowrap">
-					Diplomatische Fassung
-				</p>
+	<Tabs.Root bind:value={dflf} class="sticky top-10 z-90000 max-w-160 xl:static">
+		<Tabs.List class="preset-tabs-list --lg">
+			<Tabs.Trigger value="LF" class=" preset-tabs-trigger --left">Lesefassung</Tabs.Trigger>
+			<Tabs.Trigger value="DF" class="preset-tabs-trigger --right">
+				Diplomatische Fassung
 			</Tabs.Trigger>
 		</Tabs.List>
 	</Tabs.Root>

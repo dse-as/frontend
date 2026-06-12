@@ -15,15 +15,15 @@
 			'flex transition-all duration-200',
 			data.regView === 'regView1'
 				? 'mx-auto mt-40 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
-				: 'h-full w-full gap-2'
+				: 'ml-10 h-full w-full gap-2'
 		]}
 	>
 		{#each regIdsForButtons as regId (regId)}
 			<a
 				class={[
-					'preset-btn-round hover:bg-surface-300!',
-					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
-					data.regType === regId && 'preset-btn-round--active'
+					'preset-btn-round',
+					data.regView === 'regView1' ? '--2xl' : '--sm',
+					data.regType === regId && '--active'
 				]}
 				href={resolve(`/edition/register/${regId}`)}
 			>

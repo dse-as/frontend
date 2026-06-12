@@ -172,9 +172,7 @@
 			{#snippet sortButton(name: string, sortKey: string)}
 				<button
 					class={[
-						uiOvSortBy[itemVariant] === sortKey
-							? 'pointer-events-none font-bold text-surface-950'
-							: 'text-primary-500 underline'
+						uiOvSortBy[itemVariant] === sortKey ? 'pointer-events-none font-bold' : 'underline'
 					]}
 					onclick={() => {
 						uiOvSortBy[itemVariant] = sortKey;

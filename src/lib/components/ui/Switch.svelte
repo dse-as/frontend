@@ -57,7 +57,7 @@
 		'focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-hidden',
 		'disabled:cursor-not-allowed disabled:opacity-50',
 		'transition-transform duration-200 ease-in-out',
-		'data-[state=checked]:bg-primaryy data-[state=unchecked]:bg-dark-10 data-[state=unchecked]:shadow-mini-inset'
+		'data-[state=checked]:bg-accent data-[state=unchecked]:bg-dark-10 data-[state=unchecked]:shadow-mini-inset'
 	]}
 >
 	<Switch.Thumb

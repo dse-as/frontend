@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { invertScroll } from '$lib/functions/invertScroll.svelte';
+	import { ScrollArea } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
 	let {
@@ -57,13 +58,9 @@
 	}
 </script>
 
-<div
-	class="flex h-full overflow-x-auto overflow-y-hidden pb-6"
-	onwheel={(ev) => {
-		invertScroll(ev);
-	}}
->
+{#snippet ListContent()}
 	<!-- Documents before -->
+
 	<div
 		class={[
 			'disableScrollChaining flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
@@ -88,4 +85,34 @@
 	>
 		{@render childrenAfter()}
 	</div>
+{/snippet}
+
+<!-- Div-Variant -->
+<div
+	class="flex h-full overflow-x-auto overflow-y-hidden pb-6"
+	onwheel={(ev) => {
+		invertScroll(ev);
+	}}
+>
+	{@render ListContent()}
 </div>
+
+<!-- ScrollArea-Variant (not working yet) -->
+<!-- <ScrollArea.Root
+	onwheel={(ev) => {
+		invertScroll(ev);
+	}}
+>
+	<ScrollArea.Viewport>
+		<div class="flex h-full overflow-x-auto overflow-y-hidden pb-6">
+			{@render ListContent()}
+		</div>
+	</ScrollArea.Viewport>
+	<ScrollArea.Scrollbar
+		orientation="horizontal"
+		class="flex w-2.5 touch-none rounded-full border-l border-l-transparent bg-muted p-px transition-all duration-200 select-none hover:w-3 hover:bg-dark-10 data-[state=hidden]:animate-out data-[state=hidden]:fade-out-0 data-[state=visible]:animate-in data-[state=visible]:fade-in-0"
+	>
+		<ScrollArea.Thumb class="flex-1 rounded-full bg-muted-foreground" />
+	</ScrollArea.Scrollbar>
+	<ScrollArea.Corner />
+</ScrollArea.Root> -->

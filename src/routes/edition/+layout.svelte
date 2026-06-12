@@ -14,16 +14,16 @@
 			class={[
 				'flex transition-all duration-200',
 				data.edView === 'edView1'
-					? 'mx-auto mt-40 w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
-					: 'h-full w-full gap-2'
+					? 'mx-auto mt-40  w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
+					: 'ml-10 h-full w-full gap-2'
 			]}
 		>
 			{#each docTypeIdsForButtons as docTypeId (docTypeId)}
 				<a
 					class={[
-						'preset-btn-round hover:bg-surface-200!',
-						data.edView === 'edView1' ? 'border-2 text-2xl' : 'border text-sm',
-						data.docType === docTypeId && 'preset-btn-round--active'
+						'preset-btn-round',
+						data.edView === 'edView1' ? '--2xl' : '--sm',
+						data.docType === docTypeId && '--active'
 					]}
 					href={resolve(`/edition/${docTypeId}`)}
 				>
@@ -52,6 +52,7 @@
 	>
 		{data.edView === 'edView1' ? 'Dokumente' : data.docType ? dictDoc[data.docType]?.name : ''}
 	</h1>
+
 	<!-- Navigation  -->
 	{#if data.edView === 'edView1'}
 		{@render nav()}
