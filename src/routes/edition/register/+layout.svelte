@@ -21,9 +21,9 @@
 		{#each regIdsForButtons as regId (regId)}
 			<a
 				class={[
-					'my-btn-round hover:bg-surface-300!',
+					'preset-btn-round hover:bg-surface-300!',
 					data.regView === 'regView1' ? 'border-2 text-2xl' : 'border text-sm',
-					data.regType === regId && 'my-btn-active'
+					data.regType === regId && 'preset-btn-round--active'
 				]}
 				href={resolve(`/edition/register/${regId}`)}
 			>

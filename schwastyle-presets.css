@@ -1,0 +1,8 @@
+@layer base {
+	.preset-btn-round {
+		@apply w-max cursor-pointer rounded-full border bg-surface-50 px-4 py-1 text-center hover:bg-surface-300 hover:text-surface-950;
+	}
+	.preset-btn-round--active {
+		@apply bg-primary-500/15! text-primary-950! hover:bg-primary-500/15! hover:text-primary-950!;
+	}
+}

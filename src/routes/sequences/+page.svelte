@@ -6,11 +6,11 @@
 	<h1 class="h1">Sequenzen</h1>
 	<nav class="mt-10">
 		<ul class="flex flex-wrap gap-4">
-			<li class="my-btn-round text-2xl">
+			<li class="preset-btn-round text-2xl">
 				<a href={resolve('/sequences/textstufen')}>Textstufen</a>
 			</li>
-			<li class="my-btn-round text-2xl"><a href={resolve('/sequences/series')}>Serien</a></li>
-			<li class="my-btn-round text-2xl"><a href={resolve('/sequences/travels')}>Reisen</a></li>
+			<li class="preset-btn-round text-2xl"><a href={resolve('/sequences/series')}>Serien</a></li>
+			<li class="preset-btn-round text-2xl"><a href={resolve('/sequences/travels')}>Reisen</a></li>
 		</ul>
 	</nav>
 </div>

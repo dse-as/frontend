@@ -30,7 +30,7 @@
 
 {#snippet metadataButton(state: string, text: string)}
 	<button
-		class={['my-btn-round', stateMetadata === state && 'my-btn-active']}
+		class={['preset-btn-round', stateMetadata === state && 'preset-btn-round--active']}
 		onclick={() => {
 			if (stateMetadata !== state) {
 				stateMetadata = state;
@@ -205,6 +205,7 @@
 <style lang="postcss">
 	@reference "tailwindcss";
 
+	/* Global Entities */
 	:global([data-dom='global_entities']) {
 		:global([data-type='entity']) {
 			@apply rounded-xl px-2 font-bold;
@@ -213,28 +214,30 @@
 			content: '↗';
 			padding-right: 4px;
 		}
+
+		/* Entity Colors */
 		:global([data-entitytype='people']) {
-			@apply bg-red-100;
+			@apply bg-(--color-people);
 		}
 		:global([data-entitytype='places']) {
-			@apply bg-green-100;
+			@apply bg-(--color-places);
 		}
 		:global([data-entitytype='events']) {
-			@apply bg-yellow-100;
+			@apply bg-(--color-events);
 		}
 		:global([data-entitytype='orgs']) {
-			@apply bg-orange-100;
+			@apply bg-(--color-orgs);
 		}
 		:global([data-entitytype='smallforms']),
 		:global([data-entitytype='longforms']),
 		:global([data-entitytype='letters']) {
-			@apply bg-blue-100;
+			@apply bg-(--color-docs);
 		}
 		:global([data-entitytype='bibls']) {
-			@apply bg-purple-100;
+			@apply bg-(--color-bibls);
 		}
 		:global([data-entitytype='keywords']) {
-			@apply bg-gray-100;
+			@apply bg-(--color-keywords);
 		}
 	}
 </style>

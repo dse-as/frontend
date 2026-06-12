@@ -29,7 +29,8 @@
 			switchStyle: {
 				height: `${safeH}px`,
 				minHeight: `${safeH}px`,
-				width: `${width}px`
+				width: `${width}px`,
+				'--thumb-translate': `${translateX}px`
 			},
 			thumbStyle: {
 				width: `${thumbSize}px`,
@@ -52,10 +53,11 @@
 	bind:checked
 	style={switchStyle}
 	class={[
-		'inline-flex shrink-0 cursor-pointer items-center rounded-full px-[2px] transition-colors',
+		'myswitch inline-flex shrink-0 cursor-pointer items-center rounded-full px-[2px] transition-colors',
 		'focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-hidden',
 		'disabled:cursor-not-allowed disabled:opacity-50',
-		'data-[state=checked]:bg-avocado-500 data-[state=unchecked]:bg-dark-10 data-[state=unchecked]:shadow-mini-inset dark:data-[state=checked]:bg-foreground'
+		'transition-transform duration-200 ease-in-out',
+		'data-[state=checked]:bg-primaryy data-[state=unchecked]:bg-dark-10 data-[state=unchecked]:shadow-mini-inset'
 	]}
 >
 	<Switch.Thumb
@@ -63,7 +65,7 @@
 		class={[
 			'pointer-events-none block shrink-0 rounded-full bg-background transition-transform duration-200 ease-in-out',
 			'data-[state=unchecked]:translate-x-0 data-[state=unchecked]:shadow-mini',
-			'dark:border dark:border-background/30 dark:bg-foreground dark:shadow-popover dark:data-[state=unchecked]:border'
+			'data-[state=checked]:translate-x-(--thumb-translate)'
 		]}
 	>
 		{#if icon}
@@ -77,14 +79,3 @@
 		{@render children()}
 	{/if}
 </Label.Root>
-
-<style>
-	:global([data-state='checked']) {
-		transform: translateX(var(--thumb-translate)) !important;
-	}
-
-	:global([data-state='checked']),
-	:global([data-state='unchecked']) {
-		transition-property: transform;
-	}
-</style>

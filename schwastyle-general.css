@@ -1,0 +1,76 @@
+:root {
+	/* Shadows */
+	--shadow-mini: 0px 1px 0px 1px rgba(0, 0, 0, 0.04);
+	--shadow-mini-inset: 0px 1px 0px 0px rgba(0, 0, 0, 0.04) inset;
+	--shadow-popover: 0px 7px 12px 3px hsla(var(--dark-10));
+	--shadow-kbd: 0px 2px 0px 0px rgba(0, 0, 0, 0.07);
+	--shadow-btn: 0px 1px 0px 1px rgba(0, 0, 0, 0.03);
+	--shadow-card: 0px 2px 0px 1px rgba(0, 0, 0, 0.04);
+	--shadow-date-field-focus: 0px 0px 0px 3px rgba(24, 24, 27, 0.17);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--shadow-mini: 0px 1px 0px 1px rgba(0, 0, 0, 0.3);
+		--shadow-mini-inset: 0px 1px 0px 0px rgba(0, 0, 0, 0.5) inset;
+		--shadow-popover: 0px 7px 12px 3px hsla(0deg 0% 0% / 30%);
+		--shadow-kbd: 0px 2px 0px 0px rgba(255, 255, 255, 0.07);
+		--shadow-btn: 0px 1px 0px 1px rgba(0, 0, 0, 0.2);
+		--shadow-card: 0px 2px 0px 1px rgba(0, 0, 0, 0.4);
+		--shadow-date-field-focus: 0px 0px 0px 3px rgba(244, 244, 245, 0.1);
+	}
+}
+
+/* Breakpoints */
+@theme inline {
+	--breakpoint-desktop: 1440px;
+}
+
+/* UI-Elements */
+@theme inline {
+	/* Shadows */
+	--shadow-mini: var(--shadow-mini);
+	--shadow-mini-inset: var(--shadow-mini-inset);
+	--shadow-popover: var(--shadow-popover);
+	--shadow-kbd: var(--shadow-kbd);
+	--shadow-btn: var(--shadow-btn);
+	--shadow-card: var(--shadow-card);
+	--shadow-date-field-focus: var(--shadow-date-field-focus);
+
+	/* Radius */
+	--radius-card: 16px;
+	--radius-card-lg: 20px;
+	--radius-card-sm: 10px;
+	--radius-input: 9px;
+	--radius-button: 5px;
+
+	/* Spacings */
+	--spacing-input: 3rem;
+	--spacing-input-sm: 2.5rem;
+
+	/* Gaps */
+	--gap-sm: 5px;
+	--gap-base: 10px;
+	--gap-lg: 15px;
+
+	/* Borders and Rings*/
+	--border-width: 1px;
+	--ring-width: 1px;
+}
+
+/* Text */
+@theme inline {
+	/* Font Sizes */
+	--text-xl: 18px;
+	--text-lg: 16px;
+	--text-base: 14px;
+	--text-sm: 13px;
+	--text-xs: 12px;
+	--text-xxs: 10px;
+
+	/* Font Families */
+	--font-sans: 'Inter', 'sans-serif';
+	--font-mono: 'Source Code Pro', 'monospace';
+	--font-alt: 'Courier', 'sans-serif';
+	--font-display: 'Cal Sans', 'sans-serif';
+}

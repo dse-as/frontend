@@ -1,0 +1,166 @@
+:root {
+	/* Entity Colors */
+	--rs-doc: var(--color-sky-700);
+	--rs-person: var(--color-red-700);
+	--rs-place: var(--color-fuchsia-700);
+	--rs-event: var(--color-emerald-700);
+	--rs-org: var(--color-indigo-700);
+	--rs-bibl: var(--color-pink-700);
+	--rs-keyword: var(--color-amber-700);
+
+	/* Basic Colors */
+	--background: hsl(0 0% 100%);
+	--foreground: hsl(0 0% 9%);
+	--muted: hsl(240 5% 96%);
+	--muted-foreground: hsla(0 0% 9% / 0.4);
+	--border: hsl(240 6% 10%);
+	--border-input: hsla(240 6% 10% / 0.17);
+	--border-input-hover: hsla(240 6% 10% / 1);
+	--border-card: hsla(240 6% 10% / 0.6);
+	--dark: hsl(240 6% 10%);
+	--dark-10: hsla(240 6% 10% / 0.1);
+	--dark-40: hsla(240 6% 10% / 0.4);
+	--dark-04: hsla(240 6% 10% / 0.04);
+	--accent: hsl(204 94% 94%);
+	--accent-foreground: hsl(204 80% 16%);
+	--contrast: hsl(0 0% 0%);
+
+	/* --- UI Elements --- */
+	/* Tabs Colors */
+	--tabs-hover: oklch(91.052% 0.00106 11.805);
+	--tabs-hover-foreground: black;
+	--tabs-active: oklch(42.118% 0.01059 248.187);
+	--tabs-active-foreground: oklch(99.131% 0.00697 248.18);
+	--tabs-inactive: white;
+	--tabs-inactive-foreground: black;
+	--primaryy: red;
+}
+
+/* .dark { */
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Entity Colors */
+		--rs-doc: var(--color-sky-300);
+		--rs-person: var(--color-red-300);
+		--rs-place: var(--color-fuchsia-300);
+		--rs-event: var(--color-emerald-300);
+		--rs-org: var(--color-indigo-300);
+		--rs-bibl: var(--color-pink-300);
+		--rs-keyword: var(--color-amber-300);
+
+		--background: hsl(0 0% 5%);
+		--foreground: hsl(0 0% 95%);
+		--muted: hsl(240 4% 16%);
+		--muted-foreground: hsla(0 0% 100% / 0.4);
+		--border: hsl(0 0% 96%);
+		--border-input: hsla(0 0% 96% / 0.17);
+		--border-input-hover: hsla(0 0% 96% / 0.4);
+		--border-card: hsla(0 0% 96% / 0.1);
+		--dark: hsl(0 0% 96%);
+		--dark-40: hsl(0 0% 96% / 0.4);
+		--dark-10: hsl(0 0% 96% / 0.1);
+		--dark-04: hsl(0 0% 96% / 0.04);
+		--accent: hsl(204 90% 90%);
+		--accent-foreground: hsl(204 94% 94%);
+		--contrast: hsl(0 0% 100%);
+
+		/* --- UI Elements --- */
+		/* Tabs Colors */
+		--tabs-hover: oklch(91.052% 0.00106 11.805);
+		--tabs-hover-foreground: black;
+		--tabs-active: oklch(42.118% 0.01059 248.187);
+		--tabs-active-foreground: oklch(99.131% 0.00697 248.18);
+		--tabs-inactive: white;
+		--tabs-inactive-foreground: black;
+		--primaryy: yellow;
+	}
+}
+
+/* Fixed Colors (Skeleton-Style) */
+@theme inline {
+	--color-primary-50: rgb(237, 249, 248);
+	--color-primary-100: rgb(202, 238, 234);
+	--color-primary-200: rgb(167, 227, 220);
+	--color-primary-300: rgb(131, 216, 206);
+	--color-primary-400: rgb(96, 205, 192);
+	--color-primary-500: rgb(61, 194, 178);
+	--color-primary-600: rgb(50, 159, 145);
+	--color-primary-700: rgb(39, 123, 113);
+	--color-primary-800: rgb(28, 88, 81);
+	--color-primary-900: rgb(17, 53, 48);
+	--color-primary-950: rgb(6, 18, 16);
+	--color-primary-contrast-dark: var(--color-primary-950);
+	--color-primary-contrast-light: var(--color-primary-50);
+
+	--color-secondary-50: oklch(100% 0 none);
+	--color-secondary-100: oklch(97.02% 0 none);
+	--color-secondary-200: oklch(94.01% 0 none);
+	--color-secondary-300: oklch(90.67% 0 none);
+	--color-secondary-400: oklch(87.61% 0 none);
+	--color-secondary-500: oklch(84.52% 0 none);
+	--color-secondary-600: oklch(77.31% 0 none);
+	--color-secondary-700: oklch(69.6% 0 none);
+	--color-secondary-800: oklch(62.01% 0 none);
+	--color-secondary-900: oklch(53.82% 0 none);
+	--color-secondary-950: oklch(45.68% 0 none);
+	--color-secondary-contrast-dark: var(--color-secondary-950);
+	--color-secondary-contrast-light: var(--color-secondary-50);
+
+	--color-surface-50: oklch(100% 0 none);
+	--color-surface-100: oklch(97.02% 0 none);
+	--color-surface-200: oklch(94.01% 0 none);
+	--color-surface-300: oklch(90.67% 0 none);
+	--color-surface-400: oklch(87.61% 0 none);
+	--color-surface-500: oklch(84.52% 0 none);
+	--color-surface-600: oklch(77.31% 0 none);
+	--color-surface-700: oklch(69.6% 0 none);
+	--color-surface-800: oklch(62.01% 0 none);
+	--color-surface-900: oklch(53.82% 0 none);
+	--color-surface-950: oklch(45.68% 0 none);
+	--color-surface-contrast-dark: var(--color-surface-950);
+	--color-surface-contrast-light: var(--color-surface-50);
+}
+
+@theme inline {
+	/* Colors */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border-card);
+	--color-border-input: var(--border-input);
+	--color-border-input-hover: var(--border-input-hover);
+	--color-border-card: var(--border-card);
+	--color-dark: var(--dark);
+	--color-dark-10: var(--dark-10);
+	--color-dark-40: var(--dark-40);
+	--color-dark-04: var(--dark-04);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-contrast: var(--contrast);
+}
+
+/* UI-Elements*/
+@theme inline {
+	--color-tabs-active: var(--dark);
+	--color-tabs-inactive: var(--tabs-inactive);
+	--color-tabs-inactive-foreground: var(--tabs-inactive-foreground);
+	--color-tabs-hover: var(--tabs-hover);
+	--color-tabs-hover-foreground: var(--tabs-hover-foreground);
+	--color-tabs-active-foreground: var(--tabs-active-foreground);
+
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-primaryy: var(--primaryy);
+}
+
+/* Documents */
+@theme inline {
+	--color-rs-doc: var(--rs-doc);
+	--color-rs-person: var(--rs-person);
+	--color-rs-place: var(--rs-place);
+	--color-rs-event: var(--rs-event);
+	--color-rs-org: var(--rs-org);
+	--color-rs-bibl: var(--rs-bibl);
+	--color-rs-keyword: var(--rs-keyword);
+}

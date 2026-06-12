@@ -21,9 +21,9 @@
 			{#each docTypeIdsForButtons as docTypeId (docTypeId)}
 				<a
 					class={[
-						'my-btn-round hover:bg-surface-200!',
+						'preset-btn-round hover:bg-surface-200!',
 						data.edView === 'edView1' ? 'border-2 text-2xl' : 'border text-sm',
-						data.docType === docTypeId && 'my-btn-active'
+						data.docType === docTypeId && 'preset-btn-round--active'
 					]}
 					href={resolve(`/edition/${docTypeId}`)}
 				>

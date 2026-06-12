@@ -2,15 +2,23 @@
 	import { onMount } from 'svelte';
 	import Switch from '$lib/components/ui/Switch.svelte';
 
-	let isDark = $state(false);
-	let darkModeState = $derived(isDark ? 'dark' : 'light');
+	let isChecked = $state(false);
+	let darkModeState = $derived(isChecked ? 'dark' : 'light');
 
 	const handleToggleLightswitch = (force = '') => {
-		if (force === 'dark') isDark = true;
-		else if (force === 'light') isDark = false;
-		else isDark = !isDark;
-		document.documentElement.setAttribute('data-darkModeState', darkModeState);
+		if (force === 'dark') isChecked = true;
+		else if (force === 'light') isChecked = false;
+		else isChecked = !isChecked;
 	};
+
+	// Update Document .dark class
+	$effect(() => {
+		if (darkModeState === 'dark') {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	});
 
 	onMount(() => {
 		// Check the user's preferred color scheme
@@ -25,7 +33,7 @@
 
 {#snippet icon()}
 	<div class="flex h-full w-full items-center justify-center">
-		{#if isDark}
+		{#if isChecked}
 			<i class="fa-solid fa-sun"></i>
 		{:else}
 			<i class="fa-solid fa-moon"></i>
@@ -33,4 +41,4 @@
 	</div>
 {/snippet}
 
-<Switch checked={isDark} onCheckedChange={() => handleToggleLightswitch()} {icon}></Switch>
+<Switch checked={isChecked} onCheckedChange={() => handleToggleLightswitch()} {icon}></Switch>
