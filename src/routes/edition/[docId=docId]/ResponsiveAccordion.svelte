@@ -49,17 +49,19 @@
 	<div id="expandableBox" class="relative mt-5 mb-20 hidden pt-5 pb-0 xl:block">
 		<div
 			class={[
-				'grid grid-cols-2 items-start gap-20',
-				isExpanded ? 'h-auto' : 'max-h-40 overflow-hidden'
+				'grid transition-all duration-400 ease-in-out',
+				isExpanded ? 'max-h-[80vh]' : 'max-h-[120px]'
 			]}
 		>
-			<div>
-				<h5 class="h5 mb-6 font-bold">{titleOverview}</h5>
-				{@render overviewContent()}
-			</div>
-			<div>
-				<h5 class="h5 mb-6 font-bold">{titleMeta}</h5>
-				{@render metadataContent()}
+			<div class="grid h-full grid-cols-2 items-start gap-20 overflow-hidden">
+				<div class="h-full overflow-hidden">
+					<h5 class="h5 mb-6 font-bold">{titleOverview}</h5>
+					{@render overviewContent()}
+				</div>
+				<div class="h-full overflow-hidden">
+					<h5 class="h5 mb-6 font-bold">{titleMeta}</h5>
+					{@render metadataContent()}
+				</div>
 			</div>
 		</div>
 

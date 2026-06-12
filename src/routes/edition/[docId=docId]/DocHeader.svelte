@@ -5,6 +5,7 @@
 	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import ResponsiveAccordion from './ResponsiveAccordion.svelte';
+	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
 
 	let {
 		docId,
@@ -81,9 +82,18 @@
 		<ResponsiveAccordion titleOverview="Überblickskommentar" titleMeta="Metadaten">
 			<!-- (1) Übersichtskommentar -->
 			{#snippet overviewContent()}
-				<div data-dom="global_comment">
+				<!-- <div data-dom="global_comment" class="h-full overflow-auto pb-20">
 					{@html globalComment}
-				</div>
+				</div> -->
+				<ScrollArea
+					orientation="vertical"
+					type="hover"
+					viewportClasses="h-full w-full"
+					data-dom="global_comment"
+					class="**tei-p:p-0 bg-background-alt relative h-full overflow-hidden px-4 pb-20"
+				>
+					{@html globalComment}
+				</ScrollArea>
 			{/snippet}
 
 			<!-- (2) Metadata Table -->
