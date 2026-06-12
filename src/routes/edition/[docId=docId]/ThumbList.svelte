@@ -67,7 +67,7 @@
 	<div
 		class={[
 			'disableScrollChaining flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
-			isBeforeEmpty ? 'bg-transparent' : 'bg-surface-200'
+			isBeforeEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>
 		{@render childrenBefore()}
@@ -83,7 +83,7 @@
 	<div
 		class={[
 			'flex min-w-1/2 shrink-0 justify-start gap-2 rounded-xl',
-			isAfterEmpty ? 'bg-transparent' : 'bg-surface-200'
+			isAfterEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>
 		{@render childrenAfter()}

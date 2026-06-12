@@ -68,7 +68,7 @@
 		<!-- Gradient -->
 		{#if !isExpanded}
 			<button
-				class="hiddend absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-surface-50 to-transparent xl:block"
+				class="hiddend absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-background to-transparent xl:block"
 				aria-label="expand box"
 				onclick={toggleExpandableBox}
 			></button>
