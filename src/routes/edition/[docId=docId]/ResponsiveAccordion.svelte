@@ -50,7 +50,7 @@
 		<div
 			class={[
 				'grid overflow-hidden transition-all duration-400 ease-in-out',
-				isExpanded ? 'max-h-[80vh]' : 'max-h-[120px]'
+				isExpanded ? 'max-h-[80vh]' : 'max-h-[145px]'
 			]}
 		>
 			<div class="grid h-full grid-cols-2 items-start gap-20 overflow-hidden">
@@ -68,7 +68,7 @@
 		<!-- Gradient -->
 		{#if !isExpanded}
 			<button
-				class="hiddend absolute right-0 bottom-0 left-0 h-full bg-linear-to-t from-background to-transparent xl:block"
+				class="hiddend absolute right-0 bottom-0 left-0 h-8/10 bg-linear-to-t from-background to-transparent xl:block"
 				aria-label="expand box"
 				onclick={toggleExpandableBox}
 			></button>

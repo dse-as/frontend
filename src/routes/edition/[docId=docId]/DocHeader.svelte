@@ -90,7 +90,7 @@
 					type="hover"
 					viewportClasses="h-full w-full"
 					data-dom="global_comment"
-					class="**tei-p:p-0 bg-background-alt relative h-full overflow-hidden px-4 pb-20"
+					class="bg-background-alt relative h-full overflow-hidden px-4 pb-20 xl:px-0"
 				>
 					{@html globalComment}
 				</ScrollArea>
@@ -216,6 +216,11 @@
 	@reference "tailwindcss";
 
 	/* Global Entities */
+	:global([data-dom='global_comment']) {
+		:global(tei-p) {
+			@apply mt-0;
+		}
+	}
 	:global([data-dom='global_entities']) {
 		:global([data-type='entity']) {
 			@apply rounded-xl px-2 font-bold;

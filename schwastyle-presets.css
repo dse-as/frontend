@@ -29,7 +29,7 @@
 			@apply pointer-events-none border-muted text-muted-foreground;
 		}
 		&.--active {
-			@apply bg-primary-100 text-primary-contrast-dark;
+			@apply border-foreground bg-foreground text-background;
 		}
 	}
 

@@ -59,7 +59,6 @@ To restrict CSS to view-modes use:
 
 	--color-note-active: #e3e3de;
 	--color-footnote-circle: #666;
-
 }
 
 /* -------------------------------- */
@@ -98,7 +97,7 @@ tei-p {
 	line-height: 1.7;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	text-align: justify;
+	text-align: left;
 	hyphens: auto;
 }
 
