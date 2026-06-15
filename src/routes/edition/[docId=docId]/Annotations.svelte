@@ -50,6 +50,7 @@
 		:global(li.active),
 		:global(li.active:hover) {
 			background-color: var(--color-note-active);
+			color: var(--color-note-active-foreground);
 		}
 
 		:global(li) > :global(.data-noteidx) {

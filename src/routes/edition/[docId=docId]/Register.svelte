@@ -76,9 +76,9 @@
 						tabindex="0"
 						data-regKey={regKey}
 						class={[
-							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-(--color-note-active)',
+							'group flex min-h-14 cursor-pointer flex-wrap items-center justify-start gap-5 py-1 pl-2 hover:bg-(--color-note-active) hover:text-(--color-note-active-foreground)',
 							selectedTextNode.key === regKey &&
-								'bg-(--color-note-active) hover:bg-(--color-note-active)'
+								'bg-(--color-note-active) text-(--color-note-active-foreground) hover:bg-(--color-note-active) hover:text-(--color-note-active-foreground)'
 						]}
 						onclick={() => {
 							handleRegisterClick(regKey);

@@ -57,8 +57,13 @@ To restrict CSS to view-modes use:
 	--color-note-figure-bg: #dcfce7;
 	--color-note-figure-border: #16a34a;
 
-	--color-note-active: #e3e3de;
+	--color-note-active: var(--color-dark-10);
+	--color-note-active-foreground: var(--color-light-10);
 	--color-footnote-circle: #666;
+}
+.dark {
+	--color-note-active: var(--color-dark-40);
+	--color-note-active-foreground: var(--color-white);
 }
 
 /* -------------------------------- */
@@ -507,6 +512,7 @@ span.note-mark {
 span.note-mark:hover,
 span.note-mark.active {
 	background-color: var(--color-note-active);
+	color: var(--color-note-active-foreground);
 	border-bottom: 3px solid var(--color-muted);
 }
 
@@ -526,6 +532,7 @@ span.note-mark.active {
 	span.footnote:hover,
 	span.footnote.active {
 		background-color: var(--color-note-active);
+		color: var(--color-note-active-foreground);
 	}
 }
 
