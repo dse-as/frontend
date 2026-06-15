@@ -44,9 +44,7 @@
 						<div class="flex h-full w-full items-center justify-center">
 							<IIIF_Thumb
 								url={resDoc?.manuscript?.iiif_urls[0]}
-								maxWidth="100"
-								maxHeight="100"
-								classes="rounded-xl"
+								classes="max-h-[100px] max-w-[100px] "
 							/>
 						</div>
 						<div class="flex flex-col">

@@ -101,9 +101,7 @@
 				<div class="flex h-full w-full items-center justify-center">
 					<IIIF_Thumb
 						url={crossRef.linkedDocs[itemId]?.manuscript?.iiif_urls[0]}
-						maxWidth="80"
-						maxHeight="80"
-						classes="rounded-xl"
+						classes="max-h-[80px] max-w-[80px] "
 					/>
 				</div>
 				<div class="flex flex-col">

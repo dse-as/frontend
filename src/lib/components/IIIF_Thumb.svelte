@@ -1,5 +1,5 @@
 <script>
-	let { url, maxWidth = '100', maxHeight = '100', classes = '' } = $props();
+	let { url, classes = '' } = $props();
 	const iiif_imageAPI_width = '100';
 	let showSpinner = $state(true);
 	let isError = $state(false);
@@ -7,10 +7,7 @@
 
 {#if url}
 	{#if showSpinner}
-		<div
-			class={['flex items-center justify-center', classes]}
-			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
-		>
+		<div class={['flex items-center justify-center', classes]}>
 			<i class="fa-solid fa-spinner fa-spin fa-2xl text-dark-40"></i>
 		</div>
 	{/if}
@@ -18,9 +15,9 @@
 		<img
 			class={[
 				showSpinner ? 'hidden' : 'flex',
-				'flex h-max w-max items-center justify-center object-cover grayscale-60 hover:grayscale-0'
+				'object-cover grayscale-60 hover:grayscale-0',
+				classes
 			]}
-			style={`max-width:${maxWidth}px; max-height:${maxHeight}px;`}
 			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
 			alt="iiif"
 			onload={() => {
@@ -32,10 +29,7 @@
 			}}
 		/>
 	{:else}
-		<div
-			class={['flex items-center justify-center', classes]}
-			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
-		>
+		<div class={['flex items-center justify-center', classes]}>
 			<i class="fa-solid fa-xmark fa-2xl text-warning"></i>
 		</div>
 	{/if}

@@ -156,7 +156,7 @@
 </script>
 
 <div data-textflow="fluid" class={classes} bind:this={containerMaintext}>
-	<div class="w-full gap-10 p-10 pt-0 xl:grid xl:grid-cols-[150px_1fr] xl:pl-0">
+	<div class="w-full gap-4 p-10 pt-0 xl:grid xl:grid-cols-[7vw_1fr] xl:pl-1">
 		<!-- Thumbnail Column -->
 		<aside class="hidden h-full xl:block">
 			{#each thumbs as thumb, i (thumb.id)}
@@ -164,11 +164,13 @@
 				<div style={`height: ${i === 0 ? '5' : thumb.top - thumbs[i - 1].top}px`}></div>
 
 				<button
-					class="sticky top-0 float-right ml-2 w-max translate-y-10 rounded bg-background p-2"
+					class="sticky top-0 float-right ml-2 flex w-full translate-y-10 flex-col items-end justify-center gap-1 rounded bg-background p-[2px] xl:max-w-[100px] 2xl:max-w-[110px]"
 					onclick={() => openDFpage(thumb.page)}
 				>
-					<IIIF_Thumb url={thumb.facs} maxWidth="200" maxHeight="200" classes="" />
-					<span class="text-sm">Seite {thumb.page}</span>
+					<div class="w-full flex-col items-center justify-center">
+						<IIIF_Thumb url={thumb.facs} classes="w-full" />
+						<span class="text-sm">Seite {thumb.page}</span>
+					</div>
 				</button>
 			{/each}
 		</aside>

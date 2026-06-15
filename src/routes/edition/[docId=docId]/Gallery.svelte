@@ -74,16 +74,16 @@
 	<a
 		href={updatePageParam(item.pagenum_running)}
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-4 hover:bg-surface-300`,
-			isFirst && 'rounded-l-2xl',
-			isLast && 'rounded-r-2xl'
+			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-surface-300`,
+			isFirst && 'rounded-l-lg',
+			isLast && 'rounded-r-lg'
 		]}
 		onclick={(e) => {
 			e.preventDefault();
 			handleSelectPage(item.pagenum_running);
 		}}
 	>
-		<IIIF_Thumb url={item.fac} maxWidth="120" maxHeight="120" classes="rounded-xl" />
+		<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
 		<span class="text-sm">Seite {item.page}</span>
 	</a>
 {/snippet}
@@ -97,10 +97,10 @@
 			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
 		>
 	{/if}
-	<div bind:this={containerRef} class="my-2 h-[180px]">
+	<div bind:this={containerRef} class="my-2 h-[100px]">
 		<ThumbList
 			rerun={currentPage}
-			classesCurrent="min-w-35"
+			classesCurrent="min-w-25"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>
@@ -131,7 +131,7 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<IIIF_Thumb url={item.fac} maxWidth="100" maxHeight="100" classes="rounded-xl" />
+									<IIIF_Thumb url={item.fac} classes="max-h-[70px]" />
 									<span class="hidden text-sm group-hover:block">Seite {item.page}</span>
 								</a>
 							{:else}
