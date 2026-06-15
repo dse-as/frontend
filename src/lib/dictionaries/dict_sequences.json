@@ -38,13 +38,13 @@
 			"label_prev": "Vorheriges Dokument"
 		},
 		"series": {
-			"sequence_name": "Publikationsserien",
+			"sequence_name": "Artikelserie",
 			"key_singular": "series",
-			"label_plural": "Publikationsserien",
+			"label_plural": "Artikelserie",
 			"url_overview": "/series",
 			"label_overview": "In Serienansicht ansehen",
-			"label_next": "Nächstes Dokument",
-			"label_prev": "Vorheriges Dokument"
+			"label_next": "Nächster Artikel",
+			"label_prev": "Vorheriger Artikel"
 		}
 	}
 }

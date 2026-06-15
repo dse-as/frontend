@@ -715,8 +715,8 @@
 		"correspondence": {
 			"corr_spec_0001": {
 				"url_slug": "full",
-				"name": "Gesamtkorrespondenz",
-				"preamble": "Gesamtkorrespondenz",
+				"name": "Alle Briefe",
+				"preamble": "Alle Briefe",
 				"docs": [
 					"letter_0001",
 					"letter_0002",

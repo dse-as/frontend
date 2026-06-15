@@ -18,18 +18,18 @@
 		<div class="sticky top-5 flex h-[calc(100vh-2.5rem)] flex-col gap-4 overflow-hidden pt-6 pb-24">
 			<Tabs.Root bind:value={activeRegisterTab.value}>
 				<Tabs.List class="preset-tabs-list --sm">
-					<Tabs.Trigger value="register" class="preset-tabs-trigger --left">Register</Tabs.Trigger>
-					<Tabs.Trigger value="notes" class="preset-tabs-trigger --right"
+					<Tabs.Trigger value="notes" class="preset-tabs-trigger --left"
 						>Stellenkommentare</Tabs.Trigger
 					>
+					<Tabs.Trigger value="register" class="preset-tabs-trigger --right">Register</Tabs.Trigger>
 				</Tabs.List>
-
-				<Tabs.Content value="register" class="mx-2 mt-10 ml-6 h-full overflow-y-auto">
-					<Register {docId} {docItem} />
-				</Tabs.Content>
 
 				<Tabs.Content value="notes" class="mx-2 mt-10 h-full overflow-y-auto">
 					<Annotations {ceteiData} />
+				</Tabs.Content>
+
+				<Tabs.Content value="register" class="mx-2 mt-10 ml-6 h-full overflow-y-auto">
+					<Register {docId} {docItem} />
 				</Tabs.Content>
 			</Tabs.Root>
 		</div>

@@ -83,9 +83,9 @@
 			}
 		},
 		"longforms": {
-			"name": "Lange Formen",
+			"name": "Romane und Reportagebücher",
 			"key_singular": "longform",
-			"label_plural": "Lange Formen",
+			"label_plural": "Romane und Reportagebücher",
 			"metadata": {
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },

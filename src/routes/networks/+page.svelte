@@ -13,7 +13,7 @@
 		<a
 			class="preset-btn-round --2xl"
 			href={resolve(`/edition/${corrData['corr_spec_0001'].docs[0]}?seq=corr_spec_0001`)}
-			>Gesamtkorrespondenz</a
+			>Alle Briefe</a
 		>
 	</div>
 
