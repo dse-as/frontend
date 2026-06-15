@@ -13,6 +13,8 @@
 	--background-inverted: hsl(0 0% 27%);
 	--foreground: hsl(0 0% 9%);
 	--foreground-inverted: hsl(0 0% 95%);
+	--background-contrast: hsl(0 0% 0%);
+	--foreground-contrast: hsl(0 0% 100%);
 	--hover: hsl(0 0% 95%);
 	--hover-foreground: hsl(0 0% 9%);
 	--border-shadow: hsl(0 0% 95%);
@@ -35,8 +37,6 @@
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-100);
 	--accent-foreground: hsl(204 80% 16%);
-	--contrast: hsl(0 0% 0%);
-	--contrast-accent: var(--color-primary-600);
 }
 
 /* .dark { */
@@ -50,10 +50,12 @@
 	--rs-bibl: var(--color-pink-300);
 	--rs-keyword: var(--color-amber-300);
 
-	--background: hsl(0, 0%, 27%);
+	--background: hsl(0, 0%, 22%);
 	--background-inverted: hsl(0 0% 95%);
 	--foreground: hsl(0 0% 95%);
 	--foreground-inverted: hsl(0, 0%, 27%);
+	--foreground-contrast: hsl(0 0% 0%);
+	--background-contrast: hsl(0 0% 100%);
 	--hover: hsl(0 0% 38%);
 	--hover-foreground: hsl(0 0% 95%);
 	--border-shadow: hsl(0 0% 38%);
@@ -76,8 +78,6 @@
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-600);
 	--accent-foreground: hsl(204 94% 94%);
-	--contrast: hsl(0 0% 100%);
-	--contrast-accent: var(--color-primary-200);
 }
 
 /* Fixed Colors (Skeleton-Style) */
@@ -131,6 +131,8 @@
 	--color-foreground: var(--foreground);
 	--color-background-inverted: var(--background-inverted);
 	--color-foreground-inverted: var(--foreground-inverted);
+	--color-background-contrast: var(--background-contrast);
+	--color-foreground-contrast: var(--foreground-contrast);
 	--color-hover: var(--hover);
 	--color-hover-foreground: var(--hover-foreground);
 	--color-border-shadow: var(--border-shadow);
@@ -153,8 +155,6 @@
 	--color-warning: var(--warning);
 	--color-accent: var(--accent);
 	--color-accent-foreground: var(--accent-foreground);
-	--color-contrast: var(--contrast);
-	--color-contrast-accent: var(--contrast-accent);
 }
 
 /* UI-Elements*/

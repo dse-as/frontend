@@ -1,8 +1,8 @@
 @layer base {
 	/* Rounded Buttons */
 	.preset-btn-round {
-		@apply flex w-max cursor-pointer items-center justify-center rounded-full border-border-button bg-background px-4 py-1 text-contrast select-none;
-		@apply hover:border-border-button-hover hover:bg-dark-04 hover:text-contrast;
+		@apply flex w-max cursor-pointer items-center justify-center rounded-full border-border-button bg-background px-4 py-1 text-background-contrast select-none;
+		@apply hover:border-border-button-hover hover:bg-dark-04;
 		@apply active:ring-2;
 		@apply focus:ring-2;
 
@@ -62,7 +62,7 @@
 	}
 	.preset-tabs-trigger {
 		@apply overflow-hidden leading-normal text-ellipsis whitespace-nowrap;
-		@apply hover:bg-dark-04 hover:text-contrast;
+		@apply hover:bg-dark-04;
 		@apply data-[state=active]:pointer-events-none data-[state=active]:bg-foreground data-[state=active]:text-background;
 		&.--left {
 			@apply rounded-l-full;
