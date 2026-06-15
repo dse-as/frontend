@@ -14,24 +14,24 @@
 	<TextFluid {ceteiData} classes="mx-auto w-full max-w-300 md:max-w-[760]" />
 
 	<!-- Sidebar -->
-	<aside class="hidden w-full xl:block">
-		<div class="sticky top-5 flex h-[calc(100vh-2.5rem)] flex-col gap-4 overflow-hidden pt-6 pb-24">
-			<Tabs.Root bind:value={activeRegisterTab.value}>
-				<Tabs.List class="preset-tabs-list --sm">
-					<Tabs.Trigger value="notes" class="preset-tabs-trigger --left"
-						>Stellenkommentare</Tabs.Trigger
-					>
-					<Tabs.Trigger value="register" class="preset-tabs-trigger --right">Register</Tabs.Trigger>
-				</Tabs.List>
+	<aside class="sticky top-0 hidden h-screen w-full flex-col gap-4 overflow-hidden pt-6 xl:flex">
+		<Tabs.Root bind:value={activeRegisterTab.value} class="flex h-full flex-col">
+			<Tabs.List class="preset-tabs-list --sm shrink-0">
+				<Tabs.Trigger value="notes" class="preset-tabs-trigger --left"
+					>Stellenkommentare</Tabs.Trigger
+				>
+				<Tabs.Trigger value="register" class="preset-tabs-trigger --right">Register</Tabs.Trigger>
+			</Tabs.List>
 
-				<Tabs.Content value="notes" class="mx-2 mt-10 h-full overflow-y-auto">
+			<div class="relative min-h-0 flex-1">
+				<Tabs.Content value="notes" class="absolute inset-0 overflow-y-auto p-4">
 					<Annotations {ceteiData} />
 				</Tabs.Content>
 
-				<Tabs.Content value="register" class="mx-2 mt-10 ml-6 h-full overflow-y-auto">
+				<Tabs.Content value="register" class="absolute inset-0 ml-6 overflow-y-auto p-6">
 					<Register {docId} {docItem} />
 				</Tabs.Content>
-			</Tabs.Root>
-		</div>
+			</div>
+		</Tabs.Root>
 	</aside>
 </div>
