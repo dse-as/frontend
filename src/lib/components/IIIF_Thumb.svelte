@@ -18,7 +18,7 @@
 		<img
 			class={[
 				showSpinner ? 'hidden' : 'flex',
-				'flex h-max w-max items-center justify-center object-cover'
+				'flex h-max w-max items-center justify-center object-cover grayscale-60 hover:grayscale-0'
 			]}
 			style={`max-width:${maxWidth}px; max-height:${maxHeight}px;`}
 			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
