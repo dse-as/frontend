@@ -55,7 +55,7 @@
 			<div class="flex flex-wrap gap-4">
 				{#each content ? content : [] as item (item)}
 					<a
-						class="whitespace-nowrap text-surface-950"
+						class="preset-btn-round --linkarrow"
 						data-type="entity"
 						data-entitytype={item.regType}
 						href={resolve(`/edition/register/${item.regKey as string}`)}
@@ -222,37 +222,29 @@
 		}
 	}
 	:global([data-dom='global_entities']) {
-		:global([data-type='entity']) {
-			@apply rounded-xl px-2 font-bold;
-		}
-		:global([data-type='entity']::before) {
-			content: '↗';
-			padding-right: 4px;
-		}
-
 		/* Entity Colors */
 		:global([data-entitytype='people']) {
-			@apply bg-(--color-people);
+			@apply bg-(--color-rs-person-20);
 		}
 		:global([data-entitytype='places']) {
-			@apply bg-(--color-places);
+			@apply bg-(--color-rs-place-20);
 		}
 		:global([data-entitytype='events']) {
-			@apply bg-(--color-events);
+			@apply bg-(--color-rs-event-20);
 		}
 		:global([data-entitytype='orgs']) {
-			@apply bg-(--color-orgs);
+			@apply bg-(--color-rs-org-20);
 		}
 		:global([data-entitytype='smallforms']),
 		:global([data-entitytype='longforms']),
 		:global([data-entitytype='letters']) {
-			@apply bg-(--color-docs);
+			@apply bg-(--color-rs-doc-20);
 		}
 		:global([data-entitytype='bibls']) {
-			@apply bg-(--color-bibls);
+			@apply bg-(--color-rs-bibl-20);
 		}
 		:global([data-entitytype='keywords']) {
-			@apply bg-(--color-keywords);
+			@apply bg-(--color-rs-keyword-20);
 		}
 	}
 </style>

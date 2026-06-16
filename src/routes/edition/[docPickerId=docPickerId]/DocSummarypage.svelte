@@ -35,13 +35,10 @@
 
 <!-- Snippet: Metadata Table -->
 {#snippet MetadataTable(mKeys: TDocMetadataKeys[])}
-	<table
-		class="my-10 min-w-full border-gray-300 bg-white"
-		style={`opacity:${opacityMetadataTable}%`}
-	>
+	<table class="my-10 min-w-full" style={`opacity:${opacityMetadataTable}%`}>
 		<!-- Header: invisible but for accessibility -->
 		<thead>
-			<tr class="hidden bg-gray-200">
+			<tr class="hidden">
 				<th class="px-4 py-2">Key</th>
 				<th class="px-4 py-2 text-left">Value</th>
 			</tr>
@@ -82,7 +79,7 @@
 		{#each docIds as docId (docId)}
 			{@render LinkedItem(docId)}
 		{:else}
-			<p class="px-4 text-surface-700">Keine verlinkten Dokumente gefunden.</p>{/each}
+			<p class="text-muted-foreground px-4">Keine verlinkten Dokumente gefunden.</p>{/each}
 	</div>
 {/snippet}
 
@@ -93,7 +90,7 @@
 			data-sveltekit-preload-data="tap"
 			data-sveltekit-preload-code="hover"
 			href={resolve(`/edition/${itemId as string}`)}
-			class="min-h-27 w-70 rounded-xl bg-surface-50 p-1 hover:bg-surface-200"
+			class="min-h-27 w-70 rounded-xl p-1 hover:bg-background-hover"
 			target="blank"
 			rel="noopener noreferrer"
 		>
@@ -141,10 +138,10 @@
 	{/if}
 
 	<!-- Linked documents -->
-	<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Edierte Textstufen</h2>
+	<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
 		{@render LinkedItemsContainer(resDoc?.item?.metadata?.textstufen_edited as TDocKeys[])}
 	</div>
-	<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Sequenzen</h2>
+	<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Sequenzen</h2>
 	<p>TODO</p>
 </div>

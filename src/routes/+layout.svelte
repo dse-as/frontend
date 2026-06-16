@@ -1,8 +1,8 @@
 <script lang="ts">
-	import './layout.css';
-
 	import '@fortawesome/fontawesome-free/css/solid.min.css';
 	import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+	import './layout.css';
+
 	import favicon from '$lib/assets/favicon.svg';
 	import Nav from './Nav.svelte';
 	import { asset } from '$app/paths';
@@ -22,7 +22,7 @@
 <div class="min-h-screen pt-10 pb-20">{@render children()}</div>
 
 <footer
-	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-surface-100 p-20 text-surface-800"
+	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-dark-10 p-20 text-foreground-contrast"
 >
 	<p class="mb-5">Diese Webseite befindet sich in einer Alpha-Version.</p>
 	<p>

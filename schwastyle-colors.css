@@ -1,12 +1,20 @@
 :root {
 	/* Entity Colors */
-	--rs-doc: var(--color-sky-700);
-	--rs-person: var(--color-red-700);
-	--rs-place: var(--color-fuchsia-700);
-	--rs-event: var(--color-emerald-700);
-	--rs-org: var(--color-indigo-700);
-	--rs-bibl: var(--color-pink-700);
-	--rs-keyword: var(--color-amber-700);
+	--rs-doc: hsla(0, 50%, 50%);
+	--rs-person: hsla(262, 83%, 58%);
+	--rs-place: hsla(192, 91%, 36%);
+	--rs-event: hsla(26, 90%, 37%);
+	--rs-org: hsla(142, 72%, 29%);
+	--rs-bibl: hsla(55, 54%, 66%);
+	--rs-keyword: hsla(243, 72%, 29%);
+
+	--rs-doc-20: hsla(0, 50%, 50%, 0.2);
+	--rs-person-20: hsla(262, 83%, 58%, 0.2);
+	--rs-place-20: hsla(192, 91%, 36%, 0.2);
+	--rs-event-20: hsla(26, 90%, 37%, 0.2);
+	--rs-org-20: hsla(142, 72%, 29%, 0.2);
+	--rs-bibl-20: hsla(55, 54%, 66%, 0.2);
+	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
 
 	/* Basic Colors */
 	--background: hsl(0 0% 100%);
@@ -27,13 +35,17 @@
 	--border-button-hover: hsla(240 6% 10% / 1);
 	--border-card: hsla(240 6% 10% / 0.6);
 	--dark: hsl(240 6% 10%);
-	--dark-10: hsla(240 6% 10% / 0.1);
+	--dark-70: hsla(240 6% 10% / 0.6);
 	--dark-40: hsla(240 6% 10% / 0.4);
+	--dark-10: hsla(240 6% 10% / 0.1);
 	--dark-04: hsla(240 6% 10% / 0.04);
 	--light: hsl(0 0% 96%);
-	--light-10: hsla(0 0% 96% / 0.1);
 	--light-40: hsla(0 0% 96% / 0.4);
+	--light-10: hsla(0 0% 96% / 0.1);
 	--light-04: hsla(0 0% 96% / 0.04);
+	--background-hover: var(--dark-04);
+	--foreground-hover: var(--light-10);
+	--spinner: var(--dark-70);
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-100);
 	--accent-foreground: hsl(204 80% 16%);
@@ -42,13 +54,23 @@
 /* .dark { */
 .dark {
 	/* Entity Colors */
-	--rs-doc: var(--color-sky-300);
-	--rs-person: var(--color-red-300);
-	--rs-place: var(--color-fuchsia-300);
-	--rs-event: var(--color-emerald-300);
-	--rs-org: var(--color-indigo-300);
-	--rs-bibl: var(--color-pink-300);
-	--rs-keyword: var(--color-amber-300);
+
+	/* Entity colours */
+	--rs-doc: hsla(0, 50%, 50%);
+	--rs-person: hsla(262, 83%, 58%);
+	--rs-place: hsla(192, 91%, 36%);
+	--rs-event: hsla(26, 90%, 37%);
+	--rs-org: hsla(142, 72%, 29%);
+	--rs-bibl: hsla(55, 54%, 66%);
+	--rs-keyword: hsla(243, 72%, 29%);
+
+	--rs-doc-20: hsla(0, 50%, 50%, 0.2);
+	--rs-person-20: hsla(262, 83%, 58%, 0.2);
+	--rs-place-20: hsla(192, 91%, 36%, 0.2);
+	--rs-event-20: hsla(26, 90%, 37%, 0.2);
+	--rs-org-20: hsla(142, 72%, 29%, 0.2);
+	--rs-bibl-20: hsla(55, 54%, 66%, 0.2);
+	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
 
 	--background: hsl(0, 0%, 22%);
 	--background-inverted: hsl(0 0% 95%);
@@ -68,13 +90,17 @@
 	--border-button-hover: hsla(0 0% 96% / 0.4);
 	--border-card: hsla(0 0% 96% / 0.1);
 	--dark: hsl(0 0% 96%);
+	--dark-70: hsl(0 0% 96% / 0.7);
 	--dark-40: hsl(0 0% 96% / 0.4);
 	--dark-10: hsl(0 0% 96% / 0.1);
 	--dark-04: hsl(0 0% 96% / 0.04);
 	--light: hsl(240 6% 10%);
-	--light-10: hsla(240 6% 10% / 0.1);
 	--light-40: hsla(240 6% 10% / 0.4);
+	--light-10: hsla(240 6% 10% / 0.1);
 	--light-04: hsla(240 6% 10% / 0.04);
+	--background-hover: var(--dark-04);
+	--foreground-hover: var(--light-04);
+	--spinner: var(--color-dark-70);
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-600);
 	--accent-foreground: hsl(204 94% 94%);
@@ -109,20 +135,6 @@
 	--color-secondary-950: oklch(45.68% 0 none);
 	--color-secondary-contrast-dark: var(--color-secondary-950);
 	--color-secondary-contrast-light: var(--color-secondary-50);
-
-	--color-surface-50: oklch(100% 0 none);
-	--color-surface-100: oklch(97.02% 0 none);
-	--color-surface-200: oklch(94.01% 0 none);
-	--color-surface-300: oklch(90.67% 0 none);
-	--color-surface-400: oklch(87.61% 0 none);
-	--color-surface-500: oklch(84.52% 0 none);
-	--color-surface-600: oklch(77.31% 0 none);
-	--color-surface-700: oklch(69.6% 0 none);
-	--color-surface-800: oklch(62.01% 0 none);
-	--color-surface-900: oklch(53.82% 0 none);
-	--color-surface-950: oklch(45.68% 0 none);
-	--color-surface-contrast-dark: var(--color-surface-950);
-	--color-surface-contrast-light: var(--color-surface-50);
 }
 
 @theme inline {
@@ -145,13 +157,17 @@
 	--color-border-button-hover: var(--border-button-hover);
 	--color-border-card: var(--border-card);
 	--color-dark: var(--dark);
-	--color-dark-10: var(--dark-10);
+	--color-dark-70: var(--dark-70);
 	--color-dark-40: var(--dark-40);
+	--color-dark-10: var(--dark-10);
 	--color-dark-04: var(--dark-04);
 	--color-light: var(--light);
 	--color-light-10: var(--light-10);
 	--color-light-40: var(--light-40);
 	--color-light-04: var(--light-04);
+	--color-background-hover: var(--background-hover);
+	--color-foreground-hover: var(--foreground-hover);
+	--color-spinner: var(--spinner);
 	--color-warning: var(--warning);
 	--color-accent: var(--accent);
 	--color-accent-foreground: var(--accent-foreground);
@@ -163,13 +179,21 @@
 	--color-muted-foreground: var(--muted-foreground);
 }
 
-/* Documents */
+/* Cross-References */
 @theme inline {
 	--color-rs-doc: var(--rs-doc);
 	--color-rs-person: var(--rs-person);
 	--color-rs-place: var(--rs-place);
-	--color-rs-event: var(--rs-event);
+	--color-rs-work: var(--rs-work);
 	--color-rs-org: var(--rs-org);
 	--color-rs-bibl: var(--rs-bibl);
 	--color-rs-keyword: var(--rs-keyword);
+
+	--color-rs-doc-20: var(--rs-doc-20);
+	--color-rs-person-20: var(--rs-person-20);
+	--color-rs-place-20: var(--rs-place-20);
+	--color-rs-work-20: var(--rs-work-20);
+	--color-rs-org-20: var(--rs-org-20);
+	--color-rs-bibl-20: var(--rs-bibl-20);
+	--color-rs-keyword-20: var(--rs-keyword-20);
 }

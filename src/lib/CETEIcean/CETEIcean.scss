@@ -59,7 +59,7 @@ To restrict CSS to view-modes use:
 
 	--color-note-active: var(--color-dark-10);
 	--color-note-active-foreground: var(--color-light-10);
-	--color-footnote-circle: #666;
+	--color-footnote-circle: var(--color-dark-40);
 }
 .dark {
 	--color-note-active: var(--color-dark-40);

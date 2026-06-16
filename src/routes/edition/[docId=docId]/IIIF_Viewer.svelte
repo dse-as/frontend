@@ -107,15 +107,14 @@
 			class={['flex h-full w-full flex-col items-center justify-center gap-10']}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
-			<i class="fa-solid fa-spinner fa-spin fa-2xl text-surface-500"></i>
-			<p>Seite {currentPage}</p>
+			<i class="fa-solid fa-spinner fa-spin fa-2xl text-spinner"></i>
 		</div>
 	{:else if isError}
 		<div
 			class={['flex items-center justify-center']}
 			style={`width:${Number(maxWidth) * 0.7}px; height:${maxHeight}px;`}
 		>
-			<i class="fa-solid fa-xmark fa-2xl text-red-500"></i>
+			<i class="fa-solid fa-xmark fa-2xl text-warning"></i>
 		</div>
 	{/if}
 {:else}

@@ -82,11 +82,7 @@
 				'hidden xl:block'
 			]}
 		>
-			<button
-				class="h-12 w-12 rounded-full bg-surface-950 text-surface-50"
-				aria-label="expand box"
-				onclick={toggleExpandableBox}
-			>
+			<button class="preset-btn-circle --lg" aria-label="expand box" onclick={toggleExpandableBox}>
 				<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
 			</button>
 		</div>
@@ -97,14 +93,14 @@
 	<!-- ------------------------------------------------------ -->
 	<div class="mt-10 flex flex-col gap-4 xl:hidden">
 		<!-- Overview Accordion -->
-		<Accordion.Root type="single" class="w-full rounded-lg border bg-white shadow-sm">
+		<Accordion.Root type="single" class="w-full rounded-lg border border-dark-40 shadow-sm">
 			<Accordion.Item value="overview-item">
 				<Accordion.Trigger
-					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-gray-50"
+					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
 				>
 					<span class="font text-lg font-bold">{titleOverview}</span>
-					<span class="group-data-[state=open]:rotate-180">
-						<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
+					<span class="duration-50 group-data-[state=open]:rotate-90">
+						<i class={['fa-solid fa-chevron-right']}></i>
 					</span>
 				</Accordion.Trigger>
 
@@ -119,14 +115,14 @@
 		</Accordion.Root>
 
 		<!-- Metadata Accordion -->
-		<Accordion.Root type="single" class="w-full rounded-lg border bg-white shadow-sm">
+		<Accordion.Root type="single" class="w-full rounded-lg border border-dark-40 shadow-sm">
 			<Accordion.Item value="meta-item">
 				<Accordion.Trigger
-					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-gray-50"
+					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
 				>
 					<span class="font text-lg font-bold">{titleMeta}</span>
-					<span class="group-data-[state=open]:rotate-180">
-						<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
+					<span class="duration-50 group-data-[state=open]:rotate-90">
+						<i class={['fa-solid fa-chevron-right']}></i>
 					</span>
 				</Accordion.Trigger>
 

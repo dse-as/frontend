@@ -74,7 +74,7 @@
 	<a
 		href={updatePageParam(item.pagenum_running)}
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-surface-300`,
+			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-dark-10`,
 			isFirst && 'rounded-l-lg',
 			isLast && 'rounded-r-lg'
 		]}
@@ -121,7 +121,7 @@
 						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 						{@const items = collectGalleryItems()}
 						<div
-							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-surface-300 px-10"
+							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-dark-10 px-10"
 						>
 							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
 							{#each items as item (item.page)}
@@ -135,7 +135,7 @@
 									<span class="hidden text-sm group-hover:block">Seite {item.page}</span>
 								</a>
 							{:else}
-								<a class="hover:text-surface-500!" href={resolve(`/edition/${tzgId}`)}
+								<a class="text-warning" href={resolve(`/edition/${tzgId}`)}
 									>Keine Faksimile gefunden</a
 								>
 							{/each}

@@ -52,7 +52,7 @@ export const behaviors = (dom: Document) => {
 				}
 				const note = dom.createElement('li');
 				note.setAttribute('data-noteid', `${noteId}`);
-				note.innerHTML = `<div class='data-noteidx'>${this.noteIndex}</div><div>${el.innerHTML}</div>`;
+				note.innerHTML = `<div class='data-notenum'>${this.noteIndex}</div><div>${el.innerHTML}</div>`;
 				noteList.appendChild(note);
 
 				// Create footnote-span

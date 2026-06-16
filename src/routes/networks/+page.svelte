@@ -28,7 +28,7 @@
 					>{corrData[corrId as TSeqCorrespondenceKeys].name}</a
 				>
 			{:else}
-				<span class="preset-btn-round --lg cursor-default! border-surface-500 text-surface-500"
+				<span class="preset-btn-round --lg --muted"
 					>{corrData[corrId as TSeqCorrespondenceKeys].name}</span
 				>
 			{/if}

@@ -121,7 +121,7 @@
 		id={key}
 		class={[
 			'align-left block w-90 border-b px-5 py-3 text-left',
-			!isMultiColumn && key === itemKey && 'bg-surface-300 font-bold'
+			!isMultiColumn && key === itemKey && 'bg-dark-10 font-bold text-background-contrast'
 		]}
 		href={resolve(itemVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
 	>
@@ -250,12 +250,7 @@
 	>
 		<!-- Controls (when inside scroll container) -->
 		{#if !isMultiColumn}
-			<div
-				class={[
-					// "sticky top-0",
-					'flex w-full flex-col items-end justify-center gap-x-4 gap-y-2 bg-surface-50 pb-10'
-				]}
-			>
+			<div class={['flex w-full flex-col items-end justify-center gap-x-4 gap-y-2 pb-10']}>
 				{@render groupControls()}
 				{@render sortControls()}
 			</div>

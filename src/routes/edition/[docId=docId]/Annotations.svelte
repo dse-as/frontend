@@ -53,11 +53,11 @@
 			color: var(--color-note-active-foreground);
 		}
 
-		:global(li) > :global(.data-noteidx) {
+		:global(li) > :global(.data-notenum) {
 			grid-column: 1;
 		}
 
-		:global(li) > :global(*:not(.data-noteidx)) {
+		:global(li) > :global(*:not(.data-notenum)) {
 			grid-column: 2;
 		}
 
@@ -71,14 +71,14 @@
 		:global(p) {
 			@apply my-4;
 		}
-		:global(.data-noteidx) {
+		:global(.data-notenum) {
 			/* @apply mr-5 underline; */
 			margin-right: 15px;
 			height: 30px;
 			width: 30px;
 			padding: 3px 10px;
 			font-size: 1rem;
-			border-color: var(--color-surface-800);
+			border-color: var(--color-footnote-circle);
 			border-width: 1.2px;
 			border-radius: 100%;
 		}

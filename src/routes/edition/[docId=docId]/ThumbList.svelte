@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { invertScroll } from '$lib/functions/invertScroll.svelte';
-	import { ScrollArea } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
 	let {
@@ -60,10 +59,9 @@
 
 {#snippet ListContent()}
 	<!-- Documents before -->
-
 	<div
 		class={[
-			'disableScrollChaining flex min-w-1/2 shrink-0 justify-end gap-2 rounded-xl',
+			'disableScrollChaining flex min-w-[calc(50%-70px)] shrink-0 justify-end gap-2 rounded-xl',
 			isBeforeEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>
@@ -79,7 +77,7 @@
 	<!-- Documents after -->
 	<div
 		class={[
-			'flex min-w-1/2 shrink-0 justify-start gap-2 rounded-xl',
+			'flex min-w-[calc(50%-70px)] shrink-0 justify-start gap-2 rounded-xl',
 			isAfterEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>

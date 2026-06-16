@@ -1,8 +1,27 @@
+@import url('@fortawesome/fontawesome-free/css/fontawesome.min.css');
+@import url('@fortawesome/fontawesome-free/css/solid.min.css');
+
 @layer base {
+	/* Spinner */
+	.preset-btn-circle {
+		@apply rounded-full bg-foreground text-background hover:bg-foreground/80;
+
+		&:not(.--sm),
+		&:not(.--lg) {
+			@apply h-12 w-12;
+		}
+		&.--sm {
+			@apply h-10 w-10;
+		}
+		&.--lg {
+			@apply h-12 w-12;
+		}
+	}
+
 	/* Rounded Buttons */
 	.preset-btn-round {
-		@apply flex w-max cursor-pointer items-center justify-center rounded-full border-border-button bg-background px-4 py-1 text-background-contrast select-none;
-		@apply hover:border-border-button-hover hover:bg-dark-04;
+		@apply flex w-max cursor-pointer items-center justify-center rounded-full border-border-button bg-background px-4 py-1 whitespace-nowrap text-background-contrast select-none;
+		@apply hover:border-border-button-hover hover:bg-background-hover;
 		@apply active:ring-2;
 		@apply focus:ring-2;
 
@@ -11,6 +30,13 @@
 		&:not(.--xl),
 		&:not(.--2xl) {
 			@apply border;
+		}
+		&.--square {
+			/* Does not work yet */
+			@apply px-2 py-2;
+		}
+		&.--ghost {
+			@apply border-0;
 		}
 		&.--2xl {
 			@apply border-2 text-2xl dark:border-3;
@@ -26,10 +52,14 @@
 		}
 
 		&.--muted {
-			@apply pointer-events-none border-muted text-muted-foreground;
+			@apply pointer-events-none border-dark-40 text-muted-foreground;
 		}
 		&.--active {
 			@apply border-foreground bg-foreground text-background;
+		}
+		&.--linkarrow::before {
+			content: '↗';
+			padding-right: --spacing(2);
 		}
 	}
 
@@ -51,7 +81,7 @@
 	.preset-tabs-list {
 		@apply mx-2 grid grid-cols-2 rounded-full select-none;
 		@apply text-base leading-[0.01em] font-semibold;
-		@apply border-[1.5px] border-surface-800;
+		@apply border-[1.5px] border-dark-40;
 		@apply bg-background text-foreground;
 		&.--sm {
 			@apply h-9 **:px-6;
@@ -62,7 +92,7 @@
 	}
 	.preset-tabs-trigger {
 		@apply overflow-hidden leading-normal text-ellipsis whitespace-nowrap;
-		@apply hover:bg-dark-04;
+		@apply hover:bg-background-hover;
 		@apply data-[state=active]:pointer-events-none data-[state=active]:bg-foreground data-[state=active]:text-background;
 		&.--left {
 			@apply rounded-l-full;

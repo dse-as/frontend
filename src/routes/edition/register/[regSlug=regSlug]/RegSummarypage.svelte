@@ -50,13 +50,10 @@
 
 <!-- Snippet for Metadata Table -->
 {#snippet MetadataTable(attKeys: TRegAttrsMap[T][])}
-	<table
-		class="my-10 min-w-full border-gray-300 bg-white"
-		style={`opacity:${opacityMetadataTable}%`}
-	>
+	<table class="my-10 min-w-full" style={`opacity:${opacityMetadataTable}%`}>
 		<!-- Header: invisible but for accessibility -->
 		<thead>
-			<tr class="hidden bg-gray-200">
+			<tr class="hidden">
 				<th class="px-4 py-2">Key</th>
 				<th class="px-4 py-2 text-left">Value</th>
 			</tr>
@@ -75,7 +72,7 @@
 								>{@render MetadataValue(attKey, regAttributes[attKey])}</td
 							>
 						{:else}
-							<td class="px-4 py-2 text-left text-gray-300">Keine Daten verfügbar</td>
+							<td class="px-4 py-2 text-left text-muted-foreground">Keine Daten verfügbar</td>
 						{/if}
 					</tr>
 				</tbody>
@@ -120,7 +117,7 @@
 		{#each docs as doc (doc.docId)}
 			{@render LinkedItem(doc)}
 		{:else}
-			<p class="px-4 text-surface-500">Keine verlinkten Dokumente gefunden.</p>
+			<p class="px-4 text-muted-foreground">Keine verlinkten Dokumente gefunden.</p>
 		{/each}
 	</div>
 {/snippet}
@@ -131,7 +128,7 @@
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
 		href={resolve(`/edition/${doc.docId}?mode=DF`)}
-		class="min-h-27 w-70 rounded-xl bg-surface-50 p-1 hover:bg-surface-200"
+		class="min-h-27 w-70 rounded-xl p-1 hover:bg-background-hover"
 		target="blank"
 		rel="noopener noreferrer"
 	>
@@ -217,20 +214,20 @@
 	<!-- Linked documents -->
 	{#if docType === 'people'}
 		<!-- //! These lists can later be toggled on/off depending on content -->
-		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">
 			Korrespondenz mit Annemarie Schwarzenbach
 		</h2>
 		{@render LinkedItemsContainer([])}
-		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Dokumente</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Verknüpfte Dokumente</h2>
 		{@render LinkedItemsContainer(crossRef.linkedDocs)}
-		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Kommentare</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{:else}
-		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Dokumente</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Verknüpfte Dokumente</h2>
 		<div class="min-h-[40vh]">
 			{@render LinkedItemsContainer(crossRef.linkedDocs)}
 		</div>
-		<h2 class="h4 sticky top-15 z-91 h-20 w-full bg-surface-50 py-5">Verknüpfte Kommentare</h2>
+		<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Verknüpfte Kommentare</h2>
 		{@render LinkedItemsContainer([])}
 	{/if}
 </div>

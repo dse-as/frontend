@@ -62,8 +62,7 @@
 					tick();
 					window.scrollTo({ top: 0, behavior: 'auto' });
 				}}
-				class="center flex h-10 items-center justify-center rounded-full border px-4 whitespace-nowrap hover:bg-surface-300"
-				><p>{groupLabel}</p></button
+				class="preset-btn-round --sm"><p>{groupLabel}</p></button
 			>
 		{/each}
 	</div>

@@ -7,7 +7,7 @@
 
 <h1 class="h1">{data.topicData?.preamble}</h1>
 
-<div class="mt-5 rounded-xl bg-surface-200 p-5">
+<div class="mt-5 rounded-xl p-5">
 	<h4 class="h4">Alle Dokumente</h4>
 	<ul>
 		{#each data.topicData?.docs as docId (docId)}

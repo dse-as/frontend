@@ -63,9 +63,9 @@
 			<Dialog.Root bind:open={openStateMenu}>
 				<!-- Trigger aligned right on small screens -->
 				<Dialog.Trigger
-					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-surface-50 hover:bg-white/10"
+					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-foreground-contrast hover:bg-foreground-hover"
 				>
-					<i class="fa-solid fa-bars text-surface-950"></i>
+					<i class="fa-solid fa-bars"></i>
 				</Dialog.Trigger>
 
 				<Dialog.Portal>
@@ -83,7 +83,7 @@
 								<Lightswitch />
 								<!-- Close button top-right -->
 								<Dialog.Close
-									class="ml-4 inline-flex h-full items-center justify-center rounded p-2 text-surface-500 hover:bg-white/10"
+									class="preset-btn-round --ghost --square ml-4"
 									aria-label="Close menu"
 								>
 									<i class="fa-solid fa-x"></i>

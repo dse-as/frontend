@@ -54,9 +54,7 @@
 	{#each regTypes as regType (regType)}
 		<Accordion.Item value={regType} data-regType={regType}>
 			<h1 class="h4">
-				<Accordion.Trigger
-					class="group flex w-full gap-2 border-surface-300 py-3 hover:bg-transparent"
-				>
+				<Accordion.Trigger class="group flex w-full gap-2 py-3 hover:bg-transparent">
 					<div>
 						<i
 							class="fa-regular fa-chevron-right text-lg transition-transform group-data-[state=open]:rotate-90"
