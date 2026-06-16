@@ -184,7 +184,7 @@
 	--color-rs-doc: var(--rs-doc);
 	--color-rs-person: var(--rs-person);
 	--color-rs-place: var(--rs-place);
-	--color-rs-work: var(--rs-work);
+	--color-rs-event: var(--rs-event);
 	--color-rs-org: var(--rs-org);
 	--color-rs-bibl: var(--rs-bibl);
 	--color-rs-keyword: var(--rs-keyword);
@@ -192,7 +192,7 @@
 	--color-rs-doc-20: var(--rs-doc-20);
 	--color-rs-person-20: var(--rs-person-20);
 	--color-rs-place-20: var(--rs-place-20);
-	--color-rs-work-20: var(--rs-work-20);
+	--color-rs-event-20: var(--rs-event-20);
 	--color-rs-org-20: var(--rs-org-20);
 	--color-rs-bibl-20: var(--rs-bibl-20);
 	--color-rs-keyword-20: var(--rs-keyword-20);

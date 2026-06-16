@@ -58,12 +58,12 @@ To restrict CSS to view-modes use:
 	--color-note-figure-border: #16a34a;
 
 	--color-note-active: var(--color-dark-10);
-	--color-note-active-foreground: var(--color-light-10);
+	--color-note-active-foreground: var(--color-background-contrast);
 	--color-footnote-circle: var(--color-dark-40);
 }
 .dark {
 	--color-note-active: var(--color-dark-40);
-	--color-note-active-foreground: var(--color-white);
+	--color-note-active-foreground: var(--color-background-contrast);
 }
 
 /* -------------------------------- */
@@ -530,9 +530,22 @@ span.note-mark.active {
 	}
 
 	span.footnote:hover,
-	span.footnote.active {
+	span.footnote.active,
+	span.note-mark:hover,
+	span.note-mark.active{
 		background-color: var(--color-note-active);
 		color: var(--color-note-active-foreground);
+	}
+
+	span.footnote:active,
+	span.note-mark:active {
+		background-color: var(--color-dark-40);
+		box-shadow: none;
+	}
+	span.footnote.active:focus,
+	span.note-mark.active:focus {
+		border: none;
+		box-shadow: none;
 	}
 }
 
@@ -554,50 +567,96 @@ tei-anchor {
 /* -------------------------------- */
 /* Referencing Strings */
 
+[data-dom='global_comment'],
 [data-textflow='fluid'] {
-	tei-rs {
-		cursor: pointer;
-	}
-
 	/* Hover and Active */
 	tei-rs:hover,
 	tei-rs.active,
 	tei-rs.active:hover {
-		background-color: var(--color-mist-300);
+		background-color: var(--color-dark-40);
+		color: var(--color-background-contrast);
 	}
+	tei-rs:active {
+		background-color: var(--color-dark-40);
+		box-shadow: none;
+	}
+	tei-rs.active:focus {
+		border: none;
+		box-shadow: none;
+	}
+}
 
-	/* Types */
+/* Types */
+[data-textflow='fluid'] {
 	tei-rs {
+		cursor: pointer;
+		border-bottom-width: 3px;
+		border-bottom-style: solid;
+		border-bottom-color: var(--color-background-contrast);
+
+		&[type='smallform'],
+		&[type='longform'],
+		&[type='letter'] {
+			border-bottom-color: var(--color-rs-doc);
+		}
 		&[type='person'] {
-			border-bottom: 3px solid var(--color-rs-person);
+			border-bottom-color: var(--color-rs-person);
 		}
 		&[type='place'] {
-			border-bottom: 3px solid var(--color-rs-place);
+			border-bottom-color: var(--color-rs-place);
 		}
 		&[type='org'] {
-			border-bottom: 3px solid var(--color-rs-org);
+			border-bottom-color: var(--color-rs-org);
 		}
 		&[type='work'] {
-			border-bottom: 3px solid var(--color-rs-work);
+			border-bottom-color: var(--color-rs-work);
 		}
 		&[type='bibl'] {
-			border-bottom: 3px solid var(--color-rs-bibl);
+			border-bottom-color: var(--color-rs-bibl);
+		}
+		&[type='event'],
+		&[type='travel'] {
+			border-bottom-color: var(--color-rs-event);
 		}
 		&[type='keyword'] {
-			border-bottom: 3px solid var(--color-rs-keyword);
+			border-bottom-color: var(--color-rs-keyword);
 		}
 	}
 }
 
 [data-dom='global_comment'] {
 	tei-rs {
-		border-bottom: 1.5px solid gray;
 		cursor: pointer;
-	}
+		border-bottom-width: 1.5px;
+		border-bottom-style: solid;
+		border-bottom-color: var(--color-background-contrast);
 
-	tei-rs:hover,
-	tei-rs.active,
-	tei-rs.active:hover {
-		background-color: var(--color-mist-300);
+		&[type='smallform']:hover,
+		&[type='longform']:hover,
+		&[type='letter']:hover {
+			border-bottom-color: var(--color-rs-doc);
+		}
+		&[type='person']:hover {
+			border-bottom-color: var(--color-rs-person);
+		}
+		&[type='place']:hover {
+			border-bottom-color: var(--color-rs-place);
+		}
+		&[type='org']:hover {
+			border-bottom-color: var(--color-rs-org);
+		}
+		&[type='work']:hover {
+			border-bottom-color: var(--color-rs-work);
+		}
+		&[type='bibl']:hover {
+			border-bottom-color: var(--color-rs-bibl);
+		}
+		&[type='event']:hover,
+		&[type='travel']:hover {
+			border-bottom-color: var(--color-rs-event);
+		}
+		&[type='keyword']:hover {
+			border-bottom-color: var(--color-rs-keyword);
+		}
 	}
 }
