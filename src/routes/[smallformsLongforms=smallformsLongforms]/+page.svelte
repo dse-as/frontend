@@ -2,12 +2,12 @@
 	import List from '$lib/components/List.svelte';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 	import { documents as allDocs } from '$lib/data/documents.json';
-	import { resolve } from '$app/paths';
 
 	import type { TDocTypes, TDocuments } from '$lib/types/documents/TDocuments.js';
 
 	const allDocsTyped = allDocs as TDocuments['documents'];
 	import { onMount } from 'svelte';
+	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 
 	let { data } = $props();
 
@@ -30,27 +30,7 @@
 </script>
 
 <!-- Navigation -->
-<nav
-	class={[
-		'flex transition-all duration-200',
-		data.edView === 'edView1'
-			? 'mx-auto mt-40  w-2/3 max-w-200 flex-wrap items-center justify-center gap-4 p-2'
-			: 'ml-10 h-full w-full gap-2'
-	]}
->
-	{#each ['smallforms', 'longforms', 'letters', 'images'] as docType (docType)}
-		<a
-			class={[
-				'preset-btn-round',
-				data.edView === 'edView1' ? '--2xl' : '--sm',
-				data.docType === docType && '--active'
-			]}
-			href={resolve(`/${docType}`)}
-		>
-			{dictDoc[docType as TDocTypes]?.label_plural}
-		</a>
-	{/each}
-</nav>
+<DocumentsNav docType={data.docType} />
 
 <!-- Large docPicker-Menu  -->
 <!-- The animated transition uses the width of the element -->

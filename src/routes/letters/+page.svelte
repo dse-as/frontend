@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { type TSeqCorrespondenceKeys } from '$lib/types/TSequences';
 
@@ -7,6 +8,10 @@
 	const specialCorrs = ['corr_spec_0001'];
 </script>
 
+<!-- Navigation -->
+<DocumentsNav docType="letters" />
+
+<!-- Content -->
 <div class="mx-auto mt-13 flex w-full max-w-300 flex-col items-center justify-center">
 	<h1 class="h1">Korrespondenz</h1>
 	<div class="mt-10 flex flex-wrap justify-center gap-4">
