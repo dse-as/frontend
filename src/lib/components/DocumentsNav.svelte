@@ -8,7 +8,11 @@
 	const navEntries: TDocTypes[] = ['smallforms', 'longforms', 'letters', 'photos'];
 </script>
 
-<nav class={['ml-10 flex h-full w-full gap-2 transition-all duration-200']}>
+<nav
+	class={[
+		'flex h-full w-full flex-wrap justify-center gap-2 pb-5 pl-10 transition-all duration-200 xl:justify-start'
+	]}
+>
 	{#each navEntries as dT (dT)}
 		<a class={['preset-btn-round --sm', dT === docType && '--active']} href={resolve(`/${dT}`)}>
 			{dictDoc[dT as TDocTypes]?.label_plural}
