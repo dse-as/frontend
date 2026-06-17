@@ -13,7 +13,7 @@
 		{#each data.topicData?.docs as docId (docId)}
 			{@const { item: resDoc } = resolveDoc(data.allDocs, docId) || { item: null }}
 			<li class="mt-2">
-				<a href={resolve(`/edition/${docId as string}`)}>{resDoc?.metadata.title_full}</a>
+				<a href={resolve(`/${docId as string}`)}>{resDoc?.metadata.title_full}</a>
 			</li>
 		{/each}
 	</ul>

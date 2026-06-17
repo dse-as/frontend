@@ -25,7 +25,7 @@
 						data.edView === 'edView1' ? '--2xl' : '--sm',
 						data.docType === docTypeId && '--active'
 					]}
-					href={resolve(`/edition/${docTypeId}`)}
+					href={resolve(`/${docTypeId}`)}
 				>
 					{dictDoc[docTypeId]?.label_plural}
 				</a>
@@ -59,7 +59,7 @@
 		<div class="mt-20 text-center">
 			<h2 class=" h2 mb-5">Shortcuts</h2>
 			<p class="text-xl">
-				&rarr; <a class="underline" href={resolve('/edition/smallform_0231')}>Smallform 0231</a>
+				&rarr; <a class="underline" href={resolve('/smallform_0231')}>Smallform 0231</a>
 			</p>
 		</div>
 	{/if}

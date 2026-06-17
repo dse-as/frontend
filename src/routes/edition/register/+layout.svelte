@@ -25,7 +25,7 @@
 					data.regView === 'regView1' ? '--2xl' : '--sm',
 					data.regType === regId && '--active'
 				]}
-				href={resolve(`/edition/register/${regId}`)}
+				href={resolve(`/register/${regId}`)}
 			>
 				{dictReg[regId]?.label_plural}
 			</a>

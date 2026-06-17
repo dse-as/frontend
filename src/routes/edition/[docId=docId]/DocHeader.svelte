@@ -58,7 +58,7 @@
 						class="preset-btn-round --linkarrow"
 						data-type="entity"
 						data-entitytype={item.regType}
-						href={resolve(`/edition/register/${item.regKey as string}`)}
+						href={resolve(`/register/${item.regKey as string}`)}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

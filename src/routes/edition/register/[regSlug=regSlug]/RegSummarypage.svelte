@@ -97,11 +97,11 @@
 	{:else if attKey === 'date'}
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgIds' && value}
-		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
+		<a class="inline-block underline" href={resolve(`/register/${value}`)}>
 			{crossRef.orgNames?.join(', ') ?? value}
 		</a>
 	{:else if attKey === 'authorIds' && value}
-		<a class="inline-block underline" href={resolve(`/edition/register/${value}`)}>
+		<a class="inline-block underline" href={resolve(`/register/${value}`)}>
 			{crossRef.authorNames?.join(', ') ?? value}
 		</a>
 	{:else if Array.isArray(value)}
@@ -127,7 +127,7 @@
 	<a
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
-		href={resolve(`/edition/${doc.docId}?mode=DF`)}
+		href={resolve(`/${doc.docId}?mode=DF`)}
 		class="min-h-27 w-70 rounded-thumbbox p-1 hover:bg-background-hover"
 		target="blank"
 		rel="noopener noreferrer"

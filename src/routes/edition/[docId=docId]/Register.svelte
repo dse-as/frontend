@@ -109,7 +109,7 @@
 										{/if}
 										<a
 											class="flex h-9 w-9 items-center justify-center rounded-button group-hover:flex group-[data-active]:flex hover:bg-light-10"
-											href={resolve(`/edition/register/${regKey as string}`)}
+											href={resolve(`/register/${regKey as string}`)}
 											target="_blank"
 											aria-label="In Register öffnen"
 											rel="noopener noreferrer"><i class="fa-rectangle-list fa-regular"></i></a

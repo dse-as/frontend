@@ -89,7 +89,7 @@
 		<a
 			data-sveltekit-preload-data="tap"
 			data-sveltekit-preload-code="hover"
-			href={resolve(`/edition/${itemId as string}`)}
+			href={resolve(`/${itemId as string}`)}
 			class="min-h-27 w-70 rounded-thumbbox p-1 hover:bg-background-hover"
 			target="blank"
 			rel="noopener noreferrer"

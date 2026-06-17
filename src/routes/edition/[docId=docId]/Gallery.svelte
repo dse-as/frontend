@@ -135,9 +135,7 @@
 									<span class="hidden text-sm group-hover:block">Seite {item.page}</span>
 								</a>
 							{:else}
-								<a class="text-warning" href={resolve(`/edition/${tzgId}`)}
-									>Keine Faksimile gefunden</a
-								>
+								<a class="text-warning" href={resolve(`/${tzgId}`)}>Keine Faksimile gefunden</a>
 							{/each}
 						</div>
 					{/each}

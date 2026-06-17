@@ -11,8 +11,8 @@
 	const links = [
 		{ name: 'SNF Projekt', path: resolve('/snf-project') },
 		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
-		{ name: 'Edition', path: resolve('/edition') },
-		{ name: 'Register', path: resolve('/edition/register') },
+		{ name: 'Edition', path: resolve('') },
+		{ name: 'Register', path: resolve('/register') },
 		{ name: 'Netzwerke', path: resolve('/networks') },
 		{ name: 'Themen', path: resolve('/topics') },
 		{ name: '(Sequenzen)', path: resolve('/sequences') },

@@ -36,7 +36,7 @@
 					data-sveltekit-preload-data="tap"
 					data-sveltekit-preload-code="tap"
 					href={resolve(
-						`/edition/${docId}?${building ? `seq=${seqItemId}` : updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
+						`/${docId}?${building ? `seq=${seqItemId}` : updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
 					)}
 					class={['w-90 rounded-thumbbox p-1']}
 				>
