@@ -173,7 +173,6 @@ export function handleRegisterClick(key: TRegKeysFlat | undefined | null) {
 }
 
 export function handleJumpToSibling(key: TRegKeysFlat, direction: 'next' | 'prev'): void {
-
 	const elSpans = findTextNodes(key);
 	if (!elSpans || !selectedTextNode.el) return;
 
