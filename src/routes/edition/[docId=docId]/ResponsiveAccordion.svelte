@@ -82,7 +82,11 @@
 				'hidden xl:block'
 			]}
 		>
-			<button class="preset-btn-circle --lg" aria-label="expand box" onclick={toggleExpandableBox}>
+			<button
+				class="preset-btn-circle --color-dark --lg"
+				aria-label="expand box"
+				onclick={toggleExpandableBox}
+			>
 				<i class={['fa-solid', isExpanded ? 'fa-chevron-up' : 'fa-chevron-down']}></i>
 			</button>
 		</div>

@@ -280,7 +280,7 @@
 
 			<!-- Button: Open Panel -->
 			<button
-				class="z-10 h-10 w-10 translate-y-5 rounded-full border-b-2 border-border-shadow bg-background text-foreground hover:border hover:bg-hover"
+				class="preset-btn-circle --sm --shadow-bottom --color-light z-10 translate-y-5"
 				aria-label="Sequenzansicht öffnen"
 				onclick={(ev) => {
 					if (!isOpenSeqPanel) openSeqPanel();

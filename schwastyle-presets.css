@@ -7,9 +7,9 @@
 		@apply container-centered;
 	}
 
-	/* Spinner */
+	/* Circle Buttons */
 	.preset-btn-circle {
-		@apply rounded-full bg-foreground text-background hover:bg-foreground/80;
+		@apply rounded-full;
 
 		&:not(.--sm),
 		&:not(.--lg) {
@@ -20,6 +20,15 @@
 		}
 		&.--lg {
 			@apply h-12 w-12;
+		}
+		&.--shadow-bottom {
+			@apply border-b-2 border-border-shadow;
+		}
+		&.--color-dark {
+			@apply bg-foreground text-background hover:bg-foreground/80;
+		}
+		&.--color-light {
+			@apply bg-background text-foreground hover:bg-hover;
 		}
 	}
 
