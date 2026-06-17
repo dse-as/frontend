@@ -11,14 +11,14 @@ export const load: LayoutServerLoad = async ({ url }) => {
 	// What registerPage are we looking at?
 	const edView =
 		docSlug === 'edition'
-			? /
+			? //edition
 				'edView1'
 			: docSlug && Object.keys(dictDoc).includes(docSlug)
-				? // e.g. /[smallforms]
+				? // e.g. /edition/[smallforms]
 					'edView2'
 				: Object.values(allDocs).some((inner) => Object.keys(inner).includes(docSlug)) &&
 					  url.pathname.includes('doc-overview') //! FIX change this, once the slugs are stable
-					? // e.g. /doc-overview/[smallform_0001]
+					? // e.g. /edition/doc-overview/[smallform_0001]
 						'edView3'
 					: null;
 
