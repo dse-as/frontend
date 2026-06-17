@@ -37,6 +37,8 @@
 	<ul class="mt-5 flex flex-col gap-2 text-2xl">
 		<li>&rarr; <a class="underline" href={resolve('/map')}>Karte</a></li>
 		<li>&rarr; <a class="underline" href={resolve('/timeline')}>Zeitstrahl</a></li>
+		<li>&rarr; <a class="underline" href={resolve('/network')}>Netzwerk</a></li>
+		<li>&rarr; <a class="underline" href={resolve('/topics')}>Themen</a></li>
 	</ul>
 
 	<h3 class="h3 mt-15">Dokumente</h3>

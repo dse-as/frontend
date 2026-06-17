@@ -12,7 +12,7 @@
 		{ name: 'Texte und Fotografien', path: resolve('/') },
 		{ name: 'Zugänge', path: resolve('/') },
 		{ name: 'Register', path: resolve('/register') },
-		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
+		{ name: 'Über die Autorin', path: resolve('/schwarzenbach') },
 		{ name: 'Über das Projekt', path: resolve('/project') },
 		{ name: 'Suche', path: resolve('/search') }
 	];
