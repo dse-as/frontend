@@ -4,7 +4,14 @@ export default {
   content: [
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['Source Code Pro', 'monospace'],
+        alt: ['Courier', 'sans-serif'],
+        display: ['Cal Sans', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 };
