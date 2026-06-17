@@ -20,7 +20,7 @@
 <h1 class="h1">{dictSeqTitles[seqType]}</h1>
 
 {#each Object.keys(seqItems) as seqItemId (seqItemId)}
-	<div class="mt-5 rounded-xl p-5">
+	<div class="mt-5 rounded-card p-5">
 		<h4 class="h4 mb-5">{seqItems[seqItemId].preamble}</h4>
 
 		<div
@@ -38,7 +38,7 @@
 					href={resolve(
 						`/edition/${docId}?${building ? `seq=${seqItemId}` : updateSearchParams(page.url.searchParams, { seq: seqItemId })}`
 					)}
-					class={['w-90 rounded-xl p-1']}
+					class={['w-90 rounded-thumbbox p-1']}
 				>
 					<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 						<div class="container-centered">

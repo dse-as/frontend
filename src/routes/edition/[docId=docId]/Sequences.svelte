@@ -159,8 +159,8 @@
 			docId !== resId && 'hover:bg-hover',
 			!isCurrentSeqList && ' hover:bg-hover',
 			isCurrentSeqList && docId === resId && 'pointer-events-none',
-			isFirst && 'rounded-l-2xl',
-			isLast && 'rounded-r-2xl'
+			isFirst && 'rounded-l-thumbbox',
+			isLast && 'rounded-r-thumbbox'
 		]}
 		onclick={() => {
 			closeSeqPanel(0);
@@ -322,7 +322,7 @@
 		tabindex="0"
 		bind:this={elSeqPanel}
 		class={[
-			'absolute z-90002 flex h-max max-h-[80vh] w-8/10 flex-col rounded-xl border-2 px-10 pb-10 transition-all duration-200',
+			'absolute z-90002 flex h-max max-h-[80vh] w-8/10 flex-col rounded-card-lg border-2 px-10 pb-10 transition-all duration-200',
 			isSelectedValidSeq ? 'bg-background pt-40' : 'bg-background pt-25'
 		]}
 		style={`top:${elSeqNavSize?.top}px;`}

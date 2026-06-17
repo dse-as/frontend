@@ -36,11 +36,11 @@
 	--shadow-date-field-focus: var(--shadow-date-field-focus);
 
 	/* Radius */
-	--radius-card: 16px;
-	--radius-card-lg: 20px;
-	--radius-card-sm: 10px;
+	--radius-card: 8px;
+	--radius-card-lg: 16px;
+	--radius-thumbbox: 12px;
+	--radius-button: 100%;
 	--radius-input: 9px;
-	--radius-button: 5px;
 
 	/* Spacings */
 	--spacing-input: 3rem;

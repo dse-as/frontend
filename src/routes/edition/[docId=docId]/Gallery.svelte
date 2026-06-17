@@ -75,8 +75,8 @@
 		href={updatePageParam(item.pagenum_running)}
 		class={[
 			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-dark-10`,
-			isFirst && 'rounded-l-lg',
-			isLast && 'rounded-r-lg'
+			isFirst && 'rounded-l-thumbbox',
+			isLast && 'rounded-r-thumbbox'
 		]}
 		onclick={(e) => {
 			e.preventDefault();
@@ -91,7 +91,7 @@
 <div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
 	{#if tzgIds.length}
 		<button
-			class="self-start rounded-full text-left underline"
+			class="self-start rounded-button text-left underline"
 			onclick={() => {
 				showTextzeugen = !showTextzeugen;
 			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
@@ -121,12 +121,12 @@
 						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 						{@const items = collectGalleryItems()}
 						<div
-							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-2xl bg-dark-10 px-10"
+							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10"
 						>
 							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
 							{#each items as item (item.page)}
 								<a
-									class="ml-2 rounded-xl p-1"
+									class="ml-2 rounded-thumbbox p-1"
 									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
 									target="_blank"
 									rel="noopener noreferrer"

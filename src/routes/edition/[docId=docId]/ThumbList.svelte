@@ -61,7 +61,7 @@
 	<!-- Documents before -->
 	<div
 		class={[
-			'disableScrollChaining flex min-w-[calc(50%-70px)] shrink-0 justify-end gap-2 rounded-xl',
+			'disableScrollChaining flex min-w-[calc(50%-70px)] shrink-0 justify-end gap-2 rounded-thumbbox',
 			isBeforeEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>
@@ -69,7 +69,7 @@
 	</div>
 	<!-- Current Document -->
 	<div
-		class={['flex grow justify-center rounded-xl bg-transparent', classesCurrent]}
+		class={['flex grow justify-center rounded-thumbbox bg-transparent', classesCurrent]}
 		{@attach centerCurrentItemInGallery}
 	>
 		{@render childrenCurrent()}
@@ -77,7 +77,7 @@
 	<!-- Documents after -->
 	<div
 		class={[
-			'flex min-w-[calc(50%-70px)] shrink-0 justify-start gap-2 rounded-xl',
+			'flex min-w-[calc(50%-70px)] shrink-0 justify-start gap-2 rounded-thumbbox',
 			isAfterEmpty ? 'bg-transparent' : 'bg-dark-04'
 		]}
 	>

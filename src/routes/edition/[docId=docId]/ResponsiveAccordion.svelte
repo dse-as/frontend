@@ -97,10 +97,10 @@
 	<!-- ------------------------------------------------------ -->
 	<div class="mt-10 flex flex-col gap-4 xl:hidden">
 		<!-- Overview Accordion -->
-		<Accordion.Root type="single" class="w-full rounded-lg border border-dark-40 shadow-sm">
+		<Accordion.Root type="single" class="w-full rounded-card border border-dark-40 shadow-sm">
 			<Accordion.Item value="overview-item">
 				<Accordion.Trigger
-					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
+					class="group flex w-full justify-between rounded-card p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
 				>
 					<span class="font text-lg font-bold">{titleOverview}</span>
 					<span class="duration-50 group-data-[state=open]:rotate-90">
@@ -119,10 +119,10 @@
 		</Accordion.Root>
 
 		<!-- Metadata Accordion -->
-		<Accordion.Root type="single" class="w-full rounded-lg border border-dark-40 shadow-sm">
+		<Accordion.Root type="single" class="w-full rounded-card border border-dark-40 shadow-sm">
 			<Accordion.Item value="meta-item">
 				<Accordion.Trigger
-					class="group flex w-full justify-between rounded-lg p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
+					class="group flex w-full justify-between rounded-card p-4 text-left hover:bg-background-hover focus:ring-2 focus:outline-none data-[state=open]:rounded-b-none data-[state=open]:bg-background-hover"
 				>
 					<span class="font text-lg font-bold">{titleMeta}</span>
 					<span class="duration-50 group-data-[state=open]:rotate-90">
