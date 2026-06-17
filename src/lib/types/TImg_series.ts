@@ -1,11 +1,11 @@
-export type TImg_series = {
+export type Tphoto_series = {
 	meta: {
 		generated_by: string;
 		task: string;
 		generated_on: string;
 		description: string;
 	};
-	img_series: {
+	photo_series: {
 		[key: string]: {
 			name: string;
 			filenames: string[];

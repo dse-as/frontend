@@ -6,4 +6,4 @@
 <DocumentsNav docType="photos" />
 
 <!-- Content -->
-<h2>Image view</h2>
+<h2>Photography ...</h2>
