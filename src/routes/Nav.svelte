@@ -9,13 +9,11 @@
 
 	// Menu
 	const links = [
-		{ name: 'SNF Projekt', path: resolve('/snf-project') },
-		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
-		{ name: 'Edition', path: resolve('') },
+		{ name: 'Texte und Fotografien', path: resolve('/') },
+		{ name: 'Zugänge', path: resolve('/') },
 		{ name: 'Register', path: resolve('/register') },
-		{ name: 'Netzwerke', path: resolve('/networks') },
-		{ name: 'Themen', path: resolve('/topics') },
-		{ name: '(Sequenzen)', path: resolve('/sequences') },
+		{ name: 'Schwarzenbach', path: resolve('/schwarzenbach') },
+		{ name: 'Über das Projekt', path: resolve('/project') },
 		{ name: 'Suche', path: resolve('/search') }
 	];
 </script>
