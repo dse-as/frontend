@@ -17,16 +17,26 @@
 
 	<h3 class="h3">Dropdown "Texte und Fotografien"</h3>
 	<ul class="mt-5 flex flex-col gap-2 text-2xl">
-		<li>&rarr; <a class="underline" href="/smallforms">{dictDocs.smallforms.label_plural}</a></li>
-		<li>&rarr; <a class="underline" href="/longforms">{dictDocs.longforms.label_plural}</a></li>
-		<li>&rarr; <a class="underline" href="/letters">{dictDocs.letters.label_plural}</a></li>
-		<li>&rarr; <a class="underline" href="/photos">{dictDocs.photos.label_plural}</a></li>
+		<li>
+			&rarr; <a class="underline" href={resolve('/smallforms')}
+				>{dictDocs.smallforms.label_plural}</a
+			>
+		</li>
+		<li>
+			&rarr; <a class="underline" href={resolve('/longforms')}>{dictDocs.longforms.label_plural}</a>
+		</li>
+		<li>
+			&rarr; <a class="underline" href={resolve('/letters')}>{dictDocs.letters.label_plural}</a>
+		</li>
+		<li>
+			&rarr; <a class="underline" href={resolve('/photos')}>{dictDocs.photos.label_plural}</a>
+		</li>
 	</ul>
 
 	<h3 class="h3 mt-15">Dropdown "Zugänge"</h3>
 	<ul class="mt-5 flex flex-col gap-2 text-2xl">
-		<li>&rarr; <a class="underline" href="/map">Karte</a></li>
-		<li>&rarr; <a class="underline" href="/timeline">Zeitstrahl</a></li>
+		<li>&rarr; <a class="underline" href={resolve('/map')}>Karte</a></li>
+		<li>&rarr; <a class="underline" href={resolve('/timeline')}>Zeitstrahl</a></li>
 	</ul>
 
 	<h3 class="h3 mt-15">Dokumente</h3>
