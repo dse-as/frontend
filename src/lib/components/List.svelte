@@ -191,7 +191,7 @@
 <!-- Snippet for Grouping Controls -->
 {#snippet groupControls()}
 	{#if hasGroupControls}
-		<div class={['flex flex-wrap gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
+		<div class={['flex flex-wrap items-center gap-2', isMultiColumn ? 'text-base' : 'text-xs']}>
 			<Switch bind:checked={uiOvGroupByCat[itemVariant]} height={24}
 				><span>Nach Kategorien gruppieren</span></Switch
 			>
@@ -203,7 +203,9 @@
 <div class="overflow-y-auto">
 	<!-- Controls (when outside scroll container) -->
 	{#if isMultiColumn}
-		<div class="my-10 flex w-full flex-col flex-wrap items-start justify-start gap-x-10 gap-y-6">
+		<div
+			class="my-10 flex w-full flex-col flex-wrap items-start justify-start gap-x-10 gap-y-6 text-base"
+		>
 			<div class="flex gap-5">
 				{@render groupControls()}
 				{@render sortControls()}

@@ -4,7 +4,7 @@
 @layer base {
 	/* Flex Center */
 	.container-centered {
-		@apply container-centered;
+		@apply flex h-full w-full items-center justify-center;
 	}
 
 	/* Circle Buttons */

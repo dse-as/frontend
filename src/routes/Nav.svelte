@@ -63,7 +63,7 @@
 			<Dialog.Root bind:open={openStateMenu}>
 				<!-- Trigger aligned right on small screens -->
 				<Dialog.Trigger
-					class="ml-4 inline-flex h-full items-center justify-center rounded p-4 text-foreground-contrast hover:bg-foreground-hover"
+					class="inline-flex h-full items-center justify-center rounded p-4 text-foreground-contrast hover:bg-foreground-hover"
 				>
 					<i class="fa-solid fa-bars"></i>
 				</Dialog.Trigger>
@@ -77,15 +77,12 @@
 					>
 						<!-- Top bar with title and close in top-right -->
 						<div class="flex min-h-12 items-center justify-between">
-							<Dialog.Title class="text-lg font-semibold">Menu</Dialog.Title>
+							<Dialog.Title class="text-xl font-semibold">Menu</Dialog.Title>
 
-							<div class="flex h-full items-center">
+							<div class="flex h-full items-center gap-4">
 								<Lightswitch />
 								<!-- Close button top-right -->
-								<Dialog.Close
-									class="preset-btn-round --ghost --square ml-4"
-									aria-label="Close menu"
-								>
+								<Dialog.Close class="preset-btn-round --ghost --square" aria-label="Close menu">
 									<i class="fa-solid fa-x"></i>
 								</Dialog.Close>
 							</div>
