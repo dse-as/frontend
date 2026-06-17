@@ -34,7 +34,7 @@
 		</div>
 	{/if}
 {:else}
-	<div class={['flex h-full w-full items-center justify-center', classes]}>
+	<div class={['container-centered', classes]}>
 		<i class="fa-solid fa-xmark fa-2xl"></i>
 	</div>
 {/if}

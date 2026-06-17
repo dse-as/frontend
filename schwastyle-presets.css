@@ -2,6 +2,11 @@
 @import url('@fortawesome/fontawesome-free/css/solid.min.css');
 
 @layer base {
+	/* Flex Center */
+	.container-centered {
+		@apply container-centered;
+	}
+
 	/* Spinner */
 	.preset-btn-circle {
 		@apply rounded-full bg-foreground text-background hover:bg-foreground/80;

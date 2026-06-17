@@ -133,7 +133,7 @@
 		rel="noopener noreferrer"
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-			<div class="flex h-full w-full items-center justify-center">
+			<div class="container-centered">
 				<IIIF_Thumb url={doc.iiif_url} classes="max-w-[80px] max-h-[80px]" />
 			</div>
 			<div class="flex flex-col">
