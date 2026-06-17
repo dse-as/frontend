@@ -7,6 +7,6 @@ import type { ParamMatcher } from '@sveltejs/kit';
 const keys_all = [];
 
 export const match = ((param: string): param is (typeof keys_all)[number] => {
-    const result = keys_all.includes(param);
-    return result;
+	const result = keys_all.includes(param);
+	return result;
 }) satisfies ParamMatcher;

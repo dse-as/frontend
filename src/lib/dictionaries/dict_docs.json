@@ -159,10 +159,13 @@
 			"name": "Fotografien",
 			"key_singular": "photo",
 			"label_plural": "Fotografien",
-			"metadata": {
-			},
+			"metadata": {},
 			"groups": {
-				"Fotografie'": { "label_singular": "Fotografie", "label_plural": "Fotografien", "slug": null }
+				"Fotografie'": {
+					"label_singular": "Fotografie",
+					"label_plural": "Fotografien",
+					"slug": null
+				}
 			}
 		}
 	}
