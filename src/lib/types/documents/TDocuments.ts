@@ -324,26 +324,34 @@ export type TDocDict = {
 		letters: DictEntity<TDocMetadataKeysLetters, TLettersGroups>;
 		smallforms: DictEntity<TDocMetadataKeysSmallforms, TSmallformsGroups>;
 		longforms: DictEntity<TDocMetadataKeysLongforms, TLongformsGroups>;
+		photos: DictEntity<TDocMetadataKeysPhotos, TPhotosGroups>;
 	};
 };
 
 // --- Sets -------------------------------------------------------
 export type TDocTypes = keyof TDocuments['documents'];
-export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys;
+export type TDocKeys = TLettersKeys | TSmallformsKeys | TLongformsKeys | TPhotosKeys;
 export type TDocKeysMap = {
 	letters: TLettersKeys;
 	smallforms: TSmallformsKeys;
 	longforms: TLongformsKeys;
+	photos: TPhotosKeys;
 };
 
 export type TDocAttrsLetters = keyof TDocuments['documents']['letters'][TLettersKeys];
 export type TDocAttrsSmallforms = keyof TDocuments['documents']['smallforms'][TSmallformsKeys];
 export type TDocAttrsLongforms = keyof TDocuments['documents']['longforms'][TLongformsKeys];
-export type TDocAttrs = TDocAttrsLetters | TDocAttrsSmallforms | TDocAttrsLongforms;
+export type TDocAttrsPhotos = keyof TDocuments['documents']['photos'][TPhotosKeys];
+export type TDocAttrs =
+	| TDocAttrsLetters
+	| TDocAttrsSmallforms
+	| TDocAttrsLongforms
+	| TDocAttrsPhotos;
 export type TDocAttrsMap = {
 	letters: TDocAttrsLetters;
 	smallforms: TDocAttrsSmallforms;
 	longforms: TDocAttrsLongforms;
+	photos: TDocAttrsPhotos;
 };
 
 export type TDocMetadataKeysLetters =
@@ -352,31 +360,48 @@ export type TDocMetadataKeysSmallforms =
 	keyof TDocuments['documents']['smallforms'][TSmallformsKeys]['metadata'];
 export type TDocMetadataKeysLongforms =
 	keyof TDocuments['documents']['longforms'][TLongformsKeys]['metadata'];
+export type TDocMetadataKeysPhotos =
+	keyof TDocuments['documents']['photos'][TPhotosKeys]['metadata'];
 export type TDocMetadataKeys =
 	| TDocMetadataKeysLetters
 	| TDocMetadataKeysSmallforms
-	| TDocMetadataKeysLongforms;
+	| TDocMetadataKeysLongforms
+	| TDocMetadataKeysPhotos;
 export type TDocMetadataKeysMap = {
 	letters: TDocMetadataKeysLetters;
 	smallforms: TDocMetadataKeysSmallforms;
 	longforms: TDocMetadataKeysLongforms;
+	photos: TDocMetadataKeysPhotos;
 };
 
 export type TDocItemsLetters = TDocuments['documents']['letters'][TLettersKeys];
 export type TDocItemsSmallforms = TDocuments['documents']['smallforms'][TSmallformsKeys];
 export type TDocItemsLongforms = TDocuments['documents']['longforms'][TLongformsKeys];
-export type TDocItems = TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms;
+export type TDocItemsPhotos = TDocuments['documents']['photos'][TPhotosKeys];
+export type TDocItems =
+	| TDocItemsLetters
+	| TDocItemsSmallforms
+	| TDocItemsLongforms
+	| TDocItemsPhotos;
 export type TDocItemsMap = {
 	letters: TDocItemsLetters;
 	smallforms: TDocItemsSmallforms;
 	longforms: TDocItemsLongforms;
+	photos: TDocItemsPhotos;
 };
 
 // Group Set
-export type TDocGroupsFlat = TLettersGroups | TSmallformsGroups | TLongformsGroups | '?' | '';
+export type TDocGroupsFlat =
+	| TLettersGroups
+	| TSmallformsGroups
+	| TLongformsGroups
+	| TPhotosGroups
+	| '?'
+	| '';
 
 export type TDocGroupsMap = {
 	letters: TLettersGroups | '?' | '';
 	smallforms: TSmallformsGroups | '?' | '';
 	longforms: TLongformsGroups | '?' | '';
+	photos: TPhotosGroups | '?' | '';
 };
