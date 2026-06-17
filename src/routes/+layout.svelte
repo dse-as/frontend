@@ -22,7 +22,7 @@
 <div class="min-h-screen pt-10 pb-20">{@render children()}</div>
 
 <footer
-	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-dark-10 p-20 text-foreground-contrast"
+	class="flex min-h-30 flex-col items-center justify-center gap-5 bg-dark-10 p-20 text-foreground-contrast dark:bg-dark"
 >
 	<p class="mb-5">Diese Webseite befindet sich in einer Alpha-Version.</p>
 	<p>
