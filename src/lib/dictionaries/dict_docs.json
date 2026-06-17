@@ -154,6 +154,16 @@
 			"groups": {
 				"Brief'": { "label_singular": "Brief", "label_plural": "Briefe", "slug": null }
 			}
+		},
+		"photos": {
+			"name": "Fotografien",
+			"key_singular": "photo",
+			"label_plural": "Fotografien",
+			"metadata": {
+			},
+			"groups": {
+				"Fotografie'": { "label_singular": "Fotografie", "label_plural": "Fotografien", "slug": null }
+			}
 		}
 	}
 }

@@ -5,11 +5,13 @@ import { documents as docs } from '$lib/data/documents.json';
 export type TLettersKeys = keyof (typeof docs)['letters'];
 export type TSmallformsKeys = keyof (typeof docs)['smallforms'];
 export type TLongformsKeys = keyof (typeof docs)['longforms'];
+export type TPhotosKeys = keyof (typeof docs)['photos'];
 
 // Types
 import { type TLettersGroups } from './TLettersGroups';
 import { type TSmallformsGroups } from './TSmallformsGroups';
 import { type TLongformsGroups } from './TLongformGroups';
+import { type TPhotosGroups } from './TPhotosGroups';
 
 // From Register
 import { type TPeopleKeys } from '../register/TPeopleKeys';
@@ -56,6 +58,7 @@ export type TDocuments = {
 						smallforms?: TSmallformsKeys[];
 						longforms?: TLongformsKeys[];
 						letters?: TLettersKeys[];
+						photos?: TPhotosKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
@@ -76,6 +79,7 @@ export type TDocuments = {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
 					letters?: TLettersKeys[];
+					photos?: TPhotosKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -119,6 +123,7 @@ export type TDocuments = {
 						smallforms?: TSmallformsKeys[];
 						longforms?: TLongformsKeys[];
 						letters?: TLettersKeys[];
+						photos?: TPhotosKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
@@ -139,6 +144,7 @@ export type TDocuments = {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
 					letters?: TLettersKeys[];
+					photos?: TPhotosKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -182,6 +188,7 @@ export type TDocuments = {
 						smallforms?: TSmallformsKeys[];
 						longforms?: TLongformsKeys[];
 						letters?: TLettersKeys[];
+						photos?: TPhotosKeys[];
 						people?: TPeopleKeys[];
 						places?: TPlacesKeys[];
 						events?: TEventsKeys[];
@@ -202,6 +209,72 @@ export type TDocuments = {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
 					letters?: TLettersKeys[];
+					photos?: TPhotosKeys[];
+					people?: TPeopleKeys[];
+					places?: TPlacesKeys[];
+					events?: TEventsKeys[];
+					orgs?: TOrgsKeys[];
+					bibls?: TBiblsKeys[];
+					keywords?: TKeywordsKeys[];
+				};
+				manuscript: {
+					iiif_urls: string[];
+				};
+				numPages: number | null;
+				edition: {
+					fullyEdited: boolean;
+				};
+			};
+		};
+		photos: {
+			[key in TPhotosKeys]: {
+				slug?: string; //! discuss whether this is identical to key
+				name: string;
+				date: { from: string; to: string };
+				type: TPhotosGroups | '?' | '';
+				metadata: {
+					authors?: string[];
+					summary?: string;
+					pubDate: string;
+					title_full: string;
+					title_short?: string;
+					label: string;
+					editor_workflow: 'ez_ttf_of';
+					year: string;
+					pubPosthumOnly: boolean | string;
+					pubPlace?: string;
+					signature: string;
+					pubDetails?: string;
+					textstufen_edited: string[];
+					textzeugen_nonedited: string[];
+					series: string;
+					comment: string;
+					globalEntities?: {
+						smallforms?: TSmallformsKeys[];
+						longforms?: TLongformsKeys[];
+						letters?: TLettersKeys[];
+						photos?: TPhotosKeys[];
+						people?: TPeopleKeys[];
+						places?: TPlacesKeys[];
+						events?: TEventsKeys[];
+						orgs?: TOrgsKeys[];
+						bibls?: TBiblsKeys[];
+						keywords?: TKeywordsKeys[];
+					};
+					maximum: string;
+					travel: string;
+					archive: string;
+					archiveCollation: string;
+					pubSecondary: string;
+					urlOnlineResource: string;
+					note: string;
+				};
+				entities: {
+					//! unsure if I should drop this, since fully redundant with register.json
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					letters?: TLettersKeys[];
+					photos?: TPhotosKeys[];
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];

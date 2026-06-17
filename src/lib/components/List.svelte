@@ -123,7 +123,7 @@
 			'align-left block w-90 border-b px-5 py-3 text-left',
 			!isMultiColumn && key === itemKey && 'bg-dark-10 font-bold text-background-contrast'
 		]}
-		href={resolve(itemVariant === 'documents' ? `/edition/${key}` : `/edition/register/${key}`)}
+		href={resolve(itemVariant === 'documents' ? `/${key}` : `/register/${key}`)}
 	>
 		<span class="overflow-hidden whitespace-normal">
 			{name ? `${name}` : '...'}
