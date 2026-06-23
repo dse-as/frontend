@@ -41,10 +41,10 @@
 		regMapPreviewPath: any; //! FIX any type
 	} = $props();
 
-	// Function to face-out MetadataTable on scroll
+	// Function to fade-out MetadataTable on scroll
 	let opacityMetadataTable = $state(100); // start with full opacity
 	function getScrollPosition(ev: Event) {
-		const maxScroll = 300; // in pixel
+		const maxScroll = 100; // in pixel
 		const target = ev.target as HTMLElement;
 		opacityMetadataTable = Math.max(0, Math.min(1 - target.scrollTop / maxScroll, 1)) * 100;
 	}
@@ -166,6 +166,7 @@
 <!-- Container -->
 <!-- Note: TypeScript fails to infer the correct type for 'regAttributes' relative to the 'docType' condition,
      necessitating manual casting to 'regAttrsTyped' throughout this block. -->
+
 <div
 	onscroll={getScrollPosition}
 	class="w-full overflow-y-auto pl-15"
@@ -174,7 +175,7 @@
 	<!-- MetadataTable (by Type) -->
 	{#if docType === 'people'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPeople, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">
 			{regAttrsTyped.name}
 			{printBirthRange(regAttrsTyped.dateBirth, regAttrsTyped.dateDeath)}
 		</h1>
@@ -189,7 +190,7 @@
 		])}
 	{:else if docType === 'places'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsPlaces, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">{regAttrsTyped.name}</h1>
 
 		{@render MetadataTable([
 			'type',
@@ -204,7 +205,7 @@
 		{@render MapPreview(regMapPreviewPath?.img_path)}
 	{:else if docType === 'orgs'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsOrgs, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
 			regAttrsTyped.nameVariants.length && 'nameVariants',
@@ -213,15 +214,16 @@
 		])}
 	{:else if docType === 'keywords'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsKeywords, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable(['type', regAttrsTyped.gndNumber && 'gndNumber', 'note'])}
 	{:else if docType === 'events'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsEvents, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([regAttrsTyped.date && 'date', 'note'])}
+		{@render MapPreview(regMapPreviewPath?.img_path)}
 	{:else if docType === 'bibls'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsBibls, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>
+		<h1 class="h1 sticky top-0 z-90 w-full bg-background pb-10">{regAttrsTyped.name}</h1>
 		{@render MetadataTable([
 			'type',
 			'authorIds',
