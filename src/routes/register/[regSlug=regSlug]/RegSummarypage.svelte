@@ -1,5 +1,5 @@
 <script lang="ts" generics="T extends TRegTypes">
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { printDateRange, printBirthRange } from '$lib/functions/ease_of_use/dateFunctions';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import type {
@@ -26,7 +26,8 @@
 		regDict,
 		regAttributes,
 		crossRef,
-		cheatPageHeightInRegSingleColView = ''
+		cheatPageHeightInRegSingleColView = '',
+		regMapPreviewPath
 	}: {
 		docType: T;
 		regDict: TRegDict['dict_register'][T];
@@ -37,6 +38,7 @@
 			linkedDocs: TLinkedDoc[];
 		};
 		cheatPageHeightInRegSingleColView: string;
+		regMapPreviewPath: any; //! FIX any type
 	} = $props();
 
 	// Function to face-out MetadataTable on scroll
@@ -79,6 +81,23 @@
 			{/if}
 		{/each}
 	</table>
+{/snippet}
+
+<!-- Map Preview -->
+{#snippet MapPreview(regMapPreviewPath: string)}
+	<div class="relative container mx-5 mb-10 h-80 w-250 border-2 border-dark-40">
+		<div
+			class="relative container h-full w-full bg-cover bg-center bg-no-repeat"
+			style={`background-image: url('${asset(regMapPreviewPath)}');`}
+		>
+			<div class="container-centered absolute h-full w-full bg-white opacity-60"></div>
+			<a
+				class="container-centered absolute h-full w-full font-sans text-lg font-bold text-black"
+				href={resolve('/map')}
+				>Zur Kartenansicht
+			</a>
+		</div>
+	</div>
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
@@ -182,6 +201,7 @@
 			regAttrsTyped.country && 'country',
 			'note'
 		])}
+		{@render MapPreview(regMapPreviewPath?.img_path)}
 	{:else if docType === 'orgs'}
 		{@const regAttrsTyped = regAttributes as Record<TRegAttrsOrgs, any>}
 		<h1 class="h1 sticky top-0 z-90 w-full pb-10">{regAttrsTyped.name}</h1>

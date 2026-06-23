@@ -1,7 +1,8 @@
-import type { PageServerLoad } from './$types';
 import type { EntryGenerator } from './$types';
+import type { PageServerLoad } from './$types';
 import { register as reg } from '$lib/data/register.json';
 import { documents as allDocsRaw } from '$lib/data/documents.json';
+import { map_previews } from '$lib/data/map_previews.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys, TDocuments } from '$lib/types/documents/TDocuments';
 import type { TRegister, TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
@@ -88,10 +89,14 @@ export const load: PageServerLoad = async ({ parent }) => {
 		...(Object.keys(reg.bibls) as TBiblsKeys[]),
 		...(Object.keys(reg.keywords) as TKeywordsKeys[])
 	];
-	const regAttributes =
-		regType && regSlug && regTypeIndex.includes(regSlug as any)
-			? resolveReg(reg, regSlug as TRegKeysFlat)?.item
-			: undefined;
+	const resolvedReg = resolveReg(reg, regSlug as TRegKeysFlat);
+	const isValidKeySlug = regType && regSlug && regTypeIndex.includes(regSlug as any);
+	const regAttributes = isValidKeySlug ? resolvedReg?.item : undefined;
+	const regMapPreviewPath = isValidKeySlug
+		? ((map_previews[regType as keyof typeof map_previews] as Record<string, any>)?.[
+				resolvedReg?.regId as string
+			] as string)
+		: undefined;
 
 	// Resolve cross-register references
 	const crossRef: {
@@ -116,5 +121,5 @@ export const load: PageServerLoad = async ({ parent }) => {
 		crossRef.linkedDocs = resolveLinkedDocs(regAttributes.docs);
 	}
 
-	return { regTypeEntries, regAttributes, crossRef };
+	return { regTypeEntries, regAttributes, crossRef, regMapPreviewPath };
 };

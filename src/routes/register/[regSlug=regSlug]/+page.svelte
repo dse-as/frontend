@@ -74,6 +74,7 @@
 			regDict={dictReg[regType]}
 			regAttributes={data.regAttributes}
 			crossRef={data.crossRef}
+			regMapPreviewPath={data.regMapPreviewPath}
 			{cheatPageHeightInRegSingleColView}
 		/>
 	</div>
