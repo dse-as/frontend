@@ -46,5 +46,8 @@
 		<li>
 			&rarr; <a class="underline" href={resolve('/smallform_0231')}>Smallform 0231</a>
 		</li>
+		<li>
+			&rarr; <a class="underline" href={resolve('/smallform_0529')}>Smallform 0529</a>
+		</li>
 	</ul>
 </div>

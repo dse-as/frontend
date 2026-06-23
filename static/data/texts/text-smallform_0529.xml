@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://cdn.jsdelivr.net/gh/dse-as/oxygen-framework@latest/schema/tei_dseas.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://cdn.jsdelivr.net/gh/dse-as/oxygen-framework@latest/schema/dseas.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="smallform_0529" type="dseas-smallform" xml:base="https://annemarie-schwarzenbach.ch/smallform_0529#"> 
+   <teiHeader> 
+      <fileDesc> 
+         <titleStmt> 
+            <title>Schweizer Pionierarbeit im Urwald. III. Die Reise nach Molanda. IV. Zwölfhundertfünfzig Hektaren</title>
+          </titleStmt>
+          <publicationStmt> 
+            <p/>
+          </publicationStmt>
+          <notesStmt> 
+            <note type="global_comment"> 
+               <p><label>Entstehungskontext:</label> Nachdem sich zu Beginn ihrer <rs type="travel" key="travel_0021" xml:id="r38">Kongoreise</rs>
+                  (1941–1942) im Juni 1941 Schwarzenbachs Hoffnung zerschlug, für die Exilregierung <rs type="place" key="place_0136" xml:id="r33"
+                     >Frankreichs</rs> in <rs type="place" key="place_0013" xml:id="r32">Brazzaville</rs> tätig zu werden, entschloss sie sich, das
+                  tiefere Landesinnere zu erkunden. Sie reiste deshalb im Juli mit dem Schiff nach <rs type="place" key="place_0038" xml:id="r44"
+                     >Lisala</rs> und mit einem Lastwagen weiter zur Plantage <rs type="place" key="place_0050" xml:id="r45">Molanda</rs>, die vom
+                  Ehepaar <rs type="person" key="person_0627" xml:id="r35">Ami Paul Vivien</rs> und <rs type="person" key="person_0627" xml:id="r36"
+                     >Hedwig Vivien</rs> geführt wurde. Dort verbrachte sie den August und September 1941, bevor sie mit <rs type="person"
+                     key="person_0628" xml:id="r40">Hedwig Vivien</rs> bis in den <rs type="place" key="place_0760" xml:id="r41">Tschad</rs> und
+                  wieder zurück reist. </p>
+               <p>Schwarzenbachs Bewunderung für deren Urbarmachung des Dschungels war gekoppelt an implizit bis offen geäusserte rassistische
+                  Verachtung für die einheimische Bevölkerung. Diese kommt etwa in der vorliegenden Beschreibung einheimischer Kinder als 'Rudel' bei
+                  gleichzeitiger Nennung mit Hunden und Ziegen zum Ausdruck. Es sind neben ausdrücklichen Stereoptypien auch Auslassungen, welche die
+                  vermeintliche Überlegenheit weisser Kolonialist:innen betonen, hier namentlich <rs type="person" key="person_0627" xml:id="r48">Ami
+                     Paul</rs> und <rs type="person" key="person_0628" xml:id="r49">Hedwig Vivien</rs>. Indem sie am Ende des Artikels die
+                  Urbarmachung des Urwalds als Tat dieser "zwei Menschen allein" hervorhebt, blendet Schwarzenbach die Arbeit der lokalen Bevölkerung
+                  aus. Ungeklärt bleibt dabei auch, wie freiwillig oder in welchem vertraglichen Verhältnis diese Arbeit getan wurde. Noch
+                  ausdrücklicher tritt Schwarzenbachs Rassismus im<rs type="letter" key="letter_0136" xml:id="r47">Brief an Carson McCullers vom 29.
+                     Juli 1941 </rs>zu Tage. </p>
+               <p><label>Publikationskonstext:</label> Über ihre Reise und ihren Aufenthalt in <rs type="place" key="place_0050" xml:id="r34"
+                     >Molanda</rs> verfasste Schwarzenbach für die <rs type="org" key="organisation_0248" xml:id="r39">Thurgauer Zeitung</rs> die
+                  dreiteilige Artikel-Serie "Schweizer Pionierarbeit im Urwald", jeder der drei Artikel ist durch zwei Untertitel geteilt. </p>
+               <p><label>Historischer Kontext:</label> Die <rs type="place" key="place_0110" xml:id="r37">Schweiz</rs> besaß keine offiziellen
+                  Kolonien, hat jedoch eine lange Tradition von Auswanderer:innen, insbesondere von landwirtschaftlichen Kolonist:innen, auf die der
+                  Ausdruck der Pionierarbeit in Schwarzenbachs Serientitel anspielt. Zur Zeit der Publikation befindet sich die <rs type="place"
+                     key="place_0096" xml:id="r42">Schweiz</rs> zudem in der sogenannten Anbauschlacht, einer breit angelegten Bestrebung, den
+                  Nahrungsbedarf des ganzen Landes durch die inländische Landwirtschaft zu decken. Die Schilderung der erfolgreichen 'Pionierarbeit'
+                  in <rs type="place" key="place_0447" xml:id="r43">Afrika</rs> spiegelt dies. </p>
+             </note>
+          </notesStmt>
+          <sourceDesc> 
+            <bibl corresp="smallform_0529"> 
+               <persName key="person_0082" type="author">Schwarzenbach, Annemarie (1908-1942)</persName>
+                <bibl type="Zeitungsartikel">
+                  <title key="organisation_0248" level="j">Thurgauer Zeitung</title>
+                  <date when="1941-11-20"/>
+                  <biblScope>Nr. 273, 2. Bl. </biblScope>
+               </bibl>
+             </bibl>
+             <listBibl type="related">
+               <listBibl type="editions">
+                  <bibl>
+                     <title key="5LE9JAW8" level="s">Schwarzenbach (2012): Afrikanische Schriften: Reportagen - Lyrik - Autobiographisches. Mit dem
+                        Erstdruck von "Marc" [5LE9JAW8], book</title>
+                     <biblScope>S. 90–94</biblScope>
+                     <note/>
+                  </bibl>
+               </listBibl> 
+               <listBibl type="online"> 
+                  <bibl/>
+                </listBibl>
+             </listBibl>
+          </sourceDesc>
+       </fileDesc>
+       <profileDesc> 
+         <langUsage> 
+            <language ident="de"/>
+          </langUsage>
+          <textClass> 
+            <keywords ana="keywords"> 
+               <list> 
+                  <item sameAs="4116383-7"/>
+                  <item sameAs="4194681-9"/>
+                  <item sameAs="4034402-2"/>
+                  <item sameAs="4073624-6"/>
+                  <item sameAs="4309343-7"/>
+                  <item sameAs="4076001-7"/>
+                </list>
+             </keywords>
+             <keywords ana="travels"> 
+               <list> 
+                  <item sameAs="travel_0021"/>
+                </list>
+             </keywords>
+          </textClass>
+       </profileDesc>
+    </teiHeader>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smallform_0529_facs.xml"> 
+      <xi:fallback/>
+       <!--Inclusion path will be adjusted later.-->
+    </xi:include>
+    <text> 
+      <body> 
+         <div type="smallform">
+            <pb xml:id="p001" facs="https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0529_001.tif/info.json" n="2"/>
+            <milestone unit="textregion" xml:id="p001_r"/>
+            <head><lb xml:id="p001_r_tl_1"/>
+            Schweizer Pionierarbeit im Urwald</head>
+            <div>
+               <head><lb xml:id="p001_r_tl_2"/>
+               III. Die Reise nach <rs type="place" key="place_0050" xml:id="r4">Molanda</rs></head>
+               <p>
+                  <lb xml:id="p001_r_tl_3"/>Während der siebentägigen Flußreise von <rs type="place" key="place_0031" xml:id="r2">Leopold
+                     <lb xml:id="p001_r_tl_4" break="no"/>ville</rs> bis <rs type="place" key="place_0038" xml:id="r1">Lisala</rs> machte ich die
+                  erste Bekanntschaft mit
+                  <lb xml:id="p001_r_tl_5"/>dem Urwald <rs type="place" key="place_0860" xml:id="r5">Zentralafrikas</rs>. Obwohl ich ihn noch nicht
+                  <lb xml:id="p001_r_tl_6"/>betreten hatte, sondern ihn nur vom Boot aus er
+                  <lb xml:id="p001_r_tl_7" break="no"/>blickte, war ich davon doch tief beeindruckt. Die bei
+                  <lb xml:id="p001_r_tl_8" break="no"/>den Flußufer sind von dichten, grünen Wänden ge
+                  <lb xml:id="p001_r_tl_9" break="no"/>säumt, dahinter dehnt sich der Dschungel unendlich
+                  <lb xml:id="p001_r_tl_10"/>aus; nichts scheint die gleichmäßigen Wogen dieser
+                  <lb xml:id="p001_r_tl_11"/>Tropenvegetation zu unterbrechen als das majestäti
+                  <lb xml:id="p001_r_tl_12" break="no"/>sche Band des Stromes, dem wir Tag und Nacht ent
+                  <lb xml:id="p001_r_tl_13" break="no"/>lang glitten. Ich fragte mich wirklich, ob sich dieses
+                  <lb xml:id="p001_r_tl_14"/>Bild jemals ändern und wir uns einem Ziel nähern
+                  <lb xml:id="p001_r_tl_15"/>würden. Die
+                  <anchor xml:id="a1"/>Schiffahrtsgesellschaft "<rs type="org" key="organisation_0262" xml:id="r6">Otraco</rs>"
+                  <note type="annotation" xml:id="n1" targetEnd="a1">Die belgische Kolonialbehörde <rs type="org" key="organisation_0262" xml:id="r7"
+                        >OTRACO</rs> (Office d'Exploitation des Transports Coloniaux) war nicht nur für die Schiffahrt, sondern auch für weitere
+                     Transportmittel zuständig.</note> hatte mir
+                  <lb xml:id="p001_r_tl_16"/>auf
+                  <anchor xml:id="a4"/>ihrem schnellsten Dampfer
+                  <note type="annotation" xml:id="n4" targetEnd="a4">Vgl. Schwarzenbachs <rs type="image" key="image_3650" xml:id="r52">Fotografie des
+                        Dampfers</rs>, sie hat zudem auch <rs type="image" key="image_3663" xml:id="r53">kleinere Schiffe von OTRACO</rs>
+                     fotografiert.</note>, dem 800-Tonner "
+                  <anchor xml:id="a5"/>Co
+                  <lb xml:id="p001_r_tl_17" break="no"/>lonel Chaltin
+                  <note type="annotation" xml:id="n5" targetEnd="a5">Das Schiff ist nach dem belgischen Kolonialoffizier <rs type="person"
+                        key="person_0626" xml:id="r31">Louis Napoléon Chaltin</rs> benannt, der im <rs type="place" key="place_0834" xml:id="r46"
+                        >Sudan</rs> mithalf, den sogenannten Mahdi-Aufstand der lokalen Bevölkerung niederzuschlagen.</note>", ein Dienstbillett als
+                  Journalistin ge
+                  <lb xml:id="p001_r_tl_18" break="no"/>geben; außer mir waren ein schottisches Missionsehe
+                  <lb xml:id="p001_r_tl_19" break="no"/>paar, zwei französische Offiziere und zwei Belgier an
+                  <lb xml:id="p001_r_tl_20"/>Bord, womit die paar Kabinen des kleinen Passagier
+                  <lb xml:id="p001_r_tl_21" break="no"/>decks auch schon voll besetzt waren. Wenn wir des
+                  <lb xml:id="p001_r_tl_22"/>nachts bei einem Negerdorf anhielten, um unter un
+                  <lb xml:id="p001_r_tl_23" break="no"/>geheurem Getöse Holz an Bord zu nehmen, wurde es
+                  <lb xml:id="p001_r_tl_24"/>in den Kabinen erstickend heiß, und man konnte wegen
+                  <lb xml:id="p001_r_tl_25"/>des Lärms, der Hitze und der Moskitoschwärme wenig
+                  <lb xml:id="p001_r_tl_26"/>schlafen. Ich verbrachte oft ganze Nächte auf der Brücke
+                  <lb xml:id="p001_r_tl_27"/>mit dem Kapitän, einem jungen <choice>
+                     <sic>Flämen</sic>
+                     <corr>Flamen</corr>
+                  </choice>, und seinem
+                  <lb xml:id="p001_r_tl_28"/>ersten Offizier, den einzigen Weißen der Besatzung.
+                  <lb xml:id="p001_r_tl_29"/>Wir hörten dann Radio aus aller Welt und über
+                  <lb xml:id="p001_r_tl_30" break="no"/>zeugten uns so, daß es hinter dem unabsehbaren Aequa
+                  <lb xml:id="p001_r_tl_31" break="no"/>torwald wirklich noch andere Gegenden gebe. Aber ich
+                  <lb xml:id="p001_r_tl_32"/>fragte mich vergebens, wie es möglich sei, in diesen
+                  <lb xml:id="p001_r_tl_33"/>Wald einzudringen, ihn zu roden und bewohnbar zu
+                  <lb xml:id="p001_r_tl_34"/>machen.</p>
+               <p>
+                  <lb xml:id="p001_r_tl_35"/>Als ich in <rs type="place" key="place_0038" xml:id="r8">Lisala</rs> an Land ging, fand ich auf dem
+                  <lb xml:id="p001_r_tl_36"/>Postbureau das Telegramm, welches der Schweizer
+                  <lb xml:id="p001_r_tl_37" break="no"/>konsul in <rs type="place" key="place_0031" xml:id="r3">Leopoldville</rs> nach Molanda
+                  geschickt hatte
+                  <lb xml:id="p001_r_tl_38"/>um meine Ankunft zu melden. Man erklärte mir, daß
+                  <lb xml:id="p001_r_tl_39"/>Herr <rs type="person" key="person_0627" xml:id="r21">Vivien</rs> nur zweimal im Monat einen Boten
+                  <lb xml:id="p001_r_tl_40"/>schicke, und daß man den nächsten erst in etwa acht
+                  <lb xml:id="p001_r_tl_41"/>Tagen erwarte. <rs type="place" key="place_0050" xml:id="r9">Molanda</rs> sei 250 Kilometer entfernt,
+                  <lb xml:id="p001_r_tl_42"/>und ich würde schwerlich einen Camion finden, der in
+                  <lb xml:id="p001_r_tl_43"/>jene Richtung führe. Ich habe dann in den zwölf Ta
+                  <lb xml:id="p001_r_tl_44" break="no"/>gen, die ich in <rs type="place" key="place_0038" xml:id="r10">Lisala</rs> verbringen mußte,
+                  mehrere Last
+                  <lb xml:id="p001_r_tl_45" break="no"/>wagen abfahren sehen; die einen fuhren auf eine Plan
+                  <lb xml:id="p001_r_tl_46" break="no"/>tage am <rs type="place" key="place_0861" xml:id="r22">Mangala-Fluß</rs>, die einer großen
+                  Gesellschaft
+                  <lb xml:id="p001_r_tl_47"/>gehört; aber niemand konnte mir genau sagen, wie
+                  <lb xml:id="p001_r_tl_48"/>lange ich von dort in einer Pirroque, einem Ruder
+                  <lb xml:id="p001_r_tl_49" break="no"/>schiff der Eingeborenen, bis <rs type="place" key="place_0050" xml:id="r11">Molanda</rs>
+                  brauchen würde.
+                  <lb xml:id="p001_r_tl_50"/>Andere fuhren zu kleinen Dörfern im Innern, wo es
+                  <lb xml:id="p001_r_tl_51"/>wohl einen portugiesischen Händler, aber vielleicht kei
+                  <lb xml:id="p001_r_tl_52" break="no"/>nen Wagen zur Weiterreise gab. Ein Camion startete
+                  <lb xml:id="p001_r_tl_53"/>endlich nach <rs type="place" key="place_0862" xml:id="r23">Likimi</rs>, einem Posten, der nur etwa 50
+                  <lb xml:id="p001_r_tl_54"/>Kilometer von <rs type="place" key="place_0050" xml:id="r12">Molanda</rs> entfernt ist. Aber das Ge
+                  <lb xml:id="p001_r_tl_55" break="no"/>fährt schien mir in bedenklichem Zustand, und ich hatte
+                  <lb xml:id="p001_r_tl_56"/>recht, ihm zu mißtrauen. Als ich wenige Tage später
+                  <lb xml:id="p001_r_tl_57"/>mit einem Handelsagenten in einem Chevrolet-Liefer
+                  <lb xml:id="p001_r_tl_58" break="no"/>wagen aufbrach, fanden wir den Camion kaum einige
+                  <lb xml:id="p001_r_tl_59"/>Stunden von <rs type="place" key="place_0038" xml:id="r13">Lisala</rs> entfernt verlassen auf der Dschun
+                  <lb xml:id="p001_r_tl_60" break="no"/>gelpiste. Vom schwarzen Chauffeur war weit und breit
+                  <lb xml:id="p001_r_tl_61"/>nichts zu sehen. Wir untersuchten die Ladung, und
+                  <lb xml:id="p001_r_tl_62"/>nahmen fünf große Korbflaschen Wein mit, von denen
+                  <lb xml:id="p001_r_tl_63"/>wir annahmen, sie seien für einen Händler in <rs type="place" key="place_0862" xml:id="r24">Likimi</rs>
+                  <lb xml:id="p001_r_tl_64"/>bestimmt. Später zerbrach eine davon, und der ganze
+                  <lb xml:id="p001_r_tl_65"/>Wagen samt meinen beiden Handtaschen und einer
+                  <lb xml:id="p001_r_tl_66"/>kleinen Antilope, die unser Chauffeur unterwegs ge
+                  <lb xml:id="p001_r_tl_67" break="no"/>tötet hatte, waren von zehn Litern portugiesischem
+                  <lb xml:id="p001_r_tl_68"/>Rotwein durchtränkt.</p>
+               <p>
+                  <lb xml:id="p001_r_tl_69"/>Die Fahrt durch den Urwald schien mir eintönig
+                  <lb xml:id="p001_r_tl_70"/>und bedrückend. Es gab zwar viele Eingeborenen
+                  <lb xml:id="p001_r_tl_71" break="no"/>dörfer am Weg; aber diese Ansammlung gelber, mit
+                  <lb xml:id="p001_r_tl_72"/>Palmblätter gedeckter Erdhütten genügten kaum, um
+                  <lb xml:id="p001_r_tl_73"/>auch nur eine Lichtung zu öffnen, und die winzigen,
+                  <lb xml:id="p001_r_tl_74"/>mit Mais, Maniok oder Reis bepflanzten Felder gin
+                  <lb xml:id="p001_r_tl_75" break="no"/>gen wieder in die dichte Wirrnis des Dschungels über.
+                  <lb xml:id="p001_r_tl_76"/>In einem Dorf zeigten uns die Schwarzen ein frisches
+                  <lb xml:id="p001_r_tl_77"/>Leopardenfell, in einem anderen brachten sie uns
+                  <lb xml:id="p001_r_tl_78"/>Erdnüsse, in einem dritten luden wir Salzsäcke vor
+                  <lb xml:id="p001_r_tl_79"/>einer Hütte ab, die als Niederlage einer großen Ge
+                  <lb xml:id="p001_r_tl_80" break="no"/>sellschaft diente und wo ein schwarzer, europäisch ge
+                  <lb xml:id="p001_r_tl_81" break="no"/>keideter "Agent" seinen mehr oder minder nackten
+                  <lb xml:id="p001_r_tl_82"/>Stammesgenossen außer Salz noch japanische Baum
+                  <lb xml:id="p001_r_tl_83" break="no"/>wollstoffe verkauft. Die meisten Dörfer schienen fast
+                  <lb xml:id="p001_r_tl_84"/>ausgestorben; vielleicht war ein Teil der Männer im
+                  <lb xml:id="p001_r_tl_85"/>Wald auf der Jagd; einige Alte lagen schläfrig auf
+                  <lb xml:id="p001_r_tl_86"/>niedrigen Bettgestellen; die Frauen hockten vor ihren
+                  <lb xml:id="p001_r_tl_87"/>Töpfen und kleinen Feuern, die von drei mit den
+                  <lb xml:id="p001_r_tl_88"/>Spitzen zusammengelegten Baumästen genährt wurden.
+                  <lb xml:id="p001_r_tl_89"/>
+                  <anchor xml:id="a10"/>Es gab Rudel von nackten Kindern
+                  <note type="annotation" xml:id="n10" targetEnd="a10">Schwarzenbach fotografiert auf ihrer Reise immer wieder <rs type="image"
+                        key="image_3840" xml:id="r55">Ansammlungen von Kindern</rs>.</note>, magere, großohrige
+                  <lb xml:id="p001_r_tl_90"/>Hunde, und manchmal ein paar Ziegen. Aber das
+                  <lb xml:id="p001_r_tl_91"/>alles schien in der feuchten Hitze und grünen Halb
+                  <lb xml:id="p001_r_tl_92" break="no"/>dämmerung des Dschungels dahin zu vegetieren ohne
+                  <lb xml:id="p001_r_tl_93"/>rechtes Leben, ohne Freude. Wir wurden gegen Abend
+                  <lb xml:id="p001_r_tl_94"/>auf
+                  <anchor xml:id="a9"/>einer primitiven, aus drei zusammengekuppelten
+                  <lb xml:id="p001_r_tl_95"/>Pirroquen bestehenden Fähre
+                  <note type="annotation" xml:id="n9" targetEnd="a9">Siehe hierzu Schwarzenbachs <rs type="image" key="image_3670" xml:id="r54"
+                        >Fotografie der Fähre</rs>.</note> über den <rs type="place" key="place_0861" xml:id="r25">Mangala-Fluß</rs>
+                  <lb xml:id="p001_r_tl_96"/>gesetzt und gerieten dann in einen heftigen Regen, der
+                  <lb xml:id="p001_r_tl_97"/>sich durch Windstöße und Blitze ankündigte und die
+                  <lb xml:id="p001_r_tl_98"/>ganze Urwaldwelt plötzlich unheimlich belebte. Aber
+                  <lb xml:id="p001_r_tl_99"/>da waren wir schon ganz nahe von <rs type="place" key="place_0050" xml:id="r14">Molanda</rs>, und ich
+                  <lb xml:id="p001_r_tl_100"/>atmete auf, als ich sah, wie der Dschungel sich lichtete.</p>
+               <p>
+                  <lb xml:id="p001_r_tl_101"/>Man verließ die beklemmende Enge des Pfads,
+                  <lb xml:id="p001_r_tl_102"/>ließ den Waldrand wie die Mauer einer Unterwelt
+                  <lb xml:id="p001_r_tl_103"/>zurück, und fuhr jetzt zwischen schönen Palmenreihen
+                  <lb xml:id="p001_r_tl_104"/>durch ein ansteigendes Gelände, über dem sich ein
+                  <lb xml:id="p001_r_tl_105"/>hoher Wolkenhimmel wölbte. Man empfand ein dank
+                  <lb xml:id="p001_r_tl_106" break="no"/>bares Gefühl der Befreiung und konnte die Weite des
+                  <lb xml:id="p001_r_tl_107"/>gerodeten Landes fühlen, obwohl es schon Nacht wurde
+                  <lb xml:id="p001_r_tl_108"/>und ein neuer, platzartiger Regen die Dunkelheit ver
+                  <lb xml:id="p001_r_tl_109" break="no"/>stärkte. Etwa acht Kilometer fuhren wir so durch
+                  <lb xml:id="p001_r_tl_110"/>Palmenpflanzungen und Felder mit Kaffeesträuchern
+                  <lb xml:id="p001_r_tl_111"/>bis zum
+                  <anchor xml:id="a3"/>Haus, dessen großes, tief über die rötlichen
+                  <lb xml:id="p001_r_tl_112"/>Lehmmauern gesenktes und mit Palmblättern bedeck
+                  <lb xml:id="p001_r_tl_113" break="no"/>tes Dach an das heimelige Strohdach eines Aargauer
+                  <lb xml:id="p001_r_tl_114"/>Bauernhauses gemahnte
+                  <note type="annotation" xml:id="n3" targetEnd="a3">Schwarzenbach hat dieses <rs type="image" key="image_3657" xml:id="r50">Haus in
+                        Molanda</rs> fotografiert.</note>. Ein weißgekleideter <rs type="person" key="person_0173" xml:id="r15">Neger</rs>
+                  <lb xml:id="p001_r_tl_115"/>mit einer Petrollampe in der Hand öffnete die Türe. <milestone unit="textregion" xml:id="p001_r_2"/>
+                  <lb xml:id="p001_r_2_tl_1"/>Bald darauf saß ich nach einem warmen Bad und in
+                  <lb xml:id="p001_r_2_tl_2"/>trockenen Kleidern am Tisch im großen Wohnraum
+                  <lb xml:id="p001_r_2_tl_3"/>und merkte beim Anblick von kaltem
+                  <anchor xml:id="a6"/>Gitzibraten
+                  <note type="annotation" xml:id="n6" targetEnd="a6">Gitzi ist ein schweizerdeutscher Ausdruck für eine junge Ziege, meist für dessen
+                     Ziegenfleisch verwendet.</note>, fri
+                  <lb xml:id="p001_r_2_tl_4" break="no"/>schem Mais, Spiegeleiern und einer Rotweinkaraffe,
+                  <lb xml:id="p001_r_2_tl_5"/>daß ich mächtigen Hunger und Durst hatte.</p>
+            </div>
+            <div>
+               <lb xml:id="p001_r_2_tl_6"/>
+               <head>IV. Zwölfhundertfünfzig Hektaren</head>
+               <p>
+                  <lb xml:id="p001_r_2_tl_7"/>
+                  <anchor xml:id="a8"/>Molanda heißt ein kleines Gewässer
+                  <note type="annotation" xml:id="n8" targetEnd="a8">Das namensgebende Gewäßer lässt sich heute nicht mehr auf Karten
+                     ausmachen.</note>, das am Fuß
+                  <lb xml:id="p001_r_2_tl_8"/>einer schönen, breiten Anhöhe in die <rs type="place" key="place_0861" xml:id="r26">Mangala</rs> mün
+                  <lb xml:id="p001_r_2_tl_9" break="no"/>det. Dieser Nebenfluß des <rs type="place" key="place_0057" xml:id="r27">Kongos</rs> ist zwar
+                  stattlich
+                  <lb xml:id="p001_r_2_tl_10"/>genug, damit die kleinen <rs type="org" key="organisation_0262" xml:id="r16">Otraco</rs>-Dampfer
+                  hinauffah
+                  <lb xml:id="p001_r_2_tl_11" break="no"/>ren können, um Waren in den Dörfern abzusetzen und
+                  <lb xml:id="p001_r_2_tl_12"/>die Oelfässer und Kaffeesäcke der Plantagen zu ver
+                  <lb xml:id="p001_r_2_tl_13" break="no"/>laden; aber wie er sich zwischen seinen dichtbewach
+                  <lb xml:id="p001_r_2_tl_14" break="no"/>senen, grünen Ufern hindurchwindet, wirkt er doch wie
+                  <lb xml:id="p001_r_2_tl_15"/>eine bescheidene Ader im Inneren des gewaltigen
+                  <lb xml:id="p001_r_2_tl_16"/>Aequatordschungels. Der Name <rs type="place" key="place_0050" xml:id="r17">Molanda</rs> wurde dann
+                  <lb xml:id="p001_r_2_tl_17"/>auf die Plantage übertragen, die im Jahre 1925 auf
+                  <lb xml:id="p001_r_2_tl_18"/>jener Anhöhe über der <rs type="place" key="place_0861" xml:id="r28">Mangala</rs> begonnen wurde.
+                  <lb xml:id="p001_r_2_tl_19"/>Man schlug eine erste Bresche in den Urwald, ging
+                  <lb xml:id="p001_r_2_tl_20"/>ihm mit Buschmessern und Feuer zu Leibe, ließ zuerst
+                  <lb xml:id="p001_r_2_tl_21"/>das Unterholz schneiden, dann die kleineren Stämme,
+                  <lb xml:id="p001_r_2_tl_22"/>dann die Baumriesen, und zündete zuletzt den so ge
+                  <lb xml:id="p001_r_2_tl_23" break="no"/>fällten Dschungel an. Heute bezeichnet <rs type="place" key="place_0050" xml:id="r18"
+                     >Molanda</rs> nicht
+                  <lb xml:id="p001_r_2_tl_24"/>mehr eine bescheidene Lichtung, die ringsum von der
+                  <lb xml:id="p001_r_2_tl_25"/>Macht des Waldes eingeengt und bedroht ist, son
+                  <lb xml:id="p001_r_2_tl_26" break="no"/>dern ein dieser düsteren afrikanischen Wildnis abge
+                  <lb xml:id="p001_r_2_tl_27" break="no"/>rungenes Stück Erde, das fruchtbar und bewohnbar
+                  <lb xml:id="p001_r_2_tl_28"/>ist, wie die Landstriche es sein müssen, damit sie uns
+                  <lb xml:id="p001_r_2_tl_29"/>zur Heimat werden.</p>
+               <p>
+                  <lb xml:id="p001_r_2_tl_30"/>Auf der Anhöhe, von wo man in der Ferne das
+                  <lb xml:id="p001_r_2_tl_31"/>blaugrüne Meer des Waldes überblicken kann, steht
+                  <lb xml:id="p001_r_2_tl_32"/>zwischen Palmen und blühenden Büschen das Haus.
+                  <lb xml:id="p001_r_2_tl_33"/>Seine niedrigen Lehmwände sind mit einem Gitter
+                  <lb xml:id="p001_r_2_tl_34" break="no"/>werk aus Pfählen und Aesten gestützt; ein Quergiebel
+                  <lb xml:id="p001_r_2_tl_35"/>überdacht den fast nur aus Fenstern bestehenden Erker
+                  <lb xml:id="p001_r_2_tl_36"/>des Wohnraums, der die Mitte des Hauses einnimmt.
+                  <lb xml:id="p001_r_2_tl_37"/>Der Boden ist zementiert; die Decke besteht aus Palm
+                  <lb xml:id="p001_r_2_tl_38" break="no"/>matten. Hier ist es immer kühl, und die Aussicht ist
+                  <lb xml:id="p001_r_2_tl_39"/>weit und frei. Auf der anderen Seite des Hauses
+                  <lb xml:id="p001_r_2_tl_40"/>schließen sich die Schuppen für die beiden Automobile,
+                  <lb xml:id="p001_r_2_tl_41"/>die Werkstätten und die Küche an; dahinter liegt ein
+                  <lb xml:id="p001_r_2_tl_42"/>großer Gemüse- und Baumgarten, noch etwas weiter
+                  <lb xml:id="p001_r_2_tl_43"/>die Einzäunungen für die Hühner, ein großes Rudel
+                  <lb xml:id="p001_r_2_tl_44"/>Ziegen und sogar ein paar kleine, schwarze Rinder
+                  <lb xml:id="p001_r_2_tl_45"/>und zwei kleine Pferde aus dem <rs type="place" key="place_0760" xml:id="r19">Tschad</rs>. Der Hauptweg
+                  <lb xml:id="p001_r_2_tl_46"/>führt zwischen den ersten Palmen der Pflanzung wie
+                  <lb xml:id="p001_r_2_tl_47"/>durch eine stattliche Allee vorbei an drei weiteren
+                  <lb xml:id="p001_r_2_tl_48"/>Häusern.
+                  <anchor xml:id="a7"/>Das dritte ist noch im Bau
+                  <note type="annotation" xml:id="n7" targetEnd="a7">Auch diesen <rs type="image" key="image_3668" xml:id="r51">Bau</rs> hat
+                     Schwarzenbach fotografiert.</note> und wird dem
+                  <lb xml:id="p001_r_2_tl_49"/>jungen Schweizer Agenten mit seiner Frau und ihren
+                  <lb xml:id="p001_r_2_tl_50"/>kleinen Kind als Wohnung dienen. Neben <rs type="person" key="person_0627" xml:id="r29">Herrn</rs> und
+                  <lb xml:id="p001_r_2_tl_51"/><rs type="person" key="person_0628" xml:id="r30">Frau Vivien</rs> sind sie die einzigen Weißen von <rs
+                     type="place" key="place_0050" xml:id="r20">Mo
+                     <lb xml:id="p001_r_2_tl_52" break="no"/>landa</rs>, der Pflanzung, die heute 1250 Hektaren be
+                  <lb xml:id="p001_r_2_tl_53" break="no"/>bauten Bodens umfaßt. Wenn man jetzt viele Kilo
+                  <lb xml:id="p001_r_2_tl_54" break="no"/>meter auf sauberen Wegen durch die schattigen Palm
+                  <lb xml:id="p001_r_2_tl_55" break="no"/>haine und reichen Kaffeefelder fährt, kann man sich
+                  <lb xml:id="p001_r_2_tl_56"/>kaum vorstellen, daß das gleiche Land vor fünfzehn
+                  <lb xml:id="p001_r_2_tl_57"/>Jahren noch von dichtem Urwald zugedeckt war, und
+                  <lb xml:id="p001_r_2_tl_58"/> daß es zwei Menschen allein gelungen ist, es so zu
+                  <lb xml:id="p001_r_2_tl_59"/>verwandeln und in Besitz zu nehmen! Man glaubt
+                  <lb xml:id="p001_r_2_tl_60"/>ihnen gern, daß der Anfang nicht leicht war.</p>
+            </div>
+            <lb xml:id="p001_r_2_tl_61"/>
+            <byline><choice>
+                  <abbr>A. C.-Sch.</abbr>
+                  <expan> Annemarie Clarac-Schwarzenbach</expan>
+               </choice></byline>
+         </div>
+       </body>
+    </text>
+ </TEI>
