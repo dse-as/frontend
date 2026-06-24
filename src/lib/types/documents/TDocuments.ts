@@ -1,4 +1,10 @@
-import { documents as docs } from '$lib/data/documents.json';
+import documentsRaw from '$lib/data/documents.json';
+const docs = (
+	documentsRaw as {
+		meta: any;
+		documents: any;
+	}
+).documents;
 
 // --- Types derived from JSON ----------------------------------------
 // Keys
@@ -228,66 +234,39 @@ export type TDocuments = {
 		};
 		photos: {
 			[key in TPhotosKeys]: {
-				slug?: string; //! discuss whether this is identical to key
-				name: string;
-				date: { from: string; to: string };
-				type: TPhotosGroups | '?' | '';
+				label: string | null;
+				type?: TPhotosGroups | '?' | '';
 				metadata: {
-					authors?: string[];
-					summary?: string;
-					pubDate: string;
-					title_full: string;
-					title_short?: string;
-					label: string;
-					editor_workflow: 'ez_ttf_of';
-					year: string;
-					pubPosthumOnly: boolean | string;
-					pubPlace?: string;
-					signature: string;
-					pubDetails?: string;
-					textstufen_edited: string[];
-					textzeugen_nonedited: string[];
-					series: string;
-					comment: string;
-					globalEntities?: {
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
-						photos?: TPhotosKeys[];
-						people?: TPeopleKeys[];
-						places?: TPlacesKeys[];
-						events?: TEventsKeys[];
-						orgs?: TOrgsKeys[];
-						bibls?: TBiblsKeys[];
-						keywords?: TKeywordsKeys[];
+					id_sla: string | null;
+					title: string | null;
+					date: string | null;
+					date_normalised: {
+						from: string | null;
+						to: string | null;
 					};
-					maximum: string;
-					travel: string;
-					archive: string;
-					archiveCollation: string;
-					pubSecondary: string;
-					urlOnlineResource: string;
-					note: string;
+					travel: string | null;
+					photographer: string | null;
+					people_on_photo: string[] | null;
+					characteristics: string | null;
+					comments_1: string | null;
+					captions_1: string[] | null;
+					captions_2: string[] | null;
+					signed: boolean | null;
+					stamped: boolean | null;
+					orientation: string | null;
+					shape: string | null;
+					url_helveticarchives: string | null;
+					url_wikimedia: string | null;
+					url_emanuscripta: string | null;
+					repository: string | null;
+					published_in: string[] | null;
+					mentioned_in: string[] | null;
+					comments_2: string | null;
 				};
-				entities: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
-					photos?: TPhotosKeys[];
-					people?: TPeopleKeys[];
-					places?: TPlacesKeys[];
-					events?: TEventsKeys[];
-					orgs?: TOrgsKeys[];
-					bibls?: TBiblsKeys[];
-					keywords?: TKeywordsKeys[];
-				};
-				manuscript: {
-					iiif_urls: string[];
-				};
-				numPages: number | null;
-				edition: {
-					fullyEdited: boolean;
+				facsimile: {
+					iiif_manifest: string | null;
+					iiif_manifest_emanuscripta: string | null;
+					iiif_image_emanuscripta?: string | null;
 				};
 			};
 		};

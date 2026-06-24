@@ -49,5 +49,9 @@
 		<li>
 			&rarr; <a class="underline" href={resolve('/smallform_0529')}>Smallform 0529</a>
 		</li>
+		<img
+			src="https://commons.wikimedia.org/wiki/File:CH-NB_-_Irak,_Bagdhad_(Bagdad)-_Strassenszene_-_Annemarie_Schwarzenbach_-_SLA-Schwarzenbach-A-5-03-279.jpg"
+			alt="BILD"
+		/>
 	</ul>
 </div>
