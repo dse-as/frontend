@@ -291,7 +291,7 @@ tei-quote::after {
 /* Substitutions, Additions and Deletions */
 
 [data-fassung='DF'] {
-	// inline
+	/* inline */
 	tei-add[place='inline']:before {
 		content: '⌜';
 	}
@@ -299,14 +299,14 @@ tei-quote::after {
 		content: '⌟';
 	}
 
-	// margin
+	/* margin */
 	tei-add[place='margin']:before {
 		content: '‹';
 	}
 	tei-add[place='margin']:after {
 		content: '›';
 	}
-	// above
+	/* above */
 	tei-add[place='above'] {
 		vertical-align: super;
 	}
@@ -316,7 +316,7 @@ tei-quote::after {
 	tei-add[place='above']:after {
 		content: '⌝';
 	}
-	// below
+	/* below */
 	tei-add[place='below'] {
 		vertical-align: sub;
 	}
@@ -326,7 +326,7 @@ tei-quote::after {
 	tei-add[place='below']:after {
 		content: '⌟';
 	}
-	// substitution
+	/* substitution */
 	tei-del {
 		text-decoration: line-through;
 	}
@@ -453,7 +453,7 @@ tei-gap[reason]::before {
 
 /* ── DF: show striked diplomatic originals, frame regularised */
 
-// TODO
+/* TODO */
 [data-fassung='DF'] {
 	tei-choice > tei-sic,
 	tei-choice > tei-orig,
@@ -472,7 +472,7 @@ tei-gap[reason]::before {
 		border-bottom: 4px dotted var(--color-corr);
 	}
 
-	// Colors
+	/* Colors */
 	tei-choice > tei-corr {
 		border-bottom: 4px dotted var(--color-corr);
 	}
