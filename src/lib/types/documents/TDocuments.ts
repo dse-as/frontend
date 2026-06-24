@@ -1,17 +1,9 @@
-import documentsRaw from '$lib/data/documents.json';
-const docs = (
-	documentsRaw as {
-		meta: any;
-		documents: any;
-	}
-).documents;
-
-// --- Types derived from JSON ----------------------------------------
+// --- Types ----------------------------------------
 // Keys
-export type TLettersKeys = keyof (typeof docs)['letters'];
-export type TSmallformsKeys = keyof (typeof docs)['smallforms'];
-export type TLongformsKeys = keyof (typeof docs)['longforms'];
-export type TPhotosKeys = keyof (typeof docs)['photos'];
+import { type TLettersKeys } from './TLettersKeys';
+import { type TSmallformsKeys } from './TSmallformsKeys';
+import { type TLongformsKeys } from './TLongformsKeys';
+import { type TPhotosKeys } from './TPhotosKeys';
 
 // Types
 import { type TLettersGroups } from './TLettersGroups';
@@ -237,7 +229,6 @@ export type TDocuments = {
 				label: string | null;
 				type?: TPhotosGroups | '?' | '';
 				metadata: {
-					id_sla: string | null;
 					title: string | null;
 					date: string | null;
 					date_normalised: {
@@ -251,8 +242,6 @@ export type TDocuments = {
 					comments_1: string | null;
 					captions_1: string[] | null;
 					captions_2: string[] | null;
-					signed: boolean | null;
-					stamped: boolean | null;
 					orientation: string | null;
 					shape: string | null;
 					url_helveticarchives: string | null;
@@ -262,11 +251,30 @@ export type TDocuments = {
 					published_in: string[] | null;
 					mentioned_in: string[] | null;
 					comments_2: string | null;
+					sla_id_full: string | null;
+					sla_id_coll: string | null;
+					sla_id_img: string | null;
+					stamped: boolean | null;
+					signed: boolean | null;
 				};
-				facsimile: {
+				faksimile: {
 					iiif_manifest: string | null;
 					iiif_manifest_emanuscripta: string | null;
 					iiif_image_emanuscripta?: string | null;
+				};
+				linkedReg: {
+					people?: TPeopleKeys[];
+					places?: TPlacesKeys[];
+					events?: TEventsKeys[];
+					orgs?: TOrgsKeys[];
+					bibls?: TBiblsKeys[];
+					keywords?: TKeywordsKeys[];
+				};
+				linkedDocs: {
+					letters?: TLettersKeys[];
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					photos?: TPhotosKeys[];
 				};
 			};
 		};

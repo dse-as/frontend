@@ -9,7 +9,7 @@
 
 	let { url } = $props();
 
-	let showSpinner = $state(true);
+	let showSpinner = $state(false);
 	let isError = $state(false);
 
 	const generateViewer = (node: HTMLElement, manifest: string) => {

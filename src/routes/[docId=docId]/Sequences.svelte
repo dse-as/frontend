@@ -149,7 +149,11 @@
 	isFirst: boolean = false,
 	isLast: boolean = false
 )}
-	{@const { item: resDoc, docId: resId } = resolveDoc(allDocs, itemId) || { item: null }}
+	{@const {
+		item: resDoc,
+		docId: resId,
+		docType: resType
+	} = resolveDoc(allDocs, itemId) || { item: null }}
 	<a
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
@@ -168,13 +172,26 @@
 		}}
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
-			<div class="container-centered">
-				<IIIF_Thumb url={resDoc?.manuscript?.iiif_urls[0]} classes="max-h-[80px] max-w-[80px] " />
-			</div>
-			<div class="flex flex-col">
-				<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
-				<span class="">{resDoc?.metadata?.pubDate}</span>
-			</div>
+			{#if resType === 'photos'}
+				<div class="container-centered">
+					<IIIF_Thumb
+						url={resDoc?.faksimile?.iiif_image_emanuscripta}
+						classes="max-h-[80px] max-w-[80px] "
+					/>
+				</div>
+				<div class="flex flex-col">
+					<span class="line-clamp-2">{resDoc?.label}</span>
+					<!-- <span class="">{resDoc?.metadata?.date}</span> -->
+				</div>
+			{:else}
+				<div class="container-centered">
+					<IIIF_Thumb url={resDoc?.manuscript?.iiif_urls[0]} classes="max-h-[80px] max-w-[80px] " />
+				</div>
+				<div class="flex flex-col">
+					<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
+					<span class="">{resDoc?.metadata?.pubDate}</span>
+				</div>
+			{/if}
 		</div>
 	</a>
 {/snippet}
@@ -405,7 +422,7 @@
 				</div>
 			{:else}
 				<!-- Sequences -->
-				{@const seqTypes = ['correspondence', 'series', 'textstufen', 'travels'] as const}
+				{@const seqTypes = Object.keys(dictSeq) as (keyof typeof dictSeq)[]}
 				<div class="flex w-full flex-col overflow-y-auto">
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}

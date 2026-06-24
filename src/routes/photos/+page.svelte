@@ -1,14 +1,15 @@
 <script lang="ts">
-	import List from '$lib/components/List.svelte';
+	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
+
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 	import { documents as allDocs } from '$lib/data/documents.json';
-
+	const allDocsTyped = allDocs as TDocuments['documents'];
 	import type { TDocTypes, TDocuments } from '$lib/types/documents/TDocuments.js';
 
-	const allDocsTyped = allDocs as TDocuments['documents'];
-	import { onMount } from 'svelte';
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
+	import List from '$lib/components/List.svelte';
 
 	const docType = 'photos';
 
@@ -32,14 +33,12 @@
 <DocumentsNav docType={'photos'} />
 <!-- Large docPicker-Menu  -->
 <!-- The animated transition uses the width of the element -->
-<h1
-	class="h1 absolute top-35 left-0 w-1 pl-10 text-center whitespace-nowrap transition-all duration-400"
->
+<h1 class="h1 mb-5 pl-10 whitespace-nowrap transition-all duration-400">
 	{dictDoc[docType as TDocTypes]?.label_plural}
 </h1>
 
 <!-- Content -->
-<div class="absolute top-45 left-0 w-full px-10">
+<div class="h-[calc(100vh-45*4px)] w-full px-10">
 	<!-- <List
 		itemVariant="documents"
 		isMultiColumn={true}
@@ -48,21 +47,22 @@
 		itemType={docType as TDocTypes}
 		itemKey={null}
 	/> -->
-	<div class="flex h-full w-full flex-wrap gap-sm overflow-y-scroll">
-		{#each Object.keys(allDocsTyped.photos) as photo_key}
+	<div
+		class="grid h-full w-full grid-cols-1 gap-sm overflow-y-scroll lg:grid-cols-3 xl:grid-cols-5"
+	>
+		{#each Object.keys(allDocsTyped.photos).slice(100, 150) as photo_key}
 			{@const item = allDocsTyped[docType][photo_key]}
-			<!-- <h1>{item.label}</h1> -->
-			<p>
-				{item.facsimile.iiif_manifest_emanuscripta
-					?.replace(/\/manifest$/, '')
-					.replace('/v20/', '/v21/')}
-			</p>
-			<IIIFThumb
-				url={item.facsimile.iiif_manifest_emanuscripta
-					?.replace(/\/manifest$/, '')
-					.replace('/v20/', '/v21/')}
-				classes="min-h-40 min-h-30"
-			/>
+			<a
+				href={resolve(`/${photo_key}`)}
+				class="m-10 flex items-center justify-center gap-5 rounded-card hover:bg-dark-10 lg:flex-col"
+			>
+				<IIIFThumb
+					url={item.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
+					classes="w-[200px] h-[200px]"
+				/>
+				<p class="text-left lg:text-center">{item.label}</p>
+				<p class="text-left lg:text-center">{photo_key}</p>
+			</a>
 		{/each}
 	</div>
 </div>
