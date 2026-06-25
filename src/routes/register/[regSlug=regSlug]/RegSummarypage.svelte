@@ -84,20 +84,22 @@
 {/snippet}
 
 <!-- Map Preview -->
-{#snippet MapPreview(regMapPreviewPath: string)}
-	<div class="relative container mx-5 mb-10 h-80 w-250 border-2 border-dark-40">
-		<div
-			class="relative container h-full w-full bg-cover bg-center bg-no-repeat"
-			style={`background-image: url('${asset(regMapPreviewPath)}');`}
-		>
-			<div class="container-centered absolute h-full w-full bg-white opacity-60"></div>
-			<a
-				class="container-centered absolute h-full w-full font-sans text-lg font-bold text-black"
-				href={resolve('/map')}
-				>Zur Kartenansicht
-			</a>
+{#snippet MapPreview(regMapPreviewPath: string | null | undefined)}
+	{#if regMapPreviewPath}
+		<div class="relative container mx-5 mb-10 h-80 w-250 border-2 border-dark-40">
+			<div
+				class="relative container h-full w-full bg-cover bg-center bg-no-repeat"
+				style={`background-image: url('${asset(regMapPreviewPath)}');`}
+			>
+				<div class="container-centered absolute h-full w-full bg-white opacity-60"></div>
+				<a
+					class="container-centered absolute h-full w-full font-sans text-lg font-bold text-black"
+					href={resolve('/map')}
+					>Zur Kartenansicht
+				</a>
+			</div>
 		</div>
-	</div>
+	{/if}
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
