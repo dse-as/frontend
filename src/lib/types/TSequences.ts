@@ -41,5 +41,8 @@ export type TDictSeq = Record<
 
 export type TSeqAll = Record<
 	string,
-	Record<string, { url_seq_overview?: string | null; name?: string; preamble?: string; docs: string[] }>
+	Record<
+		string,
+		{ url_seq_overview?: string | null; name?: string; preamble?: string; docs: string[] }
+	>
 >;

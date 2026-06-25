@@ -9,10 +9,9 @@ import { resolvePhoto } from '$lib/functions/ease_of_use/resolvePhoto';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
 
 export const load: PageServerLoad = async ({ params }) => {
-	
 	// Resolve Documents to current photo
 	const resolvedPhoto = resolvePhoto(allDocs, params.photoId as TPhotosKeys);
-	
+
 	// Resolve cross-register references
 	const crossRef: {
 		linkedReg: Partial<

@@ -1,5 +1,5 @@
-import type { TDocKeys } from "$lib/types/documents/TDocuments";
-import type { TSeqKeys } from "$lib/types/TSequences";
+import type { TDocKeys } from '$lib/types/documents/TDocuments';
+import type { TSeqKeys } from '$lib/types/TSequences';
 
 export type TDocSequences = {
 	[groupId: string]: {
