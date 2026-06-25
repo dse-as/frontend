@@ -6,7 +6,7 @@
 			"key_singular": "textstufe",
 			"label_plural": "Textstufen",
 			"label_singular": "Textstufe",
-			"label_overview": "&rarr; Zur [DEADEND]",
+			"label_seq_overview": "&rarr; Zur [DEADEND]",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
 		},
@@ -15,7 +15,7 @@
 			"key_singular": "travel",
 			"label_plural": "Reisen",
 			"label_singular": "Reise",
-			"label_overview": "&rarr; Reise auf Karte ansehen",
+			"label_seq_overview": "&rarr; Reise auf Karte ansehen",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
 		},
@@ -24,7 +24,7 @@
 			"key_singular": "correspondence",
 			"label_plural": "Korrespondenz",
 			"label_singular": "Korrespondenz",
-			"label_overview": "&rarr; Zur Korrespondenzansicht",
+			"label_seq_overview": "&rarr; Zur Korrespondenzansicht",
 			"label_next": "Nächster Brief",
 			"label_prev": "Vorheriger Brief"
 		},
@@ -33,7 +33,7 @@
 			"key_singular": "series",
 			"label_plural": "Artikelserien",
 			"label_singular": "Artikelserie",
-			"label_overview": "&rarr; Zur Serienansicht",
+			"label_seq_overview": "&rarr; Zur Serienansicht",
 			"label_next": "Nächster Artikel",
 			"label_prev": "Vorheriger Artikel"
 		},
@@ -42,7 +42,7 @@
 			"key_singular": "photoseries",
 			"label_plural": "Fotoserien",
 			"label_singular": "Fotoserie",
-			"label_overview": "&rarr; Zur Übersicht der Fotoserie",
+			"label_seq_overview": "&rarr; Zur Übersicht der Fotoserie",
 			"label_next": "Nächstes Foto",
 			"label_prev": "Vorheriges Foto"
 		}

@@ -6,7 +6,7 @@ export type TDocSequences = {
 		[sequenceId: string]: {
 			name?: string;
 			preamble?: string;
-			url_slug?: string | null;
+			url_seq_overview?: string | null;
 			docs: TDocKeys[];
 		};
 	};

@@ -30,7 +30,7 @@ def transform_photos_to_sequences(input_json_path, output_json_path):
 
     for sla_key, photo_list in sequences.items():
         output["sequences"][sla_key] = {
-            "url_slug": None,
+            "url_seq_overview": None,
             "name": sla_key,
             "preamble": f'Fotografien aus "{sla_key}"',
             "docs": photo_list

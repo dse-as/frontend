@@ -291,7 +291,7 @@
 					<a
 						class="hover:underline"
 						href={resolve(
-							`/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
+							`/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_seq_overview ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_seq_overview : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -532,7 +532,7 @@
 				</a>
 			</div>
 			<!-- Sequenzansicht -->
-			{#if seqAllTyped[seqType!]?.[seqKey]?.url_slug}
+			{#if seqAllTyped[seqType!]?.[seqKey]?.url_seq_overview}
 				<div
 					class="hidden group-focus-within:inline-block group-hover:inline-block group-focus:inline-block"
 				>
@@ -540,10 +540,10 @@
 						data-sveltekit-preload-data="tap"
 						data-sveltekit-preload-code="hover"
 						class="preset-btn-round"
-						href={seqAllTyped[seqType!][seqKey].url_slug}
+						href={seqAllTyped[seqType!][seqKey].url_seq_overview}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{@html dictSeqTyped[seqType!]?.label_overview}
+						>{@html dictSeqTyped[seqType!]?.label_seq_overview}
 					</a>
 				</div>
 			{/if}

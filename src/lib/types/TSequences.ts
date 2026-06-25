@@ -5,7 +5,7 @@ import type { TPeopleKeys } from './register/TPeopleKeys';
 // Full Sequence and Attributes
 export type TSeq = typeof seqAll;
 export type TSeqAttrs = {
-	url_slug: string;
+	url_seq_overview: string;
 	name: string;
 	preamble: string;
 	personId?: TPeopleKeys;
@@ -33,7 +33,7 @@ export type TDictSeq = Record<
 		key_singular: string;
 		label_plural: string;
 		label_singular: string;
-		label_overview: string | null;
+		label_seq_overview: string | null;
 		label_next: string;
 		label_prev: string;
 	}
@@ -41,5 +41,5 @@ export type TDictSeq = Record<
 
 export type TSeqAll = Record<
 	string,
-	Record<string, { url_slug?: string | null; name?: string; preamble?: string; docs: string[] }>
+	Record<string, { url_seq_overview?: string | null; name?: string; preamble?: string; docs: string[] }>
 >;
