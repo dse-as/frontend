@@ -9,10 +9,18 @@
 	let imgdata = $derived(data.resolvedPhoto?.item);
 
 	import { building } from '$app/environment';
+	import { resolve } from '$app/paths';
+	import type { TRegTypes, TRegKeysFlat } from '$lib/types/register/TRegister.js';
 
 	// Current Sequence
 	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
 	let currentSeq = $derived({ type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey });
+
+	// Data
+	let resPhoto = $derived(data.resolvedPhoto);
+
+	// UI-States
+	let stateMetadata = $state<string | null>('eckdaten');
 </script>
 
 <div class="relative flex h-full flex-col items-center gap-6">
@@ -20,17 +28,208 @@
 	<Sequences docId={data.resolvedPhoto?.docId} {currentSeq} />
 
 	<!-- Title -->
-	<h1 class="h1">{imgdata?.label}</h1>
+	<div class="w-full px-10">
+		<h1 class="h1">{imgdata?.label}</h1>
+	</div>
 
-	<!-- Image -->
-	<IIIFThumb
-		iiif_imageAPI_width={800}
-		url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
-	/>
+	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+		<!-- Image -->
+		<div class="h-full w-full p-4">
+			<IIIFThumb
+				iiif_imageAPI_width={800}
+				url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
+			/>
+		</div>
 
-	<!-- <IIIFViewer url={imgdata?.faksimile.iiif_manifest_emanuscripta} /> -->
+		<!-- <IIIFViewer url={imgdata?.faksimile.iiif_manifest_emanuscripta} /> -->
 
-	<!-- Metadata -->
-	<p>{imgdata?.metadata.sla_id_coll}/{imgdata?.metadata.sla_id_img}</p>
-	<p>{imgdata?.metadata.date_normalised.from}</p>
+		<!-- Metadata -->
+		<div class="flex flex-col items-start justify-start p-4">
+			<h5 class="h5 mb-6 font-bold">Metadaten</h5>
+
+			<!-- (2) Metadata Table -->
+			{#snippet metadataButton(state: string, text: string)}
+				<button
+					class={['preset-btn-round --sm lg:--lg', stateMetadata === state && '--active']}
+					onclick={() => {
+						if (stateMetadata !== state) {
+							stateMetadata = state;
+						}
+					}}>{text}</button
+				>
+			{/snippet}
+			{#snippet metadataEntry(label: string, content: string | null | undefined)}
+				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left @lg:py-2">{@html content}</td>
+				</tr>
+			{/snippet}
+			{#snippet metadataEntryWithURL(label: string, content: string | null | undefined)}
+				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left underline @lg:py-2"
+						><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i><a href={content}
+							>{@html content}</a
+						></td
+					>
+				</tr>
+			{/snippet}
+			{#snippet metadataEntryWithRegLink(
+				label: string,
+				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | undefined
+			)}
+				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
+					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left @lg:py-2">
+						<div class="flex flex-wrap gap-4">
+							{#each content ? content : [] as item (item)}
+								<a
+									class="preset-btn-round --linkarrow"
+									data-type="entity"
+									data-entitytype={item.regType}
+									href={resolve(`/register/${item.regKey as string}`)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{item.name}
+								</a>
+							{/each}
+						</div>
+					</td>
+				</tr>
+			{/snippet}
+			{#snippet metadataContent()}
+				{#if resPhoto?.item}
+					<div data-dom="metadata">
+						<div class="preset-btn-list --spacing-normal">
+							{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
+							{@render metadataButton('sources', 'Quellenangaben')}
+							{@render metadataButton('globalEntities', 'Schlagwörter')}
+							{@render metadataButton('links', 'Verknüpfungen')}
+							{@render metadataButton('citation', 'Zitierhinweise')}
+							{@render metadataButton('download', 'Download-Links')}
+							<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
+						</div>
+
+						<div class={['@container mt-5 mb-20 w-full pt-5']}>
+							{#if stateMetadata === 'eckdaten'}
+								<table>
+									<tbody class="flex flex-col gap-2">
+										{@render metadataEntry('Titel', resPhoto.item.metadata.title)}
+										{@render metadataEntry('Fotograf:in', resPhoto.item.metadata.photographer)}
+										{@render metadataEntry('Publikationsort', resPhoto.item.metadata.published_in)}
+										<!-- //!FIX -->
+										{@render metadataEntry(
+											'Publikationsdatum',
+											resPhoto.item.metadata.date_normalised?.from
+										)}
+										{@render metadataEntry('Reise', resPhoto.item.metadata.travel)}
+										{@render metadataEntry(
+											'Caption 1',
+											(resPhoto.item.metadata.captions_1 || ['']).join(' | ')
+										)}
+										{@render metadataEntry(
+											'Caption 2',
+											(resPhoto.item.metadata.captions_2 || ['']).join(' | ')
+										)}
+										{@render metadataEntry('Kommentar 1', resPhoto.item.metadata.comments_1)}
+										{@render metadataEntry('Kommentar 2', resPhoto.item.metadata.comments_2)}
+										{@render metadataEntry(
+											'Signiert',
+											resPhoto.item.metadata.signed ? 'Ja' : 'Nein'
+										)}
+										{@render metadataEntry(
+											'Gestempelt',
+											resPhoto.item.metadata.stamped ? 'Ja' : 'Nein'
+										)}
+										{@render metadataEntry('Form', resPhoto.item.metadata.shape)}
+										{@render metadataEntry('Orientierung', resPhoto.item.metadata.orientation)}
+										{@render metadataEntry('Umfang', resPhoto.item.metadata.characteristics)}
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'sources'}
+								<table>
+									<tbody class="flex flex-col gap-2">
+										{@render metadataEntry('Repository', resPhoto.item.metadata.repository)}
+										{@render metadataEntry('SLA-ID', resPhoto.item.metadata.sla_id_full)}
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'globalEntities'}
+								<table>
+									<tbody class="flex flex-col gap-2" data-dom="global_entities">
+										<!-- {#if resPhoto.item.metadata.globalEntities}
+											{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
+												{#if data.crossRef.globalEntities[type]?.length}
+													{@render metadataEntryWithRegLink(
+														dictReg[type].label_plural,
+														data.crossRef.globalEntities[type]
+													)}
+												{/if}
+											{/each}
+										{/if} -->
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'links'}
+								<table>
+									<tbody class="flex flex-col gap-2" data-dom="global_entities">
+										{@render metadataEntry(
+											'Erwähung in Forschungsliteratur',
+											(resPhoto.item.metadata.mentioned_in || ['']).join(' | ')
+										)}
+										{@render metadataEntry(
+											'Publikation (Editionen & Artikel)',
+											(resPhoto.item.metadata.published_in || ['']).join(' | ')
+										)}
+										{@render metadataEntry(
+											'Abgebildete Personen',
+											(resPhoto.item.metadata.people_on_photo || ['']).join(' | ')
+										)}
+										{@render metadataEntry('Reise', resPhoto.item.metadata.travel)}
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'citation'}
+								<table>
+									<tbody class="flex flex-col gap-2">
+										{@render metadataEntry(
+											'Zitierung (ad-hoc)',
+											`${resPhoto.item.metadata.sla_id_coll}`
+										)}
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'download'}
+								<table>
+									<tbody class="flex flex-col gap-2">
+										{@render metadataEntryWithURL(
+											'e-manuscripta',
+											resPhoto.item.metadata.url_emanuscripta
+										)}
+										{@render metadataEntryWithURL(
+											'Helvetic Archives',
+											resPhoto.item.metadata.url_helveticarchives
+										)}
+										{@render metadataEntryWithURL(
+											'Wikimedia',
+											resPhoto.item.metadata.url_wikimedia
+										)}
+									</tbody>
+								</table>
+							{:else if stateMetadata === 'all'}
+								<div class="h-auto">
+									<div data-dom="metadata_table" class="">
+										{#each Object.entries(resPhoto.item.metadata) as entry (entry)}
+											{#if entry[0] !== 'globalEntities' && entry[1]}
+												{@render metadataEntry(entry[0], String(entry[1]))}
+											{/if}
+										{/each}
+									</div>
+								</div>
+							{/if}
+						</div>
+					</div>
+				{/if}
+			{/snippet}
+
+			{@render metadataContent()}
+		</div>
+	</div>
 </div>

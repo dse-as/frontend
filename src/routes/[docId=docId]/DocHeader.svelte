@@ -105,7 +105,7 @@
 						{@render metadataButton('globalEntities', 'Schlagwörter')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
 						{@render metadataButton('download', 'Download-Links')}
-						{@render metadataButton('all', 'Alles (Temporär)')}
+						<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 					</div>
 
 					<div class={['@container mt-5 mb-20 w-full pt-5']}>
