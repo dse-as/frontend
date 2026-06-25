@@ -181,7 +181,6 @@
 				</div>
 				<div class="flex flex-col">
 					<span class="line-clamp-2">{resDoc?.label}</span>
-					<!-- <span class="">{resDoc?.metadata?.date}</span> -->
 				</div>
 			{:else}
 				<div class="container-centered">
@@ -263,7 +262,7 @@
 		>
 	</div>
 {:else}
-	<div bind:this={elSeqNav} class="relative z-90003 mb-25">
+	<div bind:this={elSeqNav} class="relative z-90003 mb-10">
 		<!-- Current Sequence Title -->
 		<div class="flex w-full justify-center gap-6">
 			<div class="mb-3 flex w-max flex-col items-center">

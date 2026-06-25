@@ -568,7 +568,8 @@ tei-anchor {
 /* Referencing Strings */
 
 [data-dom='global_comment'],
-[data-textflow='fluid'] {
+[data-textflow='fluid'],
+[data-dom='containerAnnotations'] {
 	/* Hover and Active */
 	tei-rs:hover,
 	tei-rs.active,
@@ -596,7 +597,8 @@ tei-anchor {
 
 		&[type='smallform'],
 		&[type='longform'],
-		&[type='letter'] {
+		&[type='letter'],
+		&[type='image'] {
 			border-bottom-color: var(--color-rs-doc);
 		}
 		&[type='person'] {
@@ -624,7 +626,8 @@ tei-anchor {
 	}
 }
 
-[data-dom='global_comment'] {
+[data-dom='global_comment'],
+[data-dom='containerAnnotations'] {
 	tei-rs {
 		cursor: pointer;
 		border-bottom-width: 1.5px;

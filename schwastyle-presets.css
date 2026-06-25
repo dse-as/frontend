@@ -72,7 +72,7 @@
 			@apply border-foreground bg-foreground text-background;
 		}
 		&.--linkarrow::before {
-			content: '↗';
+			content: '↗\fe0e';
 			padding-right: --spacing(2);
 		}
 	}

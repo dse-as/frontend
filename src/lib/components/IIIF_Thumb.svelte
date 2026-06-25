@@ -35,6 +35,5 @@
 {:else}
 	<div class={['flex items-center justify-center', classes]}>
 		<i class="fa-solid fa-xmark fa-2xl"></i>
-		<p>{`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}</p>
 	</div>
 {/if}
