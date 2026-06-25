@@ -52,7 +52,7 @@ export const load: PageServerLoad = async ({ params }) => {
 						const resolved = resolveDoc(allDocs, key as TDocKeys);
 						const hasValidType = resolved?.docType;
 						return {
-							name: hasValidType ? resolved?.item?.label || '' : null,
+							name: hasValidType ? resolved?.item?.name || '' : null,
 							docType: hasValidType ? resolved?.docType : null,
 							docKey: key
 						};

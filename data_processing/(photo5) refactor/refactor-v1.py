@@ -5,7 +5,7 @@ def transform_photos(document):
     """
     Process the photos section of a document.
     1. Delete 'photo_id' inside metadata
-    2. Remove '[SLA-...]' pattern from the 'label' field
+    2. Remove '[SLA-...]' pattern from the 'name' field
     3. Rename 'id_sla' to 'sla_id_full' (effectively deleting 'id_sla')
     4. Split 'id_sla' at '/' into 'sla_id_coll' and 'sla_id_img'
     """
@@ -27,10 +27,10 @@ def transform_photos(document):
         if "photo_id" in metadata:
             del metadata["photo_id"]
 
-        # (2) Remove '[SLA-...]' from label using regex
-        if "label" in photo_data:
+        # (2) Remove '[SLA-...]' from name using regex
+        if "name" in photo_data:
             # Removes [SLA-anything] including brackets, then strips extra whitespace
-            photo_data["label"] = re.sub(r'\[SLA-[^\]]*\]', '', photo_data["label"]).strip()
+            photo_data["name"] = re.sub(r'\[SLA-[^\]]*\]', '', photo_data["name"]).strip()
 
         # (3) & (4) Handle id_sla transformations
         if "id_sla" in metadata:

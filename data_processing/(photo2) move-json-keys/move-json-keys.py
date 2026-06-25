@@ -6,7 +6,7 @@ def restructure_json(data):
     Restructures photos by creating a 'metadata' object and moving keys into it.
 
     Rules:
-    1. 'label' stays at the root level of each photo object.
+    1. 'name' stays at the root level of each photo object.
     2. 'iiif_manifest_emanuscripta' and 'iiif_manifest' move to a new 'faksimile' object.
     3. ALL other keys (that were originally in the photo root) move into a NEW 'metadata' object.
     """
@@ -17,7 +17,7 @@ def restructure_json(data):
 
     # Define the keys that need special handling
     iiif_keys = {"iiif_manifest_emanuscripta", "iiif_manifest"}
-    root_keep_keys = {"label"}
+    root_keep_keys = {"name"}
 
     for photo_key, photo_data in data["photos"].items():
         if not isinstance(photo_data, dict):
@@ -33,8 +33,8 @@ def restructure_json(data):
         for key in keys_to_process:
             value = photo_data[key]
 
-            if key == "label":
-                # Rule 1: Keep 'label' where it is (root level)
+            if key == "name":
+                # Rule 1: Keep 'name' where it is (root level)
                 # Do nothing, just leave it in photo_data
                 continue
 
@@ -52,7 +52,7 @@ def restructure_json(data):
             if key in photo_data:
                 del photo_data[key]
 
-        # For non-label, non-iiif keys, they are effectively "moved" by
+        # For non-name, non-iiif keys, they are effectively "moved" by
         # creating the new metadata dict and clearing them from root?
         # Actually, we need to remove the ones we put in metadata from the root too.
         for key in metadata_items:

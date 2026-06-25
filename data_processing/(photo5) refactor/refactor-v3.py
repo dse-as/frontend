@@ -6,7 +6,7 @@ def transform_photos(document):
     Process the photos section of a document with the following transformations:
     1. Initialize 'linkedReg' and 'linkedDocs' as empty objects inside EACH photo entry.
     2. Delete 'photo_id' inside metadata.
-    3. Remove '[SLA-...]' pattern from the 'label' field.
+    3. Remove '[SLA-...]' pattern from the 'name' field.
     4. Rename 'id_sla' to 'sla_id_full' and split into 'sla_id_coll' / 'sla_id_img'.
     5. Transform 'stamp' key: rename to 'stamped' (bool/null).
     6. Transform 'signatures' key: rename to 'signed' (bool/null), ignoring array values.
@@ -38,12 +38,12 @@ def transform_photos(document):
         if "photo_id" in metadata:
             del metadata["photo_id"]
 
-        # (3) Remove '[SLA-...]' from label using regex
-        if "label" in photo_data:
+        # (3) Remove '[SLA-...]' from name using regex
+        if "name" in photo_data:
             # Removes [SLA-anything] including brackets, then strips extra whitespace
-            cleaned_label = re.sub(r'\[SLA-[^\]]*\]', '', photo_data["label"]).strip()
+            cleaned_name = re.sub(r'\[SLA-[^\]]*\]', '', photo_data["name"]).strip()
             # Clean up double spaces resulting from removal
-            photo_data["label"] = re.sub(r'\s{2,}', ' ', cleaned_label)
+            photo_data["name"] = re.sub(r'\s{2,}', ' ', cleaned_name)
 
         # (4) Handle id_sla transformations
         if "id_sla" in metadata:

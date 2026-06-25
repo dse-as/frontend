@@ -226,7 +226,7 @@ export type TDocuments = {
 		};
 		photos: {
 			[key in TPhotosKeys]: {
-				label: string | null;
+				name: string | null;
 				type?: TPhotosGroups | '?' | '';
 				metadata: {
 					title: string | null;
