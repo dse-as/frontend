@@ -33,7 +33,6 @@ export type TDictSeq = Record<
 		key_singular: string;
 		label_plural: string;
 		label_singular: string;
-		url_overview: string | null;
 		label_overview: string | null;
 		label_next: string;
 		label_prev: string;

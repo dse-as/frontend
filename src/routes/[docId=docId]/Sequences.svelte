@@ -366,8 +366,8 @@
 			clearTimeout(timeoutIdCloseSeqPanel);
 		}}
 	>
-		<!-- Switches -->
-		<div class="mt-2 flex items-center justify-center gap-2">
+		<!-- Sequence Toggles (Switches) -->
+		<div class="mb-4 flex items-center justify-center gap-2">
 			<Switch bind:checked={sequenceToggle.letters} height={24} classesLabel="text-base"
 				>{dict_docs.letters.label_plural}</Switch
 			>
@@ -381,9 +381,12 @@
 				>{dict_docs.photos.label_plural}</Switch
 			>
 		</div>
+
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
+			{@render documentCount(currentSeq.type, currentSeq.key)}
 			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
+			{@render shortcuts(currentSeq.type, currentSeq.key)}
 		{/if}
 
 		<!-- Snippet: Other Sequences Selector -->
@@ -414,8 +417,8 @@
 			</div>
 		{/snippet}
 
-		<!-- Snippet: Title with shortcuts -->
-		{#snippet titleWithShortcuts(seqType: TSeqTypes, seqKey: string)}
+		<!-- Snippet: Document counts -->
+		{#snippet documentCount(seqType: TSeqTypes, seqKey: TSeqKeys, classes = '')}
 			{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
 			{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
 			{@const nLetters = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
@@ -442,89 +445,109 @@
 				longforms: false,
 				photos: true
 			}).length}
-			<div class={['flex min-h-18 w-full flex-col items-start py-1']}>
+			{#snippet docCountPart(
+				count: number,
+				dict: { label_plural: string; label_singular: string },
+				isVisible: boolean,
+				isFirst: boolean,
+				isLast: boolean
+			)}
+				{#if count}
+					{#if !isFirst && isLast}
+						&nbsp;und
+					{:else if !isFirst},
+					{/if}
+					<span class="whitespace-nowrap">
+						{#if isFirst}
+							In dieser Sequenz:
+						{/if}
+						<strong>
+							{count}
+							{#if count > 1}{dict.label_plural}
+							{:else}{dict.label_singular}
+							{/if}
+						</strong>{#if !isVisible}&nbsp;(ausgeblendet){/if}
+					</span>{#if isLast}.{/if}{/if}
+			{/snippet}
+			<div class={['inline-block w-full flex-col items-start py-1', classes]}>
+				{@render docCountPart(
+					nLetters,
+					dict_docs.letters,
+					sequenceToggle.letters,
+					true,
+					nSmallforms + nLongforms + nPhotos === 0
+				)}{@render docCountPart(
+					nSmallforms,
+					dict_docs.smallforms,
+					sequenceToggle.smallforms,
+					nLetters === 0,
+					nLongforms + nPhotos === 0
+				)}{@render docCountPart(
+					nLongforms,
+					dict_docs.longforms,
+					sequenceToggle.longforms,
+					nLetters + nSmallforms === 0,
+					nPhotos === 0
+				)}{@render docCountPart(
+					nPhotos,
+					dict_docs.photos,
+					sequenceToggle.photos,
+					nLetters + nSmallforms + nLongforms === 0,
+					true
+				)}
+			</div>
+		{/snippet}
+
+		<!-- Snippet: Title with shortcuts -->
+		{#snippet title(seqType: TSeqTypes, seqKey: TSeqKeys)}
+			<a
+				data-sveltekit-preload-data="tap"
+				data-sveltekit-preload-code="hover"
+				href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
+				onclick={() => {
+					closeSeqPanel(100);
+				}}
+			>
+				<h3 class="h3 mr-5">
+					{dictSeq[seqType]?.label_singular}
+					<span class="italic">"{seqAllTyped[seqType]?.[seqKey]?.name || seqType}"</span>
+				</h3>
+			</a>
+		{/snippet}
+
+		{#snippet shortcuts(seqType: TSeqTypes, seqKey: TSeqKeys)}
+			<!-- Sequenz Auswählen -->
+			<div
+				class="hidden group-focus-within:inline-block group-hover:inline-block group-focus:inline-block"
+			>
 				<a
 					data-sveltekit-preload-data="tap"
 					data-sveltekit-preload-code="hover"
+					class="preset-btn-round"
 					href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 					onclick={() => {
 						closeSeqPanel(100);
 					}}
-				>
-					<h3 class="h3 mr-5">
-						{dictSeq[seqType]?.label_singular}
-						<span class="italic">"{seqAllTyped[seqType]?.[seqKey]?.name || seqType}"</span>
-					</h3>
+					>Sequenz auswählen
 				</a>
-				<p>
-					{#snippet documentCount(
-						count: number,
-						dict: { label_plural: string; label_singular: string },
-						isVisible: boolean,
-						isFirst: boolean,
-						isLast: boolean
-					)}
-						{#if count}
-							{#if !isFirst && isLast}
-								&nbsp;und
-							{:else if !isFirst},
-							{/if}
-							<span class="whitespace-nowrap">
-								{#if isFirst}
-									Enthält
-								{/if}
-								<strong>
-									{count}
-									{#if count > 1}{dict.label_plural}
-									{:else}{dict.label_singular}
-									{/if}
-								</strong>{#if !isVisible}&nbsp;(ausgeblendet){/if}
-							</span>{#if isLast}.{/if}{/if}
-					{/snippet}
-					{@render documentCount(
-						nLetters,
-						dict_docs.letters,
-						sequenceToggle.letters,
-						true,
-						nSmallforms + nLongforms + nPhotos === 0
-					)}{@render documentCount(
-						nSmallforms,
-						dict_docs.smallforms,
-						sequenceToggle.smallforms,
-						nLetters === 0,
-						nLongforms + nPhotos === 0
-					)}{@render documentCount(
-						nLongforms,
-						dict_docs.longforms,
-						sequenceToggle.longforms,
-						nLetters + nSmallforms === 0,
-						nPhotos === 0
-					)}{@render documentCount(
-						nPhotos,
-						dict_docs.photos,
-						sequenceToggle.photos,
-						nLetters + nSmallforms + nLongforms === 0,
-						true
-					)}
-				</p>
-				<div class="hidden group-focus-within:block group-hover:block group-focus:block">
-					<div class="flex gap-4">
-						{#if seqAllTyped[seqType!]?.[seqKey]?.url_slug}
-							<a
-								data-sveltekit-preload-data="tap"
-								data-sveltekit-preload-code="hover"
-								class="h-full underline hover:text-hover-foreground"
-								href={seqAllTyped[seqType!][seqKey].url_slug}
-								target="_blank"
-								rel="noopener noreferrer"
-								>{dictSeqTyped[seqType!]?.label_overview}
-							</a>
-						{/if}
-					</div>
-				</div>
 			</div>
+			<!-- Sequenzansicht -->
+			{#if seqAllTyped[seqType!]?.[seqKey]?.url_slug}
+				<div
+					class="hidden group-focus-within:inline-block group-hover:inline-block group-focus:inline-block"
+				>
+					<a
+						data-sveltekit-preload-data="tap"
+						data-sveltekit-preload-code="hover"
+						class="preset-btn-round"
+						href={seqAllTyped[seqType!][seqKey].url_slug}
+						target="_blank"
+						rel="noopener noreferrer"
+						>{@html dictSeqTyped[seqType!]?.label_overview}
+					</a>
+				</div>
+			{/if}
 		{/snippet}
-
 		<!-- No sequence selected -->
 		{#if !isSelectedValidSeq}
 			{#if !hasOtherSequences}
@@ -541,8 +564,10 @@
 						{#if seqOther[seqType!]}
 							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 								<div class="group">
-									{@render titleWithShortcuts(seqType, seqKey)}
+									{@render title(seqType, seqKey)}
+									{@render documentCount(seqType, seqKey)}
 									{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
+									<div class="min-h-20">{@render shortcuts(seqType, seqKey)}</div>
 								</div>
 							{/each}
 						{/if}
@@ -585,7 +610,7 @@
 						]}
 					>
 						<!-- Groups with other Sequences-->
-						{#each Object.keys(seqOther[activeType!] ?? {}) as seqKey (seqKey)}
+						{#each Object.keys(seqOther[activeType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 							<div
 								class="group flex w-full flex-col gap-5"
 								tabindex="0"
@@ -595,12 +620,10 @@
 								<!-- sequenceList with thumbnails -->
 								<div class="flex w-full flex-col gap-2 overflow-x-auto py-1">
 									{#if isSelectedValidSeq && hasOtherSequences}
-										{@render titleWithShortcuts(activeType, seqKey)}
-										{@render sequenceList(
-											activeType,
-											seqKey as TSeqKeys,
-											seqKey === currentSeq.key
-										)}
+										{@render title(activeType, seqKey)}
+										{@render documentCount(activeType, seqKey)}
+										{@render sequenceList(activeType, seqKey, seqKey === currentSeq.key)}
+										<div class="min-h-20">{@render shortcuts(activeType, seqKey)}</div>
 									{/if}
 								</div>
 							</div>
