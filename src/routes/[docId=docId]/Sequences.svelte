@@ -295,7 +295,7 @@
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{seqAll[currentSeq.type]?.[currentSeq.key]?.preamble}
+						>{@html seqAll[currentSeq.type]?.[currentSeq.key]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -367,22 +367,22 @@
 		style={`top:${elSeqNavSize?.top}px;`}
 	>
 		<!-- Sequence Toggles (Switches) -->
-		{#if isSelectedValidSeq}
-			<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
-				<Checkbox bind:checked={sequenceToggle.letters} classesLabel="text-base"
-					>{dict_docs.letters.label_plural}</Checkbox
-				>
-				<Checkbox bind:checked={sequenceToggle.smallforms} classesLabel="text-base"
-					>{dict_docs.smallforms.label_plural}</Checkbox
-				>
-				<Checkbox bind:checked={sequenceToggle.longforms} classesLabel="text-base"
-					>{dict_docs.longforms.label_plural}</Checkbox
-				>
-				<Checkbox bind:checked={sequenceToggle.photos} classesLabel="text-base"
-					>{dict_docs.photos.label_plural}</Checkbox
-				>
-			</div>
-		{/if}
+		<!-- {#if isSelectedValidSeq} -->
+		<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
+			<Checkbox bind:checked={sequenceToggle.letters} classesLabel="text-base"
+				>{dict_docs.letters.label_plural}</Checkbox
+			>
+			<Checkbox bind:checked={sequenceToggle.smallforms} classesLabel="text-base"
+				>{dict_docs.smallforms.label_plural}</Checkbox
+			>
+			<Checkbox bind:checked={sequenceToggle.longforms} classesLabel="text-base"
+				>{dict_docs.longforms.label_plural}</Checkbox
+			>
+			<Checkbox bind:checked={sequenceToggle.photos} classesLabel="text-base"
+				>{dict_docs.photos.label_plural}</Checkbox
+			>
+		</div>
+		<!-- {/if} -->
 
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
@@ -482,6 +482,7 @@
 		<!-- Snippet: Title with shortcuts -->
 		{#snippet title(seqType: TSeqTypes, seqKey: TSeqKeys)}
 			<a
+				class="mb-2"
 				data-sveltekit-preload-data="tap"
 				data-sveltekit-preload-code="hover"
 				href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
@@ -489,18 +490,18 @@
 					closeSeqPanel(100);
 				}}
 			>
-				<h3 class="h4 mr-5">
+				<h4 class="h4">
 					{dictSeq[seqType]?.label_singular}
 					<span class="italic">&laquo;{seqAll[seqType]?.[seqKey]?.name || seqType}&raquo;</span>
-				</h3>
+				</h4>
 			</a>
 		{/snippet}
 
 		{#snippet shortcuts(seqType: TSeqTypes, seqKey: TSeqKeys)}
 			<!-- Sequenz Auswählen -->
-			<div class="mb-5 min-h-10">
+			<div class="my-2 min-h-10">
 				<div
-					class="preset-btn-list --spacing-normal hidden group-focus-within:flex group-hover:flex group-focus:flex"
+					class="preset-btn-list --spacing-normal hidden justify-end group-focus-within:flex group-hover:flex group-focus:flex"
 				>
 					<a
 						data-sveltekit-preload-data="tap"
@@ -517,11 +518,13 @@
 						<a
 							data-sveltekit-preload-data="tap"
 							data-sveltekit-preload-code="hover"
-							class="preset-btn-round"
+							class="preset-btn-round gap-2"
 							href={seqAll[seqType!][seqKey].url_seq_overview}
 							target="_blank"
 							rel="noopener noreferrer"
-							>{@html dictSeqTyped[seqType!]?.label_seq_overview}
+						>
+							<i class="fa-solid fa-arrow-top-right"></i>
+							{dictSeqTyped[seqType!]?.label_seq_overview}
 						</a>
 					{/if}
 				</div>
@@ -561,9 +564,9 @@
 		<!-- Other Sequences Type-Selector -->
 		{#if isSelectedValidSeq && hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
-			<div class="group preset-btn-list --spacing-normal mt-10 items-center">
+			<div class="preset-btn-list --spacing-normal mt-10 items-center">
 				<p class="mr-2 font-bold">Weitere Sequenzen:</p>
-				<div class="group preset-btn-list --spacing-normal w-max">
+				<div class="preset-btn-list --spacing-normal w-max">
 					{#each seqTypes as seqType (seqType)}
 						{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 							<button
@@ -592,22 +595,21 @@
 					role="dialog"
 					tabindex="0"
 					data-dom="otherSeqPanel"
-					class="relative mt-4 min-h-30 overflow-hidden rounded-b-xl bg-background text-foreground"
+					class="group relative mt-4 min-h-30 overflow-hidden rounded-b-xl bg-background text-foreground"
 					{@attach cycleBlocks}
 				>
 					<!-- sequenceList with thumbnails -->
 					<div
 						in:fade={{ duration: 200 }}
 						out:fade={{ duration: 100 }}
-						class="flex w-full flex-col gap-2 overflow-x-auto border-t-2 py-5"
+						class="flex w-full flex-col overflow-x-auto border-t-2 py-5"
 					>
-						{@render title(otherSeq.type, otherSeq.key)}
-						<!-- {@render documentCount(otherSeq.type, otherSeq.key)} -->
-						{@render sequenceList(otherSeq.type, otherSeq.key)}
+						{@render title(otherSeq.type!, otherSeq.key!)}
+						{@render sequenceList(otherSeq.type!, otherSeq.key!)}
 						<div class="flex w-full items-center justify-end text-right">
-							{@render documentCount(otherSeq.type, otherSeq.key)}
+							{@render documentCount(otherSeq.type!, otherSeq.key!)}
 						</div>
-						{@render shortcuts(otherSeq.type, otherSeq.key)}
+						{@render shortcuts(otherSeq.type!, otherSeq.key!)}
 					</div>
 				</div>
 			{/if}

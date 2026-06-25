@@ -546,91 +546,91 @@
 			"travel_0001": {
 				"url_seq_overview": "/map/travel_0001",
 				"name": "Venedig 1930",
-				"preamble": "Texte und Fotografien von der Reise \"Venedig 1930\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Venedig 1930&raquo;",
 				"docs": []
 			},
 			"travel_0002": {
 				"url_seq_overview": "/map/travel_0002",
 				"name": "Frankreich (Bandol und Paris) 1931",
-				"preamble": "Texte und Fotografien von der Reise \"Frankreich (Bandol und Paris) 1931\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Frankreich (Bandol und Paris) 1931&raquo;",
 				"docs": []
 			},
 			"travel_0003": {
 				"url_seq_overview": "/map/travel_0003",
 				"name": "Venedig 1932",
-				"preamble": "Texte und Fotografien von der Reise \"Venedig 1932\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Venedig 1932&raquo;",
 				"docs": []
 			},
 			"travel_0004": {
 				"url_seq_overview": "/map/travel_0004",
 				"name": "Skandinavienreise 1932",
-				"preamble": "Texte und Fotografien von der Reise \"Skandinavienreise 1932\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Skandinavienreise 1932&raquo;",
 				"docs": []
 			},
 			"travel_0005": {
 				"url_seq_overview": "/map/travel_0005",
 				"name": "Frankreich (Lavandou) 1933",
-				"preamble": "Texte und Fotografien von der Reise \"Frankreich (Lavandou) 1933\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Frankreich (Lavandou) 1933&raquo;",
 				"docs": []
 			},
 			"travel_0006": {
 				"url_seq_overview": "/map/travel_0006",
 				"name": "Spanien 1933",
-				"preamble": "Texte und Fotografien von der Reise \"Spanien 1933\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Spanien 1933&raquo;",
 				"docs": []
 			},
 			"travel_0007": {
 				"url_seq_overview": "/map/travel_0007",
 				"name": "Iran 1933-34 ('Erste Persienreise')",
-				"preamble": "Texte und Fotografien von der Reise \"Iran 1933-34 ('Erste Persienreise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Iran 1933-34 ('Erste Persienreise')&raquo;",
 				"docs": []
 			},
 			"travel_0008": {
 				"url_seq_overview": "/map/travel_0008",
 				"name": "Bad Gastein 1934",
-				"preamble": "Texte und Fotografien von der Reise \"Bad Gastein 1934\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Bad Gastein 1934&raquo;",
 				"docs": []
 			},
 			"travel_0009": {
 				"url_seq_overview": "/map/travel_0009",
 				"name": "Moskau/Iran 1934-35 ('Zweite Persienreise')",
-				"preamble": "Texte und Fotografien von der Reise \"Moskau/Iran 1934-35 ('Zweite Persienreise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Moskau/Iran 1934-35 ('Zweite Persienreise')&raquo;",
 				"docs": []
 			},
 			"travel_0010": {
 				"url_seq_overview": "/map/travel_0010",
 				"name": "Frankreich (Nantes) 1935",
-				"preamble": "Texte und Fotografien von der Reise \"Frankreich (Nantes) 1935\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Frankreich (Nantes) 1935&raquo;",
 				"docs": []
 			},
 			"travel_0011": {
 				"url_seq_overview": "/map/travel_0011",
 				"name": "Iran 1935 ('Dritte Persienreise')",
-				"preamble": "Texte und Fotografien von der Reise \"Iran 1935 ('Dritte Persienreise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Iran 1935 ('Dritte Persienreise')&raquo;",
 				"docs": []
 			},
 			"travel_0012": {
 				"url_seq_overview": "/map/travel_0012",
 				"name": "London 1936",
-				"preamble": "Texte und Fotografien von der Reise \"London 1936\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;London 1936&raquo;",
 				"docs": []
 			},
 			"travel_0013": {
 				"url_seq_overview": "/map/travel_0013",
 				"name": "Mallorca 1936",
-				"preamble": "Texte und Fotografien von der Reise \"Mallorca 1936\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Mallorca 1936&raquo;",
 				"docs": []
 			},
 			"travel_0014": {
 				"url_seq_overview": "/map/travel_0014",
 				"name": "USA 1936–1937 ('Erste USA-Reise')",
-				"preamble": "Texte und Fotografien von der Reise \"USA 1936–1937 ('Erste USA-Reise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;USA 1936–1937 ('Erste USA-Reise')&raquo;",
 				"docs": []
 			},
 			"travel_0015": {
 				"url_seq_overview": "/map/travel_0015",
 				"name": "Moskau 1937",
-				"preamble": "Texte und Fotografien von der Reise \"Moskau 1937\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Moskau 1937&raquo;",
 				"docs": [
 					"photo_0222",
 					"photo_0087",
@@ -656,61 +656,61 @@
 			"travel_0016": {
 				"url_seq_overview": "/map/travel_0016",
 				"name": "USA 1937–1938 ('Zweite USA-Reise')",
-				"preamble": "Texte und Fotografien von der Reise \"USA 1937–1938 ('Zweite USA-Reise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;USA 1937–1938 ('Zweite USA-Reise')&raquo;",
 				"docs": []
 			},
 			"travel_0017": {
 				"url_seq_overview": "/map/travel_0017",
 				"name": "Österreich 1938",
-				"preamble": "Texte und Fotografien von der Reise \"Österreich 1938\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Österreich 1938&raquo;",
 				"docs": []
 			},
 			"travel_0018": {
 				"url_seq_overview": "/map/travel_0018",
 				"name": "Prag 1938",
-				"preamble": "Texte und Fotografien von der Reise \"Prag 1938\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Prag 1938&raquo;",
 				"docs": []
 			},
 			"travel_0019": {
 				"url_seq_overview": "/map/travel_0019",
 				"name": "Afghanistan 1939–1940",
-				"preamble": "Texte und Fotografien von der Reise \"Afghanistan 1939–1940\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Afghanistan 1939–1940&raquo;",
 				"docs": []
 			},
 			"travel_0020": {
 				"url_seq_overview": "/map/travel_0020",
 				"name": "USA 1940–41 ('Dritte USA-Reise')",
-				"preamble": "Texte und Fotografien von der Reise \"USA 1940–41 ('Dritte USA-Reise')\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;USA 1940–41 ('Dritte USA-Reise')&raquo;",
 				"docs": []
 			},
 			"travel_0021": {
 				"url_seq_overview": "/map/travel_0021",
 				"name": "Kongo 1941–42",
-				"preamble": "Texte und Fotografien von der Reise \"Kongo 1941–42\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Kongo 1941–42&raquo;",
 				"docs": []
 			},
 			"travel_0022": {
 				"url_seq_overview": "/map/travel_0022",
 				"name": "Marokko 1942",
-				"preamble": "Texte und Fotografien von der Reise \"Marokko 1942\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Marokko 1942&raquo;",
 				"docs": []
 			},
 			"travel_0023": {
 				"url_seq_overview": "/map/travel_0023",
 				"name": "Italien 1930",
-				"preamble": "Texte und Fotografien von der Reise \"Italien 1930\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Italien 1930&raquo;",
 				"docs": []
 			},
 			"travel_0024": {
 				"url_seq_overview": "/map/travel_0024",
 				"name": "Lissabon 1941",
-				"preamble": "Texte und Fotografien von der Reise \"Lissabon 1941\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Lissabon 1941&raquo;",
 				"docs": []
 			},
 			"travel_0025": {
 				"url_seq_overview": "/map/travel_0025",
 				"name": "Lissabon 1942",
-				"preamble": "Texte und Fotografien von der Reise \"Lissabon 1942\"",
+				"preamble": "Texte und Fotografien von der Reise &laquo;Lissabon 1942&raquo;",
 				"docs": []
 			}
 		},
@@ -1173,7 +1173,7 @@
 			"series_0001": {
 				"url_seq_overview": null,
 				"name": "Baltisches Tagebuch, National Zeitung",
-				"preamble": "Texte und Fotografien aus der Serie \"Baltisches Tagebuch, National Zeitung\"",
+				"preamble": "Texte und Fotografien aus der Serie &laquo;Baltisches Tagebuch, National Zeitung&raquo;",
 				"docs": ["smallform_0223", "smallform_0224", "smallform_0225"]
 			}
 		},
@@ -1181,7 +1181,7 @@
 			"SLA-Schwarzenbach-A-5-12": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-12",
 				"name": "SLA-Schwarzenbach-A-5-12",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-12\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-12&raquo;",
 				"docs": [
 					"photo_1960",
 					"photo_1972",
@@ -1239,7 +1239,7 @@
 			"SLA-Schwarzenbach-A-5-27": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-27",
 				"name": "SLA-Schwarzenbach-A-5-27",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-27\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-27&raquo;",
 				"docs": [
 					"photo_4068",
 					"photo_4069",
@@ -1293,7 +1293,7 @@
 			"SLA-Schwarzenbach-A-5-17": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-17",
 				"name": "SLA-Schwarzenbach-A-5-17",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-17\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-17&raquo;",
 				"docs": [
 					"photo_2428",
 					"photo_2565",
@@ -1572,7 +1572,7 @@
 			"SLA-Schwarzenbach-A-5-01": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-01",
 				"name": "SLA-Schwarzenbach-A-5-01",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-01\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-01&raquo;",
 				"docs": [
 					"photo_0001",
 					"photo_0002",
@@ -1666,7 +1666,7 @@
 			"SLA-Schwarzenbach-A-5-08": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-08",
 				"name": "SLA-Schwarzenbach-A-5-08",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-08\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-08&raquo;",
 				"docs": [
 					"photo_1290",
 					"photo_1291",
@@ -1906,7 +1906,7 @@
 			"SLA-Schwarzenbach-A-5-02": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-02",
 				"name": "SLA-Schwarzenbach-A-5-02",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-02\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-02&raquo;",
 				"docs": [
 					"photo_0088",
 					"photo_0089",
@@ -2132,7 +2132,7 @@
 			"SLA-Schwarzenbach-A-5-03": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-03",
 				"name": "SLA-Schwarzenbach-A-5-03",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-03\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-03&raquo;",
 				"docs": [
 					"photo_0307",
 					"photo_0308",
@@ -2333,7 +2333,7 @@
 			"SLA-Schwarzenbach-A-5-04": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-04",
 				"name": "SLA-Schwarzenbach-A-5-04",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-04\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-04&raquo;",
 				"docs": [
 					"photo_0501",
 					"photo_0502",
@@ -2556,7 +2556,7 @@
 			"SLA-Schwarzenbach-A-5-14": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-14",
 				"name": "SLA-Schwarzenbach-A-5-14",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-14\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-14&raquo;",
 				"docs": [
 					"photo_2119",
 					"photo_2108",
@@ -2648,7 +2648,7 @@
 			"SLA-Schwarzenbach-A-5-18": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-18",
 				"name": "SLA-Schwarzenbach-A-5-18",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-18\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-18&raquo;",
 				"docs": [
 					"photo_2817",
 					"photo_2749",
@@ -2786,7 +2786,7 @@
 			"SLA-Schwarzenbach-A-5-06": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-06",
 				"name": "SLA-Schwarzenbach-A-5-06",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-06\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-06&raquo;",
 				"docs": [
 					"photo_0793",
 					"photo_0789",
@@ -3004,7 +3004,7 @@
 			"SLA-Schwarzenbach-A-5-07": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-07",
 				"name": "SLA-Schwarzenbach-A-5-07",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-07\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-07&raquo;",
 				"docs": [
 					"photo_1014",
 					"photo_1021",
@@ -3113,7 +3113,7 @@
 			"SLA-Schwarzenbach-A-5-05": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-05",
 				"name": "SLA-Schwarzenbach-A-5-05",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-05\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-05&raquo;",
 				"docs": [
 					"photo_0717",
 					"photo_0718",
@@ -3192,7 +3192,7 @@
 			"SLA-Schwarzenbach-A-5-15": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-15",
 				"name": "SLA-Schwarzenbach-A-5-15",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-15\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-15&raquo;",
 				"docs": [
 					"photo_2230",
 					"photo_2231",
@@ -3275,7 +3275,7 @@
 			"SLA-Schwarzenbach-A-5-09": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-09",
 				"name": "SLA-Schwarzenbach-A-5-09",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-09\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-09&raquo;",
 				"docs": [
 					"photo_1335",
 					"photo_1336",
@@ -3371,7 +3371,7 @@
 			"SLA-Schwarzenbach-A-5-10": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-10",
 				"name": "SLA-Schwarzenbach-A-5-10",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-10\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-10&raquo;",
 				"docs": [
 					"photo_1424",
 					"photo_1425",
@@ -3627,7 +3627,7 @@
 			"SLA-Schwarzenbach-A-5-11": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-11",
 				"name": "SLA-Schwarzenbach-A-5-11",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-11\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-11&raquo;",
 				"docs": [
 					"photo_1673",
 					"photo_1674",
@@ -3918,7 +3918,7 @@
 			"SLA-Schwarzenbach-A-5-13": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-13",
 				"name": "SLA-Schwarzenbach-A-5-13",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-13\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-13&raquo;",
 				"docs": [
 					"photo_2008",
 					"photo_2009",
@@ -4025,7 +4025,7 @@
 			"SLA-Schwarzenbach-A-5-16": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-16",
 				"name": "SLA-Schwarzenbach-A-5-16",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-16\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-16&raquo;",
 				"docs": [
 					"photo_2269",
 					"photo_2270",
@@ -4178,7 +4178,7 @@
 			"SLA-Schwarzenbach-A-5-19": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-19",
 				"name": "SLA-Schwarzenbach-A-5-19",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-19\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-19&raquo;",
 				"docs": [
 					"photo_2827",
 					"photo_2828",
@@ -4316,7 +4316,7 @@
 			"SLA-Schwarzenbach-A-5-20": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-20",
 				"name": "SLA-Schwarzenbach-A-5-20",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-20\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-20&raquo;",
 				"docs": [
 					"photo_2973",
 					"photo_2976",
@@ -4480,7 +4480,7 @@
 			"SLA-Schwarzenbach-A-5-21": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-21",
 				"name": "SLA-Schwarzenbach-A-5-21",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-21\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-21&raquo;",
 				"docs": [
 					"photo_3106",
 					"photo_3107",
@@ -4643,7 +4643,7 @@
 			"SLA-Schwarzenbach-A-5-22": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-22",
 				"name": "SLA-Schwarzenbach-A-5-22",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-22\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-22&raquo;",
 				"docs": [
 					"photo_3273",
 					"photo_3276",
@@ -4751,7 +4751,7 @@
 			"SLA-Schwarzenbach-A-5-23": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-23",
 				"name": "SLA-Schwarzenbach-A-5-23",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-23\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-23&raquo;",
 				"docs": [
 					"photo_3363",
 					"photo_3364",
@@ -4890,7 +4890,7 @@
 			"SLA-Schwarzenbach-A-5-24": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-24",
 				"name": "SLA-Schwarzenbach-A-5-24",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-24\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-24&raquo;",
 				"docs": [
 					"photo_3520",
 					"photo_3521",
@@ -5002,7 +5002,7 @@
 			"SLA-Schwarzenbach-A-5-25": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-25",
 				"name": "SLA-Schwarzenbach-A-5-25",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-25\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-25&raquo;",
 				"docs": [
 					"photo_3600",
 					"photo_3601",
@@ -5263,7 +5263,7 @@
 			"SLA-Schwarzenbach-A-5-26": {
 				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-26",
 				"name": "SLA-Schwarzenbach-A-5-26",
-				"preamble": "Fotografien aus \"SLA-Schwarzenbach-A-5-26\"",
+				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-26&raquo;",
 				"docs": [
 					"photo_3854",
 					"photo_3855",
