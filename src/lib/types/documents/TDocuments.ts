@@ -262,6 +262,9 @@ export type TDocuments = {
 					iiif_manifest_emanuscripta: string | null;
 					iiif_image_emanuscripta?: string | null;
 				};
+				manuscript: {
+					iiif_urls: string[];
+				};
 				linkedReg: {
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];

@@ -4,7 +4,7 @@ import re
 def transform_photos(document):
     """
     Process the photos section of a document with the following transformations:
-    1. Initialize 'linkedReg' and 'linkedDocs' as empty objects inside EACH photo entry.
+    1. Initialize 'manuscript', 'linkedReg' and 'linkedDocs' as empty objects inside EACH photo entry.
     2. Delete 'photo_id' inside metadata.
     3. Remove '[SLA-...]' pattern from the 'name' field.
     4. Rename 'id_sla' to 'sla_id_full' and split into 'sla_id_coll' / 'sla_id_img'.
@@ -24,6 +24,7 @@ def transform_photos(document):
             continue
 
         # --- NEW STEP: Add empty objects inside THIS specific photo entry ---
+        photo_data["manuscript"] = {}
         photo_data["linkedReg"] = {}
         photo_data["linkedDocs"] = {}
         # ---------------------------------------------------------------
