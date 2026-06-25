@@ -234,7 +234,7 @@ export type TDocuments = {
 					date_normalised: {
 						from: string | null;
 						to: string | null;
-					};
+					} | null;
 					travel: string | null;
 					photographer: string | null;
 					people_on_photo: string[] | null;

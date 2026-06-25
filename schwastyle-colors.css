@@ -27,7 +27,7 @@
 	--hover-foreground: hsl(0 0% 9%);
 	--border-shadow: hsl(0 0% 95%);
 	--muted: hsl(240 5% 96%);
-	--muted-foreground: hsla(0 0% 9% / 0.4);
+	--muted-foreground: hsla(0 0% 9% / 0.25);
 	--border: hsl(240 6% 10%);
 	--border-input: hsla(240 6% 10% / 0.17);
 	--border-input-hover: hsla(240 6% 10% / 1);
@@ -82,7 +82,7 @@
 	--hover-foreground: hsl(0 0% 95%);
 	--border-shadow: hsl(0 0% 38%);
 	--muted: hsl(240 4% 16%);
-	--muted-foreground: hsla(0 0% 100% / 0.4);
+	--muted-foreground: hsla(0 0% 100% / 0.25);
 	--border: hsl(0 0% 96%);
 	--border-input: hsla(0 0% 96% / 0.17);
 	--border-input-hover: hsla(0 0% 96% / 0.4);

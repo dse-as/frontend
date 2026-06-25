@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
-	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
+	import { doc_sequences as seqAllRaw } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
 	import { dict_docs } from '$lib/dictionaries/dict_docs.json';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
@@ -15,16 +15,21 @@
 	import type { TDictSeq, TSeqAll, TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 	import { SvelteMap } from 'svelte/reactivity';
 	import ThumbList from './ThumbList.svelte';
-	import Switch from '$lib/components/ui/Switch.svelte';
-	import { sequenceToggle } from '$lib/globals/ui-states.svelte';
+	import Checkbox from '$lib/components/ui/Checkbox.svelte';
+	import { sequenceToggle, isOpenSeqPanel } from '$lib/globals/ui-states.svelte';
+	import { fade } from 'svelte/transition';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
-	const seqAllTyped = seqAll as TSeqAll;
+	const seqAll = seqAllRaw as TSeqAll;
 	const dictSeqTyped = dictSeq as TDictSeq;
-
 	let { docId, currentSeq } = $props();
+	let otherSeq: { type: TSeqTypes | null; key: TSeqKeys | null } = $state({
+		type: null,
+		key: null
+	});
 
 	// Sequences
+	const seqTypes = Object.keys(dictSeq) as (keyof typeof dictSeq)[];
 	let seqMatching = $derived(
 		findMatchingSequences(
 			seqAll as Record<string, Record<string, { name?: string; docs: TDocKeys[] }>>,
@@ -49,10 +54,8 @@
 
 	// UI-State
 	let isSelectedValidSeq = $derived(currentSeq.type ? true : false);
-	let isOpenSeqPanel = $state(false);
-	let isHoveredAlltypes = $state(false);
-	let timeoutIdCloseSeqPanel: ReturnType<typeof setTimeout> | undefined = $state();
-	let timeoutIdResetActiveType: ReturnType<typeof setTimeout> | undefined = $state();
+
+	let isOpenOtherSeqPanel = $state(false);
 
 	// UI-Elements
 	let elSeqNav: HTMLElement | undefined = $state(undefined);
@@ -69,9 +72,6 @@
 	});
 	let elSeqPanel: HTMLElement | undefined = $state(undefined);
 
-	// UI-Choices
-	let activeType: TSeqTypes | null = $state(null);
-
 	// Functions
 	function filterVisible(array: TDocKeys[], seqToggle = sequenceToggle) {
 		return array.filter((itemId) => checkVisible(itemId, seqToggle));
@@ -87,35 +87,33 @@
 
 	function handleEscape(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
-			if (activeType && isSelectedValidSeq) resetActiveType(0);
+			if (otherSeq.key && isSelectedValidSeq) resetOtherSeq(0);
 			else closeSeqPanel(0);
 		}
 	}
 
 	function openSeqPanel() {
-		isOpenSeqPanel = true;
+		isOpenSeqPanel.state = true;
 		tick();
 		elSeqPanel?.focus();
 	}
 
 	function closeSeqPanel(delay = 0) {
-		timeoutIdCloseSeqPanel = setTimeout(() => {
-			resetActiveType(0);
-			isOpenSeqPanel = false;
-		}, delay);
+		resetOtherSeq(0);
+		isOpenSeqPanel.state = false;
 	}
 
-	function resetActiveType(delay = 0, exception = false) {
+	function resetOtherSeq(delay = 0, exception = false) {
 		if (exception) return;
-		timeoutIdResetActiveType = setTimeout(() => {
-			activeType = null;
-			elSeqPanel?.focus();
-		}, delay);
+		otherSeq.key = null;
+		otherSeq.type = null;
+		isOpenOtherSeqPanel = false;
+		elSeqPanel?.focus();
 	}
 
 	function cycleBlocks(el: HTMLElement) {
 		/* eslint-disable @typescript-eslint/no-unused-vars */
-		let _forceRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
+		let _forceRerun = otherSeq; // force rerun on change of otherSeq (since number of blocks depends on type)
 
 		let currentIndex = 0;
 		let blocks: HTMLElement[] = Array.from(el.querySelectorAll('[data-type=selectable-block]'));
@@ -213,14 +211,14 @@
 	</a>
 {/snippet}
 
-{#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
+{#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, { isCurrentSeqList = false } = {})}
 	{@const itemsBeforeIds =
 		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsBefore) as TDocKeys[]) || []}
 	{@const itemsAfterIds =
 		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsAfter) as TDocKeys[]) || []}
-	<div class="my-2 h-[180px]">
+	<div class="my-2">
 		<ThumbList
-			reCenterOn={[docId, itemsBeforeIds, itemsAfterIds]}
+			reCenterOn={[docId, itemsBeforeIds, itemsAfterIds, isOpenOtherSeqPanel]}
 			classesCurrent="min-w-85"
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
@@ -255,18 +253,21 @@
 {/snippet}
 
 <!-- Backdrop -->
-<div
-	hidden={!isOpenSeqPanel}
-	aria-hidden="true"
-	onclick={() => {
-		closeSeqPanel(0);
-	}}
-	onfocus={() => {
-		closeSeqPanel(0);
-	}}
-	aria-label="Panel schliessen"
-	class="fixed top-0 z-100 h-full w-full bg-background/90"
-></div>
+{#if isOpenSeqPanel.state}
+	<div
+		aria-hidden="true"
+		onclick={() => {
+			closeSeqPanel(0);
+		}}
+		onfocus={() => {
+			closeSeqPanel(0);
+		}}
+		aria-label="Panel schliessen"
+		class="fixed top-0 z-90001 h-full w-full bg-background/90"
+		in:fade={{ duration: 0 }}
+		out:fade={{ duration: 200 }}
+	></div>
+{/if}
 
 <!-- Sequence Navigation Elements -->
 {#if !isSelectedValidSeq}
@@ -275,9 +276,8 @@
 		<button
 			class="preset-btn-round --xl z-90003"
 			onclick={() => {
-				if (!isOpenSeqPanel) openSeqPanel();
+				if (!isOpenSeqPanel.state) openSeqPanel();
 				else closeSeqPanel(0);
-				activeType = Object.keys(seqMatching)[0] as TSeqTypes;
 			}}>Sequenz wählen...</button
 		>
 	</div>
@@ -291,11 +291,11 @@
 					<a
 						class="hover:underline"
 						href={resolve(
-							`/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_seq_overview ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_seq_overview : currentSeq.type}` as any
+							`/${seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview ? seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{seqAllTyped[currentSeq.type]?.[currentSeq.key]?.preamble}
+						>{seqAll[currentSeq.type]?.[currentSeq.key]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -308,7 +308,7 @@
 				class={['preset-btn-round', !prevId && '--muted']}
 				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
-				<div class={['flex flex-row items-center gap-2', !prevId && 'text-avocado-500']}>
+				<div class={['flex flex-row items-center gap-2']}>
 					<i class="fa-solid fa-chevron-left"></i>
 					<p>{dictSeqTyped[currentSeq.type]?.label_prev}</p>
 				</div>
@@ -319,7 +319,7 @@
 				class="preset-btn-circle --sm --shadow-bottom --color-light z-10 translate-y-5"
 				aria-label="Sequenzansicht öffnen"
 				onclick={(ev) => {
-					if (!isOpenSeqPanel) openSeqPanel();
+					if (!isOpenSeqPanel.state) openSeqPanel();
 					else closeSeqPanel(0);
 					const target = ev.target as HTMLElement | null;
 					const elButton = target?.closest('button') as HTMLElement | null;
@@ -327,9 +327,9 @@
 				}}
 			>
 				<div class="relative inline-block">
-					<i class={['fa-solid', !isOpenSeqPanel ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
+					<i class={['fa-solid', !isOpenSeqPanel.state ? 'fa-chevron-down' : 'fa-chevron-up']}></i>
 					<!-- Show Plus-Indicator if document is part of multiple sequences -->
-					{#if hasOtherSequences && !isOpenSeqPanel}
+					{#if hasOtherSequences && !isOpenSeqPanel.state}
 						<i
 							class="fa-solid fa-plus fa-sm absolute top-0 right-0 aspect-square translate-x-3 -translate-y-3 rounded-full bg-foreground pt-2 text-background"
 						></i>
@@ -342,7 +342,7 @@
 				class={['preset-btn-round', !nextId && '--muted']}
 				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
 			>
-				<div class={['flex flex-row items-center gap-2', !nextId && 'text-avodaco']}>
+				<div class={['flex flex-row items-center gap-2']}>
 					<p>{dictSeqTyped[currentSeq.type]?.label_next}</p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
@@ -352,72 +352,47 @@
 {/if}
 
 <!-- Sequence Panel  -->
-{#if isOpenSeqPanel}
+{#if isOpenSeqPanel.state}
 	<div
 		role="dialog"
 		tabindex="0"
 		bind:this={elSeqPanel}
 		class={[
-			'absolute z-90002 flex h-max max-h-[80vh] w-8/10 flex-col rounded-card-lg border-2 px-10 pb-10 transition-all duration-200',
-			isSelectedValidSeq ? 'bg-background pt-40' : 'bg-background pt-25'
+			'absolute z-90002 flex h-max w-8/10 flex-col overflow-y-auto rounded-card-lg border-2 px-10 pb-4 transition-all duration-200',
+			isSelectedValidSeq ? 'bg-background pt-40' : 'bg-background pt-25',
+			isOpenOtherSeqPanel ? 'max-h-[85vh]' : isSelectedValidSeq ? 'max-h-[60vh]' : 'max-h-[85vh]'
 		]}
+		in:fade={{ duration: 100 }}
+		out:fade={{ duration: 0 }}
 		style={`top:${elSeqNavSize?.top}px;`}
-		onmouseenter={() => {
-			clearTimeout(timeoutIdCloseSeqPanel);
-		}}
 	>
 		<!-- Sequence Toggles (Switches) -->
-		<div class="mb-4 flex items-center justify-center gap-2">
-			<Switch bind:checked={sequenceToggle.letters} height={24} classesLabel="text-base"
-				>{dict_docs.letters.label_plural}</Switch
-			>
-			<Switch bind:checked={sequenceToggle.smallforms} height={24} classesLabel="text-base"
-				>{dict_docs.smallforms.label_plural}</Switch
-			>
-			<Switch bind:checked={sequenceToggle.longforms} height={24} classesLabel="text-base"
-				>{dict_docs.longforms.label_plural}</Switch
-			>
-			<Switch bind:checked={sequenceToggle.photos} height={24} classesLabel="text-base"
-				>{dict_docs.photos.label_plural}</Switch
-			>
-		</div>
+		{#if isSelectedValidSeq}
+			<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
+				<Checkbox bind:checked={sequenceToggle.letters} classesLabel="text-base"
+					>{dict_docs.letters.label_plural}</Checkbox
+				>
+				<Checkbox bind:checked={sequenceToggle.smallforms} classesLabel="text-base"
+					>{dict_docs.smallforms.label_plural}</Checkbox
+				>
+				<Checkbox bind:checked={sequenceToggle.longforms} classesLabel="text-base"
+					>{dict_docs.longforms.label_plural}</Checkbox
+				>
+				<Checkbox bind:checked={sequenceToggle.photos} classesLabel="text-base"
+					>{dict_docs.photos.label_plural}</Checkbox
+				>
+			</div>
+		{/if}
 
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
+			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, {
+				isCurrentSeqList: true
+			})}
 			<div class="flex w-full items-center justify-end text-right">
-				{@render documentCount(currentSeq.type, currentSeq.key, { hideIntro: true })}
+				{@render documentCount(currentSeq.type, currentSeq.key, { hideIntro: false })}
 			</div>
-			{@render shortcuts(currentSeq.type, currentSeq.key)}
 		{/if}
-
-		<!-- Snippet: Other Sequences Selector -->
-		{#snippet otherSeqSelectors(classes: string)}
-			<div
-				role="dialog"
-				tabindex="0"
-				onmouseenter={() => {
-					clearTimeout(timeoutIdResetActiveType);
-				}}
-				onmouseleave={() => {
-					if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
-				}}
-			>
-				{#each Object.keys(seqOther) as TSeqTypes[] as seqType (seqType)}
-					<button
-						class={[classes, activeType === seqType && 'bg-background font-bold']}
-						onmousemove={() => {
-							activeType = seqType;
-						}}
-						onclick={() => {
-							activeType = seqType;
-						}}
-					>
-						{dictSeqTyped[seqType].label_plural}
-					</button>
-				{/each}
-			</div>
-		{/snippet}
 
 		<!-- Snippet: Document counts -->
 		{#snippet documentCount(
@@ -427,25 +402,25 @@
 		)}
 			{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
 			{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
-			{@const nLetters = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+			{@const nLetters = filterVisible([docId, ...itemsBeforeIds, ...itemsAfterIds], {
 				letters: true,
 				smallforms: false,
 				longforms: false,
 				photos: false
 			}).length}
-			{@const nSmallforms = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+			{@const nSmallforms = filterVisible([docId, ...itemsBeforeIds, ...itemsAfterIds], {
 				letters: false,
 				smallforms: true,
 				longforms: false,
 				photos: false
 			}).length}
-			{@const nLongforms = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+			{@const nLongforms = filterVisible([docId, ...itemsBeforeIds, ...itemsAfterIds], {
 				letters: false,
 				smallforms: false,
 				longforms: true,
 				photos: false
 			}).length}
-			{@const nPhotos = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+			{@const nPhotos = filterVisible([docId, ...itemsBeforeIds, ...itemsAfterIds], {
 				letters: false,
 				smallforms: false,
 				longforms: false,
@@ -467,15 +442,15 @@
 						{#if isFirst && !hideIntro}
 							In dieser Sequenz:
 						{/if}
-						<strong>
+						<span class={['font-bold', !isVisible && 'text-muted-foreground']}>
 							{count}
 							{#if count > 1}{dict.label_plural}
 							{:else}{dict.label_singular}
 							{/if}
-						</strong>{#if !isVisible}&nbsp;(ausgeblendet){/if}
+						</span>
 					</span>{#if isLast}.{/if}{/if}
 			{/snippet}
-			<div class={['inline-block w-full flex-col items-start py-1', classes]}>
+			<div class={['inline-block w-full flex-col items-start py-1 text-dark-70', classes]}>
 				{@render docCountPart(
 					nLetters,
 					dict_docs.letters,
@@ -514,46 +489,45 @@
 					closeSeqPanel(100);
 				}}
 			>
-				<h3 class="h3 mr-5">
+				<h3 class="h4 mr-5">
 					{dictSeq[seqType]?.label_singular}
-					<span class="italic">"{seqAllTyped[seqType]?.[seqKey]?.name || seqType}"</span>
+					<span class="italic">&laquo;{seqAll[seqType]?.[seqKey]?.name || seqType}&raquo;</span>
 				</h3>
 			</a>
 		{/snippet}
 
 		{#snippet shortcuts(seqType: TSeqTypes, seqKey: TSeqKeys)}
 			<!-- Sequenz Auswählen -->
-			<div
-				class="hidden group-focus-within:inline-block group-hover:inline-block group-focus:inline-block"
-			>
-				<a
-					data-sveltekit-preload-data="tap"
-					data-sveltekit-preload-code="hover"
-					class="preset-btn-round"
-					href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
-					onclick={() => {
-						closeSeqPanel(100);
-					}}
-					>Sequenz auswählen
-				</a>
-			</div>
-			<!-- Sequenzansicht -->
-			{#if seqAllTyped[seqType!]?.[seqKey]?.url_seq_overview}
+			<div class="mb-5 min-h-10">
 				<div
-					class="hidden group-focus-within:inline-block group-hover:inline-block group-focus:inline-block"
+					class="preset-btn-list --spacing-normal hidden group-focus-within:flex group-hover:flex group-focus:flex"
 				>
 					<a
 						data-sveltekit-preload-data="tap"
 						data-sveltekit-preload-code="hover"
 						class="preset-btn-round"
-						href={seqAllTyped[seqType!][seqKey].url_seq_overview}
-						target="_blank"
-						rel="noopener noreferrer"
-						>{@html dictSeqTyped[seqType!]?.label_seq_overview}
+						href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
+						onclick={() => {
+							closeSeqPanel(100);
+						}}
+						>Sequenz auswählen
 					</a>
+					<!-- Sequenzansicht -->
+					{#if seqAll[seqType!]?.[seqKey]?.url_seq_overview}
+						<a
+							data-sveltekit-preload-data="tap"
+							data-sveltekit-preload-code="hover"
+							class="preset-btn-round"
+							href={seqAll[seqType!][seqKey].url_seq_overview}
+							target="_blank"
+							rel="noopener noreferrer"
+							>{@html dictSeqTyped[seqType!]?.label_seq_overview}
+						</a>
+					{/if}
 				</div>
-			{/if}
+			</div>
 		{/snippet}
+
 		<!-- No sequence selected -->
 		{#if !isSelectedValidSeq}
 			{#if !hasOtherSequences}
@@ -564,16 +538,18 @@
 				</div>
 			{:else}
 				<!-- Sequences -->
-				{@const seqTypes = Object.keys(dictSeq) as (keyof typeof dictSeq)[]}
 				<div class="flex w-full flex-col overflow-y-auto">
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}
 							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
 								<div class="group">
 									{@render title(seqType, seqKey)}
-									{@render documentCount(seqType, seqKey)}
-									{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
-									<div class="min-h-20">{@render shortcuts(seqType, seqKey)}</div>
+									<!-- {@render documentCount(seqType, seqKey)} -->
+									{@render sequenceList(seqType, seqKey)}
+									<div class="flex w-full items-center justify-end text-right">
+										{@render documentCount(seqType, seqKey)}
+									</div>
+									{@render shortcuts(seqType, seqKey)}
 								</div>
 							{/each}
 						{/if}
@@ -585,55 +561,53 @@
 		<!-- Other Sequences Type-Selector -->
 		{#if isSelectedValidSeq && hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
-			<div class="mt-4 flex min-h-10 flex-wrap items-end justify-start">
-				<p class=" mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
-				{@render otherSeqSelectors('px-4 h-max underline hover:bg-background')}
+			<div class="group preset-btn-list --spacing-normal mt-10 items-center">
+				<p class="mr-2 font-bold">Weitere Sequenzen:</p>
+				<div class="group preset-btn-list --spacing-normal w-max">
+					{#each seqTypes as seqType (seqType)}
+						{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
+							<button
+								class={['preset-btn-round', otherSeq.key === seqKey && '--active']}
+								onclick={() => {
+									if (otherSeq.key === seqKey) {
+										resetOtherSeq();
+									} else {
+										isOpenOtherSeqPanel = true;
+										otherSeq.type = seqType;
+										otherSeq.key = seqKey;
+									}
+								}}
+								>{dictSeq[seqType]?.label_singular}&nbsp;<span class="italic"
+									>&laquo;{seqAll[seqType]?.[seqKey]?.name || seqType}&raquo;</span
+								>
+							</button>
+						{/each}
+					{/each}
+				</div>
 			</div>
 
 			<!-- Other Sequences -->
-			{#if activeType}
+			{#if isOpenOtherSeqPanel}
 				<div
 					role="dialog"
 					tabindex="0"
-					class={[
-						'relative rounded-b-xl bg-background text-foreground',
-						isSelectedValidSeq && 'mt-10 min-h-30 border-t-2'
-					]}
-					onmouseenter={() => {
-						isHoveredAlltypes = true;
-						clearTimeout(timeoutIdResetActiveType);
-					}}
-					onmouseleave={() => {
-						isHoveredAlltypes = false;
-						if (isSelectedValidSeq) resetActiveType(500, isHoveredAlltypes);
-					}}
+					data-dom="otherSeqPanel"
+					class="relative mt-4 min-h-30 overflow-hidden rounded-b-xl bg-background text-foreground"
 					{@attach cycleBlocks}
 				>
+					<!-- sequenceList with thumbnails -->
 					<div
-						class={[
-							'mt-5 flex h-full flex-col gap-5 overflow-y-auto px-1', // px-1 makes sure, focus region of groups is visible
-							isSelectedValidSeq ? 'max-h-[35vh]' : 'max-h-[70vh]'
-						]}
+						in:fade={{ duration: 200 }}
+						out:fade={{ duration: 100 }}
+						class="flex w-full flex-col gap-2 overflow-x-auto border-t-2 py-5"
 					>
-						<!-- Groups with other Sequences-->
-						{#each Object.keys(seqOther[activeType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
-							<div
-								class="group flex w-full flex-col gap-5"
-								tabindex="0"
-								role="dialog"
-								data-type="selectable-block"
-							>
-								<!-- sequenceList with thumbnails -->
-								<div class="flex w-full flex-col gap-2 overflow-x-auto py-1">
-									{#if isSelectedValidSeq && hasOtherSequences}
-										{@render title(activeType, seqKey)}
-										{@render documentCount(activeType, seqKey)}
-										{@render sequenceList(activeType, seqKey, seqKey === currentSeq.key)}
-										<div class="min-h-20">{@render shortcuts(activeType, seqKey)}</div>
-									{/if}
-								</div>
-							</div>
-						{/each}
+						{@render title(otherSeq.type, otherSeq.key)}
+						<!-- {@render documentCount(otherSeq.type, otherSeq.key)} -->
+						{@render sequenceList(otherSeq.type, otherSeq.key)}
+						<div class="flex w-full items-center justify-end text-right">
+							{@render documentCount(otherSeq.type, otherSeq.key)}
+						</div>
+						{@render shortcuts(otherSeq.type, otherSeq.key)}
 					</div>
 				</div>
 			{/if}

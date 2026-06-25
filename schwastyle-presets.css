@@ -12,7 +12,7 @@
 
 	/* Circle Buttons */
 	.preset-btn-circle {
-		@apply rounded-full;
+		@apply flex items-center justify-center rounded-full;
 
 		&:not(.--sm),
 		&:not(.--lg) {

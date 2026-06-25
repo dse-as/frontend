@@ -27,6 +27,7 @@ type TActiveRegisterTab = 'register' | 'notes';
 export const activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'notes' });
 
 // Sequence Toggles
+export const isOpenSeqPanel = $state({state: false});
 export const sequenceToggle = $state({
 	letters: true,
 	smallforms: true,

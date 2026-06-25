@@ -72,7 +72,7 @@
 	</Switch.Thumb>
 </Switch.Root>
 
-<Label.Root for={id} class={classesLabel}>
+<Label.Root for={id} class={[classesLabel, 'select-none']}>
 	{#if children}
 		{@render children()}
 	{/if}
