@@ -99,7 +99,7 @@
 	{/if}
 	<div bind:this={containerRef} class="my-2 h-[100px]">
 		<ThumbList
-			rerun={currentPage}
+			reCenterOn={currentPage}
 			classesCurrent="min-w-25"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}

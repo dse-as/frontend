@@ -115,7 +115,7 @@
 
 	function cycleBlocks(el: HTMLElement) {
 		/* eslint-disable @typescript-eslint/no-unused-vars */
-		let _foreRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
+		let _forceRerun = activeType; // force rerun on change of activeType (since number of blocks depends on type)
 
 		let currentIndex = 0;
 		let blocks: HTMLElement[] = Array.from(el.querySelectorAll('[data-type=selectable-block]'));
@@ -220,7 +220,7 @@
 		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsAfter) as TDocKeys[]) || []}
 	<div class="my-2 h-[180px]">
 		<ThumbList
-			rerun={[docId, itemsBeforeIds, itemsAfterIds]}
+			reCenterOn={[docId, itemsBeforeIds, itemsAfterIds]}
 			classesCurrent="min-w-85"
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
