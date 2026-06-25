@@ -1,6 +1,6 @@
-import { type TSmallformsKeys } from '../documents/TSmallformsKeys';
-import { type TLettersKeys } from '../documents/TLettersKeys';
-import { type TLongformsKeys } from '../documents/TLongformsKeys';
+import { type TSmallformsKeys } from '$lib/types/documents/TSmallformsKeys';
+import { type TLettersKeys } from '$lib/types/documents/TLettersKeys';
+import { type TLongformsKeys } from '$lib/types/documents/TLongformsKeys';
 
 export type TTimelineEntry = {
 	meta: {
