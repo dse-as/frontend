@@ -3,7 +3,7 @@
 
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
-	import IIIFViewer from '../[docId=docId]/IIIF_Viewer.svelte';
+	// import IIIFViewer from '../[docId=docId]/IIIF_Viewer.svelte';
 	import Sequences from '../[docId=docId]/Sequences.svelte';
 	let { data } = $props();
 	let imgdata = $derived(data.resolvedPhoto?.item);

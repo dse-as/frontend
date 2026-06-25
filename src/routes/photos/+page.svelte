@@ -9,7 +9,6 @@
 
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
-	import List from '$lib/components/List.svelte';
 
 	const docType = 'photos';
 
@@ -30,7 +29,7 @@
 </script>
 
 <!-- Navigation -->
-<DocumentsNav docType={'photos'} />
+<DocumentsNav docType="photos" />
 <!-- Large docPicker-Menu  -->
 <!-- The animated transition uses the width of the element -->
 <h1 class="h1 mb-5 pl-10 whitespace-nowrap transition-all duration-400">
@@ -50,7 +49,7 @@
 	<div
 		class="grid h-full w-full grid-cols-1 gap-sm overflow-y-scroll lg:grid-cols-3 xl:grid-cols-5"
 	>
-		{#each Object.keys(allDocsTyped.photos).slice(100, 150) as photo_key}
+		{#each Object.keys(allDocsTyped.photos).slice(100, 150) as photo_key (photo_key)}
 			{@const item = allDocsTyped[docType][photo_key]}
 			<a
 				href={resolve(`/${photo_key}`)}

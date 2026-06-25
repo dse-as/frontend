@@ -5,13 +5,11 @@
 	let {
 		checked = $bindable(false),
 		classesLabel = '',
-		labelRef = $bindable(null),
 		children = undefined,
 		...restProps
 	}: {
 		checked: boolean | undefined;
 		classesLabel?: string;
-		labelRef?: HTMLLabelElement | null;
 		children?: Snippet;
 	} = $props();
 

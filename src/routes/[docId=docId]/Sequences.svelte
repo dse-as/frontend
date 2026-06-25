@@ -87,8 +87,8 @@
 
 	function handleEscape(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
-			if (otherSeq.key && isSelectedValidSeq) resetOtherSeq(0);
-			else closeSeqPanel(0);
+			if (otherSeq.key && isSelectedValidSeq) resetOtherSeq();
+			else closeSeqPanel();
 		}
 	}
 
@@ -98,12 +98,12 @@
 		elSeqPanel?.focus();
 	}
 
-	function closeSeqPanel(delay = 0) {
-		resetOtherSeq(0);
+	function closeSeqPanel() {
+		resetOtherSeq();
 		isOpenSeqPanel.state = false;
 	}
 
-	function resetOtherSeq(delay = 0, exception = false) {
+	function resetOtherSeq(exception = false) {
 		if (exception) return;
 		otherSeq.key = null;
 		otherSeq.type = null;
@@ -183,7 +183,7 @@
 			isLast && 'rounded-r-thumbbox'
 		]}
 		onclick={() => {
-			closeSeqPanel(0);
+			closeSeqPanel();
 			invalidateAll();
 		}}
 	>
@@ -257,10 +257,10 @@
 	<div
 		aria-hidden="true"
 		onclick={() => {
-			closeSeqPanel(0);
+			closeSeqPanel();
 		}}
 		onfocus={() => {
-			closeSeqPanel(0);
+			closeSeqPanel();
 		}}
 		aria-label="Panel schliessen"
 		class="fixed top-0 z-90001 h-full w-full bg-background/90"
@@ -277,7 +277,7 @@
 			class="preset-btn-round --xl z-90003"
 			onclick={() => {
 				if (!isOpenSeqPanel.state) openSeqPanel();
-				else closeSeqPanel(0);
+				else closeSeqPanel();
 			}}>Sequenz wählen...</button
 		>
 	</div>
@@ -320,7 +320,7 @@
 				aria-label="Sequenzansicht öffnen"
 				onclick={(ev) => {
 					if (!isOpenSeqPanel.state) openSeqPanel();
-					else closeSeqPanel(0);
+					else closeSeqPanel();
 					const target = ev.target as HTMLElement | null;
 					const elButton = target?.closest('button') as HTMLElement | null;
 					elButton?.focus();
@@ -487,7 +487,7 @@
 				data-sveltekit-preload-code="hover"
 				href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 				onclick={() => {
-					closeSeqPanel(100);
+					closeSeqPanel();
 				}}
 			>
 				<h4 class="h4">
@@ -509,7 +509,7 @@
 						class="preset-btn-round"
 						href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 						onclick={() => {
-							closeSeqPanel(100);
+							closeSeqPanel();
 						}}
 						>Sequenz auswählen
 					</a>

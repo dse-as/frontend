@@ -3,9 +3,6 @@
 // ------------------------------------------------------------
 
 import type { TDocKeys, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
-import type { TLettersKeys } from '$lib/types/documents/TLettersKeys';
-import type { TLongformsKeys } from '$lib/types/documents/TLongformsKeys';
-import type { TSmallformsKeys } from '$lib/types/documents/TSmallformsKeys';
 import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 
 export type TResolvedPhoto = {
