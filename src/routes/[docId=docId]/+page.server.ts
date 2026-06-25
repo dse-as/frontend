@@ -78,20 +78,20 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 
 	if (resolvedDoc?.item) {
 		// globalEntities
-		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata.globalEntities) {
-			Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
-				crossRef.globalEntities[type as TRegTypes] =
-					resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map((key) => {
-						const resolved = resolveReg(reg, key as TRegKeysFlat);
-						const hasValidType = resolved?.regType;
-						return {
-							name: hasValidType ? resolved?.item?.name || '' : null,
-							regType: hasValidType ? resolved?.regType : null,
-							regKey: key
-						};
-					}) ?? null;
-			});
-		}
+		// if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata.globalEntities) {
+		// 	Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
+		// 		crossRef.globalEntities[type as TRegTypes] =
+		// 			resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map((key: TRegKeysFlat) => {
+		// 				const resolved = resolveReg(reg, key as TRegKeysFlat);
+		// 				const hasValidType = resolved?.regType;
+		// 				return {
+		// 					name: hasValidType ? resolved?.item?.name || '' : null,
+		// 					regType: hasValidType ? resolved?.regType : null,
+		// 					regKey: key
+		// 				};
+		// 			}) ?? null;
+		// 	});
+		// }
 	}
 
 	return {

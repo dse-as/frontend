@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { documents as allDocs } from '$lib/data/documents.json';
 import { register as reg } from '$lib/data/register.json';
-import type { TDocKeysFlat, TDocTypes } from '$lib/types/documents/TDocuments.js';
+import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments.js';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
@@ -23,7 +23,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		linkedDocs: Partial<
 			Record<
 				TDocTypes,
-				{ name: string | null; docType: TDocTypes | null; docKey: TDocKeysFlat }[] | null
+				{ name: string | null; docType: TDocTypes | null; docKey: TDocKeys }[] | null
 			>
 		>;
 	} = { linkedReg: {}, linkedDocs: {} };
@@ -49,10 +49,10 @@ export const load: PageServerLoad = async ({ params }) => {
 			Object.keys(resolvedPhoto.item.linkedDocs).forEach((type) => {
 				crossRef.linkedDocs[type as TDocTypes] =
 					resolvedPhoto.item!.linkedDocs![type as TDocTypes]?.map((key) => {
-						const resolved = resolveDoc(allDocs, key as TDocKeysFlat);
+						const resolved = resolveDoc(allDocs, key as TDocKeys);
 						const hasValidType = resolved?.docType;
 						return {
-							name: hasValidType ? resolved?.item?.name || '' : null,
+							name: hasValidType ? resolved?.item?.label || '' : null,
 							docType: hasValidType ? resolved?.docType : null,
 							docKey: key
 						};
