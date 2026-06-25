@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Menubar } from 'bits-ui';
+	import CustomMenubar from '$lib/components/ui/CustomMenubar.svelte';
 	import { NavigationMenu, Dialog } from 'bits-ui';
 	import { page } from '$app/state';
 
@@ -16,11 +18,32 @@
 		{ name: 'Über das Projekt', path: resolve('/project') },
 		{ name: 'Suche', path: resolve('/search') }
 	];
+	// Menu
+	const docs = [
+		{ label: 'letters', value: resolve('/letters') },
+		{ label: 'smallforms', value: resolve('/smallforms') },
+		{ label: 'longforms', value: resolve('/longforms') },
+		{ label: 'photos', value: resolve('/photos') }
+	];
+	const zugaenge = [
+		{ label: 'Karte', value: resolve('/map') },
+		{ label: 'Zeitstrahl', value: resolve('/timeline') },
+		{ label: 'Netzwerk', value: resolve('/network') },
+		{ label: 'Themen', value: resolve('/topics') }
+	];
+	const menubarMenus = [
+		{ title: 'Texte und Fotografien', items: docs },
+		{ title: 'Zugänge', items: zugaenge },
+		{ title: 'Register', value: resolve('/register') },
+		{ title: 'Über die Autorin', value: resolve('/schwarzenbach') },
+		{ title: 'Über das Projekt', value: resolve('/project') },
+		{ title: 'Suche', value: resolve('/search') }
+	];
 </script>
 
 <!-- Menu -->
 <NavigationMenu.Root
-	class="flex min-h-12 flex-row items-center justify-between gap-5 border-b-2 bg-foreground px-2 text-background"
+	class="rounded-10px bg-background-alt hidden h-12 items-center gap-1 border border-dark-10 px-[3px] shadow-mini lg:flex"
 >
 	<!-- Lead for Home Button -->
 	<div class="flex items-center">
@@ -28,7 +51,28 @@
 	</div>
 
 	<!-- Top Navigation Bar -->
-	<div class="">
+	<Menubar.Root
+		class="rounded-10px bg-background-alt flex h-12 items-center gap-1 border border-dark-10 px-[3px] shadow-mini"
+	>
+		{@const menubarItemsWithDropdown = menubarMenus.filter((menu) => 'items' in menu)}
+		{@const menubarItemsWithoutDropdown = menubarMenus.filter((menu) => 'value' in menu)}
+		{#each menubarItemsWithDropdown as { title, items }}
+			<CustomMenubar triggerText={title} {items} />
+		{/each}
+		{#each menubarItemsWithoutDropdown as item (item.title)}
+			<li
+				class={[
+					'list-nav-item inline-block h-full hover:text-accent',
+					item.value!.split('/').pop() === `/${page.url.pathname.split('/').pop()}`
+						? 'text-accent-foreground'
+						: ''
+				]}
+			>
+				<a href={item.value}>{@html item.title}</a>
+			</li>
+		{/each}
+	</Menubar.Root>
+	<!-- <div class="">
 		<nav class="hidden lg:block">
 			<ul class="my-2 flex w-full flex-wrap items-start justify-start gap-x-8 gap-y-6">
 				{#each links as link (link)}
@@ -45,7 +89,7 @@
 				{/each}
 			</ul>
 		</nav>
-	</div>
+	</div> -->
 
 	<!-- Spacer -->
 	<div class="grow"></div>
