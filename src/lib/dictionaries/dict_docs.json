@@ -5,6 +5,7 @@
 			"name": "Kleine Formen",
 			"key_singular": "smallform",
 			"label_plural": "Kleine Formen",
+			"label_singular": "Kleine Form",
 			"metadata": {
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
@@ -86,6 +87,7 @@
 			"name": "Romane und Reportagebücher",
 			"key_singular": "longform",
 			"label_plural": "Romane und Reportagebücher",
+			"label_singular": "Roman oder Reportagebuch",
 			"metadata": {
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
@@ -124,6 +126,7 @@
 			"name": "Briefe",
 			"key_singular": "letter",
 			"label_plural": "Briefe",
+			"label_singular": "Brief",
 			"metadata": {
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
@@ -159,6 +162,7 @@
 			"name": "Fotografien",
 			"key_singular": "photo",
 			"label_plural": "Fotografien",
+			"label_singular": "Fotografie",
 			"metadata": {},
 			"groups": {
 				"Fotografie'": {
