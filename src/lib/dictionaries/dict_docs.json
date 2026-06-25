@@ -7,9 +7,9 @@
 			"label_plural": "Kleine Formen",
 			"label_singular": "Kleine Form",
 			"metadata": {
+				"title": { "label": "Label" },
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
-				"label": { "label": "Label" },
 				"editor_workflow": { "label": "Editor Workflow" },
 				"year": { "label": "Jahr" },
 				"pubDate": { "label": "Publikaitonsdatum" },
@@ -89,9 +89,9 @@
 			"label_plural": "Romane und Reportagebücher",
 			"label_singular": "Roman oder Reportagebuch",
 			"metadata": {
+				"title": { "label": "Label" },
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
-				"label": { "label": "Label" },
 				"editor_workflow": { "label": "Editor Workflow" },
 				"year": { "label": "Jahr" },
 				"pubDate": { "label": "Publikaitonsdatum" },
@@ -128,9 +128,9 @@
 			"label_plural": "Briefe",
 			"label_singular": "Brief",
 			"metadata": {
+				"title": { "label": "Label" },
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
-				"label": { "label": "Label" },
 				"editor_workflow": { "label": "Editor Workflow" },
 				"year": { "label": "Jahr" },
 				"pubDate": { "label": "Publikaitonsdatum" },
