@@ -384,8 +384,10 @@
 
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			{@render documentCount(currentSeq.type, currentSeq.key)}
 			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
+			<div class="flex w-full items-center justify-end text-right">
+				{@render documentCount(currentSeq.type, currentSeq.key, { hideIntro: true })}
+			</div>
 			{@render shortcuts(currentSeq.type, currentSeq.key)}
 		{/if}
 
@@ -418,7 +420,11 @@
 		{/snippet}
 
 		<!-- Snippet: Document counts -->
-		{#snippet documentCount(seqType: TSeqTypes, seqKey: TSeqKeys, classes = '')}
+		{#snippet documentCount(
+			seqType: TSeqTypes,
+			seqKey: TSeqKeys,
+			{ classes = '', hideIntro = false } = {}
+		)}
 			{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
 			{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
 			{@const nLetters = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
@@ -458,7 +464,7 @@
 					{:else if !isFirst},
 					{/if}
 					<span class="whitespace-nowrap">
-						{#if isFirst}
+						{#if isFirst && !hideIntro}
 							In dieser Sequenz:
 						{/if}
 						<strong>
@@ -579,7 +585,7 @@
 		<!-- Other Sequences Type-Selector -->
 		{#if isSelectedValidSeq && hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
-			<div class="mt-10 flex min-h-10 flex-wrap items-end justify-start">
+			<div class="mt-4 flex min-h-10 flex-wrap items-end justify-start">
 				<p class=" mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
 				{@render otherSeqSelectors('px-4 h-max underline hover:bg-background')}
 			</div>
