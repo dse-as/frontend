@@ -2,13 +2,11 @@
 	import { resolve } from '$app/paths';
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { type TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import type { TResolvedPhotos } from '$lib/functions/ease_of_use/resolveDoc';
 	import type {
 		TDocKeys,
 		TDocMetadataKeys,
-		TDocMetadataKeysLetters,
-		TDocMetadataKeysLongforms,
-		TDocMetadataKeysSmallforms
+		TDocMetadataKeysPhotos
 	} from '$lib/types/documents/TDocuments';
 
 	let {
@@ -16,7 +14,7 @@
 		crossRef,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		resDoc: TResolvedDoc | null;
+		resDoc: TResolvedPhotos | null;
 		crossRef: Record<'linkedDocs', any>;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
@@ -34,7 +32,7 @@
 </script>
 
 <!-- Snippet: Metadata Table -->
-{#snippet MetadataTable(mKeys: TDocMetadataKeys[])}
+{#snippet MetadataTable(mKeys: TDocMetadataKeysPhotos[])}
 	<table class="my-10 min-w-full" style={`opacity:${opacityMetadataTable}%`}>
 		<!-- Header: invisible but for accessibility -->
 		<thead>
@@ -50,9 +48,7 @@
 				{#if resDoc && resDoc.docType}
 					<tbody>
 						<tr>
-							<td
-								class="w-80 px-4 py-2 font-bold"
-								//! FIX type-error by resolving dictDocs
+							<td class="w-80 px-4 py-2 font-bold"
 								>{dictDocs[resDoc.docType].metadata[mKey]?.label}:</td
 							>
 							<td class="px-4 py-2 text-left"
@@ -117,30 +113,20 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if resDoc?.docType === 'letters'}
-		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLetters, any>}
+	{#if resDoc?.docType === 'photos'}
+		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysPhotos, any>}
 		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
+			{docMetadataTyped?.title}
 		</h1>
-		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
-	{:else if resDoc?.docType === 'smallforms'}
-		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysSmallforms, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
-		</h1>
-		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
-	{:else if resDoc?.docType === 'longforms'}
-		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLongforms, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
-		</h1>
-		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
+		<!-- //! CHECK THIS -->
+		{@render MetadataTable(['pubDate', docMetadataTyped?.date && 'date'])}
 	{/if}
 
 	<!-- Linked documents -->
 	<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Edierte Textstufen</h2>
 	<div class="min-h-[40vh]">
-		{@render LinkedItemsContainer(resDoc?.item?.metadata?.textstufen_edited as TDocKeys[])}
+		<!-- TODO -->
+		<!-- {@render LinkedItemsContainer(resDoc?.item?.metadata?.globalEntities?.documents as TDocKeys[])} -->
 	</div>
 	<h2 class="h4 sticky top-15 z-91 h-20 w-full py-5">Sequenzen</h2>
 	<p>TODO</p>

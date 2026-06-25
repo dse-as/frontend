@@ -29,7 +29,7 @@
 
 	<!-- Title -->
 	<div class="w-full px-10">
-		<h1 class="h1">{imgdata?.label}</h1>
+		<h1 class="h1">{imgdata?.name}</h1>
 	</div>
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -76,7 +76,7 @@
 			{/snippet}
 			{#snippet metadataEntryWithRegLink(
 				label: string,
-				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | undefined
+				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
 			)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
@@ -117,12 +117,12 @@
 									<tbody class="flex flex-col gap-2">
 										{@render metadataEntry('Titel', resPhoto.item.metadata.title)}
 										{@render metadataEntry('Fotograf:in', resPhoto.item.metadata.photographer)}
-										{@render metadataEntry('Publikationsort', resPhoto.item.metadata.published_in)}
-										<!-- //!FIX -->
 										{@render metadataEntry(
-											'Publikationsdatum',
-											resPhoto.item.metadata.date_normalised?.from
+											'Publikationsort',
+											(resPhoto.item.metadata.published_in || ['']).join(' | ')
 										)}
+										<!-- //!FIX -->
+										{@render metadataEntry('Datum', resPhoto.item.metadata.date_normalised?.from)}
 										{@render metadataEntry('Reise', resPhoto.item.metadata.travel)}
 										{@render metadataEntry(
 											'Caption 1',

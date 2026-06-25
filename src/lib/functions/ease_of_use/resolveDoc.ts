@@ -8,27 +8,33 @@ import type { TLongformsKeys } from '$lib/types/documents/TLongformsKeys';
 import type { TSmallformsKeys } from '$lib/types/documents/TSmallformsKeys';
 import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 
+export type TResolvedLetters = {
+	docId: TLettersKeys;
+	docType: 'letters';
+	item: TDocuments['documents']['letters'][TLettersKeys] | null;
+};
+export type TResolvedSmallforms = {
+	docId: TSmallformsKeys;
+	docType: 'smallforms';
+	item: TDocuments['documents']['smallforms'][TSmallformsKeys] | null;
+};
+export type TResolvedLongforms = {
+	docId: TLongformsKeys;
+	docType: 'longforms';
+	item: TDocuments['documents']['longforms'][TLongformsKeys] | null;
+};
+
+export type TResolvedPhotos = {
+	docId: TPhotosKeys;
+	docType: 'photos';
+	item: TDocuments['documents']['photos'][TPhotosKeys] | null;
+};
+
 export type TResolvedDoc =
-	| {
-			docId: TLettersKeys;
-			docType: 'letters';
-			item: TDocuments['documents']['letters'][TLettersKeys] | null;
-	  }
-	| {
-			docId: TSmallformsKeys;
-			docType: 'smallforms';
-			item: TDocuments['documents']['smallforms'][TSmallformsKeys] | null;
-	  }
-	| {
-			docId: TLongformsKeys;
-			docType: 'longforms';
-			item: TDocuments['documents']['longforms'][TLongformsKeys] | null;
-	  }
-	| {
-			docId: TPhotosKeys;
-			docType: 'photos';
-			item: TDocuments['documents']['photos'][TPhotosKeys] | null;
-	  };
+	| TResolvedLetters
+	| TResolvedSmallforms
+	| TResolvedLongforms
+	| TResolvedPhotos;
 
 export function resolveDoc(
 	object: Record<TDocTypes, any> | null,

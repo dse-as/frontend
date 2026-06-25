@@ -2,11 +2,12 @@
 	import { resolve } from '$app/paths';
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { type TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import type {
+		TResolvedLongforms,
+		TResolvedSmallforms
+	} from '$lib/functions/ease_of_use/resolveDoc';
 	import type {
 		TDocKeys,
-		TDocMetadataKeys,
-		TDocMetadataKeysLetters,
 		TDocMetadataKeysLongforms,
 		TDocMetadataKeysSmallforms
 	} from '$lib/types/documents/TDocuments';
@@ -16,7 +17,7 @@
 		crossRef,
 		cheatPageHeightInRegSingleColView = ''
 	}: {
-		resDoc: TResolvedDoc | null;
+		resDoc: TResolvedSmallforms | TResolvedLongforms | null;
 		crossRef: Record<'linkedDocs', any>;
 		cheatPageHeightInRegSingleColView: string;
 	} = $props();
@@ -34,7 +35,7 @@
 </script>
 
 <!-- Snippet: Metadata Table -->
-{#snippet MetadataTable(mKeys: TDocMetadataKeys[])}
+{#snippet MetadataTable(mKeys: TDocMetadataKeysSmallforms[] | TDocMetadataKeysLongforms[])}
 	<table class="my-10 min-w-full" style={`opacity:${opacityMetadataTable}%`}>
 		<!-- Header: invisible but for accessibility -->
 		<thead>
@@ -50,9 +51,7 @@
 				{#if resDoc && resDoc.docType}
 					<tbody>
 						<tr>
-							<td
-								class="w-80 px-4 py-2 font-bold"
-								//! FIX type-error by resolving dictDocs
+							<td class="w-80 px-4 py-2 font-bold"
 								>{dictDocs[resDoc.docType].metadata[mKey]?.label}:</td
 							>
 							<td class="px-4 py-2 text-left"
@@ -67,7 +66,10 @@
 {/snippet}
 
 <!-- Snippet for MetadataValue (inside MetadataTable) -->
-{#snippet MetadataValue(mKey: TDocMetadataKeys, value: unknown)}
+{#snippet MetadataValue(
+	mKey: TDocMetadataKeysSmallforms | TDocMetadataKeysLongforms,
+	value: unknown
+)}
 	{#if mKey}
 		<span>{String(value)}</span>
 	{/if}
@@ -117,22 +119,16 @@
 	style={cheatPageHeightInRegSingleColView}
 >
 	<!-- MetadataTable (by Type) -->
-	{#if resDoc?.docType === 'letters'}
-		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLetters, any>}
-		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
-		</h1>
-		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
-	{:else if resDoc?.docType === 'smallforms'}
+	{#if resDoc?.docType === 'smallforms'}
 		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysSmallforms, any>}
 		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
+			{docMetadataTyped?.title}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{:else if resDoc?.docType === 'longforms'}
 		{@const docMetadataTyped = resDoc?.item?.metadata as Record<TDocMetadataKeysLongforms, any>}
 		<h1 class="h1 sticky top-0 z-90 w-full pb-10">
-			{docMetadataTyped?.label}
+			{docMetadataTyped?.title}
 		</h1>
 		{@render MetadataTable(['pubDate', docMetadataTyped?.year && 'year'])}
 	{/if}

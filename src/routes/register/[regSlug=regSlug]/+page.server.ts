@@ -67,8 +67,12 @@ function resolveLinkedDocs(
 		return {
 			docId: docId as string,
 			iiif_url: resolved?.item?.manuscript?.iiif_urls?.[0] ?? null,
-			title_full: (resolved?.docType !== 'photos' ? resolved?.item?.metadata?.title_full : 'TODO') ?? null, //! TODO
-			pubDate: (resolved?.docType !== 'photos' ? resolved?.item?.metadata?.pubDate : resolved?.item?.metadata?.date) ?? null //! TODO
+			title_full:
+				(resolved?.docType !== 'photos' ? resolved?.item?.metadata?.title_full : 'TODO') ?? null, //! TODO
+			pubDate:
+				(resolved?.docType !== 'photos'
+					? resolved?.item?.metadata?.pubDate
+					: resolved?.item?.metadata?.date) ?? null //! TODO
 		};
 	});
 }

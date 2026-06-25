@@ -1,6 +1,42 @@
 {
 	"meta": {},
 	"dict_docs": {
+		"letters": {
+			"name": "Briefe",
+			"key_singular": "letter",
+			"label_plural": "Briefe",
+			"label_singular": "Brief",
+			"metadata": {
+				"title": { "label": "Label" },
+				"authors": { "label": "Autor:in(nen)" },
+				"summary": { "label": "Zusammenfassung" },
+				"editor_workflow": { "label": "Editor Workflow" },
+				"year": { "label": "Jahr" },
+				"pubDate": { "label": "Publikaitonsdatum" },
+				"title_full": { "label": "Voller Titel" },
+				"title_short": { "label": "Kurztitel" },
+				"pubPosthumOnly": { "label": "Posthume Publikation (ja/nein)" },
+				"placeOfSending": { "label": "Absendeort" },
+				"placeOfReceiver": { "label": "Empfangsort" },
+				"signature": { "label": "Signatur" },
+				"pubDetails": { "label": "Publikationsdetails" },
+				"textstufen_edited": { "label": "Textstufen (ediert)" },
+				"textzeugen_nonedited": { "label": "Textstufen (nicht ediert)" },
+				"series": { "label": "Serien" },
+				"comment": { "label": "Kommentar" },
+				"globalEntities": { "label": "Stichworte" },
+				"maximum": { "label": "Maximum" },
+				"travel": { "label": "Reise" },
+				"archive": { "label": "Archiv" },
+				"archiveCollation": { "label": "Archivsammlung" },
+				"pubSecondary": { "label": "Sekundärliteratur" },
+				"urlOnlineResource": { "label": "URL Onlineressource" },
+				"note": { "label": "Notizen" }
+			},
+			"groups": {
+				"Brief'": { "label_singular": "Brief", "label_plural": "Briefe", "slug": null }
+			}
+		},
 		"smallforms": {
 			"name": "Kleine Formen",
 			"key_singular": "smallform",
@@ -122,48 +158,37 @@
 				}
 			}
 		},
-		"letters": {
-			"name": "Briefe",
-			"key_singular": "letter",
-			"label_plural": "Briefe",
-			"label_singular": "Brief",
-			"metadata": {
-				"title": { "label": "Label" },
-				"authors": { "label": "Autor:in(nen)" },
-				"summary": { "label": "Zusammenfassung" },
-				"editor_workflow": { "label": "Editor Workflow" },
-				"year": { "label": "Jahr" },
-				"pubDate": { "label": "Publikaitonsdatum" },
-				"title_full": { "label": "Voller Titel" },
-				"title_short": { "label": "Kurztitel" },
-				"pubPosthumOnly": { "label": "Posthume Publikation (ja/nein)" },
-				"placeOfSending": { "label": "Absendeort" },
-				"placeOfReceiver": { "label": "Empfangsort" },
-				"signature": { "label": "Signatur" },
-				"pubDetails": { "label": "Publikationsdetails" },
-				"textstufen_edited": { "label": "Textstufen (ediert)" },
-				"textzeugen_nonedited": { "label": "Textstufen (nicht ediert)" },
-				"series": { "label": "Serien" },
-				"comment": { "label": "Kommentar" },
-				"globalEntities": { "label": "Stichworte" },
-				"maximum": { "label": "Maximum" },
-				"travel": { "label": "Reise" },
-				"archive": { "label": "Archiv" },
-				"archiveCollation": { "label": "Archivsammlung" },
-				"pubSecondary": { "label": "Sekundärliteratur" },
-				"urlOnlineResource": { "label": "URL Onlineressource" },
-				"note": { "label": "Notizen" }
-			},
-			"groups": {
-				"Brief'": { "label_singular": "Brief", "label_plural": "Briefe", "slug": null }
-			}
-		},
 		"photos": {
 			"name": "Fotografien",
 			"key_singular": "photo",
 			"label_plural": "Fotografien",
 			"label_singular": "Fotografie",
-			"metadata": {},
+			"metadata": {
+				"title": { "label": "Label" },
+				"date": { "label": "Datum" },
+				"date_normalised": { "label": "Datum Normalisiert" },
+				"travel": { "label": "Reise" },
+				"photographer": { "label": "Fotograf:in" },
+				"people_on_photo": { "label": "Abgebildete Personen" },
+				"characteristics": { "label": "Umfang" },
+				"comments_1": { "label": "Anmerkung 1" },
+				"comments_2": { "label": "Anmerkungen 2" },
+				"captions_1": { "label": "Caption 1" },
+				"captions_2": { "label": "Caption 2" },
+				"orientation": { "label": "Orientierung" },
+				"shape": { "label": "Form" },
+				"url_helveticarchives": { "label": "URL Helvetic Archives" },
+				"url_wikimedia": { "label": "URL Wikimedia" },
+				"url_emanuscripta": { "label": "URL e-manuscripta" },
+				"repository": { "label": "Repository" },
+				"published_in": { "label": "Publikation (Editionen & Artikel)" },
+				"mentioned_in": { "label": "Erwähung in Forschungsliteratur" },
+				"sla_id_full": { "label": "SLA-ID" },
+				"sla_id_coll": { "label": "SLA Sammlung" },
+				"sla_id_img": { "label": "SLA Dokumentennummer" },
+				"stamped": { "label": "Gestempelt" },
+				"signed": { "label": "Signiert" }
+			},
 			"groups": {
 				"Fotografie'": {
 					"label_singular": "Fotografie",

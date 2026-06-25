@@ -35,12 +35,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TLettersGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					title_short?: string;
 					pubDate: string;
 					title_full: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
@@ -101,12 +101,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TSmallformsGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					pubDate: string;
 					title_full: string;
 					title_short?: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
@@ -166,12 +166,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TLongformsGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					pubDate: string;
 					title_full: string;
 					title_short?: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;

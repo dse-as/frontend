@@ -9,6 +9,7 @@
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { documents as allDocsRaw } from '$lib/data/documents.json';
 	import { type TDocKeys, type TDocuments } from '$lib/types/documents/TDocuments';
 	import { tick } from 'svelte';
@@ -169,7 +170,7 @@
 		item: resDoc,
 		docId: resId,
 		docType: resType
-	} = resolveDoc(allDocs, itemId) || { item: null }}
+	} = (resolveDoc(allDocs, itemId) as TResolvedDoc) || { item: null }}
 	<a
 		data-sveltekit-preload-data="tap"
 		data-sveltekit-preload-code="hover"
@@ -196,7 +197,7 @@
 					/>
 				</div>
 				<div class="flex flex-col">
-					<span class="line-clamp-2">{resDoc?.label}</span>
+					<span class="line-clamp-2">{resDoc?.name}</span>
 				</div>
 			{:else}
 				<div class="container-centered">

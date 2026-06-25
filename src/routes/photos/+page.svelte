@@ -9,6 +9,7 @@
 
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
+	import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 
 	const docType = 'photos';
 
@@ -50,7 +51,7 @@
 		class="grid h-full w-full grid-cols-1 gap-sm overflow-y-scroll lg:grid-cols-3 xl:grid-cols-5"
 	>
 		{#each Object.keys(allDocsTyped.photos).slice(100, 150) as photo_key (photo_key)}
-			{@const item = allDocsTyped[docType][photo_key]}
+			{@const item = allDocsTyped[docType][photo_key as TPhotosKeys]}
 			<a
 				href={resolve(`/${photo_key}`)}
 				class="m-10 flex items-center justify-center gap-5 rounded-card hover:bg-dark-10 lg:flex-col"
@@ -59,7 +60,7 @@
 					url={item.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
 					classes="w-[200px] h-[200px]"
 				/>
-				<p class="text-left lg:text-center">{item.label}</p>
+				<p class="text-left lg:text-center">{item.name}</p>
 				<p class="text-left lg:text-center">{photo_key}</p>
 			</a>
 		{/each}
