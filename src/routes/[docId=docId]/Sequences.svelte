@@ -4,6 +4,7 @@
 	import { findMatchingSequences } from '$lib/functions/sequences/findMatchingSequences';
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
 	import { dict_sequences as dictSeq } from '$lib/dictionaries/dict_sequences.json';
+	import { dict_docs } from '$lib/dictionaries/dict_docs.json';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
 	import { invalidateAll } from '$app/navigation';
@@ -14,6 +15,8 @@
 	import type { TDictSeq, TSeqAll, TSeqKeys, TSeqTypes } from '$lib/types/TSequences';
 	import { SvelteMap } from 'svelte/reactivity';
 	import ThumbList from './ThumbList.svelte';
+	import Switch from '$lib/components/ui/Switch.svelte';
+	import { sequenceToggle } from '$lib/globals/ui-states.svelte';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAllTyped = seqAll as TSeqAll;
@@ -24,21 +27,24 @@
 	// Sequences
 	let seqMatching = $derived(
 		findMatchingSequences(
-			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
+			seqAll as Record<string, Record<string, { name?: string; docs: TDocKeys[] }>>,
 			docId,
 			[]
 		)
 	);
 	let seqOther = $derived(
 		findMatchingSequences(
-			seqAll as Record<string, Record<string, { name?: string; docs: string[] }>>,
+			seqAll as Record<string, Record<string, { name?: string; docs: TDocKeys[] }>>,
 			docId,
 			[currentSeq.key]
 		)
 	);
+
 	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.key]);
-	const prevId = $derived(seqCurrent?.docsBefore[seqCurrent?.docsBefore.length - 1] || null);
-	const nextId = $derived(seqCurrent?.docsAfter[0] || null);
+	const prevId = $derived(
+		filterVisible(seqCurrent?.docsBefore)[filterVisible(seqCurrent?.docsBefore).length - 1] || null
+	);
+	const nextId = $derived(filterVisible(seqCurrent?.docsAfter)[0] || null);
 	let hasOtherSequences = $derived(Object.keys(seqOther).length ? true : false);
 
 	// UI-State
@@ -67,6 +73,18 @@
 	let activeType: TSeqTypes | null = $state(null);
 
 	// Functions
+	function filterVisible(array: TDocKeys[], seqToggle = sequenceToggle) {
+		return array.filter((itemId) => checkVisible(itemId, seqToggle));
+	}
+	function checkVisible(itemId: TDocKeys, seqToggle = sequenceToggle) {
+		return (
+			(seqToggle.letters && itemId.includes('letter')) ||
+			(seqToggle.smallforms && itemId.includes('smallform')) ||
+			(seqToggle.longforms && itemId.includes('longform')) ||
+			(seqToggle.photos && itemId.includes('photo'))
+		);
+	}
+
 	function handleEscape(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
 			if (activeType && isSelectedValidSeq) resetActiveType(0);
@@ -196,11 +214,13 @@
 {/snippet}
 
 {#snippet sequenceList(seqType: TSeqTypes, seqKey: TSeqKeys, isCurrentSeqList: boolean)}
-	{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
-	{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
+	{@const itemsBeforeIds =
+		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsBefore) as TDocKeys[]) || []}
+	{@const itemsAfterIds =
+		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsAfter) as TDocKeys[]) || []}
 	<div class="my-2 h-[180px]">
 		<ThumbList
-			rerun={docId}
+			rerun={[docId, itemsBeforeIds, itemsAfterIds]}
 			classesCurrent="min-w-85"
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
@@ -271,7 +291,7 @@
 					<a
 						class="hover:underline"
 						href={resolve(
-							`${dictSeqTyped[currentSeq.type]?.url_overview}/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
+							`/${seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug ? seqAllTyped[currentSeq.type]?.[currentSeq.key]?.url_slug : currentSeq.type}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -346,6 +366,21 @@
 			clearTimeout(timeoutIdCloseSeqPanel);
 		}}
 	>
+		<!-- Switches -->
+		<div class="mt-2 flex items-center justify-center gap-2">
+			<Switch bind:checked={sequenceToggle.letters} height={24} classesLabel="text-base"
+				>{dict_docs.letters.label_plural}</Switch
+			>
+			<Switch bind:checked={sequenceToggle.smallforms} height={24} classesLabel="text-base"
+				>{dict_docs.smallforms.label_plural}</Switch
+			>
+			<Switch bind:checked={sequenceToggle.longforms} height={24} classesLabel="text-base"
+				>{dict_docs.longforms.label_plural}</Switch
+			>
+			<Switch bind:checked={sequenceToggle.photos} height={24} classesLabel="text-base"
+				>{dict_docs.photos.label_plural}</Switch
+			>
+		</div>
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
 			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, true)}
@@ -380,30 +415,109 @@
 		{/snippet}
 
 		<!-- Snippet: Title with shortcuts -->
-		{#snippet titleWithShortcuts(type: string, seqKey: string)}
+		{#snippet titleWithShortcuts(seqType: TSeqTypes, seqKey: string)}
+			{@const itemsBeforeIds = (seqMatching[seqType]?.[seqKey]?.docsBefore as TDocKeys[]) || []}
+			{@const itemsAfterIds = (seqMatching[seqType]?.[seqKey]?.docsAfter as TDocKeys[]) || []}
+			{@const nLetters = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+				letters: true,
+				smallforms: false,
+				longforms: false,
+				photos: false
+			}).length}
+			{@const nSmallforms = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+				letters: false,
+				smallforms: true,
+				longforms: false,
+				photos: false
+			}).length}
+			{@const nLongforms = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+				letters: false,
+				smallforms: false,
+				longforms: true,
+				photos: false
+			}).length}
+			{@const nPhotos = filterVisible([...itemsBeforeIds, ...itemsAfterIds], {
+				letters: false,
+				smallforms: false,
+				longforms: false,
+				photos: true
+			}).length}
 			<div class={['flex min-h-18 w-full flex-col items-start py-1']}>
-				<h6 class="h6 mr-5">{seqAllTyped[type!]?.[seqKey]?.preamble || type}</h6>
+				<a
+					data-sveltekit-preload-data="tap"
+					data-sveltekit-preload-code="hover"
+					href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
+					onclick={() => {
+						closeSeqPanel(100);
+					}}
+				>
+					<h3 class="h3 mr-5">
+						{dictSeq[seqType]?.label_singular}
+						<span class="italic">"{seqAllTyped[seqType]?.[seqKey]?.name || seqType}"</span>
+					</h3>
+				</a>
+				<p>
+					{#snippet documentCount(
+						count: number,
+						dict: { label_plural: string; label_singular: string },
+						isVisible: boolean,
+						isFirst: boolean,
+						isLast: boolean
+					)}
+						{#if count}
+							{#if !isFirst && isLast}
+								&nbsp;und
+							{:else if !isFirst},
+							{/if}
+							<span class="whitespace-nowrap">
+								{#if isFirst}
+									Enthält
+								{/if}
+								<strong>
+									{count}
+									{#if count > 1}{dict.label_plural}
+									{:else}{dict.label_singular}
+									{/if}
+								</strong>{#if !isVisible}&nbsp;(ausgeblendet){/if}
+							</span>{#if isLast}.{/if}{/if}
+					{/snippet}
+					{@render documentCount(
+						nLetters,
+						dict_docs.letters,
+						sequenceToggle.letters,
+						true,
+						nSmallforms + nLongforms + nPhotos === 0
+					)}{@render documentCount(
+						nSmallforms,
+						dict_docs.smallforms,
+						sequenceToggle.smallforms,
+						nLetters === 0,
+						nLongforms + nPhotos === 0
+					)}{@render documentCount(
+						nLongforms,
+						dict_docs.longforms,
+						sequenceToggle.longforms,
+						nLetters + nSmallforms === 0,
+						nPhotos === 0
+					)}{@render documentCount(
+						nPhotos,
+						dict_docs.photos,
+						sequenceToggle.photos,
+						nLetters + nSmallforms + nLongforms === 0,
+						true
+					)}
+				</p>
 				<div class="hidden group-focus-within:block group-hover:block group-focus:block">
 					<div class="flex gap-4">
-						<a
-							data-sveltekit-preload-data="tap"
-							data-sveltekit-preload-code="hover"
-							class="h-full underline hover:text-hover-foreground"
-							href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
-							onclick={() => {
-								closeSeqPanel(100);
-							}}
-							>Sequenz auswählen
-						</a>
-						{#if seqAllTyped[type!]?.[seqKey]?.url_slug}
+						{#if seqAllTyped[seqType!]?.[seqKey]?.url_slug}
 							<a
 								data-sveltekit-preload-data="tap"
 								data-sveltekit-preload-code="hover"
 								class="h-full underline hover:text-hover-foreground"
-								href={`${dictSeqTyped[type!]?.url_overview}/${seqAllTyped[type!][seqKey].url_slug}`}
+								href={seqAllTyped[seqType!][seqKey].url_slug}
 								target="_blank"
 								rel="noopener noreferrer"
-								>{dictSeqTyped[type!]?.label_overview}
+								>{dictSeqTyped[seqType!]?.label_overview}
 							</a>
 						{/if}
 					</div>
@@ -425,11 +539,11 @@
 				<div class="flex w-full flex-col overflow-y-auto">
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}
-							<h3 class="h3">{dictSeqTyped[seqType]?.label_plural}</h3>
 							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
-								{@render titleWithShortcuts(seqType, seqKey)}
-
-								{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
+								<div class="group">
+									{@render titleWithShortcuts(seqType, seqKey)}
+									{@render sequenceList(seqType, seqKey, seqKey === currentSeq.key)}
+								</div>
 							{/each}
 						{/if}
 					{/each}
@@ -440,7 +554,7 @@
 		<!-- Other Sequences Type-Selector -->
 		{#if isSelectedValidSeq && hasOtherSequences}
 			<!-- Select sequences (other than the one currently sequence selected)-->
-			<div class="mt-4 flex min-h-10 flex-wrap items-end justify-start">
+			<div class="mt-10 flex min-h-10 flex-wrap items-end justify-start">
 				<p class=" mr-2 h-max font-bold">Weitere Sequenzen zu diesem Dokument:</p>
 				{@render otherSeqSelectors('px-4 h-max underline hover:bg-background')}
 			</div>
@@ -452,7 +566,7 @@
 					tabindex="0"
 					class={[
 						'relative rounded-b-xl bg-background text-foreground',
-						isSelectedValidSeq && 'mt-10 border-t-2'
+						isSelectedValidSeq && 'mt-10 min-h-30 border-t-2'
 					]}
 					onmouseenter={() => {
 						isHoveredAlltypes = true;
