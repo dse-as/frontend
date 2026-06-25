@@ -99,7 +99,7 @@
 	{/if}
 	<div bind:this={containerRef} class="my-2 h-[100px]">
 		<ThumbList
-			rerun={currentPage}
+			reCenterOn={currentPage}
 			classesCurrent="min-w-25"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
@@ -123,7 +123,7 @@
 						<div
 							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10"
 						>
-							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.label}</h6>
+							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.title}</h6>
 							{#each items as item (item.page)}
 								<a
 									class="ml-2 rounded-thumbbox p-1"

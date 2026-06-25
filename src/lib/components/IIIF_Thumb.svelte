@@ -1,6 +1,5 @@
 <script>
-	let { url, classes = '' } = $props();
-	const iiif_imageAPI_width = '100';
+	let { url, iiif_imageAPI_width = 100, classes = '' } = $props();
 	let showSpinner = $state(true);
 	let isError = $state(false);
 </script>
@@ -34,7 +33,7 @@
 		</div>
 	{/if}
 {:else}
-	<div class={['container-centered', classes]}>
+	<div class={['flex items-center justify-center', classes]}>
 		<i class="fa-solid fa-xmark fa-2xl"></i>
 	</div>
 {/if}

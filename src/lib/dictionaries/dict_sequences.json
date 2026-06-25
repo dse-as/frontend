@@ -5,8 +5,8 @@
 			"sequence_name": "Textstufen",
 			"key_singular": "textstufe",
 			"label_plural": "Textstufen",
-			"url_overview": "/sequences",
-			"label_overview": null,
+			"label_singular": "Textstufe",
+			"label_seq_overview": "Zur [DEADEND]",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
 		},
@@ -14,8 +14,8 @@
 			"sequence_name": "Reisen",
 			"key_singular": "travel",
 			"label_plural": "Reisen",
-			"url_overview": "/register",
-			"label_overview": "In Reiseansicht ansehen",
+			"label_singular": "Reise",
+			"label_seq_overview": "Reise auf Karte ansehen",
 			"label_next": "Nächstes Dokument",
 			"label_prev": "Vorheriges Dokument"
 		},
@@ -23,28 +23,28 @@
 			"sequence_name": "Korrespondenz",
 			"key_singular": "correspondence",
 			"label_plural": "Korrespondenz",
-			"url_overview": "/correspondence",
-			"label_overview": "In Korrespondenzansicht ansehen",
+			"label_singular": "Korrespondenz",
+			"label_seq_overview": "Zur Korrespondenzansicht",
 			"label_next": "Nächster Brief",
 			"label_prev": "Vorheriger Brief"
 		},
-		"topics": {
-			"sequence_name": "Themen",
-			"key_singular": "topic",
-			"label_plural": "Themen",
-			"url_overview": "/topics",
-			"label_overview": "In Themenansicht ansehen",
-			"label_next": "Nächstes Dokument",
-			"label_prev": "Vorheriges Dokument"
-		},
 		"series": {
-			"sequence_name": "Artikelserie",
+			"sequence_name": "Artikelserien",
 			"key_singular": "series",
-			"label_plural": "Artikelserie",
-			"url_overview": "/series",
-			"label_overview": "In Serienansicht ansehen",
+			"label_plural": "Artikelserien",
+			"label_singular": "Artikelserie",
+			"label_seq_overview": "Zur Serienansicht",
 			"label_next": "Nächster Artikel",
 			"label_prev": "Vorheriger Artikel"
+		},
+		"photoseries": {
+			"sequence_name": "Fotoserie",
+			"key_singular": "photoseries",
+			"label_plural": "Fotoserien",
+			"label_singular": "Fotoserie",
+			"label_seq_overview": "Zur Übersicht der Fotoserie",
+			"label_next": "Nächstes Foto",
+			"label_prev": "Vorheriges Foto"
 		}
 	}
 }

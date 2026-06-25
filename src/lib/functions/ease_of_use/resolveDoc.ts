@@ -3,26 +3,38 @@
 // ------------------------------------------------------------
 
 import type { TDocKeys, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
-import type { TLettersKeys } from '$lib/types/documents/TDocuments';
-import type { TLongformsKeys } from '$lib/types/documents/TDocuments';
-import type { TSmallformsKeys } from '$lib/types/documents/TDocuments';
+import type { TLettersKeys } from '$lib/types/documents/TLettersKeys';
+import type { TLongformsKeys } from '$lib/types/documents/TLongformsKeys';
+import type { TSmallformsKeys } from '$lib/types/documents/TSmallformsKeys';
+import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
+
+export type TResolvedLetters = {
+	docId: TLettersKeys;
+	docType: 'letters';
+	item: TDocuments['documents']['letters'][TLettersKeys] | null;
+};
+export type TResolvedSmallforms = {
+	docId: TSmallformsKeys;
+	docType: 'smallforms';
+	item: TDocuments['documents']['smallforms'][TSmallformsKeys] | null;
+};
+export type TResolvedLongforms = {
+	docId: TLongformsKeys;
+	docType: 'longforms';
+	item: TDocuments['documents']['longforms'][TLongformsKeys] | null;
+};
+
+export type TResolvedPhotos = {
+	docId: TPhotosKeys;
+	docType: 'photos';
+	item: TDocuments['documents']['photos'][TPhotosKeys] | null;
+};
 
 export type TResolvedDoc =
-	| {
-			docId: TLettersKeys;
-			docType: 'letters';
-			item: TDocuments['documents']['letters'][TLettersKeys] | null;
-	  }
-	| {
-			docId: TSmallformsKeys;
-			docType: 'smallforms';
-			item: TDocuments['documents']['smallforms'][TSmallformsKeys] | null;
-	  }
-	| {
-			docId: TLongformsKeys;
-			docType: 'longforms';
-			item: TDocuments['documents']['longforms'][TLongformsKeys] | null;
-	  };
+	| TResolvedLetters
+	| TResolvedSmallforms
+	| TResolvedLongforms
+	| TResolvedPhotos;
 
 export function resolveDoc(
 	object: Record<TDocTypes, any> | null,
@@ -46,6 +58,12 @@ export function resolveDoc(
 			docType: 'longforms',
 			item: object?.longforms[docId] || null
 		};
+	} else if (docId.includes('photo')) {
+		return {
+			docId: docId as TPhotosKeys,
+			docType: 'photos',
+			item: object?.photos[docId] || null
+		};
 	} else {
 		return null;
 	}
@@ -61,6 +79,7 @@ export function resolveDoc(
 // 	...Object.keys(docs.letters).map((k) => [k, 'letters']),
 // 	...Object.keys(docs.smallforms).map((k) => [k, 'smallforms']),
 // 	...Object.keys(docs.longforms).map((k) => [k, 'longforms'])
+// 	...Object.keys(docs.photos).map((k) => [k, 'photos'])
 // ]);
 
 // export function resolveDocIndexed<K extends TDocKeys>(
@@ -88,6 +107,12 @@ export function resolveDoc(
 // 				docId: docId as TLongformsKeys,
 // 				docType: 'longforms',
 // 				item: object?.longforms[docId as TLongformsKeys] || null
+// 			};
+// 		case 'photos':
+// 			return {
+// 				docId: docId as TPhotosKeys,
+// 				docType: 'photos',
+// 				item: object?.photos[docId as TPhotosKeys] || null
 // 			};
 // 		default:
 // 			return null;

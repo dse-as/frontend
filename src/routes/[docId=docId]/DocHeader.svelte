@@ -2,7 +2,11 @@
 	import { resolve } from '$app/paths';
 	import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 	import type { TDocKeys } from '$lib/types/documents/TDocuments';
-	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
+	import type {
+		TResolvedLetters,
+		TResolvedSmallforms,
+		TResolvedLongforms
+	} from '$lib/functions/ease_of_use/resolveDoc';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import ResponsiveAccordion from './ResponsiveAccordion.svelte';
 	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
@@ -15,7 +19,7 @@
 		currentPage
 	}: {
 		docId: TDocKeys | undefined;
-		resDoc: TResolvedDoc | null;
+		resDoc: TResolvedLetters | TResolvedSmallforms | TResolvedLongforms | null;
 		ceteiData: any;
 		crossRef: Record<'globalEntities', any>;
 		currentPage: number;
@@ -39,7 +43,7 @@
 		}}>{text}</button
 	>
 {/snippet}
-{#snippet metadataEntry(label: string, content: string | undefined)}
+{#snippet metadataEntry(label: string, content: string | null | undefined)}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
 		<td class="p-0 text-left @lg:py-2">{@html content}</td>
@@ -47,7 +51,7 @@
 {/snippet}
 {#snippet metadataEntryWithRegLink(
 	label: string,
-	content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | undefined
+	content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
 )}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
@@ -72,7 +76,9 @@
 
 {#if resDoc?.item}
 	<div class="w-full px-10">
-		<h1 class="h1">{resDoc.item.metadata.title_full}</h1>
+		<h1 class="h1">
+			{resDoc.item.metadata.title_full}
+		</h1>
 		{#if resDoc.docType === 'smallforms'}
 			<h2 class="h2">
 				Publiziert in {resDoc.item.metadata.pubPlace} ({resDoc.item.metadata.year})
@@ -105,7 +111,7 @@
 						{@render metadataButton('globalEntities', 'Schlagwörter')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
 						{@render metadataButton('download', 'Download-Links')}
-						{@render metadataButton('all', 'Alles (Temporär)')}
+						<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 					</div>
 
 					<div class={['@container mt-5 mb-20 w-full pt-5']}>

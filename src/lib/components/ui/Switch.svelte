@@ -5,12 +5,14 @@
 	let {
 		checked = $bindable(),
 		height = 24,
+		classesLabel = '',
 		onCheckedChange = () => {},
 		children = undefined,
 		icon = undefined
 	}: {
 		checked: boolean | undefined;
 		height?: number;
+		classesLabel?: string;
 		onCheckedChange?: (checked: boolean) => void;
 		children?: Snippet;
 		icon?: Snippet;
@@ -23,7 +25,6 @@
 		const thumbSize = Math.round(safeH * 0.8);
 		const paddingTotal = 4;
 		const translateX = width - thumbSize - paddingTotal;
-		const fontSize = safeH <= 20 ? '0.75rem' : safeH <= 28 ? '0.875rem' : '1rem';
 
 		return {
 			switchStyle: {
@@ -36,14 +37,11 @@
 				width: `${thumbSize}px`,
 				height: `${thumbSize}px`,
 				'--thumb-translate': `${translateX}px`
-			},
-			labelStyle: {
-				fontSize: fontSize
 			}
 		};
 	}
 
-	let { switchStyle, thumbStyle, labelStyle } = $derived(calculateDimensions(height));
+	let { switchStyle, thumbStyle } = $derived(calculateDimensions(height));
 </script>
 
 <Switch.Root
@@ -74,7 +72,7 @@
 	</Switch.Thumb>
 </Switch.Root>
 
-<Label.Root for={id} style={labelStyle} class="font-medium">
+<Label.Root for={id} class={[classesLabel, 'select-none']}>
 	{#if children}
 		{@render children()}
 	{/if}

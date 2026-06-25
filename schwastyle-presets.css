@@ -6,10 +6,13 @@
 	.container-centered {
 		@apply flex h-full w-full items-center justify-center;
 	}
+	.flex-centered {
+		@apply flex items-center justify-center;
+	}
 
 	/* Circle Buttons */
 	.preset-btn-circle {
-		@apply rounded-full;
+		@apply flex items-center justify-center rounded-full;
 
 		&:not(.--sm),
 		&:not(.--lg) {
@@ -72,7 +75,7 @@
 			@apply border-foreground bg-foreground text-background;
 		}
 		&.--linkarrow::before {
-			content: '↗';
+			content: '↗\fe0e';
 			padding-right: --spacing(2);
 		}
 	}

@@ -66,8 +66,8 @@
 				<tbody>
 					<tr>
 						<td class="w-80 px-4 py-2 font-bold"
-							>{(regDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
-								?.label}:</td
+							>{(regDict.attributes as Record<TRegAttrsMap[T], { title: string }>)[attKey]
+								?.title}:</td
 						>
 						{#if regAttributes?.[attKey]}
 							<td class="px-4 py-2 text-left"
@@ -156,7 +156,7 @@
 				<IIIF_Thumb url={doc.iiif_url} classes="max-w-[80px] max-h-[80px]" />
 			</div>
 			<div class="flex flex-col">
-				<span class="italic">{doc.title_full}</span>
+				<span class="line-clamp-2 italic">{doc.title_full}</span>
 				<span class="">{doc.pubDate}</span>
 			</div>
 		</div>

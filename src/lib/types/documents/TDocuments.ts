@@ -1,11 +1,9 @@
-import { documents as docs } from '$lib/data/documents.json';
-
-// --- Types derived from JSON ----------------------------------------
+// --- Types ----------------------------------------
 // Keys
-export type TLettersKeys = keyof (typeof docs)['letters'];
-export type TSmallformsKeys = keyof (typeof docs)['smallforms'];
-export type TLongformsKeys = keyof (typeof docs)['longforms'];
-export type TPhotosKeys = keyof (typeof docs)['photos'];
+import { type TLettersKeys } from './TLettersKeys';
+import { type TSmallformsKeys } from './TSmallformsKeys';
+import { type TLongformsKeys } from './TLongformsKeys';
+import { type TPhotosKeys } from './TPhotosKeys';
 
 // Types
 import { type TLettersGroups } from './TLettersGroups';
@@ -37,12 +35,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TLettersGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					title_short?: string;
 					pubDate: string;
 					title_full: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
@@ -103,12 +101,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TSmallformsGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					pubDate: string;
 					title_full: string;
 					title_short?: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
@@ -168,12 +166,12 @@ export type TDocuments = {
 				date: { from: string; to: string };
 				type: TLongformsGroups | '?' | '';
 				metadata: {
+					title: string | null;
 					authors?: string[];
 					summary?: string;
 					pubDate: string;
 					title_full: string;
 					title_short?: string;
-					label: string;
 					editor_workflow: 'ez_ttf_of';
 					year: string;
 					pubPosthumOnly: boolean | string;
@@ -228,53 +226,46 @@ export type TDocuments = {
 		};
 		photos: {
 			[key in TPhotosKeys]: {
-				slug?: string; //! discuss whether this is identical to key
-				name: string;
-				date: { from: string; to: string };
-				type: TPhotosGroups | '?' | '';
+				name: string | null;
+				type?: TPhotosGroups | '?' | '';
 				metadata: {
-					authors?: string[];
-					summary?: string;
-					pubDate: string;
-					title_full: string;
-					title_short?: string;
-					label: string;
-					editor_workflow: 'ez_ttf_of';
-					year: string;
-					pubPosthumOnly: boolean | string;
-					pubPlace?: string;
-					signature: string;
-					pubDetails?: string;
-					textstufen_edited: string[];
-					textzeugen_nonedited: string[];
-					series: string;
-					comment: string;
-					globalEntities?: {
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
-						photos?: TPhotosKeys[];
-						people?: TPeopleKeys[];
-						places?: TPlacesKeys[];
-						events?: TEventsKeys[];
-						orgs?: TOrgsKeys[];
-						bibls?: TBiblsKeys[];
-						keywords?: TKeywordsKeys[];
-					};
-					maximum: string;
-					travel: string;
-					archive: string;
-					archiveCollation: string;
-					pubSecondary: string;
-					urlOnlineResource: string;
-					note: string;
+					title: string | null;
+					date: string | null;
+					date_normalised: {
+						from: string | null;
+						to: string | null;
+					} | null;
+					travel: string | null;
+					photographer: string | null;
+					people_on_photo: string[] | null;
+					characteristics: string | null;
+					comments_1: string | null;
+					captions_1: string[] | null;
+					captions_2: string[] | null;
+					orientation: string | null;
+					shape: string | null;
+					url_helveticarchives: string | null;
+					url_wikimedia: string | null;
+					url_emanuscripta: string | null;
+					repository: string | null;
+					published_in: string[] | null;
+					mentioned_in: string[] | null;
+					comments_2: string | null;
+					sla_id_full: string | null;
+					sla_id_coll: string | null;
+					sla_id_img: string | null;
+					stamped: boolean | null;
+					signed: boolean | null;
 				};
-				entities: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
-					photos?: TPhotosKeys[];
+				faksimile: {
+					iiif_manifest: string | null;
+					iiif_manifest_emanuscripta: string | null;
+					iiif_image_emanuscripta?: string | null;
+				};
+				manuscript: {
+					iiif_urls: string[];
+				};
+				linkedReg: {
 					people?: TPeopleKeys[];
 					places?: TPlacesKeys[];
 					events?: TEventsKeys[];
@@ -282,12 +273,11 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
-				manuscript: {
-					iiif_urls: string[];
-				};
-				numPages: number | null;
-				edition: {
-					fullyEdited: boolean;
+				linkedDocs: {
+					letters?: TLettersKeys[];
+					smallforms?: TSmallformsKeys[];
+					longforms?: TLongformsKeys[];
+					photos?: TPhotosKeys[];
 				};
 			};
 		};

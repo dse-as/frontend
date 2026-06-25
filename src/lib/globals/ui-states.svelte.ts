@@ -25,3 +25,12 @@ export const openRegisters: { list: TRegTypes[] } = $state({ list: [] });
 // Sidebar Toggle
 type TActiveRegisterTab = 'register' | 'notes';
 export const activeRegisterTab: { value: TActiveRegisterTab } = $state({ value: 'notes' });
+
+// Sequence Toggles
+export const isOpenSeqPanel = $state({ state: false });
+export const sequenceToggle = $state({
+	letters: true,
+	smallforms: true,
+	longforms: true,
+	photos: true
+});

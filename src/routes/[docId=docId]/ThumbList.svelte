@@ -3,7 +3,7 @@
 	import type { Snippet } from 'svelte';
 
 	let {
-		rerun = null,
+		reCenterOn = null,
 		isBeforeEmpty,
 		isAfterEmpty,
 		classesCurrent = '',
@@ -11,7 +11,7 @@
 		childrenCurrent,
 		childrenAfter
 	}: {
-		rerun: any;
+		reCenterOn: any;
 		isBeforeEmpty: boolean;
 		isAfterEmpty: boolean;
 		classesCurrent: string;
@@ -22,7 +22,7 @@
 
 	function centerCurrentItemInGallery(el: HTMLElement) {
 		/* eslint-disable @typescript-eslint/no-unused-vars */
-		let _foreRerun = rerun; // force rerun on change of docId
+		let _forceRecenter = reCenterOn; // force rerun of this function on change of reCenterOn
 
 		const container = el.parentElement;
 		if (!container) return;

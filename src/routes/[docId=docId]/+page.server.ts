@@ -4,6 +4,11 @@ import type { PageServerLoad } from './$types';
 import { asset } from '$app/paths';
 import { documents as allDocs } from '$lib/data/documents.json';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
+import type {
+	TResolvedLetters,
+	TResolvedSmallforms,
+	TResolvedLongforms
+} from '$lib/functions/ease_of_use/resolveDoc';
 import type { TDocKeys } from '$lib/types/documents/TDocuments';
 import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
@@ -64,7 +69,10 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 	const ceteiData = await loadText(params);
 
 	// Resolve Documents to current document
-	const resolvedDoc = resolveDoc(allDocs, params.docId as TDocKeys);
+	const resolvedDoc = resolveDoc(allDocs, params.docId as TDocKeys) as
+		| TResolvedLetters
+		| TResolvedSmallforms
+		| TResolvedLongforms;
 
 	// Resolve cross-register references
 	const crossRef: {
@@ -81,15 +89,17 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata.globalEntities) {
 			Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
 				crossRef.globalEntities[type as TRegTypes] =
-					resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map((key) => {
-						const resolved = resolveReg(reg, key as TRegKeysFlat);
-						const hasValidType = resolved?.regType;
-						return {
-							name: hasValidType ? resolved?.item?.name || '' : null,
-							regType: hasValidType ? resolved?.regType : null,
-							regKey: key
-						};
-					}) ?? null;
+					resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map(
+						(key: TRegKeysFlat) => {
+							const resolved = resolveReg(reg, key as TRegKeysFlat);
+							const hasValidType = resolved?.regType;
+							return {
+								name: hasValidType ? resolved?.item?.name || '' : null,
+								regType: hasValidType ? resolved?.regType : null,
+								regKey: key
+							};
+						}
+					) ?? null;
 			});
 		}
 	}
