@@ -6,6 +6,9 @@
 	.container-centered {
 		@apply flex h-full w-full items-center justify-center;
 	}
+	.flex-centered {
+		@apply flex items-center justify-center;
+	}
 
 	/* Circle Buttons */
 	.preset-btn-circle {
