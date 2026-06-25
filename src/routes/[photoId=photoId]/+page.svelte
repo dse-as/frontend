@@ -22,10 +22,6 @@
 	<!-- Title -->
 	<h1 class="h1">{imgdata?.label}</h1>
 
-	<!-- Metadata -->
-	<p>{imgdata?.metadata.sla_id_coll}/{imgdata?.metadata.sla_id_img}</p>
-	<p>{imgdata?.metadata.date_normalised.from}</p>
-
 	<!-- Image -->
 	<IIIFThumb
 		iiif_imageAPI_width={800}
@@ -33,4 +29,8 @@
 	/>
 
 	<!-- <IIIFViewer url={imgdata?.faksimile.iiif_manifest_emanuscripta} /> -->
+
+	<!-- Metadata -->
+	<p>{imgdata?.metadata.sla_id_coll}/{imgdata?.metadata.sla_id_img}</p>
+	<p>{imgdata?.metadata.date_normalised.from}</p>
 </div>
