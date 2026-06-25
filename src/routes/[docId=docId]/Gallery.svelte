@@ -65,9 +65,9 @@
 		scrollGalleryToPage(currentPage);
 	});
 
-	let itemsBefore = $derived(collectGalleryItems().slice(0, currentPage - 1));
+	let itemsBefore = $derived(collectGalleryItems()?.slice(0, currentPage - 1));
 	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
-	let itemsAfter = $derived(collectGalleryItems().slice(currentPage - 0));
+	let itemsAfter = $derived(collectGalleryItems()?.slice(currentPage - 0));
 </script>
 
 {#snippet thumbItem(item: TItem, isFirst: boolean = false, isLast: boolean = false)}

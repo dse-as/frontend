@@ -40,8 +40,8 @@ export function findMatchingSequences(
 				if (!result[groupId]) result[groupId] = {};
 				result[groupId][sequenceId] = {
 					name: sequence.name,
-					docsBefore: sequence.docs.slice(0, idx),
-					docsAfter: sequence.docs.slice(idx + 1)
+					docsBefore: sequence.docs?.slice(0, idx),
+					docsAfter: sequence.docs?.slice(idx + 1)
 				};
 			}
 		}

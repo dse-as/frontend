@@ -50,7 +50,7 @@
 	<div
 		class="grid h-full w-full grid-cols-1 gap-sm overflow-y-scroll lg:grid-cols-3 xl:grid-cols-5"
 	>
-		{#each Object.keys(allDocsTyped.photos).slice(100, 150) as photo_key (photo_key)}
+		{#each Object.keys(allDocsTyped.photos)?.slice(100, 150) as photo_key (photo_key)}
 			{@const item = allDocsTyped[docType][photo_key as TPhotosKeys]}
 			<a
 				href={resolve(`/${photo_key}`)}
