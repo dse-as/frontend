@@ -1,10 +1,13 @@
+import type { TDocKeys } from "$lib/types/documents/TDocuments";
+import type { TSeqKeys } from "$lib/types/TSequences";
+
 export type TDocSequences = {
 	[groupId: string]: {
 		[sequenceId: string]: {
 			name?: string;
 			preamble?: string;
 			url_slug?: string | null;
-			docs: string[];
+			docs: TDocKeys[];
 		};
 	};
 };
@@ -13,8 +16,8 @@ export type TMatchResult = {
 	[groupId: string]: {
 		[sequenceId: string]: {
 			name?: string;
-			docsBefore: string[];
-			docsAfter: string[];
+			docsBefore: TDocKeys[];
+			docsAfter: TDocKeys[];
 		};
 	};
 };
@@ -22,8 +25,8 @@ export type TMatchResult = {
 //  Finds all sequences across groups where the given docId appears.
 export function findMatchingSequences(
 	TDocSequences: TDocSequences,
-	docId: string,
-	filterSeqKeys: string[]
+	docId: TDocKeys,
+	filterSeqKeys: TSeqKeys[]
 ): TMatchResult {
 	const result: TMatchResult = {};
 
