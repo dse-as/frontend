@@ -1,3 +1,4 @@
+import type { EntryGenerator } from './$types';
 import type { PageServerLoad } from './$types';
 import { documents as allDocs } from '$lib/data/documents.json';
 import { register as reg } from '$lib/data/register.json';
@@ -7,6 +8,13 @@ import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 import { resolvePhoto } from '$lib/functions/ease_of_use/resolvePhoto';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
+import { photos_keys } from '$lib/data/photos_keys.json';
+
+export const entries: EntryGenerator = () => {
+	return photos_keys.map((key)=>{
+		return { photoId: key };
+	})
+};
 
 export const load: PageServerLoad = async ({ params }) => {
 	// Resolve Documents to current photo

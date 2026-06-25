@@ -1,3 +1,4 @@
+import type { EntryGenerator } from './$types';
 import processTEI from './processTEI';
 import type { ProcessedTEI } from './processTEI';
 import type { PageServerLoad } from './$types';
@@ -13,6 +14,22 @@ import type { TDocKeys } from '$lib/types/documents/TDocuments';
 import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
+import { letters_keys } from '$lib/data/letters_keys.json';
+import { smallforms_keys } from '$lib/data/smallforms_keys.json';
+import { longforms_keys } from '$lib/data/longforms_keys.json';
+
+export const entries: EntryGenerator = () => {
+	const lettersKeyObjects = letters_keys.map((key) => {
+		return { docId: key };
+	});
+	const smallformsKeyObjects = smallforms_keys.map((key) => {
+		return { docId: key };
+	});
+	const longformsKeyObjects = longforms_keys.map((key) => {
+		return { docId: key };
+	});
+	return [...lettersKeyObjects, ...smallformsKeyObjects, ...longformsKeyObjects];
+};
 
 export const load: PageServerLoad = async ({ params, fetch }) => {
 	// CETEI Data
