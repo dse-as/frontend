@@ -237,14 +237,14 @@
 				class="m-0 grid w-full list-none grid-flow-col grid-cols-[400px_auto] grid-rows-4 gap-x-10 p-3"
 			>
 				{@render ListItem({
-					href: '/letters',
+					href: resolve('/letters'),
 					title: `${dictDoc.letters.label_plural}`,
 					content: 'Die erhaltene Korrespondenz von Schwarzenbach',
 					singular: 'letter',
 					plural: 'letters'
 				})}
 				{@render ListItem({
-					href: '/smallforms',
+					href: resolve('/smallforms'),
 					title: `${dictDoc.smallforms.label_plural}`,
 					content:
 						'Artikel, Zeitungsartikel, Sonderbeilagen, Rezensionen und weitere Kleine Formen',
@@ -252,14 +252,14 @@
 					plural: 'smallforms'
 				})}
 				{@render ListItem({
-					href: '/longforms',
+					href: resolve('/longforms'),
 					title: `${dictDoc.longforms.label_plural}`,
 					content: 'Romane und Reportagebücher',
 					singular: 'longform',
 					plural: 'longforms'
 				})}
 				{@render ListItem({
-					href: '/photos',
+					href: resolve('/photos'),
 					title: `${dictDoc.photos.label_plural}`,
 					content: 'Fotografisches Werk von Schwarzenbach und Maillard',
 					singular: 'photo',
@@ -269,7 +269,7 @@
 				<!-- Description Area -->
 				<li class="col-2 row-span-4">
 					<NavigationMenu.Link
-						href="/"
+						href={resolve('/')}
 						class={['flex h-full shrink-0 items-start gap-7 p-6 outline-hidden']}
 					>
 						<div class="flex h-full w-full flex-col items-start justify-center">
@@ -343,28 +343,28 @@
 				class="m-0 grid w-full list-none grid-flow-col grid-cols-[400px_auto] grid-rows-4 gap-x-10 p-3"
 			>
 				{@render ListItem({
-					href: '/map',
+					href: resolve('/map'),
 					title: 'Karte',
 					content: 'Reisen und Orte auf einer Karte',
 					singular: 'map',
 					plural: ''
 				})}
 				{@render ListItem({
-					href: '/timeline',
+					href: resolve('/timeline'),
 					title: 'Zeitstrahl',
 					content: 'Allerlei Biografisches zu Schwarzenbach im historischen Kontext',
 					singular: 'timeline',
 					plural: ''
 				})}
 				{@render ListItem({
-					href: '/network',
+					href: resolve('/network'),
 					title: 'Netzwerk',
 					content: 'Schwarzenbachs Netzwerk',
 					singular: 'network',
 					plural: ''
 				})}
 				{@render ListItem({
-					href: '/topics',
+					href: resolve('/topics'),
 					title: 'Themen',
 					content: 'Thematische Zugänge zu den Texten und Fotografien Schwarzenbachs',
 					singular: 'topics',
