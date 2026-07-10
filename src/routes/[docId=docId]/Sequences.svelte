@@ -176,7 +176,7 @@
 		data-sveltekit-preload-code="hover"
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
-			'max-w-90 p-1',
+			'w-80 p-1', //! note: if w-80 is replaced with e.g. max-w-80, centerCurrentItemInGallery() won't work as expected!!
 			docId !== resId && 'hover:bg-hover',
 			!isCurrentSeqList && ' hover:bg-hover',
 			isCurrentSeqList && docId === resId && 'pointer-events-none',
