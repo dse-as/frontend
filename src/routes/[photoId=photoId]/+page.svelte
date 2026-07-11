@@ -60,14 +60,14 @@
 			{/snippet}
 			{#snippet metadataEntry(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
-					<td class="p-0 text-left @lg:py-2">{@html content}</td>
+					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left align-top @lg:py-2">{@html content}</td>
 				</tr>
 			{/snippet}
 			{#snippet metadataEntryWithURL(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
-					<td class="p-0 text-left underline @lg:py-2"
+					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left align-top underline @lg:py-2"
 						><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i><a href={content}
 							>{@html content}</a
 						></td
@@ -79,8 +79,8 @@
 				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
 			)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
-					<td class="p-0 text-left @lg:py-2">
+					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="p-0 text-left align-top @lg:py-2">
 						<div class="flex flex-wrap gap-4">
 							{#each content ? content : [] as item (item)}
 								<a

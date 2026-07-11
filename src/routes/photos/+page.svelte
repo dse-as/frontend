@@ -203,9 +203,9 @@
 		>
 			<input
 				type="text"
-				placeholder="Fotos filtern nach..."
+				placeholder="Fotos nach Stichwort filtern..."
 				class={[
-					'w-50 rounded-xl border-[1.5px] border-foreground px-2 duration-200 focus:w-100',
+					'w-80 rounded-xl border-[1.5px] border-foreground px-2 duration-200 focus:w-100',
 					searchTerm && 'w-100'
 				]}
 				bind:value={searchTerm}
