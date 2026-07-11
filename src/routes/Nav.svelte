@@ -256,9 +256,8 @@
 			urls.forEach((imgURL) => {
 				const img = new Image();
 				img.src = imgURL;
-				// Optional: track loaded images
-				img.onload = () => console.log(`Loaded: ${imgURL}`);
-				img.onerror = () => console.warn(`Failed to load: ${imgURL}`);
+				// img.onload = () => console.log(`Loaded: ${imgURL}`);
+				// img.onerror = () => console.warn(`Failed to load: ${imgURL}`);
 			});
 		}
 		const allImageUrls = [
