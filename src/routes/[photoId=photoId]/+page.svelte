@@ -74,7 +74,7 @@
 					>
 				</tr>
 			{/snippet}
-			{#snippet metadataEntryWithRegLink(
+			<!-- {#snippet metadataEntryWithRegLink(
 				label: string,
 				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
 			)}
@@ -97,7 +97,7 @@
 						</div>
 					</td>
 				</tr>
-			{/snippet}
+			{/snippet} -->
 			{#snippet metadataContent()}
 				{#if resPhoto?.item}
 					<div data-dom="metadata">

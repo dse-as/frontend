@@ -4,7 +4,6 @@
 	import { NavigationMenu, Dialog } from 'bits-ui';
 	import Lightswitch from './Lightswitch.svelte';
 	import { resolve } from '$app/paths';
-	import type { TDocTypes } from '$lib/types/documents/TDocuments';
 	import { onMount } from 'svelte';
 
 	let openStateMenu = $state(false);
@@ -107,7 +106,6 @@
 	});
 
 	let isDocType = $derived(hoveredSubmenu.key in dictDoc ? true : false);
-	$inspect(isDocType, hoveredSubmenu.key, Object.keys(dictDoc));
 
 	// Sample Documents
 	const sampleDocuments = {
@@ -335,7 +333,7 @@
 
 {#snippet SampleDocumentPreviews()}
 	<div class="container-centered w-full gap-2">
-		{#each sampleDocuments[hoveredSubmenu.key] as item}
+		{#each sampleDocuments[hoveredSubmenu.key] as item (item)}
 			<a href={item.targetURL} class={['inline-block']}>
 				<img
 					class={['block object-contain', item.classes]}
@@ -411,7 +409,7 @@
 		</NavigationMenu.Item>
 
 		<!-- Main Menu without Submenues -->
-		{#each mainMenuWithoutSub as item}
+		{#each mainMenuWithoutSub as item (item)}
 			<NavigationMenu.Item>
 				<NavigationMenu.Link
 					class={[

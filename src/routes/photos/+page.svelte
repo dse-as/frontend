@@ -7,7 +7,6 @@
 	import { ScrollState } from 'runed';
 	import { useSearchParams } from 'runed/kit';
 	import { productSearchSchema } from './schemas';
-	import { onMount } from 'svelte';
 
 	const params = useSearchParams(productSearchSchema);
 
@@ -16,7 +15,7 @@
 	// UI State
 	let isMinimized = $state(false);
 	$effect(() => {
-		const _foo = params.series;
+		const _1 = params.series;
 		isMinimized = params.series ? true : false;
 	});
 
@@ -70,7 +69,7 @@
 
 	let filterTop = $state(0);
 	$effect(() => {
-		const _ = scroll.y;
+		const _1 = scroll.y;
 		const _2 = isNavHidden;
 		const top =
 			(document.querySelector('[data-dom=topStickyElement]')?.clientTop || 0) +
