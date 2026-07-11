@@ -28,10 +28,13 @@ importers:
         version: 6.0.2
       runed:
         specifier: ^0.37.1
-        version: 0.37.1(@sveltejs/kit@2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)
+        version: 0.37.1(@sveltejs/kit@2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(zod@4.4.3)
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.2.2)
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.5
@@ -1911,6 +1914,9 @@ packages:
   zimmerframe@1.1.4:
     resolution: {integrity: sha512-B58NGBEoc8Y9MWWCQGl/gq9xBCe4IiKM0a2x7GZdQKOW5Exr8S1W24J6OgM1njK8xCRGvAJIL/MxXHf6SkmQKQ==}
 
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+
 snapshots:
 
   '@asamuzakjp/css-color@5.1.9':
@@ -3082,7 +3088,7 @@ snapshots:
     optionalDependencies:
       '@sveltejs/kit': 2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
 
-  runed@0.37.1(@sveltejs/kit@2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2):
+  runed@0.37.1(@sveltejs/kit@2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(zod@4.4.3):
     dependencies:
       dequal: 2.0.3
       esm-env: 1.2.2
@@ -3090,6 +3096,7 @@ snapshots:
       svelte: 5.55.2
     optionalDependencies:
       '@sveltejs/kit': 2.57.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0)))(svelte@5.55.2)(typescript@6.0.2)(vite@8.0.8(@types/node@25.5.2)(esbuild@0.27.4)(jiti@2.6.1)(sass-embedded@1.99.0)(sass@1.99.0))
+      zod: 4.4.3
 
   rxjs@7.8.2:
     dependencies:
@@ -3432,3 +3439,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zimmerframe@1.1.4: {}
+
+  zod@4.4.3: {}
