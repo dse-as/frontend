@@ -1178,6 +1178,60 @@
 			}
 		},
 		"photoseries": {
+			"Streets": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Streets",
+				"name": "Strassen",
+				"name_short": "Strassen",
+				"intro": "Bei der Serie &laquo;Strassen&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Strassen&raquo;",
+				"docs": ["photo_0169","photo_0186","photo_0214","photo_0222","photo_0223","photo_0224","photo_0231","photo_0290","photo_0327","photo_0331","photo_0338","photo_0341","photo_0357","photo_0358","photo_0359","photo_0375","photo_0396","photo_0443","photo_0449","photo_0454","photo_0465","photo_0490","photo_0495","photo_0525","photo_0528","photo_0532","photo_0535","photo_0539","photo_0540","photo_0643","photo_0647","photo_0671","photo_2119","photo_4054","photo_0728","photo_0729","photo_0730","photo_0731","photo_0738","photo_0775","photo_0788","photo_1032","photo_1033","photo_2240","photo_2249","photo_2260","photo_1145","photo_1159","photo_1166","photo_1174","photo_2115","photo_1337","photo_1343","photo_1351","photo_1356","photo_1362","photo_1363","photo_1375","photo_1383","photo_1387","photo_1413","photo_1414","photo_1421","photo_1423","photo_1555","photo_1620","photo_1623","photo_1624","photo_1625","photo_1626","photo_1632","photo_1636","photo_1640","photo_1643","photo_1644","photo_1645","photo_1657","photo_1658","photo_1667","photo_1673","photo_1680","photo_1686","photo_1687","photo_1696","photo_1701","photo_1702","photo_1703","photo_1711","photo_1712","photo_1741","photo_1742","photo_1748","photo_1757","photo_1758","photo_1762","photo_1767","photo_1889","photo_2050","photo_2051","photo_2058","photo_2070","photo_2083","photo_2104","photo_2294","photo_2295","photo_2296","photo_2298","photo_2378","photo_2394","photo_2395","photo_2445","photo_2446","photo_2753","photo_2758","photo_1527","photo_1533","photo_1835","photo_1840","photo_1842","photo_2698","photo_2699","photo_2700","photo_2703","photo_2704","photo_2705","photo_2707","photo_2715","photo_2719","photo_2723","photo_2725","photo_2726","photo_2728","photo_2740","photo_2744","photo_3005","photo_3276","photo_3279","photo_2906","photo_2908","photo_2909","photo_2968","photo_2971","photo_3057","photo_3093","photo_3240","photo_3245","photo_3274","photo_3280","photo_3285","photo_3424","photo_3425","photo_3426","photo_3427","photo_3429","photo_3439","photo_3442","photo_3445","photo_3447","photo_3452","photo_3556","photo_3557","photo_3619","photo_3698","photo_3747","photo_3748","photo_3749","photo_3750","photo_3751","photo_3752","photo_3753","photo_3784","photo_3786","photo_3789","photo_3843","photo_3850","photo_3851","photo_3856","photo_3857","photo_3858","photo_3859","photo_3949","photo_4013","photo_4022","photo_1965","photo_1966","photo_2110","photo_2746","photo_2787","photo_2789","photo_4037","photo_4042","photo_4049"]
+			},
+			"Mopsa": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Mopsa",
+				"name": "Mopsa",
+				"name_short": "Mopsa",
+				"intro": "Bei der Serie &laquo;Mopsa&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Mopsa&raquo;",
+				"docs": ["photo_1292","photo_1293","photo_1294"]
+			},
+			"Erika": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Erika",
+				"name": "Erika",
+				"name_short": "Erika",
+				"intro": "Bei der Serie &laquo;Erika&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Erika&raquo;",
+				"docs": ["photo_2428","photo_1297","photo_1299","photo_1300","photo_1304","photo_1309","photo_1312","photo_1313","photo_1315","photo_1318","photo_1320","photo_1321","photo_1324","photo_1181","photo_1182","photo_1203","photo_1204","photo_1205","photo_1206","photo_1207","photo_1210","photo_1328","photo_2463"]
+			},
+			"Thomas": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Thomas",
+				"name": "Thomas",
+				"name_short": "Thomas",
+				"intro": "Bei der Serie &laquo;Thomas&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Thomas&raquo;",
+				"docs": ["photo_1296","photo_1303","photo_1437","photo_1438","photo_1439","photo_1440","photo_1441","photo_1442","photo_1908","photo_1915","photo_1916","photo_1927"]
+			},
+			"Klaus": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Klaus",
+				"name": "Klaus",
+				"name_short": "Klaus",
+				"intro": "Bei der Serie &laquo;Klaus&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Klaus&raquo;",
+				"docs": ["photo_1298","photo_1306","photo_1307","photo_1308","photo_1310","photo_1319","photo_1322","photo_1323","photo_1328"]
+			},
+			"Mann": {
+				"type": "other",
+				"url_seq_overview": "/photos?series=Mann",
+				"name": "Mann",
+				"name_short": "Mann",
+				"intro": "Bei der Serie &laquo;Mann&raquo; wurde als exemplarische Skizze konzipiert und dient einzig zu Anschauungszwecken.",
+				"preamble": "Fotografien aus &laquo;Mann&raquo;",
+				"docs": ["photo_2428","photo_0006","photo_0029","photo_0030","photo_0040","photo_1296","photo_1297","photo_1298","photo_1299","photo_1300","photo_1303","photo_1304","photo_1306","photo_1307","photo_1308","photo_1309","photo_1310","photo_1312","photo_1313","photo_1315","photo_1316","photo_1318","photo_1319","photo_1320","photo_1321","photo_1322","photo_1323","photo_1324","photo_1325","photo_0094","photo_0095","photo_0098","photo_0100","photo_0128","photo_0129","photo_0144","photo_0146","photo_0192","photo_0193","photo_0227","photo_0230","photo_0292","photo_0332","photo_0339","photo_0344","photo_0450","photo_0470","photo_0484","photo_0509","photo_0510","photo_0523","photo_0535","photo_0555","photo_0572","photo_0617","photo_0618","photo_0631","photo_0632","photo_4053","photo_1989","photo_1991","photo_0818","photo_0848","photo_0936","photo_0946","photo_0954","photo_0955","photo_1096","photo_1100","photo_1101","photo_2123","photo_2125","photo_2133","photo_2134","photo_2233","photo_2234","photo_2241","photo_2245","photo_2249","photo_2255","photo_2256","photo_2261","photo_2267","photo_1127","photo_1134","photo_1164","photo_1165","photo_1181","photo_1182","photo_1192","photo_1201","photo_1202","photo_1203","photo_1204","photo_1205","photo_1206","photo_1207","photo_1210","photo_1222","photo_1223","photo_1225","photo_1241","photo_1327","photo_1328","photo_2115","photo_2126","photo_2129","photo_2131","photo_2132","photo_1971","photo_1975","photo_1986","photo_2121","photo_2167","photo_2168","photo_2171","photo_2172","photo_2181","photo_2197","photo_2198","photo_2199","photo_2200","photo_2201","photo_2202","photo_2206","photo_2213","photo_2217","photo_2218","photo_2219","photo_2222","photo_2228","photo_2204","photo_2205","photo_1352","photo_1386","photo_1392","photo_1393","photo_1395","photo_1396","photo_1397","photo_1408","photo_1431","photo_1432","photo_1433","photo_1434","photo_1435","photo_1436","photo_1460","photo_1461","photo_1466","photo_1476","photo_1477","photo_1478","photo_1479","photo_1486","photo_1516","photo_1517","photo_1518","photo_1542","photo_1548","photo_1563","photo_1564","photo_1565","photo_1566","photo_1568","photo_1569","photo_1570","photo_1571","photo_1572","photo_1578","photo_1581","photo_1585","photo_1586","photo_1588","photo_1589","photo_1593","photo_1595","photo_1605","photo_1614","photo_1623","photo_1630","photo_1631","photo_1637","photo_1658","photo_1665","photo_1669","photo_1683","photo_1691","photo_1692","photo_1693","photo_1698","photo_1702","photo_1710","photo_1746","photo_1773","photo_1788","photo_1798","photo_1813","photo_1814","photo_1816","photo_1866","photo_1884","photo_1897","photo_1943","photo_2009","photo_2010","photo_2018","photo_2081","photo_2278","photo_2308","photo_2354","photo_2364","photo_2375","photo_2411","photo_2414","photo_2496","photo_2497","photo_2499","photo_2425","photo_2430","photo_2431","photo_2434","photo_2436","photo_2437","photo_2455","photo_2456","photo_2463","photo_2524","photo_2537","photo_2562","photo_2563","photo_2638","photo_2682","photo_2683","photo_2806","photo_2809","photo_1530","photo_2693","photo_2694","photo_2765","photo_2766","photo_2771","photo_2772","photo_2773","photo_2775","photo_2780","photo_2876","photo_2956","photo_3106","photo_2838","photo_2893","photo_2894","photo_2895","photo_2933","photo_2934","photo_2936","photo_2937","photo_2938","photo_2939","photo_2965","photo_2969","photo_2975","photo_2986","photo_2987","photo_2999","photo_3000","photo_3001","photo_3007","photo_3009","photo_3015","photo_3016","photo_3019","photo_3020","photo_3022","photo_3036","photo_3037","photo_3038","photo_3047","photo_3077","photo_3119","photo_3120","photo_3127","photo_3128","photo_3133","photo_3134","photo_3150","photo_3151","photo_3167","photo_3171","photo_3172","photo_3183","photo_3184","photo_3188","photo_3189","photo_3190","photo_3193","photo_3198","photo_3200","photo_3201","photo_3221","photo_3237","photo_3260","photo_3299","photo_3300","photo_3301","photo_3324","photo_3325","photo_3391","photo_3392","photo_3393","photo_3394","photo_3395","photo_3398","photo_3430","photo_3465","photo_3489","photo_3521","photo_3552","photo_3555","photo_3570","photo_3591","photo_3597","photo_3614","photo_3634","photo_3635","photo_3696","photo_3782","photo_3795","photo_3830","photo_3831","photo_3833","photo_3834","photo_3844","photo_3919","photo_3965","photo_4014","photo_3510","photo_3512","photo_2745","photo_2746","photo_2754","photo_2781","photo_2803","photo_4049"]
+			},
 			"SLA-Schwarzenbach-A-5-12": {
 				"type": "SLA",
 				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-12",
