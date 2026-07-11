@@ -7,6 +7,7 @@
 	import { ScrollState } from 'runed';
 	import { useSearchParams } from 'runed/kit';
 	import { productSearchSchema } from './schemas';
+	import { onMount } from 'svelte';
 
 	const params = useSearchParams(productSearchSchema);
 
@@ -43,18 +44,8 @@
 
 	// Filtering
 	let searchTerm = $state('');
-	let filterTop = $derived.by(() => {
-		const _ = scroll.y;
-		const _2 = isNavHidden;
-		const top =
-			(document.querySelector('[data-dom=topStickyElement]')?.clientTop || 0) +
-			(document.querySelector('[data-dom=topStickyElement]')?.clientHeight || 0);
-		console.log(document.querySelector('[data-dom=topStickyElement]')?.clientTop);
-		console.log(document.querySelector('[data-dom=topStickyElement]')?.clientHeight);
-		return top;
-	});
 
-	let docsAll = $derived(data.photoSequences[params.series]?.docs);
+	let docsAll = $derived(params.series ? data.photoSequences[params.series]?.docs : []);
 	let filteredDocs = $derived.by(() => {
 		// Filter Function
 		const filterFunction = (photo_data) => {
@@ -75,6 +66,18 @@
 		};
 		// Return filtered docs array
 		return docsAll?.filter((docKey) => filterFunction(data.photos[docKey]));
+	});
+
+	let filterTop = $state(0);
+	$effect(() => {
+		const _ = scroll.y;
+		const _2 = isNavHidden;
+		const top =
+			(document.querySelector('[data-dom=topStickyElement]')?.clientTop || 0) +
+			(document.querySelector('[data-dom=topStickyElement]')?.clientHeight || 0);
+		console.log(document.querySelector('[data-dom=topStickyElement]')?.clientTop);
+		console.log(document.querySelector('[data-dom=topStickyElement]')?.clientHeight);
+		filterTop = top;
 	});
 </script>
 
@@ -117,7 +120,9 @@
 		]}
 	>
 		{@html isMinimized
-			? data.photoSequences[params.series]?.preamble
+			? params.series
+				? data.photoSequences[params.series]?.preamble
+				: ''
 			: dictDoc['photos']?.label_plural}
 	</h1>
 	<div class={['flex flex-col gap-5', isMinimized && 'hidden']}>
@@ -183,11 +188,10 @@
 	>
 		<h5 class="h5">Überblickskommentar</h5>
 		<p>
-			{@html (data.photoSequences[params.series]?.intro || '') +
-				' Vermutlich ist dieser Text dann noch etwas länger, ' +
-				'deshalb noch ein wenig lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
-				'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
-				'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
+			{@html (params.series ? data.photoSequences[params.series]?.intro || '' : '') +
+				' Die folgende Zusammenstellung entspricht der Katalogisierung des Schweizerischen Literaturarchivs (SLA). Auswahl und Reihenfolge wurden unverändert übernommen und direkt wiedergegeben.' +
+				' Vermutlich ist dieser Text dann noch etwas länger, deshalb noch ein wenig' +
+				' lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
 		</p>
 	</div>
 
@@ -217,7 +221,7 @@
 		{#each filteredDocs as photoKey (photoKey)}
 			{@const item = data.photos[photoKey as TPhotosKeys]}
 			<a
-				href={resolve(`/${photoKey}?seq=${params.series}`)}
+				href={resolve(`/${photoKey}`) + `?seq=${params.series}`}
 				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 lg:flex-col lg:items-center lg:justify-center"
 			>
 				<IIIFThumb
