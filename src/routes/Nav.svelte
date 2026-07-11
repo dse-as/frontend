@@ -4,7 +4,6 @@
 	import { NavigationMenu, Dialog } from 'bits-ui';
 	import Lightswitch from './Lightswitch.svelte';
 	import { resolve } from '$app/paths';
-	import type { TDocTypes } from '$lib/types/documents/TDocuments';
 	import { onMount } from 'svelte';
 
 	let openStateMenu = $state(false);
@@ -18,7 +17,7 @@
 		main1: {
 			nameShort: 'Texte & Fotos',
 			nameLong: 'Texte und Fotografien',
-			idsSub: ['letters', 'smallforms', 'longforms', 'photos']
+			idsSub: ['smallforms', 'longforms', 'letters', 'photos']
 		},
 		main2: {
 			nameShort: 'Zugänge',
@@ -35,12 +34,6 @@
 	};
 
 	const subMenuInfo = {
-		letters: {
-			name: 'Briefe',
-			description: 'Briefe',
-			content: 'Die erhaltene Korrespondenz von Schwarzenbach',
-			path: resolve('/letters')
-		},
 		smallforms: {
 			name: 'Kurze Formen',
 			description: 'Kurze Formen',
@@ -52,6 +45,12 @@
 			description: 'Romane und Reportagebücher',
 			content: 'Romane und Reportagebücher',
 			path: resolve('/longforms')
+		},
+		letters: {
+			name: 'Briefe',
+			description: 'Briefe',
+			content: 'Die erhaltene Korrespondenz von Schwarzenbach',
+			path: resolve('/letters')
 		},
 		photos: {
 			name: 'Fotografien',
@@ -94,55 +93,29 @@
 
 	const dictNav = {
 		random_element_text: {
-			letters: 'Zufälligen Brief anzeigen',
 			smallforms: 'Zufällige Smallform anzeigen',
 			longforms: 'Zufällige Longform anzeigen',
+			letters: 'Zufälligen Brief anzeigen',
 			photos: 'Zufällige Fotografiem anzeigen'
 		}
 	};
 
 	// UI States
-	let hoveredSubmenu: { key: keyof typeof subMenuInfo } = $state({
+	let hoveredSubmenu: { key: keyof typeof subMenuInfo | undefined } = $state({
 		key: 'letters'
 	});
 
-	let isDocType = $derived(hoveredSubmenu.key in dictDoc ? true : false);
-	$inspect(isDocType, hoveredSubmenu.key, Object.keys(dictDoc));
+	let isDocType = $derived(hoveredSubmenu.key && hoveredSubmenu.key in dictDoc ? true : false);
+	$inspect(openStateMenu, isDocType, hoveredSubmenu.key, Object.keys(dictDoc));
 
 	// Sample Documents
 	const sampleDocuments = {
-		letters: [
-			{
-				altText: 'Sample Letter',
-				targetURL: resolve('/letter_0001'),
-				imgURL:
-					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587676-BCUL-PREVIEW-426354_0002.jpg/full/300,/0/default.jpg',
-				classes: 'max-w-40 max-h-40',
-				rotation: randomValue(15)
-			},
-			{
-				altText: 'Sample Letter',
-				targetURL: resolve('/letter_0004'),
-				imgURL:
-					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587679-BCUL-PREVIEW-426357_0003.jpg/full/300,/0/default.jpg',
-				classes: 'max-w-40 max-h-40',
-				rotation: -1 * randomValue(15)
-			},
-			{
-				altText: 'Sample Letter',
-				targetURL: resolve('/letter_0012'),
-				imgURL:
-					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587687-BCUL-PREVIEW-426365_0001.jpg/full/300,/0/default.jpg',
-				classes: 'max-w-40 max-h-40',
-				rotation: randomValue(15)
-			}
-		],
 		smallforms: [
 			{
 				altText: 'Sample Smallform',
 				targetURL: resolve('/smallform_0231'),
 				imgURL:
-					'https://iiif.ub.unibe.ch/image/v3.0/a21e9b64-0740-4576-94d3-61595cda3e80/full/300,/0/default.jpg',
+					'https://iiif.ub.unibe.ch/image/v3.0/a21e9b64-0740-4576-94d3-61595cda3e80/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			},
@@ -150,7 +123,7 @@
 				altText: 'Sample Smallform',
 				targetURL: resolve('/smallform_0270'),
 				imgURL:
-					'https://iiif.library.ethz.ch/iiif/2/e-periodica%21zui%211938_014%21zui-001_1938_014_0261.jpg/full/300,/0/default.jpg',
+					'https://iiif.library.ethz.ch/iiif/2/e-periodica%21zui%211938_014%21zui-001_1938_014_0261.jpg/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: -1 * randomValue(15)
 			},
@@ -158,7 +131,7 @@
 				altText: 'Sample Smallform',
 				targetURL: resolve('/smallform_0276'),
 				imgURL:
-					'https://iiif.ub.unibe.ch/image/v3.0/07fbd801-4b9f-4e7c-ab04-a7ec240e4b5e/full/300,/0/default.jpg',
+					'https://iiif.ub.unibe.ch/image/v3.0/07fbd801-4b9f-4e7c-ab04-a7ec240e4b5e/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			}
@@ -168,7 +141,7 @@
 				altText: 'Sample Longform',
 				targetURL: resolve('/longform_0001'),
 				imgURL:
-					'https://iiif.ub.unibe.ch/image/v3.0/f7a771e2-036b-4ee8-b2d8-08d8bbf8c9ad/full/300,/0/default.jpg',
+					'https://iiif.ub.unibe.ch/image/v3.0/f7a771e2-036b-4ee8-b2d8-08d8bbf8c9ad/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			},
@@ -176,7 +149,7 @@
 				altText: 'Sample Longform',
 				targetURL: resolve('/longform_0003'),
 				imgURL:
-					'https://iiif.ub.unibe.ch/image/v3.0/ed670c9a-b769-4b34-896d-1c5dd97e4c7e/full/300,/0/default.jpg',
+					'https://iiif.ub.unibe.ch/image/v3.0/ed670c9a-b769-4b34-896d-1c5dd97e4c7e/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: -1 * randomValue(15)
 			},
@@ -184,7 +157,33 @@
 				altText: 'Sample Longform',
 				targetURL: resolve('/longform_0008'),
 				imgURL:
-					'https://iiif.ub.unibe.ch/image/v3.0/012daa33-5ac4-4460-9c2d-ec8291502499/full/300,/0/default.jpg',
+					'https://iiif.ub.unibe.ch/image/v3.0/012daa33-5ac4-4460-9c2d-ec8291502499/full/200,/0/default.jpg',
+				classes: 'max-w-40 max-h-40',
+				rotation: randomValue(15)
+			}
+		],
+		letters: [
+			{
+				altText: 'Sample Letter',
+				targetURL: resolve('/letter_0001'),
+				imgURL:
+					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587676-BCUL-PREVIEW-426354_0002.jpg/full/200,/0/default.jpg',
+				classes: 'max-w-40 max-h-40',
+				rotation: randomValue(15)
+			},
+			{
+				altText: 'Sample Letter',
+				targetURL: resolve('/letter_0004'),
+				imgURL:
+					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587679-BCUL-PREVIEW-426357_0003.jpg/full/200,/0/default.jpg',
+				classes: 'max-w-40 max-h-40',
+				rotation: -1 * randomValue(15)
+			},
+			{
+				altText: 'Sample Letter',
+				targetURL: resolve('/letter_0012'),
+				imgURL:
+					'https://patrinum.ch/nanna/api/multimedia/image/v2/recid%3A587687-BCUL-PREVIEW-426365_0001.jpg/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			}
@@ -193,21 +192,21 @@
 			{
 				altText: 'Sample Photo',
 				targetURL: resolve('/photo_0097'),
-				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/2002037/full/300,/0/default.jpg',
+				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/2002037/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			},
 			{
 				altText: 'Sample Photo',
 				targetURL: resolve('/photo_1294'),
-				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/1985083/full/300,/0/default.jpg',
+				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/1985083/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: -1 * randomValue(15)
 			},
 			{
 				altText: 'Sample Photo',
 				targetURL: resolve('/photo_4000'),
-				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/1990657/full/300,/0/default.jpg',
+				imgURL: 'https://www.e-manuscripta.ch/i3f/v21/1990657/full/200,/0/default.jpg',
 				classes: 'max-w-40 max-h-40',
 				rotation: randomValue(15)
 			}
@@ -262,9 +261,9 @@
 			});
 		}
 		const allImageUrls = [
-			...sampleDocuments.letters.map((item) => item.imgURL),
 			...sampleDocuments.smallforms.map((item) => item.imgURL),
 			...sampleDocuments.longforms.map((item) => item.imgURL),
+			...sampleDocuments.letters.map((item) => item.imgURL),
 			...sampleDocuments.photos.map((item) => item.imgURL)
 		];
 		preloadImages(allImageUrls);
@@ -336,47 +335,55 @@
 
 {#snippet SampleDocumentPreviews()}
 	<div class="container-centered w-full gap-2">
-		{#each sampleDocuments[hoveredSubmenu.key] as item}
-			<a href={item.targetURL} class={['inline-block']}>
-				<img
-					class={['block object-contain', item.classes]}
-					src={item.imgURL}
-					alt={item.altText}
-					style={`rotate:${item.rotation}deg`}
-				/>
-			</a>
-		{/each}
+		{#if hoveredSubmenu.key}
+			{#each sampleDocuments[hoveredSubmenu.key] as item}
+				<a href={item.targetURL} class={['inline-block']}>
+					<img
+						class={['duration-scale-100 block object-contain hover:scale-[1.1]', item.classes]}
+						src={item.imgURL}
+						alt={item.altText}
+						style={`rotate:${item.rotation}deg`}
+					/>
+				</a>
+			{/each}
+		{/if}
 	</div>
 {/snippet}
 
 <!-- Panel 1: Texte und Fotografien -->
 {#snippet ContentPanelArea1()}
-	<div class="flex h-full w-full flex-col items-start justify-center">
-		{@render SampleDocumentPreviews()}
-		{#if isDocType}
-			<a
-				href={resolve(
-					`/${dictDoc[hoveredSubmenu.key as keyof typeof dictDoc].key_singular}_${Math.floor(
-						Math.random() * 1000
-					)
-						.toString()
-						.padStart(4, '0')}`
-				)}
-				class="preset-btn-round --lg"
-				>{dictNav.random_element_text[hoveredSubmenu.key as keyof typeof dictDoc]}</a
-			>
-		{/if}
-		{#if hoveredSubmenu.key === 'smallforms'}
-			<h5 class="h5 mt-5 text-background-contrast">Shortcuts:</h5>
-			<div class="preset-btn-list --spacing-normal">
-				<a href={resolve('/smallform_0231')} class="preset-btn-round --sm"
-					>Smallform 0231 (Kleine Begegnungen in Danzig)</a
+	<div class="grid h-full w-full grid-cols-1 xl:grid-cols-2">
+		<div class="flex h-full w-full flex-col items-start justify-start xl:justify-center">
+			{@render SampleDocumentPreviews()}
+			{#if isDocType}
+				<a
+					href={resolve(
+						`/${dictDoc[hoveredSubmenu.key as keyof typeof dictDoc].key_singular}_${Math.floor(
+							Math.random() * 1000
+						)
+							.toString()
+							.padStart(4, '0')}`
+					)}
+					class="preset-btn-round --lg"
+					>{dictNav.random_element_text[hoveredSubmenu.key as keyof typeof dictDoc]}</a
 				>
-				<a href={resolve('/smallform_0529')} class="preset-btn-round --sm"
-					>Smallform 0529 (Schweizer Pionierarbeit)</a
-				>
-			</div>
-		{/if}
+			{/if}
+		</div>
+
+		<!-- Shortcuts -->
+		<div class="flex h-full flex-col justify-end">
+			{#if hoveredSubmenu.key === 'smallforms'}
+				<h5 class="h5 mt-5 text-background-contrast">Shortcuts:</h5>
+				<div class="preset-btn-list --spacing-normal">
+					<a href={resolve('/smallform_0231')} class="preset-btn-round --sm"
+						>Smallform 0231 (Kleine Begegnungen in Danzig)</a
+					>
+					<a href={resolve('/smallform_0529')} class="preset-btn-round --sm"
+						>Smallform 0529 (Schweizer Pionierarbeit)</a
+					>
+				</div>
+			{/if}
+		</div>
 	</div>
 {/snippet}
 
@@ -389,6 +396,10 @@
 
 <!-- Navigation Large Screens -->
 <NavigationMenu.Root
+	onValueChange={() => {
+		// make sure hoveredSubmenu (for previews) does not leak to foreign panels
+		hoveredSubmenu.key = undefined;
+	}}
 	class="relative z-9999999999999 hidden h-max w-full justify-between gap-5 border-b-2 bg-foreground text-background lg:flex"
 >
 	<NavigationMenu.List
@@ -400,15 +411,21 @@
 		</div>
 
 		<!-- Texte und Fotografien -->
-		<NavigationMenu.Item value="texte-und-fotografien">
+		<NavigationMenu.Item value="texte-und-fotografien" openOnHover={false}>
 			{@render NavTrigger(mainMenuInfo.main1)}
-			{@render NavSub(['letters', 'smallforms', 'longforms', 'photos'], ContentPanelArea1)}
+			{@render NavSub(
+				mainMenuInfo.main1.idsSub as ('smallforms' | 'longforms' | 'letters' | 'photos')[],
+				ContentPanelArea1
+			)}
 		</NavigationMenu.Item>
 
 		<!-- Zugänge -->
-		<NavigationMenu.Item value="zugaenge">
+		<NavigationMenu.Item value="zugaenge" openOnHover={false}>
 			{@render NavTrigger(mainMenuInfo.main2)}
-			{@render NavSub(['map', 'timeline', 'network', 'topics'], ContentPanelArea2)}
+			{@render NavSub(
+				mainMenuInfo.main2.idsSub as ('map' | 'timeline' | 'network' | 'topics')[],
+				ContentPanelArea2
+			)}
 		</NavigationMenu.Item>
 
 		<!-- Main Menu without Submenues -->
