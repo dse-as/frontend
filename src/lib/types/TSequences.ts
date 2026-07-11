@@ -20,12 +20,14 @@ export type TSeqTextstufenKeys = keyof TSeq['textstufen'];
 export type TSeqTravelsKeys = keyof TSeq['travels'];
 export type TSeqCorrespondenceKeys = keyof TSeq['correspondence'];
 export type TSeqSeriesKeys = keyof TSeq['series'];
+export type TSeqPhotoseriesKeys = keyof TSeq['photoseries'];
 
 export type TSeqKeys =
 	| TSeqTextstufenKeys
 	| TSeqTravelsKeys
 	| TSeqCorrespondenceKeys
-	| TSeqSeriesKeys;
+	| TSeqSeriesKeys
+	| TSeqPhotoseriesKeys;
 
 export type TDictSeq = Record<
 	string,

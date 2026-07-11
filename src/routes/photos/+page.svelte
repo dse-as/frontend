@@ -4,6 +4,7 @@
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
 	import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
+	import type { TSeqPhotoseriesKeys } from '$lib/types/TSequences.js';
 	import { ScrollState } from 'runed';
 	import { useSearchParams } from 'runed/kit';
 	import { productSearchSchema } from './schemas';
@@ -44,27 +45,33 @@
 	// Filtering
 	let searchTerm = $state('');
 
-	let docsAll = $derived(params.series ? data.photoSequences[params.series]?.docs : []);
+	let photoKeysAll = $derived(
+		params.series ? (data.photoSequences[params.series]?.docs as TPhotosKeys[]) : []
+	);
 	let filteredDocs = $derived.by(() => {
 		// Filter Function
-		const filterFunction = (photo_data) => {
+		type TSinglePhoto = (typeof data.photos)[keyof typeof data.photos];
+		const filterFunction = (photo_data: TSinglePhoto) => {
 			const m = photo_data.metadata;
+
+			// Normalize the search term once to lowercase
+			const lowerSearchTerm = searchTerm.toLowerCase();
 
 			// Check title and comments (strings)
 			const commentsMatch =
-				(m?.title?.includes(searchTerm) ?? false) ||
-				(m?.comments_1?.includes(searchTerm) ?? false) ||
-				(m?.comments_2?.includes(searchTerm) ?? false);
+				(m?.title?.toLowerCase().includes(lowerSearchTerm) ?? false) ||
+				(m?.comments_1?.toLowerCase().includes(lowerSearchTerm) ?? false) ||
+				(m?.comments_2?.toLowerCase().includes(lowerSearchTerm) ?? false);
 
 			// Check captions (arrays of strings)
 			const captionsMatch =
-				(m?.captions_1?.some((str: string) => str?.includes(searchTerm)) ?? false) ||
-				(m?.captions_2?.some((str: string) => str?.includes(searchTerm)) ?? false);
+				(m?.captions_1?.some((str) => str?.toLowerCase().includes(lowerSearchTerm)) ?? false) ||
+				(m?.captions_2?.some((str) => str?.toLowerCase().includes(lowerSearchTerm)) ?? false);
 
 			return commentsMatch || captionsMatch;
 		};
 		// Return filtered docs array
-		return docsAll?.filter((docKey) => filterFunction(data.photos[docKey]));
+		return photoKeysAll?.filter((photoKey) => filterFunction(data.photos[photoKey]));
 	});
 
 	let filterTop = $state(0);
@@ -81,7 +88,7 @@
 </script>
 
 <!-- Series -->
-{#snippet keyList(keys)}
+{#snippet keyList(keys: TSeqPhotoseriesKeys[])}
 	<div
 		class={[
 			'preset-btn-list items-center justify-center',
@@ -151,7 +158,7 @@
 				Literaturarchivs (SLA). Auswahl und Reihenfolge wurden unverändert übernommen und direkt
 				wiedergegeben.
 			</p>
-			{@render keyList(data.seriesKeys.SLA)}
+			{@render keyList(data.seriesKeys.SLA as TSeqPhotoseriesKeys[])}
 		</div>
 		<div class="flex flex-col gap-5">
 			<h2 class="h2 mb-2 text-center">Kuratierte Spezial-Sammlungen</h2>
@@ -161,7 +168,7 @@
 				Plattform zugänglich zu machen. Dynamische Ad-hoc-Zusammenstellungen werden künftig
 				zusätzlich über die Suchfunktion verfügbar sein.
 			</p>
-			{@render keyList(data.seriesKeys.other)}
+			{@render keyList(data.seriesKeys.other as TSeqPhotoseriesKeys[])}
 		</div>
 	</div>
 
@@ -173,7 +180,7 @@
 			isNavHidden ? 'h-0 overflow-y-hidden opacity-0' : isMinimized && 'h-0 lg:block lg:h-max'
 		]}
 	>
-		{@render keyList([...data.seriesKeys.SLA, ...data.seriesKeys.other])}
+		{@render keyList([...data.seriesKeys.SLA, ...data.seriesKeys.other] as TSeqPhotoseriesKeys[])}
 	</div>
 </div>
 
@@ -210,7 +217,7 @@
 				bind:value={searchTerm}
 			/>
 			<p>
-				{filteredDocs?.length || 0} / {docsAll?.length || 0}
+				{filteredDocs?.length || 0} / {photoKeysAll?.length || 0}
 			</p>
 		</div>
 	{/if}
@@ -220,7 +227,7 @@
 		{#each filteredDocs as photoKey (photoKey)}
 			{@const item = data.photos[photoKey as TPhotosKeys]}
 			<a
-				href={resolve(`/${photoKey}`) + `?seq=${params.series}`}
+				href={resolve(`/${photoKey as string}`) + `?seq=${params.series}`}
 				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 lg:flex-col lg:items-center lg:justify-center"
 			>
 				<IIIFThumb

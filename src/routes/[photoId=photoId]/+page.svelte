@@ -9,8 +9,6 @@
 	let imgdata = $derived(data.resolvedPhoto?.item);
 
 	import { building } from '$app/environment';
-	import { resolve } from '$app/paths';
-	import type { TRegTypes, TRegKeysFlat } from '$lib/types/register/TRegister.js';
 
 	// Current Sequence
 	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));

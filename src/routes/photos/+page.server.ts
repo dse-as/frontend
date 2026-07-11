@@ -9,10 +9,10 @@ export const load: PageServerLoad = async () => {
 
 	const photoSequences = doc_sequences['doc_sequences'].photoseries;
 	const seriesKeys = {
-		SLA: Object.keys(photoSequences).filter((key) => {
+		SLA: (Object.keys(photoSequences) as (keyof typeof photoSequences)[]).filter((key) => {
 			return photoSequences[key].type === 'SLA';
 		}),
-		other: Object.keys(photoSequences).filter((key) => {
+		other: (Object.keys(photoSequences) as (keyof typeof photoSequences)[]).filter((key) => {
 			return photoSequences[key].type !== 'SLA';
 		})
 	};
