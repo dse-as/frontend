@@ -24,7 +24,7 @@
 		{...contentProps}
 	>
 		<Menubar.Group aria-label={triggerText}>
-			{#each items as item}
+			{#each items as item (item)}
 				<Menubar.Item
 					textValue={item.label}
 					onSelect={item.onSelect}

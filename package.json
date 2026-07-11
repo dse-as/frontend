@@ -45,6 +45,8 @@
 		"jsdom": "^29.0.2",
 		"mode-watcher": "^1.1.0",
 		"openseadragon": "^6.0.2",
-		"tailwindcss-animate": "^1.0.7"
+		"runed": "^0.37.1",
+		"tailwindcss-animate": "^1.0.7",
+		"zod": "^4.4.3"
 	}
 }

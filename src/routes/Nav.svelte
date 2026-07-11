@@ -106,7 +106,6 @@
 	});
 
 	let isDocType = $derived(hoveredSubmenu.key && hoveredSubmenu.key in dictDoc ? true : false);
-	$inspect(openStateMenu, isDocType, hoveredSubmenu.key, Object.keys(dictDoc));
 
 	// Sample Documents
 	const sampleDocuments = {
@@ -255,9 +254,8 @@
 			urls.forEach((imgURL) => {
 				const img = new Image();
 				img.src = imgURL;
-				// Optional: track loaded images
-				img.onload = () => console.log(`Loaded: ${imgURL}`);
-				img.onerror = () => console.warn(`Failed to load: ${imgURL}`);
+				// img.onload = () => console.log(`Loaded: ${imgURL}`);
+				// img.onerror = () => console.warn(`Failed to load: ${imgURL}`);
 			});
 		}
 		const allImageUrls = [
@@ -336,9 +334,9 @@
 {#snippet SampleDocumentPreviews()}
 	<div class="container-centered w-full gap-2">
 		{#if hoveredSubmenu.key}
-			{#each sampleDocuments[hoveredSubmenu.key] as item}
-				<a href={item.targetURL} class={['inline-block']}>
-					<img
+		{#each sampleDocuments[hoveredSubmenu.key] as item (item)}
+			<a href={item.targetURL} class={['inline-block']}>
+				<img
 						class={['duration-scale-100 block object-contain hover:scale-[1.1]', item.classes]}
 						src={item.imgURL}
 						alt={item.altText}
@@ -429,7 +427,7 @@
 		</NavigationMenu.Item>
 
 		<!-- Main Menu without Submenues -->
-		{#each mainMenuWithoutSub as item}
+		{#each mainMenuWithoutSub as item (item)}
 			<NavigationMenu.Item>
 				<NavigationMenu.Link
 					class={[

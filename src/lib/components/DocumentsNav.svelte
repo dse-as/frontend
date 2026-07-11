@@ -10,7 +10,7 @@
 
 <nav
 	class={[
-		'flex h-full w-full flex-wrap justify-center gap-2 pb-5 pl-10 transition-all duration-200 xl:justify-start'
+		'flex h-full w-full flex-wrap justify-center gap-2 pb-5 pl-10 transition-all duration-200 xl:justify-center'
 	]}
 >
 	{#each navEntries as dT (dT)}

@@ -39,6 +39,7 @@
 		@apply active:ring-2;
 		@apply focus:ring-2;
 
+		&:not(.--xs),
 		&:not(.--sm),
 		&:not(.--lg),
 		&:not(.--xl),
@@ -63,6 +64,9 @@
 		}
 		&.--sm {
 			@apply border text-sm;
+		}
+		&.--xs {
+			@apply border text-xs;
 		}
 
 		&.--muted {

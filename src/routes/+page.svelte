@@ -1,8 +1,3 @@
-<script lang="ts">
-	import { resolve } from '$app/paths';
-	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
-</script>
-
 <div class="mx-auto mt-13 flex w-full max-w-300 flex-col items-center justify-center">
 	<h1 class="h1">
 		Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte,
