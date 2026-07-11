@@ -1179,8 +1179,11 @@
 		},
 		"photoseries": {
 			"SLA-Schwarzenbach-A-5-12": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-12",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-12",
 				"name": "SLA-Schwarzenbach-A-5-12",
+				"name_short": "A-5-12",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-12&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-12&raquo;",
 				"docs": [
 					"photo_1960",
@@ -1237,8 +1240,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-27": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-27",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-27",
 				"name": "SLA-Schwarzenbach-A-5-27",
+				"name_short": "A-5-27",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-27&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-27&raquo;",
 				"docs": [
 					"photo_4068",
@@ -1291,8 +1297,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-17": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-17",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-17",
 				"name": "SLA-Schwarzenbach-A-5-17",
+				"name_short": "A-5-17",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-17&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-17&raquo;",
 				"docs": [
 					"photo_2428",
@@ -1570,8 +1579,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-01": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-01",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-01",
 				"name": "SLA-Schwarzenbach-A-5-01",
+				"name_short": "A-5-01",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-01&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-01&raquo;",
 				"docs": [
 					"photo_0001",
@@ -1664,8 +1676,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-08": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-08",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-08",
 				"name": "SLA-Schwarzenbach-A-5-08",
+				"name_short": "A-5-08",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-08&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-08&raquo;",
 				"docs": [
 					"photo_1290",
@@ -1904,8 +1919,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-02": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-02",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-02",
 				"name": "SLA-Schwarzenbach-A-5-02",
+				"name_short": "A-5-02",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-02&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-02&raquo;",
 				"docs": [
 					"photo_0088",
@@ -2130,8 +2148,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-03": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-03",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-03",
 				"name": "SLA-Schwarzenbach-A-5-03",
+				"name_short": "A-5-03",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-03&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-03&raquo;",
 				"docs": [
 					"photo_0307",
@@ -2331,8 +2352,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-04": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-04",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-04",
 				"name": "SLA-Schwarzenbach-A-5-04",
+				"name_short": "A-5-04",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-04&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-04&raquo;",
 				"docs": [
 					"photo_0501",
@@ -2554,8 +2578,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-14": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-14",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-14",
 				"name": "SLA-Schwarzenbach-A-5-14",
+				"name_short": "A-5-14",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-14&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-14&raquo;",
 				"docs": [
 					"photo_2119",
@@ -2646,8 +2673,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-18": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-18",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-18",
 				"name": "SLA-Schwarzenbach-A-5-18",
+				"name_short": "A-5-18",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-18&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-18&raquo;",
 				"docs": [
 					"photo_2817",
@@ -2784,8 +2814,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-06": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-06",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-06",
 				"name": "SLA-Schwarzenbach-A-5-06",
+				"name_short": "A-5-06",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-06&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-06&raquo;",
 				"docs": [
 					"photo_0793",
@@ -3002,8 +3035,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-07": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-07",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-07",
 				"name": "SLA-Schwarzenbach-A-5-07",
+				"name_short": "A-5-07",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-07&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-07&raquo;",
 				"docs": [
 					"photo_1014",
@@ -3111,8 +3147,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-05": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-05",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-05",
 				"name": "SLA-Schwarzenbach-A-5-05",
+				"name_short": "A-5-05",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-05&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-05&raquo;",
 				"docs": [
 					"photo_0717",
@@ -3190,8 +3229,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-15": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-15",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-15",
 				"name": "SLA-Schwarzenbach-A-5-15",
+				"name_short": "A-5-15",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-15&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-15&raquo;",
 				"docs": [
 					"photo_2230",
@@ -3273,8 +3315,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-09": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-09",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-09",
 				"name": "SLA-Schwarzenbach-A-5-09",
+				"name_short": "A-5-09",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-09&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-09&raquo;",
 				"docs": [
 					"photo_1335",
@@ -3369,8 +3414,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-10": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-10",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-10",
 				"name": "SLA-Schwarzenbach-A-5-10",
+				"name_short": "A-5-10",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-10&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-10&raquo;",
 				"docs": [
 					"photo_1424",
@@ -3625,8 +3673,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-11": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-11",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-11",
 				"name": "SLA-Schwarzenbach-A-5-11",
+				"name_short": "A-5-11",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-11&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-11&raquo;",
 				"docs": [
 					"photo_1673",
@@ -3916,8 +3967,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-13": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-13",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-13",
 				"name": "SLA-Schwarzenbach-A-5-13",
+				"name_short": "A-5-13",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-13&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-13&raquo;",
 				"docs": [
 					"photo_2008",
@@ -4023,8 +4077,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-16": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-16",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-16",
 				"name": "SLA-Schwarzenbach-A-5-16",
+				"name_short": "A-5-16",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-16&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-16&raquo;",
 				"docs": [
 					"photo_2269",
@@ -4176,8 +4233,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-19": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-19",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-19",
 				"name": "SLA-Schwarzenbach-A-5-19",
+				"name_short": "A-5-19",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-19&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-19&raquo;",
 				"docs": [
 					"photo_2827",
@@ -4314,8 +4374,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-20": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-20",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-20",
 				"name": "SLA-Schwarzenbach-A-5-20",
+				"name_short": "A-5-20",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-20&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-20&raquo;",
 				"docs": [
 					"photo_2973",
@@ -4478,8 +4541,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-21": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-21",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-21",
 				"name": "SLA-Schwarzenbach-A-5-21",
+				"name_short": "A-5-21",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-21&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-21&raquo;",
 				"docs": [
 					"photo_3106",
@@ -4641,8 +4707,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-22": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-22",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-22",
 				"name": "SLA-Schwarzenbach-A-5-22",
+				"name_short": "A-5-22",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-22&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-22&raquo;",
 				"docs": [
 					"photo_3273",
@@ -4749,8 +4818,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-23": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-23",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-23",
 				"name": "SLA-Schwarzenbach-A-5-23",
+				"name_short": "A-5-23",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-23&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-23&raquo;",
 				"docs": [
 					"photo_3363",
@@ -4888,8 +4960,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-24": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-24",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-24",
 				"name": "SLA-Schwarzenbach-A-5-24",
+				"name_short": "A-5-24",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-24&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-24&raquo;",
 				"docs": [
 					"photo_3520",
@@ -5000,8 +5075,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-25": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-25",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-25",
 				"name": "SLA-Schwarzenbach-A-5-25",
+				"name_short": "A-5-25",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-25&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-25&raquo;",
 				"docs": [
 					"photo_3600",
@@ -5261,8 +5339,11 @@
 				]
 			},
 			"SLA-Schwarzenbach-A-5-26": {
-				"url_seq_overview": "/photoseries_SLA-Schwarzenbach-A-5-26",
+				"type": "SLA",
+				"url_seq_overview": "/photos?series=SLA-Schwarzenbach-A-5-26",
 				"name": "SLA-Schwarzenbach-A-5-26",
+				"name_short": "A-5-26",
+				"intro": "Die Fotografien aus der Serie &laquo;SLA-Schwarzenbach-A-5-26&raquo; entstanden von 1900 bis 1901 auf der Reise nach Soundso und enthalten viele bemerkenswerte Bilder.",
 				"preamble": "Fotografien aus &laquo;SLA-Schwarzenbach-A-5-26&raquo;",
 				"docs": [
 					"photo_3854",
