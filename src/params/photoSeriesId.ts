@@ -1,7 +1,7 @@
 import type { ParamMatcher } from '@sveltejs/kit';
-import photo_series from '$lib/data/photo_series.json';
+import doc_sequences from '$lib/data/doc_sequences.json';
 
-const seriesKeys = Object.keys(photo_series['photo_series']);
+const seriesKeys = Object.keys(doc_sequences['doc_sequences'].photoseries);
 
 export const match = ((param: string): param is (typeof seriesKeys)[number] => {
 	return seriesKeys.includes(param);
