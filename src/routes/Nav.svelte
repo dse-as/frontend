@@ -35,8 +35,8 @@
 
 	const subMenuInfo = {
 		smallforms: {
-			name: 'Kurze Formen',
-			description: 'Kurze Formen',
+			name: 'Kleine Formen',
+			description: 'Kleine Formen',
 			content: 'Artikel, Zeitungsartikel, Sonderbeilagen, Rezensionen und weitere Kleine Formen',
 			path: resolve('/smallforms')
 		},
@@ -96,7 +96,7 @@
 			smallforms: 'Zufällige Smallform anzeigen',
 			longforms: 'Zufällige Longform anzeigen',
 			letters: 'Zufälligen Brief anzeigen',
-			photos: 'Zufällige Fotografiem anzeigen'
+			photos: 'Zufällige Fotografie anzeigen'
 		}
 	};
 
@@ -334,9 +334,9 @@
 {#snippet SampleDocumentPreviews()}
 	<div class="container-centered w-full gap-2">
 		{#if hoveredSubmenu.key}
-		{#each sampleDocuments[hoveredSubmenu.key] as item (item)}
-			<a href={item.targetURL} class={['inline-block']}>
-				<img
+			{#each sampleDocuments[hoveredSubmenu.key] as item (item)}
+				<a href={item.targetURL} class={['inline-block']}>
+					<img
 						class={['duration-scale-100 block object-contain hover:scale-[1.1]', item.classes]}
 						src={item.imgURL}
 						alt={item.altText}
@@ -357,7 +357,7 @@
 				<a
 					href={resolve(
 						`/${dictDoc[hoveredSubmenu.key as keyof typeof dictDoc].key_singular}_${Math.floor(
-							Math.random() * 1000
+							Math.random() * 8 //! improve heurisic
 						)
 							.toString()
 							.padStart(4, '0')}`
