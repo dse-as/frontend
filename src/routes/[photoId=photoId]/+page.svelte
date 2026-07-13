@@ -9,6 +9,7 @@
 	let imgdata = $derived(data.resolvedPhoto?.item);
 
 	import { building } from '$app/environment';
+	import ContentNote from '$lib/components/ContentNote.svelte';
 
 	// Current Sequence
 	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
@@ -28,6 +29,16 @@
 	<!-- Title -->
 	<div class="w-full px-10">
 		<h1 class="h1">{imgdata?.name}</h1>
+	</div>
+
+	<!-- Content Notes -->
+	<div class="preset-btn-list --spacing-sm px-10">
+		<ContentNote type="sensitive"
+			>{#snippet explanation()}Dies ist sehr sensibel!{/snippet}</ContentNote
+		>
+		<ContentNote type="authorship"
+			>{#snippet explanation()}Autor:innenschaft unklar{/snippet}</ContentNote
+		>
 	</div>
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
