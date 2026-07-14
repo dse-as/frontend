@@ -175,7 +175,7 @@
 		<div class="flex flex-col gap-5">
 			<h2 class="h2 text-center">Demo-Shortcuts</h2>
 			<h5 class="h5 text-center">Bilder mit Content Notes</h5>
-			<ul class="preset-btn-list --spacing-sm items-center justify-center" ,>
+			<ul class="preset-btn-list --spacing-sm items-center justify-center">
 				<li class="preset-btn-round"><a href={resolve('/photo_0001')}>Fotografie 0001</a></li>
 				<li class="preset-btn-round"><a href={resolve('/photo_3840')}>Fotografie 3840</a></li>
 				<li class="preset-btn-round"><a href={resolve('/photo_3834')}>Fotografie 3834</a></li>

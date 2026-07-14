@@ -17,7 +17,13 @@
 	let expanded = $state(false);
 
 	const colorType = $derived(
-		type === 'sensitive' ? 'warning' : type === 'authorship' ? 'unclear' : 'neutral'
+		type === 'sensitive'
+			? 'warning'
+			: type === 'authorship'
+				? 'unclear'
+				: type === 'problematicMetadata'
+					? 'warning'
+					: 'neutral'
 	);
 
 	const defaultTitle = $derived(
@@ -25,7 +31,9 @@
 			? 'Sensibler Inhalt'
 			: type === 'authorship'
 				? 'Autor:innenschaft unklar'
-				: '---'
+				: type === 'problematicMetadata'
+					? 'Problematische Metadaten'
+					: 'Kommentar'
 	);
 
 	const defaultComment = $derived(
@@ -33,7 +41,9 @@
 			? `Dieser Inhalt wurde als sensibel klassifiziert. \nVgl. die <a class="hyperlink" href="${resolve('/project/docs/nicht-edieren-von-diskriminierung')}" target="blank" rel="noopener noreferrer"><em>Richtlinien &laquo;(Nicht-)edieren diskriminierender Inhalte&raquo;</em></a>.`
 			: type === 'authorship'
 				? 'Die Autor:innenschaft dieses Dokuments ist unsicher.'
-				: '---'
+				: type === 'problematicMetadata'
+					? 'Die Metadaten dieses Dokuments wurden als problematisch klassifiziert.'
+					: ''
 	);
 
 	function handleEscape(ev: KeyboardEvent) {
@@ -113,7 +123,7 @@
 		<div
 			class="relative w-full border-b border-[var(--cncolor-border)] bg-[var(--cncolor)] px-2 py-1 text-cn-contrast"
 		>
-			{@render Icon()}
+			<span class="mr-2">{@render Icon()}</span>
 			{#if Title}
 				<span>{@render Title()}</span>
 			{:else}
@@ -133,9 +143,9 @@
 		</div>
 		<!-- Body with Comment Snippet -->
 		<div class="overflow-h-scroll max-h-60 min-h-max w-full p-5 text-left text-background-contrast">
-			<p>{@html defaultComment}</p>
+			<p class="italic">{@html defaultComment}</p>
 			{#if Comment}
-				<h6 class="h6 mt-5 mb-2">Weitere Erläuterungen</h6>
+				<h6 class="h6 mt-5 mb-2">Erläuterungen</h6>
 				<p>{@render Comment()}</p>
 			{/if}
 		</div>

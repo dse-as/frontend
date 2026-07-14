@@ -35,20 +35,23 @@
 		{@const contentNotes = data.resolvedPhoto?.item?.editorialNotes.contentNotes}
 		<div class="preset-btn-list --spacing-sm px-10">
 			{#each contentNotes as contentNote (contentNote)}
-				{#if contentNote.comment}
+				{#if contentNote.title && contentNote.comment}
 					<ContentNote type={contentNote.type}>
 						{#snippet Title()}{@html contentNote.title}{/snippet}
+						{#snippet Comment()}{@html contentNote.comment}{/snippet}
+					</ContentNote>
+				{:else if contentNote.title}
+					<ContentNote type={contentNote.type}>
+						{#snippet Title()}{@html contentNote.title}{/snippet}
+					</ContentNote>
+				{:else if contentNote.comment}
+					<ContentNote type={contentNote.type}>
 						{#snippet Comment()}{@html contentNote.comment}{/snippet}
 					</ContentNote>
 				{:else}
 					<ContentNote type={contentNote.type}></ContentNote>
 				{/if}
 			{/each}
-
-			<!-- Testing -->
-			<ContentNote type="sensitive"></ContentNote>
-			<ContentNote type="authorship"></ContentNote>
-			<ContentNote>{#snippet Title()}<em>Blablabla</em>{/snippet}</ContentNote>
 		</div>
 	{/if}
 
