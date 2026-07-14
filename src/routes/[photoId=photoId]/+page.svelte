@@ -62,6 +62,7 @@
 				iiif_imageAPI_width={800}
 				blur={imgdata?.manuscript?.rendition?.blur ? true : false}
 				url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
+				classes="min-h-80 md:min-h-120 lg:min-h-200"
 			/>
 		</div>
 
