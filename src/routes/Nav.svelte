@@ -454,6 +454,45 @@
 			placeholder="Suche..."
 			class="mx-4 w-50 rounded-xl border-2 border-background px-2 focus:w-70"
 		/>
+		<!-- Shortcuts Info -->
+		<NavigationMenu.Item value="info_shortcuts" openOnHover={false}>
+			<NavigationMenu.Trigger
+				class={[
+					'group inline-flex h-8 w-max items-center justify-center rounded-[7px] px-4 py-2 transition-colors',
+					'hover:bg-background hover:text-background-contrast',
+					'focus-visible:bg-muted focus-visible:text-dark-40 focus-visible:outline-hidden',
+					'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-background'
+				]}
+			>
+				<i class="fa-solid fa-info"></i>
+			</NavigationMenu.Trigger>
+			<NavigationMenu.Content class=" absolute top-0 left-0 w-auto text-background-contrast">
+				<div class=" m-0 w-full list-none p-5">
+					<h5 class="h5 mb-5">Tastaturkürzel</h5>
+					<table>
+						<tbody class="flex flex-col gap-2">
+							<tr class="mb-5 flex flex-col lg:mb-0 lg:block">
+								<td class="w-50 p-0 font-bold lg:py-2">S:</td>
+								<td class="p-0 text-left lg:py-2">Sequenz-Panel öffnen.</td>
+							</tr>
+							<tr class="mb-5 flex flex-col lg:mb-0 lg:block">
+								<td class="w-50 p-0 font-bold lg:py-2">Escape:</td>
+								<td class="p-0 text-left lg:py-2">Sequenz-Panel schliessen.</td>
+							</tr>
+							<tr class="mb-5 flex flex-col lg:mb-0 lg:block">
+								<td class="w-50 p-0 font-bold lg:py-2">Pfeiltaste Links:</td>
+								<td class="p-0 text-left lg:py-2">Zum vorherigen Dokument in Sequenz.</td>
+							</tr>
+							<tr class="mb-5 flex flex-col lg:mb-0 lg:block">
+								<td class="w-50 p-0 font-bold lg:py-2">Pfeiltaste Rechts:</td>
+								<td class="p-0 text-left lg:py-2">Zum nächsten Dokument in Sequenz.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</NavigationMenu.Content>
+		</NavigationMenu.Item>
+
 		<!-- Lightswitch for Large Screen -->
 		<div class=" hidden justify-self-end lg:block">
 			<Lightswitch />
