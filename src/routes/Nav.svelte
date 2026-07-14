@@ -452,19 +452,19 @@
 		<input
 			type="text"
 			placeholder="Suche..."
-			class="mx-4 w-50 rounded-xl border-2 border-background px-2 focus:w-70"
+			class="mx-4 w-50 rounded-xl border-2 border-background px-2 duration-200 focus:w-70"
 		/>
 		<!-- Shortcuts Info -->
 		<NavigationMenu.Item value="info_shortcuts" openOnHover={false}>
 			<NavigationMenu.Trigger
 				class={[
-					'group inline-flex h-8 w-max items-center justify-center rounded-[7px] px-4 py-2 transition-colors',
+					'group mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full px-2 py-2 transition-colors',
 					'hover:bg-background hover:text-background-contrast',
 					'focus-visible:bg-muted focus-visible:text-dark-40 focus-visible:outline-hidden',
 					'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-background'
 				]}
 			>
-				<i class="fa-solid fa-info"></i>
+				<i class="fa-solid fa-info text-xl"></i>
 			</NavigationMenu.Trigger>
 			<NavigationMenu.Content class=" absolute top-0 left-0 w-auto text-background-contrast">
 				<div class=" m-0 w-full list-none p-5">
@@ -494,7 +494,7 @@
 		</NavigationMenu.Item>
 
 		<!-- Lightswitch for Large Screen -->
-		<div class=" hidden justify-self-end lg:block">
+		<div class="hidden justify-self-end lg:block">
 			<Lightswitch />
 		</div>
 		<!-- Indicator -->

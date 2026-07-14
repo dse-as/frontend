@@ -5,7 +5,10 @@
 
 <button
 	onclick={toggleMode}
-	class="flex h-8 w-8 items-center justify-center rounded-button border-2 p-3 hover:border-light-40 hover:bg-light-10"
+	class={[
+		'flex h-8 w-8 items-center justify-center rounded-button p-3',
+		'hover:bg-background hover:text-background-contrast'
+	]}
 >
 	{#if mode.current === 'dark'}
 		<i class={['fa-solid fa-sun text-xl', iconClasses]}></i>
