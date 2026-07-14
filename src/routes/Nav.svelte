@@ -337,7 +337,7 @@
 			{#each sampleDocuments[hoveredSubmenu.key] as item (item)}
 				<a href={item.targetURL} class={['inline-block']}>
 					<img
-						class={['duration-scale-100 block object-contain hover:scale-[1.1]', item.classes]}
+						class={['duration-scale-200 block object-contain hover:scale-[1.1]', item.classes]}
 						src={item.imgURL}
 						alt={item.altText}
 						style={`rotate:${item.rotation}deg`}

@@ -525,7 +525,7 @@
 							data-sveltekit-preload-data="tap"
 							data-sveltekit-preload-code="hover"
 							class="preset-btn-round gap-2"
-							href={seqAll[seqType!][seqKey].url_seq_overview}
+							href={resolve(seqAll[seqType!][seqKey].url_seq_overview)}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
