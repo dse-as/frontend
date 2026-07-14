@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 
-	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
 	import Sequences from '../[docId=docId]/Sequences.svelte';
 	let { data } = $props();
@@ -58,8 +58,9 @@
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
 		<div class="h-full w-full p-4">
-			<IIIFThumb
+			<IIIF_Thumb
 				iiif_imageAPI_width={800}
+				blur={imgdata?.manuscript?.rendition?.blur ? true : false}
 				url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
 			/>
 		</div>

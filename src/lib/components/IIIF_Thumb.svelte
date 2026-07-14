@@ -1,5 +1,15 @@
-<script>
-	let { url, iiif_imageAPI_width = 100, classes = '' } = $props();
+<script lang="ts">
+	let {
+		url,
+		iiif_imageAPI_width = 100,
+		blur = false,
+		classes = ''
+	}: {
+		url?: string | null | undefined;
+		iiif_imageAPI_width?: number;
+		blur?: boolean;
+		classes?: string;
+	} = $props();
 	let showSpinner = $state(true);
 	let isError = $state(false);
 </script>
@@ -11,22 +21,25 @@
 		</div>
 	{/if}
 	{#if !isError}
-		<img
-			class={[
-				showSpinner ? 'hidden' : 'flex',
-				'object-cover grayscale-60 hover:grayscale-0',
-				classes
-			]}
-			src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
-			alt="iiif"
-			onload={() => {
-				showSpinner = false;
-			}}
-			onerror={() => {
-				isError = true;
-				showSpinner = false;
-			}}
-		/>
+		<div class={['overflow-hidden', blur && 'blur-xs']}>
+			<img
+				class={[
+					blur && 'blur-lg',
+					showSpinner ? 'hidden' : 'flex',
+					'object-cover grayscale-60 hover:grayscale-0',
+					classes
+				]}
+				src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
+				alt="iiif"
+				onload={() => {
+					showSpinner = false;
+				}}
+				onerror={() => {
+					isError = true;
+					showSpinner = false;
+				}}
+			/>
+		</div>
 	{:else}
 		<div class={['flex items-center justify-center', classes]}>
 			<i class="fa-solid fa-xmark fa-2xl text-warning"></i>

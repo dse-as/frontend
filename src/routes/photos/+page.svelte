@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
-	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
 	import type { TSeqPhotoseriesKeys } from '$lib/types/TSequences.js';
 	import { ScrollState } from 'runed';
@@ -242,8 +242,9 @@
 				href={resolve(`/${photoKey as string}`) + `?seq=${params.series}`}
 				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 lg:flex-col lg:items-center lg:justify-center"
 			>
-				<IIIFThumb
+				<IIIF_Thumb
 					url={item.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
+					blur={item?.manuscript?.rendition?.blur ? true : false}
 					iiif_imageAPI_width={400}
 					classes="w-[200px] h-[200px]"
 				/>

@@ -193,7 +193,8 @@
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={resDoc?.faksimile?.iiif_image_emanuscripta}
-						classes="max-h-[80px] max-w-[80px] "
+						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
+						classes="max-h-[80px] max-w-[80px]"
 					/>
 				</div>
 				<div class="flex flex-col">
@@ -201,7 +202,11 @@
 				</div>
 			{:else}
 				<div class="container-centered">
-					<IIIF_Thumb url={resDoc?.manuscript?.iiif_urls[0]} classes="max-h-[80px] max-w-[80px] " />
+					<IIIF_Thumb
+						url={resDoc?.manuscript?.iiif_urls[0]}
+						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
+						classes="max-h-[80px] max-w-[80px]"
+					/>
 				</div>
 				<div class="flex flex-col">
 					<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
