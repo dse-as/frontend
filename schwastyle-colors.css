@@ -35,9 +35,16 @@
 
 	/* Content Note Colors */
 	--cn-warning: rgb(255, 206, 131);
-	--cn-warning-icon: rgb(255, 241, 220);
-	--cn-warning-contrast: var(--color-background-contrast);
-	--cn-warning-icon-contrast: var(--color-background-contrast);
+	--cn-warning-iconhead: rgb(255, 239, 216);
+	--cn-warning-border: rgb(255, 206, 131);
+	--cn-unclear: rgb(177, 131, 255);
+	--cn-unclear-iconhead: rgb(236, 224, 255);
+	--cn-unclear-border: rgb(177, 131, 255);
+	--cn-neutral: var(--background);
+	--cn-neutral-iconhead: var(--light-10);
+	--cn-neutral-border: var(--foreground);
+	--cn-contrast: var(--background-contrast);
+	--cn-iconhead-contrast: var(--background-contrast);
 
 	/* Entity Colors */
 	--rs-doc: hsla(0, 50%, 50%);
@@ -57,7 +64,6 @@
 	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
 }
 
-/* .dark { */
 .dark {
 	--background: hsl(0, 0%, 22%);
 	--background-inverted: hsl(0 0% 95%);
@@ -94,9 +100,16 @@
 
 	/* Content Note Colors */
 	--cn-warning: rgb(255, 206, 131);
-	--cn-warning-icon: rgb(209, 145, 49);
-	--cn-warning-contrast: var(--color-background-contrast);
-	--cn-warning-contrast-icon: var(--color-foreground-contrast);
+	--cn-warning-iconhead: rgb(209, 145, 49);
+	--cn-warning-border: rgb(255, 206, 131);
+	--cn-unclear: rgb(177, 131, 255);
+	--cn-unclear-iconhead: rgb(42, 10, 94);
+	--cn-unclear-border: rgb(177, 131, 255);
+	--cn-neutral: var(--foreground);
+	--cn-neutral-iconhead: var(--light-40);
+	--cn-neutral-border: var(--foreground);
+	--cn-contrast: var(--background);
+	--cn-iconhead-contrast: white;
 
 	/* Entity Colors */
 	--rs-doc: hsla(0, 50%, 50%);
@@ -191,12 +204,17 @@
 
 /* Content Notes */
 @theme inline {
-	--color-cn-neutral: var(--color-background);
-	--color-cn-neutral-icon: var(--color-light-10);
-	--color-cn-neutral-contrast: var(--color-background-contrast);
 	--color-cn-warning: var(--cn-warning);
-	--color-cn-warning-icon: var(--cn-warning-icon);
-	--color-cn-warning-contrast: var(--cn-warning-contrast);
+	--color-cn-warning-border: var(--cn-warning-border);
+	--color-cn-warning-iconhead: var(--cn-warning-iconhead);
+	--color-cn-unclear: var(--cn-unclear);
+	--color-cn-unclear-border: var(--cn-unclear-border);
+	--color-cn-unclear-iconhead: var(--cn-unclear-iconhead);
+	--color-cn-neutral: var(--cn-neutral);
+	--color-cn-neutral-iconhead: var(--cn-neutral-iconhead);
+	--color-cn-neutral-border: var(--cn-neutral-border);
+	--color-cn-contrast: var(--cn-contrast);
+	--color-cn-iconhead-contrast: var(--cn-iconhead-contrast);
 }
 /* Cross-References */
 @theme inline {

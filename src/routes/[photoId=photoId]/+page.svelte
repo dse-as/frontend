@@ -32,14 +32,26 @@
 	</div>
 
 	<!-- Content Notes -->
-	<div class="preset-btn-list --spacing-sm px-10">
-		<ContentNote type="sensitive"
-			>{#snippet explanation()}Dies ist sehr sensibel!{/snippet}</ContentNote
-		>
-		<ContentNote type="authorship"
-			>{#snippet explanation()}Autor:innenschaft unklar{/snippet}</ContentNote
-		>
-	</div>
+	{#if 'contentNotes' in data.resolvedPhoto?.item?.editorialNotes && data.resolvedPhoto?.item?.editorialNotes.contentNotes}
+		{@const contentNotes = data.resolvedPhoto?.item?.editorialNotes.contentNotes}
+		<div class="preset-btn-list --spacing-sm px-10">
+			{#each contentNotes as contentNote (contentNote)}
+				{#if 'comment' in contentNote && contentNote.comment}
+					<ContentNote type={contentNote.type}>
+						{#snippet Title()}{@html contentNote.title}{/snippet}
+						{#snippet Comment()}{@html contentNote.comment}{/snippet}
+					</ContentNote>
+				{:else}
+					<ContentNote type={contentNote.type}></ContentNote>
+				{/if}
+			{/each}
+
+			<!-- Testing -->
+			<ContentNote type="sensitive"></ContentNote>
+			<ContentNote type="authorship"></ContentNote>
+			<ContentNote>{#snippet Title()}<em>Blablabla</em>{/snippet}</ContentNote>
+		</div>
+	{/if}
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
