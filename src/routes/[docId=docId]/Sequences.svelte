@@ -7,7 +7,7 @@
 	import { dict_docs } from '$lib/dictionaries/dict_docs.json';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { page } from '$app/state';
-	import { invalidateAll } from '$app/navigation';
+	import { invalidateAll, goto } from '$app/navigation';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import type { TResolvedDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { documents as allDocsRaw } from '$lib/data/documents.json';
@@ -86,10 +86,24 @@
 		);
 	}
 
-	function handleEscape(ev: KeyboardEvent) {
+	function handleKeyDown(ev: KeyboardEvent) {
 		if (ev.key === 'Escape') {
 			if (otherSeq.key && isSelectedValidSeq) resetOtherSeq();
 			else closeSeqPanel();
+		} else if (ev.key === 'ArrowLeft') {
+			if (prevId) {
+				goto(
+					`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`
+				);
+			}
+		} else if (ev.key === 'ArrowRight') {
+			if (nextId) {
+				goto(
+					`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`
+				);
+			}
+		} else if (ev.key === 's') {
+			openSeqPanel();
 		}
 	}
 
@@ -123,7 +137,8 @@
 			blocks?.[currentIndex]?.focus();
 		}
 
-		function handleKeyDown(ev: KeyboardEvent, block: HTMLElement) {
+		function handleKeyDownBlocks(ev: KeyboardEvent, block: HTMLElement) {
+			//! Fix keyboar-navigation once strucure of sequence panel is fixed
 			if (ev.key === 'ArrowDown') {
 				currentIndex = (currentIndex + 1) % blocks.length;
 				focusCurrent();
@@ -141,7 +156,7 @@
 		// Cycle through blocks using keyboard
 		const handlers = new SvelteMap<HTMLElement, (ev: KeyboardEvent) => void>();
 		blocks.forEach((block) => {
-			const handler = (ev: KeyboardEvent) => handleKeyDown(ev, block);
+			const handler = (ev: KeyboardEvent) => handleKeyDownBlocks(ev, block);
 			handlers.set(block, handler);
 			block.addEventListener('keydown', handler);
 		});
@@ -156,7 +171,7 @@
 	}
 </script>
 
-<svelte:document onkeydown={handleEscape} />
+<svelte:document onkeydown={handleKeyDown} />
 
 <!-- Snippets -->
 {#snippet seqItem(
