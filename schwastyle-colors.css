@@ -1,21 +1,4 @@
 :root {
-	/* Entity Colors */
-	--rs-doc: hsla(0, 50%, 50%);
-	--rs-person: hsla(262, 83%, 58%);
-	--rs-place: hsla(192, 91%, 36%);
-	--rs-event: hsla(26, 90%, 37%);
-	--rs-org: hsla(142, 72%, 29%);
-	--rs-bibl: hsla(55, 54%, 66%);
-	--rs-keyword: hsla(243, 72%, 29%);
-
-	--rs-doc-20: hsla(0, 50%, 50%, 0.2);
-	--rs-person-20: hsla(262, 83%, 58%, 0.2);
-	--rs-place-20: hsla(192, 91%, 36%, 0.2);
-	--rs-event-20: hsla(26, 90%, 37%, 0.2);
-	--rs-org-20: hsla(142, 72%, 29%, 0.2);
-	--rs-bibl-20: hsla(55, 54%, 66%, 0.2);
-	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
-
 	/* Basic Colors */
 	--background: hsl(0 0% 100%);
 	--background-inverted: hsl(0 0% 27%);
@@ -49,13 +32,21 @@
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-100);
 	--accent-foreground: hsl(204 80% 16%);
-}
 
-/* .dark { */
-.dark {
+	/* Content Note Colors */
+	--cn-warning: rgb(255, 206, 131);
+	--cn-warning-iconhead: rgb(255, 239, 216);
+	--cn-warning-border: rgb(255, 206, 131);
+	--cn-unclear: rgb(177, 131, 255);
+	--cn-unclear-iconhead: rgb(236, 224, 255);
+	--cn-unclear-border: rgb(177, 131, 255);
+	--cn-neutral: var(--background);
+	--cn-neutral-iconhead: var(--light-10);
+	--cn-neutral-border: var(--foreground);
+	--cn-contrast: var(--background-contrast);
+	--cn-iconhead-contrast: var(--background-contrast);
+
 	/* Entity Colors */
-
-	/* Entity colours */
 	--rs-doc: hsla(0, 50%, 50%);
 	--rs-person: hsla(262, 83%, 58%);
 	--rs-place: hsla(192, 91%, 36%);
@@ -71,7 +62,9 @@
 	--rs-org-20: hsla(142, 72%, 29%, 0.2);
 	--rs-bibl-20: hsla(55, 54%, 66%, 0.2);
 	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
+}
 
+.dark {
 	--background: hsl(0, 0%, 22%);
 	--background-inverted: hsl(0 0% 95%);
 	--foreground: hsl(0 0% 95%);
@@ -104,6 +97,36 @@
 	--warning: var(--color-red-500);
 	--accent: var(--color-primary-600);
 	--accent-foreground: hsl(204 94% 94%);
+
+	/* Content Note Colors */
+	--cn-warning: rgb(255, 206, 131);
+	--cn-warning-iconhead: rgb(209, 145, 49);
+	--cn-warning-border: rgb(255, 206, 131);
+	--cn-unclear: rgb(177, 131, 255);
+	--cn-unclear-iconhead: rgb(42, 10, 94);
+	--cn-unclear-border: rgb(177, 131, 255);
+	--cn-neutral: var(--foreground);
+	--cn-neutral-iconhead: var(--light-40);
+	--cn-neutral-border: var(--foreground);
+	--cn-contrast: var(--background);
+	--cn-iconhead-contrast: white;
+
+	/* Entity Colors */
+	--rs-doc: hsla(0, 50%, 50%);
+	--rs-person: hsla(262, 83%, 58%);
+	--rs-place: hsla(192, 91%, 36%);
+	--rs-event: hsla(26, 90%, 37%);
+	--rs-org: hsla(142, 72%, 29%);
+	--rs-bibl: hsla(55, 54%, 66%);
+	--rs-keyword: hsla(243, 72%, 29%);
+
+	--rs-doc-20: hsla(0, 50%, 50%, 0.2);
+	--rs-person-20: hsla(262, 83%, 58%, 0.2);
+	--rs-place-20: hsla(192, 91%, 36%, 0.2);
+	--rs-event-20: hsla(26, 90%, 37%, 0.2);
+	--rs-org-20: hsla(142, 72%, 29%, 0.2);
+	--rs-bibl-20: hsla(55, 54%, 66%, 0.2);
+	--rs-keyword-20: hsla(243, 72%, 29%, 0.2);
 }
 
 /* Fixed Colors (Skeleton-Style) */
@@ -179,6 +202,20 @@
 	--color-muted-foreground: var(--muted-foreground);
 }
 
+/* Content Notes */
+@theme inline {
+	--color-cn-warning: var(--cn-warning);
+	--color-cn-warning-border: var(--cn-warning-border);
+	--color-cn-warning-iconhead: var(--cn-warning-iconhead);
+	--color-cn-unclear: var(--cn-unclear);
+	--color-cn-unclear-border: var(--cn-unclear-border);
+	--color-cn-unclear-iconhead: var(--cn-unclear-iconhead);
+	--color-cn-neutral: var(--cn-neutral);
+	--color-cn-neutral-iconhead: var(--cn-neutral-iconhead);
+	--color-cn-neutral-border: var(--cn-neutral-border);
+	--color-cn-contrast: var(--cn-contrast);
+	--color-cn-iconhead-contrast: var(--cn-iconhead-contrast);
+}
 /* Cross-References */
 @theme inline {
 	--color-rs-doc: var(--rs-doc);

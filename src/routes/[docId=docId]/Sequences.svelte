@@ -290,7 +290,7 @@
 				<h6 class="h5">
 					<span class="">Sequenz:</span>
 					<a
-						class="hover:underline"
+						class="hover:hyperlink"
 						href={resolve(
 							`/${seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview ? seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview : currentSeq.type}` as any
 						)}

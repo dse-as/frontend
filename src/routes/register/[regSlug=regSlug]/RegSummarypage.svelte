@@ -106,23 +106,23 @@
 {#snippet MetadataValue(attKey: TRegAttrsMap[T], value: any)}
 	{#if attKey === 'gndNumber'}
 		<a
-			class="inline-block underline"
+			class="hyperlink inline-block"
 			href={`https://d-nb.info/gnd/${value}`}
 			target="_blank"
 			rel="noopener noreferrer">{value}</a
 		>
 	{:else if attKey === 'geoNamesLink'}
-		<a class="inline-block underline" href={value} target="_blank" rel="noopener noreferrer"
+		<a class="hyperlink inline-block" href={value} target="_blank" rel="noopener noreferrer"
 			>{value}</a
 		>
 	{:else if attKey === 'date'}
 		{printDateRange(value.from, value.to)}
 	{:else if attKey === 'orgIds' && value}
-		<a class="inline-block underline" href={resolve(`/register/${value}`)}>
+		<a class="hyperlink inline-block" href={resolve(`/register/${value}`)}>
 			{crossRef.orgNames?.join(', ') ?? value}
 		</a>
 	{:else if attKey === 'authorIds' && value}
-		<a class="inline-block underline" href={resolve(`/register/${value}`)}>
+		<a class="hyperlink inline-block" href={resolve(`/register/${value}`)}>
 			{crossRef.authorNames?.join(', ') ?? value}
 		</a>
 	{:else if Array.isArray(value)}

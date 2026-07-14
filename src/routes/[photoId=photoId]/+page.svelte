@@ -3,12 +3,12 @@
 
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
-	// import IIIFViewer from '../[docId=docId]/IIIF_Viewer.svelte';
 	import Sequences from '../[docId=docId]/Sequences.svelte';
 	let { data } = $props();
 	let imgdata = $derived(data.resolvedPhoto?.item);
 
 	import { building } from '$app/environment';
+	import ContentNote from '$lib/components/ContentNote.svelte';
 
 	// Current Sequence
 	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
@@ -29,6 +29,28 @@
 	<div class="w-full px-10">
 		<h1 class="h1">{imgdata?.name}</h1>
 	</div>
+
+	<!-- Content Notes -->
+	{#if data.resolvedPhoto?.item?.editorialNotes?.contentNotes}
+		{@const contentNotes = data.resolvedPhoto?.item?.editorialNotes.contentNotes}
+		<div class="preset-btn-list --spacing-sm px-10">
+			{#each contentNotes as contentNote (contentNote)}
+				{#if contentNote.comment}
+					<ContentNote type={contentNote.type}>
+						{#snippet Title()}{@html contentNote.title}{/snippet}
+						{#snippet Comment()}{@html contentNote.comment}{/snippet}
+					</ContentNote>
+				{:else}
+					<ContentNote type={contentNote.type}></ContentNote>
+				{/if}
+			{/each}
+
+			<!-- Testing -->
+			<ContentNote type="sensitive"></ContentNote>
+			<ContentNote type="authorship"></ContentNote>
+			<ContentNote>{#snippet Title()}<em>Blablabla</em>{/snippet}</ContentNote>
+		</div>
+	{/if}
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
@@ -65,7 +87,7 @@
 			{#snippet metadataEntryWithURL(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
-					<td class="p-0 text-left align-top underline @lg:py-2"
+					<td class="hyperlink p-0 text-left align-top @lg:py-2"
 						><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i><a href={content}
 							>{@html content}</a
 						></td

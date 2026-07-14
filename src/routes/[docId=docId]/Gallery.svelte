@@ -91,7 +91,7 @@
 <div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
 	{#if tzgIds.length}
 		<button
-			class="self-start rounded-button text-left underline"
+			class="hyperlink self-start rounded-button text-left"
 			onclick={() => {
 				showTextzeugen = !showTextzeugen;
 			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button

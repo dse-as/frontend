@@ -20,6 +20,11 @@ import { type TBiblsKeys } from '../register/TBiblsKeys';
 import { type TKeywordsKeys } from '../register/TKeywordsKeys';
 
 // --- Document -------------------------------------------------------
+type TContentNotes = {
+	type: string;
+	title?: string;
+	comment?: string;
+};
 export type TDocuments = {
 	meta: {
 		generated_by: string;
@@ -85,7 +90,14 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
+				editorialNotes: {
+					contentNotes?: TContentNotes[];
+				};
 				manuscript: {
+					rendition?: {
+						blur?: boolean;
+						hide?: boolean;
+					};
 					iiif_urls: string[];
 				};
 				numPages: number | null;
@@ -150,7 +162,14 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
+				editorialNotes: {
+					contentNotes?: TContentNotes[];
+				};
 				manuscript: {
+					rendition?: {
+						blur?: boolean;
+						hide?: boolean;
+					};
 					iiif_urls: string[];
 				};
 				numPages: number | null;
@@ -215,7 +234,14 @@ export type TDocuments = {
 					bibls?: TBiblsKeys[];
 					keywords?: TKeywordsKeys[];
 				};
+				editorialNotes: {
+					contentNotes?: TContentNotes[];
+				};
 				manuscript: {
+					rendition?: {
+						blur?: boolean;
+						hide?: boolean;
+					};
 					iiif_urls: string[];
 				};
 				numPages: number | null;
@@ -262,7 +288,14 @@ export type TDocuments = {
 					iiif_manifest_emanuscripta: string | null;
 					iiif_image_emanuscripta?: string | null;
 				};
+				editorialNotes: {
+					contentNotes?: TContentNotes[];
+				};
 				manuscript: {
+					rendition?: {
+						blur?: boolean;
+						hide?: boolean;
+					};
 					iiif_urls: string[];
 				};
 				linkedReg: {
