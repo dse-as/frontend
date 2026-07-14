@@ -3,7 +3,6 @@
 
 	import IIIFThumb from '$lib/components/IIIF_Thumb.svelte';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
-	// import IIIFViewer from '../[docId=docId]/IIIF_Viewer.svelte';
 	import Sequences from '../[docId=docId]/Sequences.svelte';
 	let { data } = $props();
 	let imgdata = $derived(data.resolvedPhoto?.item);
@@ -32,11 +31,11 @@
 	</div>
 
 	<!-- Content Notes -->
-	{#if 'contentNotes' in data.resolvedPhoto?.item?.editorialNotes && data.resolvedPhoto?.item?.editorialNotes.contentNotes}
+	{#if data.resolvedPhoto?.item?.editorialNotes?.contentNotes}
 		{@const contentNotes = data.resolvedPhoto?.item?.editorialNotes.contentNotes}
 		<div class="preset-btn-list --spacing-sm px-10">
 			{#each contentNotes as contentNote (contentNote)}
-				{#if 'comment' in contentNote && contentNote.comment}
+				{#if contentNote.comment}
 					<ContentNote type={contentNote.type}>
 						{#snippet Title()}{@html contentNote.title}{/snippet}
 						{#snippet Comment()}{@html contentNote.comment}{/snippet}

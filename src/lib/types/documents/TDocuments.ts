@@ -24,7 +24,7 @@ type TContentNotes = {
 	type: string;
 	title?: string;
 	comment?: string;
-}
+};
 export type TDocuments = {
 	meta: {
 		generated_by: string;
