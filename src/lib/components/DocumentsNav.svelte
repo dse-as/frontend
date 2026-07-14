@@ -14,7 +14,10 @@
 	]}
 >
 	{#each navEntries as dT (dT)}
-		<a class={['preset-btn-round --sm', dT === docType && '--active']} href={resolve(`/${dT}`)}>
+		<a
+			class={['preset-btn-round --sm', dT === docType && '--active']}
+			href={resolve(`/${dictDoc[dT as TDocTypes]?.url}`)}
+		>
 			{dictDoc[dT as TDocTypes]?.label_plural}
 		</a>
 	{/each}

@@ -3,6 +3,7 @@
 	"dict_docs": {
 		"letters": {
 			"name": "Briefe",
+			"url": "correspondence",
 			"key_singular": "letter",
 			"label_plural": "Briefe",
 			"label_singular": "Brief",
@@ -39,6 +40,7 @@
 		},
 		"smallforms": {
 			"name": "Kleine Formen",
+			"url": "smallforms",
 			"key_singular": "smallform",
 			"label_plural": "Kleine Formen",
 			"label_singular": "Kleine Form",
@@ -121,6 +123,7 @@
 		},
 		"longforms": {
 			"name": "Romane und Reportagebücher",
+			"url": "longforms",
 			"key_singular": "longform",
 			"label_plural": "Romane und Reportagebücher",
 			"label_singular": "Roman oder Reportagebuch",
@@ -160,6 +163,7 @@
 		},
 		"photos": {
 			"name": "Fotografien",
+			"url": "photos",
 			"key_singular": "photo",
 			"label_plural": "Fotografien",
 			"label_singular": "Fotografie",

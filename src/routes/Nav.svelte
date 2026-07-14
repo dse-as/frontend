@@ -50,7 +50,7 @@
 			name: 'Briefe',
 			description: 'Briefe',
 			content: 'Die erhaltene Korrespondenz von Schwarzenbach',
-			path: resolve('/letters')
+			path: resolve('/correspondence')
 		},
 		photos: {
 			name: 'Fotografien',
