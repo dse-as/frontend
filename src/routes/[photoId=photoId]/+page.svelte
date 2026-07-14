@@ -58,12 +58,15 @@
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
 		<div class="h-full w-full p-4">
-			<IIIF_Thumb
-				iiif_imageAPI_width={800}
-				blur={imgdata?.manuscript?.rendition?.blur ? true : false}
-				url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
-				classes="min-h-80 md:min-h-120 lg:min-h-200"
-			/>
+			{#key imgdata?.faksimile.iiif_image_emanuscripta}
+				<IIIF_Thumb
+					iiif_imageAPI_width={800}
+					blur={imgdata?.manuscript?.rendition?.blur ? true : false}
+					//! remove the .replace() hack as soon as we have clean IIIF-manifests.
+					url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
+					classes="min-h-80 md:min-h-120 lg:min-h-200"
+				/>
+			{/key}
 		</div>
 
 		<!-- <IIIFViewer url={imgdata?.faksimile.iiif_manifest_emanuscripta} /> -->

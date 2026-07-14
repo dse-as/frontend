@@ -10,10 +10,6 @@
 		blur?: boolean;
 		classes?: string;
 	} = $props();
-	$effect(() => {
-		const _ = url;
-		showSpinner = true;
-	});
 	let showSpinner = $state(true);
 	let isError = $state(false);
 </script>
