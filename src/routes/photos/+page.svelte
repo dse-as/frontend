@@ -142,7 +142,7 @@
 		<p>
 			Die Metadaten stammen überwiegend aus den Beständen des Schweizerischen Literaturarchivs
 			(SLA). In Übereinstimmung mit den <a
-				class="underline"
+				class="hyperlink"
 				href={resolve('/project/docs/nicht-edieren-von-diskriminierung')}
 				><em> Kriterien &laquo;(Nicht-)edieren diskriminierender Inhalte&raquo;</em></a
 			> wurden punktuell Anpassungen vorgenommen.

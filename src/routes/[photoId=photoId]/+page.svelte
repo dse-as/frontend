@@ -76,7 +76,7 @@
 			{#snippet metadataEntryWithURL(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
-					<td class="p-0 text-left align-top underline @lg:py-2"
+					<td class="hyperlink p-0 text-left align-top @lg:py-2"
 						><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i><a href={content}
 							>{@html content}</a
 						></td

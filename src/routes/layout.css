@@ -55,8 +55,8 @@
 	}
 
 	/* Links */
-	.a {
-		@apply text-primary-500 underline;
+	.hyperlink {
+		@apply underline;
 	}
 
 	/* Headings (as skeleton-style classes) */
