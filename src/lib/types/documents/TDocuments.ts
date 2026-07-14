@@ -94,7 +94,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition: {
+					rendition?: {
 						blur?: boolean;
 						hide?: boolean;
 					};
@@ -166,7 +166,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition: {
+					rendition?: {
 						blur?: boolean;
 						hide?: boolean;
 					};
@@ -238,7 +238,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition: {
+					rendition?: {
 						blur?: boolean;
 						hide?: boolean;
 					};
@@ -292,7 +292,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition: {
+					rendition?: {
 						blur?: boolean;
 						hide?: boolean;
 					};
