@@ -175,14 +175,15 @@
 	</div>
 
 	<!-- Series Keys Minimized -->
-	<div
-		class={[
-			!isMinimized && 'hidden',
-			'hidden transition-all duration-500',
-			isNavHidden ? 'h-0 overflow-y-hidden opacity-0' : isMinimized && 'h-0 lg:block lg:h-max'
-		]}
-	>
-		{@render keyList([...data.seriesKeys.SLA, ...data.seriesKeys.other] as TSeqPhotoseriesKeys[])}
+	<div class={[isMinimized && 'hidden lg:block']}>
+		<div
+			class={[
+				'transition-opacity duration-500',
+				isNavHidden ? 'h-0 overflow-y-hidden opacity-0' : isMinimized && 'h-0 lg:h-max'
+			]}
+		>
+			{@render keyList([...data.seriesKeys.SLA, ...data.seriesKeys.other] as TSeqPhotoseriesKeys[])}
+		</div>
 	</div>
 </div>
 
