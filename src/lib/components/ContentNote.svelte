@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { Snippet } from 'svelte';
+	import { tick } from 'svelte';
 
 	let {
 		type = undefined,
@@ -34,9 +35,13 @@
 				? 'Die Autor:innenschaft dieses Dokuments ist unsicher.'
 				: '---'
 	);
+
 	function handleEscape(ev: KeyboardEvent) {
-		if (ev.key === 'Escape') {
-			// && self && self.hasFocus()) {
+		if (expanded) {
+			console.log(self);
+			console.log(document.activeElement);
+		}
+		if (ev.key === 'Escape' && expanded && self === document.activeElement) {
 			expanded = false;
 		}
 	}
@@ -59,6 +64,7 @@
 {#if !expanded}
 	<!-- Note (collapsed as pill) -->
 	<button
+		tabindex="0"
 		class={[
 			colorType === 'warning' &&
 				'[--cncolor-border:var(--color-cn-warning-border)] [--cncolor-iconhead:var(--color-cn-warning-iconhead)] [--cncolor:var(--color-cn-warning)]',
@@ -66,10 +72,13 @@
 				'[--cncolor-border:var(--color-cn-unclear-border)] [--cncolor-iconhead:var(--color-cn-unclear-iconhead)] [--cncolor:var(--color-cn-unclear)]',
 			colorType === 'neutral' &&
 				'[--cncolor-border:var(--color-cn-neutral-border)] [--cncolor-iconhead:var(--color-cn-neutral-iconhead)] [--cncolor:var(--color-cn-neutral)]',
-			'flex w-max cursor-pointer items-center justify-center overflow-hidden rounded-full border border-[var(--cncolor-border)] bg-[var(--cncolor)] text-cn-contrast hover:scale-[1.02] focus:ring-2 active:ring-2'
+			'flex w-max items-center justify-center overflow-hidden rounded-full border border-[var(--cncolor-border)] bg-[var(--cncolor)] text-cn-contrast hover:scale-[1.02] focus:ring-2 active:ring-2'
 		]}
 		onclick={() => {
 			expanded = !expanded;
+			tick().then(() => {
+				self?.focus();
+			});
 		}}
 	>
 		<!-- Icon -->
@@ -89,8 +98,7 @@
 	</button>
 {:else}
 	<!-- Note (expanded with Comment) -->
-	<button
-		bind:this={self}
+	<div
 		class={[
 			colorType === 'warning' &&
 				'[--cncolor-border:var(--color-cn-warning-border)] [--cncolor-iconhead:var(--color-cn-warning-iconhead)] [--cncolor:var(--color-cn-warning)]',
@@ -98,15 +106,12 @@
 				'[--cncolor-border:var(--color-cn-unclear-border)] [--cncolor-iconhead:var(--color-cn-unclear-iconhead)] [--cncolor:var(--color-cn-unclear)]',
 			colorType === 'neutral' &&
 				'[--cncolor-border:var(--color-cn-neutral-border)] [--cncolor-iconhead:var(--color-cn-neutral-iconhead)] [--cncolor:var(--color-cn-neutral)]',
-			'flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border border-[var(--cncolor-border)] focus:ring-2 active:ring-2'
+			'flex w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-[var(--cncolor-border)] focus:ring-2 active:ring-2'
 		]}
-		onclick={() => {
-			expanded = !expanded;
-		}}
 	>
-		<!-- Head with Icon and Title-->
+		<!-- Head with Icon, Title and Close button-->
 		<div
-			class="w-full border-b border-[var(--cncolor-border)] bg-[var(--cncolor)] px-2 py-1 text-cn-contrast"
+			class="relative w-full border-b border-[var(--cncolor-border)] bg-[var(--cncolor)] px-2 py-1 text-cn-contrast"
 		>
 			{@render Icon()}
 			{#if Title}
@@ -114,6 +119,17 @@
 			{:else}
 				<span>{@html defaultTitle}</span>
 			{/if}
+			<button
+				bind:this={self}
+				tabindex="0"
+				class="absolute top-0 right-2 flex aspect-square h-full items-center justify-center rounded-full"
+				aria-label="Content Note schliessen"
+				onclick={() => {
+					expanded = !expanded;
+				}}
+			>
+				<i class="fa-solid fa-xmark"></i>
+			</button>
 		</div>
 		<!-- Body with Comment Snippet -->
 		<div class="overflow-h-scroll max-h-60 min-h-max w-full p-5 text-left text-background-contrast">
@@ -123,5 +139,5 @@
 				<p>{@render Comment()}</p>
 			{/if}
 		</div>
-	</button>
+	</div>
 {/if}
