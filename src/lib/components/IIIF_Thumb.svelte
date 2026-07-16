@@ -14,7 +14,8 @@
 	let isError = $state(false);
 
 	function adapt_iiif_url(url, iiif_imageAPI_width) {
-		if (url.includes('monacensia-digital')) {
+		//! REMOVE these fixes, once iiif is stable
+		if (url.includes('monacensia-digital') || url.includes('e-manuscripta.ch')) {
 			return url;
 		} else {
 			return `${url}/full/${iiif_imageAPI_width},/0/default.jpg`;

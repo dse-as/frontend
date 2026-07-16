@@ -8,6 +8,7 @@ export type TSeqAttrs = {
 	type?: string;
 	url_seq_overview: string;
 	name: string;
+	intro?: string;
 	preamble: string;
 	personId?: TPeopleKeys;
 	docs: TDocKeys[];

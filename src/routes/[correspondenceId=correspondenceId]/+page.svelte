@@ -85,8 +85,10 @@
 	<div class={['mx-auto mt-5 mb-30 flex max-w-300 flex-col gap-5 px-10 lg:mt-30']}>
 		<h5 class="h5">Überblickskommentar</h5>
 		<p>
-			{@html (data.corrSlug ? data.corrSequences[data.corrSlug]?.intro || '' : '') +
-				(data.crossRef.person
+			{@html (data.corrSlug && 'intro' in data.corrSequences[data.corrSlug]
+				? data.corrSequences[data.corrSlug]?.intro
+				: '') +
+				(data.corrSequences[data.corrSlug]?.type === 'with_person' && data.crossRef.person
 					? ` Die erhaltene Korrespondenz mit <strong>${data.crossRef.person.firstname} ${data.crossRef.person.lastname}</strong> umfasst <strong>${data.corrSequences[data.corrSlug]?.docs.length} Briefe</strong>.`
 					: '') +
 				' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
@@ -94,12 +96,14 @@
 	</div>
 
 	<!-- Gallery -->
-	<div class="grid h-full grid-cols-1 gap-5 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+	<div
+		class="grid h-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+	>
 		{#each data.corrSequences[data.corrSlug]?.docs as TLettersKeys[] as corrKey (corrKey)}
 			{@const item = data.letters[corrKey as TLettersKeys]}
 			<a
 				href={resolve(`/${corrKey as string}`) + `?seq=${data.corrSlug}`}
-				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 lg:flex-col lg:items-center lg:justify-center"
+				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 md:flex-col md:items-center md:justify-center"
 			>
 				{#if item}
 					<IIIF_Thumb
@@ -107,7 +111,7 @@
 						iiif_imageAPI_width={400}
 						classes="h-[200px]"
 					/>
-					<p class="flex flex-col gap-2 text-left lg:text-center">
+					<p class="flex flex-col gap-2 text-left md:text-center">
 						<span>{item.name}</span>
 						<span>{printDateRange(item.metadata.date.from, item.metadata.date.to)}</span>
 					</p>
