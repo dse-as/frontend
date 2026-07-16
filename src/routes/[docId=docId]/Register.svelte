@@ -21,7 +21,7 @@
 
 	const regTypes = Object.keys(reg);
 	const nonEmptyRegTypes = regTypes.reduce<TRegTypes[]>((acc, regType) => {
-		if (docItem?.entities[regType]?.length > 0) {
+		if (docItem?.entities?.[regType]?.length > 0) {
 			acc.push(regType as TRegTypes);
 		}
 		return acc;

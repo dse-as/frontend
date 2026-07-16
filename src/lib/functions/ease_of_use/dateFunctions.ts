@@ -1,11 +1,11 @@
-export function formatDateToGerman(isoDate: string) {
+export function formatDateToGerman(isoDate: string): string {
 	const date = new Date(isoDate);
 
 	// Check if the date is valid
 	if (isNaN(date.getTime())) {
-		return 'Invalid date format';
+		return `Invalid date format: ${isoDate}`;
 	}
-
+	
 	const year = date.getFullYear();
 
 	// Determine output based on the input length
@@ -24,14 +24,17 @@ export function formatDateToGerman(isoDate: string) {
 	}
 }
 
-export function printBirthRange(dateBirth: string, dateDeath: string) {
+export function printBirthRange(dateBirth: string, dateDeath: string): string {
 	if (dateBirth && dateDeath) return `${dateBirth}–${dateDeath}`;
 	else if (dateBirth) return `*${dateBirth}`;
 	else if (dateDeath) return `?–${dateDeath}`;
 	else return '';
 }
 
-export function printDateRange(from: string, to: string) {
+export function printDateRange(
+	from: string | undefined | null,
+	to: string | undefined | null
+): string {
 	if (from && to && from === to) return `${formatDateToGerman(from)}`;
 	else if (from && to) return `${formatDateToGerman(from)} – ${formatDateToGerman(to)}`;
 	else if (from) return `${formatDateToGerman(from)} – ?`;

@@ -6,7 +6,6 @@
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 
 	let correspondendeData = $derived(seqAll.correspondence);
-	const specialCorrespondences = ['corr_spec_0001'];
 
 	let { data } = $props();
 </script>
@@ -22,10 +21,7 @@
 	</div>
 {/snippet}
 
-<div
-	data-dom="topStickyElement"
-	class={['z-100 flex flex-col bg-background px-10 ', 'mx-auto max-w-300 gap-10']}
->
+<div class={['z-100 mx-auto flex max-w-300 flex-col gap-10 bg-background px-10']}>
 	<!-- Navigation -->
 	<DocumentsNav docType="letters" />
 	<h1 class={['h1 text-center whitespace-nowrap transition-all duration-200']}>
@@ -33,22 +29,36 @@
 	</h1>
 	<div class={['flex flex-col gap-5']}>
 		<p>
-			Die Korrespondenz von Annemarie Schwarzenbach entstanden auf ihren Reisen durch Europa, den
-			Nahen Osten, Asien und die USA in den 1930er und 1940er Jahren. Erhalten sind einzig die
-			Briefe und Postkarten, welche Schwarzenbach gesendet hat.
+			Die erhaltene Korrespondenz von Annemarie Schwarzenbach umfasst über 900 Briefe sowie ein
+			Netzwerk von rund 60 Personen. Bis auf wenige Ausnahmen sind einzig die Briefe aus der Hand
+			von Annemarie Schwarzenbach erhalten.
 		</p>
 	</div>
 
 	<!-- Series Keys Large -->
 	<div class={['flex flex-col gap-25 py-5']}>
 		<div class="flex flex-col gap-7">
-			<h2 class="h2 text-center">Erhaltene Korrespondenzen</h2>
+			<h2 class="h2 text-center">Korrespondenzpartner:innen</h2>
 			<div class="flex flex-wrap justify-center gap-2">
-				{@render keyList(Object.keys(correspondendeData) as TSeqCorrespondenceKeys[])}
+				{@render keyList(
+					Object.keys(correspondendeData).filter((key) => {
+						return !key.includes('correspondence_spec_');
+					}) as TSeqCorrespondenceKeys[]
+				)}
+			</div>
+		</div>
+		<div class="flex flex-col gap-7">
+			<h2 class="h2 text-center">Spezial-Sammlungen</h2>
+			<div class="flex flex-wrap justify-center gap-2">
+				{@render keyList(
+					Object.keys(correspondendeData).filter((key) => {
+						return key.includes('correspondence_spec_');
+					}) as TSeqCorrespondenceKeys[]
+				)}
 			</div>
 		</div>
 		<div class="flex flex-col gap-7 text-muted-foreground">
-			<h2 class="h2 text-center">Korrespondenzen auf Reisen o.ä. ...</h2>
+			<h2 class="h2 text-center">Korrespondenz nach Reise o.ä. ...</h2>
 			<div class="flex flex-wrap justify-center gap-2">
 				<span>TODO...</span>
 			</div>

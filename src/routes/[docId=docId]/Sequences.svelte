@@ -19,6 +19,7 @@
 	import Checkbox from '$lib/components/ui/Checkbox.svelte';
 	import { sequenceToggle, isOpenSeqPanel } from '$lib/globals/ui-states.svelte';
 	import { fade } from 'svelte/transition';
+	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAll = seqAllRaw as TSeqAll;
@@ -208,6 +209,7 @@
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={resDoc?.faksimile?.iiif_image_emanuscripta}
+						iiif_imageAPI_width={400}
 						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
 						classes="max-h-[80px] max-w-[80px]"
 					/>
@@ -219,13 +221,20 @@
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={resDoc?.manuscript?.iiif_urls[0]}
-						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
+						iiif_imageAPI_width={400}
 						classes="max-h-[80px] max-w-[80px]"
 					/>
 				</div>
 				<div class="flex flex-col">
-					<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
-					<span class="">{resDoc?.metadata?.pubDate}</span>
+					{#if resType === 'letters'}
+						<span class="line-clamp-2"
+							>{printDateRange(resDoc?.metadata.date.from, resDoc?.metadata.date.to)}</span
+						>
+						<span class="line-clamp-2">{resDoc?.name}</span>
+					{:else}
+						<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
+						<span class="">{resDoc?.metadata?.pubDate}</span>
+					{/if}
 				</div>
 			{/if}
 		</div>

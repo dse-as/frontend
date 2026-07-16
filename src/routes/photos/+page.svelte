@@ -88,7 +88,7 @@
 </script>
 
 <!-- Series -->
-{#snippet keyList(keys: TSeqPhotoseriesKeys[])}
+{#snippet keyList(keys: (TSeqPhotoseriesKeys | 'separator')[])}
 	<div
 		class={[
 			'preset-btn-list items-center justify-center',
@@ -96,16 +96,20 @@
 		]}
 	>
 		{#each keys as key (key)}
-			<button
-				class={[
-					'preset-btn-round duration-200',
-					params.series === key && '--active',
-					isMinimized && '--sm'
-				]}
-				onclick={() => {
-					params.series = key;
-				}}>{data.photoSequences[key]?.name_short}</button
-			>
+			{#if key === 'separator'}
+				<div class="px-4 text-xl text-background-contrast">{'/'}</div>
+			{:else}
+				<button
+					class={[
+						'preset-btn-round duration-200',
+						params.series === key && '--active',
+						isMinimized && '--sm'
+					]}
+					onclick={() => {
+						params.series = key;
+					}}>{data.photoSequences[key]?.name_short}</button
+				>
+			{/if}
 		{/each}
 	</div>
 {/snippet}
@@ -113,8 +117,8 @@
 <div
 	data-dom="topStickyElement"
 	class={[
-		'z-100 flex flex-col bg-background px-10 ',
-		isMinimized ? 'sticky top-0 gap-2 py-5' : 'mx-auto max-w-300 gap-10'
+		'z-100 -mt-10 flex flex-col bg-background px-10 pt-10 ',
+		isMinimized ? 'sticky top-0 gap-2' : 'mx-auto max-w-300 gap-10'
 	]}
 >
 	<!-- Navigation -->
@@ -122,7 +126,7 @@
 	<h1
 		class={[
 			'text-center whitespace-nowrap transition-all duration-200',
-			isMinimized ? 'h3 mb-5' : 'h1 mb-5 pl-10'
+			isMinimized ? 'h3 mb-5' : 'h1'
 		]}
 	>
 		{@html isMinimized
@@ -152,9 +156,9 @@
 	</div>
 
 	<!-- Series Keys Large -->
-	<div class={['flex flex-col gap-20 py-5', isMinimized && 'hidden']}>
-		<div class="flex flex-col gap-5">
-			<h2 class="h2 mb-5 text-center">Sammlungen SLA</h2>
+	<div class={['flex flex-col gap-25 py-5', isMinimized && 'hidden']}>
+		<div class="flex flex-col gap-7">
+			<h2 class="h2 text-center">Sammlungen SLA</h2>
 			<p>
 				Die hier zusammengestellten Sammlungen entsprechen der Katalogisierung des Schweizerischen
 				Literaturarchivs (SLA). Auswahl und Reihenfolge wurden unverändert übernommen und direkt
@@ -162,8 +166,8 @@
 			</p>
 			{@render keyList(data.seriesKeys.SLA as TSeqPhotoseriesKeys[])}
 		</div>
-		<div class="flex flex-col gap-5">
-			<h2 class="h2 mb-2 text-center">Kuratierte Spezial-Sammlungen</h2>
+		<div class="flex flex-col gap-7">
+			<h2 class="h2 text-center">Kuratierte Spezial-Sammlungen</h2>
 			<p>
 				Die nachfolgenden Sammlungen sind als exemplarische Skizzen konzipiert. Sie verdeutlichen
 				die Möglichkeit, weitere Zusammenstellungen von Schwarzenbachs Fotografien direkt auf dieser
@@ -172,7 +176,7 @@
 			</p>
 			{@render keyList(data.seriesKeys.other as TSeqPhotoseriesKeys[])}
 		</div>
-		<div class="flex flex-col gap-5">
+		<div class="flex flex-col gap-7">
 			<h2 class="h2 text-center">Demo-Shortcuts</h2>
 			<h5 class="h5 text-center">Bilder mit Content Notes</h5>
 			<ul class="preset-btn-list --spacing-sm items-center justify-center">
@@ -191,7 +195,11 @@
 				isNavHidden ? 'h-0 overflow-y-hidden opacity-0' : isMinimized && 'h-0 lg:h-max'
 			]}
 		>
-			{@render keyList([...data.seriesKeys.SLA, ...data.seriesKeys.other] as TSeqPhotoseriesKeys[])}
+			{@render keyList([
+				...data.seriesKeys.SLA,
+				'separator',
+				...data.seriesKeys.other
+			] as TSeqPhotoseriesKeys[])}
 		</div>
 	</div>
 </div>

@@ -5,6 +5,7 @@ import type { TPeopleKeys } from './register/TPeopleKeys';
 // Full Sequence and Attributes
 export type TSeq = typeof seqAll;
 export type TSeqAttrs = {
+	type?: string;
 	url_seq_overview: string;
 	name: string;
 	preamble: string;

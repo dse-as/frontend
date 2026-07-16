@@ -10,6 +10,7 @@
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import ResponsiveAccordion from './ResponsiveAccordion.svelte';
 	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
+	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
 
 	let {
 		docId,
@@ -76,14 +77,20 @@
 
 {#if resDoc?.item}
 	<div class="w-full px-10">
-		<h1 class="h1">
-			{resDoc.item.metadata.title_full}
+		<h1 class="h1 text-center">
+			{#if resDoc.docType === 'letters'}
+				<span>{resDoc.item.name}</span>
+			{:else}
+				<span>{resDoc.item.metadata.title_full}</span>
+			{/if}
 		</h1>
-		{#if resDoc.docType === 'smallforms'}
-			<h2 class="h2">
+		<h3 class="h3 mt-2 text-center">
+			{#if resDoc.docType === 'letters'}
+				<span>{printDateRange(resDoc.item.metadata.date.from, resDoc.item.metadata.date.to)}</span>
+			{:else if resDoc.docType === 'smallforms'}
 				Publiziert in {resDoc.item.metadata.pubPlace} ({resDoc.item.metadata.year})
-			</h2>
-		{/if}
+			{/if}
+		</h3>
 		<!-- Global Comment -->
 		<ResponsiveAccordion titleOverview="Überblickskommentar" titleMeta="Metadaten">
 			<!-- (1) Übersichtskommentar -->
@@ -106,7 +113,7 @@
 			{#snippet metadataContent()}
 				<div data-dom="metadata">
 					<div class="preset-btn-list --spacing-normal">
-						{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
+						{@render metadataButton('eckdaten', 'Eckdaten')}
 						{@render metadataButton('sources', 'Quellenangaben')}
 						{@render metadataButton('globalEntities', 'Schlagwörter')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
@@ -118,22 +125,78 @@
 						{#if stateMetadata === 'eckdaten'}
 							<table>
 								<tbody class="flex flex-col gap-2">
-									{@render metadataEntry('Voller Titel', resDoc.item!.metadata.title_full)}
-									{@render metadataEntry('Publikationsdatum', resDoc.item!.metadata.pubDate)}
 									{#if resDoc.docType === 'letters'}
 										{@render metadataEntry(
+											'Dokumenttyp',
+											'type' in resDoc.item!.metadata
+												? resDoc.item!.metadata.type?.join(', ')
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Datum',
+											printDateRange(resDoc.item!.metadata.date.from, resDoc.item!.metadata.date.to)
+										)}
+										{@render metadataEntry(
+											'Datum Stempel',
+											'date_stamp' in resDoc.item!.metadata
+												? resDoc.item!.metadata.date_stamp
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Absernder:in(nen)',
+											'people_sending' in resDoc.item!.metadata
+												? resDoc.item!.metadata.people_sending?.join(', ')
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Addressat:in(nen) (Anschrift)',
+											'people_addressed' in resDoc.item!.metadata
+												? resDoc.item!.metadata.people_addressed?.join(', ')
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Addressat:in(nen) (Adressfeld)',
+											'people_addressfield' in resDoc.item!.metadata
+												? resDoc.item!.metadata.people_addressfield?.join(', ')
+												: undefined
+										)}
+										{@render metadataEntry(
 											'Absendeort',
-											'placeOfSending' in resDoc.item!.metadata
-												? resDoc.item!.metadata.placeOfSending
+											'place_of_sender' in resDoc.item!.metadata
+												? resDoc.item!.metadata.place_of_sender
 												: undefined
 										)}
 										{@render metadataEntry(
 											'Empfangsort',
-											'placeOfRecepient' in resDoc.item!.metadata
-												? resDoc.item!.metadata.placeOfRecepient
+											'place_of_recepient' in resDoc.item!.metadata
+												? resDoc.item!.metadata.place_of_recepient
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Zusammenfassung',
+											'summary' in resDoc.item!.metadata ? resDoc.item!.metadata.summary : undefined
+										)}
+										{@render metadataEntry(
+											'Umfang und Medium',
+											'content_and_medium' in resDoc.item!.metadata
+												? resDoc.item!.metadata.content_and_medium
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Sprache',
+											'language' in resDoc.item!.metadata
+												? resDoc.item!.metadata.language
+												: undefined
+										)}
+										{@render metadataEntry(
+											'Beilagen',
+											'attachments' in resDoc.item!.metadata
+												? resDoc.item!.metadata.attachments
 												: undefined
 										)}
 									{:else}
+										{@render metadataEntry('Voller Titel', resDoc.item!.metadata.title_full)}
+										{@render metadataEntry('Publikationsdatum', resDoc.item!.metadata.pubDate)}
 										{@render metadataEntry(
 											'Publikationsort',
 											'pubPlace' in resDoc.item!.metadata
@@ -148,47 +211,83 @@
 													: 'Nein'
 												: '?'
 										)}
+										{@render metadataEntry('Publikationsdetails', resDoc.item!.metadata.pubDetails)}
 									{/if}
-									{@render metadataEntry('Publikationsdetails', resDoc.item!.metadata.pubDetails)}
 								</tbody>
 							</table>
 						{:else if stateMetadata === 'sources'}
 							<table>
 								<tbody class="flex flex-col gap-2">
-									{@render metadataEntry('Signatur', resDoc.item!.metadata.signature)}
-									{@render metadataEntry('Archivierungsort', resDoc.item!.metadata.archive)}
-									{@render metadataEntry(
-										'Archive Collation',
-										resDoc.item!.metadata.archiveCollation
-									)}
+									{#if resDoc.docType === 'letters'}
+										{@render metadataEntry('Ordnername', resDoc.item!.metadata.archive.folder_name)}
+										{@render metadataEntry(
+											'Fonds (ref. code)',
+											resDoc.item!.metadata.archive.ref_code_fonds
+										)}
+										{@render metadataEntry('Shelfmark', resDoc.item!.metadata.archive.shelfmark)}
+										{@render metadataEntry('Repository', resDoc.item!.metadata.archive.repository)}
+										{@render metadataEntry(
+											'Repository URL',
+											resDoc.item!.metadata.archive.repo_url
+										)}
+										{@render metadataEntry('Rechte', resDoc.item!.metadata.archive.rights)}
+										{@render metadataEntry(
+											'Archivierungsgeschichte',
+											resDoc.item!.metadata.archive.archival_history
+										)}
+										{@render metadataEntry(
+											'Publikation / Abdrucke',
+											resDoc.item!.metadata.archive.published_in?.join(' | ')
+										)}
+										{@render metadataEntry(
+											'In Forschungsliteratur thematisiert',
+											resDoc.item!.metadata.archive.cited_in?.join(' | ')
+										)}
+									{:else}
+										{@render metadataEntry('Signatur', resDoc.item!.metadata.signature)}
+										{@render metadataEntry('Archivierungsort', resDoc.item!.metadata.archive)}
+										{@render metadataEntry(
+											'Archive Collation',
+											resDoc.item!.metadata.archiveCollation
+										)}
+									{/if}
 								</tbody>
 							</table>
 						{:else if stateMetadata === 'globalEntities'}
 							<table>
 								<tbody class="flex flex-col gap-2" data-dom="global_entities">
-									{#if resDoc.item!.metadata.globalEntities}
-										{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
-											{#if crossRef.globalEntities[type]?.length}
-												{@render metadataEntryWithRegLink(
-													dictReg[type].label_plural,
-													crossRef.globalEntities[type]
-												)}
-											{/if}
-										{/each}
-									{/if}
+									{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
+										{#if crossRef.globalEntities[type]?.length}
+											{@render metadataEntryWithRegLink(
+												dictReg[type].label_plural,
+												crossRef.globalEntities[type]
+											)}
+										{/if}
+									{/each}
 								</tbody>
 							</table>
 						{:else if stateMetadata === 'citation'}
 							<table>
 								<tbody class="flex flex-col gap-2">
-									{@render metadataEntry(
-										'Dieses Dokument',
-										`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full}`
-									)}
-									{@render metadataEntry(
-										'Aktuell sichtbare Seite',
-										`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full},  Seite ${currentPage}`
-									)}
+									{#if resDoc.docType === 'letters'}
+										{@render metadataEntry(
+											'Dieses Dokument',
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.name} (${docId})`
+										)}
+										{@render metadataEntry(
+											'Aktuell sichtbare Seite',
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.name} (${docId}),  Seite ${currentPage}`
+										)}
+									{:else}
+										{@render metadataEntry(
+											'Dieses Dokument',
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full}`
+										)}
+										{@render metadataEntry(
+											'Aktuell sichtbare Seite',
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full},  Seite ${currentPage}`
+										)}
+									{/if}
 								</tbody>
 							</table>
 						{:else if stateMetadata === 'download'}

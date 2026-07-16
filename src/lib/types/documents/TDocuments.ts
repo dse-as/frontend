@@ -35,63 +35,44 @@ export type TDocuments = {
 	documents: {
 		letters: {
 			[key in TLettersKeys]: {
-				slug?: string; //! discuss whether this is identical to key
-				name: string;
-				date: { from: string; to: string };
-				type: TLettersGroups | '?' | '';
+				name: string | null;
 				metadata: {
-					title: string | null;
-					authors?: string[];
-					summary?: string;
-					title_short?: string;
-					pubDate: string;
-					title_full: string;
-					editor_workflow: 'ez_ttf_of';
-					year: string;
-					pubPosthumOnly: boolean | string;
-					placeOfSending?: string; //! discuss whether TPlacesKeys
-					placeOfRecepient?: string; //! discuss whether TPlacesKeys
-					signature: string;
-					pubDetails?: string;
-					textstufen_edited: string[];
-					textzeugen_nonedited: string[];
-					series: string;
-					comment: string;
-					globalEntities?: {
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
-						photos?: TPhotosKeys[];
-						people?: TPeopleKeys[];
-						places?: TPlacesKeys[];
-						events?: TEventsKeys[];
-						orgs?: TOrgsKeys[];
-						bibls?: TBiblsKeys[];
-						keywords?: TKeywordsKeys[];
+					type: TLettersGroups[] | null;
+					date: { from: string; to: string };
+					date_stamp: string | null;
+					people_sending: TPeopleKeys[] | null;
+					people_addressed: TPeopleKeys[] | null;
+					people_addressfield?: TPeopleKeys[] | null; //! as suggestion
+					place_of_sender?: string | null; //! discuss whether TPlacesKeys
+					place_of_recepient?: string | null; //! discuss whether TPlacesKeys
+					summary?: string | null;
+					content_and_medium?: string | null;
+					language?: string | null;
+					attachments?: string | null;
+					archive: {
+						repository?: string | null;
+						repo_url?: string | null;
+						shelfmark?: string | null;
+						folder_name?: string | null;
+						ref_code_fonds?: string | null;
+						rights?: string | null;
+						archival_history?: string | null;
+						published_in?: string[];
+						cited_in?: string[];
 					};
-					maximum: string;
-					travel: string;
-					archive: string;
-					archiveCollation: string;
-					pubSecondary: string;
-					urlOnlineResource: string;
-					note: string;
 				};
-				entities: {
-					//! unsure if I should drop this, since fully redundant with register.json
+				citedDocuments?: {
 					smallforms?: TSmallformsKeys[];
 					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
 					photos?: TPhotosKeys[];
-					people?: TPeopleKeys[];
-					places?: TPlacesKeys[];
-					events?: TEventsKeys[];
-					orgs?: TOrgsKeys[];
-					bibls?: TBiblsKeys[];
-					keywords?: TKeywordsKeys[];
+				};
+				entities_temp: {
+					travel: string | null;
 				};
 				editorialNotes: {
 					contentNotes?: TContentNotes[];
+					editorial_comments_1?: string | null;
+					editorial_comments_2?: string | null;
 				};
 				manuscript: {
 					rendition?: {
@@ -99,10 +80,6 @@ export type TDocuments = {
 						hide?: boolean;
 					};
 					iiif_urls: string[];
-				};
-				numPages: number | null;
-				edition: {
-					fullyEdited: boolean;
 				};
 			};
 		};

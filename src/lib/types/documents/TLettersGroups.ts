@@ -1,1 +1,1 @@
-export type TLettersGroups = 'Brief';
+export type TLettersGroups = "fragment" | "lettercard" | "letter" | "postcard" | "telegram"

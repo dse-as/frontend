@@ -12,6 +12,14 @@
 	} = $props();
 	let showSpinner = $state(true);
 	let isError = $state(false);
+
+	function adapt_iiif_url(url, iiif_imageAPI_width) {
+		if (url.includes('monacensia-digital')) {
+			return url;
+		} else {
+			return `${url}/full/${iiif_imageAPI_width},/0/default.jpg`;
+		}
+	}
 </script>
 
 {#if url}
@@ -29,7 +37,7 @@
 					'object-cover grayscale-60 hover:grayscale-0',
 					classes
 				]}
-				src={`${url}/full/${iiif_imageAPI_width},/0/default.jpg`}
+				src={adapt_iiif_url(url, iiif_imageAPI_width)}
 				alt="iiif"
 				onload={() => {
 					showSpinner = false;
@@ -41,7 +49,10 @@
 			/>
 		</div>
 	{:else}
-		<div class={['flex items-center justify-center', classes]}>
+		<div
+			class={['flex items-center justify-center', classes]}
+			data-url={adapt_iiif_url(url, iiif_imageAPI_width)}
+		>
 			<i class="fa-solid fa-xmark fa-2xl text-warning"></i>
 		</div>
 	{/if}
