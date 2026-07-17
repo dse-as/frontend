@@ -5,7 +5,7 @@ export function formatDateToGerman(isoDate: string): string {
 	if (isNaN(date.getTime())) {
 		return `Invalid date format: ${isoDate}`;
 	}
-	
+
 	const year = date.getFullYear();
 
 	// Determine output based on the input length
