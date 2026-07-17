@@ -97,7 +97,7 @@
 	>
 		{#each keys as key (key)}
 			{#if key === 'separator'}
-				<div class="px-4 text-xl text-background-contrast">{'/'}</div>
+				<div class="px-4 text-xl text-background-contrast">/</div>
 			{:else}
 				<button
 					class={[

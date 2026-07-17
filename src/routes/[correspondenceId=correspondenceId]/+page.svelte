@@ -37,7 +37,7 @@
 	<div class={['preset-btn-list --spacing-sm items-center justify-center']}>
 		{#each keys as key (key)}
 			{#if key === 'separator'}
-				<div class="px-4 text-xl text-background-contrast">{'/'}</div>
+				<div class="px-4 text-xl text-background-contrast">/</div>
 			{:else}
 				<a
 					class={['preset-btn-round --sm duration-200', data.corrSlug === key && '--active']}

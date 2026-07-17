@@ -6,8 +6,6 @@
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
 
 	let correspondendeData = $derived(seqAll.correspondence);
-
-	let { data } = $props();
 </script>
 
 <!-- Series -->

@@ -12,7 +12,7 @@ export const load: PageServerLoad = ({ params }) => {
 	const corrSequences = doc_sequences['doc_sequences'].correspondence;
 
 	// Cross-Reference
-	let crossRef = {
+	const crossRef = {
 		person:
 			'personId' in corrSequences[corrSlug]
 				? reg.people[corrSequences[corrSlug].personId as TPeopleKeys]
