@@ -371,10 +371,12 @@ export type TDocGroupsMap = {
 	photos: TPhotosGroups | '?' | '';
 };
 
-
 // CrossReference Types
 export type TCrossRefDocumentsExtended = Partial<
-	Record<TDocTypes, { item: object | string | null; regType: TDocTypes | null; regKey: TDocKeys }[] | null>
+	Record<
+		TDocTypes,
+		{ item: object | string | null; regType: TDocTypes | null; regKey: TDocKeys }[] | null
+	>
 >;
 export type TCrossRefEntitiesExtended = Partial<
 	Record<

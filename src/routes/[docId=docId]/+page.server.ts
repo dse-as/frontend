@@ -100,26 +100,24 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 	} = {};
 
 	if (resolvedDoc?.item) {
-			if (
-				resolvedDoc.item.crossReferences?.linkedEntities
-			) {
-				crossRef.linkedEntities = {};
-				Object.keys(resolvedDoc.item.crossReferences.linkedEntities).forEach((type) => {
-					crossRef.linkedEntities![type as TRegTypes] =
-						resolvedDoc.item!.crossReferences?.linkedEntities![type as TRegTypes]?.map(
-							(key: TRegKeysFlat) => {
-								const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
-								const hasValidType = resolvedReg?.regType;
-								return {
-									item: hasValidType ? resolvedReg?.item || '' : null,
-									regType: hasValidType ? resolvedReg?.regType : null,
-									regKey: key
-								};
-							}
-						) ?? null;
-				});
-			}
+		if (resolvedDoc.item.crossReferences?.linkedEntities) {
+			crossRef.linkedEntities = {};
+			Object.keys(resolvedDoc.item.crossReferences.linkedEntities).forEach((type) => {
+				crossRef.linkedEntities![type as TRegTypes] =
+					resolvedDoc.item!.crossReferences?.linkedEntities![type as TRegTypes]?.map(
+						(key: TRegKeysFlat) => {
+							const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
+							const hasValidType = resolvedReg?.regType;
+							return {
+								item: hasValidType ? resolvedReg?.item || '' : null,
+								regType: hasValidType ? resolvedReg?.regType : null,
+								regKey: key
+							};
+						}
+					) ?? null;
+			});
 		}
+	}
 
 	return {
 		ceteiData,
