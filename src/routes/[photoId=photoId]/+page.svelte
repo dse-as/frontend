@@ -57,14 +57,14 @@
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
-		<div class="h-full w-full p-4">
+		<div class="flex h-full w-full items-center justify-center p-4">
 			{#key imgdata?.faksimile.iiif_image_emanuscripta}
 				<IIIF_Thumb
-					iiif_imageAPI_width={800}
+					iiif_imageAPI_width={1200}
 					blur={imgdata?.manuscript?.rendition?.blur ? true : false}
 					//! remove the .replace() hack as soon as we have clean IIIF-manifests.
 					url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
-					classes="min-h-80 md:min-h-120 lg:min-h-200"
+					classes="max-h-[60vh] mx-auto md:max-h-[70vh] px-5"
 				/>
 			{/key}
 		</div>

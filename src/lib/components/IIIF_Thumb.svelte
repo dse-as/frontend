@@ -13,9 +13,9 @@
 	let showSpinner = $state(true);
 	let isError = $state(false);
 
-	function adapt_iiif_url(url, iiif_imageAPI_width) {
+	function adapt_iiif_url(url: string, iiif_imageAPI_width: number) {
 		//! REMOVE these fixes, once iiif is stable
-		if (url.includes('monacensia-digital') || url.includes('e-manuscripta.ch')) {
+		if (url.includes('monacensia-digital') || url.includes('e-manuscripta.ch/download/webcache')) {
 			return url;
 		} else {
 			return `${url}/full/${iiif_imageAPI_width},/0/default.jpg`;
