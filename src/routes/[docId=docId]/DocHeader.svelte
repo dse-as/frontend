@@ -8,6 +8,7 @@
 		TResolvedLongforms
 	} from '$lib/functions/ease_of_use/resolveDoc';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
+	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
 	import ResponsiveAccordion from './ResponsiveAccordion.svelte';
 	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
 	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
@@ -22,7 +23,10 @@
 		docId: TDocKeys | undefined;
 		resDoc: TResolvedLetters | TResolvedSmallforms | TResolvedLongforms | null;
 		ceteiData: any;
-		crossRef: Record<'globalEntities', any>;
+		crossRef: Record<
+			'citedDocuments' | 'linkedDocuments' | 'citedEntities' | 'linkedEntities',
+			any
+		>;
 		currentPage: number;
 	} = $props();
 
@@ -52,22 +56,25 @@
 {/snippet}
 {#snippet metadataEntryWithRegLink(
 	label: string,
-	content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
+	content:
+		| { item: object | string | null; regType: TRegTypes; regKey: TRegKeysFlat }[]
+		| null
+		| undefined
 )}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
 		<td class="p-0 text-left @lg:py-2">
 			<div class="flex flex-wrap gap-4">
-				{#each content ? content : [] as item (item)}
+				{#each content ? content : [] as cont (cont)}
 					<a
 						class="preset-btn-round --linkarrow"
 						data-type="entity"
-						data-entitytype={item.regType}
-						href={resolve(`/register/${item.regKey as string}`)}
+						data-entitytype={cont.regType}
+						href={resolve(`/register/${cont.regKey as string}`)}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						{item.name}
+						{cont.item.name}
 					</a>
 				{/each}
 			</div>
@@ -95,10 +102,10 @@
 		<ResponsiveAccordion titleOverview="Überblickskommentar" titleMeta="Metadaten">
 			<!-- (1) Übersichtskommentar -->
 			{#snippet overviewContent()}
-				<!-- <div data-dom="global_comment" class="h-full overflow-auto pb-20">
+				<div data-dom="global_comment" class="h-full overflow-auto pb-20">
 					{@html globalComment}
-				</div> -->
-				<ScrollArea
+				</div>
+				<!-- <ScrollArea
 					orientation="vertical"
 					type="hover"
 					viewportClasses="h-full w-full"
@@ -106,7 +113,7 @@
 					class="bg-background-alt relative h-full overflow-hidden px-4 pb-20 xl:px-0"
 				>
 					{@html globalComment}
-				</ScrollArea>
+				</ScrollArea> -->
 			{/snippet}
 
 			<!-- (2) Metadata Table -->
@@ -115,7 +122,7 @@
 					<div class="preset-btn-list --spacing-normal">
 						{@render metadataButton('eckdaten', 'Eckdaten')}
 						{@render metadataButton('sources', 'Quellenangaben')}
-						{@render metadataButton('globalEntities', 'Schlagwörter')}
+						{@render metadataButton('crossReferences', 'Schlagwörter')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
 						{@render metadataButton('download', 'Download-Links')}
 						<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
@@ -127,69 +134,69 @@
 								<tbody class="flex flex-col gap-2">
 									{#if resDoc.docType === 'letters'}
 										{@render metadataEntry(
-											'Dokumenttyp',
-											'type' in resDoc.item!.metadata
-												? resDoc.item!.metadata.type?.join(', ')
+											dictDocs.letters.metadata.types.label,
+											'types' in resDoc.item!.metadata
+												? resDoc.item!.metadata.types?.join(', ')
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Datum',
+											dictDocs.letters.metadata.date.label,
 											printDateRange(resDoc.item!.metadata.date.from, resDoc.item!.metadata.date.to)
 										)}
 										{@render metadataEntry(
-											'Datum Stempel',
+											dictDocs.letters.metadata.date_stamp.label,
 											'date_stamp' in resDoc.item!.metadata
 												? resDoc.item!.metadata.date_stamp
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Absernder:in(nen)',
+											dictDocs.letters.metadata.people_sending.label,
 											'people_sending' in resDoc.item!.metadata
 												? resDoc.item!.metadata.people_sending?.join(', ')
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Addressat:in(nen) (Anschrift)',
+											dictDocs.letters.metadata.people_addressed.label,
 											'people_addressed' in resDoc.item!.metadata
 												? resDoc.item!.metadata.people_addressed?.join(', ')
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Addressat:in(nen) (Adressfeld)',
+											dictDocs.letters.metadata.people_addressfield.label,
 											'people_addressfield' in resDoc.item!.metadata
 												? resDoc.item!.metadata.people_addressfield?.join(', ')
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Absendeort',
+											dictDocs.letters.metadata.place_of_sender.label,
 											'place_of_sender' in resDoc.item!.metadata
 												? resDoc.item!.metadata.place_of_sender
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Empfangsort',
+											dictDocs.letters.metadata.place_of_recepient.label,
 											'place_of_recepient' in resDoc.item!.metadata
 												? resDoc.item!.metadata.place_of_recepient
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Zusammenfassung',
+											dictDocs.letters.metadata.summary.label,
 											'summary' in resDoc.item!.metadata ? resDoc.item!.metadata.summary : undefined
 										)}
 										{@render metadataEntry(
-											'Umfang und Medium',
+											dictDocs.letters.metadata.content_and_medium.label,
 											'content_and_medium' in resDoc.item!.metadata
 												? resDoc.item!.metadata.content_and_medium
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Sprache',
+											dictDocs.letters.metadata.language.label,
 											'language' in resDoc.item!.metadata
 												? resDoc.item!.metadata.language
 												: undefined
 										)}
 										{@render metadataEntry(
-											'Beilagen',
+											dictDocs.letters.metadata.attachments.label,
 											'attachments' in resDoc.item!.metadata
 												? resDoc.item!.metadata.attachments
 												: undefined
@@ -219,28 +226,40 @@
 							<table>
 								<tbody class="flex flex-col gap-2">
 									{#if resDoc.docType === 'letters'}
-										{@render metadataEntry('Ordnername', resDoc.item!.metadata.archive.folder_name)}
 										{@render metadataEntry(
-											'Fonds (ref. code)',
+											dictDocs.letters.metadata.archive.folder_name.label,
+											resDoc.item!.metadata.archive.folder_name
+										)}
+										{@render metadataEntry(
+											dictDocs.letters.metadata.archive.ref_code_fonds.label,
 											resDoc.item!.metadata.archive.ref_code_fonds
 										)}
-										{@render metadataEntry('Shelfmark', resDoc.item!.metadata.archive.shelfmark)}
-										{@render metadataEntry('Repository', resDoc.item!.metadata.archive.repository)}
 										{@render metadataEntry(
-											'Repository URL',
+											dictDocs.letters.metadata.archive.shelfmark.label,
+											resDoc.item!.metadata.archive.shelfmark
+										)}
+										{@render metadataEntry(
+											dictDocs.letters.metadata.archive.repository.label,
+											resDoc.item!.metadata.archive.repository
+										)}
+										{@render metadataEntry(
+											dictDocs.letters.metadata.archive.repo_url.label,
 											resDoc.item!.metadata.archive.repo_url
 										)}
-										{@render metadataEntry('Rechte', resDoc.item!.metadata.archive.rights)}
 										{@render metadataEntry(
-											'Archivierungsgeschichte',
+											dictDocs.letters.metadata.archive.rights.label,
+											resDoc.item!.metadata.archive.rights
+										)}
+										{@render metadataEntry(
+											dictDocs.letters.metadata.archive.archival_history.label,
 											resDoc.item!.metadata.archive.archival_history
 										)}
 										{@render metadataEntry(
-											'Publikation / Abdrucke',
+											dictDocs.letters.metadata.archive.published_in.label,
 											resDoc.item!.metadata.archive.published_in?.join(' | ')
 										)}
 										{@render metadataEntry(
-											'In Forschungsliteratur thematisiert',
+											dictDocs.letters.metadata.archive.cited_in.label,
 											resDoc.item!.metadata.archive.cited_in?.join(' | ')
 										)}
 									{:else}
@@ -253,14 +272,14 @@
 									{/if}
 								</tbody>
 							</table>
-						{:else if stateMetadata === 'globalEntities'}
+						{:else if stateMetadata === 'crossReferences'}
 							<table>
 								<tbody class="flex flex-col gap-2" data-dom="global_entities">
 									{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
-										{#if crossRef.globalEntities[type]?.length}
+										{#if crossRef.linkedEntities?.[type]?.length}
 											{@render metadataEntryWithRegLink(
 												dictReg[type].label_plural,
-												crossRef.globalEntities[type]
+												crossRef.linkedEntities?.[type]
 											)}
 										{/if}
 									{/each}
@@ -271,7 +290,7 @@
 								<tbody class="flex flex-col gap-2">
 									{#if resDoc.docType === 'letters'}
 										{@render metadataEntry(
-											'Dieses Dokument',
+											'Dieser Brief',
 											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.name} (${docId})`
 										)}
 										{@render metadataEntry(
@@ -303,7 +322,7 @@
 							<div class="h-auto">
 								<div data-dom="metadata_table" class="">
 									{#each Object.entries(resDoc.item!.metadata) as entry (entry)}
-										{#if entry[0] !== 'globalEntities' && entry[1]}
+										{#if entry[0] !== 'crossReferences' && entry[1]}
 											{@render metadataEntry(entry[0], String(entry[1]))}
 										{/if}
 									{/each}

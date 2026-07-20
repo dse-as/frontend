@@ -18,6 +18,7 @@ import { type TEventsKeys } from '../register/TEventsKeys';
 import { type TOrgsKeys } from '../register/TOrgsKeys';
 import { type TBiblsKeys } from '../register/TBiblsKeys';
 import { type TKeywordsKeys } from '../register/TKeywordsKeys';
+import type { TRegKeysFlat, TRegTypes } from '../register/TRegister';
 
 // --- Document -------------------------------------------------------
 type TContentNotes = {
@@ -25,6 +26,20 @@ type TContentNotes = {
 	title?: string;
 	comment?: string;
 };
+type TCrossRefDocs = {
+	smallforms?: TSmallformsKeys[];
+	longforms?: TLongformsKeys[];
+	photos?: TPhotosKeys[];
+};
+type TCrossRefEntities = {
+	people?: TPeopleKeys[];
+	places?: TPlacesKeys[];
+	events?: TEventsKeys[];
+	orgs?: TOrgsKeys[];
+	bibls?: TBiblsKeys[];
+	keywords?: TKeywordsKeys[];
+};
+
 export type TDocuments = {
 	meta: {
 		generated_by: string;
@@ -37,7 +52,7 @@ export type TDocuments = {
 			[key in TLettersKeys]: {
 				name: string | null;
 				metadata: {
-					type: TLettersGroups[] | null;
+					types: TLettersGroups[] | null;
 					date: { from: string; to: string };
 					date_stamp: string | null;
 					people_sending: TPeopleKeys[] | null;
@@ -61,13 +76,11 @@ export type TDocuments = {
 						cited_in?: string[];
 					};
 				};
-				citedDocuments?: {
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					photos?: TPhotosKeys[];
-				};
-				entities_temp: {
-					travel: string | null;
+				crossReferences?: {
+					citedDocuments?: TCrossRefDocs;
+					linkedDocuments?: TCrossRefDocs;
+					citedEntities?: TCrossRefEntities;
+					linkedEntities?: TCrossRefEntities;
 				};
 				editorialNotes: {
 					contentNotes?: TContentNotes[];
@@ -106,18 +119,6 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					globalEntities?: {
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
-						photos?: TPhotosKeys[];
-						people?: TPeopleKeys[];
-						places?: TPlacesKeys[];
-						events?: TEventsKeys[];
-						orgs?: TOrgsKeys[];
-						bibls?: TBiblsKeys[];
-						keywords?: TKeywordsKeys[];
-					};
 					maximum: string; //! what is this?
 					travel: string; //! what is this?
 					archive: string;
@@ -126,18 +127,11 @@ export type TDocuments = {
 					urlOnlineResource: string;
 					note: string;
 				};
-				entities: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
-					photos?: TPhotosKeys[];
-					people?: TPeopleKeys[];
-					places?: TPlacesKeys[];
-					events?: TEventsKeys[];
-					orgs?: TOrgsKeys[];
-					bibls?: TBiblsKeys[];
-					keywords?: TKeywordsKeys[];
+				crossReferences?: {
+					citedDocuments?: TCrossRefDocs;
+					linkedDocuments?: TCrossRefDocs;
+					citedEntities?: TCrossRefEntities;
+					linkedEntities?: TCrossRefEntities;
 				};
 				editorialNotes: {
 					contentNotes?: TContentNotes[];
@@ -178,18 +172,6 @@ export type TDocuments = {
 					textzeugen_nonedited: string[];
 					series: string;
 					comment: string;
-					globalEntities?: {
-						smallforms?: TSmallformsKeys[];
-						longforms?: TLongformsKeys[];
-						letters?: TLettersKeys[];
-						photos?: TPhotosKeys[];
-						people?: TPeopleKeys[];
-						places?: TPlacesKeys[];
-						events?: TEventsKeys[];
-						orgs?: TOrgsKeys[];
-						bibls?: TBiblsKeys[];
-						keywords?: TKeywordsKeys[];
-					};
 					maximum: string;
 					travel: string;
 					archive: string;
@@ -198,18 +180,11 @@ export type TDocuments = {
 					urlOnlineResource: string;
 					note: string;
 				};
-				entities: {
-					//! unsure if I should drop this, since fully redundant with register.json
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					letters?: TLettersKeys[];
-					photos?: TPhotosKeys[];
-					people?: TPeopleKeys[];
-					places?: TPlacesKeys[];
-					events?: TEventsKeys[];
-					orgs?: TOrgsKeys[];
-					bibls?: TBiblsKeys[];
-					keywords?: TKeywordsKeys[];
+				crossReferences?: {
+					citedDocuments?: TCrossRefDocs;
+					linkedDocuments?: TCrossRefDocs;
+					citedEntities?: TCrossRefEntities;
+					linkedEntities?: TCrossRefEntities;
 				};
 				editorialNotes: {
 					contentNotes?: TContentNotes[];
@@ -260,6 +235,10 @@ export type TDocuments = {
 					stamped: boolean | null;
 					signed: boolean | null;
 				};
+				crossReferences?: {
+					linkedDocuments?: TCrossRefDocs;
+					linkedEntities?: TCrossRefEntities;
+				};
 				faksimile: {
 					iiif_manifest: string | null;
 					iiif_manifest_emanuscripta: string | null;
@@ -274,20 +253,6 @@ export type TDocuments = {
 						hide?: boolean;
 					};
 					iiif_urls: string[];
-				};
-				linkedReg: {
-					people?: TPeopleKeys[];
-					places?: TPlacesKeys[];
-					events?: TEventsKeys[];
-					orgs?: TOrgsKeys[];
-					bibls?: TBiblsKeys[];
-					keywords?: TKeywordsKeys[];
-				};
-				linkedDocs: {
-					letters?: TLettersKeys[];
-					smallforms?: TSmallformsKeys[];
-					longforms?: TLongformsKeys[];
-					photos?: TPhotosKeys[];
 				};
 			};
 		};
@@ -405,3 +370,15 @@ export type TDocGroupsMap = {
 	longforms: TLongformsGroups | '?' | '';
 	photos: TPhotosGroups | '?' | '';
 };
+
+
+// CrossReference Types
+export type TCrossRefDocumentsExtended = Partial<
+	Record<TDocTypes, { item: object | string | null; regType: TDocTypes | null; regKey: TDocKeys }[] | null>
+>;
+export type TCrossRefEntitiesExtended = Partial<
+	Record<
+		TRegTypes,
+		{ item: object | string | null; regType: TRegTypes | null; regKey: TRegKeysFlat }[] | null
+	>
+>;

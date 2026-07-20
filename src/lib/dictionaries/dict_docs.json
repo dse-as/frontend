@@ -8,34 +8,46 @@
 			"label_plural": "Briefe",
 			"label_singular": "Brief",
 			"metadata": {
-				"title": { "label": "Label" },
-				"authors": { "label": "Autor:in(nen)" },
+				"types": { "label": "Dokumenttyp" },
+				"date": { "label": "Datum" },
+				"date_stamp": { "label": "Datum Stempel" },
+				"people_sending": { "label": "Absender:in" },
+				"people_addressed": { "label": "Empfänger:in (Anschrift)" },
+				"people_addressfield": { "label": "Empfänger:in (Adresse)" },
+				"place_of_sender": { "label": "Absendeort" },
+				"place_of_recepient": { "label": "Empfangsort" },
 				"summary": { "label": "Zusammenfassung" },
-				"editor_workflow": { "label": "Editor Workflow" },
-				"year": { "label": "Jahr" },
-				"pubDate": { "label": "Publikaitonsdatum" },
-				"title_full": { "label": "Voller Titel" },
-				"title_short": { "label": "Kurztitel" },
-				"pubPosthumOnly": { "label": "Posthume Publikation (ja/nein)" },
-				"placeOfSending": { "label": "Absendeort" },
-				"placeOfReceiver": { "label": "Empfangsort" },
-				"signature": { "label": "Signatur" },
-				"pubDetails": { "label": "Publikationsdetails" },
-				"textstufen_edited": { "label": "Textstufen (ediert)" },
-				"textzeugen_nonedited": { "label": "Textstufen (nicht ediert)" },
-				"series": { "label": "Serien" },
-				"comment": { "label": "Kommentar" },
-				"globalEntities": { "label": "Stichworte" },
-				"maximum": { "label": "Maximum" },
-				"travel": { "label": "Reise" },
-				"archive": { "label": "Archiv" },
-				"archiveCollation": { "label": "Archivsammlung" },
-				"pubSecondary": { "label": "Sekundärliteratur" },
-				"urlOnlineResource": { "label": "URL Onlineressource" },
-				"note": { "label": "Notizen" }
+				"content_and_medium": { "label": "Inhalt und Medium" },
+				"language": { "label": "Sprache" },
+				"attachments": { "label": "Beilagen" },
+				"archive": {
+					"repository": { "label": "Repository" },
+					"repo_url": { "label": "Repository URL" },
+					"shelfmark": { "label": "Shelfmark" },
+					"folder_name": { "label": "Ordnername" },
+					"ref_code_fonds": { "label": "Fonds (ref. code)" },
+					"rights": { "label": "Rechte" },
+					"archival_history": { "label": "Archivierungsgeschichte" },
+					"published_in": { "label": "Publikation / Abdrucke" },
+					"cited_in": { "label": "In Forschungsliteratur erwähnt" }
+				}
+			},
+			"crossReferences": {
+				"citedDocuments": { "label": "Zitierte Dokumente" },
+				"linkedDocuments": { "label": "Verknüpfte Dokumente" },
+				"citedEntities": { "label": "Zitierte Entitiäten" },
+				"linkedEntities": { "label": "Stichworte" }
 			},
 			"groups": {
-				"Brief'": { "label_singular": "Brief", "label_plural": "Briefe", "slug": null }
+				"fragment": { "label_singular": "Fragment", "label_plural": "Fragmente", "slug": null },
+				"lettercard": {
+					"label_singular": "Briefkarte",
+					"label_plural": "Briefkarten",
+					"slug": null
+				},
+				"letter": { "label_singular": "Brief", "label_plural": "Briefe", "slug": null },
+				"postcard": { "label_singular": "Postkarte", "label_plural": "Postkarten", "slug": null },
+				"telegram": { "label_singular": "Telegram", "label_plural": "Telegramme", "slug": null }
 			}
 		},
 		"smallforms": {
@@ -46,13 +58,12 @@
 			"label_singular": "Kleine Form",
 			"metadata": {
 				"title": { "label": "Label" },
-				"authors": { "label": "Autor:in(nen)" },
-				"summary": { "label": "Zusammenfassung" },
 				"editor_workflow": { "label": "Editor Workflow" },
 				"year": { "label": "Jahr" },
-				"pubDate": { "label": "Publikaitonsdatum" },
 				"title_full": { "label": "Voller Titel" },
-				"title_short": { "label": "Kurztitel" },
+				"authors": { "label": "Autor:in(nen)" },
+				"summary": { "label": "Zusammenfassung" },
+				"pubDate": { "label": "Publikaitonsdatum" },
 				"pubPosthumOnly": { "label": "Posthume Publikation (ja/nein)" },
 				"pubPlace": { "label": "Publikationsort" },
 				"signature": { "label": "Signatur" },
@@ -61,7 +72,6 @@
 				"textzeugen_nonedited": { "label": "Textstufen (nicht ediert)" },
 				"series": { "label": "Serien" },
 				"comment": { "label": "Kommentar" },
-				"globalEntities": { "label": "Stichworte" },
 				"maximum": { "label": "Maximum" },
 				"travel": { "label": "Reise" },
 				"archive": { "label": "Archiv" },
@@ -69,6 +79,12 @@
 				"pubSecondary": { "label": "Sekundärliteratur" },
 				"urlOnlineResource": { "label": "URL Onlineressource" },
 				"note": { "label": "Notizen" }
+			},
+			"crossReferences": {
+				"citedDocuments": { "label": "Zitierte Dokumente" },
+				"linkedDocuments": { "label": "Verknüpfte Dokumente" },
+				"citedEntities": { "label": "Zitierte Entitiäten" },
+				"linkedEntities": { "label": "Stichworte" }
 			},
 			"groups": {
 				"Typoskript": {
@@ -144,7 +160,6 @@
 				"textzeugen_nonedited": { "label": "Textstufen (nicht ediert)" },
 				"series": { "label": "Serien" },
 				"comment": { "label": "Kommentar" },
-				"globalEntities": { "label": "Stichworte" },
 				"maximum": { "label": "Maximum" },
 				"travel": { "label": "Reise" },
 				"archive": { "label": "Archiv" },
@@ -152,6 +167,12 @@
 				"pubSecondary": { "label": "Sekundärliteratur" },
 				"urlOnlineResource": { "label": "URL Onlineressource" },
 				"note": { "label": "Notizen" }
+			},
+			"crossReferences": {
+				"citedDocuments": { "label": "Zitierte Dokumente" },
+				"linkedDocuments": { "label": "Verknüpfte Dokumente" },
+				"citedEntities": { "label": "Zitierte Entitiäten" },
+				"linkedEntities": { "label": "Stichworte" }
 			},
 			"groups": {
 				"longform'": {
@@ -192,6 +213,10 @@
 				"sla_id_img": { "label": "SLA Dokumentennummer" },
 				"stamped": { "label": "Gestempelt" },
 				"signed": { "label": "Signiert" }
+			},
+			"crossReferences": {
+				"linkedDocuments": { "label": "Verknüpfte Dokumente" },
+				"linkedEntities": { "label": "Stichworte" }
 			},
 			"groups": {
 				"Fotografie'": {

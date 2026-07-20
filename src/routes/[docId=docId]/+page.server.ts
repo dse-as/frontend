@@ -10,7 +10,7 @@ import type {
 	TResolvedSmallforms,
 	TResolvedLongforms
 } from '$lib/functions/ease_of_use/resolveDoc';
-import type { TDocKeys } from '$lib/types/documents/TDocuments';
+import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
 import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
@@ -93,33 +93,33 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 
 	// Resolve cross-register references
 	const crossRef: {
-		globalEntities: Partial<
-			Record<
-				TRegTypes,
-				{ name: string | null; regType: TRegTypes | null; regKey: TRegKeysFlat }[] | null
-			>
-		>;
-	} = { globalEntities: {} };
+		linkedEntities?: TCrossRefEntitiesExtended;
+		citedEntities?: TCrossRefEntitiesExtended;
+		linkedDocuments?: TCrossRefDocumentsExtended;
+		citedDocuments?: TCrossRefDocumentsExtended;
+	} = {};
 
 	if (resolvedDoc?.item) {
-		// globalEntities
-		if ('globalEntities' in resolvedDoc.item.metadata && resolvedDoc.item.metadata.globalEntities) {
-			Object.keys(resolvedDoc.item.metadata.globalEntities).forEach((type) => {
-				crossRef.globalEntities[type as TRegTypes] =
-					resolvedDoc.item!.metadata.globalEntities![type as TRegTypes]?.map(
-						(key: TRegKeysFlat) => {
-							const resolved = resolveReg(reg, key as TRegKeysFlat);
-							const hasValidType = resolved?.regType;
-							return {
-								name: hasValidType ? resolved?.item?.name || '' : null,
-								regType: hasValidType ? resolved?.regType : null,
-								regKey: key
-							};
-						}
-					) ?? null;
-			});
+			if (
+				resolvedDoc.item.crossReferences?.linkedEntities
+			) {
+				crossRef.linkedEntities = {};
+				Object.keys(resolvedDoc.item.crossReferences.linkedEntities).forEach((type) => {
+					crossRef.linkedEntities![type as TRegTypes] =
+						resolvedDoc.item!.crossReferences?.linkedEntities![type as TRegTypes]?.map(
+							(key: TRegKeysFlat) => {
+								const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
+								const hasValidType = resolvedReg?.regType;
+								return {
+									item: hasValidType ? resolvedReg?.item || '' : null,
+									regType: hasValidType ? resolvedReg?.regType : null,
+									regKey: key
+								};
+							}
+						) ?? null;
+				});
+			}
 		}
-	}
 
 	return {
 		ceteiData,
