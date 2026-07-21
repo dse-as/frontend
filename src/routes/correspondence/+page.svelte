@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
-	import { type TSeqCorrespondenceKeys } from '$lib/types/TSequences';
+	import type { TSeqCorrespondenceKeys } from '$lib/types/TSequences';
 	import { resolve } from '$app/paths';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
@@ -9,10 +9,10 @@
 </script>
 
 <!-- Series -->
-{#snippet keyList(keys: TSeqPhotoseriesKeys[])}
+{#snippet keyList(keys: TSeqCorrespondenceKeys[])}
 	<div class={['preset-btn-list items-center justify-center', '--spacing-sm']}>
 		{#each keys as key (key)}
-			<a class="preset-btn-round --normal" href={resolve(`/${key}`)}
+			<a class="preset-btn-round --normal" href={resolve(`/${key}` as any)}
 				>{correspondendeData[key as TSeqCorrespondenceKeys].name}</a
 			>
 		{/each}

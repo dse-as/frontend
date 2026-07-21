@@ -5,13 +5,13 @@ import type { TPeopleKeys } from './register/TPeopleKeys';
 // Full Sequence and Attributes
 export type TSeq = typeof seqAll;
 export type TSeqAttrs = {
-	type?: string;
-	url_seq_overview: string;
-	name: string;
-	intro?: string;
-	preamble: string;
-	personId?: TPeopleKeys;
-	docs: TDocKeys[];
+	type?: string | null;
+	url_seq_overview: string | null;
+	name: string | null;
+	intro?: string | null;
+	preamble: string | null;
+	personId?: TPeopleKeys | null;
+	docs: TDocKeys[] | null;
 };
 
 // Types
@@ -43,10 +43,4 @@ export type TDictSeq = Record<
 	}
 >;
 
-export type TSeqAll = Record<
-	string,
-	Record<
-		string,
-		{ url_seq_overview?: string | null; name?: string; preamble?: string; docs: string[] }
-	>
->;
+export type TSeqAll = Record<string, Record<string, Partial<TSeqAttrs>>>;

@@ -5,7 +5,7 @@
 
 	let { data, children } = $props();
 
-	const regIdsForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'] as const;
+	const regKeysForButtons = ['people', 'places', 'keywords', 'orgs', 'events', 'bibls'] as const;
 </script>
 
 <!-- Snippet for Navigation -->
@@ -18,16 +18,16 @@
 				: 'ml-10 h-full w-full gap-2'
 		]}
 	>
-		{#each regIdsForButtons as regId (regId)}
+		{#each regKeysForButtons as regKey (regKey)}
 			<a
 				class={[
 					'preset-btn-round',
 					data.regView === 'regView1' ? '--2xl' : '--sm',
-					data.regType === regId && '--active'
+					data.regType === regKey && '--active'
 				]}
-				href={resolve(`/register/${regId}`)}
+				href={resolve(`/register/${regKey}`)}
 			>
-				{dictReg[regId]?.label_plural}
+				{dictReg[regKey]?.label_plural}
 			</a>
 		{/each}
 	</nav>

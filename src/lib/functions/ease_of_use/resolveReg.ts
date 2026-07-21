@@ -10,78 +10,78 @@ import type { TPeopleKeys } from '$lib/types/register/TPeopleKeys';
 import type { TPlacesKeys } from '$lib/types/register/TPlacesKeys';
 import type { TRegister, TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 
-type TResolvedRegister =
+export type TResolvedRegister =
 	| {
-			regId: TPeopleKeys;
+			regKey: TPeopleKeys;
 			regType: 'people';
 			item: TRegister['register']['people'][TPeopleKeys] | null;
 	  }
 	| {
-			regId: TPlacesKeys;
+			regKey: TPlacesKeys;
 			regType: 'places';
 			item: TRegister['register']['places'][TPlacesKeys] | null;
 	  }
 	| {
-			regId: TEventsKeys;
+			regKey: TEventsKeys;
 			regType: 'events';
 			item: TRegister['register']['events'][TEventsKeys] | null;
 	  }
 	| {
-			regId: TOrgsKeys;
+			regKey: TOrgsKeys;
 			regType: 'orgs';
 			item: TRegister['register']['orgs'][TOrgsKeys] | null;
 	  }
 	| {
-			regId: TBiblsKeys;
+			regKey: TBiblsKeys;
 			regType: 'bibls';
 			item: TRegister['register']['bibls'][TBiblsKeys] | null;
 	  }
 	| {
-			regId: TKeywordsKeys;
+			regKey: TKeywordsKeys;
 			regType: 'keywords';
 			item: TRegister['register']['keywords'][TKeywordsKeys] | null;
 	  };
 
 export function resolveReg(
 	object: Record<TRegTypes, any> | null,
-	regId: TRegKeysFlat
+	regKey: TRegKeysFlat
 ): TResolvedRegister | null {
-	if (regId.includes('person_')) {
+	if (regKey.includes('person_')) {
 		return {
-			regId: regId as TPeopleKeys,
+			regKey: regKey as TPeopleKeys,
 			regType: 'people',
-			item: object?.people[regId] || null
+			item: object?.people[regKey] || null
 		};
-	} else if (regId.includes('place_')) {
+	} else if (regKey.includes('place_')) {
 		return {
-			regId: regId as TPlacesKeys,
+			regKey: regKey as TPlacesKeys,
 			regType: 'places',
-			item: object?.places[regId] || null
+			item: object?.places[regKey] || null
 		};
-	} else if (regId.includes('event_') || regId.includes('travel')) {
+	} else if (regKey.includes('event_') || regKey.includes('travel')) {
 		return {
-			regId: regId as TEventsKeys,
+			regKey: regKey as TEventsKeys,
 			regType: 'events',
-			item: object?.events[regId] || null
+			item: object?.events[regKey] || null
 		};
-	} else if (regId.includes('organisation_')) {
+	} else if (regKey.includes('organisation_')) {
 		return {
-			regId: regId as TOrgsKeys,
+			regKey: regKey as TOrgsKeys,
 			regType: 'orgs',
-			item: object?.orgs[regId] || null
+			item: object?.orgs[regKey] || null
 		};
-	} else if (/^[0-9-]+$/.test(regId) || regId.includes('keyword_')) {
+	} else if (/^[0-9-]+$/.test(regKey) || regKey.includes('keyword_')) {
 		// String only contains numbers and "-"
 		return {
-			regId: regId as TKeywordsKeys,
+			regKey: regKey as TKeywordsKeys,
 			regType: 'keywords',
-			item: object?.keywords[regId] || null
+			item: object?.keywords[regKey] || null
 		};
-	} else if (regId.length === 8) {
+	} else if (regKey.length === 8) {
 		return {
-			regId: regId as TBiblsKeys,
+			regKey: regKey as TBiblsKeys,
 			regType: 'bibls',
-			item: object?.bibls[regId] || null
+			item: object?.bibls[regKey] || null
 		};
 	} else {
 		return null;

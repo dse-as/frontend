@@ -68,11 +68,13 @@ function resolveLinkedDocs(
 			docId: docId as string,
 			iiif_url: resolved?.item?.manuscript?.iiif_urls?.[0] ?? null,
 			title_full:
-				(resolved?.docType !== 'photos' ? resolved?.item?.metadata?.title_full : 'TODO') ?? null, //! TODO
+				(('title_full' in resolved?.item?.metadata! && resolved?.item?.metadata?.title_full) ||
+					resolved?.item?.name) ??
+				null, //! TODO
 			pubDate:
-				(resolved?.docType !== 'photos'
-					? resolved?.item?.metadata?.pubDate
-					: resolved?.item?.metadata?.date) ?? null //! TODO
+				(('pubDate' in resolved?.item?.metadata! && resolved?.item?.metadata?.pubDate) ||
+					resolved?.item?.metadata.date) ??
+				null //! TODO
 		};
 	});
 }
@@ -98,7 +100,7 @@ export const load: PageServerLoad = async ({ parent }) => {
 	const regAttributes = isValidKeySlug ? resolvedReg?.item : undefined;
 	const regMapPreviewPath = isValidKeySlug
 		? ((map_previews[regType as keyof typeof map_previews] as Record<string, any>)?.[
-				resolvedReg?.regId as string
+				resolvedReg?.regKey as string
 			] as string)
 		: undefined;
 

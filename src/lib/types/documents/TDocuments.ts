@@ -27,6 +27,7 @@ type TContentNotes = {
 	comment?: string;
 };
 type TCrossRefDocs = {
+	letters?: TLettersKeys[];
 	smallforms?: TSmallformsKeys[];
 	longforms?: TLongformsKeys[];
 	photos?: TPhotosKeys[];
@@ -38,6 +39,11 @@ type TCrossRefEntities = {
 	orgs?: TOrgsKeys[];
 	bibls?: TBiblsKeys[];
 	keywords?: TKeywordsKeys[];
+};
+
+type TRendition = {
+	blur?: boolean;
+	hide?: boolean;
 };
 
 export type TDocuments = {
@@ -53,7 +59,7 @@ export type TDocuments = {
 				name: string | null;
 				metadata: {
 					types: TLettersGroups[] | null;
-					date: { from: string; to: string };
+					date: { from: string | null; to: string | null };
 					date_stamp: string | null;
 					people_sending: TPeopleKeys[] | null;
 					people_addressed: TPeopleKeys[] | null;
@@ -88,10 +94,7 @@ export type TDocuments = {
 					editorial_comments_2?: string | null;
 				};
 				manuscript: {
-					rendition?: {
-						blur?: boolean;
-						hide?: boolean;
-					};
+					rendition?: TRendition | null;
 					iiif_urls: string[];
 				};
 			};
@@ -100,7 +103,7 @@ export type TDocuments = {
 			[key in TSmallformsKeys]: {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
-				date: { from: string; to: string };
+				date: { from: string | null; to: string | null };
 				type: TSmallformsGroups | '?' | '';
 				metadata: {
 					title: string | null;
@@ -137,10 +140,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition?: {
-						blur?: boolean;
-						hide?: boolean;
-					};
+					rendition?: TRendition | null;
 					iiif_urls: string[];
 				};
 				numPages: number | null;
@@ -153,7 +153,7 @@ export type TDocuments = {
 			[key in TLongformsKeys]: {
 				slug?: string; //! discuss whether this is identical to key
 				name: string;
-				date: { from: string; to: string };
+				date: { from: string | null; to: string | null };
 				type: TLongformsGroups | '?' | '';
 				metadata: {
 					title: string | null;
@@ -190,10 +190,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition?: {
-						blur?: boolean;
-						hide?: boolean;
-					};
+					rendition?: TRendition | null;
 					iiif_urls: string[];
 				};
 				numPages: number | null;
@@ -248,10 +245,7 @@ export type TDocuments = {
 					contentNotes?: TContentNotes[];
 				};
 				manuscript: {
-					rendition?: {
-						blur?: boolean;
-						hide?: boolean;
-					};
+					rendition?: TRendition | null;
 					iiif_urls: string[];
 				};
 			};
@@ -371,16 +365,18 @@ export type TDocGroupsMap = {
 	photos: TPhotosGroups | '?' | '';
 };
 
-// CrossReference Types
-export type TCrossRefDocumentsExtended = Partial<
-	Record<
-		TDocTypes,
-		{ item: object | string | null; regType: TDocTypes | null; regKey: TDocKeys }[] | null
-	>
->;
+// CrossRef Entities (Register)
 export type TCrossRefEntitiesExtended = Partial<
 	Record<
 		TRegTypes,
 		{ item: object | string | null; regType: TRegTypes | null; regKey: TRegKeysFlat }[] | null
+	>
+>;
+
+// CrossRef Documents
+export type TCrossRefDocumentsExtended = Partial<
+	Record<
+		TDocTypes,
+		{ item: object | string | null; docType: TDocTypes | null; docKey: TDocKeys }[] | null
 	>
 >;

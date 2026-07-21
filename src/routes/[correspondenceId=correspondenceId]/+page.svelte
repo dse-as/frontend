@@ -30,6 +30,9 @@
 	const scroll = new ScrollState({
 		element: () => document
 	});
+
+	// Sequence shorthand
+	const seq = $derived(data.corrSlug ? data.corrSequences[data.corrSlug] : undefined);
 </script>
 
 <!-- Series -->
@@ -56,7 +59,7 @@
 	<!-- Navigation -->
 	<DocumentsNav docType="letters" />
 	<h1 class={['h3 mb-5 text-center whitespace-nowrap transition-all duration-200']}>
-		{@html data.corrSlug ? data.corrSequences[data.corrSlug]?.preamble : ''}
+		{@html data.corrSlug ? seq?.preamble : ''}
 	</h1>
 
 	<!-- Series Keys -->
@@ -85,13 +88,13 @@
 	<div class={['mx-auto mt-5 mb-30 flex max-w-300 flex-col gap-5 px-10 lg:mt-30']}>
 		<h5 class="h5">Überblickskommentar</h5>
 		<p>
-			{@html (data.corrSlug && 'intro' in data.corrSequences[data.corrSlug]
-				? data.corrSequences[data.corrSlug]?.intro
-				: '') +
-				(data.corrSequences[data.corrSlug]?.type === 'with_person' && data.crossRef.person
-					? ` Die erhaltene Korrespondenz mit <strong>${data.crossRef.person.firstname} ${data.crossRef.person.lastname}</strong> umfasst <strong>${data.corrSequences[data.corrSlug]?.docs.length} Briefe</strong>.`
-					: '') +
-				' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
+			{@html seq && 'intro' in seq
+				? seq.intro
+				: '' +
+					(seq?.type === 'with_person' && data.crossRef.person
+						? ` Die erhaltene Korrespondenz mit <strong>${data.crossRef.person.firstname} ${data.crossRef.person.lastname}</strong> umfasst <strong>${seq?.docs.length} Briefe</strong>.`
+						: '') +
+					' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
 		</p>
 	</div>
 
@@ -99,7 +102,7 @@
 	<div
 		class="grid h-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
 	>
-		{#each data.corrSequences[data.corrSlug]?.docs as TLettersKeys[] as corrKey (corrKey)}
+		{#each seq?.docs as TLettersKeys[] as corrKey (corrKey)}
 			{@const item = data.letters[corrKey as TLettersKeys]}
 			<a
 				href={resolve(`/${corrKey as string}`) + `?seq=${data.corrSlug}`}

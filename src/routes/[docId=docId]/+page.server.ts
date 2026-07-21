@@ -10,7 +10,12 @@ import type {
 	TResolvedSmallforms,
 	TResolvedLongforms
 } from '$lib/functions/ease_of_use/resolveDoc';
-import type { TDocKeys, TDocTypes } from '$lib/types/documents/TDocuments';
+import type {
+	TCrossRefDocumentsExtended,
+	TCrossRefEntitiesExtended,
+	TDocKeys,
+	TDocTypes
+} from '$lib/types/documents/TDocuments';
 import { register as reg } from '$lib/data/register.json';
 import type { TRegKeysFlat, TRegTypes } from '$lib/types/register/TRegister';
 import { resolveReg } from '$lib/functions/ease_of_use/resolveReg';
@@ -100,21 +105,66 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 	} = {};
 
 	if (resolvedDoc?.item) {
+		// linkedEntities
 		if (resolvedDoc.item.crossReferences?.linkedEntities) {
 			crossRef.linkedEntities = {};
 			Object.keys(resolvedDoc.item.crossReferences.linkedEntities).forEach((type) => {
 				crossRef.linkedEntities![type as TRegTypes] =
-					resolvedDoc.item!.crossReferences?.linkedEntities![type as TRegTypes]?.map(
-						(key: TRegKeysFlat) => {
-							const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
-							const hasValidType = resolvedReg?.regType;
-							return {
-								item: hasValidType ? resolvedReg?.item || '' : null,
-								regType: hasValidType ? resolvedReg?.regType : null,
-								regKey: key
-							};
-						}
-					) ?? null;
+					resolvedDoc.item!.crossReferences?.linkedEntities?.[type as TRegTypes]?.map((key) => {
+						const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
+						const hasValidType = resolvedReg?.regType;
+						return {
+							item: hasValidType ? resolvedReg?.item : null,
+							regType: hasValidType ? resolvedReg?.regType : null,
+							regKey: key
+						};
+					}) ?? null;
+			});
+		}
+		if (resolvedDoc.item.crossReferences?.citedEntities) {
+			crossRef.citedEntities = {};
+			Object.keys(resolvedDoc.item.crossReferences.citedEntities).forEach((type) => {
+				crossRef.citedEntities![type as TRegTypes] =
+					resolvedDoc.item!.crossReferences?.citedEntities?.[type as TRegTypes]?.map((key) => {
+						const resolvedReg = resolveReg(reg, key as TRegKeysFlat);
+						const hasValidType = resolvedReg?.regType;
+						return {
+							item: hasValidType ? resolvedReg?.item : null,
+							regType: hasValidType ? resolvedReg?.regType : null,
+							regKey: key
+						};
+					}) ?? null;
+			});
+		}
+
+		// linkedDocuments
+		if (resolvedDoc.item.crossReferences?.linkedDocuments) {
+			Object.keys(resolvedDoc.item.crossReferences.linkedDocuments).forEach((type) => {
+				crossRef.linkedDocuments![type as TDocTypes] =
+					resolvedDoc.item!.crossReferences?.linkedDocuments?.[type as TDocTypes]?.map((key) => {
+						const resolvedDoc = resolveDoc(allDocs, key as TDocKeys);
+						const hasValidType = resolvedDoc?.docType;
+						return {
+							item: hasValidType ? resolvedDoc?.item : null,
+							docType: hasValidType ? resolvedDoc?.docType : null,
+							docKey: key
+						};
+					}) ?? null;
+			});
+		}
+		// linkedDocuments
+		if (resolvedDoc.item.crossReferences?.citedDocuments) {
+			Object.keys(resolvedDoc.item.crossReferences.citedDocuments).forEach((type) => {
+				crossRef.citedDocuments![type as TDocTypes] =
+					resolvedDoc.item!.crossReferences?.citedDocuments?.[type as TDocTypes]?.map((key) => {
+						const resolvedDoc = resolveDoc(allDocs, key as TDocKeys);
+						const hasValidType = resolvedDoc?.docType;
+						return {
+							item: hasValidType ? resolvedDoc?.item : null,
+							docType: hasValidType ? resolvedDoc?.docType : null,
+							docKey: key
+						};
+					}) ?? null;
 			});
 		}
 	}

@@ -12,6 +12,7 @@
 	import ResponsiveAccordion from './ResponsiveAccordion.svelte';
 	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
 	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
+	import type { TResolvedRegister } from '$lib/functions/ease_of_use/resolveReg';
 
 	let {
 		docId,
@@ -23,9 +24,8 @@
 		docId: TDocKeys | undefined;
 		resDoc: TResolvedLetters | TResolvedSmallforms | TResolvedLongforms | null;
 		ceteiData: any;
-		crossRef: Record<
-			'citedDocuments' | 'linkedDocuments' | 'citedEntities' | 'linkedEntities',
-			any
+		crossRef: Partial<
+			Record<'citedDocuments' | 'linkedDocuments' | 'citedEntities' | 'linkedEntities', any>
 		>;
 		currentPage: number;
 	} = $props();
@@ -54,13 +54,7 @@
 		<td class="p-0 text-left @lg:py-2">{@html content}</td>
 	</tr>
 {/snippet}
-{#snippet metadataEntryWithRegLink(
-	label: string,
-	content:
-		| { item: object | string | null; regType: TRegTypes; regKey: TRegKeysFlat }[]
-		| null
-		| undefined
-)}
+{#snippet metadataEntryWithRegLink(label: string, content: TResolvedRegister[] | null | undefined)}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
 		<td class="p-0 text-left @lg:py-2">
@@ -74,7 +68,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						{cont.item.name}
+						{cont && cont.item && 'name' in cont?.item ? cont.item?.name : ''}
 					</a>
 				{/each}
 			</div>

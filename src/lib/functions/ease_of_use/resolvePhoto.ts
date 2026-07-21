@@ -4,17 +4,12 @@
 
 import type { TDocKeys, TDocTypes, TDocuments } from '$lib/types/documents/TDocuments';
 import type { TPhotosKeys } from '$lib/types/documents/TPhotosKeys';
-
-export type TResolvedPhoto = {
-	docId: TPhotosKeys;
-	docType: 'photos';
-	item: TDocuments['documents']['photos'][TPhotosKeys] | null;
-};
+import type { TResolvedPhotos } from './resolveDoc';
 
 export function resolvePhoto(
 	object: Record<TDocTypes, any> | null,
 	docId: TDocKeys
-): TResolvedPhoto | null {
+): TResolvedPhotos | null {
 	if (docId.includes('photo')) {
 		return {
 			docId: docId as TPhotosKeys,

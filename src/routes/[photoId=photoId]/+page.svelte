@@ -9,6 +9,8 @@
 
 	import { building } from '$app/environment';
 	import ContentNote from '$lib/components/ContentNote.svelte';
+	import type { TResolvedRegister } from '$lib/functions/ease_of_use/resolveReg';
+	import { resolve } from '$app/paths';
 
 	// Current Sequence
 	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
@@ -104,22 +106,22 @@
 			{/snippet}
 			<!-- {#snippet metadataEntryWithRegLink(
 				label: string,
-				content: { name: string; regType: TRegTypes; regKey: TRegKeysFlat }[] | null | undefined
+				content: TResolvedRegister[] | null | undefined
 			)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
 					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
 					<td class="p-0 text-left align-top @lg:py-2">
 						<div class="flex flex-wrap gap-4">
-							{#each content ? content : [] as item (item)}
+							{#each content ? content : [] as cont (cont)}
 								<a
 									class="preset-btn-round --linkarrow"
 									data-type="entity"
-									data-entitytype={item.regType}
-									href={resolve(`/register/${item.regKey as string}`)}
+									data-entitytype={cont.regType}
+									href={resolve(`/register/${cont.regKey as string}`)}
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									{item.name}
+									{cont && cont.item && 'name' in cont?.item ? cont.item?.name : ''}
 								</a>
 							{/each}
 						</div>

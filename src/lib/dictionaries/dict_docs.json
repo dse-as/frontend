@@ -61,6 +61,7 @@
 				"editor_workflow": { "label": "Editor Workflow" },
 				"year": { "label": "Jahr" },
 				"title_full": { "label": "Voller Titel" },
+				"title_short": { "label": "Kurztitel" },
 				"authors": { "label": "Autor:in(nen)" },
 				"summary": { "label": "Zusammenfassung" },
 				"pubDate": { "label": "Publikaitonsdatum" },
