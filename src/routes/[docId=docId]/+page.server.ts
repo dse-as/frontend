@@ -121,6 +121,7 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 					}) ?? null;
 			});
 		}
+		// citedDocuments
 		if (resolvedDoc.item.crossReferences?.citedEntities) {
 			crossRef.citedEntities = {};
 			Object.keys(resolvedDoc.item.crossReferences.citedEntities).forEach((type) => {
@@ -139,6 +140,7 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 
 		// linkedDocuments
 		if (resolvedDoc.item.crossReferences?.linkedDocuments) {
+			crossRef.linkedDocuments = {};
 			Object.keys(resolvedDoc.item.crossReferences.linkedDocuments).forEach((type) => {
 				crossRef.linkedDocuments![type as TDocTypes] =
 					resolvedDoc.item!.crossReferences?.linkedDocuments?.[type as TDocTypes]?.map((key) => {
@@ -152,8 +154,9 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 					}) ?? null;
 			});
 		}
-		// linkedDocuments
+		// citedDocuments
 		if (resolvedDoc.item.crossReferences?.citedDocuments) {
+			crossRef.citedDocuments = {};
 			Object.keys(resolvedDoc.item.crossReferences.citedDocuments).forEach((type) => {
 				crossRef.citedDocuments![type as TDocTypes] =
 					resolvedDoc.item!.crossReferences?.citedDocuments?.[type as TDocTypes]?.map((key) => {

@@ -1,12 +1,24 @@
 <script lang="ts">
 	import { activeRegisterTab } from '$lib/globals/ui-states.svelte';
+	import type {
+		TDocItemsLetters,
+		TDocItemsLongforms,
+		TDocItemsSmallforms
+	} from '$lib/types/documents/TDocuments';
 	import Annotations from './Annotations.svelte';
+	import type { ProcessedTEI } from './processTEI';
 	import Register from './Register.svelte';
 	import TextFluid from './TextFluid.svelte';
 
 	import { Tabs } from 'bits-ui';
 
-	let { docId, docItem, ceteiData } = $props();
+	let {
+		docItem,
+		ceteiData
+	}: {
+		docItem: TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms | null;
+		ceteiData: ProcessedTEI;
+	} = $props();
 </script>
 
 <div data-fassung="LF" class="pt-10 xl:grid xl:grid-cols-[auto_600px_auto]">
@@ -29,7 +41,7 @@
 				</Tabs.Content>
 
 				<Tabs.Content value="register" class="absolute inset-0 ml-6 overflow-y-auto p-6">
-					<Register {docId} {docItem} />
+					<Register {docItem} />
 				</Tabs.Content>
 			</div>
 		</Tabs.Root>

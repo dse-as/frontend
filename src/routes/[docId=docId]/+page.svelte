@@ -83,11 +83,7 @@
 	<!-- Content -->
 	<div class="w-full grow">
 		{#if dflf === 'LF'}
-			<LF
-				docId={data.resolvedDoc?.docId}
-				docItem={data.resolvedDoc?.item}
-				ceteiData={data.ceteiData}
-			/>
+			<LF docItem={data.resolvedDoc?.item} ceteiData={data.ceteiData} />
 		{:else if dflf === 'DF'}
 			<DF docItem={data.resolvedDoc?.item} ceteiData={data.ceteiData} {currentPage} />
 		{/if}

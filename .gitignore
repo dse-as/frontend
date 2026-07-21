@@ -24,3 +24,4 @@ vite.config.ts.timestamp-*
 
 # Data processing
 /data_processing/workflow-get-xml-and-extract-entities/downloaded_files
+/data_processing/*

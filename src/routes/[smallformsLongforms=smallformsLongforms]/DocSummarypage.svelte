@@ -51,7 +51,7 @@
 				{#if resDoc && resDoc.docType}
 					<tbody>
 						<tr>
-							<td class="w-80 px-4 py-2 font-bold"
+							<td class="w-50 px-4 py-2 font-bold"
 								>{dictDocs[resDoc.docType].metadata[mKey]?.label}:</td
 							>
 							<td class="px-4 py-2 text-left"

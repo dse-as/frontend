@@ -90,13 +90,13 @@
 			{/snippet}
 			{#snippet metadataEntry(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="w-50 p-0 align-top font-bold @lg:py-2">{label}:</td>
 					<td class="p-0 text-left align-top @lg:py-2">{@html content}</td>
 				</tr>
 			{/snippet}
 			{#snippet metadataEntryWithURL(label: string, content: string | null | undefined)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="w-50 p-0 align-top font-bold @lg:py-2">{label}:</td>
 					<td class="hyperlink p-0 text-left align-top @lg:py-2"
 						><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i><a href={content}
 							>{@html content}</a
@@ -109,7 +109,7 @@
 				content: TResolvedRegister[] | null | undefined
 			)}
 				<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-					<td class="w-80 p-0 align-top font-bold @lg:py-2">{label}:</td>
+					<td class="w-50 p-0 align-top font-bold @lg:py-2">{label}:</td>
 					<td class="p-0 text-left align-top @lg:py-2">
 						<div class="flex flex-wrap gap-4">
 							{#each content ? content : [] as cont (cont)}
@@ -130,7 +130,7 @@
 			{/snippet} -->
 			{#snippet metadataContent()}
 				{#if resPhoto?.item}
-					<div data-dom="metadata">
+					<div class="h-full" data-dom="metadata">
 						<div class="preset-btn-list --spacing-normal">
 							{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
 							{@render metadataButton('sources', 'Quellenangaben')}
@@ -141,7 +141,7 @@
 							<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 						</div>
 
-						<div class={['@container mt-5 mb-20 w-full pt-5']}>
+						<div class={['@container mt-5 mb-20 h-full w-full overflow-auto pt-5']}>
 							{#if stateMetadata === 'eckdaten'}
 								<table>
 									<tbody class="flex flex-col gap-2">
@@ -186,7 +186,7 @@
 								</table>
 							{:else if stateMetadata === 'globalEntities'}
 								<table>
-									<tbody class="flex flex-col gap-2" data-dom="global_entities">
+									<tbody class="flex flex-col gap-2" data-dom="crossRef">
 										<!-- {#if resPhoto.item.metadata.globalEntities}
 											{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
 												{#if data.crossRef.globalEntities[type]?.length}
@@ -201,7 +201,7 @@
 								</table>
 							{:else if stateMetadata === 'links'}
 								<table>
-									<tbody class="flex flex-col gap-2" data-dom="global_entities">
+									<tbody class="flex flex-col gap-2" data-dom="crossRef">
 										{@render metadataEntry(
 											'Erwähung in Forschungsliteratur',
 											(resPhoto.item.metadata.mentioned_in || ['']).join(' | ')
@@ -263,3 +263,40 @@
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+	@reference "tailwindcss";
+
+	/* CrossReferences */
+	:global([data-dom='global_comment']) {
+		:global(tei-p) {
+			@apply mt-0;
+		}
+	}
+	:global([data-dom='crossRef']) {
+		/* Entity Colors */
+		:global([data-entitytype='people']) {
+			@apply bg-(--color-rs-person-20);
+		}
+		:global([data-entitytype='places']) {
+			@apply bg-(--color-rs-place-20);
+		}
+		:global([data-entitytype='events']) {
+			@apply bg-(--color-rs-event-20);
+		}
+		:global([data-entitytype='orgs']) {
+			@apply bg-(--color-rs-org-20);
+		}
+		:global([data-entitytype='smallforms']),
+		:global([data-entitytype='longforms']),
+		:global([data-entitytype='letters']) {
+			@apply bg-(--color-rs-doc-20);
+		}
+		:global([data-entitytype='bibls']) {
+			@apply bg-(--color-rs-bibl-20);
+		}
+		:global([data-entitytype='keywords']) {
+			@apply bg-(--color-rs-keyword-20);
+		}
+	}
+</style>

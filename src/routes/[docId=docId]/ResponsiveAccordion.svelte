@@ -109,9 +109,9 @@
 				</Accordion.Trigger>
 
 				<Accordion.Content
-					class="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:max-h-0 data-[state=open]:max-h-[1000px]"
+					class="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:max-h-0 data-[state=open]:h-[80vh] data-[state=open]:max-h-[80vh]"
 				>
-					<div class="p-4">
+					<div class="h-full overflow-hidden p-4">
 						{@render overviewContent()}
 					</div>
 				</Accordion.Content>
@@ -131,9 +131,9 @@
 				</Accordion.Trigger>
 
 				<Accordion.Content
-					class="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:max-h-0 data-[state=open]:max-h-[1000px]"
+					class="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:max-h-0 data-[state=open]:h-[80vh] data-[state=open]:max-h-[80vh]"
 				>
-					<div class="p-4">
+					<div class="h-full overflow-hidden p-4">
 						{@render metadataContent()}
 					</div>
 				</Accordion.Content>

@@ -48,6 +48,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		}
 		// linkedDocuments
 		if (resolvedPhoto.item.crossReferences?.linkedDocuments) {
+			crossRef.linkedDocuments = {};
 			Object.keys(resolvedPhoto.item.crossReferences.linkedDocuments).forEach((type) => {
 				crossRef.linkedDocuments![type as TDocTypes] =
 					resolvedPhoto.item!.crossReferences?.linkedDocuments?.[type as TDocTypes]?.map((key) => {

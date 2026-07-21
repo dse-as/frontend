@@ -5,7 +5,8 @@
 	import type {
 		TResolvedLetters,
 		TResolvedSmallforms,
-		TResolvedLongforms
+		TResolvedLongforms,
+		TResolvedDoc
 	} from '$lib/functions/ease_of_use/resolveDoc';
 	import { dict_register as dictReg } from '$lib/dictionaries/dict_register.json';
 	import { dict_docs as dictDocs } from '$lib/dictionaries/dict_docs.json';
@@ -13,6 +14,7 @@
 	import ScrollArea from '$lib/components/ui/ScrollArea.svelte';
 	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
 	import type { TResolvedRegister } from '$lib/functions/ease_of_use/resolveReg';
+	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 
 	let {
 		docId,
@@ -50,14 +52,14 @@
 {/snippet}
 {#snippet metadataEntry(label: string, content: string | null | undefined)}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
-		<td class="p-0 text-left @lg:py-2">{@html content}</td>
+		<td class="w-60 p-0 align-top font-bold @lg:py-2">{label}:</td>
+		<td class="p-0 text-left align-top @lg:py-2">{@html content}</td>
 	</tr>
 {/snippet}
 {#snippet metadataEntryWithRegLink(label: string, content: TResolvedRegister[] | null | undefined)}
 	<tr class="mb-5 flex flex-col @lg:mb-0 @lg:block">
-		<td class="w-80 p-0 font-bold @lg:py-2">{label}:</td>
-		<td class="p-0 text-left @lg:py-2">
+		<td class="w-60 p-0 align-top font-bold @lg:py-2">{label}:</td>
+		<td class="p-0 text-left align-top @lg:py-2">
 			<div class="flex flex-wrap gap-4">
 				{#each content ? content : [] as cont (cont)}
 					<a
@@ -74,6 +76,36 @@
 			</div>
 		</td>
 	</tr>
+{/snippet}
+{#snippet metadataCrossRefDoc(label: string, content: TResolvedDoc[] | null | undefined)}
+	<h4 class="h6">{label}</h4>
+	<div class="grid h-full grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
+		<!-- <div
+		class="grid h-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+	> -->
+		{#each content ? content : [] as cont (cont)}
+			<a
+				href={resolve(`/${cont.docId as string}`)}
+				class="flex items-start justify-start gap-5 rounded-card p-5 hover:bg-dark-10 md:flex-col md:items-center md:justify-center"
+			>
+				{#if cont.item}
+					<IIIF_Thumb
+						url={cont.item.manuscript?.iiif_urls[0]}
+						iiif_imageAPI_width={400}
+						classes="h-[120px]"
+					/>
+					<p class="flex flex-col gap-2 text-left md:text-center">
+						<span>{cont.item.name}</span>
+					</p>
+				{:else}
+					<div class="flex h-[120px] w-[120px] flex-col items-center justify-center text-center">
+						<p>{cont.docId}</p>
+						<p class="text-muted-foreground">(noch keine Metadaten)</p>
+					</div>
+				{/if}
+			</a>
+		{/each}
+	</div>
 {/snippet}
 
 {#if resDoc?.item}
@@ -96,7 +128,7 @@
 		<ResponsiveAccordion titleOverview="Überblickskommentar" titleMeta="Metadaten">
 			<!-- (1) Übersichtskommentar -->
 			{#snippet overviewContent()}
-				<div data-dom="global_comment" class="h-full overflow-auto pb-20">
+				<div data-dom="global_comment" class="h-full overflow-auto">
 					{@html globalComment}
 				</div>
 				<!-- <ScrollArea
@@ -112,20 +144,21 @@
 
 			<!-- (2) Metadata Table -->
 			{#snippet metadataContent()}
-				<div data-dom="metadata">
+				<div class="h-full" data-dom="metadata">
 					<div class="preset-btn-list --spacing-normal">
 						{@render metadataButton('eckdaten', 'Eckdaten')}
 						{@render metadataButton('sources', 'Quellenangaben')}
-						{@render metadataButton('crossReferences', 'Schlagwörter')}
+						{@render metadataButton('crossRefEntities', 'Schlagwörter')}
+						{@render metadataButton('crossRefDocs', 'Querverweise')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
 						{@render metadataButton('download', 'Download-Links')}
 						<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 					</div>
 
-					<div class={['@container mt-5 mb-20 w-full pt-5']}>
+					<div class={['@container mt-5 h-full w-full overflow-auto pt-5 pb-30']}>
 						{#if stateMetadata === 'eckdaten'}
 							<table>
-								<tbody class="flex flex-col gap-2">
+								<tbody class="flex flex-col items-start gap-2">
 									{#if resDoc.docType === 'letters'}
 										{@render metadataEntry(
 											dictDocs.letters.metadata.types.label,
@@ -266,19 +299,82 @@
 									{/if}
 								</tbody>
 							</table>
-						{:else if stateMetadata === 'crossReferences'}
-							<table>
-								<tbody class="flex flex-col gap-2" data-dom="global_entities">
-									{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
-										{#if crossRef.linkedEntities?.[type]?.length}
-											{@render metadataEntryWithRegLink(
-												dictReg[type].label_plural,
-												crossRef.linkedEntities?.[type]
+						{:else if stateMetadata === 'crossRefEntities'}
+							{#if crossRef.citedEntities && Object.keys(crossRef.citedEntities).length}
+								<h5 class="h5">Im Text enthaltene Schlagwörter</h5>
+								<table>
+									<tbody class="flex flex-col gap-2" data-dom="crossRef">
+										{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
+											{#if crossRef.citedEntities?.[type]?.length}
+												{@render metadataEntryWithRegLink(
+													dictReg[type].label_plural,
+													crossRef.citedEntities?.[type]
+												)}
+											{/if}
+										{/each}
+									</tbody>
+								</table>
+							{/if}
+							{#if crossRef.linkedEntities && Object.keys(crossRef.linkedEntities).length}
+								<h5
+									class={[
+										'h5',
+										crossRef.citedEntities &&
+											Object.keys(crossRef.citedEntities).length &&
+											'mt-5 md:mt-20'
+									]}
+								>
+									Verlinkte Schlagwörter
+								</h5>
+								<table>
+									<tbody class="flex flex-col gap-2" data-dom="crossRef">
+										{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
+											{#if crossRef.linkedEntities?.[type]?.length}
+												{@render metadataEntryWithRegLink(
+													dictReg[type].label_plural,
+													crossRef.linkedEntities?.[type]
+												)}
+											{/if}
+										{/each}
+									</tbody>
+								</table>
+							{/if}
+						{:else if stateMetadata === 'crossRefDocs'}
+							{#if crossRef.citedDocuments && Object.keys(crossRef.citedDocuments).length}
+								<h5 class="h5">Im Text enthaltene Querverweise</h5>
+								<div>
+									{#each ['letters', 'smallforms', 'longforms', 'photos'] as const as type (type)}
+										{#if crossRef.citedDocuments?.[type]?.length}
+											{@render metadataCrossRefDoc(
+												dictDocs[type].label_plural,
+												crossRef.citedDocuments?.[type]
 											)}
 										{/if}
 									{/each}
-								</tbody>
-							</table>
+								</div>
+							{/if}
+							{#if crossRef.linkedDocuments && Object.keys(crossRef.linkedDocuments).length}
+								<h5
+									class={[
+										'h5',
+										crossRef.citedDocuments &&
+											Object.keys(crossRef.citedDocuments).length &&
+											'mt-5 md:mt-20'
+									]}
+								>
+									Durch Editionsteam vergebene Querverweise
+								</h5>
+								<div>
+									{#each ['letters', 'smallforms', 'longforms', 'photos'] as const as type (type)}
+										{#if crossRef.linkedDocuments?.[type]?.length}
+											{@render metadataCrossRefDoc(
+												dictDocs[type].label_plural,
+												crossRef.linkedDocuments?.[type]
+											)}
+										{/if}
+									{/each}
+								</div>
+							{/if}
 						{:else if stateMetadata === 'citation'}
 							<table>
 								<tbody class="flex flex-col gap-2">
@@ -333,13 +429,13 @@
 <style lang="postcss">
 	@reference "tailwindcss";
 
-	/* Global Entities */
+	/* CrossReferences */
 	:global([data-dom='global_comment']) {
 		:global(tei-p) {
 			@apply mt-0;
 		}
 	}
-	:global([data-dom='global_entities']) {
+	:global([data-dom='crossRef']) {
 		/* Entity Colors */
 		:global([data-entitytype='people']) {
 			@apply bg-(--color-rs-person-20);

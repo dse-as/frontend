@@ -23964,8 +23964,8 @@
 				"docs": ["smallform_0231"]
 			},
 			"organisation_0262": {
-				"name": "OTRACO (Office d'Exploitation des Transports Coloniaux)",
-				"nameVariants": [],
+				"name": "OTRACO",
+				"nameVariants": ["OTRACO (Office d'Exploitation des Transports Coloniaux)"],
 				"gndNumber": "1022579037",
 				"type": "Öffentliche Einrichtung",
 				"note": null
@@ -25229,19 +25229,29 @@
 				"name": "Ferien vom Ich",
 				"type": null,
 				"authorIds": ["person_0002"],
-				"pubDate": null
+				"pubDate": null,
+				"docs": ["smallform_0231"]
 			},
 			"6FW9GPED": {
 				"name": "Verfilmung",
 				"type": null,
 				"authorIds": null,
-				"pubDate": null
+				"pubDate": null,
+				"docs": ["smallform_0231"]
 			},
 			"5JXX7VPC": {
 				"name": "Markert 1935",
 				"type": null,
 				"authorIds": null,
-				"pubDate": "1935"
+				"pubDate": "1935",
+				"docs": ["smallform_0231"]
+			},
+			"5LE9JAW8": {
+				"name": "Afrikanische Schriften (2012)",
+				"type": "book",
+				"authorIds": ["person_0082"],
+				"pubDate": null,
+				"docs": ["smallform_0529"]
 			}
 		},
 		"keywords": {
