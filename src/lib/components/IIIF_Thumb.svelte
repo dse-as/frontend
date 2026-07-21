@@ -14,6 +14,7 @@
 	let isError = $state(false);
 
 	function adapt_iiif_url(url: string, iiif_imageAPI_width: number) {
+		//! Use appropriate sizes for all use-cases, once iiif has cache (for different screens probably use different sizes).
 		//! REMOVE these fixes, once iiif is stable
 		if (url.includes('monacensia-digital') || url.includes('e-manuscripta.ch/download/webcache')) {
 			return url;
@@ -32,6 +33,7 @@
 	{#if !isError}
 		<div class={['overflow-hidden', blur && 'blur-xs']}>
 			<img
+				loading="lazy"
 				class={[
 					blur && 'blur-lg',
 					showSpinner ? 'hidden' : 'flex',
