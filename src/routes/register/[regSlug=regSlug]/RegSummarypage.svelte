@@ -65,9 +65,11 @@
 			{#if attKey}
 				<tbody>
 					<tr>
-						<td class="w-80 px-4 py-2 font-bold"
-							>{(regDict.attributes as Record<TRegAttrsMap[T], { title: string }>)[attKey]
-								?.title}:</td
+						<td
+							class="w-80 px-4 py-2 font-bold"
+							//! simplify this type
+							>{(regDict.attributes as Record<TRegAttrsMap[T], { label: string }>)[attKey]
+								?.label}:</td
 						>
 						{#if regAttributes?.[attKey]}
 							<td class="px-4 py-2 text-left"
