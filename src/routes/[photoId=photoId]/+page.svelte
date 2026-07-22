@@ -134,7 +134,7 @@
 						<div class="preset-btn-list --spacing-normal">
 							{@render metadataButton('eckdaten', 'Eckdaten Publikation')}
 							{@render metadataButton('sources', 'Quellenangaben')}
-							{@render metadataButton('globalEntities', 'Schlagwörter')}
+							{@render metadataButton('globalEntities', 'Referenzierung')}
 							{@render metadataButton('links', 'Verknüpfungen')}
 							{@render metadataButton('citation', 'Zitierhinweise')}
 							{@render metadataButton('download', 'Download-Links')}

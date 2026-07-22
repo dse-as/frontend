@@ -306,9 +306,9 @@
 			"groups": {}
 		},
 		"keywords": {
-			"register_name": "Schlagwortregister",
+			"register_name": "Sachbegriffsregister",
 			"key_singular": "keyword",
-			"label_plural": "Schlagwörter",
+			"label_plural": "Sachbegriffe",
 			"attributes": {
 				"name": { "label": "Name" },
 				"type": { "label": "Dokumentkategorie" },

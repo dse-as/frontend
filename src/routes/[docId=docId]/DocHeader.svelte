@@ -148,7 +148,7 @@
 					<div class="preset-btn-list --spacing-normal">
 						{@render metadataButton('eckdaten', 'Eckdaten')}
 						{@render metadataButton('sources', 'Quellenangaben')}
-						{@render metadataButton('crossRefEntities', 'Schlagwörter')}
+						{@render metadataButton('crossRefEntities', 'Referenzierung')}
 						{@render metadataButton('crossRefDocs', 'Querverweise')}
 						{@render metadataButton('citation', 'Zitierhinweise')}
 						{@render metadataButton('download', 'Download-Links')}
@@ -301,7 +301,8 @@
 							</table>
 						{:else if stateMetadata === 'crossRefEntities'}
 							{#if crossRef.citedEntities && Object.keys(crossRef.citedEntities).length}
-								<h5 class="h5">Im Text enthaltene Schlagwörter</h5>
+								<!-- //! replace Sachbegriffe with dict-entry (also below in h5)  -->
+								<h5 class="h5">Im Text enthaltene Referenzen</h5>
 								<table>
 									<tbody class="flex flex-col gap-2" data-dom="crossRef">
 										{#each ['people', 'places', 'events', 'orgs', 'bibls', 'keywords'] as const as type (type)}
@@ -324,7 +325,7 @@
 											'mt-5 md:mt-20'
 									]}
 								>
-									Verlinkte Schlagwörter
+									Verlinkte Referenzen
 								</h5>
 								<table>
 									<tbody class="flex flex-col gap-2" data-dom="crossRef">
