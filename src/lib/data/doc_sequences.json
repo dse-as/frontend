@@ -8953,7 +8953,32 @@
 				"url_seq_overview": "/smallforms_erzaehlsammlungen",
 				"name": "Erzählsammlungen",
 				"preamble": "Erzählsammlungen",
-				"docs": []
+				"docs": [
+					"smallform_0134",
+					"smallform_0135",
+					"smallform_0136",
+					"smallform_0137",
+					"smallform_0138",
+					"smallform_0139",
+					"smallform_0140",
+					"smallform_0141",
+					"smallform_0142",
+					"smallform_0143",
+					"smallform_0144",
+					"smallform_0337",
+					"smallform_0343",
+					"smallform_0344",
+					"smallform_0345",
+					"smallform_0346",
+					"smallform_0347",
+					"smallform_0348",
+					"smallform_0349",
+					"smallform_0350",
+					"smallform_0351",
+					"smallform_0352",
+					"smallform_0353",
+					"smallform_0396"
+				]
 			}
 		}
 	}
