@@ -74,7 +74,7 @@
 	<a
 		href={updatePageParam(item.pagenum_running)}
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-dark-10`,
+			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-hover`,
 			isFirst && 'rounded-l-thumbbox',
 			isLast && 'rounded-r-thumbbox'
 		]}
@@ -121,9 +121,9 @@
 						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 						{@const items = collectGalleryItems()}
 						<div
-							class="mx-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10"
+							class="my-0 ml-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10 py-1"
 						>
-							<h6 class="w-50 font-serif font-bold">{resDoc?.metadata.title}</h6>
+							<h6 class="w-50 font-sans text-sm">{resDoc?.name}</h6>
 							{#each items as item (item.page)}
 								<a
 									class="ml-2 rounded-thumbbox p-1"
@@ -131,8 +131,8 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<IIIF_Thumb url={item.fac} classes="max-h-[70px]" />
-									<span class="hidden text-sm group-hover:block">Seite {item.page}</span>
+									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
+									<span class="text-xs">Seite {item.page}</span>
 								</a>
 							{:else}
 								<a class="text-warning" href={resolve(`/${tzgId}`)}>Keine Faksimile gefunden</a>
