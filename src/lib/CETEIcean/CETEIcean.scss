@@ -100,16 +100,17 @@ tei-p {
 	font-family: var(--font-text);
 	font-size: 120%;
 	line-height: 1.7;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-top: .5em;
+	margin-bottom: .5em;
 	text-align: left;
 	hyphens: auto;
+	display: inline-block;
 }
 
 [data-dom='global_comment'] {
 	/* //! FIX: this is needed, as long as custom-elements are not propperly attached in the global_comment */
 	tei-p {
-		display: block;
+		display: inline-block;
 	}
 }
 
