@@ -128,7 +128,7 @@
 		<ResponsiveAccordion titleOverview="Überblickskommentar" titleMeta="Metadaten">
 			<!-- (1) Übersichtskommentar -->
 			{#snippet overviewContent()}
-				<div data-dom="global_comment" class="h-full overflow-auto">
+				<div data-dom="global_comment" class="h-full overflow-auto pr-6 pb-20">
 					{@html globalComment}
 				</div>
 				<!-- <ScrollArea
@@ -155,7 +155,7 @@
 						<!-- {@render metadataButton('all', 'Alles (Temporär)')} -->
 					</div>
 
-					<div class={['@container mt-5 h-full w-full overflow-auto pt-5 pb-30']}>
+					<div class={['@container mt-5 h-full w-full overflow-auto pt-5 pb-50']}>
 						{#if stateMetadata === 'eckdaten'}
 							<table>
 								<tbody class="flex flex-col items-start gap-2">
