@@ -528,6 +528,11 @@ span.note-mark.active {
 		padding: 2px 7px;
 		border-radius: 100%;
 		font-size: 1.1rem;
+		/* prevent user-selection */
+		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;   
+		-ms-user-select: none;    
 	}
 
 	span.footnote:hover,
