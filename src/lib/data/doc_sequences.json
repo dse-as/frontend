@@ -8012,6 +8012,113 @@
 					"photo_4030"
 				]
 			}
+		},
+		"smallforms": {
+			"smallforms_all": {
+				"type": "special",
+				"url_seq_overview": "/smallforms_all",
+				"name": "Alle Kleinen Formen",
+				"preamble": "Alle Kleinen Formen",
+				"docs": ["smallform_0006", "smallform_0050"]
+			},
+			"smallforms_manuscripts": {
+				"type": "unpublished",
+				"url_seq_overview": "/smallforms_manuscripts",
+				"name": "Manuskripte",
+				"preamble": "Manuskripte",
+				"docs": ["smallform_0006", "smallform_0050"]
+			},
+			"smallforms_typoscripts": {
+				"type": "unpublished",
+				"url_seq_overview": "/smallforms_typoscripts",
+				"name": "Typoskripte",
+				"preamble": "Typoskripte",
+				"docs": ["smallform_0006", "smallform_0050"]
+			},
+			"smallforms_published_zeitungsartikel": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_zeitungsartikel",
+				"name": "Zeitungsartikel",
+				"preamble": "Zeitungsartikel",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_published_zeitschriftenartikel": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_zeitschriftenartikel",
+				"name": "Zeitschriftenartikel",
+				"preamble": "Zeitschriftenartikel",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_published_feuilleton": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_feuilleton",
+				"name": "Feuilletons",
+				"preamble": "Feuilletons",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_published_fotoreportage": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_fotoreportage",
+				"name": "Fotoreportagen",
+				"preamble": "Fotoreportagen",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_published_fotografie": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_fotografie",
+				"name": "Fotografien",
+				"preamble": "Fotografien",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_published_sammelbandbeitrag": {
+				"type": "published",
+				"url_seq_overview": "/smallforms_published_sammelbandbeitrag",
+				"name": "Sammelbandbeiträge",
+				"preamble": "Sammelbandbeiträge",
+				"docs": ["smallform_0106", "smallform_0150", "letter_0110"]
+			},
+			"smallforms_periodika": {
+				"type": "periodika",
+				"url_seq_overview": "/smallforms_periodika",
+				"name": "Periodika und Sammelbände",
+				"preamble": "Periodika und Sammelbände",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			},
+			"smallforms_series": {
+				"type": "pubseries",
+				"url_seq_overview": "/smallforms_series",
+				"name": "Serien",
+				"preamble": "Serien",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			},
+			"smallforms_beilagen": {
+				"type": "pubseries",
+				"url_seq_overview": "/smallforms_beilagen",
+				"name": "Beilagen",
+				"preamble": "Beilagen",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			},
+			"smallforms_rezensionen": {
+				"type": "gattung",
+				"url_seq_overview": "/smallforms_rezensionen",
+				"name": "Rezensionen",
+				"preamble": "Rezensionen",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			},
+			"smallforms_lyrik": {
+				"type": "gattung",
+				"url_seq_overview": "/smallforms_lyrik",
+				"name": "Lyrik",
+				"preamble": "Lyrik",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			},
+			"smallforms_erzaehlsammlungen": {
+				"type": "gattung",
+				"url_seq_overview": "/smallforms_erzaehlsammlungen",
+				"name": "Erzählsammlungen",
+				"preamble": "Erzählsammlungen",
+				"docs": ["smallform_0026", "smallform_0250", "letter_0210"]
+			}
 		}
 	}
 }
