@@ -9,4 +9,8 @@ export type TSmallformsGroups =
 	| 'Zeitschriftenartikel'
 	| 'Zeitungsartikel'
 	| 'Sammelband-Beitrag'
-	| 'Serie';
+	| 'Serie'
+	| 'Sammelband'
+	| 'Typoskript, Serie?'
+	| 'Typoskript, Rezension'
+	| 'Sonderbeilage';
