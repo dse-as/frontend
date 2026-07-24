@@ -11,7 +11,7 @@
 				"url_seq_overview": null,
 				"name": "S0006",
 				"preamble": "Textstufen Gruppe S0006",
-				"docs": ["smallform_0006", "smallform_0007", "smallform_0231", "smallform_0230"]
+				"docs": ["smallform_0006", "smallform_0007"]
 			},
 			"textstufen_smallforms_0020": {
 				"url_seq_overview": null,
@@ -156,6 +156,12 @@
 				"name": "S0225",
 				"preamble": "Textstufen Gruppe S0225",
 				"docs": ["smallform_0225", "smallform_0232"]
+			},
+			"textstufen_smallforms_0231": {
+				"url_seq_overview": null,
+				"name": "S0231",
+				"preamble": "Textstufen Gruppe S0231",
+				"docs": ["smallform_0231", "smallform_0230"]
 			},
 			"textstufen_smallforms_0273": {
 				"url_seq_overview": null,
