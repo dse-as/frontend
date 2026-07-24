@@ -8679,98 +8679,98 @@
 				"url_seq_overview": "/smallforms_manuscripts",
 				"name": "Manuskripte",
 				"preamble": "Manuskripte",
-				"docs": ["smallform_0006", "smallform_0050"]
+				"docs": ["smallform_0030", "smallform_0070"]
 			},
 			"smallforms_typoscripts": {
 				"type": "unpublished",
 				"url_seq_overview": "/smallforms_typoscripts",
 				"name": "Typoskripte",
 				"preamble": "Typoskripte",
-				"docs": ["smallform_0006", "smallform_0050"]
+				"docs": ["smallform_0005", "smallform_0006", "smallform_0008", "smallform_0009", "smallform_0010", "smallform_0018", "smallform_0020", "smallform_0024", "smallform_0025", "smallform_0026", "smallform_0031", "smallform_0032", "smallform_0037", "smallform_0040", "smallform_0041", "smallform_0042", "smallform_0046", "smallform_0047", "smallform_0048", "smallform_0049", "smallform_0051", "smallform_0053", "smallform_0054", "smallform_0057", "smallform_0059", "smallform_0060", "smallform_0061", "smallform_0063", "smallform_0064", "smallform_0065", "smallform_0066", "smallform_0068", "smallform_0069", "smallform_0071", "smallform_0073", "smallform_0074", "smallform_0075", "smallform_0111", "smallform_0119", "smallform_0120", "smallform_0133", "smallform_0134", "smallform_0135", "smallform_0136", "smallform_0137", "smallform_0138", "smallform_0139", "smallform_0140", "smallform_0141", "smallform_0142", "smallform_0143", "smallform_0144", "smallform_0145", "smallform_0153", "smallform_0204", "smallform_0275", "smallform_0608", "smallform_0609", "smallform_0610", "smallform_0636"]
 			},
 			"smallforms_zeitungsartikel": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_zeitungsartikel",
 				"name": "Zeitungsartikel",
 				"preamble": "Zeitungsartikel",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0007", "smallform_0038", "smallform_0129", "smallform_0226"]
 			},
 			"smallforms_zeitschriftenartikel": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_zeitschriftenartikel",
 				"name": "Zeitschriftenartikel",
 				"preamble": "Zeitschriftenartikel",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0001", "smallform_0002", "smallform_0003", "smallform_0004", "smallform_0027", "smallform_0036", "smallform_0180", "smallform_0192", "smallform_0210"]
 			},
 			"smallforms_feuilleton": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_feuilleton",
 				"name": "Feuilletons",
 				"preamble": "Feuilletons",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0021", "smallform_0023", "smallform_0028", "smallform_0050", "smallform_0148", "smallform_0305", "smallform_0315", "smallform_0317", "smallform_0319"]
 			},
 			"smallforms_fotoreportage": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_fotoreportage",
 				"name": "Fotoreportagen",
 				"preamble": "Fotoreportagen",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0039", "smallform_0043", "smallform_0044", "smallform_0045", "smallform_0056", "smallform_0098", "smallform_0102", "smallform_0103", "smallform_0104", "smallform_0105", "smallform_0121", "smallform_0125", "smallform_0130", "smallform_0146", "smallform_0147", "smallform_0150", "smallform_0154", "smallform_0165", "smallform_0167", "smallform_0168", "smallform_0169", "smallform_0170", "smallform_0178", "smallform_0187", "smallform_0189", "smallform_0191", "smallform_0208", "smallform_0240", "smallform_0241", "smallform_0268", "smallform_0270", "smallform_0274", "smallform_0278", "smallform_0312", "smallform_0361", "smallform_0397", "smallform_0403", "smallform_0496", "smallform_0629", "smallform_0630"]
 			},
 			"smallforms_photosjournalistic_publications": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_photosjournalistic_publications",
 				"name": "Fotojournalistische Publikationen",
 				"preamble": "Fotojournalistische Publikationen",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0106", "smallform_0271", "smallform_0289", "smallform_0416", "smallform_0422", "smallform_0425", "smallform_0483", "smallform_0510", "smallform_0606", "smallform_0635"]
 			},
 			"smallforms_sammelbandbeitrag": {
 				"type": "published",
 				"url_seq_overview": "/smallforms_sammelbandbeitrag",
 				"name": "Sammelbandbeiträge",
 				"preamble": "Sammelbandbeiträge",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0611", "smallform_0612", "smallform_0613", "smallform_0614", "smallform_0615", "smallform_0616", "smallform_0617", "smallform_0618", "smallform_0619", "smallform_0620", "smallform_0621", "smallform_0622", "smallform_0623", "smallform_0624", "smallform_0625", "smallform_0626", "smallform_0627", "smallform_0628"]
 			},
 			"smallforms_periodika": {
 				"type": "periodika",
 				"url_seq_overview": "/smallforms_periodika",
 				"name": "Periodika und Sammelbände",
 				"preamble": "Periodika und Sammelbände",
-				"docs": ["smallform_0001"]
+				"docs": []
 			},
 			"smallforms_series": {
 				"type": "pubseries",
 				"url_seq_overview": "/smallforms_series",
 				"name": "Serien",
 				"preamble": "Serien",
-				"docs": ["smallform_0001"]
+				"docs": []
 			},
 			"smallforms_beilagen": {
 				"type": "pubseries",
 				"url_seq_overview": "/smallforms_beilagen",
 				"name": "Beilagen",
 				"preamble": "Beilagen",
-				"docs": ["smallform_0001"]
+				"docs": []
 			},
 			"smallforms_rezensionen": {
 				"type": "gattung",
 				"url_seq_overview": "/smallforms_rezensionen",
 				"name": "Rezensionen",
 				"preamble": "Rezensionen",
-				"docs": ["smallform_0001"]
+				"docs": ["smallform_0011", "smallform_0012", "smallform_0013", "smallform_0014", "smallform_0015", "smallform_0016", "smallform_0017", "smallform_0019", "smallform_0022", "smallform_0029", "smallform_0033", "smallform_0034", "smallform_0035", "smallform_0107", "smallform_0123", "smallform_0290", "smallform_0299", "smallform_0301", "smallform_0437"]
 			},
 			"smallforms_lyrik": {
 				"type": "gattung",
 				"url_seq_overview": "/smallforms_lyrik",
 				"name": "Lyrik",
 				"preamble": "Lyrik",
-				"docs": ["smallform_0001"]
+				"docs": []
 			},
 			"smallforms_erzaehlsammlungen": {
 				"type": "gattung",
 				"url_seq_overview": "/smallforms_erzaehlsammlungen",
 				"name": "Erzählsammlungen",
 				"preamble": "Erzählsammlungen",
-				"docs": ["smallform_0001"]
+				"docs": []
 			}
 		}
 	}
