@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { doc_sequences as seqAll } from '$lib/data/doc_sequences.json';
-	import type { TSeqCorrespondenceKeys } from '$lib/types/TSequences';
+	import type { TSeqSmallformsKeys } from '$lib/types/TSequences';
 	import { resolve } from '$app/paths';
 	import { dict_docs as dictDoc } from '$lib/dictionaries/dict_docs.json';
 	import DocumentsNav from '$lib/components/DocumentsNav.svelte';
@@ -9,11 +9,11 @@
 </script>
 
 <!-- Series -->
-{#snippet keyList(keys: TSeqCorrespondenceKeys[])}
+{#snippet keyList(keys: TSeqSmallformsKeys[])}
 	<div class={['preset-btn-list items-center justify-center', '--spacing-sm']}>
 		{#each keys as key (key)}
 			<a class="preset-btn-round --normal" href={resolve(`/${key}` as any)}
-				>{seqData[key as TSeqCorrespondenceKeys].name}</a
+				>{seqData[key as TSeqSmallformsKeys].name}</a
 			>
 		{/each}
 	</div>
@@ -31,8 +31,11 @@
 			‘Kleine Formen’ ist ein Sammelbegriff für Texte, die sich durch Kürze und Abgeschlossenheit
 			auszeichnen. Sie können verschiedenen (Misch-)Gattungen oder Graubereichen zwischen Gattungen
 			angehören. Kleine Formen sind ein typisches Phänomen der Moderne, insbesondere der modernen
-			Publikationsform des Feuilletons, beschränken sich aber nicht auf dieses [hier ev. später ein
-			Hyperlink zu einem thematischen Kommentar zum Feuilleton].
+			Publikationsform des Feuilletons, beschränken sich aber nicht auf dieses <span
+				class="text-muted-foreground"
+			>
+				[hier ev. später ein Hyperlink zu einem thematischen Kommentar zum Feuilleton]
+			</span>.
 		</p>
 
 		<p>
@@ -41,18 +44,9 @@
 			viele Texte verfasst und publiziert, die sich weder eindeutig einer journalistischen oder
 			literarischen Form zuordnen lassen. Dieses Spiel findet sich neben dem Feuilleton auch in
 			‘normalen’ Zeitungsartikeln, Zeitschriftenartikeln sowie unpublizierten Typo- und
-			Manuskripten.
-		</p>
-
-		<p>
-			Die Edition trägt der von Schwarzenbach bewusst eingesetzten ‘Verschleifung’ der Gattungen
-			Rechnung, in dem sie die meisten Zugänge ohne strikte Festlegung auf Gattungszugehörigkeiten
-			legt. Die zwei ersten Zugänge enthalten jeweils alle Kleinen Formen: 1) [Chronologie],
-			2) [Dokumentform]. Die drei weiteren Zugänge enthalten Teilmengen der Kleinen Formen: 3)
-			[Periodika und Sammelbände] (Zeitungen, Zeitschriften, Sammelbände) 4) [Sonderformen der
-			Publikation] (Sammelbände, Beilagen und Reihen), 5) [Sonderformen der Gattung]. Der letzte
-			Zugang ermöglich den Zugriff auf diejenige Teilmenge Kleiner Formen, die eindeutigeren
-			Gattungsformen entsprechen (Rezensionen, Lyrik, Texte aus Novellensammlungen).
+			Manuskripten. Die Edition trägt der von Schwarzenbach bewusst eingesetzten ‘Verschleifung’ der
+			Gattungen Rechnung, in dem sie die meisten Zugänge ohne strikte Festlegung auf
+			Gattungszugehörigkeiten legt.
 		</p>
 
 		<p>
@@ -65,12 +59,17 @@
 		<!-- Chronologie -->
 		<div class="flex flex-col gap-7">
 			<h2 class="h2 text-center">Chronologie</h2>
-			<p>Liste aller Kleinen Formen, chronologisch geordnet.</p>
+			<p>
+				Die Chronologie aller Kleinen Formen musste zuweilen rekonstruiert werden, da im Falle von
+				Entwürfen oft nur ein Entstehungszeitraum eruiert werden kann. Die Edition versucht das
+				Entstehungsdatum auf einzelne Monate genau zu erfassen. Wo zwei Dokumente im selben Monat
+				entstanden sind, werden sie gemäss biographischen und thematischen Erwägungen angeordnet.
+			</p>
 			<div class="flex flex-wrap justify-center gap-2">
 				{@render keyList(
 					Object.keys(seqData).filter((key) => {
 						return (key as string) === 'smallforms_all';
-					}) as TSeqCorrespondenceKeys[]
+					}) as TSeqSmallformsKeys[]
 				)}
 			</div>
 			<p class="text-center text-muted-foreground">(ev. später als Zeitstrahl)</p>
@@ -84,9 +83,9 @@
 				ihre inhaltliche Ausrichtung zu, (s.o.) ist aber für die Frage medialer Formate zentral. Wir
 				unterscheiden zwischen zwei Grundformen: Entwürfe (Typoskript, Manuskript) und publizierte
 				Texte (Zeitungsartikel, Zeitschriftenartikel, Feuilleton, Fotoreportage, publizierte
-				Fotografie, Sammelbandbeiträge). Mit ‘Feuilleton’ ist hier keine inhaltliche Gattung,
-				sondern der Publikationsort unter dem Feuilletonstrich gemeint. Jede Unterkategorie ist
-				chronologisch geordnet.
+				Fotojournalistische Publikationen, Sammelbandbeiträge). Mit ‘Feuilleton’ ist hier keine
+				inhaltliche Gattung, sondern der Publikationsort unter dem Feuilletonstrich gemeint. Jede
+				Unterkategorie ist chronologisch geordnet.
 			</p>
 			<p class="text-center text-muted-foreground">(ev. später als ausklappbare Baumstruktur)</p>
 
@@ -95,16 +94,16 @@
 				{@render keyList(
 					Object.entries(seqData)
 						.filter(([, val]) => (val.type as string) === 'unpublished')
-						.map(([key]) => key as TSeqCorrespondenceKeys)
+						.map(([key]) => key as TSeqSmallformsKeys)
 				)}
 			</div>
 
-			<h5 class="h5 text-center">Publizierte Texte und Fotografien</h5>
+			<h5 class="h5 text-center">Publikationen</h5>
 			<div class="flex flex-wrap justify-center gap-2">
 				{@render keyList(
 					Object.entries(seqData)
 						.filter(([, val]) => (val.type as string) === 'published')
-						.map(([key]) => key as TSeqCorrespondenceKeys)
+						.map(([key]) => key as TSeqSmallformsKeys)
 				)}
 			</div>
 		</div>
@@ -122,7 +121,7 @@
 				{@render keyList(
 					Object.entries(seqData)
 						.filter(([, val]) => (val.type as string) === 'periodika')
-						.map(([key]) => key as TSeqCorrespondenceKeys)
+						.map(([key]) => key as TSeqSmallformsKeys)
 				)}
 			</div>
 		</div>
@@ -143,7 +142,7 @@
 				{@render keyList(
 					Object.entries(seqData)
 						.filter(([, val]) => (val.type as string) === 'pubseries')
-						.map(([key]) => key as TSeqCorrespondenceKeys)
+						.map(([key]) => key as TSeqSmallformsKeys)
 				)}
 			</div>
 		</div>
@@ -167,7 +166,7 @@
 				{@render keyList(
 					Object.entries(seqData)
 						.filter(([, val]) => (val.type as string) === 'gattung')
-						.map(([key]) => key as TSeqCorrespondenceKeys)
+						.map(([key]) => key as TSeqSmallformsKeys)
 				)}
 			</div>
 		</div>

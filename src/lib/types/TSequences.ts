@@ -23,13 +23,17 @@ export type TSeqTravelsKeys = keyof TSeq['travels'];
 export type TSeqCorrespondenceKeys = keyof TSeq['correspondence'];
 export type TSeqSeriesKeys = keyof TSeq['series'];
 export type TSeqPhotoseriesKeys = keyof TSeq['photoseries'];
+export type TSeqSmallformsKeys = keyof TSeq['smallforms'];
+export type TSeqLongformsKeys = keyof TSeq['longforms'];
 
 export type TSeqKeys =
 	| TSeqTextstufenKeys
 	| TSeqTravelsKeys
 	| TSeqCorrespondenceKeys
 	| TSeqSeriesKeys
-	| TSeqPhotoseriesKeys;
+	| TSeqPhotoseriesKeys
+	| TSeqSmallformsKeys
+	| TSeqLongformsKeys;
 
 export type TDictSeq = Record<
 	string,

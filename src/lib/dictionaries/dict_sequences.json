@@ -45,6 +45,24 @@
 			"label_seq_overview": "Zur Übersicht der Fotoserie",
 			"label_next": "Nächstes Foto",
 			"label_prev": "Vorheriges Foto"
+		},
+		"smallforms": {
+			"sequence_name": "Smallforms",
+			"key_singular": "smallforms",
+			"label_plural": "Smallforms",
+			"label_singular": "Smallforms",
+			"label_seq_overview": "Zur Übersicht der Smallforms",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
+		},
+		"longforms": {
+			"sequence_name": "Longforms",
+			"key_singular": "longforms",
+			"label_plural": "Longforms",
+			"label_singular": "Longforms",
+			"label_seq_overview": "Zur Übersicht der Longforms",
+			"label_next": "Nächstes Dokument",
+			"label_prev": "Vorheriges Dokument"
 		}
 	}
 }
