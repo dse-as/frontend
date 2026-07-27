@@ -7,9 +7,9 @@
 	import type { TSeqPhotoseriesKeys } from '$lib/types/TSequences.js';
 	import { ScrollState } from 'runed';
 	import { useSearchParams } from 'runed/kit';
-	import { productSearchSchema } from './schemas';
+	import { schema } from './schemas';
 
-	const params = useSearchParams(productSearchSchema);
+	const params = useSearchParams(schema);
 
 	let { data } = $props();
 

@@ -9,6 +9,11 @@
 	import type { TDocuments } from '$lib/types/documents/TDocuments';
 	import ThumbList from './ThumbList.svelte';
 
+	import { useSearchParams } from 'runed/kit';
+	import { schema } from './schemas';
+
+	const params = useSearchParams(schema);
+
 	const allDocs = allDocsRaw as TDocuments['documents'];
 
 	let buttonRefs: HTMLButtonElement[] = [];
@@ -50,20 +55,22 @@
 	}
 
 	function handleSelectPage(currentPage: number) {
-		const url = new URL(page.url);
-		url.searchParams.set('page', String(currentPage));
-		goto(url.toString(), { noScroll: true });
+		// const url = new URL(page.url);
+		// url.searchParams.set('page', String(currentPage));
+		// params.page = currentPage;
+		// goto(page.url, { noScroll: true });
 	}
 
 	let updatePageParam = $derived((currentPage: number): string => {
-		const url = new URL(page.url);
-		url.searchParams.set('page', String(currentPage));
-		return url.pathname + url.search;
+		// const url = new URL(page.url);
+		// url.searchParams.set('page', String(currentPage));
+		// params.page = currentPage;
+		// return page.url.pathname + page.url.search;
 	});
 
-	$effect(() => {
-		scrollGalleryToPage(currentPage);
-	});
+	// $effect(() => {
+	// 	scrollGalleryToPage(currentPage);
+	// });
 
 	let itemsBefore = $derived(collectGalleryItems()?.slice(0, currentPage - 1));
 	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
