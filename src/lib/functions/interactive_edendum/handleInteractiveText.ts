@@ -19,7 +19,7 @@ function scrollContainer(elContainer: HTMLElement | null, elItem: HTMLElement | 
 
 	// DIAGNOSTICS
 	//! The problem is that scrollHeight === clientHeight
-	
+
 	// const containerRect = elContainer.getBoundingClientRect();
 	// const refRect = elItem.getBoundingClientRect();
 	// const targetTop = refRect.top - containerRect.top + elContainer.scrollTop;

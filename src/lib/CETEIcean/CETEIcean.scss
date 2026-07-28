@@ -100,8 +100,8 @@ tei-p {
 	font-family: var(--font-text);
 	font-size: 120%;
 	line-height: 1.7;
-	margin-top: .5em;
-	margin-bottom: .5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 	text-align: left;
 	hyphens: auto;
 	display: inline-block;
@@ -531,8 +531,8 @@ span.note-mark.active {
 		/* prevent user-selection */
 		user-select: none;
 		-webkit-user-select: none;
-		-moz-user-select: none;   
-		-ms-user-select: none;    
+		-moz-user-select: none;
+		-ms-user-select: none;
 	}
 
 	span.footnote:hover,
