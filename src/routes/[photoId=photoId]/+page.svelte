@@ -2,21 +2,25 @@
 	import { page } from '$app/state';
 
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
-	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey.js';
 	import Sequences from '../[docId=docId]/Sequences.svelte';
-	let { data } = $props();
-	let imgdata = $derived(data.resolvedPhoto?.item);
-
-	import { building } from '$app/environment';
 	import ContentNote from '$lib/components/ContentNote.svelte';
-	import type { TResolvedRegister } from '$lib/functions/ease_of_use/resolveReg';
-	import { resolve } from '$app/paths';
+	// import type { TResolvedRegister } from '$lib/functions/ease_of_use/resolveReg';
+	// import { resolve } from '$app/paths';
+	import { schema, validSeqKeys } from '../[docId=docId]/schemas';
+	import { useSearchParams } from 'runed/kit';
+	import { cleanupSearchParams } from '$lib/functions/searchParams/cleanupSearchParams.js';
 
-	// Current Sequence
-	const currentSeqKey = $derived(building ? null : page.url.searchParams.get('seq'));
-	let currentSeq = $derived({ type: findSeqTypeBySeqKey(currentSeqKey), key: currentSeqKey });
+	let { data } = $props();
+
+	// Schema
+	const params = useSearchParams(schema, { noScroll: true });
+
+	$effect(() => {
+		cleanupSearchParams(page.url, schema, validSeqKeys);
+	});
 
 	// Data
+	let imgdata = $derived(data.resolvedPhoto?.item);
 	let resPhoto = $derived(data.resolvedPhoto);
 
 	// UI-States
@@ -25,7 +29,7 @@
 
 <div class="relative flex h-full flex-col items-center gap-6">
 	<!-- Sequences -->
-	<Sequences docId={data.resolvedPhoto?.docId} {currentSeq} />
+	<Sequences docId={data.resolvedPhoto?.docId} {params} {validSeqKeys} />
 
 	<!-- Title -->
 	<div class="w-full px-10">
@@ -59,7 +63,7 @@
 
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<!-- Image -->
-		<div class="flex h-full w-full items-center justify-center p-4">
+		<div class="flex h-full w-full items-start justify-center p-4">
 			{#key imgdata?.faksimile.iiif_image_emanuscripta}
 				<IIIF_Thumb
 					iiif_imageAPI_width={1200}
@@ -75,7 +79,7 @@
 
 		<!-- Metadata -->
 		<div class="flex flex-col items-start justify-start p-4">
-			<h5 class="h5 mb-6 font-bold">Metadaten</h5>
+			<h4 class="h4 mb-6 leading-none font-bold">Metadaten</h4>
 
 			<!-- (2) Metadata Table -->
 			{#snippet metadataButton(state: string, text: string)}

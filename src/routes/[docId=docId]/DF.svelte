@@ -11,15 +11,15 @@
 	let {
 		docItem,
 		ceteiData,
-		currentPage
+		params
 	}: {
 		docItem: TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms | null;
 		ceteiData: ProcessedTEI;
-		currentPage: number;
+		params: object;
 	} = $props();
 
 	let urls = $derived(docItem?.manuscript?.iiif_urls ?? []);
-	let url = $derived(urls[currentPage - 1]);
+	let url = $derived(urls[params.page - 1]);
 </script>
 
 <div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden md:grid-cols-2">

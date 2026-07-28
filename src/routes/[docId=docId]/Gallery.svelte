@@ -1,18 +1,13 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
 	import { documents as allDocsRaw } from '$lib/data/documents.json';
 	import type { TDocuments } from '$lib/types/documents/TDocuments';
 	import ThumbList from './ThumbList.svelte';
-
-	import { useSearchParams } from 'runed/kit';
-	import { schema } from './schemas';
-
-	const params = useSearchParams(schema);
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 
@@ -25,7 +20,7 @@
 		page: number;
 	};
 
-	let { docItem, currentPage } = $props();
+	let { docItem, params } = $props();
 
 	// Textzeugen
 	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
@@ -54,45 +49,43 @@
 		}
 	}
 
-	function handleSelectPage(currentPage: number) {
-		// const url = new URL(page.url);
-		// url.searchParams.set('page', String(currentPage));
-		// params.page = currentPage;
-		// goto(page.url, { noScroll: true });
+	function handleSelectPage(newPage: number) {
+		console.log('a', params.page, newPage);
+		params.page = newPage;
+		console.log('b', params.page, newPage);
 	}
+	$inspect('gallery inspect page', params.page);
 
-	let updatePageParam = $derived((currentPage: number): string => {
-		// const url = new URL(page.url);
-		// url.searchParams.set('page', String(currentPage));
-		// params.page = currentPage;
-		// return page.url.pathname + page.url.search;
+	$effect(() => {
+		scrollGalleryToPage(params.page);
 	});
 
-	// $effect(() => {
-	// 	scrollGalleryToPage(currentPage);
-	// });
-
-	let itemsBefore = $derived(collectGalleryItems()?.slice(0, currentPage - 1));
-	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
-	let itemsAfter = $derived(collectGalleryItems()?.slice(currentPage - 0));
+	let itemsBefore = $derived(collectGalleryItems()?.slice(0, params.page - 1));
+	let itemsCurrent = $derived(collectGalleryItems()[params.page - 1]);
+	let itemsAfter = $derived(collectGalleryItems()?.slice(params.page - 0));
 </script>
 
-{#snippet thumbItem(item: TItem, isFirst: boolean = false, isLast: boolean = false)}
-	<a
-		href={updatePageParam(item.pagenum_running)}
+{#snippet thumbItem(
+	item: TItem,
+	isFirst: boolean = false,
+	isLast: boolean = false,
+	isCurrent: boolean = false
+)}
+	<button
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-hover`,
+			`group flex flex-col items-center justify-center p-0 px-2 py-2 hover:bg-hover`,
 			isFirst && 'rounded-l-thumbbox',
 			isLast && 'rounded-r-thumbbox'
+			// isCurrent ? 'mx-10' : 'mx-2'
 		]}
 		onclick={(e) => {
 			e.preventDefault();
 			handleSelectPage(item.pagenum_running);
 		}}
 	>
-		<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
+		<IIIF_Thumb url={item.fac} classes={isCurrent ? 'max-h-[80px]' : 'max-h-[50px]'} />
 		<span class="text-sm">Seite {item.page}</span>
-	</a>
+	</button>
 {/snippet}
 
 <div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
@@ -106,22 +99,31 @@
 	{/if}
 	<div bind:this={containerRef} class="my-2 h-[100px]">
 		<ThumbList
-			reCenterOn={currentPage}
+			reCenterOn={params.page}
 			classesCurrent="min-w-25"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>
 			{#snippet childrenBefore()}
 				{#each itemsBefore as item, index (item.page)}
-					{@render thumbItem(item, index === 0, index === itemsBefore.length - 1)}
+					{#if item}
+						{@render thumbItem(item, index === 0, index === itemsBefore.length - 1, false)}
+					{:else}<p class="text-warning">MISSING DATA</p>
+					{/if}
 				{/each}
 			{/snippet}
 			{#snippet childrenCurrent()}
-				{@render thumbItem(itemsCurrent, true, true)}
+				{#if itemsCurrent}
+					{@render thumbItem(itemsCurrent, true, true, true)}
+				{:else}<p class="text-warning">MISSING DATA</p>
+				{/if}
 			{/snippet}
 			{#snippet childrenAfter()}
 				{#each itemsAfter as item, index (item.page)}
-					{@render thumbItem(item, index === 0, index === itemsAfter.length - 1)}
+					{#if item}
+						{@render thumbItem(item, index === 0, index === itemsAfter.length - 1, false)}
+					{:else}<p class="text-warning">MISSING DATA</p>
+					{/if}
 				{/each}
 				{#if showTextzeugen}
 					{#each tzgIds as tzgId (tzgId)}
@@ -132,7 +134,7 @@
 						>
 							<h6 class="w-50 font-sans text-sm">{resDoc?.name}</h6>
 							{#each items as item (item.page)}
-								<a
+								<!-- <a
 									class="ml-2 rounded-thumbbox p-1"
 									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
 									target="_blank"
@@ -140,7 +142,7 @@
 								>
 									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
 									<span class="text-xs">Seite {item.page}</span>
-								</a>
+								</a> -->
 							{:else}
 								<a class="text-warning" href={resolve(`/${tzgId}`)}>Keine Faksimile gefunden</a>
 							{/each}

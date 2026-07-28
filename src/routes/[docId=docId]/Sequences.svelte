@@ -20,11 +20,13 @@
 	import { sequenceToggle, isOpenSeqPanel } from '$lib/globals/ui-states.svelte';
 	import { fade } from 'svelte/transition';
 	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
+	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey';
+	import { resetParamsExcept } from './schemas';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAll = seqAllRaw as TSeqAll;
 	const dictSeqTyped = dictSeq as TDictSeq;
-	let { docId, currentSeq } = $props();
+	let { docId, params, validSeqKeys } = $props();
 	let otherSeq: { type: TSeqTypes | null; key: TSeqKeys | null } = $state({
 		type: null,
 		key: null
@@ -43,19 +45,31 @@
 		findMatchingSequences(
 			seqAll as Record<string, Record<string, { name?: string; docs: TDocKeys[] }>>,
 			docId,
-			[currentSeq.key]
+			[params.seq]
 		)
 	);
 
-	const seqCurrent = $derived(seqMatching[currentSeq.type]?.[currentSeq.key]);
-	const prevId = $derived(
-		filterVisible(seqCurrent?.docsBefore)[filterVisible(seqCurrent?.docsBefore).length - 1] || null
+	let isSelectedValidSeq = $derived(params.seq && validSeqKeys.includes(params.seq) ? true : false);
+	let currentSeqType = $derived(isSelectedValidSeq ? findSeqTypeBySeqKey(params.seq) : null);
+	const seqCurrent = $derived(
+		isSelectedValidSeq ? seqMatching[currentSeqType]?.[params.seq] : null
 	);
-	const nextId = $derived(filterVisible(seqCurrent?.docsAfter)[0] || null);
+	const prevId = $derived(
+		isSelectedValidSeq
+			? filterVisible(seqCurrent?.docsBefore)[filterVisible(seqCurrent?.docsBefore).length - 1]
+			: null
+	);
+	const nextId = $derived(isSelectedValidSeq ? filterVisible(seqCurrent?.docsAfter)[0] : null);
 	let hasOtherSequences = $derived(Object.keys(seqOther).length ? true : false);
 
 	// UI-State
-	let isSelectedValidSeq = $derived(currentSeq.type ? true : false);
+	// $inspect('validBOOL', validSeqKeys.includes(params.seq));
+	// $inspect('Params.seq', params.seq);
+	// $inspect('IsSelectedValidSeq', isSelectedValidSeq);
+	// $inspect('CurrentSeqType', currentSeqType);
+	// $inspect('seqCurrent', seqCurrent);
+	// $inspect('prevId', prevId);
+	// $inspect('nextId', nextId);
 
 	let isOpenOtherSeqPanel = $state(false);
 
@@ -93,15 +107,15 @@
 			else closeSeqPanel();
 		} else if (ev.key === 'ArrowLeft') {
 			if (prevId) {
-				goto(
-					`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`
-				);
+				// goto(
+				// 	`${prevId}?${updateSearchParams(page.url.searchParams, { seq: params.seq, page: null })}`
+				// );
 			}
 		} else if (ev.key === 'ArrowRight') {
 			if (nextId) {
-				goto(
-					`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`
-				);
+				// goto(
+				// 	`${nextId}?${updateSearchParams(page.url.searchParams, { seq: params.seq, page: null })}`
+				// );
 			}
 		} else if (ev.key === 's') {
 			openSeqPanel();
@@ -321,11 +335,11 @@
 					<a
 						class="hover:hyperlink"
 						href={resolve(
-							`/${seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview ? seqAll[currentSeq.type]?.[currentSeq.key]?.url_seq_overview : currentSeq.type}` as any
+							`/${seqAll[currentSeqType]?.[params.seq]?.url_seq_overview ? seqAll[currentSeqType]?.[params.seq]?.url_seq_overview : currentSeqType}` as any
 						)}
 						target="_blank"
 						rel="noopener noreferrer"
-						>{@html seqAll[currentSeq.type]?.[currentSeq.key]?.preamble}
+						>{@html seqAll[currentSeqType]?.[params.seq]?.preamble}
 					</a>
 				</h6>
 			</div>
@@ -336,11 +350,14 @@
 			<!-- Previous in Sequence-->
 			<a
 				class={['preset-btn-round', !prevId && '--muted']}
-				href={`${prevId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
+				href={`${prevId}?${params.toURLSearchParams()}`}
+				onclick={() => {
+					resetParamsExcept(params, ['seq', 'mode']);
+				}}
 			>
 				<div class={['flex flex-row items-center gap-2']}>
 					<i class="fa-solid fa-chevron-left"></i>
-					<p>{dictSeqTyped[currentSeq.type]?.label_prev}</p>
+					<p>{dictSeqTyped[currentSeqType]?.label_prev}</p>
 				</div>
 			</a>
 
@@ -370,10 +387,13 @@
 			<!-- Next in Sequence -->
 			<a
 				class={['preset-btn-round', !nextId && '--muted']}
-				href={`${nextId}?${updateSearchParams(page.url.searchParams, { seq: currentSeq.key, page: null })}`}
+				href={`${nextId}?${params.toURLSearchParams()}`}
+				onclick={() => {
+					resetParamsExcept(params, ['seq', 'mode']);
+				}}
 			>
 				<div class={['flex flex-row items-center gap-2']}>
-					<p>{dictSeqTyped[currentSeq.type]?.label_next}</p>
+					<p>{dictSeqTyped[currentSeqType]?.label_next}</p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 			</a>
@@ -416,11 +436,11 @@
 
 		<!-- Current Sequence -->
 		{#if isSelectedValidSeq}
-			{@render sequenceList(currentSeq.type, currentSeq.key as TSeqKeys, {
+			{@render sequenceList(currentSeqType as TSeqTypes, params.seq as TSeqKeys, {
 				isCurrentSeqList: true
 			})}
 			<div class="flex w-full items-center justify-end text-right">
-				{@render documentCount(currentSeq.type, currentSeq.key, { hideIntro: false })}
+				{@render documentCount(currentSeqType as TSeqTypes, params.seq, { hideIntro: false })}
 			</div>
 		{/if}
 
@@ -533,16 +553,18 @@
 				<div
 					class="preset-btn-list --spacing-normal hidden justify-end group-focus-within:flex group-hover:flex group-focus:flex"
 				>
-					<a
+					<button
 						data-sveltekit-preload-data="tap"
 						data-sveltekit-preload-code="hover"
 						class="preset-btn-round"
-						href={`${docId}?${updateSearchParams(page.url.searchParams, { seq: seqKey, page: null })}`}
 						onclick={() => {
+							console.log(params.seq, seqKey);
+							params.seq = seqKey;
+							console.log(params.seq, seqKey);
 							closeSeqPanel();
 						}}
 						>Sequenz auswählen
-					</a>
+					</button>
 					<!-- Sequenzansicht -->
 					{#if seqAll[seqType!]?.[seqKey]?.url_seq_overview}
 						<a
