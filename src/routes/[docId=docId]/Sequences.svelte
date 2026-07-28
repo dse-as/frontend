@@ -90,6 +90,7 @@
 
 	// Functions
 	function filterVisible(array: TDocKeys[], seqToggle = sequenceToggle) {
+		if (!array) return [];
 		return array.filter((itemId) => checkVisible(itemId, seqToggle));
 	}
 	function checkVisible(itemId: TDocKeys, seqToggle = sequenceToggle) {
