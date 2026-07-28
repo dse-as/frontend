@@ -97,10 +97,13 @@
 			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
 		>
 	{/if}
-	<div bind:this={containerRef} class="my-2 h-[100px]">
+	<div bind:this={containerRef} class="my-2 h-max">
 		<ThumbList
 			reCenterOn={params.page}
-			classesCurrent="min-w-25"
+			classesContainer="items-center"
+			classesBefore="my-2 h-max"
+			classesAfter="my-2 h-max"
+			classesCurrent="min-w-25 mx-10 pointer-events-none"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>

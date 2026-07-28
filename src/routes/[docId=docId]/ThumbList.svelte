@@ -6,6 +6,9 @@
 		reCenterOn = null,
 		isBeforeEmpty,
 		isAfterEmpty,
+		classesContainer = '',
+		classesBefore = '',
+		classesAfter = '',
 		classesCurrent = '',
 		childrenBefore,
 		childrenCurrent,
@@ -14,6 +17,9 @@
 		reCenterOn: any;
 		isBeforeEmpty: boolean;
 		isAfterEmpty: boolean;
+		classesContainer: string;
+		classesBefore: string;
+		classesAfter: string;
 		classesCurrent: string;
 		childrenBefore: Snippet;
 		childrenCurrent: Snippet;
@@ -62,6 +68,7 @@
 	<div
 		class={[
 			'disableScrollChaining flex min-w-[calc(50%-70px)] shrink-0 justify-end gap-2 rounded-thumbbox',
+			classesBefore,
 			isBeforeEmpty ? 'bg-transparent' : 'bg-dark-10'
 		]}
 	>
@@ -78,6 +85,7 @@
 	<div
 		class={[
 			'flex min-w-[calc(50%-70px)] shrink-0 justify-start gap-2 rounded-thumbbox',
+			classesAfter,
 			isAfterEmpty ? 'bg-transparent' : 'bg-dark-10'
 		]}
 	>
@@ -87,7 +95,7 @@
 
 <!-- Div-Variant -->
 <div
-	class="flex h-full overflow-x-auto overflow-y-hidden pb-6"
+	class={['flex h-full overflow-x-auto overflow-y-hidden pb-6', classesContainer]}
 	onwheel={(ev) => {
 		invertScroll(ev);
 	}}
