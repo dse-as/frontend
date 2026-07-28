@@ -218,14 +218,17 @@
 			invalidateAll();
 		}}
 	>
-		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+		<div class="group grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			{#if resType === 'photos'}
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={resDoc?.faksimile?.iiif_image_emanuscripta}
 						iiif_imageAPI_width={400}
 						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
-						classes="max-h-[80px] max-w-[80px]"
+						//! FIX grayscale-0 (not working)
+						classes={`max-h-20 max-w-20 group-hover:grayscale-0! 
+							${isCurrentSeqList ? 'grayscale-0!' : ''} 
+							${isCurrentSeqList ? 'max-h-[80px]' : 'max-h-[50px]'}`}
 					/>
 				</div>
 				<div class="flex flex-col">
@@ -236,7 +239,7 @@
 					<IIIF_Thumb
 						url={resDoc?.manuscript?.iiif_urls[0]}
 						iiif_imageAPI_width={400}
-						classes="max-h-[80px] max-w-[80px]"
+						classes="max-h-20 max-w-20 group-hover:grayscale-0!"
 					/>
 				</div>
 				<div class="flex flex-col">
@@ -263,7 +266,10 @@
 	<div class="my-2">
 		<ThumbList
 			reCenterOn={[docId, itemsBeforeIds, itemsAfterIds, isOpenOtherSeqPanel]}
-			classesCurrent="min-w-85"
+			classesContainer=""
+			classesBefore=""
+			classesAfter=""
+			classesCurrent="min-w-85 grayscale-0"
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
 		>

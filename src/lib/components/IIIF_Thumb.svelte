@@ -3,12 +3,14 @@
 		url,
 		iiif_imageAPI_width = 100,
 		blur = false,
-		classes = ''
+		classes = '',
+		imgClasses = ''
 	}: {
 		url?: string | null | undefined;
 		iiif_imageAPI_width?: number;
 		blur?: boolean;
 		classes?: string;
+		imgClasses?: string;
 	} = $props();
 	let showSpinner = $state(true);
 	let isError = $state(false);
@@ -34,13 +36,13 @@
 		</div>
 	{/if}
 	{#if !isError}
-		<div class={['overflow-hidden', blur && 'blur-xs']}>
+		<div class={['overflow-hidden', blur && 'blur-xs', classes]}>
 			<img
 				class={[
 					blur && 'blur-lg',
 					showSpinner ? 'hidden' : 'flex',
 					'object-cover grayscale-60 hover:grayscale-0',
-					classes
+					imgClasses
 				]}
 				data-url={adapt_iiif_url(url, iiif_imageAPI_width)}
 				src={adapt_iiif_url(url, iiif_imageAPI_width)}

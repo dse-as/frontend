@@ -22,7 +22,7 @@
 	let url = $derived(urls[params.page - 1]);
 </script>
 
-<div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden md:grid-cols-2">
+<div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden px-10 md:grid-cols-2">
 	{#if urls.length}
 		<div class="container-centered">
 			<IIIF_Viewer {url} />

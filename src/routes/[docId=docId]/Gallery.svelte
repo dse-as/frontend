@@ -73,7 +73,7 @@
 )}
 	<button
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-2 py-2 hover:bg-hover`,
+			`group flex flex-col items-center justify-center px-3 py-3 hover:bg-hover`,
 			isFirst && 'rounded-l-thumbbox',
 			isLast && 'rounded-r-thumbbox'
 			// isCurrent ? 'mx-10' : 'mx-2'
@@ -83,12 +83,16 @@
 			handleSelectPage(item.pagenum_running);
 		}}
 	>
-		<IIIF_Thumb url={item.fac} classes={isCurrent ? 'max-h-[80px]' : 'max-h-[50px]'} />
-		<span class="text-sm">Seite {item.page}</span>
+		<IIIF_Thumb
+			url={item.fac}
+			classes={`min-h-10 h-max mx-2 my-1 flex justify-center items-center ${isCurrent ? 'max-h-[100px]' : 'max-h-[50px]'}`}
+			imgClasses={`h-max ${isCurrent ? 'max-h-[100px] max-w-[110px]' : 'max-h-[50px] max-w-[100px]'}`}
+		/>
+		<span class="mt-1 text-sm">Seite {item.page}</span>
 	</button>
 {/snippet}
 
-<div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
+<div class="flex w-full flex-col gap-5 overflow-x-auto px-0 py-5 transition-all duration-200">
 	{#if tzgIds.length}
 		<button
 			class="hyperlink self-start rounded-button text-left"
@@ -103,7 +107,7 @@
 			classesContainer="items-center"
 			classesBefore="my-2 h-max"
 			classesAfter="my-2 h-max"
-			classesCurrent="min-w-25 mx-10 pointer-events-none"
+			classesCurrent="min-w-25 mx-10 pointer-events-none grayscale-0!"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>
