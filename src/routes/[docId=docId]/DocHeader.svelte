@@ -21,7 +21,7 @@
 		resDoc,
 		ceteiData,
 		crossRef,
-		currentPage
+		params
 	}: {
 		docId: TDocKeys | undefined;
 		resDoc: TResolvedLetters | TResolvedSmallforms | TResolvedLongforms | null;
@@ -29,7 +29,7 @@
 		crossRef: Partial<
 			Record<'citedDocuments' | 'linkedDocuments' | 'citedEntities' | 'linkedEntities', any>
 		>;
-		currentPage: number;
+		params: object;
 	} = $props();
 
 	let globalComment = $derived.by(() => {
@@ -386,7 +386,7 @@
 										)}
 										{@render metadataEntry(
 											'Aktuell sichtbare Seite',
-											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.name} (${docId}),  Seite ${currentPage}`
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.name} (${docId}),  Seite ${params.page}`
 										)}
 									{:else}
 										{@render metadataEntry(
@@ -395,7 +395,7 @@
 										)}
 										{@render metadataEntry(
 											'Aktuell sichtbare Seite',
-											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full},  Seite ${currentPage}`
+											`AUTHOR et al. 2028 "Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte, Intermedialität, Netzwerke", ${resDoc.item!.metadata.title_full},  Seite ${params.page}`
 										)}
 									{/if}
 								</tbody>

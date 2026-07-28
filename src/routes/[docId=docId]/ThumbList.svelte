@@ -6,6 +6,9 @@
 		reCenterOn = null,
 		isBeforeEmpty,
 		isAfterEmpty,
+		classesContainer = '',
+		classesBefore = '',
+		classesAfter = '',
 		classesCurrent = '',
 		childrenBefore,
 		childrenCurrent,
@@ -14,6 +17,9 @@
 		reCenterOn: any;
 		isBeforeEmpty: boolean;
 		isAfterEmpty: boolean;
+		classesContainer: string;
+		classesBefore: string;
+		classesAfter: string;
 		classesCurrent: string;
 		childrenBefore: Snippet;
 		childrenCurrent: Snippet;
@@ -59,35 +65,41 @@
 
 {#snippet ListContent()}
 	<!-- Documents before -->
-	<div
-		class={[
-			'disableScrollChaining flex min-w-[calc(50%-70px)] shrink-0 justify-end gap-2 rounded-thumbbox',
-			isBeforeEmpty ? 'bg-transparent' : 'bg-dark-10'
-		]}
-	>
-		{@render childrenBefore()}
+	<div class={['disableScrollChaining ml-10 flex min-w-[calc(50%-70px)] shrink-0', classesBefore]}>
+		<div class="grow bg-background"></div>
+		<div
+			class={[
+				'flex w-max justify-start rounded-thumbbox',
+				isBeforeEmpty ? 'bg-transparent' : 'bg-dark-10'
+			]}
+		>
+			{@render childrenBefore()}
+		</div>
 	</div>
 	<!-- Current Document -->
 	<div
-		class={['flex grow justify-center rounded-thumbbox bg-transparent', classesCurrent]}
+		class={['flex justify-center rounded-thumbbox bg-transparent', classesCurrent]}
 		{@attach centerCurrentItemInGallery}
 	>
 		{@render childrenCurrent()}
 	</div>
 	<!-- Documents after -->
-	<div
-		class={[
-			'flex min-w-[calc(50%-70px)] shrink-0 justify-start gap-2 rounded-thumbbox',
-			isAfterEmpty ? 'bg-transparent' : 'bg-dark-10'
-		]}
-	>
-		{@render childrenAfter()}
+	<div class={['mr-10 flex min-w-[calc(50%-70px)] shrink-0', classesAfter]}>
+		<div
+			class={[
+				'flex w-max justify-start rounded-thumbbox',
+				isAfterEmpty ? 'bg-transparent' : 'bg-dark-10'
+			]}
+		>
+			{@render childrenAfter()}
+		</div>
+		<div class="grow bg-background"></div>
 	</div>
 {/snippet}
 
 <!-- Div-Variant -->
 <div
-	class="flex h-full overflow-x-auto overflow-y-hidden pb-6"
+	class={['flex h-full min-w-full overflow-x-auto overflow-y-hidden pb-6', classesContainer]}
 	onwheel={(ev) => {
 		invertScroll(ev);
 	}}

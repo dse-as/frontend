@@ -14,16 +14,18 @@
 
 	let {
 		docItem,
-		ceteiData
+		ceteiData,
+		params
 	}: {
 		docItem: TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms | null;
 		ceteiData: ProcessedTEI;
+		params: object;
 	} = $props();
 </script>
 
 <div data-fassung="LF" class="pt-10 xl:grid xl:grid-cols-[auto_600px_auto]">
 	<!-- Text -->
-	<TextFluid {ceteiData} classes="mx-auto w-full max-w-300 md:max-w-[1300px]" />
+	<TextFluid {ceteiData} {params} classes="mx-auto w-full max-w-300 md:max-w-[1300px]" />
 
 	<!-- Sidebar -->
 	<aside class="sticky top-0 hidden h-screen w-full flex-col gap-4 overflow-hidden pt-6 xl:flex">

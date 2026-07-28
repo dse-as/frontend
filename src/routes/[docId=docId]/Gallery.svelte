@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import IIIF_Thumb from '$lib/components/IIIF_Thumb.svelte';
 	import { updateSearchParams } from '$lib/functions/ease_of_use/updateSearchParams';
 	import { resolveDoc } from '$lib/functions/ease_of_use/resolveDoc';
@@ -20,7 +20,7 @@
 		page: number;
 	};
 
-	let { docItem, currentPage } = $props();
+	let { docItem, params } = $props();
 
 	// Textzeugen
 	const tzgIds = $derived(docItem?.metadata.textzeugen_nonedited || []);
@@ -49,46 +49,50 @@
 		}
 	}
 
-	function handleSelectPage(currentPage: number) {
-		const url = new URL(page.url);
-		url.searchParams.set('page', String(currentPage));
-		goto(url.toString(), { noScroll: true });
+	function handleSelectPage(newPage: number) {
+		console.log('a', params.page, newPage);
+		params.page = newPage;
+		console.log('b', params.page, newPage);
 	}
-
-	let updatePageParam = $derived((currentPage: number): string => {
-		const url = new URL(page.url);
-		url.searchParams.set('page', String(currentPage));
-		return url.pathname + url.search;
-	});
+	$inspect('gallery inspect page', params.page);
 
 	$effect(() => {
-		scrollGalleryToPage(currentPage);
+		scrollGalleryToPage(params.page);
 	});
 
-	let itemsBefore = $derived(collectGalleryItems()?.slice(0, currentPage - 1));
-	let itemsCurrent = $derived(collectGalleryItems()[currentPage - 1]);
-	let itemsAfter = $derived(collectGalleryItems()?.slice(currentPage - 0));
+	let itemsBefore = $derived(collectGalleryItems()?.slice(0, params.page - 1));
+	let itemsCurrent = $derived(collectGalleryItems()[params.page - 1]);
+	let itemsAfter = $derived(collectGalleryItems()?.slice(params.page - 0));
 </script>
 
-{#snippet thumbItem(item: TItem, isFirst: boolean = false, isLast: boolean = false)}
-	<a
-		href={updatePageParam(item.pagenum_running)}
+{#snippet thumbItem(
+	item: TItem,
+	isFirst: boolean = false,
+	isLast: boolean = false,
+	isCurrent: boolean = false
+)}
+	<button
 		class={[
-			`group flex flex-col items-center justify-center p-0 px-2 hover:bg-hover`,
+			`group flex flex-col items-center justify-center px-3 py-3 hover:bg-hover`,
 			isFirst && 'rounded-l-thumbbox',
 			isLast && 'rounded-r-thumbbox'
+			// isCurrent ? 'mx-10' : 'mx-2'
 		]}
 		onclick={(e) => {
 			e.preventDefault();
 			handleSelectPage(item.pagenum_running);
 		}}
 	>
-		<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
-		<span class="text-sm">Seite {item.page}</span>
-	</a>
+		<IIIF_Thumb
+			url={item.fac}
+			classes={`min-h-10 h-max mx-2 my-1 flex justify-center items-center ${isCurrent ? 'max-h-[100px]' : 'max-h-[50px]'}`}
+			imgClasses={`h-max ${isCurrent ? 'max-h-[100px] max-w-[110px]' : 'max-h-[50px] max-w-[100px]'}`}
+		/>
+		<span class="mt-1 text-sm">Seite {item.page}</span>
+	</button>
 {/snippet}
 
-<div class="flex w-full flex-col gap-5 overflow-x-auto p-5 transition-all duration-200">
+<div class="flex w-full flex-col gap-5 overflow-x-auto px-0 py-5 transition-all duration-200">
 	{#if tzgIds.length}
 		<button
 			class="hyperlink self-start rounded-button text-left"
@@ -97,24 +101,36 @@
 			}}>Nichtedierte Textzeugen {showTextzeugen ? 'ausblenden' : 'einblenden'}</button
 		>
 	{/if}
-	<div bind:this={containerRef} class="my-2 h-[100px]">
+	<div bind:this={containerRef} class="my-2 h-max">
 		<ThumbList
-			reCenterOn={currentPage}
-			classesCurrent="min-w-25"
+			reCenterOn={params.page}
+			classesContainer="items-center"
+			classesBefore="my-2 h-max"
+			classesAfter="my-2 h-max"
+			classesCurrent="min-w-25 mx-10 pointer-events-none grayscale-0!"
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>
 			{#snippet childrenBefore()}
 				{#each itemsBefore as item, index (item.page)}
-					{@render thumbItem(item, index === 0, index === itemsBefore.length - 1)}
+					{#if item}
+						{@render thumbItem(item, index === 0, index === itemsBefore.length - 1, false)}
+					{:else}<p class="text-warning">MISSING DATA</p>
+					{/if}
 				{/each}
 			{/snippet}
 			{#snippet childrenCurrent()}
-				{@render thumbItem(itemsCurrent, true, true)}
+				{#if itemsCurrent}
+					{@render thumbItem(itemsCurrent, true, true, true)}
+				{:else}<p class="text-warning">MISSING DATA</p>
+				{/if}
 			{/snippet}
 			{#snippet childrenAfter()}
 				{#each itemsAfter as item, index (item.page)}
-					{@render thumbItem(item, index === 0, index === itemsAfter.length - 1)}
+					{#if item}
+						{@render thumbItem(item, index === 0, index === itemsAfter.length - 1, false)}
+					{:else}<p class="text-warning">MISSING DATA</p>
+					{/if}
 				{/each}
 				{#if showTextzeugen}
 					{#each tzgIds as tzgId (tzgId)}
@@ -125,7 +141,7 @@
 						>
 							<h6 class="w-50 font-sans text-sm">{resDoc?.name}</h6>
 							{#each items as item (item.page)}
-								<a
+								<!-- <a
 									class="ml-2 rounded-thumbbox p-1"
 									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
 									target="_blank"
@@ -133,7 +149,7 @@
 								>
 									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
 									<span class="text-xs">Seite {item.page}</span>
-								</a>
+								</a> -->
 							{:else}
 								<a class="text-warning" href={resolve(`/${tzgId}`)}>Keine Faksimile gefunden</a>
 							{/each}

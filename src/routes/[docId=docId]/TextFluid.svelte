@@ -13,7 +13,7 @@
 
 	let containerMaintext: HTMLElement;
 	let containerTEI: HTMLElement;
-	let { ceteiData, classes } = $props();
+	let { ceteiData, params, classes } = $props();
 
 	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
 
@@ -118,10 +118,8 @@
 	}
 
 	function openDFpage(pagenum: number) {
-		const url = new URL(page.url);
-		url.searchParams.set('page', String(pagenum));
-		url.searchParams.set('mode', 'DF');
-		goto(url, { noScroll: true });
+		params.mode = 'DF';
+		params.page = pagenum;
 	}
 
 	// ---------------------------------------------
