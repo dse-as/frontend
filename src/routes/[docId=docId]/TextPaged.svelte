@@ -1,15 +1,19 @@
 <script lang="ts">
 	import CETEI from 'CETEIcean';
-	import { behaviors, removeNotesFromMaintext } from '$lib/CETEIcean/behaviors';
+	import { behaviors, removeNotesFromMaintext, extractPage } from '$lib/CETEIcean/behaviors';
 
 	const c = new CETEI();
-	let { ceteiData } = $props();
+	let { ceteiData, page } = $props();
 
 	const setupCustomElements = () => {
 		c.addBehaviors(behaviors(document));
 		c.processPage();
 	};
-	let serializedWithoutNotes = $derived(removeNotesFromMaintext(ceteiData.serialized));
+
+	// Extract the specific page based on xml:id, then remove notes
+	let serializedWithoutNotes = $derived(
+		removeNotesFromMaintext(extractPage(ceteiData.serialized, page))
+	);
 </script>
 
 <div
