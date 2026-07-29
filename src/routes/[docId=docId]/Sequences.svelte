@@ -22,6 +22,7 @@
 	import { printDateRange } from '$lib/functions/ease_of_use/dateFunctions';
 	import { findSeqTypeBySeqKey } from '$lib/functions/ease_of_use/findSeqTypeBySeqKey';
 	import { resetParamsExcept } from './schemas';
+	import { isInteractiveElement } from '$lib/functions/ease_of_use/isIntereactiveElement';
 
 	const allDocs = allDocsRaw as TDocuments['documents'];
 	const seqAll = seqAllRaw as TSeqAll;
@@ -103,23 +104,40 @@
 	}
 
 	function handleKeyDown(ev: KeyboardEvent) {
+		// Guard: If an interactive element is focused, do nothing.
+		// This preserves accessibility for tabs, sliders, menus, etc.
+		if (isInteractiveElement(document.activeElement)) {
+			return;
+		}
+
 		if (ev.key === 'Escape') {
-			if (otherSeq.key && isSelectedValidSeq) resetOtherSeq();
-			else closeSeqPanel();
+			if (otherSeq?.key && isSelectedValidSeq) {
+				resetOtherSeq();
+			} else {
+				closeSeqPanel();
+			}
 		} else if (ev.key === 'ArrowLeft') {
 			if (prevId) {
-				// goto(
-				// 	`${prevId}?${updateSearchParams(page.url.searchParams, { seq: params.seq, page: null })}`
-				// );
+				resetParamsExcept(params, ['seq', 'mode']);
+				goto(resolve(`/${prevId}?${params.toURLSearchParams()}` as any));
 			}
 		} else if (ev.key === 'ArrowRight') {
 			if (nextId) {
-				// goto(
-				// 	`${nextId}?${updateSearchParams(page.url.searchParams, { seq: params.seq, page: null })}`
-				// );
+				resetParamsExcept(params, ['seq', 'mode']);
+				goto(resolve(`/${nextId}?${params.toURLSearchParams()}` as any));
 			}
 		} else if (ev.key === 's') {
-			openSeqPanel();
+			// Only open if not typing in an input/textarea
+			const active = document.activeElement;
+			const isTyping =
+				active &&
+				(active.tagName === 'INPUT' ||
+					active.tagName === 'TEXTAREA' ||
+					active.getAttribute('contenteditable') === 'true');
+
+			if (!isTyping) {
+				openSeqPanel();
+			}
 		}
 	}
 
