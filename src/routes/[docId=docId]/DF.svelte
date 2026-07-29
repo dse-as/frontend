@@ -15,18 +15,22 @@
 	}: {
 		docItem: TDocItemsLetters | TDocItemsSmallforms | TDocItemsLongforms | null;
 		ceteiData: ProcessedTEI;
-		params: object;
+		params: any;
 	} = $props();
 
 	let urls = $derived(docItem?.manuscript?.iiif_urls ?? []);
 	let url = $derived(urls[params.page - 1]);
 </script>
 
-<div data-fassung="DF" class="grid h-[70vh] grid-cols-1 overflow-hidden px-10 md:grid-cols-2">
-	{#if urls.length}
-		<div class="container-centered">
+<div
+	data-fassung="DF"
+	class="gap-10 pt-10 xl:grid xl:grid-cols-[auto_45vw_auto] 2xl:grid-cols-[auto_55vw_auto]"
+>
+	<div></div>
+	<aside class="sticky top-0 hidden h-screen w-full flex-col gap-4 overflow-hidden pt-6 xl:block">
+		{#if urls.length}
 			<IIIF_Viewer {url} />
-		</div>
-	{/if}
-	<TextPaged {ceteiData} />
+		{/if}
+	</aside>
+	<TextPaged {ceteiData} page={params.page} />
 </div>

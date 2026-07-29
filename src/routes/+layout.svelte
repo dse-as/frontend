@@ -46,7 +46,6 @@
 	<div class="mt-10 flex w-full justify-around gap-10">
 		<a href="https://data.snf.ch/grants/grant/10000500">
 			<img class="h-16 object-contain" src={asset('/logos/logo-snf.png')} alt="logo" />
-			<img class="h-16 object-contain" src={asset('/')} alt="logo" />
 		</a>
 
 		<a href="https://www.ds.uzh.ch">

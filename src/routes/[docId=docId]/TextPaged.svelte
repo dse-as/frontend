@@ -14,7 +14,7 @@
 
 <div
 	data-textflow="diplomatic"
-	class="relative mx-auto w-200 overflow-y-auto pl-5"
+	class="relative mx-auto max-w-200 overflow-y-auto pl-5"
 	{@attach setupCustomElements}
 >
 	{@html serializedWithoutNotes}
