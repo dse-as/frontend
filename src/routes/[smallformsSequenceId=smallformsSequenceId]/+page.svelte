@@ -121,6 +121,7 @@
 						url={item.manuscript?.iiif_urls[0]}
 						iiif_imageAPI_width={400}
 						classes="h-50"
+						imgClasses="h-50"
 					/>
 					<p class="flex flex-col gap-2 text-left md:text-center">
 						<span>{item.name}</span>

@@ -194,6 +194,7 @@
 	itemId: TDocKeys,
 	seqKey: TSeqKeys,
 	isCurrentSeqList: boolean,
+	isCurrent: boolean,
 	isFirst: boolean = false,
 	isLast: boolean = false
 )}
@@ -207,7 +208,8 @@
 		data-sveltekit-preload-code="hover"
 		href={`${resId}?${updateSearchParams(page.url.searchParams, { seq: seqKey })}`}
 		class={[
-			'w-80 p-1', //! note: if w-80 is replaced with e.g. max-w-80, centerCurrentItemInGallery() won't work as expected!!
+			'p-1',
+			isCurrent ? 'w-110' : 'w-85', //! note: width must be absolute values (e.g. w-80). Otherwise (e.g. with w-max or max-w-80) centerCurrentItemInGallery() won't work as expected since not all images have been loaded when it centers.
 			docId !== resId && 'hover:bg-hover',
 			!isCurrentSeqList && ' hover:bg-hover',
 			isCurrentSeqList && docId === resId && 'pointer-events-none',
@@ -219,31 +221,39 @@
 			invalidateAll();
 		}}
 	>
-		<div class="group grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
+		<div
+			class={[
+				'group grid h-full w-full grid-cols-[1fr_auto] py-1',
+				isCurrent ? 'gap-6 px-3' : 'gap-3 px-3'
+			]}
+		>
 			{#if resType === 'photos'}
-				<div class="container-centered">
-					<IIIF_Thumb
-						url={resDoc?.faksimile?.iiif_image_emanuscripta}
-						iiif_imageAPI_width={400}
-						blur={resDoc?.manuscript?.rendition?.blur ? true : false}
-						//! FIX grayscale-0 (not working)
-						classes={`max-h-20 max-w-20 group-hover:grayscale-0! 
-							${isCurrentSeqList ? 'grayscale-0!' : ''} 
-							${isCurrentSeqList ? 'max-h-[80px]' : 'max-h-[50px]'}`}
-					/>
-				</div>
-				<div class="flex flex-col">
+				<IIIF_Thumb
+					url={resDoc?.faksimile?.iiif_image_emanuscripta}
+					iiif_imageAPI_width={400}
+					blur={resDoc?.manuscript?.rendition?.blur ? true : false}
+					classesContainer="w-max"
+					//! FIX grayscale-0 (not working)
+					classes={`min-h-2 mx-2 my-1 flex justify-center items-center group-hover:grayscale-0!
+						${isCurrent ? 'grayscale-0!' : ''}
+						`}
+					imgClasses={` ${isCurrent ? 'max-h-32 max-w-40' : 'max-h-20 max-w-30'}`}
+				/>
+				<div class={['flex w-max grow flex-col', isCurrent ? 'max-w-60' : 'max-w-40']}>
 					<span class="line-clamp-2">{resDoc?.name}</span>
 				</div>
 			{:else}
-				<div class="container-centered">
-					<IIIF_Thumb
-						url={resDoc?.manuscript?.iiif_urls[0]}
-						iiif_imageAPI_width={400}
-						classes="max-h-20 max-w-20 group-hover:grayscale-0!"
-					/>
-				</div>
-				<div class="flex flex-col">
+				<IIIF_Thumb
+					url={resDoc?.manuscript?.iiif_urls[0]}
+					iiif_imageAPI_width={400}
+					classesContainer=""
+					classes={`min-h-2  mx-2 my-1 flex justify-center items-center group-hover:grayscale-0!
+						${isCurrent ? 'grayscale-0!' : ''}
+						`}
+					imgClasses={` ${isCurrent ? 'max-h-32 max-w-40' : 'max-h-20 max-w-30'}`}
+					// classes="max-h-20 max-w-20 group-hover:grayscale-0!"
+				/>
+				<div class={['flex w-max grow flex-col', isCurrent ? 'max-w-60' : 'max-w-40']}>
 					{#if resType === 'letters'}
 						<span class="line-clamp-2"
 							>{printDateRange(resDoc?.metadata.date.from, resDoc?.metadata.date.to)}</span
@@ -264,13 +274,13 @@
 		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsBefore) as TDocKeys[]) || []}
 	{@const itemsAfterIds =
 		(filterVisible(seqMatching[seqType]?.[seqKey]?.docsAfter) as TDocKeys[]) || []}
-	<div class="my-2">
+	<div class="my-2 h-max">
 		<ThumbList
 			reCenterOn={[docId, itemsBeforeIds, itemsAfterIds, isOpenOtherSeqPanel]}
-			classesContainer=""
-			classesBefore=""
-			classesAfter=""
-			classesCurrent="min-w-85 grayscale-0"
+			classesContainer="items-center"
+			classesBefore="my-2 h-max"
+			classesAfter="my-2 h-max"
+			classesCurrent="min-w-100 mx-10 grayscale-0"
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
 		>
@@ -280,13 +290,14 @@
 						itemId,
 						seqKey,
 						isCurrentSeqList,
+						false,
 						index === 0,
 						index === itemsBeforeIds.length - 1
 					)}
 				{/each}
 			{/snippet}
 			{#snippet childrenCurrent()}
-				{@render seqItem(docId, seqKey, isCurrentSeqList, true, true)}
+				{@render seqItem(docId, seqKey, isCurrentSeqList, true, true, true)}
 			{/snippet}
 			{#snippet childrenAfter()}
 				{#each itemsAfterIds as itemId, index (itemId)}
@@ -294,6 +305,7 @@
 						itemId,
 						seqKey,
 						isCurrentSeqList,
+						false,
 						index === 0,
 						index === itemsAfterIds.length - 1
 					)}

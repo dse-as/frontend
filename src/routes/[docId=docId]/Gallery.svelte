@@ -73,7 +73,7 @@
 )}
 	<button
 		class={[
-			`group flex flex-col items-center justify-center px-3 py-3 hover:bg-hover`,
+			`group flex flex-col items-center justify-between px-3 py-3 hover:bg-hover`,
 			isFirst && 'rounded-l-thumbbox',
 			isLast && 'rounded-r-thumbbox'
 			// isCurrent ? 'mx-10' : 'mx-2'
@@ -85,8 +85,8 @@
 	>
 		<IIIF_Thumb
 			url={item.fac}
-			classes={`min-h-10 h-max mx-2 my-1 flex justify-center items-center ${isCurrent ? 'max-h-[100px]' : 'max-h-[50px]'}`}
-			imgClasses={`h-max ${isCurrent ? 'max-h-[100px] max-w-[110px]' : 'max-h-[50px] max-w-[100px]'}`}
+			classes={`min-h-2 h-max mx-2 my-1 flex justify-center items-center ${isCurrent ? 'max-h-25' : 'max-h-12'}`}
+			imgClasses={`h-max ${isCurrent ? 'max-h-25 max-w-27' : 'max-h-12 max-w-25'}`}
 		/>
 		<span class="mt-1 text-sm">Seite {item.page}</span>
 	</button>
@@ -147,7 +147,7 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" />
+									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" imgClasses="max-h-[50px]" />
 									<span class="text-xs">Seite {item.page}</span>
 								</a> -->
 							{:else}

@@ -157,7 +157,11 @@
 	>
 		<div class="grid h-full w-full grid-cols-[1fr_3fr] gap-3 px-3 py-1">
 			<div class="container-centered">
-				<IIIF_Thumb url={doc.iiif_url} classes="max-w-[80px] max-h-[80px]" />
+				<IIIF_Thumb
+					url={doc.iiif_url}
+					classes="max-w-[80px] max-h-[80px]"
+					imgClasses="max-w-[80px] max-h-[80px]"
+				/>
 			</div>
 			<div class="flex flex-col">
 				<span class="line-clamp-2 italic">{doc.title_full}</span>

@@ -71,6 +71,7 @@
 					//! remove the .replace() hack as soon as we have clean IIIF-manifests.
 					url={imgdata?.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
 					classes="max-h-[60vh] mx-auto md:max-h-[70vh] px-5"
+					imgClasses="max-h-[60vh] md:max-h-[70vh]"
 				/>
 			{/key}
 		</div>

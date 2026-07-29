@@ -255,6 +255,7 @@
 					blur={item?.manuscript?.rendition?.blur ? true : false}
 					iiif_imageAPI_width={400}
 					classes="max-w-[200px] max-h-[200px]"
+					imgClasses="max-w-[200px] max-h-[200px]"
 				/>
 				<p class="text-left lg:text-center">{item.name}</p>
 				<p class="text-left lg:text-center">{photoKey}</p>

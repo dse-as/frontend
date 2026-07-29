@@ -100,7 +100,8 @@
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={crossRef.linkedDocs[itemId]?.manuscript?.iiif_urls[0]}
-						classes="max-h-[80px] max-w-[80px] "
+						classes="max-h-[80px] max-w-[80px]"
+						imgClasses="max-h-[80px] max-w-[80px]"
 					/>
 				</div>
 				<div class="flex flex-col">
