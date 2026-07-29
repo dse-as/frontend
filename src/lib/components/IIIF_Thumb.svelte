@@ -32,7 +32,7 @@
 	{#if url}
 		{#if showSpinner}
 			<div
-				class={['flex h-full items-center justify-center', classes]}
+				class={['flex h-full min-h-20 items-center justify-center', classes]}
 				data-url={adapt_iiif_url(url, iiif_imageAPI_width)}
 			>
 				<i class="fa-solid fa-spinner fa-spin fa-2xl py-5 text-dark-40"></i>
@@ -61,14 +61,14 @@
 			</div>
 		{:else}
 			<div
-				class={['flex h-full items-center justify-center', classes]}
+				class={['flex h-full min-h-20 items-center justify-center', classes]}
 				data-url={adapt_iiif_url(url, iiif_imageAPI_width)}
 			>
 				<i class="fa-solid fa-xmark fa-2xl text-warning"></i>
 			</div>
 		{/if}
 	{:else}
-		<div class={['flex h-full items-center justify-center', classes]}>
+		<div class={['flex h-full min-h-20 items-center justify-center', classes]}>
 			<i class="fa-solid fa-xmark fa-2xl"></i>
 		</div>
 	{/if}

@@ -279,7 +279,7 @@
 						<span class="line-clamp-2">{resDoc?.name}</span>
 					{:else}
 						<span class="line-clamp-2">{resDoc?.metadata?.title_full}</span>
-						<span class="">{resDoc?.metadata?.pubDate}</span>
+						<span class="line-clamp-1">{resDoc?.metadata?.pubDate}</span>
 					{/if}
 				</div>
 			{/if}
@@ -630,7 +630,7 @@
 				</div>
 			{:else}
 				<!-- Sequences -->
-				<div class="flex w-full flex-col overflow-y-auto">
+				<div class="mx-5 flex w-full flex-col overflow-x-hidden overflow-y-auto px-5">
 					{#each seqTypes as seqType (seqType)}
 						{#if seqOther[seqType!]}
 							{#each Object.keys(seqOther[seqType!] ?? {}) as TSeqKeys[] as seqKey (seqKey)}
