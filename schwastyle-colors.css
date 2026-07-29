@@ -65,7 +65,7 @@
 }
 
 .dark {
-	--background: hsl(0, 0%, 22%);
+	--background: hsl(0, 0%, 12%);
 	--background-inverted: hsl(0 0% 95%);
 	--foreground: hsl(0 0% 95%);
 	--foreground-inverted: hsl(0, 0%, 27%);
