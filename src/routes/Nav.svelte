@@ -398,7 +398,7 @@
 		// make sure hoveredSubmenu (for previews) does not leak to foreign panels
 		hoveredSubmenu.key = undefined;
 	}}
-	class="relative z-9999999999999 hidden h-max w-full justify-between gap-5 overflow-hidden border-b-2 bg-foreground text-background lg:flex"
+	class="relative z-9999999999999 hidden h-max w-full justify-between gap-5 overflow-x-hidden border-b-2 bg-foreground text-background lg:flex"
 >
 	<NavigationMenu.List
 		class="group flex w-screen list-none items-center justify-between gap-2 p-1 px-5"
