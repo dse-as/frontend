@@ -166,7 +166,7 @@
 					onclick={() => openDFpage(thumb.page)}
 				>
 					<div class="w-full flex-col items-center justify-center">
-						<IIIF_Thumb url={thumb.facs} classes="w-full" imgClasses="w-full" />
+						<IIIF_Thumb url={thumb.facs} classesContainer="" classes="w-full" imgClasses="w-full" />
 						<span class="text-sm">Seite {thumb.page}</span>
 					</div>
 				</button>

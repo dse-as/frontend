@@ -254,6 +254,7 @@
 					url={item.faksimile.iiif_image_emanuscripta?.replace('/full/304/0/default.jpg', '')}
 					blur={item?.manuscript?.rendition?.blur ? true : false}
 					iiif_imageAPI_width={400}
+					classesContainer=""
 					classes="max-w-[200px] max-h-[200px]"
 					imgClasses="max-w-[200px] max-h-[200px]"
 				/>

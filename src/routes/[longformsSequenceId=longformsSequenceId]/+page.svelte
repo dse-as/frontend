@@ -107,6 +107,7 @@
 					<IIIF_Thumb
 						url={item.manuscript?.iiif_urls[0]}
 						iiif_imageAPI_width={400}
+						classesContainer=""
 						classes="h-50"
 						imgClasses="h-50"
 					/>

@@ -159,6 +159,7 @@
 			<div class="container-centered">
 				<IIIF_Thumb
 					url={doc.iiif_url}
+					classesContainer=""
 					classes="max-w-[80px] max-h-[80px]"
 					imgClasses="max-w-[80px] max-h-[80px]"
 				/>

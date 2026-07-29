@@ -100,6 +100,7 @@
 				<div class="container-centered">
 					<IIIF_Thumb
 						url={crossRef.linkedDocs[itemId]?.manuscript?.iiif_urls[0]}
+						classesContainer=""
 						classes="max-h-[80px] max-w-[80px]"
 						imgClasses="max-h-[80px] max-w-[80px]"
 					/>

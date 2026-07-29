@@ -85,6 +85,7 @@
 	>
 		<IIIF_Thumb
 			url={item.fac}
+			classesContainer=""
 			classes={`min-h-2 h-max mx-2 my-1 flex justify-center items-center ${isCurrent ? 'max-h-25' : 'max-h-12'}`}
 			imgClasses={`h-max ${isCurrent ? 'max-h-25 max-w-27' : 'max-h-12 max-w-25'}`}
 		/>
@@ -147,7 +148,7 @@
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<IIIF_Thumb url={item.fac} classes="max-h-[50px]" imgClasses="max-h-[50px]" />
+									<IIIF_Thumb url={item.fac} classesContainer="" classes="max-h-[50px]" imgClasses="max-h-[50px]" />
 									<span class="text-xs">Seite {item.page}</span>
 								</a> -->
 							{:else}

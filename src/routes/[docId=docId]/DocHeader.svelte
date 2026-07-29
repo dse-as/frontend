@@ -92,6 +92,7 @@
 					<IIIF_Thumb
 						url={cont.item.manuscript?.iiif_urls[0]}
 						iiif_imageAPI_width={400}
+						classesContainer=""
 						classes="h-[120px]"
 					/>
 					<p class="flex flex-col gap-2 text-left md:text-center">
