@@ -447,7 +447,7 @@
 		class={[
 			'absolute z-90002 flex h-max w-8/10 flex-col overflow-y-auto rounded-card-lg border-2 px-10 pb-4 transition-all duration-200',
 			isSelectedValidSeq ? 'bg-background pt-40' : 'bg-background pt-25',
-			isOpenOtherSeqPanel ? 'max-h-[85vh]' : isSelectedValidSeq ? 'max-h-[60vh]' : 'max-h-[85vh]'
+			isOpenOtherSeqPanel ? 'max-h-[88vh]' : isSelectedValidSeq ? 'max-h-[60vh]' : 'max-h-[85vh]'
 		]}
 		in:fade={{ duration: 100 }}
 		out:fade={{ duration: 0 }}
