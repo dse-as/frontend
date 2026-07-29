@@ -445,8 +445,8 @@
 		tabindex="0"
 		bind:this={elSeqPanel}
 		class={[
-			'absolute z-90002 flex h-max w-8/10 flex-col overflow-y-auto rounded-card-lg border-2 px-10 pb-4 transition-all duration-200',
-			isSelectedValidSeq ? 'bg-background pt-40' : 'bg-background pt-25',
+			'absolute z-90002 flex h-max w-8/10 flex-col overflow-y-auto rounded-card-lg border-2 bg-background px-10 pb-4 transition-all duration-200',
+			isSelectedValidSeq ? 'pt-40' : 'pt-25',
 			isOpenOtherSeqPanel ? 'max-h-[88vh]' : isSelectedValidSeq ? 'max-h-[60vh]' : 'max-h-[85vh]'
 		]}
 		in:fade={{ duration: 100 }}
@@ -455,7 +455,7 @@
 	>
 		<!-- Sequence Toggles (Switches) -->
 		<!-- {#if isSelectedValidSeq} -->
-		<div class="mb-6 flex flex-wrap items-center justify-center gap-3">
+		<div class="mb-6 flex w-full flex-wrap items-center justify-center gap-3">
 			<Checkbox bind:checked={sequenceToggle.letters} classesLabel="text-base"
 				>{dict_docs.letters.label_plural}</Checkbox
 			>
@@ -684,7 +684,7 @@
 					role="dialog"
 					tabindex="0"
 					data-dom="otherSeqPanel"
-					class="group relative mt-4 min-h-30 overflow-hidden rounded-b-xl bg-background text-foreground"
+					class="group relative mt-4 min-h-30 rounded-b-xl bg-background text-foreground"
 					{@attach cycleBlocks}
 				>
 					<!-- sequenceList with thumbnails -->
