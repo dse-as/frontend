@@ -138,19 +138,28 @@
 						{@const { item: resDoc } = resolveDoc(allDocs, tzgId) || { item: null }}
 						{@const items = collectGalleryItems()}
 						<div
-							class="my-0 ml-15 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10 py-1"
+							class="my-0 ml-10 flex w-max items-center justify-start gap-5 overflow-x-auto rounded-card bg-dark-10 px-10 py-1"
 						>
 							<h6 class="w-50 font-sans text-sm">{resDoc?.name}</h6>
+							<!-- <h6 class="w-50 font-sans text-sm">
+								{printDateRange(resDoc?.date.from, resDoc?.date.to)}
+							</h6> -->
 							{#each items as item (item.page)}
-								<!-- <a
-									class="ml-2 rounded-thumbbox p-1"
-									href={`${tzgId}?${updateSearchParams(page.url.searchParams, { page: String(item.pagenum_running) })}`}
-									target="_blank"
-									rel="noopener noreferrer"
+								<a
+									href={resolve(`/${tzgId}?${page.url.searchParams}`)}
+									class="group mx-2 flex flex-col items-center justify-between rounded-thumbbox px-3 py-3 hover:bg-hover"
+									onclick={(e) => {
+										handleSelectPage(item.page);
+									}}
 								>
-									<IIIF_Thumb url={item.fac} classesContainer="" classes="max-h-[50px]" imgClasses="max-h-[50px]" />
-									<span class="text-xs">Seite {item.page}</span>
-								</a> -->
+									<IIIF_Thumb
+										url={item.fac}
+										classesContainer=""
+										classes="max-h-[50px]"
+										imgClasses="max-h-[50px]"
+									/>
+									<span class="text-center text-xs">Seite {item.page} <br />({tzgId})</span>
+								</a>
 							{:else}
 								<a class="text-warning" href={resolve(`/${tzgId}`)}>Keine Faksimile gefunden</a>
 							{/each}
