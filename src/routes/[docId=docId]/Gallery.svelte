@@ -109,6 +109,7 @@
 			classesBefore="my-2 h-max"
 			classesAfter="my-2 h-max"
 			classesCurrent="min-w-25 mx-10 pointer-events-none grayscale-0!"
+			doInvertScroll={false}
 			isBeforeEmpty={itemsBefore.length === 0}
 			isAfterEmpty={itemsAfter.length === 0}
 		>

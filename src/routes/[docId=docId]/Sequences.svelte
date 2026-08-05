@@ -299,6 +299,7 @@
 			classesBefore="my-2 h-max"
 			classesAfter="my-2 h-max"
 			classesCurrent="min-w-100 mx-10 grayscale-0"
+			doInvertScroll={false}
 			isBeforeEmpty={itemsBeforeIds.length === 0}
 			isAfterEmpty={itemsAfterIds.length === 0}
 		>

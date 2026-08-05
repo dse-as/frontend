@@ -10,6 +10,7 @@
 		classesBefore = '',
 		classesAfter = '',
 		classesCurrent = '',
+		doInvertScroll = false,
 		childrenBefore,
 		childrenCurrent,
 		childrenAfter
@@ -21,6 +22,7 @@
 		classesBefore: string;
 		classesAfter: string;
 		classesCurrent: string;
+		doInvertScroll: boolean;
 		childrenBefore: Snippet;
 		childrenCurrent: Snippet;
 		childrenAfter: Snippet;
@@ -101,6 +103,7 @@
 <div
 	class={['flex h-full min-w-full overflow-x-auto overflow-y-hidden pb-6', classesContainer]}
 	onwheel={(ev) => {
+		if (!doInvertScroll) return;
 		invertScroll(ev);
 	}}
 >
