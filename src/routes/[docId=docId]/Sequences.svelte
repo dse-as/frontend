@@ -248,7 +248,7 @@
 			{#if resType === 'photos'}
 				<IIIF_Thumb
 					url={resDoc?.faksimile?.iiif_image_emanuscripta}
-					iiif_imageAPI_width={400}
+					iiif_imageAPI_width={200}
 					blur={resDoc?.manuscript?.rendition?.blur ? true : false}
 					classesContainer="w-max"
 					//! FIX grayscale-0 (not working)
@@ -263,7 +263,7 @@
 			{:else}
 				<IIIF_Thumb
 					url={resDoc?.manuscript?.iiif_urls[0]}
-					iiif_imageAPI_width={400}
+					iiif_imageAPI_width={200}
 					classesContainer=""
 					classes={`min-h-2  mx-2 my-1 flex justify-center items-center group-hover:grayscale-0!
 						${isCurrent ? 'grayscale-0!' : ''}

@@ -99,9 +99,7 @@
 	</div>
 
 	<!-- Gallery -->
-	<div
-		class="grid h-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
-	>
+	<div class="grid h-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-3">
 		{#each seq?.docs as TLettersKeys[] as corrKey (corrKey)}
 			{@const item = data.letters[corrKey as TLettersKeys]}
 			<a
@@ -111,10 +109,10 @@
 				{#if item}
 					<IIIF_Thumb
 						url={item.manuscript?.iiif_urls[0]}
-						iiif_imageAPI_width={400}
+						iiif_imageAPI_width={600}
 						classesContainer=""
-						classes="h-[200px]"
-						imgClasses="h-[200px]"
+						classes="h-90"
+						imgClasses="h-90"
 					/>
 					<p class="flex flex-col gap-2 text-left md:text-center">
 						<span>{item.name}</span>
