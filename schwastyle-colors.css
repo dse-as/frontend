@@ -2,15 +2,16 @@
 	/* Basic Colors */
 	--background: hsl(0 0% 100%);
 	--background-inverted: hsl(0 0% 27%);
+	--background-contrast: hsl(0 0% 0%);
+	--muted: hsl(0, 0%, 71%);
+	--muted-foreground: hsla(0 0% 9% / 0.25);
 	--foreground: hsl(0 0% 9%);
 	--foreground-inverted: hsl(0 0% 95%);
-	--background-contrast: hsl(0 0% 0%);
 	--foreground-contrast: hsl(0 0% 100%);
+	--foreground-muted: hsl(240, 4%, 26%);
 	--hover: hsl(0 0% 95%);
 	--hover-foreground: hsl(0 0% 9%);
 	--border-shadow: hsl(0 0% 95%);
-	--muted: hsl(240 5% 96%);
-	--muted-foreground: hsla(0 0% 9% / 0.25);
 	--border: hsl(240 6% 10%);
 	--border-input: hsla(240 6% 10% / 0.17);
 	--border-input-hover: hsla(240 6% 10% / 1);
@@ -69,15 +70,16 @@
 .dark {
 	--background: hsl(0, 0%, 12%);
 	--background-inverted: hsl(0 0% 95%);
+	--background-contrast: hsl(0 0% 100%);
+	--muted: hsl(240, 4%, 26%);
+	--muted-foreground: hsla(0 0% 100% / 0.25);
 	--foreground: hsl(0 0% 95%);
 	--foreground-inverted: hsl(0, 0%, 27%);
 	--foreground-contrast: hsl(0 0% 0%);
-	--background-contrast: hsl(0 0% 100%);
+	--foreground-muted: hsl(0, 0%, 71%);
 	--hover: hsl(0 0% 38%);
 	--hover-foreground: hsl(0 0% 95%);
 	--border-shadow: hsl(0 0% 38%);
-	--muted: hsl(240 4% 16%);
-	--muted-foreground: hsla(0 0% 100% / 0.25);
 	--border: hsl(0 0% 96%);
 	--border-input: hsla(0 0% 96% / 0.17);
 	--border-input-hover: hsla(0 0% 96% / 0.4);
@@ -167,16 +169,17 @@
 @theme inline {
 	/* Colors */
 	--color-background: var(--background);
-	--color-foreground: var(--foreground);
 	--color-background-inverted: var(--background-inverted);
-	--color-foreground-inverted: var(--foreground-inverted);
 	--color-background-contrast: var(--background-contrast);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-foreground: var(--foreground);
+	--color-foreground-inverted: var(--foreground-inverted);
 	--color-foreground-contrast: var(--foreground-contrast);
+	--color-foreground-muted: var(--foreground-muted);
 	--color-hover: var(--hover);
 	--color-hover-foreground: var(--hover-foreground);
 	--color-border-shadow: var(--border-shadow);
-	--color-muted: var(--muted);
-	--color-muted-foreground: var(--muted-foreground);
 	--color-border: var(--border-card);
 	--color-border-input: var(--border-input);
 	--color-border-input-hover: var(--border-input-hover);

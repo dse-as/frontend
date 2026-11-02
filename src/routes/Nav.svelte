@@ -273,9 +273,9 @@
 	<NavigationMenu.Trigger
 		class={[
 			'group inline-flex h-8 w-max items-center justify-center rounded-[7px] px-4 py-2 transition-colors',
-			'hover:bg-background hover:text-background-contrast',
+			'hover:bg-foreground hover:text-foreground-contrast',
 			'focus-visible:bg-muted focus-visible:text-dark-40 focus-visible:outline-hidden',
-			'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-background'
+			'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-foreground'
 		]}
 	>
 		<span class="hidden lg:inline">{info.nameLong}</span>
@@ -296,9 +296,9 @@
 				<li>
 					<NavigationMenu.Link
 						class={[
-							'block space-y-1 rounded-md p-3 leading-none text-background-contrast no-underline outline-hidden transition-colors select-none',
-							'hover:bg-muted hover:text-background-contrast',
-							'focus:bg-muted focus:text-background-contrast'
+							'block space-y-1 rounded-md p-3 leading-none text-foreground-contrast no-underline outline-hidden transition-colors select-none',
+							'hover:bg-foreground-muted hover:text-foreground-contrast',
+							'focus:bg-foreground-muted focus:text-foreground-contrast'
 						]}
 						onkeydown={() => {
 							hoveredSubmenu.key = key;
@@ -309,7 +309,7 @@
 						href={subMenuInfo[key].path}
 					>
 						<h5 class="h5 font-serif leading-none font-bold">{subMenuInfo[key].name}</h5>
-						<p class="line-clamp-2 leading-snug text-muted-foreground">
+						<p class="text-muted-background line-clamp-2 leading-snug">
 							{subMenuInfo[key].content}
 						</p>
 					</NavigationMenu.Link>
@@ -362,7 +362,7 @@
 							.toString()
 							.padStart(4, '0')}`
 					)}
-					class="preset-btn-round --lg"
+					class="preset-btn-round --lg --inverted"
 					>{dictNav.random_element_text[hoveredSubmenu.key as keyof typeof dictDoc]}</a
 				>
 			{/if}
@@ -371,7 +371,7 @@
 		<!-- Shortcuts -->
 		<div class="flex h-full flex-col justify-end">
 			{#if hoveredSubmenu.key === 'smallforms'}
-				<h5 class="h5 mt-5 text-background-contrast">Shortcuts:</h5>
+				<h5 class="h5 mt-5 text-foreground-contrast">Shortcuts:</h5>
 				<div class="preset-btn-list --spacing-normal">
 					<a href={resolve('/smallform_0231')} class="preset-btn-round --sm"
 						>Smallform 0231 (Kleine Begegnungen in Danzig)</a
@@ -398,7 +398,7 @@
 		// make sure hoveredSubmenu (for previews) does not leak to foreign panels
 		hoveredSubmenu.key = undefined;
 	}}
-	class="relative z-9999999999999 hidden h-max w-full justify-between gap-5 border-b-2 bg-foreground text-background lg:flex"
+	class="relative z-9999999999999 hidden h-max w-full justify-between gap-5 border-b-2 bg-background text-foreground lg:flex"
 >
 	<NavigationMenu.List
 		class="group flex w-screen list-none items-center justify-between gap-2 p-1 px-5"
@@ -432,7 +432,7 @@
 				<NavigationMenu.Link
 					class={[
 						'group inline-flex h-8 w-max items-center justify-center rounded-[7px] px-4 py-2 transition-colors',
-						'hover:bg-background hover:text-background-contrast',
+						'hover:bg-foreground hover:text-foreground-contrast',
 						'focus-visible:bg-muted focus-visible:text-dark-40 focus-visible:outline-hidden',
 						'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini',
 						'disabled:pointer-events-none disabled:opacity-50'
@@ -452,21 +452,21 @@
 		<input
 			type="text"
 			placeholder="Suche..."
-			class="mx-4 w-50 rounded-xl border-2 border-background px-2 duration-200 focus:w-70"
+			class="mx-4 w-50 rounded-xl border-2 border-foreground px-2 duration-200 focus:w-70"
 		/>
 		<!-- Shortcuts Info -->
 		<NavigationMenu.Item value="info_shortcuts" openOnHover={false}>
 			<NavigationMenu.Trigger
 				class={[
 					'group mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full px-2 py-2 transition-colors',
-					'hover:bg-background hover:text-background-contrast',
+					'hover:bg-foreground hover:text-foreground-contrast',
 					'focus-visible:bg-muted focus-visible:text-dark-40 focus-visible:outline-hidden',
-					'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-background'
+					'data-[state=open]:bg-dark-10 data-[state=open]:shadow-mini data-[state=open]:hover:text-foreground'
 				]}
 			>
 				<i class="fa-solid fa-info text-xl"></i>
 			</NavigationMenu.Trigger>
-			<NavigationMenu.Content class=" absolute top-0 left-0 w-auto text-background-contrast">
+			<NavigationMenu.Content class=" absolute top-0 left-0 w-auto text-foreground-contrast">
 				<div class=" m-0 w-full list-none p-5">
 					<h5 class="h5 mb-5">Tastaturkürzel</h5>
 					<table>
@@ -508,21 +508,21 @@
 	<!-- Viewport for Dropdowns -->
 	<div class="absolute top-full left-0 flex w-screen justify-center perspective-[2000px]">
 		<NavigationMenu.Viewport
-			class="text-popover-foreground relative mx-5 mt-2.5 h-[var(--bits-navigation-menu-viewport-height)] w-screen origin-[top_center] overflow-hidden rounded-md border bg-background shadow-lg transition-[width,_height] duration-200 data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in "
+			class="text-popover-background relative mx-5 mt-2.5 h-[var(--bits-navigation-menu-viewport-height)] w-screen origin-[top_center] overflow-hidden rounded-md border bg-foreground shadow-lg transition-[width,_height] duration-200 data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in "
 		/>
 	</div>
 </NavigationMenu.Root>
 
 <!-- Smartphone Menu -->
 <div
-	class="relative z-9999999999999 flex h-max w-full justify-between gap-5 border-b-2 bg-foreground text-background"
+	class="relative z-9999999999999 flex h-max w-full justify-between gap-5 border-b-2 bg-background text-foreground"
 >
 	<div class="group flex w-screen list-none items-center justify-end gap-2 p-1 px-5 lg:hidden">
 		<div class="mr-4">
 			<Dialog.Root bind:open={openStateMenu}>
 				<!-- Trigger aligned right on small screens -->
 				<Dialog.Trigger
-					class="inline-flex h-full items-center justify-center rounded p-4 text-foreground-contrast hover:bg-foreground-hover"
+					class="inline-flex h-full items-center justify-center rounded p-4 text-background-contrast hover:bg-background-hover"
 				>
 					<!-- Hamburger Menu -->
 					<i class="fa-solid fa-bars"></i>
@@ -533,7 +533,7 @@
 						class="fixed inset-0 z-500000000 bg-black/80 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0"
 					/>
 					<Dialog.Content
-						class="fixed top-[50%] left-[50%] z-500000000 w-screen max-w-[calc(100vw-2rem)] translate-x-[-50%] translate-y-[-50%] rounded-card border bg-background p-5 shadow-popover outline-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 md:w-full"
+						class="fixed top-[50%] left-[50%] z-500000000 w-screen max-w-[calc(100vw-2rem)] translate-x-[-50%] translate-y-[-50%] rounded-card border bg-foreground p-5 shadow-popover outline-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 md:w-full"
 					>
 						<!-- Top bar with title and close in top-right -->
 						<div class="flex min-h-12 items-center justify-between p-10 pb-5">
