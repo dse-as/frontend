@@ -29,7 +29,6 @@ export type TResolvedPhotos = {
 	docType: 'photos';
 	item: TDocuments['documents']['photos'][TPhotosKeys] | null;
 };
-
 export type TResolvedDoc =
 	TResolvedLetters | TResolvedSmallforms | TResolvedLongforms | TResolvedPhotos;
 
