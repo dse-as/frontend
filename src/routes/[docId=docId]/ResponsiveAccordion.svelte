@@ -49,11 +49,11 @@
 	<div id="expandableBox" class="relative mt-5 mb-20 hidden pt-5 pb-0 xl:block">
 		<div
 			class={[
-				'grid overflow-hidden transition-all duration-400 ease-in-out',
-				isExpanded ? 'max-h-[80vh]' : 'max-h-[145px]'
+				'grid h-max overflow-hidden transition-[grid-template-rows] duration-500 ease-in-out',
+				isExpanded ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]' //! HACK the animation requires both grid-rows-1fr/0fr AND the min-h in pixel of the child element.
 			]}
 		>
-			<div class="grid h-full grid-cols-2 items-start gap-20 overflow-hidden">
+			<div class="grid h-full min-h-[145px] grid-cols-2 items-start gap-20 overflow-hidden">
 				<div class="h-full overflow-hidden">
 					<h5 class="h5 mb-6 font-bold">{titleOverview}</h5>
 					{@render overviewContent()}
