@@ -8,8 +8,16 @@
 			Annemarie Schwarzenbach: Digitale Edition der Kleinen Formen und Briefe. Reisetexte,
 			Intermedialität, Netzwerke
 		</h1>
-		<h2 class="mt-25 -rotate-3 text-6xl font-bold text-red-500">Alpha-Version</h2>
-		<p class="mt-5 -rotate-3 text-4xl font-bold text-red-500">Work in Progress!</p>
+		<div class="mt-0 -rotate-3 bg-red-500 px-915 py-3 text-center font-bold text-white">
+			<h2 class="text-6xl">
+				Alpha-Version&nbsp;&nbsp;Alpha-Version&nbsp;&nbsp;Alpha-Version&nbsp;&nbsp;Alpha-Version&nbsp;&nbsp;
+			</h2>
+			<p class="mt-5 text-4xl">
+				Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;Work&nbsp;in&nbsp;progress&nbsp;&nbsp;!!&nbsp;&nbsp;
+			</p>
+		</div>
+		<!-- <h2 class="mt-25 -rotate-3 text-6xl font-bold text-red-Version-Version</h2>
+		<p class="mt-5 -rotate-3 text-4xl font-bold text-red-500">Work in Progress!</p> -->
 	</div>
 
 	<div class="mx-auto mt-43 flex w-full max-w-300 flex-col gap-4 overflow-hidden border-2 p-10">
